@@ -1,0 +1,38 @@
+# ===== Vercel local =====
+.vercel/
+
+# ===== OCR / Raw data =====
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.csv
+*.psv
+
+# ===== Python scripts & artifacts =====
+*.py
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# ===== Scratch & temp =====
+scratch/
+v1/
+.backups/
+cam_nang_ca_bien_sample.html
+tap-1.html
+tap-2.html
+tap-3.html
+tap-4.html
+tap-5.html
+
+# ===== Agent / IDE internal =====
+.agents/
+.gemini/
+
+# ===== OS =====
+Thumbs.db
+.DS_Store
+desktop.ini
