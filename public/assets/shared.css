@@ -105,7 +105,7 @@ a:hover {
     flex-shrink: 0;
 }
 
-/* Rút gọn text logo trên mobile — JS sẽ toggle class 'short' */
+/* logo-full: hiện desktop, ẩn mobile */
 .logo .logo-short { display: none; }
 .logo .logo-full  { display: inline; }
 
@@ -452,22 +452,11 @@ details.synonym-details[open] summary.synonym-summary::after {
         gap: 0.75rem;
     }
 
-    .logo {
-        font-size: 0;
-        /* Ẩn text dài, chỉ hiện icon + text ngắn qua pseudo */
-    }
+    .logo { font-size: 1rem; }
     .logo svg { width: 20px; height: 20px; flex-shrink: 0; }
-    .logo::after {
-        content: 'CÁ BIỂN VN';
-        font-size: 0.85rem;
-        font-weight: 800;
-        letter-spacing: 0.02em;
-        background: linear-gradient(135deg, #fff, #94a3b8);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    /* Ẩn text gốc của logo (text node) trên mobile */
-    .logo > span.logo-text { display: none; }
+    /* Ẩn text dài, hiện text ngắn */
+    .logo .logo-full  { display: none; }
+    .logo .logo-short { display: inline; }
 
     .nav-links {
         gap: 0.75rem;
