@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duyệt Phân Loại - Danh Mục Cá Biển Việt Nam</title>
-    <link rel="stylesheet" href="assets/shared.css">
+    <link rel="stylesheet" href="assets/shared.css?v=2">
     <style>
         .taxonomy-container {
             background: var(--bg-surface);
@@ -128,7 +128,12 @@
 
         <div class="search-input-container" style="max-width: 500px; margin-bottom: 2rem;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="treeFilter" class="search-input" placeholder="Lọc nhánh (Ví dụ: Cá Vược)..." autocomplete="off">
+            <input type="text" id="treeFilter" class="search-input" placeholder="Tìm loài theo tên tiếng Việt hoặc tên khoa học..." autocomplete="off">
+        </div>
+
+        <!-- Search Results Panel -->
+        <div id="searchResults" style="display:none; margin-top: 0.5rem;">
+            <div id="searchResultsList"></div>
         </div>
 
         <div class="taxonomy-container" id="treeContainer">
@@ -209,46 +214,73 @@
             return html;
         }
 
+        // Flat species index built once after fetch
+        let allSpecies = [];
+
+        function flattenSpecies(data) {
+            const list = [];
+            data.forEach(cls => {
+                cls.children.forEach(order => {
+                    order.children.forEach(family => {
+                        family.children.forEach(genus => {
+                            (genus.species || []).forEach(sp => list.push(sp));
+                        });
+                    });
+                });
+            });
+            return list;
+        }
+
         fetch('data/taxonomy_tree.json')
             .then(r => r.json())
             .then(data => {
+                allSpecies = flattenSpecies(data);
                 document.getElementById('treeContainer').innerHTML = renderTree(data);
             });
 
         function toggleNode(headerEl) {
             const toggle = headerEl.querySelector('.node-toggle');
             const level = headerEl.nextElementSibling;
-            
             toggle.classList.toggle('expanded');
             level.classList.toggle('expanded');
         }
 
-        // Simple filter
+        const searchPanel = document.getElementById('searchResults');
+        const searchList  = document.getElementById('searchResultsList');
+        const treeWrap    = document.getElementById('treeContainer');
+
         document.getElementById('treeFilter').addEventListener('input', function(e) {
-            const query = e.target.value.toLowerCase().trim();
-            const nodes = document.querySelectorAll('#treeContainer .tree-node, #treeContainer .species-item');
-            
+            const query = e.target.value.trim();
+
             if (!query) {
-                nodes.forEach(n => n.style.display = '');
+                searchPanel.style.display = 'none';
+                treeWrap.style.display = '';
                 return;
             }
 
-            nodes.forEach(n => {
-                const searchTxt = n.getAttribute('data-search') || '';
-                if (searchTxt.includes(query)) {
-                    n.style.display = '';
-                    // expand parents
-                    let parent = n.parentElement.closest('.tree-node');
-                    while(parent) {
-                        parent.style.display = '';
-                        parent.querySelector('.node-toggle').classList.add('expanded');
-                        parent.querySelector('.tree-level').classList.add('expanded');
-                        parent = parent.parentElement.closest('.tree-node');
-                    }
-                } else {
-                    n.style.display = 'none';
-                }
-            });
+            const q = query.toLowerCase();
+            const hits = allSpecies.filter(sp =>
+                (sp.vnName || '').toLowerCase().includes(q) ||
+                (sp.scientificName || '').toLowerCase().includes(q)
+            ).slice(0, 60); // cap at 60 để tránh render chậm
+
+            treeWrap.style.display = 'none';
+            searchPanel.style.display = 'block';
+
+            if (hits.length === 0) {
+                searchList.innerHTML = `<p style="color:var(--text-muted);padding:2rem;text-align:center">Không tìm thấy loài nào phù hợp.</p>`;
+                return;
+            }
+
+            searchList.innerHTML = hits.map(sp => `
+                <a href="species.html?id=${sp.id}" class="species-item">
+                    <div>
+                        <span class="sp-name">${sp.vnName}</span>
+                        <span class="sp-sci">${sp.scientificName}</span>
+                    </div>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+            `).join('');
         });
     </script>
 <script src="assets/shared.js"></script></body>
