@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duyệt Theo Tập - Danh Mục Cá Biển Việt Nam</title>
+    <link rel="stylesheet" href="assets/shared.css?v=2">
+    <style>
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .vol-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .vol-tab {
+            padding: 0.75rem 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 99px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            transition: var(--transition-fast);
+            cursor: pointer;
+        }
+
+        .vol-tab:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+        /* Per-volume active colors matching species-card accent bars */
+        .vol-tab.active[data-vol="1"] { background: rgba(129,140,248,0.15); border-color: rgba(129,140,248,0.5); color: #818cf8; }
+        .vol-tab.active[data-vol="2"] { background: rgba(52,211,153,0.15); border-color: rgba(52,211,153,0.5); color: #34d399; }
+        .vol-tab.active[data-vol="3"] { background: rgba(248,113,113,0.15); border-color: rgba(248,113,113,0.5); color: #f87171; }
+        .vol-tab.active[data-vol="4"] { background: rgba(251,191,36,0.15); border-color: rgba(251,191,36,0.5); color: #fbbf24; }
+        .vol-tab.active[data-vol="5"] { background: rgba(96,165,250,0.15); border-color: rgba(96,165,250,0.5); color: #60a5fa; }
+
+        /* Mini card left accent bar matching active volume */
+        .species-card-mini { position: relative; overflow: hidden; }
+        .species-card-mini::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 3px;
+            background: var(--vol-color, var(--brand-primary));
+            border-radius: 12px 0 0 12px;
+            opacity: 0.6;
+            transition: opacity 0.2s;
+        }
+        .species-card-mini:hover::before { opacity: 1; }
+
+        .grid-species {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .species-card-mini {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: var(--transition-normal);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .species-card-mini:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: var(--brand-primary);
+            transform: translateY(-5px);
+        }
+
+        .scm-id {
+            font-family: var(--font-display);
+            color: var(--brand-primary);
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.5;
+        }
+
+        .scm-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .scm-sci {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .scm-tax {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.9">
+                  <path d="M6.5 12c0-3.5 2.5-6 5.5-6 4 0 7 2.5 7 6s-3 6-7 6c-3 0-5.5-2.5-5.5-6z"/>
+                  <path d="M2 9c1 1 2 2 2 3s-1 2-2 3"/>
+                  <circle cx="16" cy="10" r="1" fill="currentColor"/>
+                </svg>
+                <span class="logo-full">DANH MỤC CÁ BIỂN VIỆT NAM</span><span class="logo-short">CÁ BIỂN VN</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Trang Chủ</a>
+                <a href="browse.html" class="nav-link">Cây Phân Loại</a>
+                <a href="tap.html" class="nav-link active">Duyệt Theo Tập</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div class="page-header">
+            <h1>Duyệt Theo Tập (Volume)</h1>
+            <p style="color: var(--text-secondary)">Xem danh sách loài cá theo thứ tự trích xuất trong từng tập sách gốc.</p>
+        </div>
+
+        <div class="vol-tabs" id="volTabs">
+            <div class="vol-tab" data-vol="1">Tập I</div>
+            <div class="vol-tab" data-vol="2">Tập II</div>
+            <div class="vol-tab" data-vol="3">Tập III</div>
+            <div class="vol-tab active" data-vol="4">Tập IV</div>
+            <div class="vol-tab" data-vol="5">Tập V</div>
+        </div>
+
+        <div class="search-input-container" style="max-width: 500px; margin: 0 auto 3rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="localFilter" class="search-input" placeholder="Lọc nhanh tên cá trong Tập này..." autocomplete="off">
+        </div>
+
+        <div id="gridContainer" class="grid-species">
+            <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted)">Đang tải dữ liệu...</div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; margin-top: 4rem; border-top: 1px solid rgba(255,255,255,0.05); color: #64748b; font-size: 0.9rem;">
+        <p>Chuyển đổi số phục vụ công tác nghiên cứu khoa học. Đơn vị thực hiện: Phòng Thông tin - Truyền thông, Viện Hải dương học</p>
+        <p style="margin-top: 0.5rem;">Phiên bản: 1.0.0</p>
+    </footer>
+
+    <script>
+        let allSpecies = [];
+        let currentVol = 4;
+
+        const volColors = { 1: '#818cf8', 2: '#34d399', 3: '#f87171', 4: '#fbbf24', 5: '#60a5fa' };
+
+        // Xử lý URL param nếu có ?vol=4
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('vol')) {
+            currentVol = parseInt(urlParams.get('vol'));
+            document.querySelectorAll('.vol-tab').forEach(t => t.classList.remove('active'));
+            const tab = document.querySelector(`.vol-tab[data-vol="${currentVol}"]`);
+            if (tab) tab.classList.add('active');
+        }
+
+        fetch('data/species.json')
+            .then(r => r.json())
+            .then(data => {
+                allSpecies = data;
+                renderGrid(currentVol);
+            });
+
+        document.querySelectorAll('.vol-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.vol-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                currentVol = parseInt(this.getAttribute('data-vol'));
+                document.getElementById('localFilter').value = '';
+                renderGrid(currentVol);
+                
+                // Cập nhật URL
+                const url = new URL(window.location);
+                url.searchParams.set('vol', currentVol);
+                window.history.pushState({}, '', url);
+            });
+        });
+
+        // Filter nhanh
+        document.getElementById('localFilter').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.species-card-mini');
+            
+            cards.forEach(card => {
+                const text = card.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        function renderGrid(volId) {
+            const container = document.getElementById('gridContainer');
+            const filtered = allSpecies.filter(s => s.volume === volId);
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted)">Tập ${volId} chưa có dữ liệu hoặc đang được trích xuất.</div>`;
+                return;
+            }
+
+            container.innerHTML = filtered.map(sp => {
+                const tax = sp.taxonomy || {};
+                const order = (tax.order && tax.order.vn) ? tax.order.vn : '';
+                const family = (tax.family && tax.family.vn) ? tax.family.vn : '';
+                
+                // Tính ID gốc dựa vào speciesIndex
+                let shortId = sp.speciesIndex || '';
+
+                return `
+                <a href="species.html?id=${sp.id}" class="species-card-mini" style="--vol-color:${volColors[volId] || 'var(--brand-primary)'}">
+                    <div class="scm-id">#${shortId}</div>
+                    <div class="scm-name">${sp.vnName}</div>
+                    <div class="scm-sci">${sp.scientificName}</div>
+                    <div class="scm-tax">${order} ${family ? ' → ' + family : ''}</div>
+                </a>
+                `;
+            }).join('');
+        }
+    </script>
+<script src="assets/shared.js"></script></body>
+</html>

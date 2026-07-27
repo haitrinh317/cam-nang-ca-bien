@@ -1672,10 +1672,7 @@
     "syncedAt": "2026-07-24T06:22:20.968528Z",
     "sourceId": "tap2-species-2",
     "sourceName": "Elops hawaiensis",
-    "commonName": "Hawaiian ladyfish",
-    "alternateNames": [
-      "Elops hawaiensis"
-    ]
+    "commonName": "Hawaiian ladyfish"
   },
   "tap2-species-3": {
     "status": "valid",
@@ -1713,8 +1710,6 @@
     "sourceName": "Chanos chanos",
     "commonName": "Milkfish",
     "alternateNames": [
-      "Chanidae",
-      "Chanos chanos",
       "Cá măng sữa"
     ]
   },
@@ -1743,9 +1738,6 @@
     "syncedAt": "2026-07-24T06:22:28.034521Z",
     "sourceId": "tap2-species-7",
     "sourceName": "Chirocentrus nudus",
-    "alternateNames": [
-      "Chirocentrus nudus"
-    ],
     "commonName": "whitefin wolf-herring"
   },
   "tap2-species-8": {
@@ -1758,9 +1750,6 @@
     "syncedAt": "2026-07-24T06:22:29.301232Z",
     "sourceId": "tap2-species-8",
     "sourceName": "Anodontostoma chacunda",
-    "alternateNames": [
-      "Anodontostoma chacunda"
-    ],
     "commonName": "Chacunda gizzard shad"
   },
   "tap2-species-9": {
@@ -1773,10 +1762,7 @@
     "syncedAt": "2026-07-24T06:22:30.961232Z",
     "sourceId": "tap2-species-9",
     "sourceName": "Nematalosa nasus",
-    "commonName": "Gizzard-shad",
-    "alternateNames": [
-      "Nematalosa nasus"
-    ]
+    "commonName": "Gizzard-shad"
   },
   "tap2-species-10": {
     "status": "valid",
@@ -1787,10 +1773,7 @@
     "note": "Tên hợp lệ trên WoRMS",
     "syncedAt": "2026-07-24T06:22:32.301474Z",
     "sourceId": "tap2-species-10",
-    "sourceName": "Clupanodon thrissa",
-    "alternateNames": [
-      "Clupanodon thrissa"
-    ]
+    "sourceName": "Clupanodon thrissa"
   },
   "tap2-species-11": {
     "status": "synonym",
@@ -1829,9 +1812,6 @@
     "syncedAt": "2026-07-24T06:22:36.764446Z",
     "sourceId": "tap2-species-13",
     "sourceName": "Dussumieria hasseltii",
-    "alternateNames": [
-      "Dussumieria hasseltii"
-    ],
     "commonName": "Hasselt's rainbow sardine"
   },
   "tap2-species-14": {
@@ -1844,9 +1824,6 @@
     "syncedAt": "2026-07-24T06:22:39.001355Z",
     "sourceId": "tap2-species-14",
     "sourceName": "Etrumeus micropus",
-    "alternateNames": [
-      "Etrumeus micropus"
-    ],
     "commonName": "Market sardine"
   },
   "tap2-species-15": {
@@ -1859,9 +1836,6 @@
     "syncedAt": "2026-07-24T06:22:40.471197Z",
     "sourceId": "tap2-species-15",
     "sourceName": "Spratelloides decicatulus",
-    "alternateNames": [
-      "Spratelloides delicatulus"
-    ],
     "commonName": "delicate round herring"
   },
   "tap2-species-16": {
@@ -1889,9 +1863,6 @@
     "syncedAt": "2026-07-24T06:22:43.191080Z",
     "sourceId": "tap2-species-17",
     "sourceName": "Sardinella clupeoides",
-    "alternateNames": [
-      "Amblygaster clupeoides"
-    ],
     "commonName": "Bleeker smoothbelly sardinella"
   },
   "tap2-species-18": {
@@ -1904,10 +1875,7 @@
     "syncedAt": "2026-07-24T06:22:44.881245Z",
     "sourceId": "tap2-species-18",
     "sourceName": "Sardinella fimbriata",
-    "commonName": "Fringescale Sardinella",
-    "alternateNames": [
-      "Sardinella fimbriata"
-    ]
+    "commonName": "Fringescale Sardinella"
   },
   "tap2-species-19": {
     "status": "valid",
@@ -1934,10 +1902,7 @@
     "syncedAt": "2026-07-24T06:22:47.901210Z",
     "sourceId": "tap2-species-20",
     "sourceName": "Sardinella melanura",
-    "commonName": "Blacktip Sardinella",
-    "alternateNames": [
-      "Sardinella melanura"
-    ]
+    "commonName": "Blacktip Sardinella"
   },
   "tap2-species-21": {
     "status": "synonym",
@@ -1949,10 +1914,7 @@
     "syncedAt": "2026-07-24T06:22:49.483131Z",
     "sourceId": "tap2-species-21",
     "sourceName": "Sardinella perforata",
-    "commonName": "White Sardinella",
-    "alternateNames": [
-      "Sardinella albella"
-    ]
+    "commonName": "White Sardinella"
   },
   "tap2-species-22": {
     "status": "valid",
@@ -1964,10 +1926,7 @@
     "syncedAt": "2026-07-24T06:22:50.792036Z",
     "sourceId": "tap2-species-22",
     "sourceName": "Sardinella sindensis",
-    "commonName": "Sind Sardinella",
-    "alternateNames": [
-      "Sardinella sindensis"
-    ]
+    "commonName": "Sind Sardinella"
   },
   "tap2-species-23": {
     "status": "synonym",
@@ -1991,10 +1950,7 @@
     "syncedAt": "2026-07-24T06:22:53.603090Z",
     "sourceId": "tap2-species-24",
     "sourceName": "Sardinella jussieu",
-    "commonName": "Mauritian Sardinella",
-    "alternateNames": [
-      "Sardinella jussieu"
-    ]
+    "commonName": "Mauritian Sardinella"
   },
   "tap2-species-25": {
     "status": "synonym",
@@ -2005,10 +1961,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Herklotsichthys ovalis",
     "syncedAt": "2026-07-24T06:22:54.973171Z",
     "sourceId": "tap2-species-25",
-    "sourceName": "Harengula ovalis",
-    "alternateNames": [
-      "Herklotsichthys ovalis"
-    ]
+    "sourceName": "Harengula ovalis"
   },
   "tap2-species-26": {
     "status": "synonym",
@@ -2020,10 +1973,7 @@
     "syncedAt": "2026-07-24T06:22:56.281263Z",
     "sourceId": "tap2-species-26",
     "sourceName": "Harengula zunasi",
-    "commonName": "Japanese Sardinella",
-    "alternateNames": [
-      "Sardinella zunasi"
-    ]
+    "commonName": "Japanese Sardinella"
   },
   "tap2-species-27": {
     "status": "synonym",
@@ -2035,10 +1985,7 @@
     "syncedAt": "2026-07-24T06:22:57.581121Z",
     "sourceId": "tap2-species-27",
     "sourceName": "Harengula nymphaea",
-    "commonName": "Bali Sardinella",
-    "alternateNames": [
-      "Sardinella lemuru"
-    ]
+    "commonName": "Bali Sardinella"
   },
   "tap2-species-28": {
     "status": "synonym",
@@ -2050,9 +1997,6 @@
     "syncedAt": "2026-07-24T06:22:58.951184Z",
     "sourceId": "tap2-species-28",
     "sourceName": "Harengula schrammi",
-    "alternateNames": [
-      "Herklotsichthys quadrimaculatus"
-    ],
     "commonName": "bluestripe herring"
   },
   "tap2-species-29": {
@@ -2116,9 +2060,6 @@
     "syncedAt": "2026-07-24T06:23:06.231309Z",
     "sourceId": "tap2-species-33",
     "sourceName": "Opisthopterus tardoore",
-    "alternateNames": [
-      "Opisthopterus tardoore"
-    ],
     "commonName": "Longfin Shad"
   },
   "tap2-species-34": {
@@ -2158,9 +2099,6 @@
     "syncedAt": "2026-07-24T06:23:10.341254Z",
     "sourceId": "tap2-species-36",
     "sourceName": "Macrura kelee",
-    "alternateNames": [
-      "Hilsa kelee"
-    ],
     "commonName": "Kelee shad"
   },
   "tap2-species-37": {
@@ -2188,9 +2126,6 @@
     "syncedAt": "2026-07-24T06:23:13.132847Z",
     "sourceId": "tap2-species-38",
     "sourceName": "Stolephorus heterolobus",
-    "alternateNames": [
-      "Encrasicholina heteroloba"
-    ],
     "commonName": "shorthead anchovy"
   },
   "tap2-species-39": {
@@ -2266,9 +2201,6 @@
     "syncedAt": "2026-07-24T06:23:21.368752Z",
     "sourceId": "tap2-species-44",
     "sourceName": "Stolephorus bataviensis",
-    "alternateNames": [
-      "Stolephorus waitei"
-    ],
     "commonName": "Spotty-face anchovy"
   },
   "tap2-species-45": {
@@ -2281,10 +2213,7 @@
     "syncedAt": "2026-07-24T06:23:22.742718Z",
     "sourceId": "tap2-species-45",
     "sourceName": "Stolephorus buccaneeri",
-    "commonName": "Buccaneer anchovy",
-    "alternateNames": [
-      "Encrasicholina punctifer"
-    ]
+    "commonName": "Buccaneer anchovy"
   },
   "tap2-species-46": {
     "status": "synonym",
@@ -2295,10 +2224,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Thryssa kammalensis",
     "syncedAt": "2026-07-24T06:23:24.062785Z",
     "sourceId": "tap2-species-46",
-    "sourceName": "Thrissa kammalensis",
-    "alternateNames": [
-      "Thryssa kammalensis"
-    ]
+    "sourceName": "Thrissa kammalensis"
   },
   "tap2-species-47": {
     "status": "synonym",
@@ -2348,9 +2274,6 @@
     "syncedAt": "2026-07-24T06:23:30.481163Z",
     "sourceId": "tap2-species-50",
     "sourceName": "Thrissa dussumieri",
-    "alternateNames": [
-      "Thryssa dussumieri"
-    ],
     "commonName": "Dussumier's thryssa"
   },
   "tap2-species-51": {
@@ -2402,9 +2325,6 @@
     "syncedAt": "2026-07-24T06:23:36.311272Z",
     "sourceId": "tap2-species-54",
     "sourceName": "Setipinna breviceps",
-    "alternateNames": [
-      "Setipinna breviceps"
-    ],
     "commonName": "shorthead hairfin anchovy"
   },
   "tap2-species-55": {
@@ -2417,9 +2337,6 @@
     "syncedAt": "2026-07-24T06:23:37.841083Z",
     "sourceId": "tap2-species-55",
     "sourceName": "Coilia grayii",
-    "alternateNames": [
-      "Coilia grayii"
-    ],
     "commonName": "Gray's grenadier anchovy"
   },
   "tap2-species-56": {
@@ -2444,9 +2361,6 @@
     "syncedAt": "2026-07-24T06:23:40.455838Z",
     "sourceId": "tap2-species-57",
     "sourceName": "Coilia dussumieri",
-    "alternateNames": [
-      "Coilia dussumieri"
-    ],
     "commonName": "gold spotted grenadier anchovy"
   },
   "tap2-species-58": {
@@ -2459,9 +2373,6 @@
     "syncedAt": "2026-07-24T06:23:41.742590Z",
     "sourceId": "tap2-species-58",
     "sourceName": "Coilia macrognathos",
-    "alternateNames": [
-      "Coilia macrognathos"
-    ],
     "commonName": "longjaw grenadier anchovy"
   },
   "tap2-species-59": {
@@ -2474,9 +2385,6 @@
     "syncedAt": "2026-07-24T06:23:43.101333Z",
     "sourceId": "tap2-species-59",
     "sourceName": "Coilia lindmani",
-    "alternateNames": [
-      "Coilia lindmani"
-    ],
     "commonName": "Lindman's grenadier anchovy"
   },
   "tap2-species-60": {
@@ -2489,9 +2397,6 @@
     "syncedAt": "2026-07-24T06:23:44.502439Z",
     "sourceId": "tap2-species-60",
     "sourceName": "Protosalanx hyalocranius",
-    "alternateNames": [
-      "Protosalanx hyalocranius"
-    ],
     "commonName": "Clearhead icefish"
   },
   "tap2-species-61": {
@@ -2503,10 +2408,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Salanx ariakensis",
     "syncedAt": "2026-07-24T06:23:45.784555Z",
     "sourceId": "tap2-species-61",
-    "sourceName": "Salanx longianalis",
-    "alternateNames": [
-      "Salanx ariakensis"
-    ]
+    "sourceName": "Salanx longianalis"
   },
   "tap2-species-62": {
     "status": "synonym",
@@ -2517,10 +2419,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Salanx ariakensis",
     "syncedAt": "2026-07-24T06:23:47.161308Z",
     "sourceId": "tap2-species-62",
-    "sourceName": "Salanx acuticeps",
-    "alternateNames": [
-      "Salanx ariakensis"
-    ]
+    "sourceName": "Salanx acuticeps"
   },
   "tap2-species-63": {
     "status": "synonym",
@@ -2532,9 +2431,6 @@
     "syncedAt": "2026-07-24T06:23:48.460862Z",
     "sourceId": "tap2-species-63",
     "sourceName": "Leucosoma chinensis",
-    "alternateNames": [
-      "Salanx chinensis"
-    ],
     "commonName": "Chinese icefish"
   },
   "tap2-species-64": {
@@ -2547,9 +2443,6 @@
     "syncedAt": "2026-07-24T06:23:49.742895Z",
     "sourceId": "tap2-species-64",
     "sourceName": "Argentina semifasciata",
-    "alternateNames": [
-      "Glossanodon semifasciatus"
-    ],
     "commonName": "Deep-sea smelt"
   },
   "tap2-species-65": {
@@ -2562,10 +2455,7 @@
     "syncedAt": "2026-07-24T06:23:51.351231Z",
     "sourceId": "tap2-species-65",
     "sourceName": "Chauliodus sloani",
-    "commonName": "Sloane's viperfish",
-    "alternateNames": [
-      "Chauliodus sloani"
-    ]
+    "commonName": "Sloane's viperfish"
   },
   "tap2-species-66": {
     "status": "valid",
@@ -2577,9 +2467,6 @@
     "syncedAt": "2026-07-24T06:23:52.662413Z",
     "sourceId": "tap2-species-66",
     "sourceName": "Polyipnus spinosus",
-    "alternateNames": [
-      "Polyipnus spinosus"
-    ],
     "commonName": "Spiny Hatchetfish"
   },
   "tap2-species-67": {
@@ -2661,10 +2548,7 @@
     "syncedAt": "2026-07-24T06:24:01.221092Z",
     "sourceId": "tap2-species-72",
     "sourceName": "Saurida gracilis",
-    "commonName": "Gracile lizardfish",
-    "alternateNames": [
-      "Saurida gracilis"
-    ]
+    "commonName": "Gracile lizardfish"
   },
   "tap2-species-73": {
     "status": "valid",
@@ -2676,10 +2560,7 @@
     "syncedAt": "2026-07-24T06:24:02.811172Z",
     "sourceId": "tap2-species-73",
     "sourceName": "Synodus macrops",
-    "commonName": "Triplecross lizardfish",
-    "alternateNames": [
-      "Synodus macrops"
-    ]
+    "commonName": "Triplecross lizardfish"
   },
   "tap2-species-74": {
     "status": "valid",
@@ -2691,10 +2572,7 @@
     "syncedAt": "2026-07-24T06:24:04.132170Z",
     "sourceId": "tap2-species-74",
     "sourceName": "Synodus variegatus",
-    "commonName": "Variegated lizardfish",
-    "alternateNames": [
-      "Synodus variegatus"
-    ]
+    "commonName": "Variegated lizardfish"
   },
   "tap2-species-75": {
     "status": "valid",
@@ -2706,9 +2584,6 @@
     "syncedAt": "2026-07-24T06:24:05.862276Z",
     "sourceId": "tap2-species-75",
     "sourceName": "Synodus similis",
-    "alternateNames": [
-      "Synodus similis"
-    ],
     "commonName": "Blackspot Lizardfish"
   },
   "tap2-species-76": {
@@ -2721,10 +2596,7 @@
     "syncedAt": "2026-07-24T06:24:07.171259Z",
     "sourceId": "tap2-species-76",
     "sourceName": "Harpodon nehereus",
-    "commonName": "Bombay duck",
-    "alternateNames": [
-      "Harpadon nehereus"
-    ]
+    "commonName": "Bombay duck"
   },
   "tap2-species-77": {
     "status": "valid",
@@ -2736,9 +2608,6 @@
     "syncedAt": "2026-07-24T06:24:08.695856Z",
     "sourceId": "tap2-species-77",
     "sourceName": "Myctophum aurolaternatum",
-    "alternateNames": [
-      "Myctophum aurolaternatum"
-    ],
     "commonName": "Golden Lanternfish"
   },
   "tap2-species-78": {
@@ -2751,9 +2620,6 @@
     "syncedAt": "2026-07-24T06:24:10.121228Z",
     "sourceId": "tap2-species-78",
     "sourceName": "Symbolophorus evermanni",
-    "alternateNames": [
-      "Symbolophorus evermanni"
-    ],
     "commonName": "Evermann's lantern fish"
   },
   "tap2-species-79": {
@@ -2766,9 +2632,6 @@
     "syncedAt": "2026-07-24T06:24:11.531138Z",
     "sourceId": "tap2-species-79",
     "sourceName": "Chlorophthalmus agassizii",
-    "alternateNames": [
-      "Chlorophthalmus agassizi"
-    ],
     "commonName": "shortnose greeneye"
   },
   "tap2-species-80": {
@@ -2781,10 +2644,7 @@
     "syncedAt": "2026-07-24T06:24:12.921091Z",
     "sourceId": "tap2-species-80",
     "sourceName": "Ateleopus japonicus",
-    "commonName": "Pacific jellynose fish",
-    "alternateNames": [
-      "Ateleopus japonicus"
-    ]
+    "commonName": "Pacific jellynose fish"
   },
   "tap2-species-81": {
     "status": "valid",
@@ -2796,10 +2656,7 @@
     "syncedAt": "2026-07-24T06:24:14.321337Z",
     "sourceId": "tap2-species-81",
     "sourceName": "Anguilla celebesensis",
-    "commonName": "Celebes longfin eel",
-    "alternateNames": [
-      "Anguilla celebesensis"
-    ]
+    "commonName": "Celebes longfin eel"
   },
   "tap2-species-82": {
     "status": "valid",
@@ -2813,7 +2670,6 @@
     "sourceName": "Anguilla marmorata",
     "commonName": "marbled eel",
     "alternateNames": [
-      "Anguilla marmorota",
       "Cá chình hoa"
     ]
   },
@@ -2829,7 +2685,6 @@
     "sourceName": "Anguilla japonica",
     "commonName": "Japanese eel",
     "alternateNames": [
-      "Anguilla japonica",
       "Cá chình Nhật Bản"
     ]
   },
@@ -2842,7 +2697,8 @@
     "note": "Tên hợp lệ trên WoRMS",
     "syncedAt": "2026-07-24T06:24:18.551070Z",
     "sourceId": "tap2-species-84",
-    "sourceName": "Echidna delicatula"
+    "sourceName": "Echidna delicatula",
+    "commonName": "Fine-speckled moray"
   },
   "tap2-species-85": {
     "status": "valid",
@@ -2854,7 +2710,10 @@
     "syncedAt": "2026-07-24T06:24:19.897501Z",
     "sourceId": "tap2-species-85",
     "sourceName": "Echidna nebulosa",
-    "commonName": "snowflake moray"
+    "commonName": "Snowflake moray",
+    "alternateNames": [
+      "Cá lịch hoa to"
+    ]
   },
   "tap2-species-86": {
     "status": "valid",
@@ -2878,10 +2737,7 @@
     "syncedAt": "2026-07-24T06:24:22.510976Z",
     "sourceId": "tap2-species-87",
     "sourceName": "Evenchelys macrurus",
-    "commonName": "Slender giant moray",
-    "alternateNames": [
-      "Strophidon sathete"
-    ]
+    "commonName": "Slender giant moray"
   },
   "tap2-species-88": {
     "status": "valid",
@@ -2893,10 +2749,7 @@
     "syncedAt": "2026-07-24T06:24:23.880825Z",
     "sourceId": "tap2-species-88",
     "sourceName": "Gymnothorax favagineus",
-    "commonName": "Laced moray",
-    "alternateNames": [
-      "Gymnothorax favagineus"
-    ]
+    "commonName": "Laced moray"
   },
   "tap2-species-89": {
     "status": "valid",
@@ -2923,9 +2776,6 @@
     "syncedAt": "2026-07-24T06:24:26.921050Z",
     "sourceId": "tap2-species-90",
     "sourceName": "Gymnothorax pictus",
-    "alternateNames": [
-      "Gymnothorax pictus"
-    ],
     "commonName": "Bar-cheeked Eel"
   },
   "tap2-species-91": {
@@ -2938,9 +2788,6 @@
     "syncedAt": "2026-07-24T06:24:28.310987Z",
     "sourceId": "tap2-species-91",
     "sourceName": "Gymnothorax punctatofasciatus",
-    "alternateNames": [
-      "Gymnothorax punctatofasciatus"
-    ],
     "commonName": "Bars and Spots Moray"
   },
   "tap2-species-92": {
@@ -2953,10 +2800,7 @@
     "syncedAt": "2026-07-24T06:24:29.611958Z",
     "sourceId": "tap2-species-92",
     "sourceName": "Gymnothorax thyrsoideus",
-    "commonName": "Gymnothorax thrysoideus",
-    "alternateNames": [
-      "Gymnothorax thyrsoideus"
-    ]
+    "commonName": "Gymnothorax thrysoideus"
   },
   "tap2-species-93": {
     "status": "valid",
@@ -2968,10 +2812,7 @@
     "syncedAt": "2026-07-24T06:24:30.913227Z",
     "sourceId": "tap2-species-93",
     "sourceName": "Gymnothorax undulatus",
-    "commonName": "Undulated moray",
-    "alternateNames": [
-      "Gymnothorax undulatus"
-    ]
+    "commonName": "Undulated moray"
   },
   "tap2-species-94": {
     "status": "valid",
@@ -2983,10 +2824,7 @@
     "syncedAt": "2026-07-24T06:24:32.371969Z",
     "sourceId": "tap2-species-94",
     "sourceName": "Gymnothorax fimbriatus",
-    "commonName": "Fimbriated moray",
-    "alternateNames": [
-      "Gymnothorax fimbriatus"
-    ]
+    "commonName": "Fimbriated moray"
   },
   "tap2-species-95": {
     "status": "valid",
@@ -2998,9 +2836,6 @@
     "syncedAt": "2026-07-24T06:24:33.671812Z",
     "sourceId": "tap2-species-95",
     "sourceName": "Gymnothorax reticularis",
-    "alternateNames": [
-      "Gymnothorax reticularis"
-    ],
     "commonName": "Dusky-banded Moray"
   },
   "tap2-species-96": {
@@ -3013,9 +2848,6 @@
     "syncedAt": "2026-07-24T06:24:35.051938Z",
     "sourceId": "tap2-species-96",
     "sourceName": "Gymnothorax melanospilus",
-    "alternateNames": [
-      "Gymnothorax isingteena"
-    ],
     "commonName": "Spotted Moray"
   },
   "tap2-species-97": {
@@ -3028,10 +2860,7 @@
     "syncedAt": "2026-07-24T06:24:36.321911Z",
     "sourceId": "tap2-species-97",
     "sourceName": "Gymnothorax petelli",
-    "commonName": "Gymnothorax rueppellii",
-    "alternateNames": [
-      "Gymnothorax rueppelliae"
-    ]
+    "commonName": "Gymnothorax rueppellii"
   },
   "tap2-species-98": {
     "status": "synonym",
@@ -3043,10 +2872,7 @@
     "syncedAt": "2026-07-24T06:24:37.791800Z",
     "sourceId": "tap2-species-98",
     "sourceName": "Gymnothorax reevesi",
-    "commonName": "Reeve's moray",
-    "alternateNames": [
-      "Gymnothorax reevesii"
-    ]
+    "commonName": "Reeve's moray"
   },
   "tap2-species-99": {
     "status": "synonym",
@@ -3058,9 +2884,6 @@
     "syncedAt": "2026-07-24T06:24:39.231774Z",
     "sourceId": "tap2-species-99",
     "sourceName": "Gymnomuraena concolor",
-    "alternateNames": [
-      "Uropterygius concolor"
-    ],
     "commonName": "unicolor snake moray"
   },
   "tap2-species-100": {
@@ -3072,10 +2895,7 @@
     "note": "Tên hợp lệ trên WoRMS",
     "syncedAt": "2026-07-24T06:24:40.570750Z",
     "sourceId": "tap2-species-100",
-    "sourceName": "Moringua macrocephalus",
-    "alternateNames": [
-      "Moringua macrocephalus"
-    ]
+    "sourceName": "Moringua macrocephalus"
   },
   "tap2-species-101": {
     "status": "valid",
@@ -3106,8 +2926,6 @@
     "alternateNames": [
       "Cá lạc",
       "Cá lạc ù",
-      "Muraenesox cinereous",
-      "Muraenesox cinereus",
       "Mạn lệ ngư"
     ]
   },
@@ -3121,10 +2939,7 @@
     "syncedAt": "2026-07-24T06:24:44.551046Z",
     "sourceId": "tap2-species-103",
     "sourceName": "Muraenesox talabon",
-    "commonName": "Yellow pike conger",
-    "alternateNames": [
-      "Congresox talabon"
-    ]
+    "commonName": "Yellow pike conger"
   },
   "tap2-species-104": {
     "status": "synonym",
@@ -3136,10 +2951,7 @@
     "syncedAt": "2026-07-24T06:24:45.833091Z",
     "sourceId": "tap2-species-104",
     "sourceName": "Muraenesox talabonoides",
-    "commonName": "Indian pike conger",
-    "alternateNames": [
-      "Congresox talabonoides"
-    ]
+    "commonName": "Indian pike conger"
   },
   "tap2-species-105": {
     "status": "valid",
@@ -3150,10 +2962,7 @@
     "note": "Tên hợp lệ trên WoRMS",
     "syncedAt": "2026-07-24T06:24:47.380981Z",
     "sourceId": "tap2-species-105",
-    "sourceName": "Neenchelys buitendijki",
-    "alternateNames": [
-      "Neenchelys buitendijki"
-    ]
+    "sourceName": "Neenchelys buitendijki"
   },
   "tap2-species-106": {
     "status": "valid",
@@ -3165,9 +2974,6 @@
     "syncedAt": "2026-07-24T06:24:48.741736Z",
     "sourceId": "tap2-species-106",
     "sourceName": "Muraenichthys gymnopterus",
-    "alternateNames": [
-      "Muraenichthys gymnopterus"
-    ],
     "commonName": "Longfinned Worm Eel"
   },
   "tap2-species-107": {
@@ -3180,9 +2986,6 @@
     "syncedAt": "2026-07-24T06:24:50.021404Z",
     "sourceId": "tap2-species-107",
     "sourceName": "Muraenichthys malabonensis",
-    "alternateNames": [
-      "Muraenichthys thompsoni"
-    ],
     "commonName": "Thomponson's Worm Eel"
   },
   "tap2-species-108": {
@@ -3195,9 +2998,6 @@
     "syncedAt": "2026-07-24T06:24:51.381670Z",
     "sourceId": "tap2-species-108",
     "sourceName": "Myrophis macrophthalmus",
-    "alternateNames": [
-      "Ahlia egmontis"
-    ],
     "commonName": "key worm eel"
   },
   "tap2-species-109": {
@@ -3210,9 +3010,6 @@
     "syncedAt": "2026-07-24T06:24:52.700907Z",
     "sourceId": "tap2-species-109",
     "sourceName": "Chlopsis fierasfer",
-    "alternateNames": [
-      "Saurenchelys fierasfer"
-    ],
     "commonName": "Black-tail Duckbill Eel"
   },
   "tap2-species-110": {
@@ -3237,9 +3034,6 @@
     "syncedAt": "2026-07-24T06:24:55.310986Z",
     "sourceId": "tap2-species-111",
     "sourceName": "Rhynchocymba ectenura",
-    "alternateNames": [
-      "Rhynchoconger ectenurus"
-    ],
     "commonName": "Longnose Conger"
   },
   "tap2-species-112": {
@@ -3252,9 +3046,6 @@
     "syncedAt": "2026-07-24T06:24:56.596914Z",
     "sourceId": "tap2-species-112",
     "sourceName": "Rhynchocymba nystromi",
-    "alternateNames": [
-      "Gnathophis nystromi"
-    ],
     "commonName": "Conger eel"
   },
   "tap2-species-113": {
@@ -3267,9 +3058,6 @@
     "syncedAt": "2026-07-24T06:24:57.871306Z",
     "sourceId": "tap2-species-113",
     "sourceName": "Uroconger lepturus",
-    "alternateNames": [
-      "Uroconger lepturus"
-    ],
     "commonName": "slender conger"
   },
   "tap2-species-114": {
@@ -3282,9 +3070,6 @@
     "syncedAt": "2026-07-24T06:24:59.161591Z",
     "sourceId": "tap2-species-114",
     "sourceName": "Ophichthys evermani",
-    "alternateNames": [
-      "Ophichthus lithinus"
-    ],
     "commonName": "Evermann's Snake Eel"
   },
   "tap2-species-115": {
@@ -3297,9 +3082,6 @@
     "syncedAt": "2026-07-24T06:25:00.441469Z",
     "sourceId": "tap2-species-115",
     "sourceName": "Ophichthys apicalis",
-    "alternateNames": [
-      "Ophichthus apicalis"
-    ],
     "commonName": "bluntnose snake-eel"
   },
   "tap2-species-116": {
@@ -3311,10 +3093,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Ophichthus celebicus",
     "syncedAt": "2026-07-24T06:25:02.081540Z",
     "sourceId": "tap2-species-116",
-    "sourceName": "Ophichthys celebicus",
-    "alternateNames": [
-      "Ophichthus celebicus"
-    ]
+    "sourceName": "Ophichthys celebicus"
   },
   "tap2-species-117": {
     "status": "synonym",
@@ -3326,9 +3105,6 @@
     "syncedAt": "2026-07-24T06:25:03.371539Z",
     "sourceId": "tap2-species-117",
     "sourceName": "Ophichthys rutidodermatoides",
-    "alternateNames": [
-      "Ophichthus rutidoderma"
-    ],
     "commonName": "Derby Snake-eel"
   },
   "tap2-species-118": {
@@ -3353,9 +3129,6 @@
     "syncedAt": "2026-07-24T06:25:06.121154Z",
     "sourceId": "tap2-species-119",
     "sourceName": "Pisoodonophis cancrivorus",
-    "alternateNames": [
-      "Pisodonophis cancrivorus"
-    ],
     "commonName": "longfin snake-eel"
   },
   "tap2-species-120": {
@@ -3367,10 +3140,7 @@
     "note": "Tên hợp lệ trên WoRMS",
     "syncedAt": "2026-07-24T06:25:07.371309Z",
     "sourceId": "tap2-species-120",
-    "sourceName": "Cirrhimuraena chinensis",
-    "alternateNames": [
-      "Cirrhimuraena chinensis"
-    ]
+    "sourceName": "Cirrhimuraena chinensis"
   },
   "tap2-species-121": {
     "status": "valid",
@@ -3381,10 +3151,7 @@
     "note": "Tên hợp lệ trên WoRMS",
     "syncedAt": "2026-07-24T06:25:08.751072Z",
     "sourceId": "tap2-species-121",
-    "sourceName": "Cirrhimuraena orientalis",
-    "alternateNames": [
-      "Cirrhimuraena orientalis"
-    ]
+    "sourceName": "Cirrhimuraena orientalis"
   },
   "tap2-species-122": {
     "status": "valid",
@@ -3396,9 +3163,6 @@
     "syncedAt": "2026-07-24T06:25:10.081075Z",
     "sourceId": "tap2-species-122",
     "sourceName": "Brachysomophis crocodilinus",
-    "alternateNames": [
-      "Brachysomophis crocodilinus"
-    ],
     "commonName": "Crocodile Snake-eel"
   },
   "tap2-species-123": {
@@ -3411,10 +3175,7 @@
     "syncedAt": "2026-07-24T06:25:11.480925Z",
     "sourceId": "tap2-species-123",
     "sourceName": "Dysomma anguillaris",
-    "commonName": "Shortbelly eel",
-    "alternateNames": [
-      "Dysomma anguillare"
-    ]
+    "commonName": "Shortbelly eel"
   },
   "tap2-species-124": {
     "status": "synonym",
@@ -3441,9 +3202,6 @@
     "syncedAt": "2026-07-24T06:25:14.231396Z",
     "sourceId": "tap2-species-125",
     "sourceName": "Plotosus canius",
-    "alternateNames": [
-      "Plotosus canius"
-    ],
     "commonName": "Barbel Eel Catfish"
   },
   "tap2-species-126": {
@@ -3456,9 +3214,6 @@
     "syncedAt": "2026-07-24T06:25:15.530952Z",
     "sourceId": "tap2-species-126",
     "sourceName": "Paraplotosus albilabris",
-    "alternateNames": [
-      "Paraplotosus albilabris"
-    ],
     "commonName": "Whitelip Catfish"
   },
   "tap2-species-127": {
@@ -3472,7 +3227,6 @@
     "sourceId": "tap2-species-127",
     "sourceName": "Pangasius krempfi",
     "alternateNames": [
-      "Pangasius krempfi",
       "cá bông lau"
     ]
   },
@@ -3485,10 +3239,7 @@
     "note": "Tên hợp lệ trên WoRMS",
     "syncedAt": "2026-07-24T06:25:18.130999Z",
     "sourceId": "tap2-species-128",
-    "sourceName": "Pangasius polyuranodon",
-    "alternateNames": [
-      "Pangasius polyuranodon"
-    ]
+    "sourceName": "Pangasius polyuranodon"
   },
   "tap2-species-129": {
     "status": "synonym",
@@ -3500,9 +3251,6 @@
     "syncedAt": "2026-07-24T06:25:19.451064Z",
     "sourceId": "tap2-species-129",
     "sourceName": "Arius sinensis",
-    "alternateNames": [
-      "Tachysurus sinensis"
-    ],
     "commonName": "Korean Bullhead"
   },
   "tap2-species-130": {
@@ -3515,9 +3263,6 @@
     "syncedAt": "2026-07-24T06:25:21.051118Z",
     "sourceId": "tap2-species-130",
     "sourceName": "Arius leiotetocephaluds",
-    "alternateNames": [
-      "Plicofollis nella"
-    ],
     "commonName": "Shieldhead Catfish"
   },
   "tap2-species-131": {
@@ -3530,10 +3275,7 @@
     "syncedAt": "2026-07-24T06:25:22.551240Z",
     "sourceId": "tap2-species-131",
     "sourceName": "Arius thalassinus",
-    "commonName": "Giant catfish",
-    "alternateNames": [
-      "Netuma thalassina"
-    ]
+    "commonName": "Giant catfish"
   },
   "tap2-species-132": {
     "status": "valid",
@@ -3545,10 +3287,7 @@
     "syncedAt": "2026-07-24T06:25:24.011201Z",
     "sourceId": "tap2-species-132",
     "sourceName": "Arius maculatus",
-    "commonName": "Spotted sea catfish",
-    "alternateNames": [
-      "Arius maculatus"
-    ]
+    "commonName": "Spotted sea catfish"
   },
   "tap2-species-133": {
     "status": "synonym",
@@ -3560,10 +3299,7 @@
     "syncedAt": "2026-07-24T06:25:25.444843Z",
     "sourceId": "tap2-species-133",
     "sourceName": "Arius sciurus",
-    "commonName": "Squirrelheaded catfish",
-    "alternateNames": [
-      "Arius microcephalus"
-    ]
+    "commonName": "Squirrelheaded catfish"
   },
   "tap2-species-134": {
     "status": "not_found",
@@ -3581,10 +3317,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Nemapteryx caelata",
     "syncedAt": "2026-07-24T06:25:28.691091Z",
     "sourceId": "tap2-species-135",
-    "sourceName": "Arius caelatus",
-    "alternateNames": [
-      "Nemapteryx caelata"
-    ]
+    "sourceName": "Arius caelatus"
   },
   "tap2-species-136": {
     "status": "synonym",
@@ -3596,9 +3329,6 @@
     "syncedAt": "2026-07-24T06:25:30.180989Z",
     "sourceId": "tap2-species-136",
     "sourceName": "Arius sagor",
-    "alternateNames": [
-      "Hexanematichthys sagor"
-    ],
     "commonName": "Sagor catfish"
   },
   "tap2-species-137": {
@@ -3610,10 +3340,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Hemiarius harmandi",
     "syncedAt": "2026-07-24T06:25:31.681075Z",
     "sourceId": "tap2-species-137",
-    "sourceName": "Arius harmandi",
-    "alternateNames": [
-      "Hemiarius harmandi"
-    ]
+    "sourceName": "Arius harmandi"
   },
   "tap2-species-138": {
     "status": "synonym",
@@ -3624,20 +3351,14 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Cephalocassis borneensis",
     "syncedAt": "2026-07-24T06:25:33.111198Z",
     "sourceId": "tap2-species-138",
-    "sourceName": "Hemipimelodus siamensis",
-    "alternateNames": [
-      "Cephalocassis borneensis"
-    ]
+    "sourceName": "Hemipimelodus siamensis"
   },
   "tap2-species-139": {
     "status": "not_found",
     "note": "Chưa xác minh được trên WoRMS",
     "syncedAt": "2026-07-24T06:25:34.481040Z",
     "sourceId": "tap2-species-139",
-    "sourceName": "Cranoglanis multiradiatus",
-    "alternateNames": [
-      "Cranoglanis multiradiatus"
-    ]
+    "sourceName": "Cranoglanis multiradiatus"
   },
   "tap2-species-140": {
     "status": "synonym",
@@ -3649,9 +3370,6 @@
     "syncedAt": "2026-07-24T06:25:35.831275Z",
     "sourceId": "tap2-species-140",
     "sourceName": "Euleptorhamphus longirostris",
-    "alternateNames": [
-      "Euleptorhamphus viridis"
-    ],
     "commonName": "ribbon halfbeak"
   },
   "tap2-species-141": {
@@ -3664,10 +3382,7 @@
     "syncedAt": "2026-07-24T06:25:37.481055Z",
     "sourceId": "tap2-species-141",
     "sourceName": "Zenarchopterus buffoni",
-    "commonName": "Buffon's river garfish",
-    "alternateNames": [
-      "Zenarchopterus buffonis"
-    ]
+    "commonName": "Buffon's river garfish"
   },
   "tap2-species-142": {
     "status": "synonym",
@@ -3678,10 +3393,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Rhynchorhamphus georgii",
     "syncedAt": "2026-07-24T06:25:38.801021Z",
     "sourceId": "tap2-species-142",
-    "sourceName": "Hemirhamphus georgii",
-    "alternateNames": [
-      "Rhynchorhamphus georgii"
-    ]
+    "sourceName": "Hemirhamphus georgii"
   },
   "tap2-species-143": {
     "status": "synonym",
@@ -3693,9 +3405,6 @@
     "syncedAt": "2026-07-24T06:25:40.081067Z",
     "sourceId": "tap2-species-143",
     "sourceName": "Hemirhamphus marginatus",
-    "alternateNames": [
-      "Hemiramphus marginatus"
-    ],
     "commonName": "barred halfbeak"
   },
   "tap2-species-144": {
@@ -3707,10 +3416,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Hyporhamphus quoyi",
     "syncedAt": "2026-07-24T06:25:41.410857Z",
     "sourceId": "tap2-species-144",
-    "sourceName": "Hemirhamphus quoyi",
-    "alternateNames": [
-      "Hyporhamphus quoyi"
-    ]
+    "sourceName": "Hemirhamphus quoyi"
   },
   "tap2-species-145": {
     "status": "synonym",
@@ -3722,10 +3428,7 @@
     "syncedAt": "2026-07-24T06:25:42.690964Z",
     "sourceId": "tap2-species-145",
     "sourceName": "Hemirhamphus far",
-    "commonName": "Black-barred halfbeak",
-    "alternateNames": [
-      "Hemiramphus far"
-    ]
+    "commonName": "Black-barred halfbeak"
   },
   "tap2-species-146": {
     "status": "synonym",
@@ -3737,9 +3440,6 @@
     "syncedAt": "2026-07-24T06:25:44.101072Z",
     "sourceId": "tap2-species-146",
     "sourceName": "Hemirhamphus gaimard",
-    "alternateNames": [
-      "Hyporhamphus quoyi"
-    ],
     "commonName": "Half-beak"
   },
   "tap2-species-147": {
@@ -3752,9 +3452,6 @@
     "syncedAt": "2026-07-24T06:25:45.471255Z",
     "sourceId": "tap2-species-147",
     "sourceName": "Hyporhamphus intermedius",
-    "alternateNames": [
-      "Hyporhamphus intermedius"
-    ],
     "commonName": "Asian Pencil Halfbeak"
   },
   "tap2-species-148": {
@@ -3767,10 +3464,7 @@
     "syncedAt": "2026-07-24T06:25:46.871355Z",
     "sourceId": "tap2-species-148",
     "sourceName": "Hyporhamphus sinensis",
-    "commonName": "Congaturi halfbeak",
-    "alternateNames": [
-      "Hyporhamphus limbatus"
-    ]
+    "commonName": "Congaturi halfbeak"
   },
   "tap2-species-149": {
     "status": "synonym",
@@ -3782,10 +3476,7 @@
     "syncedAt": "2026-07-24T06:25:48.221072Z",
     "sourceId": "tap2-species-149",
     "sourceName": "Hyporhamphus dussumierii",
-    "commonName": "Dussumier's halfbeak",
-    "alternateNames": [
-      "Hyporhamphus dussumieri"
-    ]
+    "commonName": "Dussumier's halfbeak"
   },
   "tap2-species-150": {
     "status": "valid",
@@ -3797,9 +3488,6 @@
     "syncedAt": "2026-07-24T06:25:49.600898Z",
     "sourceId": "tap2-species-150",
     "sourceName": "Hyporhamphus unifasciatus",
-    "alternateNames": [
-      "Hyporhamphus unifasciatus"
-    ],
     "commonName": "Atlantic silverstripe halfbeak"
   },
   "tap2-species-151": {
@@ -3812,9 +3500,6 @@
     "syncedAt": "2026-07-24T06:25:50.897961Z",
     "sourceId": "tap2-species-151",
     "sourceName": "Oxyporhamphus micropterus",
-    "alternateNames": [
-      "Oxyporhamphus micropterus"
-    ],
     "commonName": "smallwing flyingfish"
   },
   "tap2-species-152": {
@@ -3827,9 +3512,6 @@
     "syncedAt": "2026-07-24T06:25:52.171180Z",
     "sourceId": "tap2-species-152",
     "sourceName": "Parexocoetus brachypterus brachypterus",
-    "alternateNames": [
-      "Parexocoetus brachypterus"
-    ],
     "commonName": "sailfin flyingfish"
   },
   "tap2-species-153": {
@@ -3842,9 +3524,6 @@
     "syncedAt": "2026-07-24T06:25:53.600958Z",
     "sourceId": "tap2-species-153",
     "sourceName": "Parexocoetus mento mento",
-    "alternateNames": [
-      "Parexocoetus mento"
-    ],
     "commonName": "African Flyingfish"
   },
   "tap2-species-154": {
@@ -3857,10 +3536,7 @@
     "syncedAt": "2026-07-24T06:25:55.000878Z",
     "sourceId": "tap2-species-154",
     "sourceName": "Exocoetus volitans",
-    "commonName": "tropical two-wing flyingfish",
-    "alternateNames": [
-      "Exocoetus volitans"
-    ]
+    "commonName": "tropical two-wing flyingfish"
   },
   "tap2-species-155": {
     "status": "valid",
@@ -3872,9 +3548,6 @@
     "syncedAt": "2026-07-24T06:25:56.450948Z",
     "sourceId": "tap2-species-155",
     "sourceName": "Exocoetus monocirrhus",
-    "alternateNames": [
-      "Exocoetus monocirrhus"
-    ],
     "commonName": "barbel flyingfish"
   },
   "tap2-species-156": {
@@ -3887,9 +3560,6 @@
     "syncedAt": "2026-07-24T06:25:58.011026Z",
     "sourceId": "tap2-species-156",
     "sourceName": "Prognichthys brevipinnis",
-    "alternateNames": [
-      "Prognichthys brevipinnis"
-    ],
     "commonName": "Shortfin Flyingfish"
   },
   "tap2-species-157": {
@@ -3902,9 +3572,6 @@
     "syncedAt": "2026-07-24T06:25:59.291052Z",
     "sourceId": "tap2-species-157",
     "sourceName": "Cypselurus brevis",
-    "alternateNames": [
-      "Cypselurus hexazona"
-    ],
     "commonName": "Darkbar Flyingfish"
   },
   "tap2-species-158": {
@@ -3917,9 +3584,6 @@
     "syncedAt": "2026-07-24T06:26:01.080995Z",
     "sourceId": "tap2-species-158",
     "sourceName": "Cypselurus oligolepis",
-    "alternateNames": [
-      "Cypselurus oligolepis"
-    ],
     "commonName": "Largescale Flyingfish"
   },
   "tap2-species-159": {
@@ -3932,9 +3596,6 @@
     "syncedAt": "2026-07-24T06:26:02.550910Z",
     "sourceId": "tap2-species-159",
     "sourceName": "Cypselurus naresii",
-    "alternateNames": [
-      "Cypselurus naresii"
-    ],
     "commonName": "pharao flyingfish"
   },
   "tap2-species-160": {
@@ -3947,9 +3608,6 @@
     "syncedAt": "2026-07-24T06:26:03.901082Z",
     "sourceId": "tap2-species-160",
     "sourceName": "Cypselurus opisthopus",
-    "alternateNames": [
-      "Cypselurus opisthopus"
-    ],
     "commonName": "Black-finned Flyingfish"
   },
   "tap2-species-161": {
@@ -3978,10 +3636,7 @@
     "syncedAt": "2026-07-24T06:26:06.691229Z",
     "sourceId": "tap2-species-162",
     "sourceName": "Cypselurus bahiensis",
-    "commonName": "mavaheng so panid",
-    "alternateNames": [
-      "Cheilopogon cyanopterus"
-    ]
+    "commonName": "mavaheng so panid"
   },
   "tap2-species-163": {
     "status": "valid",
@@ -3993,9 +3648,6 @@
     "syncedAt": "2026-07-24T06:26:08.190795Z",
     "sourceId": "tap2-species-163",
     "sourceName": "Cheilopogon arcticeps",
-    "alternateNames": [
-      "Cheilopogon arcticeps"
-    ],
     "commonName": "Bearhead Flyingfish"
   },
   "tap2-species-164": {
@@ -4008,9 +3660,6 @@
     "syncedAt": "2026-07-24T06:26:09.493773Z",
     "sourceId": "tap2-species-164",
     "sourceName": "Cheilopogon spilopterus",
-    "alternateNames": [
-      "Cheilopogon spilopterus"
-    ],
     "commonName": "Lesser Spotted Flying-fish"
   },
   "tap2-species-165": {
@@ -4023,9 +3672,6 @@
     "syncedAt": "2026-07-24T06:26:10.971153Z",
     "sourceId": "tap2-species-165",
     "sourceName": "Cheilopogon atrisignis",
-    "alternateNames": [
-      "Cheilopogon atrisignis"
-    ],
     "commonName": "glider flyingfish"
   },
   "tap2-species-166": {
@@ -4038,9 +3684,6 @@
     "syncedAt": "2026-07-24T06:26:12.270964Z",
     "sourceId": "tap2-species-166",
     "sourceName": "Cheilopogon katoptron",
-    "alternateNames": [
-      "Cheilopogon katoptron"
-    ],
     "commonName": "Indonesian Flyingfish"
   },
   "tap2-species-167": {
@@ -4053,9 +3696,6 @@
     "syncedAt": "2026-07-24T06:26:13.575716Z",
     "sourceId": "tap2-species-167",
     "sourceName": "Cheilopogon suttoni",
-    "alternateNames": [
-      "Cheilopogon suttoni"
-    ],
     "commonName": "Sutton's Flyingfish"
   },
   "tap2-species-168": {
@@ -4068,10 +3708,7 @@
     "syncedAt": "2026-07-24T06:26:14.950784Z",
     "sourceId": "tap2-species-168",
     "sourceName": "Cheilopogon cyanopterus",
-    "commonName": "mavaheng so panid",
-    "alternateNames": [
-      "Cheilopogon cyanopterus"
-    ]
+    "commonName": "mavaheng so panid"
   },
   "tap2-species-169": {
     "status": "valid",
@@ -4083,10 +3720,7 @@
     "syncedAt": "2026-07-24T06:26:16.257078Z",
     "sourceId": "tap2-species-169",
     "sourceName": "Hirundichthys speculiger",
-    "commonName": "Mirrorwing flyingfish",
-    "alternateNames": [
-      "Hirundichthys speculiger"
-    ]
+    "commonName": "Mirrorwing flyingfish"
   },
   "tap2-species-170": {
     "status": "valid",
@@ -4098,10 +3732,7 @@
     "syncedAt": "2026-07-24T06:26:17.680547Z",
     "sourceId": "tap2-species-170",
     "sourceName": "Hirundichthys oxycephalus",
-    "commonName": "Hirundichthys (Hirundichthys) oxycephalus",
-    "alternateNames": [
-      "Hirundichthys oxycephalus"
-    ]
+    "commonName": "Hirundichthys (Hirundichthys) oxycephalus"
   },
   "tap2-species-171": {
     "status": "synonym",
@@ -4113,10 +3744,7 @@
     "syncedAt": "2026-07-24T06:26:18.990912Z",
     "sourceId": "tap2-species-171",
     "sourceName": "Ablennes anastomella",
-    "commonName": "Pacific needlefish",
-    "alternateNames": [
-      "Strongylura anastomella"
-    ]
+    "commonName": "Pacific needlefish"
   },
   "tap2-species-172": {
     "status": "valid",
@@ -4140,9 +3768,6 @@
     "syncedAt": "2026-07-24T06:26:22.287612Z",
     "sourceId": "tap2-species-173",
     "sourceName": "Tylosurus giganteus",
-    "alternateNames": [
-      "Tylosurus crocodilus"
-    ],
     "commonName": "houndfish"
   },
   "tap2-species-174": {
@@ -4155,9 +3780,6 @@
     "syncedAt": "2026-07-24T06:26:23.690990Z",
     "sourceId": "tap2-species-174",
     "sourceName": "Tylosurus melanotus",
-    "alternateNames": [
-      "Tylosurus melanotus"
-    ],
     "commonName": "Keel-jawed needle fish"
   },
   "tap2-species-175": {
@@ -4170,9 +3792,6 @@
     "syncedAt": "2026-07-24T06:26:25.081191Z",
     "sourceId": "tap2-species-175",
     "sourceName": "Tylosurus strongylurus",
-    "alternateNames": [
-      "Strongylura strongylura"
-    ],
     "commonName": "blackspot longtom"
   },
   "tap2-species-176": {
@@ -4182,10 +3801,7 @@
     "note": "Trạng thái WoRMS: superseded combination",
     "syncedAt": "2026-07-24T06:26:26.620931Z",
     "sourceId": "tap2-species-176",
-    "sourceName": "Tylosurus leiurus",
-    "alternateNames": [
-      "Tylosurus leiurus"
-    ]
+    "sourceName": "Tylosurus leiurus"
   },
   "tap2-species-177": {
     "status": "valid",
@@ -4197,9 +3813,6 @@
     "syncedAt": "2026-07-24T06:26:27.950986Z",
     "sourceId": "tap2-species-177",
     "sourceName": "Tylosurus crocodilus",
-    "alternateNames": [
-      "Tylosurus crocodilus"
-    ],
     "commonName": "houndfish"
   },
   "tap2-species-178": {
@@ -4211,10 +3824,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Hypoatherina valenciennei",
     "syncedAt": "2026-07-24T06:26:29.286273Z",
     "sourceId": "tap2-species-178",
-    "sourceName": "Atherina bleekeri",
-    "alternateNames": [
-      "Hypoatherina valenciennei"
-    ]
+    "sourceName": "Atherina bleekeri"
   },
   "tap2-species-179": {
     "status": "synonym",
@@ -4226,10 +3836,7 @@
     "syncedAt": "2026-07-24T06:26:30.800913Z",
     "sourceId": "tap2-species-179",
     "sourceName": "Atherina forskali",
-    "commonName": "hardyhead silverside",
-    "alternateNames": [
-      "Atherinomorus lacunosus"
-    ]
+    "commonName": "hardyhead silverside"
   },
   "tap2-species-180": {
     "status": "synonym",
@@ -4241,10 +3848,7 @@
     "syncedAt": "2026-07-24T06:26:32.271177Z",
     "sourceId": "tap2-species-180",
     "sourceName": "Atherina duodecimalis",
-    "commonName": "Atherina duodecimalis",
-    "alternateNames": [
-      "Atherina duodecimalis"
-    ]
+    "commonName": "Atherina duodecimalis"
   },
   "tap2-species-181": {
     "status": "synonym",
@@ -4256,10 +3860,7 @@
     "syncedAt": "2026-07-24T06:26:33.550945Z",
     "sourceId": "tap2-species-181",
     "sourceName": "Bregmaceros macclellandi",
-    "commonName": "spotted codlet",
-    "alternateNames": [
-      "Bregmaceros mcclellandi"
-    ]
+    "commonName": "spotted codlet"
   },
   "tap2-species-182": {
     "status": "synonym",
@@ -4271,10 +3872,7 @@
     "syncedAt": "2026-07-24T06:26:34.990943Z",
     "sourceId": "tap2-species-182",
     "sourceName": "Bregmaceros atripinnis",
-    "commonName": "spotted codlet",
-    "alternateNames": [
-      "Bregmaceros mcclellandi"
-    ]
+    "commonName": "spotted codlet"
   },
   "tap2-species-183": {
     "status": "valid",
@@ -4286,10 +3884,7 @@
     "syncedAt": "2026-07-24T06:26:36.396342Z",
     "sourceId": "tap2-species-183",
     "sourceName": "Acanthonus armatus",
-    "commonName": "Bony-eared assfish",
-    "alternateNames": [
-      "Acanthonus armatus"
-    ]
+    "commonName": "Bony-eared assfish"
   },
   "tap2-species-184": {
     "status": "valid",
@@ -4301,10 +3896,7 @@
     "syncedAt": "2026-07-24T06:26:37.700978Z",
     "sourceId": "tap2-species-184",
     "sourceName": "Brotula multibarbata",
-    "commonName": "Goatsbeard brotula",
-    "alternateNames": [
-      "Brotula multibarbata"
-    ]
+    "commonName": "Goatsbeard brotula"
   },
   "tap2-species-185": {
     "status": "synonym",
@@ -4316,9 +3908,6 @@
     "syncedAt": "2026-07-24T06:26:39.124066Z",
     "sourceId": "tap2-species-185",
     "sourceName": "Neobythites sivicolus",
-    "alternateNames": [
-      "Neobythites sivicola"
-    ],
     "commonName": "Whitespotted Brotula"
   },
   "tap2-species-186": {
@@ -4331,9 +3920,6 @@
     "syncedAt": "2026-07-24T06:26:40.575375Z",
     "sourceId": "tap2-species-186",
     "sourceName": "Neobythites nigromaculatus",
-    "alternateNames": [
-      "Neobythites unimaculatus"
-    ],
     "commonName": "Onespot Cusk"
   },
   "tap2-species-187": {
@@ -4346,9 +3932,6 @@
     "syncedAt": "2026-07-24T06:26:41.835853Z",
     "sourceId": "tap2-species-187",
     "sourceName": "Hoprobrotula armata",
-    "alternateNames": [
-      "Hoplobrotula armata"
-    ],
     "commonName": "Armoured Cusk"
   },
   "tap2-species-188": {
@@ -4360,10 +3943,7 @@
     "note": "Tên hợp lệ trên WoRMS",
     "syncedAt": "2026-07-24T06:26:43.201429Z",
     "sourceId": "tap2-species-188",
-    "sourceName": "Sirembo imberbis",
-    "alternateNames": [
-      "Sirembo imberbis"
-    ]
+    "sourceName": "Sirembo imberbis"
   },
   "tap2-species-189": {
     "status": "synonym",
@@ -4374,10 +3954,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Lepophidium marmoratum",
     "syncedAt": "2026-07-24T06:26:44.521240Z",
     "sourceId": "tap2-species-189",
-    "sourceName": "Sirembo marmoratum",
-    "alternateNames": [
-      "Lepophidium marmoratum"
-    ]
+    "sourceName": "Sirembo marmoratum"
   },
   "tap2-species-190": {
     "status": "valid",
@@ -4389,10 +3966,7 @@
     "syncedAt": "2026-07-24T06:26:45.916096Z",
     "sourceId": "tap2-species-190",
     "sourceName": "Ophidion muraenolepis",
-    "commonName": "Blackedge cusk",
-    "alternateNames": [
-      "Ophidion muraenolepis"
-    ]
+    "commonName": "Blackedge cusk"
   },
   "tap2-species-191": {
     "status": "synonym",
@@ -4404,9 +3978,6 @@
     "syncedAt": "2026-07-24T06:26:47.290952Z",
     "sourceId": "tap2-species-191",
     "sourceName": "Carapus homei",
-    "alternateNames": [
-      "Encheliophis homei"
-    ],
     "commonName": "silver pearlfish"
   },
   "tap2-species-192": {
@@ -4419,9 +3990,6 @@
     "syncedAt": "2026-07-24T06:26:48.731185Z",
     "sourceId": "tap2-species-192",
     "sourceName": "Carapus gracilis",
-    "alternateNames": [
-      "Encheliophis gracilis"
-    ],
     "commonName": "graceful pearlfish"
   },
   "tap2-species-193": {
@@ -4434,9 +4002,6 @@
     "syncedAt": "2026-07-24T06:26:50.102672Z",
     "sourceId": "tap2-species-193",
     "sourceName": "Trachichthodes lineatus",
-    "alternateNames": [
-      "Centroberyx lineatus"
-    ],
     "commonName": "Kingfish"
   },
   "tap2-species-194": {
@@ -4449,10 +4014,7 @@
     "syncedAt": "2026-07-24T06:26:51.451485Z",
     "sourceId": "tap2-species-194",
     "sourceName": "Ostichthys japonicus",
-    "commonName": "Japanese soldierfish",
-    "alternateNames": [
-      "Ostichthys japonicus"
-    ]
+    "commonName": "Japanese soldierfish"
   },
   "tap2-species-195": {
     "status": "valid",
@@ -4464,9 +4026,6 @@
     "syncedAt": "2026-07-24T06:26:52.772552Z",
     "sourceId": "tap2-species-195",
     "sourceName": "Ostichthys kaianus",
-    "alternateNames": [
-      "Ostichthys kaianus"
-    ],
     "commonName": "deepwater soldier"
   },
   "tap2-species-196": {
@@ -4479,10 +4038,7 @@
     "syncedAt": "2026-07-24T06:26:54.341129Z",
     "sourceId": "tap2-species-196",
     "sourceName": "Myripristis murdjan",
-    "commonName": "big-eye soldierfish",
-    "alternateNames": [
-      "Myripristis murdjan"
-    ]
+    "commonName": "big-eye soldierfish"
   },
   "tap2-species-197": {
     "status": "synonym",
@@ -4494,9 +4050,6 @@
     "syncedAt": "2026-07-24T06:26:55.741181Z",
     "sourceId": "tap2-species-197",
     "sourceName": "Myripristis hexagonus",
-    "alternateNames": [
-      "Myripristis hexagona"
-    ],
     "commonName": "blacktip soldierfish"
   },
   "tap2-species-198": {
@@ -4509,9 +4062,6 @@
     "syncedAt": "2026-07-24T06:26:57.271187Z",
     "sourceId": "tap2-species-198",
     "sourceName": "Myripristis pralinius",
-    "alternateNames": [
-      "Myripristis pralinia"
-    ],
     "commonName": "scarlet soldierfish"
   },
   "tap2-species-199": {
@@ -4524,10 +4074,7 @@
     "syncedAt": "2026-07-24T06:26:58.746155Z",
     "sourceId": "tap2-species-199",
     "sourceName": "Myripristis melanostictis",
-    "commonName": "blacktip soldierfish",
-    "alternateNames": [
-      "Myripristis botche"
-    ]
+    "commonName": "blacktip soldierfish"
   },
   "tap2-species-200": {
     "status": "synonym",
@@ -4554,10 +4101,7 @@
     "syncedAt": "2026-07-24T06:27:01.481398Z",
     "sourceId": "tap2-species-201",
     "sourceName": "Holocentrus caudimaculatus",
-    "commonName": "silverspot squirrelfish",
-    "alternateNames": [
-      "Sargocentron caudimaculatum"
-    ]
+    "commonName": "silverspot squirrelfish"
   },
   "tap2-species-202": {
     "status": "synonym",
@@ -4569,10 +4113,7 @@
     "syncedAt": "2026-07-24T06:27:02.901040Z",
     "sourceId": "tap2-species-202",
     "sourceName": "Holocentrus diadema",
-    "commonName": "Crown squirrelfish",
-    "alternateNames": [
-      "Sargocentron diadema"
-    ]
+    "commonName": "Crown squirrelfish"
   },
   "tap2-species-203": {
     "status": "synonym",
@@ -4584,10 +4125,7 @@
     "syncedAt": "2026-07-24T06:27:04.201380Z",
     "sourceId": "tap2-species-203",
     "sourceName": "Holocentrus cornutus",
-    "commonName": "threespot squirrelfish",
-    "alternateNames": [
-      "Sargocentron cornutum"
-    ]
+    "commonName": "threespot squirrelfish"
   },
   "tap2-species-204": {
     "status": "synonym",
@@ -4599,9 +4137,6 @@
     "syncedAt": "2026-07-24T06:27:05.521209Z",
     "sourceId": "tap2-species-204",
     "sourceName": "Flammeo sammara",
-    "alternateNames": [
-      "Neoniphon sammara"
-    ],
     "commonName": "sammara squirrelfish"
   },
   "tap2-species-205": {
@@ -4626,11 +4161,7 @@
     "syncedAt": "2026-07-24T06:27:08.111487Z",
     "sourceId": "tap2-species-206",
     "sourceName": "Zenopsis nebulosa",
-    "commonName": "Mirror dory",
-    "alternateNames": [
-      "Zenopsis nebulosa",
-      "Zenopsis nebulosus"
-    ]
+    "commonName": "Mirror dory"
   },
   "tap2-species-207": {
     "status": "synonym",
@@ -4654,9 +4185,6 @@
     "syncedAt": "2026-07-24T06:27:10.751066Z",
     "sourceId": "tap2-species-208",
     "sourceName": "Zen cypho",
-    "alternateNames": [
-      "Cyttopsis cypho"
-    ],
     "commonName": "Little Dory"
   },
   "tap2-species-209": {
@@ -4681,9 +4209,6 @@
     "syncedAt": "2026-07-24T06:27:13.541399Z",
     "sourceId": "tap2-species-210",
     "sourceName": "Antigonia rubescens",
-    "alternateNames": [
-      "Antigonia rubescens"
-    ],
     "commonName": "Indo-Pacific boarfish"
   },
   "tap2-species-211": {
@@ -4708,10 +4233,7 @@
     "syncedAt": "2026-07-24T06:27:16.221355Z",
     "sourceId": "tap2-species-212",
     "sourceName": "Fistularia serrata",
-    "commonName": "red cornetfish",
-    "alternateNames": [
-      "Fistularia petimba"
-    ]
+    "commonName": "red cornetfish"
   },
   "tap2-species-213": {
     "status": "valid",
@@ -4723,10 +4245,7 @@
     "syncedAt": "2026-07-24T06:27:17.621402Z",
     "sourceId": "tap2-species-213",
     "sourceName": "Fistularia petimba",
-    "commonName": "red cornetfish",
-    "alternateNames": [
-      "Fistularia petimba"
-    ]
+    "commonName": "red cornetfish"
   },
   "tap2-species-214": {
     "status": "valid",
@@ -4768,9 +4287,6 @@
     "syncedAt": "2026-07-24T06:27:21.786457Z",
     "sourceId": "tap2-species-216",
     "sourceName": "Syngnathus djarong",
-    "alternateNames": [
-      "Hippichthys heptagonus"
-    ],
     "commonName": "belly pipefish"
   },
   "tap2-species-217": {
@@ -4783,9 +4299,6 @@
     "syncedAt": "2026-07-24T06:27:23.151303Z",
     "sourceId": "tap2-species-217",
     "sourceName": "Syngnathus spicifer",
-    "alternateNames": [
-      "Hippichthys spicifer"
-    ],
     "commonName": "bellybarred pipefish"
   },
   "tap2-species-218": {
@@ -4798,10 +4311,7 @@
     "syncedAt": "2026-07-24T06:27:24.521395Z",
     "sourceId": "tap2-species-218",
     "sourceName": "Syngnathus acus",
-    "commonName": "Greater pipefish",
-    "alternateNames": [
-      "Syngnathus acus"
-    ]
+    "commonName": "Greater pipefish"
   },
   "tap2-species-219": {
     "status": "synonym",
@@ -4813,9 +4323,6 @@
     "syncedAt": "2026-07-24T06:27:25.912778Z",
     "sourceId": "tap2-species-219",
     "sourceName": "Syngnathus cyanospilus",
-    "alternateNames": [
-      "Hippichthys cyanospilos"
-    ],
     "commonName": "blue-spotted pipefish"
   },
   "tap2-species-220": {
@@ -4828,9 +4335,6 @@
     "syncedAt": "2026-07-24T06:27:27.181228Z",
     "sourceId": "tap2-species-220",
     "sourceName": "Ichthyocampus belcheri",
-    "alternateNames": [
-      "Phoxocampus belcheri"
-    ],
     "commonName": "rock pipefish"
   },
   "tap2-species-221": {
@@ -4843,9 +4347,6 @@
     "syncedAt": "2026-07-24T06:27:28.666518Z",
     "sourceId": "tap2-species-221",
     "sourceName": "Trachyrhamphus serratus",
-    "alternateNames": [
-      "Trachyrhamphus serratus"
-    ],
     "commonName": "Saw Pipefish"
   },
   "tap2-species-222": {
@@ -4858,10 +4359,7 @@
     "syncedAt": "2026-07-24T06:27:29.961578Z",
     "sourceId": "tap2-species-222",
     "sourceName": "Yozia bicoarctata",
-    "commonName": "Bend stick pipefish",
-    "alternateNames": [
-      "Trachyrhamphus bicoarctatus"
-    ]
+    "commonName": "Bend stick pipefish"
   },
   "tap2-species-223": {
     "status": "synonym",
@@ -4873,9 +4371,6 @@
     "syncedAt": "2026-07-24T06:27:31.251286Z",
     "sourceId": "tap2-species-223",
     "sourceName": "Halicampus koilomatodon",
-    "alternateNames": [
-      "Halicampus grayi"
-    ],
     "commonName": "Gray's pipefish"
   },
   "tap2-species-224": {
@@ -4888,10 +4383,7 @@
     "syncedAt": "2026-07-24T06:27:32.591483Z",
     "sourceId": "tap2-species-224",
     "sourceName": "Solenognathus hardwickii",
-    "commonName": "Hardwicke's pipefish",
-    "alternateNames": [
-      "Hardwicke's pipefish"
-    ]
+    "commonName": "Hardwicke's pipefish"
   },
   "tap2-species-225": {
     "status": "valid",
@@ -4903,20 +4395,14 @@
     "syncedAt": "2026-07-24T06:27:33.976211Z",
     "sourceId": "tap2-species-225",
     "sourceName": "Syngnathoides biaculeatus",
-    "commonName": "alligator pipefishe",
-    "alternateNames": [
-      "Alligator pipefish"
-    ]
+    "commonName": "alligator pipefishe"
   },
   "tap2-species-226": {
     "status": "not_found",
     "note": "Chưa xác minh được trên WoRMS",
     "syncedAt": "2026-07-24T06:27:35.241464Z",
     "sourceId": "tap2-species-226",
-    "sourceName": "Microphis boaja",
-    "alternateNames": [
-      "Microphis boaja"
-    ]
+    "sourceName": "Microphis boaja"
   },
   "tap2-species-227": {
     "status": "synonym",
@@ -4942,8 +4428,7 @@
     "sourceName": "Hippocampus histrix",
     "commonName": "Thorny seahorse",
     "alternateNames": [
-      "Cá ngựa gai dài",
-      "Hippocampus histrix"
+      "Cá ngựa gai dài"
     ]
   },
   "tap2-species-229": {
@@ -4956,10 +4441,7 @@
     "syncedAt": "2026-07-24T06:27:39.301096Z",
     "sourceId": "tap2-species-229",
     "sourceName": "Hippocampus kuda",
-    "commonName": "Common seahorse",
-    "alternateNames": [
-      "Hippocampus kuda"
-    ]
+    "commonName": "Common seahorse"
   },
   "tap2-species-230": {
     "status": "valid",
@@ -4983,9 +4465,6 @@
     "syncedAt": "2026-07-24T06:27:41.961443Z",
     "sourceId": "tap2-species-231",
     "sourceName": "Sphyraena pinguis",
-    "alternateNames": [
-      "Sphyraena pinguis"
-    ],
     "commonName": "Green-and-gold Barracuda"
   },
   "tap2-species-232": {
@@ -5010,9 +4489,6 @@
     "syncedAt": "2026-07-24T06:27:44.645413Z",
     "sourceId": "tap2-species-233",
     "sourceName": "Sphyraena forsteri",
-    "alternateNames": [
-      "Sphyraena forsteri"
-    ],
     "commonName": "bigeye barracuda"
   },
   "tap2-species-234": {
@@ -5025,10 +4501,7 @@
     "syncedAt": "2026-07-24T06:27:45.971300Z",
     "sourceId": "tap2-species-234",
     "sourceName": "Sphyraena obtusata",
-    "commonName": "Obtuse barracuda",
-    "alternateNames": [
-      "Obtuse barracuda"
-    ]
+    "commonName": "Obtuse barracuda"
   },
   "tap2-species-235": {
     "status": "synonym",
@@ -5067,10 +4540,7 @@
     "syncedAt": "2026-07-24T06:27:50.441113Z",
     "sourceId": "tap2-species-237",
     "sourceName": "Sphyraena brachygnathus",
-    "commonName": "Obtuse barracuda",
-    "alternateNames": [
-      "Obtuse barracuda"
-    ]
+    "commonName": "Obtuse barracuda"
   },
   "tap2-species-238": {
     "status": "valid",
@@ -5081,10 +4551,7 @@
     "note": "Tên hợp lệ trên WoRMS",
     "syncedAt": "2026-07-24T06:27:51.796345Z",
     "sourceId": "tap2-species-238",
-    "sourceName": "Sphyraena chrysotaenia",
-    "alternateNames": [
-      "Sphyraena chrysotaenia"
-    ]
+    "sourceName": "Sphyraena chrysotaenia"
   },
   "tap2-species-239": {
     "status": "valid",
@@ -5096,9 +4563,6 @@
     "syncedAt": "2026-07-24T06:27:53.091321Z",
     "sourceId": "tap2-species-239",
     "sourceName": "Sphyraena acutipinnis",
-    "alternateNames": [
-      "Sphyraena acutipinnis"
-    ],
     "commonName": "sharpfin barracuda"
   },
   "tap2-species-240": {
@@ -5113,8 +4577,7 @@
     "sourceName": "Mugil cephalus",
     "commonName": "sea mullet",
     "alternateNames": [
-      "Cá đối đầu dẹt",
-      "Mugil cephalus"
+      "Cá đối đầu dẹt"
     ]
   },
   "tap2-species-241": {
@@ -5127,11 +4590,7 @@
     "syncedAt": "2026-07-24T06:27:55.931409Z",
     "sourceId": "tap2-species-241",
     "sourceName": "Mugil dussumieri",
-    "commonName": "Chelon subviridis",
-    "alternateNames": [
-      "Chelon subviridis",
-      "Planiliza subviridis"
-    ]
+    "commonName": "Chelon subviridis"
   },
   "tap2-species-242": {
     "status": "synonym",
@@ -5143,9 +4602,6 @@
     "syncedAt": "2026-07-24T06:27:57.331376Z",
     "sourceId": "tap2-species-242",
     "sourceName": "Mugil engeli",
-    "alternateNames": [
-      "Osteomugil engeli"
-    ],
     "commonName": "Kanda"
   },
   "tap2-species-243": {
@@ -5157,10 +4613,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Osteomugil cunnesius",
     "syncedAt": "2026-07-24T06:27:58.911474Z",
     "sourceId": "tap2-species-243",
-    "sourceName": "Mugil strongylocephalus",
-    "alternateNames": [
-      "Osteomugil cunnesius"
-    ]
+    "sourceName": "Mugil strongylocephalus"
   },
   "tap2-species-244": {
     "status": "synonym",
@@ -5171,20 +4624,14 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Planiliza affinis",
     "syncedAt": "2026-07-24T06:28:00.211390Z",
     "sourceId": "tap2-species-244",
-    "sourceName": "Mugil affinis",
-    "alternateNames": [
-      "Planiliza affinis"
-    ]
+    "sourceName": "Mugil affinis"
   },
   "tap2-species-245": {
     "status": "not_found",
     "note": "Chưa xác minh được trên WoRMS",
     "syncedAt": "2026-07-24T06:28:08.724936Z",
     "sourceId": "tap2-species-245",
-    "sourceName": "Mugil planiceps",
-    "alternateNames": [
-      "Mugil planiceps"
-    ]
+    "sourceName": "Mugil planiceps"
   },
   "tap2-species-246": {
     "status": "synonym",
@@ -5196,9 +4643,6 @@
     "syncedAt": "2026-07-24T06:28:10.061255Z",
     "sourceId": "tap2-species-246",
     "sourceName": "Mugil anpinensis",
-    "alternateNames": [
-      "Planiliza melinoptera"
-    ],
     "commonName": "St. Lucia mullet"
   },
   "tap2-species-247": {
@@ -5211,9 +4655,6 @@
     "syncedAt": "2026-07-24T06:28:11.531452Z",
     "sourceId": "tap2-species-247",
     "sourceName": "Mugil longimanus",
-    "alternateNames": [
-      "Osteomugil cunnesius"
-    ],
     "commonName": "Longarm mullet"
   },
   "tap2-species-248": {
@@ -5226,9 +4667,6 @@
     "syncedAt": "2026-07-24T06:28:12.836156Z",
     "sourceId": "tap2-species-248",
     "sourceName": "Mugil borneensis",
-    "alternateNames": [
-      "Planiliza macrolepis"
-    ],
     "commonName": "Bigscale Mullet"
   },
   "tap2-species-249": {
@@ -5240,10 +4678,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Osteomugil speigleri",
     "syncedAt": "2026-07-24T06:28:14.154988Z",
     "sourceId": "tap2-species-249",
-    "sourceName": "Mugil speigleri",
-    "alternateNames": [
-      "Osteomugil speigleri"
-    ]
+    "sourceName": "Mugil speigleri"
   },
   "tap2-species-250": {
     "status": "synonym",
@@ -5255,9 +4690,6 @@
     "syncedAt": "2026-07-24T06:28:15.611488Z",
     "sourceId": "tap2-species-250",
     "sourceName": "Mugil kelaarti",
-    "alternateNames": [
-      "Osteomugil cunnesius"
-    ],
     "commonName": "Longarm mullet"
   },
   "tap2-species-251": {
@@ -5270,10 +4702,7 @@
     "syncedAt": "2026-07-24T06:28:16.921408Z",
     "sourceId": "tap2-species-251",
     "sourceName": "Liza seheli",
-    "commonName": "bluespot mullet",
-    "alternateNames": [
-      "Crenimugil seheli"
-    ]
+    "commonName": "bluespot mullet"
   },
   "tap2-species-252": {
     "status": "synonym",
@@ -5284,10 +4713,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Planiliza carinata",
     "syncedAt": "2026-07-24T06:28:18.331427Z",
     "sourceId": "tap2-species-252",
-    "sourceName": "Liza carinata",
-    "alternateNames": [
-      "Planiliza carinata"
-    ]
+    "sourceName": "Liza carinata"
   },
   "tap2-species-253": {
     "status": "synonym",
@@ -5298,10 +4724,7 @@
     "note": "Tên cũ (synonym). Tên hiện hành: Planiliza tade",
     "syncedAt": "2026-07-24T06:28:19.596292Z",
     "sourceId": "tap2-species-253",
-    "sourceName": "Liza tade",
-    "alternateNames": [
-      "Planiliza tade"
-    ]
+    "sourceName": "Liza tade"
   },
   "tap2-species-254": {
     "status": "synonym",
@@ -5313,9 +4736,6 @@
     "syncedAt": "2026-07-24T06:28:20.991428Z",
     "sourceId": "tap2-species-254",
     "sourceName": "Liza macrolepis",
-    "alternateNames": [
-      "Planiliza macrolepis"
-    ],
     "commonName": "Bigscale Mullet"
   },
   "tap2-species-255": {
@@ -5328,9 +4748,6 @@
     "syncedAt": "2026-07-24T06:28:22.408986Z",
     "sourceId": "tap2-species-255",
     "sourceName": "Liza so-iuy",
-    "alternateNames": [
-      "Planiliza haematocheilus"
-    ],
     "commonName": "Haarder"
   },
   "tap2-species-256": {
@@ -5343,10 +4760,7 @@
     "syncedAt": "2026-07-24T06:28:23.684212Z",
     "sourceId": "tap2-species-256",
     "sourceName": "Liza vaigiensis",
-    "commonName": "Squaretail mullet",
-    "alternateNames": [
-      "Ellochelon vaigiensis"
-    ]
+    "commonName": "Squaretail mullet"
   },
   "tap2-species-257": {
     "status": "uncertain",
@@ -5355,10 +4769,7 @@
     "note": "Trạng thái WoRMS: superseded combination",
     "syncedAt": "2026-07-24T06:28:25.055247Z",
     "sourceId": "tap2-species-257",
-    "sourceName": "Liza crenilabis",
-    "alternateNames": [
-      "Liza crenilabis"
-    ]
+    "sourceName": "Liza crenilabis"
   },
   "tap2-species-258": {
     "status": "synonym",
@@ -5370,10 +4781,7 @@
     "syncedAt": "2026-07-24T06:28:26.381309Z",
     "sourceId": "tap2-species-258",
     "sourceName": "Liza caeruleomaculatus",
-    "commonName": "bluespot mullet",
-    "alternateNames": [
-      "Crenimugil seheli"
-    ]
+    "commonName": "bluespot mullet"
   },
   "tap2-species-259": {
     "status": "synonym",
@@ -5385,9 +4793,6 @@
     "syncedAt": "2026-07-24T06:28:27.764941Z",
     "sourceId": "tap2-species-259",
     "sourceName": "Liza oligolepis",
-    "alternateNames": [
-      "Paramugil parmatus"
-    ],
     "commonName": "Broad-mouthed mullet"
   },
   "tap2-species-260": {
@@ -5400,9 +4805,6 @@
     "syncedAt": "2026-07-24T06:28:29.066079Z",
     "sourceId": "tap2-species-260",
     "sourceName": "Liza melinoptera",
-    "alternateNames": [
-      "Planiliza melinoptera"
-    ],
     "commonName": "St. Lucia mullet"
   },
   "tap2-species-261": {
@@ -5417,8 +4819,7 @@
     "sourceName": "Eleutheronema tetradactylus",
     "commonName": "Fourfinger threadfin",
     "alternateNames": [
-      "Cá nhụ bốn râu",
-      "Eleutheronema tetradactylum"
+      "Cá nhụ bốn râu"
     ]
   },
   "tap2-species-262": {
@@ -5469,9 +4870,6 @@
     "syncedAt": "2026-07-24T06:28:36.648777Z",
     "sourceId": "tap2-species-265",
     "sourceName": "Polynemus borneensis",
-    "alternateNames": [
-      "Polynemus melanochir"
-    ],
     "commonName": "Blackhand Paradise Fish"
   },
   "tap2-species-266": {
@@ -5484,10 +4882,7 @@
     "syncedAt": "2026-07-24T06:28:37.980929Z",
     "sourceId": "tap2-species-266",
     "sourceName": "Polynemus paradiseus",
-    "commonName": "Paradise threadfin",
-    "alternateNames": [
-      "Polynemus paradiseus"
-    ]
+    "commonName": "Paradise threadfin"
   },
   "tap3-species-1": {
     "status": "valid",
