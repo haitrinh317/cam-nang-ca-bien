@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -257,6 +257,12 @@
             white-space: pre-line;
         }
 
+        .synonym-content i {
+            font-style: italic;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
         .back-link {
             display: inline-flex;
             align-items: center;
@@ -379,6 +385,29 @@
             </div>`;
         }
 
+        // Dịch nhanh tình trạng VN → EN
+        function translateStatus(vnStatus) {
+            if (!vnStatus) return '';
+            const map = [
+                ['Thường gặp, số lượng rất nhiều', 'Common, very abundant'],
+                ['Thường gặp, số lượng nhiều',     'Common, abundant'],
+                ['Thường gặp',                     'Common'],
+                ['Rất hiếm gặp',                   'Very rare'],
+                ['Rất hiếm',                       'Very rare'],
+                ['Rất ít gặp',                     'Very uncommon'],
+                ['Hiếm gặp',                       'Rare'],
+                ['Hiếm',                           'Rare'],
+                ['Ít gặp',                         'Uncommon'],
+            ];
+            for (const [vn, en] of map) {
+                if (vnStatus.includes(vn)) {
+                    // Giữ dấu chấm nếu có
+                    return vnStatus.trim().endsWith('.') ? en + '.' : en;
+                }
+            }
+            return vnStatus; // fallback: giữ nguyên nếu không có bản dịch
+        }
+
         function formatOneSynonym(text) {
             if (!text) return '';
             let trimmed = text.trim();
@@ -441,11 +470,11 @@
                         </div>
                         
                         <div class="info-item info-item-featured"><div class="info-label">Tên gọi khác</div><div class="info-value">${vn.alternateNames || vn.synonyms || '—'}</div></div>
-                        ${vn.size ? `<div class="info-item"><div class="info-label">Kích thước</div><div class="info-value">${vn.size}</div></div>` : ''}
-                        ${vn.distribution ? `<div class="info-item"><div class="info-label">Phân bố</div><div class="info-value">${vn.distribution}</div></div>` : ''}
-                        ${vn.specimen ? `<div class="info-item"><div class="info-label">Nơi lưu trữ mẫu</div><div class="info-value">${vn.specimen}</div></div>` : ''}
-                        ${vn.status ? `<div class="info-item"><div class="info-label">Tình trạng</div><div class="info-value">${vn.status}</div></div>` : ''}
-                        ${vn.literature ? `<div class="info-item"><div class="info-label">Tài liệu dẫn</div><div class="info-value">${vn.literature}</div></div>` : ''}
+                        <div class="info-item"><div class="info-label">Kích thước</div><div class="info-value">${vn.size || '—'}</div></div>
+                        <div class="info-item"><div class="info-label">Phân bố</div><div class="info-value">${vn.distribution || '—'}</div></div>
+                        <div class="info-item"><div class="info-label">Nơi lưu trữ mẫu</div><div class="info-value">${vn.specimen || '—'}</div></div>
+                        <div class="info-item"><div class="info-label">Tình trạng</div><div class="info-value">${vn.status || '—'}</div></div>
+                        <div class="info-item"><div class="info-label">Tài liệu dẫn</div><div class="info-value">${vn.literature || '—'}</div></div>
                     </div>
                     
                     <!-- English Panel -->
@@ -455,13 +484,12 @@
                             <span class="panel-badge">EN</span>
                         </div>
                         
-                        ${(en.alternateNames || en.synonyms) ? `<div class="info-item"><div class="info-label">Alternate Names</div><div class="info-value">${en.alternateNames || en.synonyms}</div></div>` : ''}
                         <div class="info-item info-item-featured"><div class="info-label">Common Name</div><div class="info-value">${en.commonName || en.common_name || '—'}</div></div>
-                        ${en.size ? `<div class="info-item"><div class="info-label">Size</div><div class="info-value">${en.size}</div></div>` : ''}
-                        ${en.distribution ? `<div class="info-item"><div class="info-label">Distribution</div><div class="info-value">${en.distribution}</div></div>` : ''}
-                        ${(en.conservation || en.specimen) ? `<div class="info-item"><div class="info-label">Conservation / Specimen</div><div class="info-value">${en.conservation || en.specimen}</div></div>` : ''}
-                        ${en.status ? `<div class="info-item"><div class="info-label">Status</div><div class="info-value">${en.status}</div></div>` : ''}
-                        ${en.literature ? `<div class="info-item"><div class="info-label">Literature</div><div class="info-value">${en.literature}</div></div>` : ''}
+                        <div class="info-item"><div class="info-label">Size</div><div class="info-value">${en.size || '—'}</div></div>
+                        <div class="info-item"><div class="info-label">Distribution</div><div class="info-value">${en.distribution || '—'}</div></div>
+                        <div class="info-item"><div class="info-label">Conservation / Specimen</div><div class="info-value">${en.conservation || en.specimen || '—'}</div></div>
+                        <div class="info-item"><div class="info-label">Status</div><div class="info-value">${en.status || translateStatus(vn.status) || '—'}</div></div>
+                        <div class="info-item"><div class="info-label">Literature</div><div class="info-value">${en.literature || '—'}</div></div>
                     </div>
                 </div>
                 
