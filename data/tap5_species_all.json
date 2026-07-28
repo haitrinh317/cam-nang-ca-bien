@@ -1,0 +1,2234 @@
+[
+  {
+    "id": "tap5-species-1",
+    "index_text": "Loài 1 · Trang 5",
+    "vn_name": "Cá Mù Làn Vân Trắng",
+    "sci_name": "Sebasticus albofasciatus",
+    "authorship": "(Lacépède, 1802)",
+    "page_number": 5
+  },
+  {
+    "id": "tap5-species-2",
+    "index_text": "Loài 2 · Trang 6",
+    "vn_name": "Cá Mù Làn Điểm Vàng",
+    "sci_name": "Sebasticus marmoratus",
+    "authorship": "(Cuvier And Valenciennes, 1829)",
+    "page_number": 6
+  },
+  {
+    "id": "tap5-species-3",
+    "index_text": "Loài 3 · Trang 7",
+    "vn_name": "Cá Mù Làn Adam",
+    "sci_name": "Parascorpaena bandanensis",
+    "authorship": "",
+    "page_number": 7
+  },
+  {
+    "id": "tap5-species-4",
+    "index_text": "Loài 4 · Trang 8",
+    "vn_name": "Cá Mù Làn Khoang",
+    "sci_name": "Scorpaena neglecta",
+    "authorship": "Temminck and Schlegel",
+    "page_number": 8
+  },
+  {
+    "id": "tap5-species-5",
+    "index_text": "Loài 5 · Trang 8",
+    "vn_name": "Cá Mù Làn Vảy Tròn",
+    "sci_name": "Scorpaena picta",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "page_number": 8
+  },
+  {
+    "id": "tap5-species-6",
+    "index_text": "Loài 6 · Trang 9",
+    "vn_name": "Cá Mù Làn Dầu",
+    "sci_name": "Scorpaenodes guamensis",
+    "authorship": "(Quoy and Gaimard, 1824)",
+    "page_number": 9
+  },
+  {
+    "id": "tap5-species-7",
+    "index_text": "Loài 7 · Trang 10",
+    "vn_name": "Cá Mù Làn San Hô",
+    "sci_name": "Scorpaenodes parvipinnis",
+    "authorship": "",
+    "page_number": 10
+  },
+  {
+    "id": "tap5-species-8",
+    "index_text": "Loài 8 · Trang 11",
+    "vn_name": "Cá Mù Làn Vây Ngắn",
+    "sci_name": "Scorpaenopsis cirrhosa",
+    "authorship": "",
+    "page_number": 11
+  },
+  {
+    "id": "tap5-species-9",
+    "index_text": "Loài 9 · Trang 12",
+    "vn_name": "Cá Mù Làn Đá",
+    "sci_name": "Scorpaenopsis diabolus",
+    "authorship": "Cuvier",
+    "page_number": 12
+  },
+  {
+    "id": "tap5-species-10",
+    "index_text": "Loài 10 · Trang 12",
+    "vn_name": "Cá Mù Làn Vây Dài",
+    "sci_name": "Scorpaenopsis gibbosa",
+    "authorship": "(Bloch and Schneider)",
+    "page_number": 12
+  },
+  {
+    "id": "tap5-species-11",
+    "index_text": "Loài 11 · Trang 13",
+    "vn_name": "Cá Mù Làn Mú",
+    "sci_name": "Scorpaenopsis venosa",
+    "authorship": "",
+    "page_number": 13
+  },
+  {
+    "id": "tap5-species-12",
+    "index_text": "Loài 12 · Trang 14",
+    "vn_name": "Cá Mù Làn Đốm Vàng",
+    "sci_name": "Sebastapistes cyanostigma",
+    "authorship": "",
+    "page_number": 14
+  },
+  {
+    "id": "tap5-species-13",
+    "index_text": "Loài 13 · Trang 15",
+    "vn_name": "Cá Mù Làn Vảy To",
+    "sci_name": "Sebastapistes megalepis",
+    "authorship": "",
+    "page_number": 15
+  },
+  {
+    "id": "tap5-species-14",
+    "index_text": "Loài 14 · Trang 17",
+    "vn_name": "Cá Mù Lằn Vảy Hoa",
+    "sci_name": "Sebastapistes nuchalis",
+    "authorship": "(Günther)",
+    "page_number": 17
+  },
+  {
+    "id": "tap5-species-15",
+    "index_text": "Loài 15 · Trang TODO",
+    "vn_name": "Cá Mù Lằn Dit",
+    "sci_name": "Brachypterois serrulatus",
+    "authorship": "(Richardson)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-16",
+    "index_text": "Loài 16 · Trang TODO",
+    "vn_name": "Cá Mao Tién Quạt Ngắn",
+    "sci_name": "Dendrochirus brachypterus",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-17",
+    "index_text": "Loài 17 · Trang TODO",
+    "vn_name": "Cá Mù Lằn Chim Hoa",
+    "sci_name": "Dendrochirus zebra",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-18",
+    "index_text": "Loài 18 · Trang TODO",
+    "vn_name": "Cá Mao Tién Mao Ihn",
+    "sci_name": "Pterois antennata",
+    "authorship": "(Bixh)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-19",
+    "index_text": "Loài 19 · Trang TODO",
+    "vn_name": "Cá Mao Tién Nhiéu Gai Mắt",
+    "sci_name": "Pterois lunulata",
+    "authorship": "Temminck and Schlegel",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-20",
+    "index_text": "Loài 20 · Trang TODO",
+    "vn_name": "Cá Mào Tiên Gai Xòe",
+    "sci_name": "Pterois radiata",
+    "authorship": "Cuvier and Valenciennes",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-21",
+    "index_text": "Loài 21 · Trang 22",
+    "vn_name": "Cá Mao Tién Hai Gai Mắt",
+    "sci_name": "Pterois russetli",
+    "authorship": "Bennett",
+    "page_number": 22
+  },
+  {
+    "id": "tap5-species-22",
+    "index_text": "Loài 22 · Trang TODO",
+    "vn_name": "Cá Mao Tién Su Tử",
+    "sci_name": "Pterois volitans",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-23",
+    "index_text": "Loài 23 · Trang TODO",
+    "vn_name": "Cá Mù Lằn Vảy Chấm",
+    "sci_name": "Apistus carinatus",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-24",
+    "index_text": "Loài 24 · Trang TODO",
+    "vn_name": "Cá Mù l.,ăn Gai Rủi",
+    "sci_name": "Vespicula trachinoides",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-25",
+    "index_text": "Loài 25 · Trang 26",
+    "vn_name": "Cá Mù Lằn Gai Dài",
+    "sci_name": "Ablabys macracanthus",
+    "authorship": "",
+    "page_number": 26
+  },
+  {
+    "id": "tap5-species-26",
+    "index_text": "Loài 26 · Trang TODO",
+    "vn_name": "Cá Mù Lằn Dài Lung l)loài",
+    "sci_name": "Ablabys taenianotus",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-27",
+    "index_text": "Loài 27 · Trang TODO",
+    "vn_name": "Cá Mù Máo Xiên Đỏ",
+    "sci_name": "Scorpaenopsis venosa",
+    "authorship": "(Cuvier, 1829)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-28",
+    "index_text": "Loài 28 · Trang 29",
+    "vn_name": "Cá Mù Mao Gai Dài",
+    "sci_name": "Paracentropogon longispinus",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "page_number": 29
+  },
+  {
+    "id": "tap5-species-29",
+    "index_text": "Loài 29 · Trang 31",
+    "vn_name": "Cá Mù Lằn Vảy Ngực Đen",
+    "sci_name": "Tetraroge leucogaster",
+    "authorship": "(Richardson)",
+    "page_number": 31
+  },
+  {
+    "id": "tap5-species-30",
+    "index_text": "Loài 30 · Trang TODO",
+    "vn_name": "Cá Qui Dài",
+    "sci_name": "Aploactis aspera",
+    "authorship": "Richardson",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-31",
+    "index_text": "Loài 31 · Trang TODO",
+    "vn_name": "Cá Gấu Gai",
+    "sci_name": "Erisphex potti",
+    "authorship": "(Steindachner)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-32",
+    "index_text": "Loài 32 · Trang TODO",
+    "vn_name": "Cá Qui Vằn Vang",
+    "sci_name": "Choridactylus multibarbus",
+    "authorship": "Richardson",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-33",
+    "index_text": "Loài 33 · Trang TODO",
+    "vn_name": "Cá Qui Càng",
+    "sci_name": "Inimicus cuvieri",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-34",
+    "index_text": "Loài 34 · Trang 35",
+    "vn_name": "Cá Qui Càng Nht",
+    "sci_name": "Inimicus japonicus",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "page_number": 35
+  },
+  {
+    "id": "tap5-species-35",
+    "index_text": "Loài 35 · Trang TODO",
+    "vn_name": "Cá Qui Râu",
+    "sci_name": "Inimicus didactylus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-36",
+    "index_text": "Loài 36 · Trang TODO",
+    "vn_name": "Cá Mao Tién Qui",
+    "sci_name": "Minous inermis",
+    "authorship": "Aleock",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-37",
+    "index_text": "Loài 37 · Trang TODO",
+    "vn_name": "Cá Mao Tien Vằn Đuôi",
+    "sci_name": "Minous monodactylus",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-38",
+    "index_text": "Loài 38 · Trang TODO",
+    "vn_name": "Cá Mao Tién Tron",
+    "sci_name": "Minous pusillus",
+    "authorship": "Temminck and",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-39",
+    "index_text": "Loài 39 · Trang 39",
+    "vn_name": "Cá IAi cá Mao Tién Sec Lech",
+    "sci_name": "Minous trachycephalus",
+    "authorship": "",
+    "page_number": 39
+  },
+  {
+    "id": "tap5-species-40",
+    "index_text": "Loài 40 · Trang TODO",
+    "vn_name": "Cá Mao",
+    "sci_name": "Synanceia horrida",
+    "authorship": "horrida",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-41",
+    "index_text": "Loài 41 · Trang 41",
+    "vn_name": "Cá Mắt",
+    "sci_name": "Synanceia verrucosa",
+    "authorship": "verrucosa Bloch and Schneider",
+    "page_number": 41
+  },
+  {
+    "id": "tap5-species-42",
+    "index_text": "Loài 42 · Trang 43",
+    "vn_name": "Cá Qui Đầu To",
+    "sci_name": "Erosa erosa",
+    "authorship": "",
+    "page_number": 43
+  },
+  {
+    "id": "tap5-species-43",
+    "index_text": "Loài 43 · Trang 43",
+    "vn_name": "Cá Quỷ Cóc",
+    "sci_name": "Polycaulus uranoscopa",
+    "authorship": "(Bloch and Schneider)",
+    "page_number": 43
+  },
+  {
+    "id": "tap5-species-44",
+    "index_text": "Loài 44 · Trang 45",
+    "vn_name": "Cá Mù Lằn Bầu",
+    "sci_name": "Caracanthus maculatus",
+    "authorship": "",
+    "page_number": 45
+  },
+  {
+    "id": "tap5-species-45",
+    "index_text": "Loài 45 · Trang TODO",
+    "vn_name": "Cá Chảo Mào Chuẩn",
+    "sci_name": "Chelidonichthys kumu",
+    "authorship": "(Lesson)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-46",
+    "index_text": "Loài 46 · Trang 46",
+    "vn_name": "Cá Chảo Mào Sấu",
+    "sci_name": "Lepidotrigla abyssalis",
+    "authorship": "",
+    "page_number": 46
+  },
+  {
+    "id": "tap5-species-47",
+    "index_text": "Loài 47 · Trang 46",
+    "vn_name": "Cá Chảo Mào Cánh",
+    "sci_name": "Lepidotrigla alata",
+    "authorship": "",
+    "page_number": 46
+  },
+  {
+    "id": "tap5-species-48",
+    "index_text": "Loài 48 · Trang 47",
+    "vn_name": "Cá Chảo Mào Khoang Đỏ",
+    "sci_name": "Lepidotrigla guentheri",
+    "authorship": "Hilgendorf",
+    "page_number": 47
+  },
+  {
+    "id": "tap5-species-49",
+    "index_text": "Loài 49 · Trang 48",
+    "vn_name": "Cá Chảo Mào Nhật Bản",
+    "sci_name": "Lepidotrigla japonica",
+    "authorship": ")",
+    "page_number": 48
+  },
+  {
+    "id": "tap5-species-50",
+    "index_text": "Loài 50 · Trang 48",
+    "vn_name": "Cá Chảo Mào Vảy Ngực Đỏ",
+    "sci_name": "Lepidotrigla kishinouyei",
+    "authorship": "",
+    "page_number": 48
+  },
+  {
+    "id": "tap5-species-51",
+    "index_text": "Loài 51 · Trang TODO",
+    "vn_name": "Cá Chảo Mào Den",
+    "sci_name": "Lepidotrigla kishinouyi",
+    "authorship": "(Snyder)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-52",
+    "index_text": "Loài 52 · Trang 49",
+    "vn_name": "Cá Chảo Mào Dẹt",
+    "sci_name": "Lepidotrigla microptera",
+    "authorship": "Günther, 1873.m",
+    "page_number": 49
+  },
+  {
+    "id": "tap5-species-53",
+    "index_text": "Loài 53 · Trang 50",
+    "vn_name": "Cá Chảo Mào Vay Ngực Chấm",
+    "sci_name": "Lepidotrigla punctiptoralis",
+    "authorship": "",
+    "page_number": 50
+  },
+  {
+    "id": "tap5-species-54",
+    "index_text": "Loài 54 · Trang TODO",
+    "vn_name": "Cá Chảo Mào Cánh Chấm",
+    "sci_name": "Lepidotrigla spiloptera",
+    "authorship": "Günther",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-55",
+    "index_text": "Loài 55 · Trang TODO",
+    "vn_name": "Cá Chảo Mào Venu",
+    "sci_name": "Lepidotrigla venusta",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-56",
+    "index_text": "Loài 56 · Trang TODO",
+    "vn_name": "Cá Chảo Mào Màng Dài",
+    "sci_name": "Daicocus peterseni",
+    "authorship": "(Nyström, 1887)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-57",
+    "index_text": "Loài 57 · Trang 54",
+    "vn_name": "Cá Chảo Mào",
+    "sci_name": "Pterygotrigla ryukyuensis",
+    "authorship": "Pterygotrigla ryukyuen.sis Matsubara and Hiyama",
+    "page_number": 54
+  },
+  {
+    "id": "tap5-species-58",
+    "index_text": "Loài 58 · Trang 54",
+    "vn_name": "Cá Chảo Mão Đầu Bánh Xe",
+    "sci_name": "Gargariscus prionocephalus",
+    "authorship": "(Duméril)",
+    "page_number": 54
+  },
+  {
+    "id": "tap5-species-59",
+    "index_text": "Loài 59 · Trang 55",
+    "vn_name": "Cá Chai Vàng Phương Đông",
+    "sci_name": "Peristedion orientale",
+    "authorship": "Temminck and Schlegel",
+    "page_number": 55
+  },
+  {
+    "id": "tap5-species-60",
+    "index_text": "Loài 60 · Trang 56",
+    "vn_name": "Cá Chai Dù",
+    "sci_name": "Satyrichthys clavilapis",
+    "authorship": "",
+    "page_number": 56
+  },
+  {
+    "id": "tap5-species-61",
+    "index_text": "Loài 61 · Trang TODO",
+    "vn_name": "Cá Chai Đỏ Râu",
+    "sci_name": "Satyrichthys amiscus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-62",
+    "index_text": "Loài 62 · Trang 59",
+    "vn_name": "Cá Chai Đỏ Chấm",
+    "sci_name": "Satyrichthys rieffeli",
+    "authorship": "(Kaup)",
+    "page_number": 59
+  },
+  {
+    "id": "tap5-species-63",
+    "index_text": "Loài 63 · Trang 59",
+    "vn_name": "Cá Chai Hồng",
+    "sci_name": "Bembras japonicus",
+    "authorship": "Cuvier and Valenciennes",
+    "page_number": 59
+  },
+  {
+    "id": "tap5-species-64",
+    "index_text": "Loài 64 · Trang TODO",
+    "vn_name": "Cá Chai Su",
+    "sci_name": "Cociella crocodila",
+    "authorship": "(Tilesius)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-65",
+    "index_text": "Loài 65 · Trang 62",
+    "vn_name": "Cá Chai Nhám",
+    "sci_name": "Grammoplites scaber",
+    "authorship": "",
+    "page_number": 62
+  },
+  {
+    "id": "tap5-species-66",
+    "index_text": "Loài 66 · Trang TODO",
+    "vn_name": "Cá Chai Vằn Mắt",
+    "sci_name": "Inegocia guttata",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-67",
+    "index_text": "Loài 67 · Trang 64",
+    "vn_name": "Cá Chai Vằn Nhat",
+    "sci_name": "Inegocia japonica",
+    "authorship": "japonica (Tilesius",
+    "page_number": 64
+  },
+  {
+    "id": "tap5-species-68",
+    "index_text": "Loài 68 · Trang TODO",
+    "vn_name": "Cá Chai Qui",
+    "sci_name": "Elates ransonnetti",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-69",
+    "index_text": "Loài 69 · Trang TODO",
+    "vn_name": "Cá Chai VẢY To",
+    "sci_name": "Onigocia macrolepis",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-70",
+    "index_text": "Loài 70 · Trang 67",
+    "vn_name": "Cá Chai Đầu To",
+    "sci_name": "Onigocia spinosa",
+    "authorship": "(Temminck and Schlegel, 1843)",
+    "page_number": 67
+  },
+  {
+    "id": "tap5-species-71",
+    "index_text": "Loài 71 · Trang TODO",
+    "vn_name": "Cá Mù Làn Vệt",
+    "sci_name": "Rogadius tuberculatus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-72",
+    "index_text": "Loài 72 · Trang TODO",
+    "vn_name": "Cá Chai Mang Gai",
+    "sci_name": "Rogadius asper",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-73",
+    "index_text": "Loài 73 · Trang 70",
+    "vn_name": "Cá Chai Mang Gai",
+    "sci_name": "Rogadius pristiger",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "page_number": 70
+  },
+  {
+    "id": "tap5-species-74",
+    "index_text": "Loài 74 · Trang 71",
+    "vn_name": "Cá Chai xn ĐỎ",
+    "sci_name": "Platycephalus indicus",
+    "authorship": "",
+    "page_number": 71
+  },
+  {
+    "id": "tap5-species-75",
+    "index_text": "Loài 75 · Trang TODO",
+    "vn_name": "Cá Chai Xô Lé",
+    "sci_name": "Rogadius asper",
+    "authorship": "(Cuvier, 1829)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-76",
+    "index_text": "Loài 76 · Trang 72",
+    "vn_name": "Cá Chai Hồng",
+    "sci_name": "Thysanophrys carbunculus",
+    "authorship": "carbunculus (Cuvier and Valenciennes, 1833)",
+    "page_number": 72
+  },
+  {
+    "id": "tap5-species-77",
+    "index_text": "Loài 77 · Trang TODO",
+    "vn_name": "Cá Chai",
+    "sci_name": "Suggrundus meerdervoortii",
+    "authorship": "Suggrundus meerdervoortii",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-78",
+    "index_text": "Loài 78 · Trang 73",
+    "vn_name": "Cá Chai Gai Dài",
+    "sci_name": "Suggrundus macrcranthus",
+    "authorship": "",
+    "page_number": 73
+  },
+  {
+    "id": "tap5-species-79",
+    "index_text": "Loài 79 · Trang TODO",
+    "vn_name": "Cá Chai Vảy",
+    "sci_name": "Kumococius rodericiensis",
+    "authorship": "Kumococius rodericiensis (Cuvier, 1829).74 PHAN",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-80",
+    "index_text": "Loài 80 · Trang TODO",
+    "vn_name": "Cá Chai Hai Gai",
+    "sci_name": "Hoplichthys langsdorfii",
+    "authorship": "Cuvier and Valenciennes",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-81",
+    "index_text": "Loài 81 · Trang TODO",
+    "vn_name": "Cá Mù Làn Đốm",
+    "sci_name": "Hoplichthys gilberti",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-82",
+    "index_text": "Loài 82 · Trang 77",
+    "vn_name": "Cá Chuồn Dẹt Phương Đông",
+    "sci_name": "Dactyloptena orientalis",
+    "authorship": "Cuvier and Valenciennes",
+    "page_number": 77
+  },
+  {
+    "id": "tap5-species-83",
+    "index_text": "Loài 83 · Trang 78",
+    "vn_name": "Cá Chuồn Đất Đuôi Bằng",
+    "sci_name": "Dactyloptena gilberti",
+    "authorship": "(Snyder, 1911)",
+    "page_number": 78
+  },
+  {
+    "id": "tap5-species-84",
+    "index_text": "Loài 84 · Trang TODO",
+    "vn_name": "Cá Chuồn Dft",
+    "sci_name": "Dactyloptena macracanthus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-85",
+    "index_text": "Loài 85 · Trang 79",
+    "vn_name": "Cá Chuồn Dẹt Mét Gai",
+    "sci_name": "Dactyloptena peterseni",
+    "authorship": "",
+    "page_number": 79
+  },
+  {
+    "id": "tap5-species-86",
+    "index_text": "Loài 86 · Trang 81",
+    "vn_name": "Cá Ấn Độ",
+    "sci_name": "Psettodes erumei",
+    "authorship": "(Bloch and Schneider, PHAN)",
+    "page_number": 81
+  },
+  {
+    "id": "tap5-species-87",
+    "index_text": "Loài 87 · Trang TODO",
+    "vn_name": "Cá Bơn Vàng Vảy to",
+    "sci_name": "Brachypleura novae",
+    "authorship": "- zeelandiae Günther",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-88",
+    "index_text": "Loài 88 · Trang TODO",
+    "vn_name": "Cá Bơn Vảy Cham",
+    "sci_name": "Tephrinectes sinensis",
+    "authorship": "(Lacépède)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-89",
+    "index_text": "Loài 89 · Trang TODO",
+    "vn_name": "Cá Bơn",
+    "sci_name": "Paralichthys olivaceus",
+    "authorship": "olivaceus (Temminck and Schlegel, 1846)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-90",
+    "index_text": "Loài 90 · Trang TODO",
+    "vn_name": "Cá Bơn Cham Trắng",
+    "sci_name": "Pseudorhombus argus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-91",
+    "index_text": "Loài 91 · Trang TODO",
+    "vn_name": "Cá Bơn Vằn RAng To",
+    "sci_name": "Pseudorhombus arsius",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-92",
+    "index_text": "Loài 92 · Trang TODO",
+    "vn_name": "Cá Bơn Vi Chấm Hoa",
+    "sci_name": "Pseudorhombus cinnamomeus",
+    "authorship": "(Temminck and Schlegel)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-93",
+    "index_text": "Loài 93 · Trang 86",
+    "vn_name": "Cá Bơn Chấm Dơi",
+    "sci_name": "Pseudorhombus dupliciocellatus",
+    "authorship": "Regan",
+    "page_number": 86
+  },
+  {
+    "id": "tap5-species-94",
+    "index_text": "Loài 94 · Trang 87",
+    "vn_name": "Cá Bơn Chấm Déu",
+    "sci_name": "Pseudorhombus elevatus",
+    "authorship": "Ogilby",
+    "page_number": 87
+  },
+  {
+    "id": "tap5-species-95",
+    "index_text": "Loài 95 · Trang TODO",
+    "vn_name": "Cá Bơn Ja - Va",
+    "sci_name": "Pseudorhombus javanicus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-96",
+    "index_text": "Loài 96 · Trang TODO",
+    "vn_name": "Cá Bơn Chấm Hoa Gida",
+    "sci_name": "Pseudorhombus levisquamis",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-97",
+    "index_text": "Loài 97 · Trang 88",
+    "vn_name": "Cá Bơn Mã Lai",
+    "sci_name": "Pseudorhombus malayanus",
+    "authorship": "",
+    "page_number": 88
+  },
+  {
+    "id": "tap5-species-98",
+    "index_text": "Loài 98 · Trang 89",
+    "vn_name": "Cá Bơn ChKm To Gida",
+    "sci_name": "Pseudorhombus neglectus",
+    "authorship": "",
+    "page_number": 89
+  },
+  {
+    "id": "tap5-species-99",
+    "index_text": "Loài 99 · Trang 90",
+    "vn_name": "Cá Bơn Rang",
+    "sci_name": "Pseudorhombus oligodon",
+    "authorship": "",
+    "page_number": 90
+  },
+  {
+    "id": "tap5-species-100",
+    "index_text": "Loài 100 · Trang 90",
+    "vn_name": "Cá Bơn Năm Chấm",
+    "sci_name": "Pseudorhombus pentophthalmus",
+    "authorship": "Günther",
+    "page_number": 90
+  },
+  {
+    "id": "tap5-species-101",
+    "index_text": "Loài 101 · Trang 91",
+    "vn_name": "Cá Năm ChKm Den",
+    "sci_name": "Pseudorhombus quinquocellatus",
+    "authorship": "",
+    "page_number": 91
+  },
+  {
+    "id": "tap5-species-102",
+    "index_text": "Loài 102 · Trang 92",
+    "vn_name": "Cá Bơn Méo",
+    "sci_name": "Arnoglossus aspilos",
+    "authorship": "",
+    "page_number": 92
+  },
+  {
+    "id": "tap5-species-103",
+    "index_text": "Loài 103 · Trang 92",
+    "vn_name": "Cá Bơn Dài",
+    "sci_name": "Cynoglossus elongatus",
+    "authorship": "",
+    "page_number": 92
+  },
+  {
+    "id": "tap5-species-104",
+    "index_text": "Loài 104 · Trang 93",
+    "vn_name": "Cá Bơn",
+    "sci_name": "Arnoglossus intermedius",
+    "authorship": "intermedius",
+    "page_number": 93
+  },
+  {
+    "id": "tap5-species-105",
+    "index_text": "Loài 105 · Trang 93",
+    "vn_name": "Cá Bơn Nhat Bơn",
+    "sci_name": "Arnoglossus japonicus",
+    "authorship": "",
+    "page_number": 93
+  },
+  {
+    "id": "tap5-species-106",
+    "index_text": "Loài 106 · Trang 94",
+    "vn_name": "Cá Bơn Vây Bụng Đen",
+    "sci_name": "Arnoglossus tapeinosoma",
+    "authorship": "(Bleeker, 1854)",
+    "page_number": 94
+  },
+  {
+    "id": "tap5-species-107",
+    "index_text": "Loài 107 · Trang 95",
+    "vn_name": "Cá Bơn Tròn",
+    "sci_name": "Arnoglossus tenuis",
+    "authorship": "Günther, 1880",
+    "page_number": 95
+  },
+  {
+    "id": "tap5-species-108",
+    "index_text": "Loài 108 · Trang 95",
+    "vn_name": "Cá Bơn",
+    "sci_name": "Psettina iijimae",
+    "authorship": "Chấm Psettina iijimae",
+    "page_number": 95
+  },
+  {
+    "id": "tap5-species-109",
+    "index_text": "Loài 109 · Trang TODO",
+    "vn_name": "Cá Bơn Mắt To Hải Nam",
+    "sci_name": "Psettina hainanensis",
+    "authorship": "(Wu & Tang, 1935)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-110",
+    "index_text": "Loài 110 · Trang TODO",
+    "vn_name": "Cá Bơn Vảy To",
+    "sci_name": "Engyprosopon grandisquama",
+    "authorship": "(Temminck and Schlegel, 1846)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-111",
+    "index_text": "Loài 111 · Trang 99",
+    "vn_name": "Cá Bơn Dày",
+    "sci_name": "Engyprosopon cocosensis",
+    "authorship": "",
+    "page_number": 99
+  },
+  {
+    "id": "tap5-species-112",
+    "index_text": "Loài 112 · Trang 99",
+    "vn_name": "Cá Bơn DuOi",
+    "sci_name": "Engyprosopon latifrons",
+    "authorship": "",
+    "page_number": 99
+  },
+  {
+    "id": "tap5-species-113",
+    "index_text": "Loài 113 · Trang 100",
+    "vn_name": "Cá Bơn",
+    "sci_name": "Crossorhombus azureus",
+    "authorship": "Crossorhombus azureus",
+    "page_number": 100
+  },
+  {
+    "id": "tap5-species-114",
+    "index_text": "Loài 114 · Trang 101",
+    "vn_name": "Cá Bơn",
+    "sci_name": "Crossorhombus valde-rostratus",
+    "authorship": "valde - rostratus",
+    "page_number": 101
+  },
+  {
+    "id": "tap5-species-115",
+    "index_text": "Loài 115 · Trang 101",
+    "vn_name": "Cá Bơn Vây Đen",
+    "sci_name": "Laeops kitaharae",
+    "authorship": "(Smith & Pope, 1906)",
+    "page_number": 101
+  },
+  {
+    "id": "tap5-species-116",
+    "index_text": "Loài 116 · Trang TODO",
+    "vn_name": "Cá Bơn Anh Xám",
+    "sci_name": "Laeops parviceps",
+    "authorship": "Günther, 1880",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-117",
+    "index_text": "Loài 117 · Trang 102",
+    "vn_name": "Cá Bơn DuOi Nhon",
+    "sci_name": "Laeops lanceolata",
+    "authorship": "Franz",
+    "page_number": 102
+  },
+  {
+    "id": "tap5-species-118",
+    "index_text": "Loài 118 · Trang 103",
+    "vn_name": "Cá Bơn Ba Chấm Den",
+    "sci_name": "Grammatobothus krempfi",
+    "authorship": "Chabanaud",
+    "page_number": 103
+  },
+  {
+    "id": "tap5-species-119",
+    "index_text": "Loài 119 · Trang 104",
+    "vn_name": "Cá Bơn Nhiều Mắt",
+    "sci_name": "Grammatobothus polyophthalmus",
+    "authorship": "(Bleeker, 1866)",
+    "page_number": 104
+  },
+  {
+    "id": "tap5-species-120",
+    "index_text": "Loài 120 · Trang 105",
+    "vn_name": "Cá Bơn Ba Hoa",
+    "sci_name": "Bothus myriaster",
+    "authorship": "(Temminck and Schlegel, 1846)",
+    "page_number": 105
+  },
+  {
+    "id": "tap5-species-121",
+    "index_text": "Loài 121 · Trang 106",
+    "vn_name": "Cá Bơn",
+    "sci_name": "Bothus mancus",
+    "authorship": "(Broussonet)",
+    "page_number": 106
+  },
+  {
+    "id": "tap5-species-122",
+    "index_text": "Loài 122 · Trang TODO",
+    "vn_name": "Cá Bơn Hai Mắt LÕM",
+    "sci_name": "Bothus pantherinus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-123",
+    "index_text": "Loài 123 · Trang 108",
+    "vn_name": "Cá Bơn Vảy To",
+    "sci_name": "Tarphops oligolepis",
+    "authorship": "",
+    "page_number": 108
+  },
+  {
+    "id": "tap5-species-124",
+    "index_text": "Loài 124 · Trang 109",
+    "vn_name": "Cá Bơn Mào",
+    "sci_name": "Samaris cristatus",
+    "authorship": "Gray",
+    "page_number": 109
+  },
+  {
+    "id": "tap5-species-125",
+    "index_text": "Loài 125 · Trang TODO",
+    "vn_name": "Cá Bơn Cát",
+    "sci_name": "Samaris huysmani",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-126",
+    "index_text": "Loài 126 · Trang TODO",
+    "vn_name": "Cá Bơn Cát Dài",
+    "sci_name": "Samariscus corallinus",
+    "authorship": "Gilbert, 1905",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-127",
+    "index_text": "Loài 127 · Trang 113",
+    "vn_name": "Cá Bơn",
+    "sci_name": "Samariscus sunieri",
+    "authorship": "- ni Samaricus sunieri",
+    "page_number": 113
+  },
+  {
+    "id": "tap5-species-128",
+    "index_text": "Loài 128 · Trang 114",
+    "vn_name": "Cá Bơn sung",
+    "sci_name": "Pleuronichthys cornutus",
+    "authorship": "(Temminck and Schlegel, 1846)",
+    "page_number": 114
+  },
+  {
+    "id": "tap5-species-129",
+    "index_text": "Loài 129 · Trang 115",
+    "vn_name": "Cá Bơn Ngồi",
+    "sci_name": "Poecilopsetta plinthus",
+    "authorship": "",
+    "page_number": 115
+  },
+  {
+    "id": "tap5-species-130",
+    "index_text": "Loài 130 · Trang 116",
+    "vn_name": "Cá Bơn Sọc Vây Ngực Đen",
+    "sci_name": "Solea ovata",
+    "authorship": "Richardson, 1846",
+    "page_number": 116
+  },
+  {
+    "id": "tap5-species-131",
+    "index_text": "Loài 131 · Trang 116",
+    "vn_name": "Cá Bơn Lưỡi Trâu",
+    "sci_name": "Euryglossa orientalis",
+    "authorship": "(Bloch & Schneider, 1801)",
+    "page_number": 116
+  },
+  {
+    "id": "tap5-species-132",
+    "index_text": "Loài 132 · Trang TODO",
+    "vn_name": "Cá Bơn Thủ",
+    "sci_name": "Zebrias zebra",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-133",
+    "index_text": "Loài 133 · Trang 117",
+    "vn_name": "Cá Khoang Râu",
+    "sci_name": "Zebrias quagga",
+    "authorship": "",
+    "page_number": 117
+  },
+  {
+    "id": "tap5-species-134",
+    "index_text": "Loài 134 · Trang TODO",
+    "vn_name": "Cá Bơn Khoang Nhật Bản",
+    "sci_name": "Zebrias japonicus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-135",
+    "index_text": "Loài 135 · Trang 120",
+    "vn_name": "Cá Bơn Sọc Sừng",
+    "sci_name": "Aesopia cornuta",
+    "authorship": "Kaup, 1858",
+    "page_number": 120
+  },
+  {
+    "id": "tap5-species-136",
+    "index_text": "Loài 136 · Trang 121",
+    "vn_name": "Cá Bơn Lá",
+    "sci_name": "Aseraggodes kobensis",
+    "authorship": "kobensis",
+    "page_number": 121
+  },
+  {
+    "id": "tap5-species-137",
+    "index_text": "Loài 137 · Trang 123",
+    "vn_name": "Cá Bơn Truc Nhật Bản",
+    "sci_name": "Heteromycteris jammicus",
+    "authorship": "(Temminck and Schlegel, 1846)",
+    "page_number": 123
+  },
+  {
+    "id": "tap5-species-138",
+    "index_text": "Loài 138 · Trang 124",
+    "vn_name": "Cá Bơn Vảy Tron",
+    "sci_name": "Liachirus melanospilus",
+    "authorship": "",
+    "page_number": 124
+  },
+  {
+    "id": "tap5-species-139",
+    "index_text": "Loài 139 · Trang 295",
+    "vn_name": "Cá Bơn",
+    "sci_name": "Pardachirus pavoninus",
+    "authorship": "Pardachirus pavoninus (Lacépède, 1802)",
+    "page_number": 295
+  },
+  {
+    "id": "tap5-species-140",
+    "index_text": "Loài 140 · Trang 125",
+    "vn_name": "Cá Bơn Mõm Chấm Đen",
+    "sci_name": "Achiroides melanorhynchus",
+    "authorship": "(Bleeker, 1850)",
+    "page_number": 125
+  },
+  {
+    "id": "tap5-species-141",
+    "index_text": "Loài 141 · Trang 126",
+    "vn_name": "Cá Ihn Bon Nâu Đỏ",
+    "sci_name": "Synaptura pan",
+    "authorship": "(Hamilton and Buchanan, 1822)",
+    "page_number": 126
+  },
+  {
+    "id": "tap5-species-142",
+    "index_text": "Loài 142 · Trang 127",
+    "vn_name": "Cá Lưỡi Bò Lưỡi Mèo",
+    "sci_name": "Paraplagusia guttata",
+    "authorship": "",
+    "page_number": 127
+  },
+  {
+    "id": "tap5-species-143",
+    "index_text": "Loài 143 · Trang TODO",
+    "vn_name": "Cá Lưỡi Bò Vây",
+    "sci_name": "Paraplagusia formosana",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-144",
+    "index_text": "Loài 144 · Trang 128",
+    "vn_name": "Cá Lưỡi Bò Lá Mít",
+    "sci_name": "Synaptura krempfi",
+    "authorship": "Durand, 1940",
+    "page_number": 128
+  },
+  {
+    "id": "tap5-species-145",
+    "index_text": "Loài 145 · Trang TODO",
+    "vn_name": "Cá Lưỡi Bò Mèo",
+    "sci_name": "Synaptura commersoniana",
+    "authorship": "(LacépOde)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-146",
+    "index_text": "Loài 146 · Trang 130",
+    "vn_name": "Cá Lưỡi Bò Mèo Đốm",
+    "sci_name": "Synaptura harmandi",
+    "authorship": "Sauvage, 1878",
+    "page_number": 130
+  },
+  {
+    "id": "tap5-species-147",
+    "index_text": "Loài 147 · Trang TODO",
+    "vn_name": "Cá Bơn Lưỡi Bò Đầu Chấm",
+    "sci_name": "Cynoglossus abbreviatus",
+    "authorship": "(Gray, 1835)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-148",
+    "index_text": "Loài 148 · Trang 132",
+    "vn_name": "Cá Bơn Năm Chấm Lưỡi",
+    "sci_name": "Cynoglossus arel",
+    "authorship": "(Bloch & Schneider, 1801)",
+    "page_number": 132
+  },
+  {
+    "id": "tap5-species-149",
+    "index_text": "Loài 149 · Trang 133",
+    "vn_name": "Cá Bơn Cát Khoang Mảng",
+    "sci_name": "Cynoglossus bilineatus",
+    "authorship": "(Lacépède, 1802)",
+    "page_number": 133
+  },
+  {
+    "id": "tap5-species-150",
+    "index_text": "Loài 150 · Trang 134",
+    "vn_name": "Cá Bơn Bò Neo",
+    "sci_name": "Cynoglossus borneensis",
+    "authorship": "(Bleeker, 1858)",
+    "page_number": 134
+  },
+  {
+    "id": "tap5-species-151",
+    "index_text": "Loài 151 · Trang 135",
+    "vn_name": "Cá Bơn Cát Bengal",
+    "sci_name": "Cynoglossus cynoglossus",
+    "authorship": "(Hamilton, 1822)",
+    "page_number": 135
+  },
+  {
+    "id": "tap5-species-152",
+    "index_text": "Loài 152 · Trang 136",
+    "vn_name": "Cá Bơn Lưỡi Trâu Nhám",
+    "sci_name": "Cynoglossus gracilis",
+    "authorship": "Günther, 1873",
+    "page_number": 136
+  },
+  {
+    "id": "tap5-species-153",
+    "index_text": "Loài 153 · Trang 136",
+    "vn_name": "Cá Bơn Lưỡi Bò Trần",
+    "sci_name": "Cynoglossus interruptus",
+    "authorship": "Günther, 1880",
+    "page_number": 136
+  },
+  {
+    "id": "tap5-species-154",
+    "index_text": "Loài 154 · Trang 137",
+    "vn_name": "Cá Bơn Mắt Hai Mũi",
+    "sci_name": "Cynoglossus itinus",
+    "authorship": "(Snyder, 1909)",
+    "page_number": 137
+  },
+  {
+    "id": "tap5-species-155",
+    "index_text": "Loài 155 · Trang 137",
+    "vn_name": "Cá Bơn Lưỡi Bò Dài",
+    "sci_name": "Cynoglossus joyneri",
+    "authorship": "Günther, 1878",
+    "page_number": 137
+  },
+  {
+    "id": "tap5-species-156",
+    "index_text": "Loài 156 · Trang 139",
+    "vn_name": "Cá Bơn Cát Lưng Đốm",
+    "sci_name": "Cynoglossus lida",
+    "authorship": "(Bleeker, 1845)",
+    "page_number": 139
+  },
+  {
+    "id": "tap5-species-157",
+    "index_text": "Loài 157 · Trang 140",
+    "vn_name": "Cá Bơn Lưỡi Trâu Dài",
+    "sci_name": "Cynoglossus lingua",
+    "authorship": "Hamilton-Buchanan, 1822",
+    "page_number": 140
+  },
+  {
+    "id": "tap5-species-158",
+    "index_text": "Loài 158 · Trang 296",
+    "vn_name": "Cá Bơn Mắt Lệch",
+    "sci_name": "Cynoglossus lineolatus",
+    "authorship": "Steindachner, 1867",
+    "page_number": 296
+  },
+  {
+    "id": "tap5-species-159",
+    "index_text": "Loài 159 · Trang 141",
+    "vn_name": "Cá Bơn Cát Vây To Đuôi Đen",
+    "sci_name": "Cynoglossus melampetalus",
+    "authorship": "(Richardson, 1846)",
+    "page_number": 141
+  },
+  {
+    "id": "tap5-species-160",
+    "index_text": "Loài 160 · Trang 142",
+    "vn_name": "Cá Bơn Lưỡi Trâu",
+    "sci_name": "Cynoglossus microlepis",
+    "authorship": "(Bleeker, 1851)",
+    "page_number": 142
+  },
+  {
+    "id": "tap5-species-161",
+    "index_text": "Loài 161 · Trang TODO",
+    "vn_name": "Cá Bơn Lưỡi Trâu",
+    "sci_name": "Cynoglossus monopus",
+    "authorship": "(Bleeker, 1849)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-162",
+    "index_text": "Loài 162 · Trang 143",
+    "vn_name": "Cá Bơn Vằn",
+    "sci_name": "Cynoglossus puncticeps",
+    "authorship": "(Richardson, 1846)",
+    "page_number": 143
+  },
+  {
+    "id": "tap5-species-163",
+    "index_text": "Loài 163 · Trang 144",
+    "vn_name": "Cá Bơn Cát Mõm Ngắn",
+    "sci_name": "Cynoglossus semilaevis",
+    "authorship": "Günther, 1873",
+    "page_number": 144
+  },
+  {
+    "id": "tap5-species-164",
+    "index_text": "Loài 164 · Trang 145",
+    "vn_name": "Cá Bơn Lưỡi Mèo",
+    "sci_name": "Cynoglossus sibogae",
+    "authorship": "Weber, 1913",
+    "page_number": 145
+  },
+  {
+    "id": "tap5-species-165",
+    "index_text": "Loài 165 · Trang TODO",
+    "vn_name": "Cá Bơn Lưỡi Mõm Dài",
+    "sci_name": "Cynoglossus waandersi",
+    "authorship": "(Bleeker, 1854)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-166",
+    "index_text": "Loài 166 · Trang 146",
+    "vn_name": "Cá Bơn Môi Dài",
+    "sci_name": "Paraplagusia bilineata",
+    "authorship": "(Bloch, 1787)",
+    "page_number": 146
+  },
+  {
+    "id": "tap5-species-167",
+    "index_text": "Loài 167 · Trang TODO",
+    "vn_name": "Cá Bơn Bò Nâu",
+    "sci_name": "Paraplagusia blochii",
+    "authorship": "(Bleeker, 1851)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-168",
+    "index_text": "Loài 168 · Trang 149",
+    "vn_name": "Cá Bơn Lưỡi Trâu",
+    "sci_name": "Paraplagusia japonica",
+    "authorship": "(Temminck & Schlegel, 1846)",
+    "page_number": 149
+  },
+  {
+    "id": "tap5-species-169",
+    "index_text": "Loài 169 · Trang 150",
+    "vn_name": "Cá Bò bién",
+    "sci_name": "Triacanthodes ethiops",
+    "authorship": "Alcock",
+    "page_number": 150
+  },
+  {
+    "id": "tap5-species-170",
+    "index_text": "Loài 170 · Trang 151",
+    "vn_name": "Cá Mõm Ong",
+    "sci_name": "Halimochirurgus alcocki",
+    "authorship": "",
+    "page_number": 151
+  },
+  {
+    "id": "tap5-species-171",
+    "index_text": "Loài 171 · Trang TODO",
+    "vn_name": "Cá Bò Ba Gai Mõm Ngắn",
+    "sci_name": "Triacanthus biaculeatus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-172",
+    "index_text": "Loài 172 · Trang 153",
+    "vn_name": "Cá Bò Ba Gai Đuôi Dài",
+    "sci_name": "Tripodichthys blochii",
+    "authorship": "",
+    "page_number": 153
+  },
+  {
+    "id": "tap5-species-173",
+    "index_text": "Loài 173 · Trang 154",
+    "vn_name": "Cá Bò Ba Gai Dài",
+    "sci_name": "Pseudotriacanthus strigilifer",
+    "authorship": "",
+    "page_number": 154
+  },
+  {
+    "id": "tap5-species-174",
+    "index_text": "Loài 174 · Trang TODO",
+    "vn_name": "Cá Bò Vây Xanh",
+    "sci_name": "Balistoides viridescens",
+    "authorship": "(Bloch & Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-175",
+    "index_text": "Loài 175 · Trang TODO",
+    "vn_name": "Cá Bò Hoa Vàng",
+    "sci_name": "Balistoides conspicillum",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-176",
+    "index_text": "Loài 176 · Trang TODO",
+    "vn_name": "Cá Bò Gai Kin",
+    "sci_name": "Sumamen fraenatus",
+    "authorship": "(Latreille)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-177",
+    "index_text": "Loài 177 · Trang TODO",
+    "vn_name": "Cá Bò Da Vảy Vàng",
+    "sci_name": "Sumamen chrysopterus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-178",
+    "index_text": "Loài 178 · Trang TODO",
+    "vn_name": "Cá Bò Bọc Thép Bụng Trắng",
+    "sci_name": "Sufflamen bursa",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-179",
+    "index_text": "Loài 179 · Trang 160",
+    "vn_name": "Cá Bò Vây Nâu Vàng",
+    "sci_name": "Pseudobalistes flavimarginatus",
+    "authorship": "",
+    "page_number": 160
+  },
+  {
+    "id": "tap5-species-180",
+    "index_text": "Loài 180 · Trang TODO",
+    "vn_name": "Cá Bò Da Nâu",
+    "sci_name": "Pseudobalistes fuscus",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-181",
+    "index_text": "Loài 181 · Trang TODO",
+    "vn_name": "Cá Bò DuOi Dii",
+    "sci_name": "Abalistes stellaris",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-182",
+    "index_text": "Loài 182 · Trang 163",
+    "vn_name": "Cá Bò Vảy Góc",
+    "sci_name": "Melichthys vidua",
+    "authorship": "",
+    "page_number": 163
+  },
+  {
+    "id": "tap5-species-183",
+    "index_text": "Loài 183 · Trang 164",
+    "vn_name": "Cá Bò Răng Đỏ",
+    "sci_name": "Odonus niger",
+    "authorship": "",
+    "page_number": 164
+  },
+  {
+    "id": "tap5-species-184",
+    "index_text": "Loài 184 · Trang 165",
+    "vn_name": "Cá Bò Hoàng Hậu",
+    "sci_name": "Balistes vetula",
+    "authorship": "",
+    "page_number": 165
+  },
+  {
+    "id": "tap5-species-185",
+    "index_text": "Loài 185 · Trang TODO",
+    "vn_name": "Cá Den",
+    "sci_name": "Balistapus undulatus",
+    "authorship": "(Mungo Park)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-186",
+    "index_text": "Loài 186 · Trang 167",
+    "vn_name": "Cá Bò Da Gai",
+    "sci_name": "Rhinecanthus aculeatus",
+    "authorship": "",
+    "page_number": 167
+  },
+  {
+    "id": "tap5-species-187",
+    "index_text": "Loài 187 · Trang 168",
+    "vn_name": "Cá Bò Da Ling",
+    "sci_name": "Rhinecanthus rectangulus",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": 168
+  },
+  {
+    "id": "tap5-species-188",
+    "index_text": "Loài 188 · Trang 169",
+    "vn_name": "Cá Bò U",
+    "sci_name": "Canthidermis maculatus",
+    "authorship": "",
+    "page_number": 169
+  },
+  {
+    "id": "tap5-species-189",
+    "index_text": "Loài 189 · Trang 170",
+    "vn_name": "Cá Bò vay Vàng",
+    "sci_name": "Xanthichthys auromarginatus",
+    "authorship": "",
+    "page_number": 170
+  },
+  {
+    "id": "tap5-species-190",
+    "index_text": "Loài 190 · Trang 171",
+    "vn_name": "Cá Bò Sec ĐỎ",
+    "sci_name": "Xanthichthys lineopunctatus",
+    "authorship": "(Hollard)",
+    "page_number": 171
+  },
+  {
+    "id": "tap5-species-191",
+    "index_text": "Loài 191 · Trang TODO",
+    "vn_name": "Cá Bò Một Gai Lưng",
+    "sci_name": "Aluterus monoceros",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-192",
+    "index_text": "Loài 192 · Trang 172",
+    "vn_name": "Cá Bò Da Vằn Xanh",
+    "sci_name": "Aluterus scriptus",
+    "authorship": "",
+    "page_number": 172
+  },
+  {
+    "id": "tap5-species-193",
+    "index_text": "Loài 193 · Trang 174",
+    "vn_name": "Cá Bò Long Cao",
+    "sci_name": "Acreichthys tomentosus",
+    "authorship": "",
+    "page_number": 174
+  },
+  {
+    "id": "tap5-species-194",
+    "index_text": "Loài 194 · Trang 175",
+    "vn_name": "Cá Bò Gai Mảnh",
+    "sci_name": "Arotrolepis sulcatus",
+    "authorship": "Hollard, 1854",
+    "page_number": 175
+  },
+  {
+    "id": "tap5-species-195",
+    "index_text": "Loài 195 · Trang 176",
+    "vn_name": "Cá Bò Lông Gai",
+    "sci_name": "Chaetodermis penicilligerus",
+    "authorship": "",
+    "page_number": 176
+  },
+  {
+    "id": "tap5-species-196",
+    "index_text": "Loài 196 · Trang TODO",
+    "vn_name": "Cá Bò Giy Nhật Bản",
+    "sci_name": "Paramonacanthus nipponensis",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-197",
+    "index_text": "Loài 197 · Trang TODO",
+    "vn_name": "Cá Bò Giấy Vây Dài",
+    "sci_name": "Paramonacanthus japonicus",
+    "authorship": "(Tilesius, 1809)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-198",
+    "index_text": "Loài 198 · Trang 179",
+    "vn_name": "Cá Bò Gai Mốc",
+    "sci_name": "Monacanthus chinensis",
+    "authorship": "",
+    "page_number": 179
+  },
+  {
+    "id": "tap5-species-199",
+    "index_text": "Loài 199 · Trang 180",
+    "vn_name": "Cá Bò Mom Nhon",
+    "sci_name": "Oxymonacanthus longirostris",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": 180
+  },
+  {
+    "id": "tap5-species-200",
+    "index_text": "Loài 200 · Trang TODO",
+    "vn_name": "Cá Bò Mng Dài",
+    "sci_name": "Pseudomonacanthus macrurus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-201",
+    "index_text": "Loài 201 · Trang 181",
+    "vn_name": "Cá Bò Đuôi Ving",
+    "sci_name": "Pervagor aspricaudus",
+    "authorship": "",
+    "page_number": 181
+  },
+  {
+    "id": "tap5-species-202",
+    "index_text": "Loài 202 · Trang 182",
+    "vn_name": "Cá Bò V.ch Den",
+    "sci_name": "Pervagor janthinosoma",
+    "authorship": ")",
+    "page_number": 182
+  },
+  {
+    "id": "tap5-species-203",
+    "index_text": "Loài 203 · Trang 183",
+    "vn_name": "Cá Bò Đầu Den",
+    "sci_name": "Pervagor melanocephalus",
+    "authorship": "",
+    "page_number": 183
+  },
+  {
+    "id": "tap5-species-204",
+    "index_text": "Loài 204 · Trang 184",
+    "vn_name": "Cá Bò Vằn Den",
+    "sci_name": "Pervagor nigrolineatus",
+    "authorship": "",
+    "page_number": 184
+  },
+  {
+    "id": "tap5-species-205",
+    "index_text": "Loài 205 · Trang 184",
+    "vn_name": "Cá Bò Giấy Vây Gai",
+    "sci_name": "Acreichthys tomentosus",
+    "authorship": "",
+    "page_number": 184
+  },
+  {
+    "id": "tap5-species-206",
+    "index_text": "Loài 206 · Trang 185",
+    "vn_name": "Cá Bò Vây Thỏ",
+    "sci_name": "Rudarius ercodes",
+    "authorship": "",
+    "page_number": 185
+  },
+  {
+    "id": "tap5-species-207",
+    "index_text": "Loài 207 · Trang 186",
+    "vn_name": "Cá Bò Đuôi Dài",
+    "sci_name": "Thamnaconus modestus",
+    "authorship": "(Günther, 1877)",
+    "page_number": 186
+  },
+  {
+    "id": "tap5-species-208",
+    "index_text": "Loài 208 · Trang 187",
+    "vn_name": "Cá Bò Chấm Hoa",
+    "sci_name": "Thamnaconus tessellatus",
+    "authorship": "(Günther, 1880)",
+    "page_number": 187
+  },
+  {
+    "id": "tap5-species-209",
+    "index_text": "Loài 209 · Trang 188",
+    "vn_name": "Cá Bò Té Giác",
+    "sci_name": "Pseudalutarius nasicornis",
+    "authorship": "",
+    "page_number": 188
+  },
+  {
+    "id": "tap5-species-210",
+    "index_text": "Loài 210 · Trang 189",
+    "vn_name": "Cá Bò Nóc",
+    "sci_name": "Paraluteres prionurus",
+    "authorship": "",
+    "page_number": 189
+  },
+  {
+    "id": "tap5-species-211",
+    "index_text": "Loài 211 · Trang 198",
+    "vn_name": "Cá RàuAnaeanthus barbatus Gray,",
+    "sci_name": "Anacanthus barbatus",
+    "authorship": "A92",
+    "page_number": 198
+  },
+  {
+    "id": "tap5-species-212",
+    "index_text": "Loài 212 · Trang 191",
+    "vn_name": "Cá Nóc Hõm Lyc Lưng",
+    "sci_name": "Kentrocapros rosapinto",
+    "authorship": "",
+    "page_number": 191
+  },
+  {
+    "id": "tap5-species-213",
+    "index_text": "Loài 213 · Trang TODO",
+    "vn_name": "Cá Nóc Sừng Dài",
+    "sci_name": "Lactoria cornuta",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-214",
+    "index_text": "Loài 214 · Trang 193",
+    "vn_name": "Cá Nóc Sung Tron Bung",
+    "sci_name": "Lactoria diaphana",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": 193
+  },
+  {
+    "id": "tap5-species-215",
+    "index_text": "Loài 215 · Trang TODO",
+    "vn_name": "Cá Sừng Gai Ltmg",
+    "sci_name": "Lactoria fornasini",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-216",
+    "index_text": "Loài 216 · Trang TODO",
+    "vn_name": "Cá Nóc Hom Vuong",
+    "sci_name": "Ostracion immaculatus",
+    "authorship": "Temminck and Schlegel",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-217",
+    "index_text": "Loài 217 · Trang 196",
+    "vn_name": "Cá Nóc Hõm Tron Lung",
+    "sci_name": "Ostracion cubicus",
+    "authorship": "",
+    "page_number": 196
+  },
+  {
+    "id": "tap5-species-218",
+    "index_text": "Loài 218 · Trang 197",
+    "vn_name": "Cá Hom Chấm Trang",
+    "sci_name": "Ostracion meleagris",
+    "authorship": "meleagris Shaw and Nodder",
+    "page_number": 197
+  },
+  {
+    "id": "tap5-species-219",
+    "index_text": "Loài 219 · Trang TODO",
+    "vn_name": "Cá Nóc Hòm Đỏ Trán",
+    "sci_name": "Rhynchostracion rhinorhynchos",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-220",
+    "index_text": "Loài 220 · Trang TODO",
+    "vn_name": "Cá Nóc Hõm Mũi Nhọn",
+    "sci_name": "Rhynchostracion nasus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-221",
+    "index_text": "Loài 221 · Trang 200",
+    "vn_name": "Cá I.Afng Gù",
+    "sci_name": "Tetrasomus concatenatus",
+    "authorship": "",
+    "page_number": 200
+  },
+  {
+    "id": "tap5-species-222",
+    "index_text": "Loài 222 · Trang TODO",
+    "vn_name": "Cá Nóc",
+    "sci_name": "Tetrasomus gibbosus",
+    "authorship": "gcbbosus",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-223",
+    "index_text": "Loài 223 · Trang 1829",
+    "vn_name": "Cá Nóc Bụng Lớn",
+    "sci_name": "Triodon macropterus",
+    "authorship": "Lesson",
+    "page_number": 1829
+  },
+  {
+    "id": "tap5-species-224",
+    "index_text": "Loài 224 · Trang TODO",
+    "vn_name": "Cá Nóc Răng Mỏ Chim",
+    "sci_name": "Lagocephalus inermis",
+    "authorship": "(Schlegel, 1850)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-225",
+    "index_text": "Loài 225 · Trang TODO",
+    "vn_name": "Cá Nóc",
+    "sci_name": "Lagocephalus lunaris",
+    "authorship": "lunaris (Bloch and Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-226",
+    "index_text": "Loài 226 · Trang 205",
+    "vn_name": "Cá Nóc",
+    "sci_name": "Lagocephalus sceleratus",
+    "authorship": "IAocephalus sceleratus",
+    "page_number": 205
+  },
+  {
+    "id": "tap5-species-227",
+    "index_text": "Loài 227 · Trang TODO",
+    "vn_name": "Cá Nóc Vàng",
+    "sci_name": "Lagocephalus spadiceus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-228",
+    "index_text": "Loài 228 · Trang 207",
+    "vn_name": "Cá Nóc Vằn",
+    "sci_name": "Takifugu oblongus",
+    "authorship": "",
+    "page_number": 207
+  },
+  {
+    "id": "tap5-species-229",
+    "index_text": "Loài 229 · Trang TODO",
+    "vn_name": "Cá Nóc Vay Vàng",
+    "sci_name": "Takifugu xanthopterus",
+    "authorship": "(Temminck and Schlegel)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-230",
+    "index_text": "Loài 230 · Trang TODO",
+    "vn_name": "Cá Nóc",
+    "sci_name": "Takifugu bimaculatus",
+    "authorship": "Chấm Takifugu bimaculatus (Richardson, 1844 1845)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-231",
+    "index_text": "Loài 231 · Trang TODO",
+    "vn_name": "Cá Nóc Sọc Bến",
+    "sci_name": "Takifugu ocellatus",
+    "authorship": "(Osbeck, 1757)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-232",
+    "index_text": "Loài 232 · Trang 210",
+    "vn_name": "Cá Nóc",
+    "sci_name": "Takifugu niphobles",
+    "authorship": "niphobles",
+    "page_number": 210
+  },
+  {
+    "id": "tap5-species-233",
+    "index_text": "Loài 233 · Trang TODO",
+    "vn_name": "Cá Nóc Hoa Trắng",
+    "sci_name": "Takifugu alboplumbeus",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-234",
+    "index_text": "Loài 234 · Trang 212",
+    "vn_name": "Cá Nóc Gai Mềm",
+    "sci_name": "Amblyrhynchotes honckenii",
+    "authorship": "",
+    "page_number": 212
+  },
+  {
+    "id": "tap5-species-235",
+    "index_text": "Loài 235 · Trang 301",
+    "vn_name": "Cá Nóc Đầu Vằn",
+    "sci_name": "Amblyrhynchotes hypselogeneion",
+    "authorship": "",
+    "page_number": 301
+  },
+  {
+    "id": "tap5-species-236",
+    "index_text": "Loài 236 · Trang 214",
+    "vn_name": "Cá Nóc Gai Đầu",
+    "sci_name": "Amblyrhynchotes spinosissimus",
+    "authorship": "",
+    "page_number": 214
+  },
+  {
+    "id": "tap5-species-237",
+    "index_text": "Loài 237 · Trang 214",
+    "vn_name": "Cá Rang Rùa",
+    "sci_name": "Chelonodon patoca",
+    "authorship": "(Hamilton. 1822)",
+    "page_number": 214
+  },
+  {
+    "id": "tap5-species-238",
+    "index_text": "Loài 238 · Trang TODO",
+    "vn_name": "Cá Nóc Xanh Đốm",
+    "sci_name": "Chelonodon fluviatilis",
+    "authorship": "(Hamilton)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-239",
+    "index_text": "Loài 239 · Trang 216",
+    "vn_name": "Cá Nóc Chấm",
+    "sci_name": "Chelonodon biocellatus",
+    "authorship": "",
+    "page_number": 216
+  },
+  {
+    "id": "tap5-species-240",
+    "index_text": "Loài 240 · Trang TODO",
+    "vn_name": "Cá Nóc Hét",
+    "sci_name": "Tetraodon palembangensis",
+    "authorship": "palembangensis",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-241",
+    "index_text": "Loài 241 · Trang 217",
+    "vn_name": "Cá Dài Đốm",
+    "sci_name": "Tetraodon leiurus",
+    "authorship": "",
+    "page_number": 217
+  },
+  {
+    "id": "tap5-species-242",
+    "index_text": "Loài 242 · Trang 218",
+    "vn_name": "Cá Nóc Vàng",
+    "sci_name": "Tetraodon lorteti",
+    "authorship": "",
+    "page_number": 218
+  },
+  {
+    "id": "tap5-species-243",
+    "index_text": "Loài 243 · Trang 219",
+    "vn_name": "Cá m Pốt",
+    "sci_name": "Tetraodon cambodgiensis",
+    "authorship": "(Chabanaud)",
+    "page_number": 219
+  },
+  {
+    "id": "tap5-species-244",
+    "index_text": "Loài 244 · Trang TODO",
+    "vn_name": "Cá Nóc Chấm Đuôi",
+    "sci_name": "Tetraodon fangi",
+    "authorship": "(Pellegrin and Chevey, 1940)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-245",
+    "index_text": "Loài 245 · Trang 220",
+    "vn_name": "Cá Nóc Chuột Vằn",
+    "sci_name": "Arothron hispidus",
+    "authorship": "hispidus",
+    "page_number": 220
+  },
+  {
+    "id": "tap5-species-246",
+    "index_text": "Loài 246 · Trang 221",
+    "vn_name": "Cá Chuột Chấm",
+    "sci_name": "Arothron nigropunctatus",
+    "authorship": "nigropunctatus (Bloch and Schneider, 1801)",
+    "page_number": 221
+  },
+  {
+    "id": "tap5-species-247",
+    "index_text": "Loài 247 · Trang TODO",
+    "vn_name": "Cá Nóc Chuột Vằn",
+    "sci_name": "Arothron immaculatus",
+    "authorship": "immaculatus (Bloch and Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-248",
+    "index_text": "Loài 248 · Trang TODO",
+    "vn_name": "Cá Nóc Chuột Chấm Sao",
+    "sci_name": "Arothron stellatus",
+    "authorship": "(Bloch & Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-249",
+    "index_text": "Loài 249 · Trang TODO",
+    "vn_name": "Cá Nóc",
+    "sci_name": "Arothron reticularis",
+    "authorship": "Lưỡi Arothron reticularis (Bloch and Schneider, 1801)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-250",
+    "index_text": "Loài 250 · Trang 226",
+    "vn_name": "Cá Nóc Chuột",
+    "sci_name": "Arothron mappa",
+    "authorship": "mappa (Lesson, 1826)",
+    "page_number": 226
+  },
+  {
+    "id": "tap5-species-251",
+    "index_text": "Loài 251 · Trang 226",
+    "vn_name": "Cá Nóc Dẹt mắt Hoa",
+    "sci_name": "Canthigaster bennetti",
+    "authorship": "",
+    "page_number": 226
+  },
+  {
+    "id": "tap5-species-252",
+    "index_text": "Loài 252 · Trang TODO",
+    "vn_name": "Cá Nóc Dẹt Vằn Đuôi",
+    "sci_name": "Canthigaster rivulata",
+    "authorship": "(Temminck and Schlegel, 1857)",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-253",
+    "index_text": "Loài 253 · Trang 229",
+    "vn_name": "Cá Nóc Dẹt Vàng",
+    "sci_name": "Canthigaster valentini",
+    "authorship": "",
+    "page_number": 229
+  },
+  {
+    "id": "tap5-species-254",
+    "index_text": "Loài 254 · Trang TODO",
+    "vn_name": "Cá Nóc Dẹt Vằn Tron",
+    "sci_name": "Canthigaster margaritata",
+    "authorship": "",
+    "page_number": null
+  },
+  {
+    "id": "tap5-species-255",
+    "index_text": "Loài 255 · Trang 231",
+    "vn_name": "Cá Nóc Dẹt Chấm Lưng",
+    "sci_name": "Canthigaster ocellicincta",
+    "authorship": "Alen and Randall",
+    "page_number": 231
+  },
+  {
+    "id": "tap5-species-256",
+    "index_text": "Loài 256 · Trang 232",
+    "vn_name": "Cá Nóc Dẹt Vằn Trắng",
+    "sci_name": "Canthigaster janthinoptera",
+    "authorship": "",
+    "page_number": 232
+  },
+  {
+    "id": "tap5-species-257",
+    "index_text": "Loài 257 · Trang 233",
+    "vn_name": "Cá Nóc Nhím Vằn Đen",
+    "sci_name": "Diodon holacanthus",
+    "authorship": "",
+    "page_number": 233
+  },
+  {
+    "id": "tap5-species-258",
+    "index_text": "Loài 258 · Trang 234",
+    "vn_name": "Cá Nóc Nhím Chấm Đen",
+    "sci_name": "Diodon hystrix",
+    "authorship": "",
+    "page_number": 234
+  },
+  {
+    "id": "tap5-species-259",
+    "index_text": "Loài 259 · Trang 235",
+    "vn_name": "Cá Nóc Gai",
+    "sci_name": "Chilomycterus affinis",
+    "authorship": "Günther",
+    "page_number": 235
+  },
+  {
+    "id": "tap5-species-260",
+    "index_text": "Loài 260 · Trang 236",
+    "vn_name": "Cá Nóc Gai Dài",
+    "sci_name": "Cyclichthys orbicularis",
+    "authorship": "Bloch",
+    "page_number": 236
+  },
+  {
+    "id": "tap5-species-261",
+    "index_text": "Loài 261 · Trang 237",
+    "vn_name": "Cá Nóc Gai Ngắn",
+    "sci_name": "Cyclichthys spilostylus",
+    "authorship": "(Leis and Randall, 1982)",
+    "page_number": 237
+  },
+  {
+    "id": "tap5-species-262",
+    "index_text": "Loài 262 · Trang 237",
+    "vn_name": "Cá Mặt Trăng Đuôi Nhọn",
+    "sci_name": "Masturus lanceolatus",
+    "authorship": "(Liénard, 1841)",
+    "page_number": 237
+  },
+  {
+    "id": "tap5-species-263",
+    "index_text": "Loài 263 · Trang 239",
+    "vn_name": "Cá Mặt Trăng",
+    "sci_name": "Mola mola",
+    "authorship": "",
+    "page_number": 239
+  },
+  {
+    "id": "tap5-species-264",
+    "index_text": "Loài 264 · Trang 240",
+    "vn_name": "Cá Nhái Miệng Đen",
+    "sci_name": "Lophiomus setigerus",
+    "authorship": "",
+    "page_number": 240
+  },
+  {
+    "id": "tap5-species-265",
+    "index_text": "Loài 265 · Trang 241",
+    "vn_name": "Cá Nhái Lông",
+    "sci_name": "Lophiodes mutilus",
+    "authorship": "",
+    "page_number": 241
+  },
+  {
+    "id": "tap5-species-266",
+    "index_text": "Loài 266 · Trang 242",
+    "vn_name": "Cá Lưỡi Dong Lông",
+    "sci_name": "Antennarius hispidus",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": 242
+  },
+  {
+    "id": "tap5-species-267",
+    "index_text": "Loài 267 · Trang 243",
+    "vn_name": "Cá Lưỡi Dong Vân Chấm",
+    "sci_name": "Antennarius nummifer",
+    "authorship": "",
+    "page_number": 243
+  },
+  {
+    "id": "tap5-species-268",
+    "index_text": "Loài 268 · Trang 244",
+    "vn_name": "Cá Lưỡi Dong Đen",
+    "sci_name": "Antennarius strigatus",
+    "authorship": "",
+    "page_number": 244
+  },
+  {
+    "id": "tap5-species-269",
+    "index_text": "Loài 269 · Trang 245",
+    "vn_name": "Cá Lưỡi Dong Hai Đốm",
+    "sci_name": "Antennarius biocellatus",
+    "authorship": "",
+    "page_number": 245
+  },
+  {
+    "id": "tap5-species-270",
+    "index_text": "Loài 270 · Trang 245",
+    "vn_name": "Cá Lưỡi Dong Mơ",
+    "sci_name": "Histrio histrio",
+    "authorship": "",
+    "page_number": 245
+  },
+  {
+    "id": "tap5-species-271",
+    "index_text": "Loài 271 · Trang 247",
+    "vn_name": "Cá Lưỡi Dong Một Gai",
+    "sci_name": "Chaunax fimbriatus",
+    "authorship": "Hilgendorf",
+    "page_number": 247
+  },
+  {
+    "id": "tap5-species-272",
+    "index_text": "Loài 272 · Trang 248",
+    "vn_name": "Cá Lưỡi Dong Vằn",
+    "sci_name": "Chaunax pictus",
+    "authorship": "Lowe",
+    "page_number": 248
+  },
+  {
+    "id": "tap5-species-273",
+    "index_text": "Loài 273 · Trang 248",
+    "vn_name": "Cá Lưỡi dong Dơi Bụng Hạt",
+    "sci_name": "Halieutaea stellata",
+    "authorship": "",
+    "page_number": 248
+  },
+  {
+    "id": "tap5-species-274",
+    "index_text": "Loài 274 · Trang 249",
+    "vn_name": "Cá Lưỡi Dong Dơi Bụng Trơn",
+    "sci_name": "Halieutaea fumosa",
+    "authorship": "Alcock",
+    "page_number": 249
+  },
+  {
+    "id": "tap5-species-275",
+    "index_text": "Loài 275 · Trang 250",
+    "vn_name": "Cá Lưỡi Dong Tam Giác",
+    "sci_name": "Malthopsis lutea",
+    "authorship": "Alcock",
+    "page_number": 250
+  },
+  {
+    "id": "tap5-species-276",
+    "index_text": "Loài 276 · Trang 251",
+    "vn_name": "Cá Cóc",
+    "sci_name": "Batrachoides grunniens",
+    "authorship": "",
+    "page_number": 251
+  },
+  {
+    "id": "tap5-species-277",
+    "index_text": "Loài 277 · Trang 252",
+    "vn_name": "Cá Rồng Bay",
+    "sci_name": "Pegasus volitans",
+    "authorship": "",
+    "page_number": 252
+  },
+  {
+    "id": "tap5-species-278",
+    "index_text": "Loài 278 · Trang 253",
+    "vn_name": "Cá Rồng Ngắn",
+    "sci_name": "Pegasus laternarius",
+    "authorship": "Cuvier",
+    "page_number": 253
+  },
+  {
+    "id": "tap5-species-279",
+    "index_text": "Loài 279 · Trang 254",
+    "vn_name": "Cá Rồng Thân To",
+    "sci_name": "Eurypegasus draconis",
+    "authorship": "",
+    "page_number": 254
+  }
+]

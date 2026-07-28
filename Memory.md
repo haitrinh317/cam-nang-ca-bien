@@ -1,6 +1,6 @@
 # Memory — OCR Cá biển Việt Nam
 
-> Cập nhật lần cuối: 2026-07-24 16:40
+> Cập nhật lần cuối: 2026-07-27 16:21
 > Production URL: https://cam-nang-ca-bien.vercel.app
 
 ## Kiến trúc Web App (v2 — hiện tại)
@@ -70,17 +70,18 @@ scratch/tap5_parsed_details.json  ─┘                              ─> data/
 
 ### Enrichment pipeline
 ```
-data/species.json ─> scripts/enrich_fishbase_names.py ─> Wikidata → Wikipedia fallback
-                                                        ─> Cập nhật alternateNames + commonName
+data/species.json → scripts/enrich_names.py --volume X → Wikidata (commonName EN + alternateNames VN)
+                  → scripts/audit_species.py --volume X --fix → OCR batch restore + mirror VN→EN
 ```
+Skills: `enrich-cabien` (tên gọi) + `audit-cabien` (data quality)
 
 ## Dữ liệu nguồn
 
 | Tập | File nguồn | Số loài | Trạng thái |
 |---|---|---|---|
 | I | `data/species.json` (volume=1) | 101 | ✅ Hoàn chỉnh nhất |
-| II | `data/species.json` (volume=2) | 266 | ⚠️ Đang cập nhật (enrichment 10/266) |
-| III | `scratch/tap3_parsed_details.json` (dict) | 518 | ⚠️ OCR xong, đang cập nhật |
+| II | `data/species.json` (volume=2) | 266 | ✅ Enriched: EN 232/266, VN 240/266 |
+| III | `data/species.json` (volume=3) | 518 | ⚠️ EN 100%, VN 47%, 60 skeleton cần FishBase |
 | IV | `scratch/tap4_parsed_details.json` (list) | 316 | ⚠️ Loài 1-100 chuẩn, 101-316 còn thô |
 | V | `scratch/tap5_parsed_details.json` (list) | 199 | ⚠️ OCR thô, tên VN lỗi |
 
@@ -102,6 +103,7 @@ data/species.json ─> scripts/enrich_fishbase_names.py ─> Wikidata → Wikipe
 - **Common Name (EN)** — tương tự, luôn hiển thị
 - **Encoding**: luôn dùng `sys.stdout.reconfigure(encoding='utf-8')` trong mọi script Python trên Windows
 - **Không dùng Gemini API** cho OCR, chỉ EasyOCR offline + sửa thủ công
+- **Template species.html**: luôn hiển thị 12 trường (6 VN + 6 EN), dùng '—' cho null
 - **Không dùng PSV** nữa — toàn bộ tập trung vào parsed JSON
 - **Không dùng tap-N.html** nữa — web app chỉ có 4 file HTML + shared assets
 - **Sync public/**: Sau mỗi thay đổi HTML/CSS/JS, phải copy sang `public/` trước khi deploy
@@ -128,3 +130,7 @@ data/species.json ─> scripts/enrich_fishbase_names.py ─> Wikidata → Wikipe
 - 2026-07-24 chiều: Skill `deploy-cabien` tự động hóa toàn bộ quy trình deploy
 - 2026-07-24 tối: Vercel CDN cache static assets — dùng `?v=N` query string để bust cache sau mỗi lần thay CSS/JS
 - 2026-07-24 tối: PowerShell encoding — PHẢI dùng `[System.IO.File]::ReadAllText/WriteAllText` với UTF8 explicit
+- 2026-07-27: Tách enrichment thành skill riêng `enrich-cabien` — dễ gọi lại bất kỳ lúc nào
+- 2026-07-27: Tạo skill `audit-cabien` — kiểm tra data quality + auto-fix từ OCR batch + mirror VN→EN
+- 2026-07-27: Template species.html luôn hiển thị 12 trường — không ẩn khi null
+- 2026-07-27: Wikidata không phải nguồn tốt cho alternateNames cá biển VN (47% có = đúng bản chất sách)

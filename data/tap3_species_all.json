@@ -1,0 +1,4146 @@
+[
+  {
+    "id": "species-1",
+    "index_text": "Loài 1 · Trang 38",
+    "vn_name": "Cá Chẽm",
+    "sci_name": "Lates calcarifer",
+    "authorship": "(Bloch, 1790)",
+    "page_number": 38
+  },
+  {
+    "id": "species-2",
+    "index_text": "Loài 2 · Trang 39",
+    "vn_name": "Cá Vược mõm nhọn",
+    "sci_name": "Psammoperca usaigiensis",
+    "authorship": "(Cuvier and Valenciennes, 1828)",
+    "page_number": 39
+  },
+  {
+    "id": "species-3",
+    "index_text": "Loài 3 · Trang 40",
+    "vn_name": "Cá Sơn đầu trần",
+    "sci_name": "Ambassis gymnocephalus",
+    "authorship": "(Lacépède, 1802)",
+    "page_number": 40
+  },
+  {
+    "id": "species-4",
+    "index_text": "Loài 4 · Trang 41",
+    "vn_name": "Cá Sơn biển sọc bạc",
+    "sci_name": "Ambassis commersoni",
+    "authorship": "Cuvier and Valenciennes, 1828",
+    "page_number": 41
+  },
+  {
+    "id": "species-5",
+    "index_text": "Loài 5 · Trang 42",
+    "vn_name": "Cá Sơn biển sọc đuôi",
+    "sci_name": "Ambassis urotaenia",
+    "authorship": "Bleeker, 1852",
+    "page_number": 42
+  },
+  {
+    "id": "species-6",
+    "index_text": "Loài 6 · Trang 43",
+    "vn_name": "Cá Sơn biển kốp-sơ",
+    "sci_name": "Ambassis kopsi",
+    "authorship": "Bleeker, 1858",
+    "page_number": 43
+  },
+  {
+    "id": "species-7",
+    "index_text": "Loài 7 · Trang 44",
+    "vn_name": "Cá Sơn biển lớn",
+    "sci_name": "Ambassis usolffi",
+    "authorship": "Bleeker, 1850",
+    "page_number": 44
+  },
+  {
+    "id": "species-8",
+    "index_text": "Loài 8 · Trang 44",
+    "vn_name": "Cá Sơn biển u mõm",
+    "sci_name": "Ambassis nalua",
+    "authorship": "(Hamilton-Buchanan, 1822)",
+    "page_number": 44
+  },
+  {
+    "id": "species-9",
+    "index_text": "Loài 9 · Trang 45",
+    "vn_name": "Cá Sơn biển đồng tiền",
+    "sci_name": "Ambassis ranga",
+    "authorship": "(Hamilton-Buchanan, 1822)",
+    "page_number": 45
+  },
+  {
+    "id": "species-10",
+    "index_text": "Loài 10 · Trang 46",
+    "vn_name": "Cá Mú mắt to",
+    "sci_name": "Chelidoperca hirundinacea",
+    "authorship": "Cuvier and Valenciennes, 1831",
+    "page_number": 46
+  },
+  {
+    "id": "species-11",
+    "index_text": "Loài 11 · Trang 47",
+    "vn_name": "Cá Mú đuôi bằng",
+    "sci_name": "Chelidoperca margaritifer",
+    "authorship": "Weber, 1913",
+    "page_number": 47
+  },
+  {
+    "id": "species-12",
+    "index_text": "Loài 12 · Trang 47",
+    "vn_name": "Cá Mú đuôi dài",
+    "sci_name": "Tosana niusae",
+    "authorship": "Smith and Pope, 1906",
+    "page_number": 47
+  },
+  {
+    "id": "species-13",
+    "index_text": "Loài 13 · Trang 48",
+    "vn_name": "Cá Mú vàng",
+    "sci_name": "Anthias cichlops",
+    "authorship": "(Bleeker, 1853)",
+    "page_number": 48
+  },
+  {
+    "id": "species-14",
+    "index_text": "Loài 14 · Trang 49",
+    "vn_name": "Cá Mú dẹt",
+    "sci_name": "Cromileptes altivelis",
+    "authorship": "Cuvier and Valenciennes, 1828",
+    "page_number": 49
+  },
+  {
+    "id": "species-15",
+    "index_text": "Loài 15 · Trang 50",
+    "vn_name": "Cá Mú chấm đuôi bằng",
+    "sci_name": "Plectropomus truncatus",
+    "authorship": "Fowler and Bean, 1930",
+    "page_number": 50
+  },
+  {
+    "id": "species-16",
+    "index_text": "Loài 16 · Trang 51",
+    "vn_name": "Cá Mú chấm bé",
+    "sci_name": "Plectropomus leopardus",
+    "authorship": "Lacépède, 1802",
+    "page_number": 51
+  },
+  {
+    "id": "species-17",
+    "index_text": "Loài 17 · Trang 52",
+    "vn_name": "Cá Mú chấm to",
+    "sci_name": "Plectropomus maculatus",
+    "authorship": "Bloch; 1790",
+    "page_number": 52
+  },
+  {
+    "id": "species-18",
+    "index_text": "Loài 18 · Trang 53",
+    "vn_name": "Cá Mú chấm nâu",
+    "sci_name": "Cephalopholis argus",
+    "authorship": "Bloch and Schneider; 1801",
+    "page_number": 53
+  },
+  {
+    "id": "species-19",
+    "index_text": "Loài 19 · Trang 54",
+    "vn_name": "Cá Mú kẻ mò",
+    "sci_name": "Cephalopholis boenack",
+    "authorship": "Bloch; 1790",
+    "page_number": 54
+  },
+  {
+    "id": "species-20",
+    "index_text": "Loài 20 · Trang 56",
+    "vn_name": "Cá Mú son",
+    "sci_name": "Cephalopholis minlata",
+    "authorship": "Forsskål, 1775",
+    "page_number": 56
+  },
+  {
+    "id": "species-21",
+    "index_text": "Loài 21 · Trang 57",
+    "vn_name": "CáMú than",
+    "sci_name": "Cephalopholis pachycentron",
+    "authorship": "",
+    "page_number": 57
+  },
+  {
+    "id": "species-22",
+    "index_text": "Loài 22 · Trang 58",
+    "vn_name": "Cá Mú nau thẵm",
+    "sci_name": "Cephalopholis rogaa",
+    "authorship": "Forsskål, 1775",
+    "page_number": 58
+  },
+  {
+    "id": "species-23",
+    "index_text": "Loài 23 · Trang 59",
+    "vn_name": "Cá Mú rạn",
+    "sci_name": "Cephalopholis urodelus",
+    "authorship": "Cuvier and Valenclennes; 1828",
+    "page_number": 59
+  },
+  {
+    "id": "species-24",
+    "index_text": "Loài 24 · Trang 60",
+    "vn_name": "Cá Mi chấm dd",
+    "sci_name": "Epinephelus akaara",
+    "authorship": "Temminck and Schlegel, 1842). Ci Mü chåm uch EPinephelus amblycephalw (Bleeker. 1857). Ci Mü chim a-ré-O Epinephelkf areolatws (Forsskål. 1775). Ci Song gio Epinephelus awoara Temminck and Schlegel. 1842",
+    "page_number": 60
+  },
+  {
+    "id": "species-25",
+    "index_text": "Loài 25 · Trang 61",
+    "vn_name": "Cá Mú bleeker",
+    "sci_name": "Epinephelus bleekeri",
+    "authorship": "Vaillant and Bocourt, 1849",
+    "page_number": 61
+  },
+  {
+    "id": "species-26",
+    "index_text": "Loài 26 · Trang 62",
+    "vn_name": "Cá Mú chem d6",
+    "sci_name": "Epinepbelus akaara",
+    "authorship": "Temminck and Schlegel , 1842",
+    "page_number": 62
+  },
+  {
+    "id": "species-27",
+    "index_text": "Loài 27 · Trang 63",
+    "vn_name": "Cá Mú chấm arêô",
+    "sci_name": "Epinephelus areolatus",
+    "authorship": "Forsskål, 1775",
+    "page_number": 63
+  },
+  {
+    "id": "species-28",
+    "index_text": "Loài 28 · Trang 64",
+    "vn_name": "Cá Song Gio",
+    "sci_name": "Epinephelus ausoara",
+    "authorship": "Temminck and Schlegel, 1842",
+    "page_number": 64
+  },
+  {
+    "id": "species-29",
+    "index_text": "Loài 29 · Trang 65",
+    "vn_name": "Ciqú bleeker",
+    "sci_name": "Epinephelus bleekeri",
+    "authorship": "Valllant and Bocoura 1849",
+    "page_number": 65
+  },
+  {
+    "id": "species-30",
+    "index_text": "Loài 30 · Trang 66",
+    "vn_name": "Cá Mú viền trắng",
+    "sci_name": "Epinephelus bonioides",
+    "authorship": "Bleeker; 1855",
+    "page_number": 66
+  },
+  {
+    "id": "species-31",
+    "index_text": "Loài 31 · Trang 66",
+    "vn_name": "Cá Mú san hô",
+    "sci_name": "Epinephelus corallicola",
+    "authorship": "Cuvier and Yalenciennes; 1828",
+    "page_number": 66
+  },
+  {
+    "id": "species-32",
+    "index_text": "Loài 32 · Trang 67",
+    "vn_name": "Cá Mú chấm anh",
+    "sci_name": "Epinephelus chlorostigma",
+    "authorship": "",
+    "page_number": 67
+  },
+  {
+    "id": "species-33",
+    "index_text": "Loài 33 · Trang 68",
+    "vn_name": "Cá Mú sao Epinephelusfario (Thunberg. 1792). Cá Mú diy Epinepvlusfuscoguttatw (Forskal, 1775). C Mú phla-vô Epinephelusßavo-caerulew (InépCde. 1802). Cá Mú kô-Jc",
+    "sci_name": "Epinephelus kohleri",
+    "authorship": "Schultz. 1965",
+    "page_number": 68
+  },
+  {
+    "id": "species-34",
+    "index_text": "Loài 34 · Trang 69",
+    "vn_name": "Cá Mú sọc ngang",
+    "sci_name": "Epinephelus diacanthus",
+    "authorship": "",
+    "page_number": 69
+  },
+  {
+    "id": "species-35",
+    "index_text": "Loài 35 · Trang 70",
+    "vn_name": "Cá Mú chấm den",
+    "sci_name": "Epinephelus eplstictus",
+    "authorship": "Temminck and Schlegel , 1842",
+    "page_number": 70
+  },
+  {
+    "id": "species-36",
+    "index_text": "Loài 36 · Trang 71",
+    "vn_name": "Cá Mú chấm me-ga",
+    "sci_name": "Epinepuslus megachir",
+    "authorship": "Richardson. 1846",
+    "page_number": 71
+  },
+  {
+    "id": "species-37",
+    "index_text": "Loài 37 · Trang 72",
+    "vn_name": "Cá Mú sao",
+    "sci_name": "Epinephelus lario",
+    "authorship": "Thunberg; 1792",
+    "page_number": 72
+  },
+  {
+    "id": "species-38",
+    "index_text": "Loài 38 · Trang 73",
+    "vn_name": "Cá Mú dây",
+    "sci_name": "Epinephelus luscoguttatus",
+    "authorship": "Forsskål , 1775",
+    "page_number": 73
+  },
+  {
+    "id": "species-39",
+    "index_text": "Loài 39 · Trang 74",
+    "vn_name": "Cá Mú phla-vô",
+    "sci_name": "Ecinephelus (lavo-caeruleus",
+    "authorship": "Lacépède, 1802",
+    "page_number": 74
+  },
+  {
+    "id": "species-40",
+    "index_text": "Loài 40 · Trang 75",
+    "vn_name": "Cá Miú kôle",
+    "sci_name": "Epinephelus kohleri",
+    "authorship": "Schultz , 1965",
+    "page_number": 75
+  },
+  {
+    "id": "species-41",
+    "index_text": "Loài 41 · Trang 76",
+    "vn_name": "Cá Song vây cao",
+    "sci_name": "Epinephelus maculatus",
+    "authorship": "Bloch, 1790",
+    "page_number": 76
+  },
+  {
+    "id": "species-42",
+    "index_text": "Loài 42 · Trang 77",
+    "vn_name": "Cá Mú dièm gal",
+    "sci_name": "Epinephelus malabaricus",
+    "authorship": "Bloch and Schneider, 1801",
+    "page_number": 77
+  },
+  {
+    "id": "species-43",
+    "index_text": "Loài 43 · Trang 79",
+    "vn_name": "Cá Mú chấm mê ga",
+    "sci_name": "Epinephelus megachir",
+    "authorship": "Richardson, 1846",
+    "page_number": 79
+  },
+  {
+    "id": "species-44",
+    "index_text": "Loài 44 · Trang 80",
+    "vn_name": "Cá Mú chấm to ong",
+    "sci_name": "Epinephelus merra",
+    "authorship": "Bloch, 1793",
+    "page_number": 80
+  },
+  {
+    "id": "species-45",
+    "index_text": "Loài 45 · Trang 81",
+    "vn_name": "Cá Mú dây",
+    "sci_name": "Epinephelus morrhua",
+    "authorship": "Cuvier and Valenciennes, 1833",
+    "page_number": 81
+  },
+  {
+    "id": "species-46",
+    "index_text": "Loài 46 · Trang 82",
+    "vn_name": "Cá Mú chấm nâu đen",
+    "sci_name": "Epinephelus nigropunctatus",
+    "authorship": "Fourmanoir, 1965",
+    "page_number": 82
+  },
+  {
+    "id": "species-47",
+    "index_text": "Loài 47 · Trang 82",
+    "vn_name": "Cá Mú chấm pun-ta",
+    "sci_name": "Epinephelus punctatus",
+    "authorship": "Fourmanoir, 1965",
+    "page_number": 82
+  },
+  {
+    "id": "species-48",
+    "index_text": "Loài 48 · Trang 83",
+    "vn_name": "Cá Mú sáu sọc ngang",
+    "sci_name": "Epinephelus rhyncholepis",
+    "authorship": "(Bleeker, 1852)",
+    "page_number": 83
+  },
+  {
+    "id": "species-49",
+    "index_text": "Loài 49 · Trang 83",
+    "vn_name": "Cá Mú sáu sọc",
+    "sci_name": "Epinephelus sexfasciatus",
+    "authorship": "(Cuvier and Valenciennes, 1828)",
+    "page_number": 83
+  },
+  {
+    "id": "species-50",
+    "index_text": "Loài 50 · Trang 84",
+    "vn_name": "Cá Mú mép đen",
+    "sci_name": "Epinephelus summana",
+    "authorship": "(Forsskål, 1775)",
+    "page_number": 84
+  },
+  {
+    "id": "species-51",
+    "index_text": "Loài 51 · Trang 85",
+    "vn_name": "Cá Mú ruồi",
+    "sci_name": "Epinephelus tauvina",
+    "authorship": "(Forsskål, 1775)",
+    "page_number": 85
+  },
+  {
+    "id": "species-52",
+    "index_text": "Loài 52 · Trang 86",
+    "vn_name": "Cá Song xan-tho",
+    "sci_name": "Epinephelus xanthopunctatus",
+    "authorship": "Fourmanoir, 1965",
+    "page_number": 86
+  },
+  {
+    "id": "species-53",
+    "index_text": "Loài 53 · Trang 87",
+    "vn_name": "Cá Mú Cỏ",
+    "sci_name": "Epinephelus nebulosus",
+    "authorship": "Cuvier and Valenciennes, 1828",
+    "page_number": 87
+  },
+  {
+    "id": "species-54",
+    "index_text": "Loài 54 · Trang 88",
+    "vn_name": "Cá Mú sọc dọc",
+    "sci_name": "Epinephelus latilasciatus",
+    "authorship": "",
+    "page_number": 88
+  },
+  {
+    "id": "species-55",
+    "index_text": "Loài 55 · Trang 89",
+    "vn_name": "Cá Mú sọc dọc",
+    "sci_name": "Epinephelus latifasciatus",
+    "authorship": "Temminck and Schlegel, 1842",
+    "page_number": 89
+  },
+  {
+    "id": "species-56",
+    "index_text": "Loài 56 · Trang 89",
+    "vn_name": "Cả Vuoc Nhật Lateolabrax Japonicus",
+    "sci_name": "Cuvier and",
+    "authorship": "Valenclennes; 1828",
+    "page_number": 89
+  },
+  {
+    "id": "species-57",
+    "index_text": "Loài 57 · Trang 90",
+    "vn_name": "Cá Mú mao qui",
+    "sci_name": "Centrogenys valgiensis",
+    "authorship": "Quoy and Gaimard , 1824",
+    "page_number": 90
+  },
+  {
+    "id": "species-58",
+    "index_text": "Loài 58 · Trang 91",
+    "vn_name": "Cả Mú sảu chi",
+    "sci_name": "Grammistes sexlineatus",
+    "authorship": "Thunberg, 1801",
+    "page_number": 91
+  },
+  {
+    "id": "species-59",
+    "index_text": "Loài 59 · Trang 93",
+    "vn_name": "Cá Mú vàng nghệ",
+    "sci_name": "Diploprion bifasciatum",
+    "authorship": "",
+    "page_number": 93
+  },
+  {
+    "id": "species-60",
+    "index_text": "Loài 60 · Trang 94",
+    "vn_name": "Cả Dạm bi den",
+    "sci_name": "Damnieria melanolaenia",
+    "authorship": "Bleeker; 1852",
+    "page_number": 94
+  },
+  {
+    "id": "species-61",
+    "index_text": "Loài 61 · Trang 95",
+    "vn_name": "Cá Dam bỉ nâu",
+    "sci_name": "Pseudochromis (uscus",
+    "authorship": "Muller and Troschel , 1849",
+    "page_number": 95
+  },
+  {
+    "id": "species-62",
+    "index_text": "Loài 62 · Trang 96",
+    "vn_name": "Cá Bạm bỉ dằu vàng",
+    "sci_name": "Pseudochromis tapeinosoma",
+    "authorship": "Bleeker; 1853",
+    "page_number": 96
+  },
+  {
+    "id": "species-63",
+    "index_text": "Loài 63 · Trang 97",
+    "vn_name": "Cá Bông chấm mang",
+    "sci_name": "Pleslops plgricans",
+    "authorship": "Ruppell, 1828",
+    "page_number": 97
+  },
+  {
+    "id": "species-64",
+    "index_text": "Loài 64 · Trang 98",
+    "vn_name": "Cá Đông Bleeker",
+    "sci_name": "Plesiops bleekeri",
+    "authorship": "Gunther, 1861",
+    "page_number": 98
+  },
+  {
+    "id": "species-65",
+    "index_text": "Loài 65 · Trang 98",
+    "vn_name": "Cá Dông bleeke",
+    "sci_name": "Paraplesiops bleekerl",
+    "authorship": "Gunther, 1861",
+    "page_number": 98
+  },
+  {
+    "id": "species-66",
+    "index_text": "Loài 66 · Trang 99",
+    "vn_name": "Cá Lá",
+    "sci_name": "Glaucosoma burgeri",
+    "authorship": "Richardson, 1844",
+    "page_number": 99
+  },
+  {
+    "id": "species-67",
+    "index_text": "Loài 67 · Trang 100",
+    "vn_name": "CáLi spc",
+    "sci_name": "Glaucosoma (auvelll",
+    "authorship": "Sauvage, 1881",
+    "page_number": 100
+  },
+  {
+    "id": "species-68",
+    "index_text": "Loài 68 · Trang 101",
+    "vn_name": "Cá Ban-jô",
+    "sci_name": "Banjos banjos",
+    "authorship": "Richardson, 1846",
+    "page_number": 101
+  },
+  {
+    "id": "species-69",
+    "index_text": "Loài 69 · Trang 102",
+    "vn_name": "Cá Căng vảy nhỏ",
+    "sci_name": "Therapon puta",
+    "authorship": "Cuvier and Valenciennes; 1829",
+    "page_number": 102
+  },
+  {
+    "id": "species-70",
+    "index_text": "Loài 70 · Trang 103",
+    "vn_name": "Cá Căng vẳy to mherapon theraps",
+    "sci_name": "Cuvler and",
+    "authorship": "Valenciennes;, 1829",
+    "page_number": 103
+  },
+  {
+    "id": "species-71",
+    "index_text": "Loài 71 · Trang 104",
+    "vn_name": "Cá Căng cát",
+    "sci_name": "Therapon jarbua",
+    "authorship": "Forsskål , 1775",
+    "page_number": 104
+  },
+  {
+    "id": "species-72",
+    "index_text": "Loài 72 · Trang 105",
+    "vn_name": "Cá Căng bac mnerapon argenteus",
+    "sci_name": "Cuvier and",
+    "authorship": "Valenciennes; 1829",
+    "page_number": 105
+  },
+  {
+    "id": "species-73",
+    "index_text": "Loài 73 · Trang 107",
+    "vn_name": "Cá Căng can-xen",
+    "sci_name": "Inerapon cancellatus",
+    "authorship": "Cuvier and Valenciennes, 1829",
+    "page_number": 107
+  },
+  {
+    "id": "species-74",
+    "index_text": "Loài 74 · Trang 108",
+    "vn_name": "Cá Căng mõm nhọn",
+    "sci_name": "Therapon oxyrhynchus",
+    "authorship": "Schlegel, 1846",
+    "page_number": 108
+  },
+  {
+    "id": "species-75",
+    "index_text": "Loài 75 · Trang 108",
+    "vn_name": "Cá Cẳng bón sọc",
+    "sci_name": "Pelates quadrilineatus",
+    "authorship": "Bloch , 1790",
+    "page_number": 108
+  },
+  {
+    "id": "species-76",
+    "index_text": "Loài 76 · Trang 110",
+    "vn_name": "Cá Cing b6n sọc",
+    "sci_name": "Pelates quairilineatus",
+    "authorship": "Bloch. 1790",
+    "page_number": 110
+  },
+  {
+    "id": "species-77",
+    "index_text": "Loài 77 · Trang 111",
+    "vn_name": "cá Cu-li duôl hoa",
+    "sci_name": "Kuhlia taeniura",
+    "authorship": "Cuvier and Valenciennes, 1828",
+    "page_number": 111
+  },
+  {
+    "id": "species-78",
+    "index_text": "Loài 78 · Trang 113",
+    "vn_name": "Cá Son thoc",
+    "sci_name": "Priacanthus tayenus",
+    "authorship": "Richardson , 1846",
+    "page_number": 113
+  },
+  {
+    "id": "species-79",
+    "index_text": "Loài 79 · Trang 114",
+    "vn_name": "Cá Trác vây đuôl chấm",
+    "sci_name": "Priacanthus cruentatus",
+    "authorship": "Lacépède, 1802",
+    "page_number": 114
+  },
+  {
+    "id": "species-80",
+    "index_text": "Loài 80 · Trang 114",
+    "vn_name": "Cá Trác vây đuôl chấm",
+    "sci_name": "Priacanthus cruentatus",
+    "authorship": "Lacépède, 1802",
+    "page_number": 114
+  },
+  {
+    "id": "species-81",
+    "index_text": "Loài 81 · Trang 115",
+    "vn_name": "Cá Trác vàng",
+    "sci_name": "Prlacanthus hamrur",
+    "authorship": "Forsskål, 1775",
+    "page_number": 115
+  },
+  {
+    "id": "species-82",
+    "index_text": "Loài 82 · Trang 116",
+    "vn_name": "Cá Trác Yanh",
+    "sci_name": "Priacanthus boops",
+    "authorship": "Bloch and Schneider, 1801",
+    "page_number": 116
+  },
+  {
+    "id": "species-83",
+    "index_text": "Loài 83 · Trang 117",
+    "vn_name": "Cá Irác thon",
+    "sci_name": "Parapracanthus unusinl",
+    "authorship": "Ogilby , 1889",
+    "page_number": 117
+  },
+  {
+    "id": "species-84",
+    "index_text": "Loài 84 · Trang 118",
+    "vn_name": "Cá Trác mắt I0",
+    "sci_name": "Pseudopriacanthus niphonius",
+    "authorship": "",
+    "page_number": 118
+  },
+  {
+    "id": "species-85",
+    "index_text": "Loài 85 · Trang 119",
+    "vn_name": "Cá Son bón vằn dọc",
+    "sci_name": "Apogon doederleini",
+    "authorship": "Jordan and Snyder, 1901",
+    "page_number": 119
+  },
+  {
+    "id": "species-86",
+    "index_text": "Loài 86 · Trang 120",
+    "vn_name": "Cá Son dảl nau",
+    "sci_name": "Apogon Irenatus",
+    "authorship": "Valenciennes, 1832",
+    "page_number": 120
+  },
+  {
+    "id": "species-87",
+    "index_text": "Loài 87 · Trang 121",
+    "vn_name": "Cá Son bã trau",
+    "sci_name": "Apogon quadrilasclatus",
+    "authorship": "Cuvler and Valenclennes, 1828",
+    "page_number": 121
+  },
+  {
+    "id": "species-88",
+    "index_text": "Loài 88 · Trang 122",
+    "vn_name": "Cá Sơn ki",
+    "sci_name": "Apogon klensls",
+    "authorship": "Jordan and Snyder; 1901",
+    "page_number": 122
+  },
+  {
+    "id": "species-89",
+    "index_text": "Loài 89 · Trang 123",
+    "vn_name": "Cá Son chấm sọc",
+    "sci_name": "Apogon novemlasciatus",
+    "authorship": "Cuvier and Valenciennes; 1828",
+    "page_number": 123
+  },
+  {
+    "id": "species-90",
+    "index_text": "Loài 90 · Trang 123",
+    "vn_name": "Cá Son chấm sọc",
+    "sci_name": "Apogon novemlasciatus",
+    "authorship": "Cuvier and Valenciennes; 1828",
+    "page_number": 123
+  },
+  {
+    "id": "species-91",
+    "index_text": "Loài 91 · Trang 124",
+    "vn_name": "Cá Son dep",
+    "sci_name": "Apogon compressus",
+    "authorship": "Smith and Radclitle, 1911",
+    "page_number": 124
+  },
+  {
+    "id": "species-92",
+    "index_text": "Loài 92 · Trang 125",
+    "vn_name": "Cả Son mudi môt sọc",
+    "sci_name": "Apogon endekalaenia",
+    "authorship": "Bleeker , 1852",
+    "page_number": 125
+  },
+  {
+    "id": "species-93",
+    "index_text": "Loài 93 · Trang 126",
+    "vn_name": "Cá Son mập",
+    "sci_name": "Apogon robustus",
+    "authorship": "Smith and Radcliffei , 1911",
+    "page_number": 126
+  },
+  {
+    "id": "species-94",
+    "index_text": "Loài 94 · Trang 126",
+    "vn_name": "Cá Sơn bảy tia lung",
+    "sci_name": "Apogon septemstriatus",
+    "authorship": "Gunther, 1880",
+    "page_number": 126
+  },
+  {
+    "id": "species-95",
+    "index_text": "Loài 95 · Trang 127",
+    "vn_name": "Cá Son vằn ngang",
+    "sci_name": "Apogon taeniatus",
+    "authorship": "Cuvier and Valenciennes; 1828",
+    "page_number": 127
+  },
+  {
+    "id": "species-96",
+    "index_text": "Loài 96 · Trang 128",
+    "vn_name": "Cá Son den",
+    "sci_name": "Apogon melas",
+    "authorship": "Bleeker, 1848",
+    "page_number": 128
+  },
+  {
+    "id": "species-97",
+    "index_text": "Loài 97 · Trang 129",
+    "vn_name": "Cá Son hac-dò-phen",
+    "sci_name": "Apogon hartzíeldi",
+    "authorship": "Bleeker, 1852",
+    "page_number": 129
+  },
+  {
+    "id": "species-98",
+    "index_text": "Loài 98 · Trang 130",
+    "vn_name": "Cá trong su6t",
+    "sci_name": "Apogon hyalosoma",
+    "authorship": "Bleeker. 1857",
+    "page_number": 130
+  },
+  {
+    "id": "species-99",
+    "index_text": "Loài 99 · Trang 130",
+    "vn_name": "Cả Son nhièu sọc",
+    "sci_name": "Apogon chrysotaenia",
+    "authorship": "Bleeker, 1851",
+    "page_number": 130
+  },
+  {
+    "id": "species-100",
+    "index_text": "Loài 100 · Trang 131",
+    "vn_name": "Cá Son nâu",
+    "sci_name": "Avogon cyanosoma",
+    "authorship": "Bleeker, 1853",
+    "page_number": 131
+  },
+  {
+    "id": "species-101",
+    "index_text": "Loài 101 · Trang 132",
+    "vn_name": "Cá Son ba vach",
+    "sci_name": "Apogon bandanensis",
+    "authorship": "Bleeker, 1854",
+    "page_number": 132
+  },
+  {
+    "id": "species-102",
+    "index_text": "Loài 102 · Trang 133",
+    "vn_name": "Cá Son vòng",
+    "sci_name": "Apogon aureus",
+    "authorship": "Lacépède; 1803",
+    "page_number": 133
+  },
+  {
+    "id": "species-103",
+    "index_text": "Loài 103 · Trang 134",
+    "vn_name": "Cá Son vảy den",
+    "sci_name": "Apogon nigripinnis",
+    "authorship": "Cuvier and Valenciennes, 1828",
+    "page_number": 134
+  },
+  {
+    "id": "species-104",
+    "index_text": "Loài 104 · Trang 135",
+    "vn_name": "Cả Son nhiều chấm",
+    "sci_name": "Apogon moluccensis",
+    "authorship": "Valenciennes; 1832",
+    "page_number": 135
+  },
+  {
+    "id": "species-105",
+    "index_text": "Loài 105 · Trang 136",
+    "vn_name": "Cả Son chấm den",
+    "sci_name": "Apogon orbicularis",
+    "authorship": "Cuvier and Valenciennes, 1828",
+    "page_number": 136
+  },
+  {
+    "id": "species-106",
+    "index_text": "Loài 106 · Trang 137",
+    "vn_name": "Cá Son cuóng đuôi dài",
+    "sci_name": "Apogon diencaeus",
+    "authorship": "Smith and Radcliffe, 1912",
+    "page_number": 137
+  },
+  {
+    "id": "species-107",
+    "index_text": "Loài 107 · Trang 137",
+    "vn_name": "Cá Son cuóng đuôi dài",
+    "sci_name": "Apogon diencaeus",
+    "authorship": "Smith and Radcliffe, 1912",
+    "page_number": 137
+  },
+  {
+    "id": "species-108",
+    "index_text": "Loài 108 · Trang 138",
+    "vn_name": "Cá Sơn bắp đuôi chấm",
+    "sci_name": "Apogon amboinensis",
+    "authorship": "Bleeker, 1853",
+    "page_number": 138
+  },
+  {
+    "id": "species-109",
+    "index_text": "Loài 109 · Trang 139",
+    "vn_name": "Cá Sơn trong suốt",
+    "sci_name": "Apogon hyalosoma",
+    "authorship": "Bleeker, 1857",
+    "page_number": 139
+  },
+  {
+    "id": "species-110",
+    "index_text": "Loài 110 · Trang 139",
+    "vn_name": "Cá Sơn vòng bụng đen",
+    "sci_name": "Apogon zosterophora",
+    "authorship": "(Bleeker, 1856)",
+    "page_number": 139
+  },
+  {
+    "id": "species-111",
+    "index_text": "Loài 111 · Trang 140",
+    "vn_name": "Cá Sơn hung",
+    "sci_name": "Apogon hung",
+    "authorship": "Fourmanoir, 1965",
+    "page_number": 140
+  },
+  {
+    "id": "species-112",
+    "index_text": "Loài 112 · Trang 141",
+    "vn_name": "Cá Son vẩy rông",
+    "sci_name": "Apogonichthys striatus",
+    "authorship": "Smith and Radclille, 1912",
+    "page_number": 141
+  },
+  {
+    "id": "species-113",
+    "index_text": "Loài 113 · Trang 142",
+    "vn_name": "Cá Sơn Elliot",
+    "sci_name": "Apogonichthys ellioti",
+    "authorship": "Day, 1875",
+    "page_number": 142
+  },
+  {
+    "id": "species-114",
+    "index_text": "Loài 114 · Trang 143",
+    "vn_name": "Cá Sdn nắp mang trắng",
+    "sci_name": "Apogonichthys auritus",
+    "authorship": "",
+    "page_number": 143
+  },
+  {
+    "id": "species-115",
+    "index_text": "Loài 115 · Trang 144",
+    "vn_name": "Cá",
+    "sci_name": "Son hai",
+    "authorship": "",
+    "page_number": 144
+  },
+  {
+    "id": "species-116",
+    "index_text": "Loài 116 · Trang 145",
+    "vn_name": "Cá Son vảy Iung chấm",
+    "sci_name": "Apogonichthys carinatus",
+    "authorship": "",
+    "page_number": 145
+  },
+  {
+    "id": "species-117",
+    "index_text": "Loài 117 · Trang 146",
+    "vn_name": "Cá Son sọc đỏ",
+    "sci_name": "Archamia Iineolata",
+    "authorship": "Cuvler and Valenclennes; 1828",
+    "page_number": 146
+  },
+  {
+    "id": "species-118",
+    "index_text": "Loài 118 · Trang 147",
+    "vn_name": "Cá",
+    "sci_name": "Son tu-bl",
+    "authorship": "Slphamla tubller Weber; 1909",
+    "page_number": 147
+  },
+  {
+    "id": "species-119",
+    "index_text": "Loài 119 · Trang 148",
+    "vn_name": "Cá Sơn thon",
+    "sci_name": "Rhabdamia gracilis",
+    "authorship": "(Bleeker, 1856)",
+    "page_number": 148
+  },
+  {
+    "id": "species-120",
+    "index_text": "Loài 120 · Trang 149",
+    "vn_name": "Cá Sơn Sing-ga-po",
+    "sci_name": "Cheilodipterus singapurensis",
+    "authorship": "Bleeker, 1859",
+    "page_number": 149
+  },
+  {
+    "id": "species-121",
+    "index_text": "Loài 121 · Trang 150",
+    "vn_name": "Cá Sơn răng nhỏ",
+    "sci_name": "Cheilodipterus quinquelineatus",
+    "authorship": "Cuvier and Valenciennes, 1859",
+    "page_number": 150
+  },
+  {
+    "id": "species-122",
+    "index_text": "Loài 122 · Trang 151",
+    "vn_name": "Cá Sơn răng to",
+    "sci_name": "Cheilodipterus macrodon",
+    "authorship": "(Lacépède, 1802)",
+    "page_number": 151
+  },
+  {
+    "id": "species-123",
+    "index_text": "Loài 123 · Trang 152",
+    "vn_name": "Cá Sơn Nhật Bản",
+    "sci_name": "Synagrops japonicus",
+    "authorship": "(Steindachner and Doderlein, 1884)",
+    "page_number": 152
+  },
+  {
+    "id": "species-124",
+    "index_text": "Loài 124 · Trang 153",
+    "vn_name": "Cá Sơn phát sáng Nhật Bản",
+    "sci_name": "Acropoma japonicum",
+    "authorship": "Gunther, 1859",
+    "page_number": 153
+  },
+  {
+    "id": "species-125",
+    "index_text": "Loài 125 · Trang 154",
+    "vn_name": "Cá Đục chấm",
+    "sci_name": "Sillago maculata",
+    "authorship": "Quoy and Gaimard, 1824",
+    "page_number": 154
+  },
+  {
+    "id": "species-126",
+    "index_text": "Loài 126 · Trang 155",
+    "vn_name": "Cá Dục bac",
+    "sci_name": "Sillago slhama",
+    "authorship": "Forsskål , 1775",
+    "page_number": 155
+  },
+  {
+    "id": "species-127",
+    "index_text": "Loài 127 · Trang 156",
+    "vn_name": "Cá Dục sọc cam",
+    "sci_name": "Slllago boutan",
+    "authorship": "Pellegrin , 1905",
+    "page_number": 156
+  },
+  {
+    "id": "species-128",
+    "index_text": "Loài 128 · Trang 156",
+    "vn_name": "Cá Dục sọc cam",
+    "sci_name": "Slllago boutan",
+    "authorship": "Pellegrin , 1905",
+    "page_number": 156
+  },
+  {
+    "id": "species-129",
+    "index_text": "Loài 129 · Trang 157",
+    "vn_name": "Cá Dầu vuông",
+    "sci_name": "Branchiostegus Japonicus",
+    "authorship": "Houttuyn, 1782",
+    "page_number": 157
+  },
+  {
+    "id": "species-130",
+    "index_text": "Loài 130 · Trang 158",
+    "vn_name": "Cá Đong fur-ma-noa",
+    "sci_name": "Hoplolatilus fourmanoid",
+    "authorship": "Smith , 1963",
+    "page_number": 158
+  },
+  {
+    "id": "species-131",
+    "index_text": "Loài 131 · Trang 163",
+    "vn_name": "Gunther, 1881.",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 163
+  },
+  {
+    "id": "species-132",
+    "index_text": "Loài 132 · Trang 159",
+    "vn_name": "Cá Dục glả",
+    "sci_name": "Malacanthus hoedti",
+    "authorship": "Bleeker, 1859",
+    "page_number": 159
+  },
+  {
+    "id": "species-133",
+    "index_text": "Loài 133 · Trang 160",
+    "vn_name": "Cá Vạng mỡ",
+    "sci_name": "Lactarius lactarius",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": 160
+  },
+  {
+    "id": "species-134",
+    "index_text": "Loài 134 · Trang 161",
+    "vn_name": "Cá Bóp",
+    "sci_name": "Rachycentron Kaup",
+    "authorship": "1826",
+    "page_number": 161
+  },
+  {
+    "id": "species-135",
+    "index_text": "Loài 135 · Trang 163",
+    "vn_name": "Cá Cam",
+    "sci_name": "Naucrates ductor",
+    "authorship": "Linnaeus; 1758",
+    "page_number": 163
+  },
+  {
+    "id": "species-136",
+    "index_text": "Loài 136 · Trang 165",
+    "vn_name": "Cá Cam thol",
+    "sci_name": "Elagatis bipinnulata",
+    "authorship": "Quoy and Gaimard , 1824",
+    "page_number": 165
+  },
+  {
+    "id": "species-137",
+    "index_text": "Loài 137 · Trang 167",
+    "vn_name": "Cá Cam sọc",
+    "sci_name": "Seriola dumerill",
+    "authorship": "Risso, 1810",
+    "page_number": 167
+  },
+  {
+    "id": "species-138",
+    "index_text": "Loài 138 · Trang 168",
+    "vn_name": "Cá Cam ván",
+    "sci_name": "Seriolina nigrolasclata",
+    "authorship": "Ruppell , 1829",
+    "page_number": 168
+  },
+  {
+    "id": "species-139",
+    "index_text": "Loài 139 · Trang 170",
+    "vn_name": "Cá Bè YUóc",
+    "sci_name": "Scomberoldes commersonlanus",
+    "authorship": "Lacépède, 1802",
+    "page_number": 170
+  },
+  {
+    "id": "species-140",
+    "index_text": "Loài 140 · Trang 171",
+    "vn_name": "Cá Bè",
+    "sci_name": "Scomberoldes lysan",
+    "authorship": "Forsskål, 1775",
+    "page_number": 171
+  },
+  {
+    "id": "species-141",
+    "index_text": "Loài 141 · Trang 172",
+    "vn_name": "Cá Bè tôn",
+    "sci_name": "Scomberoldes tol",
+    "authorship": "Cuvier, 1832",
+    "page_number": 172
+  },
+  {
+    "id": "species-142",
+    "index_text": "Loài 142 · Trang 173",
+    "vn_name": "Cá Bè Hảl Nam",
+    "sci_name": "Scomberoldes halnanensls",
+    "authorship": "Chu",
+    "page_number": 173
+  },
+  {
+    "id": "species-143",
+    "index_text": "Loài 143 · Trang 173",
+    "vn_name": "Cá Bè phuong Dong",
+    "sci_name": "Scomberoides orientalis",
+    "authorship": "",
+    "page_number": 173
+  },
+  {
+    "id": "species-144",
+    "index_text": "Loài 144 · Trang 174",
+    "vn_name": "Cá Bè tô lô",
+    "sci_name": "Scomberoides (olooparah",
+    "authorship": "Ruppell , 1828",
+    "page_number": 174
+  },
+  {
+    "id": "species-145",
+    "index_text": "Loài 145 · Trang 175",
+    "vn_name": "Cả Bẻ la la",
+    "sci_name": "Scomberoldes tala",
+    "authorship": "Cuvier and Valenciennes, 1831",
+    "page_number": 175
+  },
+  {
+    "id": "species-146",
+    "index_text": "Loài 146 · Trang 176",
+    "vn_name": "Cá Bè xuóc Dàl Loan",
+    "sci_name": "Scomberoides lormosanus",
+    "authorship": "Wakiya, 1824",
+    "page_number": 176
+  },
+  {
+    "id": "species-147",
+    "index_text": "Loài 147 · Trang 177",
+    "vn_name": "Dữ liệu đang quét",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 177
+  },
+  {
+    "id": "species-148",
+    "index_text": "Loài 148 · Trang 178",
+    "vn_name": "Cá Sòng chấm",
+    "sci_name": "Trachinotus balllon",
+    "authorship": "Lacépède, 1801",
+    "page_number": 178
+  },
+  {
+    "id": "species-149",
+    "index_text": "Loài 149 · Trang 179",
+    "vn_name": "Cá Sòng mũi hếch",
+    "sci_name": "Trachinotus blochii",
+    "authorship": "Lacépède, 1801",
+    "page_number": 179
+  },
+  {
+    "id": "species-150",
+    "index_text": "Loài 150 · Trang 181",
+    "vn_name": "Cá Sòng Nhật Bản",
+    "sci_name": "Trachurus laponicus",
+    "authorship": "",
+    "page_number": 181
+  },
+  {
+    "id": "species-151",
+    "index_text": "Loài 151 · Trang 182",
+    "vn_name": "Cá Nục sò",
+    "sci_name": "Decapterus maruadsl",
+    "authorship": "Temminck and Schlegel , 1844",
+    "page_number": 182
+  },
+  {
+    "id": "species-152",
+    "index_text": "Loài 152 · Trang 183",
+    "vn_name": "Cá Nục thuôn",
+    "sci_name": "Decapterus macrosoma",
+    "authorship": "Bleeker, 1851",
+    "page_number": 183
+  },
+  {
+    "id": "species-153",
+    "index_text": "Loài 153 · Trang 184",
+    "vn_name": "Cá Nục dao",
+    "sci_name": "Decapterus kurroides",
+    "authorship": "Bleeker, 1855",
+    "page_number": 184
+  },
+  {
+    "id": "species-154",
+    "index_text": "Loài 154 · Trang 185",
+    "vn_name": "Cá Tráo mẳt to",
+    "sci_name": "Selar crumenophthalmus",
+    "authorship": "Bloch, 1793",
+    "page_number": 185
+  },
+  {
+    "id": "species-155",
+    "index_text": "Loài 155 · Trang 186",
+    "vn_name": "Cá Tráo bỏ óp",
+    "sci_name": "Selar boops",
+    "authorship": "Valenciennes; 1833",
+    "page_number": 186
+  },
+  {
+    "id": "species-156",
+    "index_text": "Loài 156 · Trang 187",
+    "vn_name": "Cá Tráo",
+    "sci_name": "Alule mate",
+    "authorship": "Cuvier and Valenciennes, 1833",
+    "page_number": 187
+  },
+  {
+    "id": "species-157",
+    "index_text": "Loài 157 · Trang 189",
+    "vn_name": "Cá Tráo vảy lung den",
+    "sci_name": "Alule malam",
+    "authorship": "Bleeker, 1851",
+    "page_number": 189
+  },
+  {
+    "id": "species-158",
+    "index_text": "Loài 158 · Trang 190",
+    "vn_name": "Cá Khẻ duôl tròn",
+    "sci_name": "Atule pectoralls",
+    "authorship": "Chu and Cheng, 1958",
+    "page_number": 190
+  },
+  {
+    "id": "species-159",
+    "index_text": "Loài 159 · Trang 191",
+    "vn_name": "Cá Chi vàng",
+    "sci_name": "Selaroides leptolepis",
+    "authorship": "Cuvler and Valenclennes, 1851",
+    "page_number": 191
+  },
+  {
+    "id": "species-160",
+    "index_text": "Loài 160 · Trang 192",
+    "vn_name": "Cá Dóc",
+    "sci_name": "Alepes djeddaba",
+    "authorship": "Forsskål , 1775",
+    "page_number": 192
+  },
+  {
+    "id": "species-161",
+    "index_text": "Loài 161 · Trang 193",
+    "vn_name": "Cá Ngán",
+    "sci_name": "Alepes kalla",
+    "authorship": "Cuvier and Valenciennes; 1833",
+    "page_number": 193
+  },
+  {
+    "id": "species-162",
+    "index_text": "Loài 162 · Trang 195",
+    "vn_name": "Cá Dóc ma-ru",
+    "sci_name": "Alepes macrurs",
+    "authorship": "Bleeker; 1851",
+    "page_number": 195
+  },
+  {
+    "id": "species-163",
+    "index_text": "Loài 163 · Trang 196",
+    "vn_name": "Cá Sòng pló",
+    "sci_name": "Megalaspis cordyla",
+    "authorship": "Linnaeus, 1758",
+    "page_number": 196
+  },
+  {
+    "id": "species-164",
+    "index_text": "Loài 164 · Trang 197",
+    "vn_name": "Cá Hiếu miệng đen",
+    "sci_name": "Uraspis helvola",
+    "authorship": "Forster, 1801",
+    "page_number": 197
+  },
+  {
+    "id": "species-165",
+    "index_text": "Loài 165 · Trang 199",
+    "vn_name": "Cá Hléu vẵy bụng den",
+    "sci_name": "Uraspis micropterus",
+    "authorship": "Wakiya, 1924",
+    "page_number": 199
+  },
+  {
+    "id": "species-166",
+    "index_text": "Loài 166 · Trang 201",
+    "vn_name": "Cá Khé vây den mê lam",
+    "sci_name": "Caranx melampygus",
+    "authorship": "",
+    "page_number": 201
+  },
+  {
+    "id": "species-167",
+    "index_text": "Loài 167 · Trang 201",
+    "vn_name": "Cá Khé vây den mê lam",
+    "sci_name": "Caranx melampygus",
+    "authorship": "",
+    "page_number": 201
+  },
+  {
+    "id": "species-168",
+    "index_text": "Loài 168 · Trang 202",
+    "vn_name": "Cá Khể váy vàng",
+    "sci_name": "Caranx Ignobllls",
+    "authorship": "Forsskål, 1775",
+    "page_number": 202
+  },
+  {
+    "id": "species-169",
+    "index_text": "Loài 169 · Trang 204",
+    "vn_name": "Cá Khế",
+    "sci_name": "Carangoides Bleeker",
+    "authorship": "1851",
+    "page_number": 204
+  },
+  {
+    "id": "species-170",
+    "index_text": "Loài 170 · Trang 205",
+    "vn_name": "Cá Khẻ mala",
+    "sci_name": "Carangoides malabaricus",
+    "authorship": "Bloch and Schneider , 1801",
+    "page_number": 205
+  },
+  {
+    "id": "species-171",
+    "index_text": "Loài 171 · Trang 207",
+    "vn_name": "Cá Khẻ vây dài",
+    "sci_name": "Carangoides armatus",
+    "authorship": "Ruppell , 1830",
+    "page_number": 207
+  },
+  {
+    "id": "species-172",
+    "index_text": "Loài 172 · Trang 209",
+    "vn_name": "Cá Khế mõm dài",
+    "sci_name": "Carangoldes chrysophrys",
+    "authorship": "Cuvier, 1833",
+    "page_number": 209
+  },
+  {
+    "id": "species-173",
+    "index_text": "Loài 173 · Trang 210",
+    "vn_name": "Cá Khẻ",
+    "sci_name": "Carangoldes caeruleopinnatus",
+    "authorship": "Ruppell , 1830",
+    "page_number": 210
+  },
+  {
+    "id": "species-174",
+    "index_text": "Loài 174 · Trang 211",
+    "vn_name": "Cá Khể vảy den",
+    "sci_name": "Carangoldes praeustus",
+    "authorship": "Bennett , 1830",
+    "page_number": 211
+  },
+  {
+    "id": "species-175",
+    "index_text": "Loài 175 · Trang 212",
+    "vn_name": "Cá Háo minh cao",
+    "sci_name": "Kaiusarinus equula",
+    "authorship": "Temminck",
+    "page_number": 212
+  },
+  {
+    "id": "species-176",
+    "index_text": "Loài 176 · Trang 214",
+    "vn_name": "Cá Khế",
+    "sci_name": "Iugc mang",
+    "authorship": "dàl Ulua Jordan and Snyder; 1908",
+    "page_number": 214
+  },
+  {
+    "id": "species-177",
+    "index_text": "Loài 177 · Trang 214",
+    "vn_name": "Cá Khế",
+    "sci_name": "Iugc mang",
+    "authorship": "dàl Ulua Jordan and Snyder; 1908",
+    "page_number": 214
+  },
+  {
+    "id": "species-178",
+    "index_text": "Loài 178 · Trang 215",
+    "vn_name": "Cá Khẻ vản",
+    "sci_name": "Gnathanodon speciosus",
+    "authorship": "Forsskål , 1775",
+    "page_number": 215
+  },
+  {
+    "id": "species-179",
+    "index_text": "Loài 179 · Trang 216",
+    "vn_name": "Dữ liệu đang quét",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 216
+  },
+  {
+    "id": "species-180",
+    "index_text": "Loài 180 · Trang 217",
+    "vn_name": "Cá Ông lão mõm ngắn",
+    "sci_name": "Alectis ciliaris",
+    "authorship": "Bloch, 1788",
+    "page_number": 217
+  },
+  {
+    "id": "species-181",
+    "index_text": "Loài 181 · Trang 219",
+    "vn_name": "Dữ liệu đang quét",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 219
+  },
+  {
+    "id": "species-182",
+    "index_text": "Loài 182 · Trang 220",
+    "vn_name": "Cá Nuc heo",
+    "sci_name": "Coryphaena LInnaeus",
+    "authorship": "1758",
+    "page_number": 220
+  },
+  {
+    "id": "species-183",
+    "index_text": "Loài 183 · Trang 222",
+    "vn_name": "Cá Nục heo nhỏ",
+    "sci_name": "Coryphaena equisetis",
+    "authorship": "Linnaeus; 1758",
+    "page_number": 222
+  },
+  {
+    "id": "species-184",
+    "index_text": "Loài 184 · Trang 223",
+    "vn_name": "Q Cá",
+    "sci_name": "CHIM DEN",
+    "authorship": "FORMIONIDAE (Nguyn Hüu Pheng)",
+    "page_number": 223
+  },
+  {
+    "id": "species-185",
+    "index_text": "Loài 185 · Trang 225",
+    "vn_name": "Cá Đỏ môi",
+    "sci_name": "Dipterygonotus leucogrammicus",
+    "authorship": "Bleeker, 1849",
+    "page_number": 225
+  },
+  {
+    "id": "species-186",
+    "index_text": "Loài 186 · Trang 226",
+    "vn_name": "Cả Dò môi Gru-ven",
+    "sci_name": "Diplerygonotus gruveli",
+    "authorship": "Chabanand, 1924",
+    "page_number": 226
+  },
+  {
+    "id": "species-187",
+    "index_text": "Loài 187 · Trang 227",
+    "vn_name": "Cả Liệt bẻ",
+    "sci_name": "Leiognathus berbis",
+    "authorship": "Cuvier and Valenciennes, 1835",
+    "page_number": 227
+  },
+  {
+    "id": "species-188",
+    "index_text": "Loài 188 · Trang 228",
+    "vn_name": "Cá Llệt dúc-su",
+    "sci_name": "Lelognathus dussumleri",
+    "authorship": "",
+    "page_number": 228
+  },
+  {
+    "id": "species-189",
+    "index_text": "Loài 189 · Trang 228",
+    "vn_name": "Cá Liệt xanh",
+    "sci_name": "Leiognathus splendens",
+    "authorship": "Cuvier, 1829",
+    "page_number": 228
+  },
+  {
+    "id": "species-190",
+    "index_text": "Loài 190 · Trang 230",
+    "vn_name": "Cá Liệt trắng",
+    "sci_name": "Leiognathus leuciscus",
+    "authorship": "Gunther, 1860",
+    "page_number": 230
+  },
+  {
+    "id": "species-191",
+    "index_text": "Loài 191 · Trang 230",
+    "vn_name": "Cá Liệt vẳn Iung",
+    "sci_name": "Leiognathus ruconius",
+    "authorship": "Hamilton, 1822",
+    "page_number": 230
+  },
+  {
+    "id": "species-192",
+    "index_text": "Loài 192 · Trang 231",
+    "vn_name": "Cá Liệt sọc",
+    "sci_name": "Leiognathus lineolatus",
+    "authorship": "",
+    "page_number": 231
+  },
+  {
+    "id": "species-193",
+    "index_text": "Loài 193 · Trang 232",
+    "vn_name": "Dữ liệu đang quét",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 232
+  },
+  {
+    "id": "species-194",
+    "index_text": "Loài 194 · Trang 233",
+    "vn_name": "Cá Liệt gal Iung dài",
+    "sci_name": "Leiognathus lasciatus",
+    "authorship": "Lacépède, 1803",
+    "page_number": 233
+  },
+  {
+    "id": "species-195",
+    "index_text": "Loài 195 · Trang 234",
+    "vn_name": "Cá Liệt Ión",
+    "sci_name": "Leiognathus equulus",
+    "authorship": "Forsskål , 1775",
+    "page_number": 234
+  },
+  {
+    "id": "species-196",
+    "index_text": "Loài 196 · Trang 235",
+    "vn_name": "Cá Liệt mõm ngắn",
+    "sci_name": "Leiognathus brevirostris",
+    "authorship": "",
+    "page_number": 235
+  },
+  {
+    "id": "species-197",
+    "index_text": "Loài 197 · Trang 236",
+    "vn_name": "Cá Liệt sọc vàng",
+    "sci_name": "Leiogi athus",
+    "authorship": "daura (Cuvier, 1829",
+    "page_number": 236
+  },
+  {
+    "id": "species-198",
+    "index_text": "Loài 198 · Trang 237",
+    "vn_name": "Cá Liệt váy hong",
+    "sci_name": "Leiognathus bindus",
+    "authorship": "",
+    "page_number": 237
+  },
+  {
+    "id": "species-199",
+    "index_text": "Loài 199 · Trang 238",
+    "vn_name": "Cá Liệt dài",
+    "sci_name": "Leiognathus elongatus",
+    "authorship": "Gunther, 1874",
+    "page_number": 238
+  },
+  {
+    "id": "species-200",
+    "index_text": "Loài 200 · Trang 238",
+    "vn_name": "Cá Liệt s0-mit",
+    "sci_name": "Leiognathus smithursti",
+    "authorship": "Ramsay and Ogilby , 1886",
+    "page_number": 238
+  },
+  {
+    "id": "species-201",
+    "index_text": "Loài 201 · Trang 239",
+    "vn_name": "Cá Ngãng",
+    "sci_name": "Gazza minuta",
+    "authorship": "Bloch, 1797",
+    "page_number": 239
+  },
+  {
+    "id": "species-202",
+    "index_text": "Loài 202 · Trang 241",
+    "vn_name": "Cá Hong",
+    "sci_name": "Lutlanus erythropterus",
+    "authorship": "Bloch, 1790",
+    "page_number": 241
+  },
+  {
+    "id": "species-203",
+    "index_text": "Loài 203 · Trang 242",
+    "vn_name": "Cá Hong đỏ thắm",
+    "sci_name": "Lutianus rufolineatus",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 242
+  },
+  {
+    "id": "species-204",
+    "index_text": "Loài 204 · Trang 243",
+    "vn_name": "Cá Hồng bac",
+    "sci_name": "Lutlanus argentimaculatus",
+    "authorship": "Forsskål , 1775",
+    "page_number": 243
+  },
+  {
+    "id": "species-205",
+    "index_text": "Loài 205 · Trang 244",
+    "vn_name": "Cá Hòng sọc hal chấm",
+    "sci_name": "Lutlanus bigutiatus",
+    "authorship": "",
+    "page_number": 244
+  },
+  {
+    "id": "species-206",
+    "index_text": "Loài 206 · Trang 245",
+    "vn_name": "Cá Hỏng hai chấm",
+    "sci_name": "Lutianus bobar",
+    "authorship": "Forsskål , 1801",
+    "page_number": 245
+  },
+  {
+    "id": "species-207",
+    "index_text": "Loài 207 · Trang 246",
+    "vn_name": "Cá Hỏng tám sọc vàng",
+    "sci_name": "Lutlanus chrysotaenla",
+    "authorship": "Bleeker, 1851",
+    "page_number": 246
+  },
+  {
+    "id": "species-208",
+    "index_text": "Loài 208 · Trang 247",
+    "vn_name": "Cá Hỏng ánh vàng",
+    "sci_name": "Lutianus tulvitlamma",
+    "authorship": "Forsskål, 1775",
+    "page_number": 247
+  },
+  {
+    "id": "species-209",
+    "index_text": "Loài 209 · Trang 248",
+    "vn_name": "Cá H6ng vang sec mô Lutianusdineolatw (Ruppell, 1828). Cá H6ng ma-la",
+    "sci_name": "Lutianus malabaricus",
+    "authorship": "Bloch and Schneider. 1801",
+    "page_number": 248
+  },
+  {
+    "id": "species-210",
+    "index_text": "Loài 210 · Trang 248",
+    "vn_name": "cá Hong phucus",
+    "sci_name": "Lutianus luscescens",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 248
+  },
+  {
+    "id": "species-211",
+    "index_text": "Loài 211 · Trang 249",
+    "vn_name": "Cá Hồng bung cong",
+    "sci_name": "Lutlenus glbbus",
+    "authorship": "Forsskål , 1775",
+    "page_number": 249
+  },
+  {
+    "id": "species-212",
+    "index_text": "Loài 212 · Trang 250",
+    "vn_name": "Cá H6ng lang",
+    "sci_name": "Lutiangs sebae",
+    "authorship": "Cuvier and Valenciennes. 1828",
+    "page_number": 250
+  },
+  {
+    "id": "species-213",
+    "index_text": "Loài 213 · Trang 251",
+    "vn_name": "Cá H6ng nim sọc",
+    "sci_name": "Lutiæuo spilurus",
+    "authorship": "(Bennett. 1832).",
+    "page_number": 251
+  },
+  {
+    "id": "species-214",
+    "index_text": "Loài 214 · Trang 253",
+    "vn_name": "Cá Hong bổn sọc",
+    "sci_name": "Lutlanus kasmlra",
+    "authorship": "Forsskål, 1775",
+    "page_number": 253
+  },
+  {
+    "id": "species-215",
+    "index_text": "Loài 215 · Trang 254",
+    "vn_name": "Dữ liệu đang quét",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 254
+  },
+  {
+    "id": "species-216",
+    "index_text": "Loài 216 · Trang 255",
+    "vn_name": "Cá Hồng ma-la",
+    "sci_name": "Lutianus malabaricus",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": 255
+  },
+  {
+    "id": "species-217",
+    "index_text": "Loài 217 · Trang 256",
+    "vn_name": "Cá Hồng một đốm",
+    "sci_name": "Lutianus monostigma",
+    "authorship": "(Cuvier and Valenciennes, 1828)",
+    "page_number": 256
+  },
+  {
+    "id": "species-218",
+    "index_text": "Loài 218 · Trang 257",
+    "vn_name": "Cá Hồng róc",
+    "sci_name": "Lutianus nematophorus",
+    "authorship": "(Bleeker, 1860)",
+    "page_number": 257
+  },
+  {
+    "id": "species-219",
+    "index_text": "Loài 219 · Trang 258",
+    "vn_name": "Cá Hồng chấm xanh",
+    "sci_name": "Lutianus rivulatus",
+    "authorship": "(Cuvier and Valenciennes, 1828)",
+    "page_number": 258
+  },
+  {
+    "id": "species-220",
+    "index_text": "Loài 220 · Trang 259",
+    "vn_name": "Cá Hồng chấm đen",
+    "sci_name": "Lutianus russelli",
+    "authorship": "(Bleeker, 1849)",
+    "page_number": 259
+  },
+  {
+    "id": "species-221",
+    "index_text": "Loài 221 · Trang 260",
+    "vn_name": "Cá Hồng lang",
+    "sci_name": "Lutianus sebae",
+    "authorship": "(Cuvier and Valenciennes, 1828)",
+    "page_number": 260
+  },
+  {
+    "id": "species-222",
+    "index_text": "Loài 222 · Trang 261",
+    "vn_name": "Cá Hồng năm sọc",
+    "sci_name": "Lutianus spilurus",
+    "authorship": "(Bennett, 1832)",
+    "page_number": 261
+  },
+  {
+    "id": "species-223",
+    "index_text": "Loài 223 · Trang 262",
+    "vn_name": "Cá Hồng trơn",
+    "sci_name": "Lutianus vaigiensis",
+    "authorship": "(Quoy and Gaimard, 1824)",
+    "page_number": 262
+  },
+  {
+    "id": "species-224",
+    "index_text": "Loài 224 · Trang 263",
+    "vn_name": "Cá Hong dải den",
+    "sci_name": "Lutianus vitta",
+    "authorship": "",
+    "page_number": 263
+  },
+  {
+    "id": "species-225",
+    "index_text": "Loài 225 · Trang 264",
+    "vn_name": "Cá Hỏng trùng Lutlanus",
+    "sci_name": "lutjanus Bloch",
+    "authorship": "1790",
+    "page_number": 264
+  },
+  {
+    "id": "species-226",
+    "index_text": "Loài 226 · Trang 265",
+    "vn_name": "Cá Hỏng chấm bac",
+    "sci_name": "Lutianus ehrenbergl",
+    "authorship": "Peters; 1869",
+    "page_number": 265
+  },
+  {
+    "id": "species-227",
+    "index_text": "Loài 227 · Trang 266",
+    "vn_name": "Cá Hong sọc anh",
+    "sci_name": "Lutianus lemnlscatus",
+    "authorship": "",
+    "page_number": 266
+  },
+  {
+    "id": "species-228",
+    "index_text": "Loài 228 · Trang 267",
+    "vn_name": "Cá Hong den trắng",
+    "sci_name": "Macolor niger",
+    "authorship": "Forsskål, 1775",
+    "page_number": 267
+  },
+  {
+    "id": "species-229",
+    "index_text": "Loài 229 · Trang 268",
+    "vn_name": "Cá Tía vảy s0i",
+    "sci_name": "Pristipomoides (llamentosus",
+    "authorship": "",
+    "page_number": 268
+  },
+  {
+    "id": "species-230",
+    "index_text": "Loài 230 · Trang 269",
+    "vn_name": "Cá Tia rẳng nhọn",
+    "sci_name": "Pristipomoldes typus",
+    "authorship": "Bleeker, 1852",
+    "page_number": 269
+  },
+  {
+    "id": "species-231",
+    "index_text": "Loài 231 · Trang 270",
+    "vn_name": "Cá",
+    "sci_name": "Tia mlcrodo",
+    "authorship": "Pristipomoldes microdon",
+    "page_number": 270
+  },
+  {
+    "id": "species-232",
+    "index_text": "Loài 232 · Trang 271",
+    "vn_name": "Cá Hồng ngoc",
+    "sci_name": "Etells carbunculus",
+    "authorship": "Cuvier and Valenciennes; 1828",
+    "page_number": 271
+  },
+  {
+    "id": "species-233",
+    "index_text": "Loài 233 · Trang 272",
+    "vn_name": "Cá Hỏng xiên",
+    "sci_name": "Pinjalo pinjalo",
+    "authorship": "Bleeker , 1845",
+    "page_number": 272
+  },
+  {
+    "id": "species-234",
+    "index_text": "Loài 234 · Trang 273",
+    "vn_name": "Cá Miẻn",
+    "sci_name": "Caesio chrysozona",
+    "authorship": "Cuvier",
+    "page_number": 273
+  },
+  {
+    "id": "species-235",
+    "index_text": "Loài 235 · Trang 274",
+    "vn_name": "Cả Mièn vàng Yanh",
+    "sci_name": "Caesio coerulaureus",
+    "authorship": "Lacépède, 1802",
+    "page_number": 274
+  },
+  {
+    "id": "species-236",
+    "index_text": "Loài 236 · Trang 275",
+    "vn_name": "Cá Miền đổl màu",
+    "sci_name": "Caesio dlagramma",
+    "authorship": "Bleeker , 1865",
+    "page_number": 275
+  },
+  {
+    "id": "species-237",
+    "index_text": "Loài 237 · Trang 276",
+    "vn_name": "Cá Miẻn duol vàng",
+    "sci_name": "Caeslo erythrogasler",
+    "authorship": "",
+    "page_number": 276
+  },
+  {
+    "id": "species-238",
+    "index_text": "Loài 238 · Trang 277",
+    "vn_name": "Cá Miền mặt trăng",
+    "sci_name": "Caesio lunaris",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 277
+  },
+  {
+    "id": "species-239",
+    "index_text": "Loài 239 · Trang 277",
+    "vn_name": "Cá Miền sọc vàng",
+    "sci_name": "Caesio pisang",
+    "authorship": "Bleeker, 1853",
+    "page_number": 277
+  },
+  {
+    "id": "species-240",
+    "index_text": "Loài 240 · Trang 278",
+    "vn_name": "Cá Miền tile",
+    "sci_name": "Caesio tile",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 278
+  },
+  {
+    "id": "species-241",
+    "index_text": "Loài 241 · Trang 279",
+    "vn_name": "Cá Mlèn Yanh",
+    "sci_name": "Aprion virescens",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 279
+  },
+  {
+    "id": "species-242",
+    "index_text": "Loài 242 · Trang 279",
+    "vn_name": "Cá Mlèn Yanh",
+    "sci_name": "Aprion virescens",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 279
+  },
+  {
+    "id": "species-243",
+    "index_text": "Loài 243 · Trang 280",
+    "vn_name": "Cá Mlền plm nô",
+    "sci_name": "Gymnocaeslo gymnopteruis",
+    "authorship": "Bleeker, 1856",
+    "page_number": 280
+  },
+  {
+    "id": "species-244",
+    "index_text": "Loài 244 · Trang 281",
+    "vn_name": "Cá MI rỏ",
+    "sci_name": "Mirolabrichthys tuka",
+    "authorship": "Herre, 1927",
+    "page_number": 281
+  },
+  {
+    "id": "species-245",
+    "index_text": "Loài 245 · Trang 282",
+    "vn_name": "Cá Róc chảm",
+    "sci_name": "Symphorus spilurs",
+    "authorship": "Gunther; 1873",
+    "page_number": 282
+  },
+  {
+    "id": "species-246",
+    "index_text": "Loài 246 · Trang 283",
+    "vn_name": "Cá Tráo trác hai sọc",
+    "sci_name": "Scolopsis bilineatus",
+    "authorship": "Bloch , 1793",
+    "page_number": 283
+  },
+  {
+    "id": "species-247",
+    "index_text": "Loài 247 · Trang 284",
+    "vn_name": "Cá Dai hal chấm",
+    "sci_name": "Scolopsis bimaculatus",
+    "authorship": "Ruppell , 1828",
+    "page_number": 284
+  },
+  {
+    "id": "species-248",
+    "index_text": "Loài 248 · Trang 285",
+    "vn_name": "Cá Tráo nâu",
+    "sci_name": "Scolopsis inermis",
+    "authorship": "Schlegel , 1842",
+    "page_number": 285
+  },
+  {
+    "id": "species-249",
+    "index_text": "Loài 249 · Trang 286",
+    "vn_name": "Cá Tráo ba sọc vàng",
+    "sci_name": "Scolopsis ghanam",
+    "authorship": "Forsskål, 1775",
+    "page_number": 286
+  },
+  {
+    "id": "species-250",
+    "index_text": "Loài 250 · Trang 286",
+    "vn_name": "Cá Tráo ba sọc vàng",
+    "sci_name": "Scolopsis ghanam",
+    "authorship": "Forsskål, 1775",
+    "page_number": 286
+  },
+  {
+    "id": "species-251",
+    "index_text": "Loài 251 · Trang 287",
+    "vn_name": "Cả Doi sọc nau",
+    "sci_name": "Scolopsis taeniopterus",
+    "authorship": "",
+    "page_number": 287
+  },
+  {
+    "id": "species-252",
+    "index_text": "Loài 252 · Trang 288",
+    "vn_name": "Cá Doi mono",
+    "sci_name": "Scolopsis monogramma",
+    "authorship": "",
+    "page_number": 288
+  },
+  {
+    "id": "species-253",
+    "index_text": "Loài 253 · Trang 289",
+    "vn_name": "Cá Trio diu Scolopsts temporalis (Cuvier and Valenciennes. 1830). I)di ba sec ltmg",
+    "sci_name": "Scolopsis trilineatus",
+    "authorship": "Kner. 1808",
+    "page_number": 289
+  },
+  {
+    "id": "species-254",
+    "index_text": "Loài 254 · Trang 290",
+    "vn_name": "Cá Tráo can xen",
+    "sci_name": "Scolopsis cancellatus",
+    "authorship": "",
+    "page_number": 290
+  },
+  {
+    "id": "species-255",
+    "index_text": "Loài 255 · Trang 291",
+    "vn_name": "Cá Tráo sôp",
+    "sci_name": "Scolopsis personatus",
+    "authorship": "Cuvier and Valenclennes, 1830",
+    "page_number": 291
+  },
+  {
+    "id": "species-256",
+    "index_text": "Loài 256 · Trang 291",
+    "vn_name": "Cá Tráo ngoc",
+    "sci_name": "Scolopsis margarltiler",
+    "authorship": "Cuvier and Valenclennes, 1830",
+    "page_number": 291
+  },
+  {
+    "id": "species-257",
+    "index_text": "Loài 257 · Trang 292",
+    "vn_name": "Cá Tráo sọc bạc",
+    "sci_name": "Scolopsis xenochrous",
+    "authorship": "Gunther, 1872",
+    "page_number": 292
+  },
+  {
+    "id": "species-258",
+    "index_text": "Loài 258 · Trang 293",
+    "vn_name": "Cá Tráo dảu Iòi",
+    "sci_name": "Scolopsis temporalis",
+    "authorship": "Cuvier",
+    "page_number": 293
+  },
+  {
+    "id": "species-259",
+    "index_text": "Loài 259 · Trang 294",
+    "vn_name": "Cá Dol ba sọc Iung",
+    "sci_name": "Scolopsis trilineatus",
+    "authorship": "Kner; 1808",
+    "page_number": 294
+  },
+  {
+    "id": "species-260",
+    "index_text": "Loài 260 · Trang 295",
+    "vn_name": "Cá Luong vẳn sỏng",
+    "sci_name": "Memipterus tolu",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 295
+  },
+  {
+    "id": "species-261",
+    "index_text": "Loài 261 · Trang 296",
+    "vn_name": "Dữ liệu đang quét",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 296
+  },
+  {
+    "id": "species-262",
+    "index_text": "Loài 262 · Trang 297",
+    "vn_name": "Cá Luong sảu răng",
+    "sci_name": "Nemipterus hexodon",
+    "authorship": "Quoy and Gaimard , 1824",
+    "page_number": 297
+  },
+  {
+    "id": "species-263",
+    "index_text": "Loài 263 · Trang 298",
+    "vn_name": "Cá Luong Nhật Bản",
+    "sci_name": "Nemipterus japonicus",
+    "authorship": "Bloch, 1791",
+    "page_number": 298
+  },
+  {
+    "id": "species-264",
+    "index_text": "Loài 264 · Trang 299",
+    "vn_name": "Cá Dong vẩy dao",
+    "sci_name": "Nemipterus nemurus",
+    "authorship": "Bleeker; 1857",
+    "page_number": 299
+  },
+  {
+    "id": "species-265",
+    "index_text": "Loài 265 · Trang 300",
+    "vn_name": "Cá Luong sâu",
+    "sci_name": "Memipterus bathybius",
+    "authorship": "Snyder, 1911",
+    "page_number": 300
+  },
+  {
+    "id": "species-266",
+    "index_text": "Loài 266 · Trang 301",
+    "vn_name": "Cá D6ng nam sọc Nemtpterus tambuloides (Bleeker. 1853). I-tnjng",
+    "sci_name": "Nemipterus ovenii",
+    "authorship": "Bleeker. 1854). Ci Ddng Nemtpterus upeneoides (Bleeker. 1852). cÅ KEN LOBOTIDAE (1M Thi Nhu Nhung. Nguyån IIRu Phgng",
+    "page_number": 301
+  },
+  {
+    "id": "species-267",
+    "index_text": "Loài 267 · Trang 302",
+    "vn_name": "Cá Dong hai dảy",
+    "sci_name": "Nemipterus nematophorus",
+    "authorship": "Bleeker, 1853",
+    "page_number": 302
+  },
+  {
+    "id": "species-268",
+    "index_text": "Loài 268 · Trang 302",
+    "vn_name": "Cá Đong hong",
+    "sci_name": "Nemipterus peronli",
+    "authorship": "Cuvier and Valenciennes; 1830",
+    "page_number": 302
+  },
+  {
+    "id": "species-269",
+    "index_text": "Loài 269 · Trang 303",
+    "vn_name": "Cá Đỏng nẳm sọc",
+    "sci_name": "Nemiplerus tambuloides",
+    "authorship": "Bleeker, 1853",
+    "page_number": 303
+  },
+  {
+    "id": "species-270",
+    "index_text": "Loài 270 · Trang 304",
+    "vn_name": "Cá",
+    "sci_name": "Luong doi",
+    "authorship": "Nemiplerus ovenii (Bleeker; 1854",
+    "page_number": 304
+  },
+  {
+    "id": "species-271",
+    "index_text": "Loài 271 · Trang 305",
+    "vn_name": "Cá Đong",
+    "sci_name": "Nemipterus upeneoides",
+    "authorship": "Bleeker; 1852",
+    "page_number": 305
+  },
+  {
+    "id": "species-272",
+    "index_text": "Loài 272 · Trang 306",
+    "vn_name": "Cá Kên nâu",
+    "sci_name": "Lobotes surinamensis",
+    "authorship": "Bloch, 1790",
+    "page_number": 306
+  },
+  {
+    "id": "species-273",
+    "index_text": "Loài 273 · Trang 307",
+    "vn_name": "Cá Kẽn bổn sọc",
+    "sci_name": "Datnloides quadrilasciatus",
+    "authorship": "Sevastianov , 1809",
+    "page_number": 307
+  },
+  {
+    "id": "species-274",
+    "index_text": "Loài 274 · Trang 308",
+    "vn_name": "Cá Kẽn vảy nhỏ",
+    "sci_name": "Datnioides microlepis",
+    "authorship": "Bleeker, 1853",
+    "page_number": 308
+  },
+  {
+    "id": "species-275",
+    "index_text": "Loài 275 · Trang 309",
+    "vn_name": "Cá Móm chỉ bac",
+    "sci_name": "Gerres oyena",
+    "authorship": "Forsskål, 1775",
+    "page_number": 309
+  },
+  {
+    "id": "species-276",
+    "index_text": "Loài 276 · Trang 310",
+    "vn_name": "Cá Móm lung xanh",
+    "sci_name": "Gerres abbrevlatus",
+    "authorship": "Bleeker, 1850",
+    "page_number": 310
+  },
+  {
+    "id": "species-277",
+    "index_text": "Loài 277 · Trang 311",
+    "vn_name": "Cá Móm gal ngắn",
+    "sci_name": "Gerres setller",
+    "authorship": "Hamllton and Buchanan, 1822",
+    "page_number": 311
+  },
+  {
+    "id": "species-278",
+    "index_text": "Loài 278 · Trang 311",
+    "vn_name": "Cá Móm gal ngắn",
+    "sci_name": "Gerres setller",
+    "authorship": "Hamllton and Buchanan, 1822",
+    "page_number": 311
+  },
+  {
+    "id": "species-279",
+    "index_text": "Loài 279 · Trang 312",
+    "vn_name": "Cá Móm sảnh",
+    "sci_name": "Gerres acinaces",
+    "authorship": "Bleeker, 1854",
+    "page_number": 312
+  },
+  {
+    "id": "species-280",
+    "index_text": "Loài 280 · Trang 313",
+    "vn_name": "Cá Móm gal dàl",
+    "sci_name": "Genes (llamentosus",
+    "authorship": "Cuvier; 1829",
+    "page_number": 313
+  },
+  {
+    "id": "species-281",
+    "index_text": "Loài 281 · Trang 314",
+    "vn_name": "Cá Móm minh dàl",
+    "sci_name": "Genes macrosoma",
+    "authorship": "",
+    "page_number": 314
+  },
+  {
+    "id": "species-282",
+    "index_text": "Loài 282 · Trang 315",
+    "vn_name": "Cá Móm vẩy vièn",
+    "sci_name": "Gerres llmbatus",
+    "authorship": "Cuvier and Valenclennes; 1830",
+    "page_number": 315
+  },
+  {
+    "id": "species-283",
+    "index_text": "Loài 283 · Trang 316",
+    "vn_name": "Cá Móm xuôl",
+    "sci_name": "Gerres macracanthus",
+    "authorship": "Bleeker, 1854",
+    "page_number": 316
+  },
+  {
+    "id": "species-284",
+    "index_text": "Loài 284 · Trang 317",
+    "vn_name": "Gióng 87 Cá Bạc",
+    "sci_name": "Pentaprion Bleeker",
+    "authorship": "1850",
+    "page_number": 317
+  },
+  {
+    "id": "species-285",
+    "index_text": "Loài 285 · Trang 318",
+    "vn_name": "Cá Móm vảy dảl",
+    "sci_name": "Pentaprion Iongimanus",
+    "authorship": "Cantor, 1850",
+    "page_number": 318
+  },
+  {
+    "id": "species-286",
+    "index_text": "Loài 286 · Trang 319",
+    "vn_name": "Cá Sạo bac",
+    "sci_name": "Pomadasys argenteus",
+    "authorship": "Forsskål, 1775",
+    "page_number": 319
+  },
+  {
+    "id": "species-287",
+    "index_text": "Loài 287 · Trang 320",
+    "vn_name": "Cá Lò bac",
+    "sci_name": "Pomadasys argyreus",
+    "authorship": "Cuvier and Valenciennes; 1833",
+    "page_number": 320
+  },
+  {
+    "id": "species-288",
+    "index_text": "Loài 288 · Trang 320",
+    "vn_name": "Cá Sao",
+    "sci_name": "Pomadasys hasta",
+    "authorship": "Bloch, 1790",
+    "page_number": 320
+  },
+  {
+    "id": "species-289",
+    "index_text": "Loài 289 · Trang 322",
+    "vn_name": "Cá Sạo chấm",
+    "sci_name": "Pomadasys maculatus",
+    "authorship": "Bloch, 1797",
+    "page_number": 322
+  },
+  {
+    "id": "species-290",
+    "index_text": "Loài 290 · Trang 323",
+    "vn_name": "Cá Lò",
+    "sci_name": "Pomadasys aurltus",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 323
+  },
+  {
+    "id": "species-291",
+    "index_text": "Loài 291 · Trang 324",
+    "vn_name": "Cá Sạo dal",
+    "sci_name": "Hapalogenys mucronatus",
+    "authorship": "Eydoux and Souleyet, 18411",
+    "page_number": 324
+  },
+  {
+    "id": "species-292",
+    "index_text": "Loài 292 · Trang 325",
+    "vn_name": "Cá Sạo vây den",
+    "sci_name": "Hapalogenys nigripinnis",
+    "authorship": "Temminck and Schlegel , 1843",
+    "page_number": 325
+  },
+  {
+    "id": "species-293",
+    "index_text": "Loài 293 · Trang 325",
+    "vn_name": "Cá Sạo vây den",
+    "sci_name": "Hapalogenys nigripinnis",
+    "authorship": "Temminck and Schlegel , 1843",
+    "page_number": 325
+  },
+  {
+    "id": "species-294",
+    "index_text": "Loài 294 · Trang 326",
+    "vn_name": "Cá Sạo xám",
+    "sci_name": "Parapristipoma trilineatum",
+    "authorship": "Thunberg , 1793",
+    "page_number": 326
+  },
+  {
+    "id": "species-295",
+    "index_text": "Loài 295 · Trang 327",
+    "vn_name": "Cá",
+    "sci_name": "Kem hoa",
+    "authorship": "Plectomynchus pictus (Thunberg, 1792",
+    "page_number": 327
+  },
+  {
+    "id": "species-296",
+    "index_text": "Loài 296 · Trang 330",
+    "vn_name": "Cá",
+    "sci_name": "Kem soc",
+    "authorship": "vàng Plectomhynchus lineatus",
+    "page_number": 330
+  },
+  {
+    "id": "species-297",
+    "index_text": "Loài 297 · Trang 331",
+    "vn_name": "Cá Kem nâu",
+    "sci_name": "Plectomhynchus nigrus",
+    "authorship": "Cuvier, 1830",
+    "page_number": 331
+  },
+  {
+    "id": "species-298",
+    "index_text": "Loài 298 · Trang 332",
+    "vn_name": "Cá Kẽm lang",
+    "sci_name": "Plectorhynchus cinctus",
+    "authorship": "(Temminck and Schlegel, 1843)",
+    "page_number": 332
+  },
+  {
+    "id": "species-299",
+    "index_text": "Loài 299 · Trang 333",
+    "vn_name": "cá Kẽm dải vàng",
+    "sci_name": "Plectorbynchus chrysolaenia",
+    "authorship": "Bleeker; 1855",
+    "page_number": 333
+  },
+  {
+    "id": "species-300",
+    "index_text": "Loài 300 · Trang 334",
+    "vn_name": "Cá Kẽm xám",
+    "sci_name": "Plectomynchus scholal",
+    "authorship": "Forsskål , 1775",
+    "page_number": 334
+  },
+  {
+    "id": "species-301",
+    "index_text": "Loài 301 · Trang 335",
+    "vn_name": "Cả Kẽm sọc to",
+    "sci_name": "Plectomhynchus celeblcus",
+    "authorship": "Bleeker , 1873",
+    "page_number": 335
+  },
+  {
+    "id": "species-302",
+    "index_text": "Loài 302 · Trang 336",
+    "vn_name": "Cá Kẽm hoa náu",
+    "sci_name": "Plectomynchus chaetodonoldes",
+    "authorship": "Lacépède, 1800",
+    "page_number": 336
+  },
+  {
+    "id": "species-303",
+    "index_text": "Loài 303 · Trang 338",
+    "vn_name": "Cá Hè mõm dàl",
+    "sci_name": "Lethrinus minlatus",
+    "authorship": "Bloch",
+    "page_number": 338
+  },
+  {
+    "id": "species-304",
+    "index_text": "Loài 304 · Trang 339",
+    "vn_name": "Cá Hè",
+    "sci_name": "Lethrinus leutjannus",
+    "authorship": "Bleeker , 1850",
+    "page_number": 339
+  },
+  {
+    "id": "species-305",
+    "index_text": "Loài 305 · Trang 340",
+    "vn_name": "Cá Hè chấm den",
+    "sci_name": "Lethrinus mhodopterus",
+    "authorship": "Bleeker, 1852",
+    "page_number": 340
+  },
+  {
+    "id": "species-306",
+    "index_text": "Loài 306 · Trang 341",
+    "vn_name": "Cá Hè vảy đỏ",
+    "sci_name": "Lethrinus haematopterus",
+    "authorship": "Temminck and Schlegel , 1842",
+    "page_number": 341
+  },
+  {
+    "id": "species-307",
+    "index_text": "Loài 307 · Trang 342",
+    "vn_name": "Cá Hè dài",
+    "sci_name": "Lethrinus nebulosus",
+    "authorship": "(Forsskål, 1775)",
+    "page_number": 342
+  },
+  {
+    "id": "species-308",
+    "index_text": "Loài 308 · Trang 343",
+    "vn_name": "Cá Hè mõm ngắn",
+    "sci_name": "Lethrinus ornatus",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 343
+  },
+  {
+    "id": "species-309",
+    "index_text": "Loài 309 · Trang 343",
+    "vn_name": "Cá Hè ma-xê-na",
+    "sci_name": "Lethrinus mahsena",
+    "authorship": "(Forsskål, 1775)",
+    "page_number": 343
+  },
+  {
+    "id": "species-310",
+    "index_text": "Loài 310 · Trang 344",
+    "vn_name": "Cá Hè sọc vàng",
+    "sci_name": "Lethrinus ramak",
+    "authorship": "(Forsskål, 1775)",
+    "page_number": 344
+  },
+  {
+    "id": "species-311",
+    "index_text": "Loài 311 · Trang 345",
+    "vn_name": "Cá Hè rê-ti",
+    "sci_name": "Lethrinus reticulatus",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 345
+  },
+  {
+    "id": "species-312",
+    "index_text": "Loài 312 · Trang 346",
+    "vn_name": "Cá Hè can-lốp",
+    "sci_name": "Lethrinus kallopterus",
+    "authorship": "Bleeker, 1856",
+    "page_number": 346
+  },
+  {
+    "id": "species-313",
+    "index_text": "Loài 313 · Trang 346",
+    "vn_name": "Cá Hè va-ri",
+    "sci_name": "Lethrinus variegatus",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 346
+  },
+  {
+    "id": "species-314",
+    "index_text": "Loài 314 · Trang 348",
+    "vn_name": "Cá Tráp đuôi tơ",
+    "sci_name": "Pentapus setosus",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 348
+  },
+  {
+    "id": "species-315",
+    "index_text": "Loài 315 · Trang 348",
+    "vn_name": "Cá Tráp ne-mu",
+    "sci_name": "Pentapus nemurus",
+    "authorship": "(Bleeker, 1852)",
+    "page_number": 348
+  },
+  {
+    "id": "species-316",
+    "index_text": "Loài 316 · Trang 349",
+    "vn_name": "Cá Tráp răng dài",
+    "sci_name": "Gnathodentex aurolineatus",
+    "authorship": "(Lacépède, 1803)",
+    "page_number": 349
+  },
+  {
+    "id": "species-317",
+    "index_text": "Loài 317 · Trang 350",
+    "vn_name": "Cá Bach dièu",
+    "sci_name": "Gymnocranlus griseus",
+    "authorship": "Temminck and Schlegel , 1843",
+    "page_number": 350
+  },
+  {
+    "id": "species-318",
+    "index_text": "Loài 318 · Trang 352",
+    "vn_name": "Cá Hè xám",
+    "sci_name": "Gymnocranius orbis",
+    "authorship": "Fowler, 1933",
+    "page_number": 352
+  },
+  {
+    "id": "species-319",
+    "index_text": "Loài 319 · Trang 352",
+    "vn_name": "Cá Tráp Fẳng tròn",
+    "sci_name": "Monolaxis grandoculis",
+    "authorship": "Forsskål , 1775",
+    "page_number": 352
+  },
+  {
+    "id": "species-320",
+    "index_text": "Loài 320 · Trang 353",
+    "vn_name": "Cá Tráp duol Yám",
+    "sci_name": "Sparus berda",
+    "authorship": "Forsskål, 1775",
+    "page_number": 353
+  },
+  {
+    "id": "species-321",
+    "index_text": "Loài 321 · Trang 354",
+    "vn_name": "Cá Tráp vây Yàng",
+    "sci_name": "Sparus latus",
+    "authorship": "Houttuyn, 1782",
+    "page_number": 354
+  },
+  {
+    "id": "species-322",
+    "index_text": "Loài 322 · Trang 355",
+    "vn_name": "Cá Tráp van den",
+    "sci_name": "Sparus macrocephalus",
+    "authorship": "Basilewsky , 1855",
+    "page_number": 355
+  },
+  {
+    "id": "species-323",
+    "index_text": "Loài 323 · Trang 356",
+    "vn_name": "Cá Miẻn sành bổn gal",
+    "sci_name": "Argyrops spiniter",
+    "authorship": "Forsskål, 1775",
+    "page_number": 356
+  },
+  {
+    "id": "species-324",
+    "index_text": "Loài 324 · Trang 357",
+    "vn_name": "Cá MỈến sành năm gal",
+    "sci_name": "Argyrops bleekeri",
+    "authorship": "Oshima, 1827",
+    "page_number": 357
+  },
+  {
+    "id": "species-325",
+    "index_text": "Loài 325 · Trang 358",
+    "vn_name": "Cá Tráp dẹp",
+    "sci_name": "Rhabdosargus sarba",
+    "authorship": "Forsskål , 1775",
+    "page_number": 358
+  },
+  {
+    "id": "species-326",
+    "index_text": "Loài 326 · Trang 358",
+    "vn_name": "Cá Tráp dẹp",
+    "sci_name": "Rhabdosargus sarba",
+    "authorship": "Forsskål , 1775",
+    "page_number": 358
+  },
+  {
+    "id": "species-327",
+    "index_text": "Loài 327 · Trang 359",
+    "vn_name": "Cá Miển sành hai gai",
+    "sci_name": "Paragyrops edita",
+    "authorship": "Tanaka, 1916",
+    "page_number": 359
+  },
+  {
+    "id": "species-328",
+    "index_text": "Loài 328 · Trang 360",
+    "vn_name": "Cá Tráp dỏ",
+    "sci_name": "Pagrosomus major",
+    "authorship": "Temminck and Schlegel, 1842",
+    "page_number": 360
+  },
+  {
+    "id": "species-329",
+    "index_text": "Loài 329 · Trang 361",
+    "vn_name": "Cá Uóp bê-lăng",
+    "sci_name": "Johnius belengeri",
+    "authorship": "Cuvier and Valencinnes; 1830",
+    "page_number": 361
+  },
+  {
+    "id": "species-330",
+    "index_text": "Loài 330 · Trang 362",
+    "vn_name": "Cá Uôp xanh",
+    "sci_name": "Johnius cujus",
+    "authorship": "Buchanan-Hamilton, 1822",
+    "page_number": 362
+  },
+  {
+    "id": "species-331",
+    "index_text": "Loài 331 · Trang 363",
+    "vn_name": "Cá Uop dúc-su",
+    "sci_name": "Johnius dussumierl",
+    "authorship": "Cuvier and Valenciennes; 1830",
+    "page_number": 363
+  },
+  {
+    "id": "species-332",
+    "index_text": "Loài 332 · Trang 364",
+    "vn_name": "Cá Uóp duỏi lá",
+    "sci_name": "Johnius trachycephalus",
+    "authorship": "Bleeker, 1850",
+    "page_number": 364
+  },
+  {
+    "id": "species-333",
+    "index_text": "Loài 333 · Trang 365",
+    "vn_name": "Cá Uóp lía",
+    "sci_name": "Johnius carutta",
+    "authorship": "Bloch; 1793",
+    "page_number": 365
+  },
+  {
+    "id": "species-334",
+    "index_text": "Loài 334 · Trang 366",
+    "vn_name": "Cá Uóp mõm nhọn",
+    "sci_name": "Johnius ophiceps",
+    "authorship": "Alcock; 1889",
+    "page_number": 366
+  },
+  {
+    "id": "species-335",
+    "index_text": "Loài 335 · Trang 366",
+    "vn_name": "Cả Uop bac",
+    "sci_name": "Johnius argentatus",
+    "authorship": "Houttuyn, 1782",
+    "page_number": 366
+  },
+  {
+    "id": "species-336",
+    "index_text": "Loài 336 · Trang 367",
+    "vn_name": "Cả Uop",
+    "sci_name": "Iung xanh",
+    "authorship": "Pseudosclaena soldado (Lacépède, 1802",
+    "page_number": 367
+  },
+  {
+    "id": "species-337",
+    "index_text": "Loài 337 · Trang 369",
+    "vn_name": "Cá Uóp gal",
+    "sci_name": "Pseudosciaena diacanthus",
+    "authorship": "Lacépède, 1802",
+    "page_number": 369
+  },
+  {
+    "id": "species-338",
+    "index_text": "Loài 338 · Trang 370",
+    "vn_name": "Cá 0ỏ giạ gai 10",
+    "sci_name": "Pseudosciaena coibor",
+    "authorship": "Hamilton and Buchanan, 1822",
+    "page_number": 370
+  },
+  {
+    "id": "species-339",
+    "index_text": "Loài 339 · Trang 371",
+    "vn_name": "Cả 0ỏ glạ tia spl",
+    "sci_name": "Pseudosclaena polykladiskos",
+    "authorship": "Bleeker, 1852",
+    "page_number": 371
+  },
+  {
+    "id": "species-340",
+    "index_text": "Loài 340 · Trang 372",
+    "vn_name": "Cá Đỏ glạ Ión",
+    "sci_name": "Pseudosciaena crocea",
+    "authorship": "Richardson, 1846",
+    "page_number": 372
+  },
+  {
+    "id": "species-341",
+    "index_text": "Loài 341 · Trang 373",
+    "vn_name": "Cá Đỏ giạ chấm den",
+    "sci_name": "Pseudosciaena axillaris",
+    "authorship": "",
+    "page_number": 373
+  },
+  {
+    "id": "species-342",
+    "index_text": "Loài 342 · Trang 374",
+    "vn_name": "Cá Dỏ giạ vàng",
+    "sci_name": "Pseudosciaena goldmani",
+    "authorship": "Bleeker; 1854",
+    "page_number": 374
+  },
+  {
+    "id": "species-343",
+    "index_text": "Loài 343 · Trang 375",
+    "vn_name": "Cá Đỏ gỈạ vẳy to",
+    "sci_name": "Pseudosciaena sina",
+    "authorship": "Cuvier and Valenciennes; 1830",
+    "page_number": 375
+  },
+  {
+    "id": "species-344",
+    "index_text": "Loài 344 · Trang 376",
+    "vn_name": "Cá Dỏ gỈạ vẩy Xám",
+    "sci_name": "Pseudosciaena aneus",
+    "authorship": "Bloch, 1793",
+    "page_number": 376
+  },
+  {
+    "id": "species-345",
+    "index_text": "Loài 345 · Trang 378",
+    "vn_name": "Cá Đỏ giả sọc",
+    "sci_name": "Pseudosciaena birtusistlei",
+    "authorship": "(Fowler, 1931)",
+    "page_number": 378
+  },
+  {
+    "id": "species-346",
+    "index_text": "Loài 346 · Trang 378",
+    "vn_name": "Cá Kẻ rút-xen",
+    "sci_name": "Sciaena russelli",
+    "authorship": "(Cuvier and Valenciennes, 1830)",
+    "page_number": 378
+  },
+  {
+    "id": "species-347",
+    "index_text": "Loài 347 · Trang 380",
+    "vn_name": "Cá Nạng bạc",
+    "sci_name": "Otolithes argenteus",
+    "authorship": "Cuvier and Valenciennes, 1830",
+    "page_number": 380
+  },
+  {
+    "id": "species-348",
+    "index_text": "Loài 348 · Trang 380",
+    "vn_name": "Cá Nạng hồng",
+    "sci_name": "Otolithes ruber",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "page_number": 380
+  },
+  {
+    "id": "species-349",
+    "index_text": "Loài 349 · Trang 381",
+    "vn_name": "Cá Nạng bông",
+    "sci_name": "Otolithes maculatus",
+    "authorship": "(Cuvier and Valenciennes, 1830)",
+    "page_number": 381
+  },
+  {
+    "id": "species-350",
+    "index_text": "Loài 350 · Trang 382",
+    "vn_name": "Cá Sủ răng nhỏ",
+    "sci_name": "Otolithoides microdon",
+    "authorship": "(Bleeker, 1848)",
+    "page_number": 382
+  },
+  {
+    "id": "species-351",
+    "index_text": "Loài 351 · Trang 383",
+    "vn_name": "Cá Đường (Cá Sủ giấy)",
+    "sci_name": "Otolithoides biauritus",
+    "authorship": "(Cantor, 1850)",
+    "page_number": 383
+  },
+  {
+    "id": "species-352",
+    "index_text": "Loài 352 · Trang 384",
+    "vn_name": "Cá Uốp mang đen",
+    "sci_name": "Collichthys lucida",
+    "authorship": "(Richardson, 1844)",
+    "page_number": 384
+  },
+  {
+    "id": "species-353",
+    "index_text": "Loài 353 · Trang 385",
+    "vn_name": "Cả Dù",
+    "sci_name": "Pama pama",
+    "authorship": "Buchanan-Hamilton, 1822",
+    "page_number": 385
+  },
+  {
+    "id": "species-354",
+    "index_text": "Loài 354 · Trang 386",
+    "vn_name": "Cá Dù váy den",
+    "sci_name": "Pama perarmata",
+    "authorship": "Chabanand, 1926",
+    "page_number": 386
+  },
+  {
+    "id": "species-355",
+    "index_text": "Loài 355 · Trang 387",
+    "vn_name": "Cá Dù hoa",
+    "sci_name": "Nibea alblllora",
+    "authorship": "Richardson , 1846",
+    "page_number": 387
+  },
+  {
+    "id": "species-356",
+    "index_text": "Loài 356 · Trang 388",
+    "vn_name": "Cá Đù Nhật Bản",
+    "sci_name": "Argyrosomus japonicus",
+    "authorship": "Temminck",
+    "page_number": 388
+  },
+  {
+    "id": "species-357",
+    "index_text": "Loài 357 · Trang 388",
+    "vn_name": "Cá Đù Nhật Bản",
+    "sci_name": "Argyrosomus japonicus",
+    "authorship": "Temminck",
+    "page_number": 388
+  },
+  {
+    "id": "species-358",
+    "index_text": "Loài 358 · Trang 389",
+    "vn_name": "Cá Đù mi-iuy",
+    "sci_name": "Argyrosomus miiuy",
+    "authorship": "Basilewsky , 1855",
+    "page_number": 389
+  },
+  {
+    "id": "species-359",
+    "index_text": "Loài 359 · Trang 390",
+    "vn_name": "Cá Ou vay van",
+    "sci_name": "Argyrosomus pausak",
+    "authorship": "Lin, 1940",
+    "page_number": 390
+  },
+  {
+    "id": "species-360",
+    "index_text": "Loài 360 · Trang 390",
+    "vn_name": "Cá Đù dẳu to",
+    "sci_name": "Argyrosomus macrocephalus",
+    "authorship": "Tang, 1937",
+    "page_number": 390
+  },
+  {
+    "id": "species-361",
+    "index_text": "Loài 361 · Trang 391",
+    "vn_name": "Cá Dù mõm den",
+    "sci_name": "Argyrosomus nibe",
+    "authorship": "Jordan and Thompson; 1911",
+    "page_number": 391
+  },
+  {
+    "id": "species-362",
+    "index_text": "Loài 362 · Trang 392",
+    "vn_name": "Cá Đù Trung Hoa",
+    "sci_name": "Bahaba taipingensis",
+    "authorship": "Herre, 1932",
+    "page_number": 392
+  },
+  {
+    "id": "species-363",
+    "index_text": "Loài 363 · Trang 393",
+    "vn_name": "Cá Phèn khoai",
+    "sci_name": "Upeneus bensasl",
+    "authorship": "Temminck and Schlegel , 1842",
+    "page_number": 393
+  },
+  {
+    "id": "species-364",
+    "index_text": "Loài 364 · Trang 393",
+    "vn_name": "Cá Phèn Iu-dó",
+    "sci_name": "Upeneus luzonius",
+    "authorship": "Jordan and Seale, 1907",
+    "page_number": 393
+  },
+  {
+    "id": "species-365",
+    "index_text": "Loài 365 · Trang 394",
+    "vn_name": "Cá Phèn mộl sọc",
+    "sci_name": "Upeneus moluccensis",
+    "authorship": "Bleeker; 1855",
+    "page_number": 394
+  },
+  {
+    "id": "species-366",
+    "index_text": "Loài 366 · Trang 395",
+    "vn_name": "Cá Phèn rẩu vàng",
+    "sci_name": "Upeneus sundaicus",
+    "authorship": "Bleeker, 1855",
+    "page_number": 395
+  },
+  {
+    "id": "species-367",
+    "index_text": "Loài 367 · Trang 396",
+    "vn_name": "Cá Phèn hai sọc",
+    "sci_name": "Upeneus sulphureus",
+    "authorship": "Cuvier and Valenciennes, 1829",
+    "page_number": 396
+  },
+  {
+    "id": "species-368",
+    "index_text": "Loài 368 · Trang 397",
+    "vn_name": "Cả Phèn dải nâu",
+    "sci_name": "Upeneus subvittatus",
+    "authorship": "Temminck and Schlegel, 1843",
+    "page_number": 397
+  },
+  {
+    "id": "species-369",
+    "index_text": "Loài 369 · Trang 398",
+    "vn_name": "Cá Phèn sọc vàng",
+    "sci_name": "Upeneus vittalus",
+    "authorship": "Forsskål , 1775",
+    "page_number": 398
+  },
+  {
+    "id": "species-370",
+    "index_text": "Loài 370 · Trang 398",
+    "vn_name": "Cá Phèn sọc vàng",
+    "sci_name": "Upeneus vittalus",
+    "authorship": "Forsskål , 1775",
+    "page_number": 398
+  },
+  {
+    "id": "species-371",
+    "index_text": "Loài 371 · Trang 399",
+    "vn_name": "Cá Phèn rau",
+    "sci_name": "Parupeneus barberinoides",
+    "authorship": "Bleeker , 1852",
+    "page_number": 399
+  },
+  {
+    "id": "species-372",
+    "index_text": "Loài 372 · Trang 400",
+    "vn_name": "Cá Phèn hỏng",
+    "sci_name": "Parupeneus barberinus",
+    "authorship": "Lacépède, 1802",
+    "page_number": 400
+  },
+  {
+    "id": "species-373",
+    "index_text": "Loài 373 · Trang 401",
+    "vn_name": "Cá Phèn hai sọc ngang",
+    "sci_name": "Parupeneus bllasclatus",
+    "authorship": "Lacépède, 1801",
+    "page_number": 401
+  },
+  {
+    "id": "species-374",
+    "index_text": "Loài 374 · Trang 402",
+    "vn_name": "Cá Phẻn dal vảng",
+    "sci_name": "Parupeneus chrysopleuron",
+    "authorship": "",
+    "page_number": 402
+  },
+  {
+    "id": "species-375",
+    "index_text": "Loài 375 · Trang 403",
+    "vn_name": "Cả Phèn dit pi",
+    "sci_name": "Parupeneus displlurus",
+    "authorship": "Playlair, 1866",
+    "page_number": 403
+  },
+  {
+    "id": "species-376",
+    "index_text": "Loài 376 · Trang 404",
+    "vn_name": "Cả Phèn vảy sọc",
+    "sci_name": "Parupeneus chryserydros",
+    "authorship": "Lacépède, 1802",
+    "page_number": 404
+  },
+  {
+    "id": "species-377",
+    "index_text": "Loài 377 · Trang 405",
+    "vn_name": "Cả Phèn hai dải",
+    "sci_name": "Parupeneus (raterculus",
+    "authorship": "",
+    "page_number": 405
+  },
+  {
+    "id": "species-378",
+    "index_text": "Loài 378 · Trang 406",
+    "vn_name": "Cá Phèn ẳn độ",
+    "sci_name": "Parupeneus Indicus",
+    "authorship": "Shaw , 1803",
+    "page_number": 406
+  },
+  {
+    "id": "species-379",
+    "index_text": "Loài 379 · Trang 407",
+    "vn_name": "Wiitdey. 1929.",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 407
+  },
+  {
+    "id": "species-380",
+    "index_text": "Loài 380 · Trang 408",
+    "vn_name": "Cá Phèn nung",
+    "sci_name": "Parupeneus heptacanthus",
+    "authorship": "Lacépède, 1801",
+    "page_number": 408
+  },
+  {
+    "id": "species-381",
+    "index_text": "Loài 381 · Trang 408",
+    "vn_name": "Cá Phèn nung",
+    "sci_name": "Parupeneus heptacanthus",
+    "authorship": "Lacépède, 1801",
+    "page_number": 408
+  },
+  {
+    "id": "species-382",
+    "index_text": "Loài 382 · Trang 410",
+    "vn_name": "Cá Phèn sa mô",
+    "sci_name": "Mulloldichthys samoensis",
+    "authorship": "Gunther, 1874",
+    "page_number": 410
+  },
+  {
+    "id": "species-383",
+    "index_text": "Loài 383 · Trang 411",
+    "vn_name": "Cá Phèn ảnh vàng",
+    "sci_name": "Mulloldichthys aurlllamma",
+    "authorship": "Forsskål , 1775",
+    "page_number": 411
+  },
+  {
+    "id": "species-384",
+    "index_text": "Loài 384 · Trang 412",
+    "vn_name": "Cá Phèn va-ni",
+    "sci_name": "Mulloidichthys vanicolensis",
+    "authorship": "",
+    "page_number": 412
+  },
+  {
+    "id": "species-385",
+    "index_text": "Loài 385 · Trang 413",
+    "vn_name": "Cá Chim bac",
+    "sci_name": "Monodactylus argenteus",
+    "authorship": "Linnaeus, 1785",
+    "page_number": 413
+  },
+  {
+    "id": "species-386",
+    "index_text": "Loài 386 · Trang 414",
+    "vn_name": "Cá Chim Iuõi Iièm",
+    "sci_name": "Monodactylus (alcilormis",
+    "authorship": "Lacépède, 1801",
+    "page_number": 414
+  },
+  {
+    "id": "species-387",
+    "index_text": "Loài 387 · Trang 415",
+    "vn_name": "Gióng 117 Cá Sóc",
+    "sci_name": "Pempheris Cuvier",
+    "authorship": "1829",
+    "page_number": 415
+  },
+  {
+    "id": "species-388",
+    "index_text": "Loài 388 · Trang 416",
+    "vn_name": "Cá Sóc bảnh lác",
+    "sci_name": "Pempheris moluca",
+    "authorship": "Cuvier and Valenciennes, 1831",
+    "page_number": 416
+  },
+  {
+    "id": "species-389",
+    "index_text": "Loài 389 · Trang 417",
+    "vn_name": "Cá Sóc va-ni-có",
+    "sci_name": "Pempheris vanicolensis",
+    "authorship": "Cuvier and Valenciennes , 1831",
+    "page_number": 417
+  },
+  {
+    "id": "species-390",
+    "index_text": "Loài 390 · Trang 418",
+    "vn_name": "Cá Dảm",
+    "sci_name": "Kyphosus cinerascens",
+    "authorship": "Forsskål, 1775",
+    "page_number": 418
+  },
+  {
+    "id": "species-391",
+    "index_text": "Loài 391 · Trang 419",
+    "vn_name": "Cá Bảnh lải",
+    "sci_name": "Kyphosus lembus",
+    "authorship": "Cuvier and Valenciennes, 1831",
+    "page_number": 419
+  },
+  {
+    "id": "species-392",
+    "index_text": "Loài 392 · Trang 420",
+    "vn_name": "Cá Gi-ren-la gal Iung dài",
+    "sci_name": "Proteracanthus sarissophorus",
+    "authorship": "Cantor , 1850",
+    "page_number": 420
+  },
+  {
+    "id": "species-393",
+    "index_text": "Loài 393 · Trang 421",
+    "vn_name": "Cá Gl-ren-la chấm",
+    "sci_name": "Girella punclala",
+    "authorship": "Gray, 1833",
+    "page_number": 421
+  },
+  {
+    "id": "species-394",
+    "index_text": "Loài 394 · Trang 422",
+    "vn_name": "Cá Tai tuong",
+    "sci_name": "Ephippus orbis",
+    "authorship": "Bloch, 1788",
+    "page_number": 422
+  },
+  {
+    "id": "species-395",
+    "index_text": "Loài 395 · Trang 423",
+    "vn_name": "Cả Chim giắy tròn",
+    "sci_name": "Plalax orbicularis",
+    "authorship": "Forsskål, 1775",
+    "page_number": 423
+  },
+  {
+    "id": "species-396",
+    "index_text": "Loài 396 · Trang 424",
+    "vn_name": "Cá Bản xa",
+    "sci_name": "Plalax leira",
+    "authorship": "Forsskål , 1775",
+    "page_number": 424
+  },
+  {
+    "id": "species-397",
+    "index_text": "Loài 397 · Trang 425",
+    "vn_name": "Cả Nhạn",
+    "sci_name": "Plalax pinnatus",
+    "authorship": "Linnaeus, 1758",
+    "page_number": 425
+  },
+  {
+    "id": "species-398",
+    "index_text": "Loài 398 · Trang 426",
+    "vn_name": "Cá Hiên chấm",
+    "sci_name": "Drepane punctata",
+    "authorship": "Linnaeus, 1758",
+    "page_number": 426
+  },
+  {
+    "id": "species-399",
+    "index_text": "Loài 399 · Trang 427",
+    "vn_name": "Cá Hiên dài",
+    "sci_name": "Drepane longimana",
+    "authorship": "Bloch and Schneider; 1801",
+    "page_number": 427
+  },
+  {
+    "id": "species-400",
+    "index_text": "Loài 400 · Trang 428",
+    "vn_name": "Cá Nau",
+    "sci_name": "Scatophagus argus",
+    "authorship": "Linnaeus, 1758",
+    "page_number": 428
+  },
+  {
+    "id": "species-401",
+    "index_text": "Loài 401 · Trang 430",
+    "vn_name": "Cá Buóm môi nhọn",
+    "sci_name": "Chelmon rostratus",
+    "authorship": "Linnaeus, 1758",
+    "page_number": 430
+  },
+  {
+    "id": "species-402",
+    "index_text": "Loài 402 · Trang 431",
+    "vn_name": "Cả Buóm vằn",
+    "sci_name": "Parachaetodon ocellatus",
+    "authorship": "Cuvier and Valenclennes, 1831",
+    "page_number": 431
+  },
+  {
+    "id": "species-403",
+    "index_text": "Loài 403 · Trang 432",
+    "vn_name": "Cá Buóm mõm dải",
+    "sci_name": "Forcipiger Iongirostris",
+    "authorship": "Broussonet, 1782",
+    "page_number": 432
+  },
+  {
+    "id": "species-404",
+    "index_text": "Loài 404 · Trang 433",
+    "vn_name": "Jordan & McGregor. 1898. Cá Blfdm mõm dái",
+    "sci_name": "Forcipiger longirostris",
+    "authorship": "Broussonet. 1782",
+    "page_number": 433
+  },
+  {
+    "id": "species-405",
+    "index_text": "Loài 405 · Trang 434",
+    "vn_name": "Cá Buóm bón vằn",
+    "sci_name": "Coradion chrysozonus",
+    "authorship": "",
+    "page_number": 434
+  },
+  {
+    "id": "species-406",
+    "index_text": "Loài 406 · Trang 435",
+    "vn_name": "Cá Bướm vây cao",
+    "sci_name": "Coradion altivelis",
+    "authorship": "McCulloch, 1916",
+    "page_number": 435
+  },
+  {
+    "id": "species-407",
+    "index_text": "Loài 407 · Trang 436",
+    "vn_name": "Cá Bướm ánh",
+    "sci_name": "Chaetodon modestus",
+    "authorship": "Temminck and Schlegel, 1844",
+    "page_number": 436
+  },
+  {
+    "id": "species-408",
+    "index_text": "Loài 408 · Trang 437",
+    "vn_name": "Cá Nảng dào vàng",
+    "sci_name": "Chaetodon (alcula",
+    "authorship": "Bloch, 1793",
+    "page_number": 437
+  },
+  {
+    "id": "species-409",
+    "index_text": "Loài 409 · Trang 438",
+    "vn_name": "Cá Buóm một chấm",
+    "sci_name": "Chaetodon unlmaculatus",
+    "authorship": "Bloch, 1787",
+    "page_number": 438
+  },
+  {
+    "id": "species-410",
+    "index_text": "Loài 410 · Trang 439",
+    "vn_name": "Cá Buóm ba sọc",
+    "sci_name": "Chaetodon trilasciatus",
+    "authorship": "Mungo Park, 1787",
+    "page_number": 439
+  },
+  {
+    "id": "species-411",
+    "index_text": "Loài 411 · Trang 440",
+    "vn_name": "Cá Buóm dải bông",
+    "sci_name": "Chaetodon punctato-lasciatus",
+    "authorship": "Cuvier, 1839",
+    "page_number": 440
+  },
+  {
+    "id": "species-412",
+    "index_text": "Loài 412 · Trang 441",
+    "vn_name": "Cá Bướm tám vạch",
+    "sci_name": "Chaetodon octofasciatus",
+    "authorship": "Bloch, 1787",
+    "page_number": 441
+  },
+  {
+    "id": "species-413",
+    "index_text": "Loài 413 · Trang 442",
+    "vn_name": "Cá Buóm vảy Yanh",
+    "sci_name": "Chaetodon citrinellus",
+    "authorship": "Cuvier and Valenciennes, 1831",
+    "page_number": 442
+  },
+  {
+    "id": "species-414",
+    "index_text": "Loài 414 · Trang 443",
+    "vn_name": "Cá Bướm ba góc",
+    "sci_name": "Chaetodon triangulum",
+    "authorship": "Cuvier, 1831",
+    "page_number": 443
+  },
+  {
+    "id": "species-415",
+    "index_text": "Loài 415 · Trang 444",
+    "vn_name": "Cá Buóm nâu nhạt",
+    "sci_name": "Chaetodon kleinll",
+    "authorship": "Bloch, 1780",
+    "page_number": 444
+  },
+  {
+    "id": "species-416",
+    "index_text": "Loài 416 · Trang 445",
+    "vn_name": "Cá Buóm hal chấm",
+    "sci_name": "Chaetodon melannotus",
+    "authorship": "Bloch and Schneider, 1801",
+    "page_number": 445
+  },
+  {
+    "id": "species-417",
+    "index_text": "Loài 417 · Trang 446",
+    "vn_name": "Cá Bướm vảy cứng",
+    "sci_name": "Chaetodon strigangulus",
+    "authorship": "Gmelin, 1789",
+    "page_number": 446
+  },
+  {
+    "id": "species-418",
+    "index_text": "Loài 418 · Trang 447",
+    "vn_name": "Cá Buóm trăng",
+    "sci_name": "Chaetodon lunula",
+    "authorship": "Lacépède, 1803",
+    "page_number": 447
+  },
+  {
+    "id": "species-419",
+    "index_text": "Loài 419 · Trang 449",
+    "vn_name": "Cá Nảng dào dóm den",
+    "sci_name": "Chaetodon ephippium",
+    "authorship": "",
+    "page_number": 449
+  },
+  {
+    "id": "species-420",
+    "index_text": "Loài 420 · Trang 450",
+    "vn_name": "Cá Nàng dào dỏ",
+    "sci_name": "Chaelodon auriga",
+    "authorship": "Forsskål, 1775",
+    "page_number": 450
+  },
+  {
+    "id": "species-421",
+    "index_text": "Loài 421 · Trang 452",
+    "vn_name": "Cá Buóm quong",
+    "sci_name": "Chaelodon speculum",
+    "authorship": "Cuvier and Valenclennes, 1831",
+    "page_number": 452
+  },
+  {
+    "id": "species-422",
+    "index_text": "Loài 422 · Trang 453",
+    "vn_name": "Cá Bướm viền hồng",
+    "sci_name": "Chaetodon lineolatus",
+    "authorship": "Cuvier, 1831",
+    "page_number": 453
+  },
+  {
+    "id": "species-423",
+    "index_text": "Loài 423 · Trang 454",
+    "vn_name": "Cá Màng dào vàng vaga",
+    "sci_name": "Chaetodon vagabundus",
+    "authorship": "Linnaeus; 1758",
+    "page_number": 454
+  },
+  {
+    "id": "species-424",
+    "index_text": "Loài 424 · Trang 455",
+    "vn_name": "Cá Nàng dào náu",
+    "sci_name": "Chaelodon collare",
+    "authorship": "Bloch, 1787",
+    "page_number": 455
+  },
+  {
+    "id": "species-425",
+    "index_text": "Loài 425 · Trang 456",
+    "vn_name": "Cá Ning dio Phi",
+    "sci_name": "Chaetodon diergastos",
+    "authorship": "Scale. 1910",
+    "page_number": 456
+  },
+  {
+    "id": "species-426",
+    "index_text": "Loài 426 · Trang 457",
+    "vn_name": "Cá Màng dào phi",
+    "sci_name": "Chaetodon adiergastos",
+    "authorship": "Seale, 1910",
+    "page_number": 457
+  },
+  {
+    "id": "species-427",
+    "index_text": "Loài 427 · Trang 458",
+    "vn_name": "Cá Ning dio chấm Itrng",
+    "sci_name": "Chaetodon bennetti",
+    "authorship": "Cuvier and Valenciennes. 1831. Ci Ning dio våy ngåi Chaetodon chrysurgt Desjardins. 1833. Ci Ning dio mom unh Chaetcxion reticulatus Cuvier. 1831",
+    "page_number": 458
+  },
+  {
+    "id": "species-428",
+    "index_text": "Loài 428 · Trang 459",
+    "vn_name": "Cá Nàng dào chấm Iung",
+    "sci_name": "Chaetodon bennet",
+    "authorship": "",
+    "page_number": 459
+  },
+  {
+    "id": "species-429",
+    "index_text": "Loài 429 · Trang 460",
+    "vn_name": "Cá Nàng dào vảy ngói",
+    "sci_name": "Chaetodon chrysurus",
+    "authorship": "Desjardins; 1833",
+    "page_number": 460
+  },
+  {
+    "id": "species-430",
+    "index_text": "Loài 430 · Trang 461",
+    "vn_name": "Cá Nàng dào mõm xanh",
+    "sci_name": "Chaetodon retlculatus",
+    "authorship": "",
+    "page_number": 461
+  },
+  {
+    "id": "species-431",
+    "index_text": "Loài 431 · Trang 462",
+    "vn_name": "Cá Nàng dào vlèn den",
+    "sci_name": "Chaetodon semelon",
+    "authorship": "Bleeker , 1855",
+    "page_number": 462
+  },
+  {
+    "id": "species-432",
+    "index_text": "Loài 432 · Trang 462",
+    "vn_name": "Cá Buóm một vẳn đuôi",
+    "sci_name": "Chaetodon bella-maris",
+    "authorship": "Seale, 1914",
+    "page_number": 462
+  },
+  {
+    "id": "species-433",
+    "index_text": "Loài 433 · Trang 463",
+    "vn_name": "Cá Buóm cd hai vạch",
+    "sci_name": "Heniochus acuminatus",
+    "authorship": "Linnaeus, 1758",
+    "page_number": 463
+  },
+  {
+    "id": "species-434",
+    "index_text": "Loài 434 · Trang 465",
+    "vn_name": "Cả Buóm cd hal sọc den",
+    "sci_name": "Heniochus permutatus",
+    "authorship": "",
+    "page_number": 465
+  },
+  {
+    "id": "species-435",
+    "index_text": "Loài 435 · Trang 466",
+    "vn_name": "Cá Buóm cò ba vạch",
+    "sci_name": "Henlochus singularlus",
+    "authorship": "Smith and Radcllfte, 1811",
+    "page_number": 466
+  },
+  {
+    "id": "species-436",
+    "index_text": "Loài 436 · Trang 466",
+    "vn_name": "Cá Buóm cd",
+    "sci_name": "Heniochus monoceros",
+    "authorship": "Cuvier and Valenciennes; 1831",
+    "page_number": 466
+  },
+  {
+    "id": "species-437",
+    "index_text": "Loài 437 · Trang 467",
+    "vn_name": "Cá Buón bảy sọc",
+    "sci_name": "Chaetodontoplus septentrlonalls",
+    "authorship": "",
+    "page_number": 467
+  },
+  {
+    "id": "species-438",
+    "index_text": "Loài 438 · Trang 468",
+    "vn_name": "Cá Than tiên vạch mẳt",
+    "sci_name": "Chaotodontoplus mesoleucus",
+    "authorship": "Bloch, 1787",
+    "page_number": 468
+  },
+  {
+    "id": "species-439",
+    "index_text": "Loài 439 · Trang 469",
+    "vn_name": "Cá Chim cà hoa",
+    "sci_name": "Chaetodontoplus duboulayl",
+    "authorship": "Gunther , 1667",
+    "page_number": 469
+  },
+  {
+    "id": "species-440",
+    "index_text": "Loài 440 · Trang 470",
+    "vn_name": "Cá Chim hoàng đé",
+    "sci_name": "Pomacanthus Imperator",
+    "authorship": "Bloch , 1787",
+    "page_number": 470
+  },
+  {
+    "id": "species-441",
+    "index_text": "Loài 441 · Trang 472",
+    "vn_name": "Cá Chim xanh",
+    "sci_name": "Pomacanthus semicirculatus",
+    "authorship": "",
+    "page_number": 472
+  },
+  {
+    "id": "species-442",
+    "index_text": "Loài 442 · Trang 473",
+    "vn_name": "Cá Thản tlen vản tỉm",
+    "sci_name": "Pomacanthus sexstrlalus",
+    "authorship": "",
+    "page_number": 473
+  },
+  {
+    "id": "species-443",
+    "index_text": "Loài 443 · Trang 474",
+    "vn_name": "Cá Bt.ßrn chấm",
+    "sci_name": "Centropyge tibicen",
+    "authorship": "Cuvier and Valenciennes. 1831. Ci hai mau Centropyge bicolor (Bloch, 1787",
+    "page_number": 474
+  },
+  {
+    "id": "species-444",
+    "index_text": "Loài 444 · Trang 475",
+    "vn_name": "Cá Btnrn vy ngec",
+    "sci_name": "Centropyge vroliki",
+    "authorship": "Bleeker. 1853). C. rui gai Centropyge bispinosus (Gunther, 1860",
+    "page_number": 475
+  },
+  {
+    "id": "species-445",
+    "index_text": "Loài 445 · Trang 476",
+    "vn_name": "Cá Thàn tiên lamac",
+    "sci_name": "Holacanthus lamarck",
+    "authorship": "Lacópède , 1802",
+    "page_number": 476
+  },
+  {
+    "id": "species-446",
+    "index_text": "Loài 446 · Trang 477",
+    "vn_name": "Cá Buóm chấm trẳng",
+    "sci_name": "Centropyge tblcen",
+    "authorship": "Cuvier and Valenclennes; 1831",
+    "page_number": 477
+  },
+  {
+    "id": "species-447",
+    "index_text": "Loài 447 · Trang 478",
+    "vn_name": "Cá Buóm hal màu",
+    "sci_name": "Centropyge bicolor",
+    "authorship": "Bloch, 1787",
+    "page_number": 478
+  },
+  {
+    "id": "species-448",
+    "index_text": "Loài 448 · Trang 479",
+    "vn_name": "Cá Bướm vảy ngọc",
+    "sci_name": "Centropyge vrolikii",
+    "authorship": "Bleeker, 1853",
+    "page_number": 479
+  },
+  {
+    "id": "species-449",
+    "index_text": "Loài 449 · Trang 480",
+    "vn_name": "Cá Buóm hal gal",
+    "sci_name": "Centropype bispinosus",
+    "authorship": "Gunther , 1860",
+    "page_number": 480
+  },
+  {
+    "id": "species-450",
+    "index_text": "Loài 450 · Trang 481",
+    "vn_name": "Cá Chim xanh nắp mang tròn",
+    "sci_name": "Pygoplites diacanthus",
+    "authorship": "(Boddaert, 1772)",
+    "page_number": 481
+  },
+  {
+    "id": "species-451",
+    "index_text": "Loài 451 · Trang 482",
+    "vn_name": "Cá Lợn lòi",
+    "sci_name": "Histiopterus typus",
+    "authorship": "Schlegel, 1844",
+    "page_number": 482
+  },
+  {
+    "id": "species-452",
+    "index_text": "Loài 452 · Trang 483",
+    "vn_name": "Cá Khoang cổ sọc",
+    "sci_name": "Amphiprion polymnus",
+    "authorship": "(Linnaeus, 1758)",
+    "page_number": 483
+  },
+  {
+    "id": "species-453",
+    "index_text": "Loài 453 · Trang 485",
+    "vn_name": "Cá Khoang có đuôl vàng",
+    "sci_name": "Amphiprion sebae",
+    "authorship": "Bleeker, 1853",
+    "page_number": 485
+  },
+  {
+    "id": "species-454",
+    "index_text": "Loài 454 · Trang 486",
+    "vn_name": "Cá Khoang co cam",
+    "sci_name": "Amphlprlon percula",
+    "authorship": "Láepède, 1802",
+    "page_number": 486
+  },
+  {
+    "id": "species-455",
+    "index_text": "Loài 455 · Trang 486",
+    "vn_name": "Cá Khoang co cam",
+    "sci_name": "Amphlprlon percula",
+    "authorship": "Láepède, 1802",
+    "page_number": 486
+  },
+  {
+    "id": "species-456",
+    "index_text": "Loài 456 · Trang 487",
+    "vn_name": "Cá Khoang có ba sọc",
+    "sci_name": "Amphlprion blcinctus",
+    "authorship": "Ruppell , 1828",
+    "page_number": 487
+  },
+  {
+    "id": "species-457",
+    "index_text": "Loài 457 · Trang 488",
+    "vn_name": "Cá Khoang có vảy den",
+    "sci_name": "Amphiprion melanopus",
+    "authorship": "Bleeker, 1852",
+    "page_number": 488
+  },
+  {
+    "id": "species-458",
+    "index_text": "Loài 458 · Trang 489",
+    "vn_name": "Cá",
+    "sci_name": "Ihia duåi",
+    "authorship": "dii Abudefduffilifer Weber. 1913.",
+    "page_number": 489
+  },
+  {
+    "id": "species-459",
+    "index_text": "Loài 459 · Trang 490",
+    "vn_name": "Cá nria hai chim",
+    "sci_name": "Abudefduf glaucas",
+    "authorship": "Cuvier and Valenciennes. 1830). Ci Thia vay chKm Abwiefdufcuracao (Bloch. 1787",
+    "page_number": 490
+  },
+  {
+    "id": "species-460",
+    "index_text": "Loài 460 · Trang 491",
+    "vn_name": "Cá RO thia sọc Abudefdufdickit (Liénard, 1839). Cá Rô thia chấm lacrymatw",
+    "sci_name": "Quoy and",
+    "authorship": "Gaimard. 1824). Ci Thia ben Abcdefdufbemii (Bleeker. 1846). Thia nam soc Abudefdufsaxatilis (Linnaeus. 1758). Ci Ihia xan-thO Abudefd4fxanthonotus (Bleeker. 1859). Ci Ihia trång Abwiefdufnotatws (Day. 1869",
+    "page_number": 491
+  },
+  {
+    "id": "species-461",
+    "index_text": "Loài 461 · Trang 492",
+    "vn_name": "Cá RÔ tia bung dái",
+    "sci_name": "Chromis caeruleu",
+    "authorship": "Cuvier and Valenciennes, 1830). Ci RO bién ving Chromis xanthochir (Bleeker. 1851). Ci Rö we-be Chromis weberi Fowler and Bean. 1928",
+    "page_number": 492
+  },
+  {
+    "id": "species-462",
+    "index_text": "Loài 462 · Trang 493",
+    "vn_name": "Cá Rỏ thia denAbudeldut melas",
+    "sci_name": "Cuvier and",
+    "authorship": "Valenciennes; 1830",
+    "page_number": 493
+  },
+  {
+    "id": "species-463",
+    "index_text": "Loài 463 · Trang 494",
+    "vn_name": "Cá Rỏ thia xanh",
+    "sci_name": "Abudeldul cyaneus",
+    "authorship": "Quoy and Galmard , 18241",
+    "page_number": 494
+  },
+  {
+    "id": "species-464",
+    "index_text": "Loài 464 · Trang 495",
+    "vn_name": "Cá Thia sáu sọc",
+    "sci_name": "Abudeldul coelestinus",
+    "authorship": "Cuvier and Valenciennes; 1830",
+    "page_number": 495
+  },
+  {
+    "id": "species-465",
+    "index_text": "Loài 465 · Trang 496",
+    "vn_name": "Dữ liệu đang quét",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 496
+  },
+  {
+    "id": "species-466",
+    "index_text": "Loài 466 · Trang 497",
+    "vn_name": "Cá mhia hal chấm",
+    "sci_name": "Abudeldut glaucus",
+    "authorship": "Cuvier and Valenclennes, 1830",
+    "page_number": 497
+  },
+  {
+    "id": "species-467",
+    "index_text": "Loài 467 · Trang 497",
+    "vn_name": "Cá mhia hal chấm",
+    "sci_name": "Abudeldut glaucus",
+    "authorship": "Cuvier and Valenclennes, 1830",
+    "page_number": 497
+  },
+  {
+    "id": "species-468",
+    "index_text": "Loài 468 · Trang 498",
+    "vn_name": "Dữ liệu đang quét",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 498
+  },
+  {
+    "id": "species-469",
+    "index_text": "Loài 469 · Trang 499",
+    "vn_name": "Cá Rỏ thla sọc",
+    "sci_name": "Abudeldut dickll",
+    "authorship": "Llénard , 1839",
+    "page_number": 499
+  },
+  {
+    "id": "species-470",
+    "index_text": "Loài 470 · Trang 500",
+    "vn_name": "Dữ liệu đang quét",
+    "sci_name": "Perciformes sp.",
+    "authorship": "",
+    "page_number": 500
+  },
+  {
+    "id": "species-471",
+    "index_text": "Loài 471 · Trang 501",
+    "vn_name": "Cá",
+    "sci_name": "Thla ben",
+    "authorship": "Abudeldul behnll (Bleeker, 1848",
+    "page_number": 501
+  },
+  {
+    "id": "species-472",
+    "index_text": "Loài 472 · Trang 502",
+    "vn_name": "Cá Thla nảm sọc",
+    "sci_name": "Abudeldul saxatills",
+    "authorship": "Unnaeus, 1758",
+    "page_number": 502
+  },
+  {
+    "id": "species-473",
+    "index_text": "Loài 473 · Trang 504",
+    "vn_name": "Cá",
+    "sci_name": "Thla duol",
+    "authorship": "trắng Abudeldul notatus (Day, 1869",
+    "page_number": 504
+  },
+  {
+    "id": "species-474",
+    "index_text": "Loài 474 · Trang 505",
+    "vn_name": "Cá Rô tía bụng dài",
+    "sci_name": "Chromis caeruleus",
+    "authorship": "(Cuvier and Valenciennes, 1830)",
+    "page_number": 505
+  },
+  {
+    "id": "species-475",
+    "index_text": "Loài 475 · Trang 507",
+    "vn_name": "Cá Rô biển vàng",
+    "sci_name": "Chromis xanthochir",
+    "authorship": "(Bleeker, 1851)",
+    "page_number": 507
+  },
+  {
+    "id": "species-476",
+    "index_text": "Loài 476 · Trang 507",
+    "vn_name": "Cá Rô wê-be",
+    "sci_name": "Chromis useberi",
+    "authorship": "Fowler and Bean, 1928",
+    "page_number": 507
+  },
+  {
+    "id": "species-477",
+    "index_text": "Loài 477 · Trang 508",
+    "vn_name": "Cá Rô gai dài",
+    "sci_name": "Chromis analis",
+    "authorship": "(Cuvier and Valenciennes, 1830)",
+    "page_number": 508
+  },
+  {
+    "id": "species-478",
+    "index_text": "Loài 478 · Trang 509",
+    "vn_name": "Cá Rô bién tro",
+    "sci_name": "Chromis cinerascens",
+    "authorship": "Cuvler and Valenciennes, 1830",
+    "page_number": 509
+  },
+  {
+    "id": "species-479",
+    "index_text": "Loài 479 · Trang 510",
+    "vn_name": "Cá Rô blen tím",
+    "sci_name": "Chromis xanthurus",
+    "authorship": "Bleeker , 1854",
+    "page_number": 510
+  },
+  {
+    "id": "species-480",
+    "index_text": "Loài 480 · Trang 511",
+    "vn_name": "Cá Rô vẳy nhỏ",
+    "sci_name": "Chromis lepidolepis",
+    "authorship": "Bleeker; 1877",
+    "page_number": 511
+  },
+  {
+    "id": "species-481",
+    "index_text": "Loài 481 · Trang 511",
+    "vn_name": "Cá Rô vẳy nhỏ",
+    "sci_name": "Chromis lepidolepis",
+    "authorship": "Bleeker; 1877",
+    "page_number": 511
+  },
+  {
+    "id": "species-482",
+    "index_text": "Loài 482 · Trang 512",
+    "vn_name": "Cá Rô mang dài",
+    "sci_name": "Chromis opercularis",
+    "authorship": "Gunther, 1866",
+    "page_number": 512
+  },
+  {
+    "id": "species-483",
+    "index_text": "Loài 483 · Trang 512",
+    "vn_name": "Cá Rỏ hal sọc",
+    "sci_name": "Chromis bitaeniatus",
+    "authorship": "Fowler and Bean, 1928",
+    "page_number": 512
+  },
+  {
+    "id": "species-484",
+    "index_text": "Loài 484 · Trang 513",
+    "vn_name": "Cá Thia dòng ten",
+    "sci_name": "Dascyllus aruanus",
+    "authorship": "Linnaeus, 1758",
+    "page_number": 513
+  },
+  {
+    "id": "species-485",
+    "index_text": "Loài 485 · Trang 514",
+    "vn_name": "Cá Thla dong tlèn vlèn bên",
+    "sci_name": "Dascyllus marglnatus",
+    "authorship": "Ruppell , 1828",
+    "page_number": 514
+  },
+  {
+    "id": "species-486",
+    "index_text": "Loài 486 · Trang 515",
+    "vn_name": "Cá Thla dong ten ba chấm",
+    "sci_name": "Dascyllus trmaculatus",
+    "authorship": "Ruppell, 1828",
+    "page_number": 515
+  },
+  {
+    "id": "species-487",
+    "index_text": "Loài 487 · Trang 516",
+    "vn_name": "Cá Thla mól dảy",
+    "sci_name": "Cheiloprion Iablatus",
+    "authorship": "Day , 1878",
+    "page_number": 516
+  },
+  {
+    "id": "species-488",
+    "index_text": "Loài 488 · Trang 517",
+    "vn_name": "Gióng 142 Cá Thla",
+    "sci_name": "day-a Daya",
+    "authorship": "Bleeker , 1877",
+    "page_number": 517
+  },
+  {
+    "id": "species-489",
+    "index_text": "Loài 489 · Trang 518",
+    "vn_name": "Cá Ihia ba chi-m",
+    "sci_name": "Pomacentrus tripunctatus",
+    "authorship": "and Valenciennes. 1830",
+    "page_number": 518
+  },
+  {
+    "id": "species-490",
+    "index_text": "Loài 490 · Trang 519",
+    "vn_name": "Cá Ihia ba sọc",
+    "sci_name": "Pomacentrus perspicillatus",
+    "authorship": "Cuvier and Valenciennes. 1830",
+    "page_number": 519
+  },
+  {
+    "id": "species-491",
+    "index_text": "Loài 491 · Trang 520",
+    "vn_name": "Cá Thia dả",
+    "sci_name": "Pomacentrus littoralis",
+    "authorship": "Cuvier and Valenciennes; 1830",
+    "page_number": 520
+  },
+  {
+    "id": "species-492",
+    "index_text": "Loài 492 · Trang 521",
+    "vn_name": "Cá Thia mắt sọc",
+    "sci_name": "Pomacentrus prosopotaenia",
+    "authorship": "Bleeker, 1852",
+    "page_number": 521
+  },
+  {
+    "id": "species-493",
+    "index_text": "Loài 493 · Trang 522",
+    "vn_name": "Cá Thla tím",
+    "sci_name": "Pomacentrus violascens",
+    "authorship": "Bleeker, 1848",
+    "page_number": 522
+  },
+  {
+    "id": "species-494",
+    "index_text": "Loài 494 · Trang 523",
+    "vn_name": "Cá Thia xanh",
+    "sci_name": "Pomacentrus cyanomos",
+    "authorship": "Bleeker, 1858",
+    "page_number": 523
+  },
+  {
+    "id": "species-495",
+    "index_text": "Loài 495 · Trang 524",
+    "vn_name": "Cá Thia ba chấm",
+    "sci_name": "Pomacentrus tripunctatus",
+    "authorship": "",
+    "page_number": 524
+  },
+  {
+    "id": "species-496",
+    "index_text": "Loài 496 · Trang 525",
+    "vn_name": "Cá Thla ba sọc",
+    "sci_name": "Pomacentrus perspicillalus",
+    "authorship": "",
+    "page_number": 525
+  },
+  {
+    "id": "species-497",
+    "index_text": "Loài 497 · Trang 526",
+    "vn_name": "Cá Thla chanh",
+    "sci_name": "Pomacentrus moluccensis",
+    "authorship": "Bleeker, 1853",
+    "page_number": 526
+  },
+  {
+    "id": "species-498",
+    "index_text": "Loài 498 · Trang 527",
+    "vn_name": "Cá Thia sâm",
+    "sci_name": "Pomacentrus nigricans",
+    "authorship": "Lacépède, 1803",
+    "page_number": 527
+  },
+  {
+    "id": "species-499",
+    "index_text": "Loài 499 · Trang 528",
+    "vn_name": "Cá Ihia val-u",
+    "sci_name": "Pomacentrus Faluli",
+    "authorship": "Jordan and Seale, 1800",
+    "page_number": 528
+  },
+  {
+    "id": "species-500",
+    "index_text": "Loài 500 · Trang 528",
+    "vn_name": "Cá Thla hal sc",
+    "sci_name": "Pomacentrus bllasclatus",
+    "authorship": "Bleeker, 1854",
+    "page_number": 528
+  },
+  {
+    "id": "species-501",
+    "index_text": "Loài 501 · Trang 529",
+    "vn_name": "Cá Thia vây vàng",
+    "sci_name": "Pomacentrus notophthalmus",
+    "authorship": "Bleeker, 1853",
+    "page_number": 529
+  },
+  {
+    "id": "species-502",
+    "index_text": "Loài 502 · Trang 530",
+    "vn_name": "Cá Thla dảu den",
+    "sci_name": "Pomacentrus nigromanus",
+    "authorship": "Weber; 1913",
+    "page_number": 530
+  },
+  {
+    "id": "species-503",
+    "index_text": "Loài 503 · Trang 531",
+    "vn_name": "Cả Thia den luyèn",
+    "sci_name": "Hemiglyphidodon plagiometopon",
+    "authorship": "Bleeker, 1852",
+    "page_number": 531
+  },
+  {
+    "id": "species-504",
+    "index_text": "Loài 504 · Trang 532",
+    "vn_name": "Cá Thla dảl",
+    "sci_name": "Lepidozygus lapeinosoma",
+    "authorship": "Bleeker, 1855",
+    "page_number": 532
+  },
+  {
+    "id": "species-505",
+    "index_text": "Loài 505 · Trang 532",
+    "vn_name": "Cả mla váy tròn",
+    "sci_name": "Premnas blaculeatus",
+    "authorship": "Bloch, 1790",
+    "page_number": 532
+  },
+  {
+    "id": "species-506",
+    "index_text": "Loài 506 · Trang 534",
+    "vn_name": "Cá Ông móm",
+    "sci_name": "Cirrhitichthys aureus",
+    "authorship": "Temmick and Schlegel, 1843). 507. Cá Ông chấm Cirrhitichthys aprinus (Cuvier and Valenciennes, 1929",
+    "page_number": 534
+  },
+  {
+    "id": "species-507",
+    "index_text": "Loài 507 · Trang 535",
+    "vn_name": "Cá Ông chấm mắt cao",
+    "sci_name": "Cirrhitus pinnulatus",
+    "authorship": "Bloch and Schneider, 1801",
+    "page_number": 535
+  },
+  {
+    "id": "species-508",
+    "index_text": "Loài 508 · Trang 536",
+    "vn_name": "Cá Ông chấm vây sợi",
+    "sci_name": "Cyprinocirrhites polyactis",
+    "authorship": "Bleeker, 1874",
+    "page_number": 536
+  },
+  {
+    "id": "species-509",
+    "index_text": "Loài 509 · Trang 538",
+    "vn_name": "Cá Ông phốt",
+    "sci_name": "Paracirrhites forsteri",
+    "authorship": "Bloch and Schneider, 1801",
+    "page_number": 538
+  },
+  {
+    "id": "species-510",
+    "index_text": "Loài 510 · Trang 539",
+    "vn_name": "Cà Ong phót",
+    "sci_name": "Paracirmltes lorsteri",
+    "authorship": "Bloch and Schneider, 1801",
+    "page_number": 539
+  },
+  {
+    "id": "species-511",
+    "index_text": "Loài 511 · Trang 540",
+    "vn_name": "Cá Nén det",
+    "sci_name": "Gonllstlus zonatus",
+    "authorship": "Cuvler and Valenciennes; 1830",
+    "page_number": 540
+  },
+  {
+    "id": "species-512",
+    "index_text": "Loài 512 · Trang 541",
+    "vn_name": "Cá Dao dỏ vàng",
+    "sci_name": "Acanthocepola abbreviala",
+    "authorship": "",
+    "page_number": 541
+  },
+  {
+    "id": "species-513",
+    "index_text": "Loài 513 · Trang 542",
+    "vn_name": "Cá Dao dỏ kru-en",
+    "sci_name": "Acanthocepola krusenstemi",
+    "authorship": "",
+    "page_number": 542
+  },
+  {
+    "id": "species-514",
+    "index_text": "Loài 514 · Trang 542",
+    "vn_name": "Cả Rễ cau",
+    "sci_name": "Acanthocepola limbala",
+    "authorship": "Cuvier and Valenciennes, 1835",
+    "page_number": 542
+  },
+  {
+    "id": "species-515",
+    "index_text": "Loài 515 · Trang 543",
+    "vn_name": "CảÉp mảnh",
+    "sci_name": "Echenels naucrales",
+    "authorship": "LInnaeus; 1758",
+    "page_number": 543
+  },
+  {
+    "id": "species-516",
+    "index_text": "Loài 516 · Trang 544",
+    "vn_name": "Gióng 154 Cá Ép ngắn trẳng",
+    "sci_name": "Remora Forster",
+    "authorship": "1771",
+    "page_number": 544
+  },
+  {
+    "id": "species-517",
+    "index_text": "Loài 517 · Trang 545",
+    "vn_name": "Cá Ép mol ngán",
+    "sci_name": "Remora brachyplera",
+    "authorship": "Lowe, 1839",
+    "page_number": 545
+  },
+  {
+    "id": "species-518",
+    "index_text": "Loài 518 · Trang 546",
+    "vn_name": "Cá Ép Irẳng",
+    "sci_name": "Remora remora",
+    "authorship": "Unnaeus, 1758",
+    "page_number": 546
+  }
+]

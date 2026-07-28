@@ -1,7 +1,7 @@
 # TODO — Dự án OCR Cá biển Việt Nam
 
-> Cập nhật: 2026-07-24 16:33
-> Next Session Starting Point: Kiểm tra mobile UI trên browser → enrichment pipeline Tập 2
+> Cập nhật: 2026-07-27 16:33
+> Next Session Starting Point: Re-OCR targeted pages cho 50 loài skeleton Tập III → deploy
 
 ## ✅ Hoàn thành
 
@@ -38,6 +38,17 @@
 - [x] Tạo skill `deploy-cabien` (sync + git push + vercel CLI)
 - [x] Setup git repo + .gitignore + vercel.json cho project
 
+### Enrichment & Data Quality (2026-07-27)
+- [x] Tạo skill `enrich-cabien` — tách từ ocr-pdf-cabien, script `enrich_names.py`
+- [x] Tạo skill `audit-cabien` — kiểm tra + auto-fix data quality, script `audit_species.py`
+- [x] Fix 12 loài đầu Tập III (Cá Chẽm) — patch từ OCR batch sạch
+- [x] Enrichment commonName EN Tập III: 518/518 (100%)
+- [x] Enrichment alternateNames VN Tập III: 246/518 (47% — đúng bản chất sách)
+- [x] Sửa template species.html: luôn hiển thị 12 trường (dùng '—' cho null)
+- [x] Audit + fix Tập III: OCR batch restore (97 fields) + mirror VN→EN (609 fields)
+- [x] Restore skeleton bằng scientificName match: 72 loài, 255 fields + 588 mirror
+- [x] Deploy Vercel: commit 4fd23ff
+
 ## 🔲 Chưa làm
 
 ### OCR còn thiếu
@@ -46,8 +57,9 @@
 - [ ] Tập I & II: chưa có dữ liệu OCR parsed JSON (chỉ có PSV cũ cho 50 loài Tập I)
 
 ### Chất lượng dữ liệu
-- [ ] Trường `alternateNames` (tên gọi khác) — nhiều loài còn trống, cần bổ sung
-- [ ] `commonName` (EN) — enrichment pipeline mới test 10/266 loài Tập 2
+- [x] `commonName` (EN) — Tập II: 232/266, Tập III: 518/518 ✅
+- [x] `alternateNames` (VN) — Tập II: 240/266, Tập III: 246/518 (đúng bản chất)
+- [ ] 50 loài skeleton Tập III — cần re-OCR targeted pages từ PDF gốc (Hướng 1)
+- [ ] Deploy bản restore mới nhất lên Vercel
 - [ ] WoRMS sync cho loài mới (Tập III chưa sync)
-- [ ] Google Search fallback cho loài không tìm được trên Wikidata/Wikipedia
 - [ ] Loài 78 Tập IV bị thiếu data trong OCR gốc
