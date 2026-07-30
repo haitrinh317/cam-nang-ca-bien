@@ -3,28 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Tiết Loài - Danh Mục Cá Biển Việt Nam</title>
-    <link rel="stylesheet" href="assets/shared.css?v=2">
+    <title>Chi Tiết Loài — Bảo tàng Hải dương học</title>
+    <link rel="stylesheet" href="/src/assets/shared.css">
     <style>
         .species-card {
             background: var(--bg-surface);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 4px;
             padding: 2.5rem;
             margin-top: 1.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: none;
             position: relative;
             overflow: hidden;
         }
 
-        /* Volume accent bar — left edge */
+        /* Volume accent bar - left edge */
         .species-card::before {
             content: '';
             position: absolute;
             left: 0; top: 0; bottom: 0;
             width: 3px;
             background: var(--vol-color, var(--brand-primary));
-            border-radius: 12px 0 0 12px;
+            border-radius: 4px 0 0 4px;
         }
 
         /* Volume color tokens */
@@ -36,9 +36,9 @@
 
         /* Highlight row for key fields */
         .info-item-featured {
-            background: rgba(var(--vol-color-rgb, 88,101,242), 0.06);
-            border-left: 2px solid rgba(var(--vol-color-rgb, 88,101,242), 0.35);
-            border-radius: 4px;
+            background: rgba(var(--vol-color-rgb, 14, 165, 233), 0.06);
+            border-left: 2px solid rgba(var(--vol-color-rgb, 14, 165, 233), 0.35);
+            border-radius: 0;
             margin-left: -0.5rem;
             padding-left: 0.5rem;
         }
@@ -46,7 +46,7 @@
         .sp-header {
             margin-bottom: 1.5rem;
             padding-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .sp-title {
@@ -281,8 +281,8 @@
     <header class="site-header">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 8v4l3 3"/></svg>
-                <span class="logo-full">DANH MỤC CÁ BIỂN VIỆT NAM</span><span class="logo-short">CÁ BIỂN VN</span>
+                <img src="assets/logo.png" alt="Logo Bảo tàng Hải dương học" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;">
+                <span class="logo-full">BẢO TÀNG HẢI DƯƠNG HỌC</span><span class="logo-short">BTHD</span>
             </a>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Trang Chủ</a>
@@ -314,200 +314,6 @@
         <p style="margin-top: 0.5rem;">Phiên bản: 1.0.0</p>
     </footer>
 
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const speciesId = urlParams.get('id');
-
-        if (!speciesId) {
-            document.getElementById('loadingState').style.display = 'none';
-            document.getElementById('errorState').style.display = 'block';
-        } else {
-            Promise.allSettled([
-                fetch('data/species.json').then(r => r.json()),
-                fetch('data/fishbase_sync.json').then(r => r.json())
-            ]).then(([spResult, fbResult]) => {
-                document.getElementById('loadingState').style.display = 'none';
-
-                if (spResult.status !== 'fulfilled') {
-                    document.getElementById('errorState').style.display = 'block';
-                    return;
-                }
-
-                const data   = spResult.value;
-                const fbData = fbResult.status === 'fulfilled' ? fbResult.value : {};
-                const sp     = data.find(item => item.id === speciesId);
-
-                if (sp) {
-                    renderSpecies(sp, fbData[sp.id] || null);
-                } else {
-                    document.getElementById('errorState').style.display = 'block';
-                }
-            });
-        }
-
-        function buildFishbaseBadge(fb) {
-            if (!fb) return '';
-
-            const statusMap = {
-                valid:       { cls: 'fb-valid',     icon: '✅', label: 'Tên hợp lệ trên WoRMS' },
-                synonym:     { cls: 'fb-synonym',   icon: '🔄', label: 'Tên cũ — đã được cập nhật' },
-                uncertain:   { cls: 'fb-synonym',   icon: '⚠️', label: 'Trạng thái phân loại chưa rõ' },
-                not_found:   { cls: 'fb-not-found', icon: '❓', label: 'Chưa xác minh được trên WoRMS' },
-                parse_error: { cls: 'fb-unknown',   icon: '⚠️', label: 'Không phân tích được tên khoa học' }
-            };
-
-            const s        = statusMap[fb.status] || statusMap['not_found'];
-            const syncDate = fb.syncedAt ? fb.syncedAt.substring(0, 10) : '';
-            const wormsId  = fb.wormsId;
-            const wormsUrl = wormsId ? `https://www.marinespecies.org/aphia.php?p=taxdetails&id=${wormsId}` : null;
-
-            let detail = '';
-            if (fb.status === 'valid') {
-                detail = `Tên được xác nhận${syncDate ? ` · cập nhật WoRMS: ${fb.lastUpdated || syncDate}` : ''}`;
-            } else if (fb.status === 'synonym') {
-                detail = `Tên hiện hành: <span class="fb-accepted">${fb.acceptedName || '?'}</span>${fb.lastUpdated ? ` · cập nhật: ${fb.lastUpdated}` : ''}`;
-            } else {
-                detail = fb.note || 'Chưa xác minh được trên WoRMS';
-            }
-
-            const linkHtml = wormsUrl
-                ? `<a href="${wormsUrl}" class="fb-link" target="_blank" rel="noopener">→ Xem trên WoRMS (marinespecies.org)</a>`
-                : '';
-
-            return `
-            <div class="fishbase-bar ${s.cls}">
-                <span class="fb-icon">${s.icon}</span>
-                <div class="fb-body">
-                    <div class="fb-label">WoRMS — ${s.label}</div>
-                    <div class="fb-detail">${detail}</div>
-                    ${linkHtml}
-                </div>
-            </div>`;
-        }
-
-        // Dịch nhanh tình trạng VN → EN
-        function translateStatus(vnStatus) {
-            if (!vnStatus) return '';
-            const map = [
-                ['Thường gặp, số lượng rất nhiều', 'Common, very abundant'],
-                ['Thường gặp, số lượng nhiều',     'Common, abundant'],
-                ['Thường gặp',                     'Common'],
-                ['Rất hiếm gặp',                   'Very rare'],
-                ['Rất hiếm',                       'Very rare'],
-                ['Rất ít gặp',                     'Very uncommon'],
-                ['Hiếm gặp',                       'Rare'],
-                ['Hiếm',                           'Rare'],
-                ['Ít gặp',                         'Uncommon'],
-            ];
-            for (const [vn, en] of map) {
-                if (vnStatus.includes(vn)) {
-                    // Giữ dấu chấm nếu có
-                    return vnStatus.trim().endsWith('.') ? en + '.' : en;
-                }
-            }
-            return vnStatus; // fallback: giữ nguyên nếu không có bản dịch
-        }
-
-        function formatOneSynonym(text) {
-            if (!text) return '';
-            let trimmed = text.trim();
-            if (!trimmed) return '';
-            // In nghiêng phần Genus species (hoặc Genus (Subgenus) species) ở đầu dòng
-            return trimmed.replace(/^([A-Z][a-z\-]+(?: \([A-Z][a-z\-]+\))? [a-z\-]+)(.*)/, '<i>$1</i>$2');
-        }
-
-        function formatSynonymsArray(arr) {
-            if (!arr || !arr.length) return '';
-            return arr.map(s => formatOneSynonym(s)).filter(Boolean).join('<br><br>');
-        }
-
-        function renderSpecies(sp, fb = null) {
-            const container = document.getElementById('speciesDetail');
-            
-            const tax = sp.taxonomy || {};
-            const vn = (sp.specs && sp.specs.vn) || {};
-            const en = (sp.specs && sp.specs.en) || {};
-            
-            let taxHTML = '';
-            if (tax.order && tax.order.vn) {
-                taxHTML += `<div class="tax-badge"><span class="tax-badge-label">Bộ:</span> <span class="tax-badge-value">${tax.order.vn.toUpperCase()}</span> <span class="tax-badge-en">(${tax.order.latin || ''})</span></div>`;
-            }
-            if (tax.family && tax.family.vn) {
-                taxHTML += `<div class="tax-badge"><span class="tax-badge-label">Họ:</span> <span class="tax-badge-value">${tax.family.vn.toUpperCase()}</span> <span class="tax-badge-en">(${tax.family.latin || ''})</span></div>`;
-            }
-            if (tax.genus && tax.genus.vn) {
-                taxHTML += `<div class="tax-badge"><span class="tax-badge-label">Giống:</span> <span class="tax-badge-value">${tax.genus.vn}</span> <span class="tax-badge-en">(${tax.genus.latin || ''})</span></div>`;
-            }
-
-            const cleanAuthorship = (sp.authorship || '').replace(/"/g, '').trim();
-
-            const volClass = sp.volume ? `vol-${sp.volume}` : '';
-
-            container.innerHTML = `
-                <div class="species-card ${volClass}">
-                ${sp.image ? `
-                <div class="hero-image-container">
-                    <img src="${sp.image}" alt="${sp.vnName}" class="hero-image">
-                </div>
-                ` : ''}
-
-                <div class="sp-header">
-                    <h1 class="sp-title">${sp.vnName}</h1>
-                    <div class="sp-sci-title">${sp.scientificName} <span class="sp-author">${cleanAuthorship}</span></div>
-                    ${buildFishbaseBadge(fb)}
-                </div>
-                
-                <div class="taxonomy-bar">
-                    ${taxHTML}
-                </div>
-                
-                <div class="grid-info">
-                    <!-- Tiếng Việt Panel -->
-                    <div class="info-panel">
-                        <div class="panel-title">
-                            Thông số tiếng Việt
-                            <span class="panel-badge">VN</span>
-                        </div>
-                        
-                        <div class="info-item info-item-featured"><div class="info-label">Tên gọi khác</div><div class="info-value">${vn.alternateNames || vn.synonyms || '—'}</div></div>
-                        <div class="info-item"><div class="info-label">Kích thước</div><div class="info-value">${vn.size || '—'}</div></div>
-                        <div class="info-item"><div class="info-label">Phân bố</div><div class="info-value">${vn.distribution || '—'}</div></div>
-                        <div class="info-item"><div class="info-label">Nơi lưu trữ mẫu</div><div class="info-value">${vn.specimen || '—'}</div></div>
-                        <div class="info-item"><div class="info-label">Tình trạng</div><div class="info-value">${vn.status || '—'}</div></div>
-                        <div class="info-item"><div class="info-label">Tài liệu dẫn</div><div class="info-value">${vn.literature || '—'}</div></div>
-                    </div>
-                    
-                    <!-- English Panel -->
-                    <div class="info-panel">
-                        <div class="panel-title">
-                            English Specifications
-                            <span class="panel-badge">EN</span>
-                        </div>
-                        
-                        <div class="info-item info-item-featured"><div class="info-label">Common Name</div><div class="info-value">${en.commonName || en.common_name || '—'}</div></div>
-                        <div class="info-item"><div class="info-label">Size</div><div class="info-value">${en.size || '—'}</div></div>
-                        <div class="info-item"><div class="info-label">Distribution</div><div class="info-value">${en.distribution || '—'}</div></div>
-                        <div class="info-item"><div class="info-label">Conservation / Specimen</div><div class="info-value">${en.conservation || en.specimen || '—'}</div></div>
-                        <div class="info-item"><div class="info-label">Status</div><div class="info-value">${en.status || translateStatus(vn.status) || '—'}</div></div>
-                        <div class="info-item"><div class="info-label">Literature</div><div class="info-value">${en.literature || '—'}</div></div>
-                    </div>
-                </div>
-                
-                ${(sp.synonyms && sp.synonyms.length > 0) ? `
-                <details class="synonym-details">
-                    <summary class="synonym-summary">
-                        Danh pháp đồng nghĩa (Synonyms) & Phân loại học gốc
-                    </summary>
-                    <div class="synonym-content-inner">
-                        <div class="synonym-content">${formatSynonymsArray(sp.synonyms)}</div>
-                    </div>
-                </details>
-                ` : ''}
-                </div>
-            `;
-            container.style.display = 'block';
-            document.title = `${sp.vnName} - Danh Mục Cá Biển Việt Nam`;
-        }
-    </script>
-<script src="assets/shared.js"></script></body>
+<script type="module" src="/src/pages/species.js"></script>
+</body>
 </html>

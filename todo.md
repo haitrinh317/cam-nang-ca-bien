@@ -1,7 +1,7 @@
 # TODO — Dự án OCR Cá biển Việt Nam
 
-> Cập nhật: 2026-07-27 16:33
-> Next Session Starting Point: Re-OCR targeted pages cho 50 loài skeleton Tập III → deploy
+> Cập nhật: 2026-07-30 16:08
+> Next Session Starting Point: Vá RLS species table → setup Supabase Auth → Admin UI
 
 ## ✅ Hoàn thành
 
@@ -63,3 +63,24 @@
 - [ ] Deploy bản restore mới nhất lên Vercel
 - [ ] WoRMS sync cho loài mới (Tập III chưa sync)
 - [ ] Loài 78 Tập IV bị thiếu data trong OCR gốc
+
+### Admin Panel (Hướng 1: Supabase Auth + Dashboard)
+
+#### Phase 1 — Vá RLS (ưu tiên cao)
+- [ ] Sửa RLS policy: xóa "Service write access" mở toang
+- [ ] Tạo policy mới: chỉ `service_role` hoặc authenticated user có role admin mới write được
+- [ ] Test: confirm anon key chỉ SELECT, không INSERT/UPDATE/DELETE
+
+#### Phase 2 — Auth + Admin UI
+- [ ] Enable Supabase Auth (email/password hoặc Google OAuth)
+- [ ] Tạo bảng `profiles` (id, email, role: admin/editor/viewer, created_at)
+- [ ] Viết migration `002_create_profiles_and_fix_rls.sql`
+- [ ] Xây `/admin.html` — danh sách loài + tìm kiếm/lọc
+- [ ] Form thêm/sửa/xóa loài (CRUD đầy đủ)
+- [ ] Bulk import từ CSV/JSON
+- [ ] Audit log (ai sửa gì, lúc nào)
+
+#### Phase 3 — Multi-user (tương lai)
+- [ ] Phân quyền editor: chỉ sửa loài mình phụ trách
+- [ ] Admin toàn quyền
+- [ ] Invite system cho collaborators

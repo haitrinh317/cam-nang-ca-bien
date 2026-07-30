@@ -1,28 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&subset=vietnamese&display=swap');
 
 :root {
-    --bg-base: #090a0f;
-    --bg-surface: rgba(22, 26, 38, 0.85);
-    --bg-surface-hover: rgba(30, 36, 52, 0.95);
+    --bg-base: #0B0F19; /* Deep Navy/Black */
+    --bg-surface: #131B2B; /* Solid Dark Slate */
+    --bg-surface-hover: #1A2438;
     
-    --brand-primary: hsl(230, 100%, 68%);
-    --brand-secondary: hsl(280, 100%, 65%);
-    --brand-accent: hsl(180, 100%, 50%);
+    --brand-primary: #0EA5E9; /* Sky 500 */
+    --brand-secondary: #38BDF8; /* Sky 400 */
+    --brand-accent: #E0F2FE; /* Sky 100 */
     
-    --text-primary: #ffffff;
-    --text-secondary: #cbd5e1;
-    --text-muted: #94a3b8;
+    --text-primary: #F8FAFC; /* Slate 50 */
+    --text-secondary: #94A3B8; /* Slate 400 */
+    --text-muted: #64748B; /* Slate 500 */
     
-    --border-color: rgba(255, 255, 255, 0.12);
-    --glass-border: rgba(255, 255, 255, 0.15);
+    --border-color: #1E293B; /* Slate 800 */
     
     --font-display: 'Be Vietnam Pro', sans-serif;
     --font-body: 'Be Vietnam Pro', sans-serif;
     
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    --glow-primary: 0 0 40px rgba(88, 101, 242, 0.35);
 }
 
 * {
@@ -33,10 +30,6 @@
 
 body {
     background-color: var(--bg-base);
-    background-image: 
-        radial-gradient(circle at 15% 50%, rgba(88, 101, 242, 0.15), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(162, 89, 255, 0.15), transparent 25%);
-    background-attachment: fixed;
     color: var(--text-primary);
     font-family: var(--font-body);
     line-height: 1.6;
@@ -60,14 +53,12 @@ a:hover {
     color: var(--brand-accent);
 }
 
-/* Glassmorphism Utilities */
+/* Archive Panel (Former Glass Panel) */
 .glass-panel {
     background: var(--bg-surface);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: none;
 }
 
 /* Header */
@@ -76,8 +67,7 @@ a:hover {
     top: 0;
     z-index: 100;
     padding: 0.75rem 0;
-    background: rgba(10, 10, 15, 0.88);
-    backdrop-filter: blur(20px);
+    background: var(--bg-surface);
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -104,12 +94,9 @@ a:hover {
     text-decoration: none;
 }
 
-/* Logo text gradient — chỉ áp dụng cho span con, không áp lên img */
+/* Logo text */
 .logo span {
-    background: linear-gradient(135deg, #fff, #94a3b8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-primary);
 }
 
 /* Logo khi dùng ảnh (img tag) */
@@ -146,8 +133,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, var(--brand-primary), var(--brand-secondary));
-    border-radius: 2px;
+    background: var(--brand-primary);
 }
 
 /* Container */
@@ -167,9 +153,7 @@ a:hover {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-primary);
 }
 
 .hero p {
@@ -200,9 +184,7 @@ a:hover {
     font-size: 2.8rem;
     font-weight: 800;
     font-family: var(--font-display);
-    background: linear-gradient(135deg, var(--brand-primary), hsl(260, 100%, 72%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--brand-primary);
     letter-spacing: -0.03em;
     line-height: 1;
     font-variant-numeric: tabular-nums;
@@ -243,16 +225,14 @@ a:hover {
     align-items: center;
     background: var(--bg-surface);
     border: 1px solid var(--border-color);
-    border-radius: 99px;
+    border-radius: 4px;
     padding: 0.5rem 1.5rem;
     transition: var(--transition-normal);
-    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
 }
 
 .search-input-container:focus-within {
     border-color: var(--brand-primary);
-    box-shadow: var(--glow-primary);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
 }
 
 .search-input-container svg {
@@ -286,9 +266,8 @@ a:hover {
     left: 0;
     width: 100%;
     background: var(--bg-surface);
-    backdrop-filter: blur(20px);
     border: 1px solid var(--border-color);
-    border-radius: 16px;
+    border-radius: 4px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.4);
     opacity: 0;
     visibility: hidden;
@@ -348,21 +327,20 @@ a:hover {
 
 .vol-badge {
     padding: 0.25rem 0.75rem;
-    border-radius: 99px;
+    border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    background: rgba(88, 101, 242, 0.2);
-    color: #a5b4fc;
-    border: 1px solid rgba(88, 101, 242, 0.3);
+    background: var(--bg-surface-hover);
+    color: var(--brand-secondary);
+    border: 1px solid var(--border-color);
 }
 
-.vol-badge.v1 { background: rgba(88,101,242,0.15); color: #a5b4fc; }
-.vol-badge.v2 { background: rgba(52,211,153,0.15); color: #6ee7b7; }
-.vol-badge.v3 { background: rgba(248,113,113,0.15); color: #fca5a5; }
-.vol-badge.v4 { background: rgba(251,191,36,0.15); color: #fcd34d; }
-.vol-badge.v5 { background: rgba(167,139,250,0.15); color: #c4b5fd; }
+.vol-badge.v1, .vol-badge.v2, .vol-badge.v3, .vol-badge.v4, .vol-badge.v5 {
+    background: var(--bg-surface-hover); 
+    color: var(--brand-secondary);
+}
 
 /* Micro Animations */
 @keyframes fadeUp {
@@ -389,10 +367,10 @@ a:hover {
 .hero-image-container {
     width: 100%;
     margin-bottom: 2rem;
-    border-radius: 16px;
+    border-radius: 4px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 1px solid var(--border-color);
 }
 
 .hero-image {
@@ -409,15 +387,15 @@ a:hover {
 }
 
 details.synonym-details {
-    background: rgba(15, 20, 30, 0.4);
-    border: 1px solid rgba(255,255,255,0.03);
-    border-radius: 12px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
     padding: 0;
     overflow: hidden;
     transition: var(--transition-normal);
 }
 details.synonym-details:hover {
-    border-color: rgba(255,255,255,0.08);
+    border-color: var(--text-muted);
 }
 
 summary.synonym-summary {
@@ -434,4 +412,6 @@ summary.synonym-summary {
     align-items: center;
     user-select: none;
 }
-summary.synonym-summary::-
+summary.synonym-summary::-webkit-details-marker {
+    display: none;
+}

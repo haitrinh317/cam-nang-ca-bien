@@ -1,6 +1,12 @@
 # ===== Vercel local =====
 .vercel/
 
+# ===== Vite / Node =====
+node_modules/
+dist/
+.env
+.env.local
+
 # ===== OCR / Raw data =====
 *.png
 *.jpg
@@ -9,8 +15,7 @@
 *.csv
 *.psv
 
-# ===== Python scripts & artifacts =====
-*.py
+# ===== Python artifacts =====
 __pycache__/
 *.pyc
 *.pyo
@@ -19,14 +24,12 @@ venv/
 
 # ===== Scratch & temp =====
 scratch/
-v1/
+scratch_images/
+v1_backup/
 .backups/
+
+# ===== Legacy HTML (đã backup) =====
 cam_nang_ca_bien_sample.html
-tap-1.html
-tap-2.html
-tap-3.html
-tap-4.html
-tap-5.html
 
 # ===== Agent / IDE internal =====
 .agents/

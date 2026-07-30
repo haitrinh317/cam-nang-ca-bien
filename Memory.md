@@ -1,7 +1,8 @@
 # Memory — OCR Cá biển Việt Nam
 
-> Cập nhật lần cuối: 2026-07-27 16:21
+> Cập nhật lần cuối: 2026-07-30 16:08
 > Production URL: https://cam-nang-ca-bien.vercel.app
+> Vercel Dashboard: https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien
 
 ## Kiến trúc Web App (v2 — hiện tại)
 
@@ -14,6 +15,7 @@
 | `species.html` | `data/species.json` + `data/fishbase_sync.json` | Chi tiết loài |
 | `assets/shared.css` | — | CSS toàn cục + back-to-top styles |
 | `assets/shared.js` | — | Back-to-top button injection |
+| `assets/logo.png` | — | Logo website |
 
 ### Volume Color System
 | Tập | Hex | CSS var |
@@ -24,48 +26,89 @@
 | 4 | #fbbf24 (amber) | `.vol-4` |
 | 5 | #60a5fa (blue) | `.vol-5` |
 
-### Schema chuẩn `species.json`
+### Schema chuẩn `species.json` (Gold Standard: `tap1-species-1`)
 ```json
 {
-  "id": "tap4-species-82",
-  "volume": 4,
-  "speciesIndex": 82,
-  "vnName": "Cá Mó đen",
-  "scientificName": "Scarus niger",
-  "authorship": "Forskal, 1775",
+  "id": "tap1-species-1",
+  "volume": 1,
+  "speciesIndex": 1,
+  "vnName": "Cá lưỡng tiêm",
+  "scientificName": "Branchiostoma belcheri",
+  "authorship": "(Gray, 1847)",
   "status": "common",
   "taxonomy": {
-    "order":  { "vn": "Cá Vược", "latin": "PERCIFORMES" },
-    "family": { "vn": "Họ Cá Mó", "latin": "SCARIDAE" },
-    "genus":  { "vn": "Giống Cá Mó Scarus Forskal, 1775", "latin": "Scarus" }
+    "order":  { "vn": "Cá Lưỡng Tiêm", "latin": "Amphioxiformes" },
+    "family": { "vn": "Cá Lưỡng Tiêm", "latin": "Branchiostomidae" },
+    "genus":  { "vn": "Cá lưỡng tiêm Branchiostoma Costa, 1834", "latin": "Branchiostoma Costa, 1834" }
   },
   "specs": {
     "vn": {
-      "alternateNames": "",
-      "size": "Kích thước: ...",
-      "distribution": "Phân bố: ...",
-      "specimen": "Nơi lưu trữ mẫu: ...",
-      "status": "Tình trạng: ...",
-      "literature": "Tài liệu dẫn: ..."
+      "alternateNames": "Cá lưỡng tiêm",
+      "size": "Thường gặp 42 - 47mm, lớn nhất 57mm.",
+      "distribution": "Đông Phi, Ấn Độ, Indonesia, ..., Việt Nam. Vịnh Bắc Bộ, Trung Bộ.",
+      "specimen": "Viện Hải Dương học (Nha Trang).",
+      "status": "Thường gặp, nhưng số lượng ít.",
+      "literature": "Chu Nguyên Đinh, 1963. Nguyễn Khắc Hường, 1992."
     },
     "en": {
-      "commonName": "Black parrotfish",
-      "size": "Size: ...",
-      "distribution": "Distribution: ...",
-      "specimen": "Conservation: ...",
-      "status": "Status: ...",
-      "literature": "Literature: ..."
+      "commonName": "Lancelet",
+      "size": "Ordinary 42 - 47mm, maximum 57mm.",
+      "distribution": "East Africa, India, ..., Vietnam. Gulf of Tonkin, Coast of Central Vietnam.",
+      "specimen": "Institute of Oceanography (Nha Trang).",
+      "status": "Common, seldom abundant.",
+      "literature": "Chu, 1963. Nguyen Khac Huong, 1992."
     }
   },
-  "synonyms": ["Scarus niger Forskal, ..."]
+  "synonyms": ["Branchiostoma Costa, Cenni Zool. Napol., p. 49, 1834. ..."]
 }
+```
+
+**Lưu ý schema:**
+- taxonomy chỉ có 3 cấp: `order`, `family`, `genus` (KHÔNG có class/subclass/suborder)
+- taxonomy.*.vn: KHÔNG có prefix "Bộ"/"Họ"/"Giống"
+- taxonomy.*.latin: Title Case (KHÔNG ALL CAPS)
+- specs values: KHÔNG có prefix label ("Kích thước:", "Size:")
+- status chỉ nhận: `common`, `uncommon`, `rare`, `unknown`
+
+## Cấu trúc thư mục
+
+```
+OCR Document/
+├── index.html, browse.html, species.html, tap.html  ← source HTML (sửa ở đây)
+├── assets/
+│   ├── shared.css, shared.js                        ← source CSS/JS
+│   └── logo.png
+├── data/
+│   ├── species.json          (2.8MB — CSDL chính)
+│   ├── taxonomy_tree.json    (341KB — cây phân loại)
+│   ├── fishbase_sync.json    (569KB — WoRMS validation)
+│   ├── stats.json            (thống kê)
+│   ├── parsed/               ← nguồn build database
+│   │   ├── tap3_parsed_details.json
+│   │   ├── tap4_parsed_details.json
+│   │   └── tap5_parsed_details.json
+│   └── raw/                  ← PDF nguồn gốc (tap1-5)
+├── scripts/                  ← 6 pipeline scripts chính
+│   ├── build_database.py     (build species.json)
+│   ├── build_taxonomy_tree.py
+│   ├── enrich_names.py       (enrichment pipeline)
+│   ├── audit_species.py      (data quality)
+│   ├── sync_fishbase.py      (WoRMS sync)
+│   └── update_indexes.py
+├── public/                   ← Vercel serve từ đây
+│   ├── *.html, assets/, data/
+├── Documents/                ← PDF sách gốc
+├── .agents/                  ← AI skills
+├── v1_backup/                ← scripts cũ, scratch, legacy HTML
+├── Memory.md, todo.md
+├── vercel.json, .gitignore, .vercelignore
 ```
 
 ### Build pipeline
 ```
-scratch/tap3_parsed_details.json  ─┐
-scratch/tap4_parsed_details.json  ─┼─> scripts/build_database.py ─> data/species.json
-scratch/tap5_parsed_details.json  ─┘                              ─> data/taxonomy_tree.json
+data/parsed/tap3_parsed_details.json  ─┐
+data/parsed/tap4_parsed_details.json  ─┼─> scripts/build_database.py ─> data/species.json
+data/parsed/tap5_parsed_details.json  ─┘                              ─> data/taxonomy_tree.json
 ```
 
 ### Enrichment pipeline
@@ -75,62 +118,80 @@ data/species.json → scripts/enrich_names.py --volume X → Wikidata (commonNam
 ```
 Skills: `enrich-cabien` (tên gọi) + `audit-cabien` (data quality)
 
+### OCR pipeline
+```
+PDF → scripts/pdf_to_images.py → PNG → view_file (AI Vision built-in) → JSON
+→ Chuẩn hóa → WoRMS verify → Merge 3 file CSDL
+```
+Skill: `ocr-pdf-cabien` (v1.3.0 — dùng AI Vision built-in, KHÔNG gọi API Gemini)
+
 ## Dữ liệu nguồn
 
-| Tập | File nguồn | Số loài | Trạng thái |
-|---|---|---|---|
-| I | `data/species.json` (volume=1) | 101 | ✅ Hoàn chỉnh nhất |
-| II | `data/species.json` (volume=2) | 266 | ✅ Enriched: EN 232/266, VN 240/266 |
-| III | `data/species.json` (volume=3) | 518 | ⚠️ EN 100%, VN 47%, 60 skeleton cần FishBase |
-| IV | `scratch/tap4_parsed_details.json` (list) | 316 | ⚠️ Loài 1-100 chuẩn, 101-316 còn thô |
-| V | `scratch/tap5_parsed_details.json` (list) | 199 | ⚠️ OCR thô, tên VN lỗi |
+| Tập | Số loài | Trạng thái |
+|---|---|---|
+| I | 101 | ✅ Hoàn chỉnh nhất |
+| II | 266 | ✅ Enriched: EN 232/266, VN 240/266 |
+| III | 518 | ⚠️ EN 100%, VN 47%, 60 skeleton cần FishBase |
+| IV | 316 | ⚠️ Loài 1-100 chuẩn, 101-316 còn thô |
+| V | 199 | ⚠️ OCR thô, tên VN lỗi |
 
 ## Taxonomy Tree
 - **3 lớp**: Cá Sụn (93 loài, 6 bộ) · Cá Lưỡng Tiêm (1) · Cá Xương (1.107, 21 bộ)
-- Mapping order → class: hardcoded trong `scripts/build_taxonomy_tree.py` (line 60-74)
-- **Quan trọng**: Phải rebuild tree sau mỗi lần thêm/sửa loài: `python scripts/build_taxonomy_tree.py`
-
-## Quy trình OCR thủ công (Tập IV)
-1. Script `scripts/ocr_tap4_species_61_100.py` chạy EasyOCR → `tap4_parsed_details.json` (thô)
-2. Tạo patch script `scratch/patch_parsed_XX_YY.py` sửa tên VN, taxonomy, synonyms
-3. Chạy patch → cập nhật `tap4_parsed_details.json`
-4. Chạy `scripts/build_database.py` → cập nhật `data/species.json`
-5. Chạy `scripts/build_taxonomy_tree.py` → cập nhật `data/taxonomy_tree.json`
-6. Copy files sang `public/` → deploy
+- Mapping order → class: hardcoded trong `scripts/build_taxonomy_tree.py`
+- **Quan trọng**: Phải rebuild tree sau mỗi lần thêm/sửa loài
 
 ## Quy tắc quan trọng
-- **Tên gọi khác (alternateNames)** là trường BẮT BUỘC — UI luôn hiển thị hàng này (dùng '—' nếu trống)
-- **Common Name (EN)** — tương tự, luôn hiển thị
-- **Encoding**: luôn dùng `sys.stdout.reconfigure(encoding='utf-8')` trong mọi script Python trên Windows
-- **Không dùng Gemini API** cho OCR, chỉ EasyOCR offline + sửa thủ công
+- **alternateNames** là trường BẮT BUỘC — UI luôn hiển thị (dùng '—' nếu trống)
+- **commonName (EN)** — tương tự, luôn hiển thị
+- **Encoding**: luôn dùng `sys.stdout.reconfigure(encoding='utf-8')` trong Python trên Windows
 - **Template species.html**: luôn hiển thị 12 trường (6 VN + 6 EN), dùng '—' cho null
-- **Không dùng PSV** nữa — toàn bộ tập trung vào parsed JSON
-- **Không dùng tap-N.html** nữa — web app chỉ có 4 file HTML + shared assets
 - **Sync public/**: Sau mỗi thay đổi HTML/CSS/JS, phải copy sang `public/` trước khi deploy
 
 ## Deploy
-- Platform: Vercel CLI (`vercel --prod --yes` từ root dự án)
+- Platform: Vercel CLI (`vercel --prod --yes` từ root)
 - GitHub: `https://github.com/haitrinh317/cam-nang-ca-bien` (branch: master)
-- Workflow: git push (version history) + vercel --prod (CDN) — cả 2 mỗi lần
-- Production URL: https://cam-nang-ca-bien.vercel.app
-- **CSS versioning**: Dùng `?v=N` trong link CSS để bust CDN cache khi CSS thay đổi (hiện tại: `?v=2`)
-- **Lưu ý**: Vercel CDN cache static assets aggressive — sau deploy phải fetch trực tiếp URL để verify nội dung mới đã lên
-- **PowerShell encoding**: PHẢI dùng `[System.IO.File]::ReadAllText/WriteAllText` với `UTF8` — KHÔNG dùng `Get-Content | Set-Content` (mangle UTF-8)
+- Workflow: git push (version history) + vercel --prod (CDN)
+- **CSS versioning**: Dùng `?v=N` trong link CSS để bust CDN cache
+- **PowerShell encoding**: PHẢI dùng `[System.IO.File]::ReadAllText/WriteAllText` với `UTF8`
+- **Lưu ý Rollback**: Nếu đã dùng Instant Rollback trên Vercel, bản deploy mới sẽ bị ghim — phải vào dashboard Promote to Production thủ công
+
+## Supabase Database (v2 — hiện tại)
+
+### Bảng `species`
+- 21+ trường: identity, taxonomy (4 cấp), specs VN/EN, WoRMS, metadata
+- RLS enabled, FTS index (simple tokenizer)
+- View `taxonomy_tree` thay thế taxonomy_tree.json
+- Scripts: `import_to_supabase.py`, `upsert_species.py`, `build_database.py`
+- Migration: `scripts/migrations/001_create_species_table.sql`
+
+### ⚠️ Lỗ hổng RLS hiện tại
+- Policy "Service write access" đang `USING (true)` — anon key ghi được
+- anon key đã public trên frontend → ai cũng INSERT/UPDATE/DELETE được
+- **Cần vá ngay**: lock write cho `service_role` only
+
+### Admin Panel — Hướng 1: Supabase Auth + Admin Dashboard
+**Quyết định 2026-07-30**: Đi theo Hướng 1 (Supabase Auth + Custom Admin UI), chia 3 phase:
+
+| Phase | Nội dung | Trạng thái |
+|---|---|---|
+| **Phase 1** | Vá RLS — lock write cho `service_role` only | 🔲 Chưa làm |
+| **Phase 2** | Supabase Auth + bảng `profiles` + `/admin.html` (CRUD, bulk import, audit log) | 🔲 Chưa làm |
+| **Phase 3** | Phân quyền multi-user (editor chỉ sửa loài mình, admin toàn quyền) | 🔲 Tương lai |
 
 ## Decisions
-- 2026-07-24: Volume color system (5 màu cố định) — dùng CSS custom properties
+- 2026-07-24: Volume color system (5 màu cố định) — CSS custom properties
 - 2026-07-24: `shared.js` inject back-to-top — không copy-paste HTML
-- 2026-07-24: `build_taxonomy_tree.py` dùng `.get()` cho optional fields
 - 2026-07-24: Tập I hoàn chỉnh nhất, II-V badge "Đang cập nhật"
-- 2026-07-24: Chuyển hoàn toàn sang kiến trúc 4-HTML + species.json. Bỏ legacy tap-N.html và PSV.
-- 2026-07-23: Quy trình OCR: EasyOCR → patch thủ công → build_database.py
-- 2026-07-23: alternateNames là trường bắt buộc
-- 2026-07-24 chiều: Mobile logo dùng 2 span `.logo-full`/`.logo-short` toggle CSS (không dùng `::after` trick — conflict webkit-text-fill-color)
-- 2026-07-24 chiều: Vercel CLI deploy (không có GitHub auto-trigger) — phải chạy cả `git push` + `vercel --prod`
-- 2026-07-24 chiều: Skill `deploy-cabien` tự động hóa toàn bộ quy trình deploy
-- 2026-07-24 tối: Vercel CDN cache static assets — dùng `?v=N` query string để bust cache sau mỗi lần thay CSS/JS
-- 2026-07-24 tối: PowerShell encoding — PHẢI dùng `[System.IO.File]::ReadAllText/WriteAllText` với UTF8 explicit
-- 2026-07-27: Tách enrichment thành skill riêng `enrich-cabien` — dễ gọi lại bất kỳ lúc nào
-- 2026-07-27: Tạo skill `audit-cabien` — kiểm tra data quality + auto-fix từ OCR batch + mirror VN→EN
-- 2026-07-27: Template species.html luôn hiển thị 12 trường — không ẩn khi null
-- 2026-07-27: Wikidata không phải nguồn tốt cho alternateNames cá biển VN (47% có = đúng bản chất sách)
+- 2026-07-24: Kiến trúc 4-HTML + species.json. Bỏ legacy tap-N.html và PSV
+- 2026-07-24: Mobile logo dùng 2 span `.logo-full`/`.logo-short` toggle CSS
+- 2026-07-24: Vercel CLI deploy — phải chạy cả `git push` + `vercel --prod`
+- 2026-07-24: Vercel CDN cache — dùng `?v=N` query string bust cache
+- 2026-07-24: PowerShell encoding — `[System.IO.File]::ReadAllText/WriteAllText` UTF8
+- 2026-07-27: Skill `enrich-cabien` — enrichment tên gọi
+- 2026-07-27: Skill `audit-cabien` — data quality + auto-fix
+- 2026-07-27: Wikidata không phải nguồn tốt cho alternateNames cá biển VN
+- 2026-07-30: Dọn dẹp project — chuyển ~400 files (52 scripts cũ + 328 scratch + data trung gian) vào v1_backup/
+- 2026-07-30: Parsed details chuyển từ scratch/ sang data/parsed/ (nguồn build database)
+- 2026-07-30: Skill ocr-pdf-cabien v1.3.0 — bỏ Gemini Vision API, dùng AI Vision built-in (view_file)
+- 2026-07-30: Vercel Rollback ghim production — cần Promote to Production thủ công sau deploy mới
+- 2026-07-30: Admin Panel → Hướng 1 (Supabase Auth + Admin Dashboard), 3 phase: vá RLS → Auth+CRUD → multi-user
