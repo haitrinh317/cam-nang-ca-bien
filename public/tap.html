@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duyệt Theo Tập - Danh Mục Cá Biển Việt Nam</title>
-    <link rel="stylesheet" href="assets/shared.css?v=2">
+    <title>Duyệt Theo Tập — Bảo tàng Hải dương học</title>
+    <link rel="stylesheet" href="assets/shared.css">
     <style>
         .page-header {
             text-align: center;
@@ -29,28 +29,11 @@
             cursor: pointer;
         }
 
-        .vol-tab:hover { background: rgba(255,255,255,0.08); color: #fff; }
-
-        /* Per-volume active colors matching species-card accent bars */
-        .vol-tab.active[data-vol="1"] { background: rgba(129,140,248,0.15); border-color: rgba(129,140,248,0.5); color: #818cf8; }
-        .vol-tab.active[data-vol="2"] { background: rgba(52,211,153,0.15); border-color: rgba(52,211,153,0.5); color: #34d399; }
-        .vol-tab.active[data-vol="3"] { background: rgba(248,113,113,0.15); border-color: rgba(248,113,113,0.5); color: #f87171; }
-        .vol-tab.active[data-vol="4"] { background: rgba(251,191,36,0.15); border-color: rgba(251,191,36,0.5); color: #fbbf24; }
-        .vol-tab.active[data-vol="5"] { background: rgba(96,165,250,0.15); border-color: rgba(96,165,250,0.5); color: #60a5fa; }
-
-        /* Mini card left accent bar matching active volume */
-        .species-card-mini { position: relative; overflow: hidden; }
-        .species-card-mini::before {
-            content: '';
-            position: absolute;
-            left: 0; top: 0; bottom: 0;
-            width: 3px;
-            background: var(--vol-color, var(--brand-primary));
-            border-radius: 12px 0 0 12px;
-            opacity: 0.6;
-            transition: opacity 0.2s;
+        .vol-tab:hover, .vol-tab.active {
+            background: rgba(88, 101, 242, 0.2);
+            border-color: rgba(88, 101, 242, 0.5);
+            color: #fff;
         }
-        .species-card-mini:hover::before { opacity: 1; }
 
         .grid-species {
             display: grid;
@@ -111,12 +94,8 @@
     <header class="site-header">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.9">
-                  <path d="M6.5 12c0-3.5 2.5-6 5.5-6 4 0 7 2.5 7 6s-3 6-7 6c-3 0-5.5-2.5-5.5-6z"/>
-                  <path d="M2 9c1 1 2 2 2 3s-1 2-2 3"/>
-                  <circle cx="16" cy="10" r="1" fill="currentColor"/>
-                </svg>
-                <span class="logo-full">DANH MỤC CÁ BIỂN VIỆT NAM</span><span class="logo-short">CÁ BIỂN VN</span>
+                <img src="assets/logo.png" alt="Logo Bảo tàng Hải dương học" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;">
+                <span class="logo-full">BẢO TÀNG HẢI DƯƠNG HỌC</span><span class="logo-short">BTHD</span>
             </a>
             <div class="nav-links">
                 <a href="index.html" class="nav-link">Trang Chủ</a>
@@ -158,8 +137,6 @@
     <script>
         let allSpecies = [];
         let currentVol = 4;
-
-        const volColors = { 1: '#818cf8', 2: '#34d399', 3: '#f87171', 4: '#fbbf24', 5: '#60a5fa' };
 
         // Xử lý URL param nếu có ?vol=4
         const urlParams = new URLSearchParams(window.location.search);
@@ -221,11 +198,12 @@
                 const order = (tax.order && tax.order.vn) ? tax.order.vn : '';
                 const family = (tax.family && tax.family.vn) ? tax.family.vn : '';
                 
-                // Tính ID gốc dựa vào speciesIndex
-                let shortId = sp.speciesIndex || '';
+                // Tính ID gốc dựa vào đoạn cuối của ID (ví dụ tap4-1-xxx -> 1)
+                const parts = sp.id.split('-');
+                let shortId = parts[1] || '';
 
                 return `
-                <a href="species.html?id=${sp.id}" class="species-card-mini" style="--vol-color:${volColors[volId] || 'var(--brand-primary)'}">
+                <a href="species.html?id=${sp.id}" class="species-card-mini">
                     <div class="scm-id">#${shortId}</div>
                     <div class="scm-name">${sp.vnName}</div>
                     <div class="scm-sci">${sp.scientificName}</div>
@@ -235,5 +213,5 @@
             }).join('');
         }
     </script>
-<script src="assets/shared.js"></script></body>
+</body>
 </html>
