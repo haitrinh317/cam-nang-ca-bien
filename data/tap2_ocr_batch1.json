@@ -1,0 +1,123 @@
+[
+  {
+    "id": "tap2-species-1",
+    "volume": 2,
+    "speciesIndex": 1,
+    "vnName": "Cá Cháo biển",
+    "scientificName": "Elops saurus",
+    "authorship": "Linnaeus, 1776",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Cháo Biển", "latin": "Elopiformes" },
+      "family": { "vn": "Cá Cháo Biển", "latin": "Elopidae" },
+      "genus": { "vn": "Cá Cháo biển Elops Linnaeus, 1758", "latin": "Elops Linnaeus, 1758" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "25 - 30 cm. Lớn nhất 120 cm.",
+        "distribution": "Nam Phi, Australia, Ấn Độ, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất ít gặp.",
+        "literature": "Vương Văn Tân, 1962, Nguyễn Khắc Hường, 1991. Carcasson, 1977."
+      },
+      "en": {
+        "commonName": "Big-eyed herring.",
+        "size": "25 - 30 cm. Maximum 120 cm.",
+        "distribution": "Southern Africa, Australia, India, Philippines, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very uncommon.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991. Carcasson, 1977."
+      }
+    },
+    "synonyms": [
+      "Elops saurus Linnaeus. Syst. Nat. ed. 12, 1, 1766, p. 518; Tirant, 1885.",
+      "Elops machnata (Forkal) - in Orsi: Pub. Seto Marine Biol. Lab. Vol.21, No.3/4, 1974, p.157."
+    ]
+  },
+  {
+    "id": "tap2-species-2",
+    "volume": 2,
+    "speciesIndex": 2,
+    "vnName": "Cá Cháo biển Hawai",
+    "scientificName": "Elops hawaiensis",
+    "authorship": "Regan, 1909",
+    "status": "rare",
+    "taxonomy": {
+      "order": { "vn": "Cá Cháo Biển", "latin": "Elopiformes" },
+      "family": { "vn": "Cá Cháo Biển", "latin": "Elopidae" },
+      "genus": { "vn": "Cá Cháo biển Elops Linnaeus, 1758", "latin": "Elops Linnaeus, 1758" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "[KHÔNG RÕ]",
+        "distribution": "Australia, Indonesia, Phlippines, Malaya, Trung Quốc, Hawaii, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Rất hiếm.",
+        "literature": "Durand, 1949. Herre, 1953."
+      },
+      "en": {
+        "commonName": "Hawaiian tarpon",
+        "size": "[KHÔNG RÕ]",
+        "distribution": "Australia, Malaya, Indonesia, Philippines, China, Hawaii, Vietnam. Gulf of Tonkin, Central Vietnam",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Durand, 1949. Herre, 1953."
+      }
+    },
+    "synonyms": [
+      "Elops saurus Bleeker, Atlas . Ichth., Vol.6, p.84, pl.218, 18. Jordan and Evermann, 1905. Fowler, 1941.",
+      "Elops hawaiensis Regan. Ann. Mag. Nat. Hist., ser. 8, Vol. 3, p.39, 1909. Gunther, 1910. Weber and de Beaufort, 1913. Fowler, 1927. Herre, 1940.",
+      "Elops hawaiensis Jordan and Richarson. Mem. Carn., Vol. 4, p. 165, pl.66, 1909."
+    ]
+  },
+  {
+    "id": "tap2-species-3",
+    "volume": 2,
+    "speciesIndex": 3,
+    "vnName": "Cá Cháo lớn",
+    "scientificName": "Megalops cyprinoides",
+    "authorship": "(Broussonet), 1782",
+    "status": "rare",
+    "taxonomy": {
+      "order": { "vn": "Cá Cháo Biển", "latin": "Elopiformes" },
+      "family": { "vn": "Cá Cháo Lớn", "latin": "Megalopidae" },
+      "genus": { "vn": "Cá Cháo lớn Megalops Lacepede, 1803", "latin": "Megalops Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "30 - 50 cm. Lớn nhất 150 cm.",
+        "distribution": "Đông Phi, Australia, Taihiti, India, Philippines, Micronesia, Melanesia, Polynesia, Nhật Bản, Trung Quốc, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Rất hiếm gặp.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Indo-Pacific tarpon, Oxeyed tarpon.",
+        "size": "30 - 50 cm. Maximum 150 cm.",
+        "distribution": "East Africa, Australia, Taihiti, India, Philippines, Micronesia, Melanesia, Polynesia, Japan, China, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupea cyprinoides Brousson et, Ichthyologia, pl .9, 1782; Bonnaterre, 1788; Bloch, 1795; Lacepede, 1803 .",
+      "Megalops filamentosus Lacepede, Hist. Nat. Poissons, Vol.5, pp.289,290, pl.13, fig.3, 1803; Bl eeker, 1866 -72.",
+      "Cyprinodon cundinga Hamilton [né Buchanan], Fishes Ganges pp.254, 283, 1822.",
+      "Megalops cyprinoides Swainson, Nat. Hist. Animals, vol.2, Fishes, p.292, 1838; Gunther, 1858; Bleeker, 1866-72; Day, 1889; Jordan & Seale, 1907; Weber & de Beaufort, 1913; Fowler, 1927; Fowler, 1928; Herre, 1936-37; Umali, 1934; Umali, 1938; Blanco, 1938.",
+      "Megalops setipinnis Richarson, Ann. Mag. Nat. Hist., Vol.11, p.493, 1843.",
+      "Megalops curtifilis Richarson, Ichth. China. Japan, p.310, 1846",
+      "Megalops indicus Currer and Valenciennes, Hist. Nat. Poissons,Vol. 19, p.388, pl.42, 1846.",
+      "Elops cundiga Cantor, Jour. Asiatic Soc. Bengal, Vol.18, p.1271, 1849.",
+      "Megalops macrophthalmus Bleeker, Nat. Tijds. Ned-Ind, Vol.1, p.421, 1850.",
+      "Megalops kundiga Jerdon, Madras Jour. Lit. Scei., Vol.17 , p.146, 1851; Bleeker, 1866-72.",
+      "Elops apalike Day, Fishes Malabar, p.228, 1865.",
+      "Megalops macropterus Bleeker, Ned. Tijds. Dierk., Vol.3, p.284, 1866; Bleeker, 1866-72.",
+      "Megalpos oligolepis Bleeker , Ned. Tijds. Dierk., Vol.3, p.292, 1866.",
+      "Brisbania staigeri Castelnau , Proc. Linn. Soc. New South Wales, Vol.2, p.241, pl.3, 1878."
+    ]
+  }
+]

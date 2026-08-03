@@ -4,757 +4,36 @@
     "latin": "Osteichthyes",
     "children": [
       {
-        "vn": "Bộ Cá Cháo Biển",
-        "latin": "ELOPIFORMES",
+        "vn": "Bộ Cá Chình",
+        "latin": "Anguilliformes",
         "children": [
           {
-            "vn": "Họ Cá Cháo Biển",
-            "latin": "ELOPIDAE",
+            "vn": "Họ Cá Lịch biển",
+            "latin": "Muraenidae",
             "children": [
               {
-                "vn": "Cá Cháo biển Elops Linnaeus, 1758",
-                "latin": "Elops Linnaeus, 1758",
+                "vn": "Cá Lịch Gymnothorax Bloch, 1795",
+                "latin": "Gymnothorax Bloch, 1795",
                 "species": [
-                  {
-                    "id": "tap2-species-1",
-                    "vnName": "Cá Cháo Biển",
-                    "scientificName": "Elops saurus"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Cháo Lớn",
-            "latin": "MEGALOPIDAE",
-            "children": [
-              {
-                "vn": "Cá Cháo lớn Megalops Lacepede, 1803",
-                "latin": "Megalops Lacepede, 1803",
-                "species": [
-                  {
-                    "id": "tap2-species-2",
-                    "vnName": "Cá Cháo Biển Hawai",
-                    "scientificName": "Elops hawaiensis"
-                  },
-                  {
-                    "id": "tap2-species-3",
-                    "vnName": "Cá Cháo Lớn",
-                    "scientificName": "Megalops cyprinoides"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Mòi Đường",
-            "latin": "ALBULIDAE",
-            "children": [
-              {
-                "vn": "Cá Mòi đường Albula Scopoli, 1777",
-                "latin": "Albula Scopoli, 1777",
-                "species": [
-                  {
-                    "id": "tap2-species-4",
-                    "vnName": "Cá Mòi Đường",
-                    "scientificName": "Albula vulpes"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Chình Biển Anguilliformes",
-        "latin": "ANGUILLIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Chình Biển Anguillidae",
-            "latin": "ANGUILLIDAE",
-            "children": [
-              {
-                "vn": "Cá Chình Anguilla Shaw, 1803",
-                "latin": "Anguilla Shaw, 1803",
-                "species": [
-                  {
-                    "id": "tap2-species-81",
-                    "vnName": "Cá Chình Xê-lê-bét",
-                    "scientificName": "Anguilla celebesensis"
-                  },
-                  {
-                    "id": "tap2-species-82",
-                    "vnName": "Cá Chình Cẩm Thạch",
-                    "scientificName": "Anguilla marmorata"
-                  },
-                  {
-                    "id": "tap2-species-83",
-                    "vnName": "Cá Chình Nhật",
-                    "scientificName": "Anguilla japonica"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Chình Biển Congridae",
-            "latin": "FAMILY CONGRIDAE",
-            "children": [
-              {
-                "vn": "Cá Chình bạc Anago Jordan and Hubbs, 1925.",
-                "latin": "Anago Jordan and Hubbs, 1925.",
-                "species": [
-                  {
-                    "id": "tap2-species-110",
-                    "vnName": "Cá Chình Bạc",
-                    "scientificName": "Anago anago"
-                  },
-                  {
-                    "id": "tap2-species-111",
-                    "vnName": "Cá Chình Đuôi Đen",
-                    "scientificName": "Rhynchocymba ectenura"
-                  },
-                  {
-                    "id": "tap2-species-112",
-                    "vnName": "Cá Chình Thường",
-                    "scientificName": "Rhynchocymba nystromi"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chình râu Cirrhimuraena Kaup, 1856.",
-                "latin": "Cirrhimuraena Kaup, 1856.",
-                "species": [
-                  {
-                    "id": "tap2-species-120",
-                    "vnName": "Cá Chình Râu Trung Hoa",
-                    "scientificName": "Cirrhimuraena chinensis"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chình râu ngắn Brachysomophis Kaup, 1856.",
-                "latin": "Brachysomophis Kaup, 1856.",
-                "species": [
-                  {
-                    "id": "tap2-species-121",
-                    "vnName": "Cá Chình Râu Phương Đông",
-                    "scientificName": "Cirrhimuraena orientalis"
-                  },
-                  {
-                    "id": "tap2-species-122",
-                    "vnName": "Cá Chình Sấu",
-                    "scientificName": "Brachysomophis crocodilinus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chình đuôi nhọn Uroconger Kaup, 1856.",
-                "latin": "Uroconger Kaup, 1856.",
-                "species": [
-                  {
-                    "id": "tap2-species-113",
-                    "vnName": "Cá Chình Đuôi Nhọn",
-                    "scientificName": "Uroconger lepturus"
-                  },
-                  {
-                    "id": "tap2-species-114",
-                    "vnName": "Cá Chình Rắn Vện",
-                    "scientificName": "Ophichthys evermani"
-                  },
-                  {
-                    "id": "tap2-species-115",
-                    "vnName": "Cá Chình Rắn Mõm Nhọn",
-                    "scientificName": "Ophichthys apicalis"
-                  },
-                  {
-                    "id": "tap2-species-116",
-                    "vnName": "Cá Chình Rắn Mắt To",
-                    "scientificName": "Ophichthys celebicus"
-                  },
-                  {
-                    "id": "tap2-species-117",
-                    "vnName": "Cá Chình Rắn Hai Hàng Răng",
-                    "scientificName": "Ophichthys rutidodermatoides"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Nhệch Pisoodonophis Kaup, 1856.",
-                "latin": "Pisoodonophis Kaup, 1856.",
-                "species": [
-                  {
-                    "id": "tap2-species-118",
-                    "vnName": "Cá Nhệch Răng Hạt",
-                    "scientificName": "Pisoodonophis boro"
-                  },
-                  {
-                    "id": "tap2-species-119",
-                    "vnName": "Cá Nhệch Ăn Cua",
-                    "scientificName": "Pisoodonophis cancrivorus"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Chình Hậu Môn Trước Dysommidae",
-            "latin": "FAMILY DYSOMMIDAE",
-            "children": [
-              {
-                "vn": "Cá Chình hậu môn trước Dysomma Alcock, 1889.",
-                "latin": "Dysomma Alcock, 1889.",
-                "species": [
-                  {
-                    "id": "tap2-species-123",
-                    "vnName": "Cá Chình Hậu Môn Trước",
-                    "scientificName": "Dysomma anguillaris"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Chình Mỏ Vịt Nettastomidae",
-            "latin": "FAMILY NETTASTOMIDAE",
-            "children": [
-              {
-                "vn": "Cá Chình cỏ Chlopsis Rafinesque, 1810.",
-                "latin": "Chlopsis Rafinesque, 1810.",
-                "species": [
-                  {
-                    "id": "tap2-species-109",
-                    "vnName": "Cá Chình Cỏ",
-                    "scientificName": "Chlopsis fierasfer"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Dưa Muraenesocidae",
-            "latin": "FAMILY MURAENESOCIDAE",
-            "children": [
-              {
-                "vn": "Cá Dưa Muraenesox McClelland, 1844.",
-                "latin": "Muraenesox McClelland, 1844.",
-                "species": [
-                  {
-                    "id": "tap2-species-102",
-                    "vnName": "Cá Dưa",
-                    "scientificName": "Muraenesox cinereus"
-                  },
-                  {
-                    "id": "tap2-species-103",
-                    "vnName": "Cá Lạt",
-                    "scientificName": "Muraenesox talabon"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Lịch Biển Muraenidae",
-            "latin": "FAMILY MURAENIDAE",
-            "children": [
-              {
-                "vn": "Cá Lịch không vây Gymnomuraena Lacepede, 1803.",
-                "latin": "Gymnomuraena Lacepede, 1803.",
-                "species": [
-                  {
-                    "id": "tap2-species-99",
-                    "vnName": "Cá Lịch Đồng Mầu",
-                    "scientificName": "Gymnomuraena concolor"
-                  },
-                  {
-                    "id": "tap2-species-100",
-                    "vnName": "Cá Chình Giun Đầu To",
-                    "scientificName": "Moringua macrocephalus"
-                  },
-                  {
-                    "id": "tap2-species-101",
-                    "vnName": "Cá Chình Giun Gia-va",
-                    "scientificName": "Moringua javanica"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Lịch khổng lồ Evenchelys Jordan & Evermann.",
-                "latin": "Evenchelys Jordan & Evermann.",
-                "species": [
-                  {
-                    "id": "tap2-species-87",
-                    "vnName": "Cá Lịch Khổng Lồ",
-                    "scientificName": "Evenchelys macrurus"
-                  },
-                  {
-                    "id": "tap2-species-88",
-                    "vnName": "Cá Lịch Vân Lớn",
-                    "scientificName": "Gymnothorax favagineus"
-                  },
-                  {
-                    "id": "tap2-species-89",
-                    "vnName": "Cá Lịch Ghi-nê",
-                    "scientificName": "Gynothorax meleagris"
-                  },
                   {
                     "id": "tap2-species-90",
-                    "vnName": "Cá Lịch Vân Hoa",
+                    "vnName": "Cá Lịch vân hoa",
                     "scientificName": "Gymnothorax pictus"
                   },
                   {
                     "id": "tap2-species-91",
-                    "vnName": "Cá Lịch Khoang Chấm",
+                    "vnName": "Cá Lịch khoang chấm",
                     "scientificName": "Gymnothorax punctatofasciatus"
                   },
                   {
                     "id": "tap2-species-92",
-                    "vnName": "Cá Lịch Mắt Trắng",
+                    "vnName": "Cá Lịch mắt trắng",
                     "scientificName": "Gymnothorax thyrsoideus"
                   },
                   {
                     "id": "tap2-species-93",
-                    "vnName": "Cá Lịch Vân Sóng",
+                    "vnName": "Cá Lịch vân sóng",
                     "scientificName": "Gymnothorax undulatus"
-                  },
-                  {
-                    "id": "tap2-species-94",
-                    "vnName": "Cá Lịch Chấm Tia",
-                    "scientificName": "Gymnothorax fimbriatus"
-                  },
-                  {
-                    "id": "tap2-species-95",
-                    "vnName": "Cá Lịch Khoang Răng Khía",
-                    "scientificName": "Gymnothorax reticularis"
-                  },
-                  {
-                    "id": "tap2-species-96",
-                    "vnName": "Cá Lịch Chấm Đen",
-                    "scientificName": "Gymnothorax melanospilus"
-                  },
-                  {
-                    "id": "tap2-species-97",
-                    "vnName": "Cá Lịch Khoang Răng Trơn",
-                    "scientificName": "Gymnothorax petelli"
-                  },
-                  {
-                    "id": "tap2-species-98",
-                    "vnName": "Cá Lịch Sọc Chấm",
-                    "scientificName": "Gymnothorax reevesi"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Lịch vân Echidna Forster, 1788",
-                "latin": "Echidna Forster, 1788",
-                "species": [
-                  {
-                    "id": "tap2-species-84",
-                    "vnName": "Cá Lịch Vân Chấm",
-                    "scientificName": "Echidna delicatula"
-                  },
-                  {
-                    "id": "tap2-species-85",
-                    "vnName": "Cá Lịch Vân Vạch",
-                    "scientificName": "Echidna nebulosa"
-                  },
-                  {
-                    "id": "tap2-species-86",
-                    "vnName": "Cá Lịch Vân Vòng",
-                    "scientificName": "Echidna polyzona"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Lịch Rắn Neenchelyidae",
-            "latin": "FAMILY NEENCHELYIDAE",
-            "children": [
-              {
-                "vn": "Cá Lịch rắn Neenchelys Bamber, 1915.",
-                "latin": "Neenchelys Bamber, 1915.",
-                "species": [
-                  {
-                    "id": "tap2-species-104",
-                    "vnName": "Cá Lạc",
-                    "scientificName": "Muraenesox talabonoides"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Nhệch Echelidae (myridae)",
-            "latin": "FAMILY ECHELIDAE (MYRIDAE)",
-            "children": [
-              {
-                "vn": "Cá Nhệch dầu Myrophis Lutken, 1851.",
-                "latin": "Myrophis Lutken, 1851.",
-                "species": [
-                  {
-                    "id": "tap2-species-107",
-                    "vnName": "Cá Nhệch Răng Một Hàng",
-                    "scientificName": "Muraenichthys malabonensis"
-                  },
-                  {
-                    "id": "tap2-species-108",
-                    "vnName": "Cá Nhệch Dầu Mắt To",
-                    "scientificName": "Myrophis macrophthalmus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Nhệch không vây ngực Muraenichthys Bleeker, 1853.",
-                "latin": "Muraenichthys Bleeker, 1853.",
-                "species": [
-                  {
-                    "id": "tap2-species-105",
-                    "vnName": "Cá Lịch Rắn",
-                    "scientificName": "Neenchelys buitendijki"
-                  },
-                  {
-                    "id": "tap2-species-106",
-                    "vnName": "Cá Nhệch Vây Trần",
-                    "scientificName": "Muraenichthys gymnopterus"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Chồn Rắn Ophidioidei",
-        "latin": "ORDER OPHIDIOIDEI",
-        "children": [
-          {
-            "vn": "Họ Cá Chồn Râu Brotulidae",
-            "latin": "FAMILY BROTULIDAE",
-            "children": [
-              {
-                "vn": "Cá Chồn Acan Acanthonus Gunther, 1878.",
-                "latin": "Acanthonus Gunther, 1878.",
-                "species": [
-                  {
-                    "id": "tap2-species-183",
-                    "vnName": "Cá Chồn Râu Ac-ma",
-                    "scientificName": "Acanthonus armatus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chồn gai Hoplobrotula Gill, 1863.",
-                "latin": "Hoplobrotula Gill, 1863.",
-                "species": [
-                  {
-                    "id": "tap2-species-187",
-                    "vnName": "Cá Chồn Ac-ma",
-                    "scientificName": "Hoprobrotula armata"
-                  },
-                  {
-                    "id": "tap2-species-188",
-                    "vnName": "Cá Chồn Tiên",
-                    "scientificName": "Sirembo imberbis"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chồn gai Neobythites Goode and Bean, 1885.",
-                "latin": "Neobythites Goode and Bean, 1885.",
-                "species": [
-                  {
-                    "id": "tap2-species-185",
-                    "vnName": "Cá Chồn Gai",
-                    "scientificName": "Neobythites sivicolus"
-                  },
-                  {
-                    "id": "tap2-species-186",
-                    "vnName": "Cá Chồn Chấm Đen",
-                    "scientificName": "Neobythites nigromaculatus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chồn râu Brotula Cuvier, 1829.",
-                "latin": "Brotula Cuvier, 1829.",
-                "species": [
-                  {
-                    "id": "tap2-species-184",
-                    "vnName": "Cá Chồn Râu",
-                    "scientificName": "Brotula multibarbata"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chồn tiên Sirembo Bleeker, 1858.",
-                "latin": "Sirembo Bleeker, 1858.",
-                "species": [
-                  {
-                    "id": "tap2-species-189",
-                    "vnName": "Cá Chồn Khoang",
-                    "scientificName": "Sirembo marmoratum"
-                  },
-                  {
-                    "id": "tap2-species-190",
-                    "vnName": "Cá Chồn Mu-ra",
-                    "scientificName": "Ophidion muraenolepis"
-                  },
-                  {
-                    "id": "tap2-species-191",
-                    "vnName": "Cá Ngọc",
-                    "scientificName": "Carapus homei"
-                  },
-                  {
-                    "id": "tap2-species-192",
-                    "vnName": "Cá Ngọc Mảnh",
-                    "scientificName": "Carapus gracilis"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Dây Zeiformes",
-        "latin": "ORDER ZEIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Dây Zeidae",
-            "latin": "FAMILY ZEIDAE",
-            "children": [
-              {
-                "vn": "Cá Dây gương Zenopsis Gill, 1862.",
-                "latin": "Zenopsis Gill, 1862.",
-                "species": [
-                  {
-                    "id": "tap2-species-206",
-                    "vnName": "Cá Dây Gương",
-                    "scientificName": "Zenopsis nebulosa"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Dây lưng gù Zen Jordan, 1903.",
-                "latin": "Zen Jordan, 1903.",
-                "species": [
-                  {
-                    "id": "tap2-species-207",
-                    "vnName": "Cá Dây Nhật Bản",
-                    "scientificName": "Zeus japonicus"
-                  },
-                  {
-                    "id": "tap2-species-208",
-                    "vnName": "Cá Dây Lưng Gù",
-                    "scientificName": "Zen cypho"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Thoi Caproidae",
-            "latin": "FAMILY CAPROIDAE",
-            "children": [
-              {
-                "vn": "Cá Thoi Antigonia Lowe, 1843.",
-                "latin": "Antigonia Lowe, 1843.",
-                "species": [
-                  {
-                    "id": "tap2-species-209",
-                    "vnName": "Cá Thoi",
-                    "scientificName": "Antigonia capros"
-                  },
-                  {
-                    "id": "tap2-species-210",
-                    "vnName": "Cá Thoi Đỏ",
-                    "scientificName": "Antigonia rubescens"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Gai Gasterosteiformes",
-        "latin": "ORDER GASTEROSTEIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Chìa Vôi Syngnathidae",
-            "latin": "FAMILY SYNGNATHIDAE",
-            "children": [
-              {
-                "vn": "Cá Chìa vôi không vây đuôi Solenognathus Swainson, 1839.",
-                "latin": "Solenognathus Swainson, 1839.",
-                "species": [
-                  {
-                    "id": "tap2-species-223",
-                    "vnName": "Cá Chìa Vôi Gai",
-                    "scientificName": "Halicampus koilomatodon"
-                  },
-                  {
-                    "id": "tap2-species-224",
-                    "vnName": "Cá Chìa Vôi Không Vây",
-                    "scientificName": "Solenognathus hardwickii"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chìa vôi mõm răng cưa Trachyrhamphus Kaup, 1856.",
-                "latin": "Trachyrhamphus Kaup, 1856.",
-                "species": [
-                  {
-                    "id": "tap2-species-221",
-                    "vnName": "Cá Chìa Vôi Mõm Răng Cưa",
-                    "scientificName": "Trachyrhamphus serratus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chìa vôi mởm dài Yozia Jordan and Snyder, 1901.",
-                "latin": "Yozia Jordan and Snyder, 1901.",
-                "species": [
-                  {
-                    "id": "tap2-species-222",
-                    "vnName": "Cá Chìa Vôi Mõm Dài",
-                    "scientificName": "Yozia bicoarctata"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chìa vôi ngắn Ichthyocampus Kaup, 1856.",
-                "latin": "Ichthyocampus Kaup, 1856.",
-                "species": [
-                  {
-                    "id": "tap2-species-220",
-                    "vnName": "Cá Chìa Vôi Ngắn",
-                    "scientificName": "Ichthyocampus belcheri"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chìa vôi sừng Syngnathoides Bleeker, 1851.",
-                "latin": "Syngnathoides Bleeker, 1851.",
-                "species": [
-                  {
-                    "id": "tap2-species-225",
-                    "vnName": "Cá Chìa Vôi Sừng",
-                    "scientificName": "Syngnathoides biaculeatus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chìa vôi thường Syngnathus Linnaeus, 1758.",
-                "latin": "Syngnathus Linnaeus, 1758.",
-                "species": [
-                  {
-                    "id": "tap2-species-215",
-                    "vnName": "Cá Múa Đít Đỏ",
-                    "scientificName": "Centriscus scutatus"
-                  },
-                  {
-                    "id": "tap2-species-216",
-                    "vnName": "Cá Chìa Vôi Thấp",
-                    "scientificName": "Syngnathus djarong"
-                  },
-                  {
-                    "id": "tap2-species-217",
-                    "vnName": "Cá Chìa Vôi Chấm Trắng",
-                    "scientificName": "Syngnathus spicifer"
-                  },
-                  {
-                    "id": "tap2-species-218",
-                    "vnName": "Cá Chìa Vôi Mõm Nhọn",
-                    "scientificName": "Syngnathus acus"
-                  },
-                  {
-                    "id": "tap2-species-219",
-                    "vnName": "Cá Chìa Vôi Xanh",
-                    "scientificName": "Syngnathus cyanospilus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chìa vôi đuôi ngắn Microphis (Kaup) Duncker, 1856.",
-                "latin": "Microphis (Kaup) Duncker, 1856.",
-                "species": [
-                  {
-                    "id": "tap2-species-226",
-                    "vnName": "Cá Chìa Vôi Đuôi Ngắn",
-                    "scientificName": "Microphis boaja"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Ngựa Hippocampus Rafinesque, 1810.",
-                "latin": "Hippocampus Rafinesque, 1810.",
-                "species": [
-                  {
-                    "id": "tap2-species-227",
-                    "vnName": "Cá Ngựa Nhật Bản",
-                    "scientificName": "Hippocampus japonicus"
-                  },
-                  {
-                    "id": "tap2-species-228",
-                    "vnName": "Cá Ngựa Gai",
-                    "scientificName": "Hippocampus histrix"
-                  },
-                  {
-                    "id": "tap2-species-229",
-                    "vnName": "Cá Ngựa Đen",
-                    "scientificName": "Hippocampus kuda"
-                  },
-                  {
-                    "id": "tap2-species-230",
-                    "vnName": "Cá Ngựa Chấm",
-                    "scientificName": "Hippocampus trimaculatus"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Mõm Ống Fistulariidae",
-            "latin": "FAMILY FISTULARIIDAE",
-            "children": [
-              {
-                "vn": "Cá Mõm ống Fistularia Linnaeus, 1758.",
-                "latin": "Fistularia Linnaeus, 1758.",
-                "species": [
-                  {
-                    "id": "tap2-species-212",
-                    "vnName": "Cá Lao Có Vẩy",
-                    "scientificName": "Fistularia serrata"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Múa Đít Centriscidae",
-            "latin": "FAMILY CENTRISCIDAE",
-            "children": [
-              {
-                "vn": "Cá Múa đít đỏ Centriscus Linnaeus, 1758.",
-                "latin": "Centriscus Linnaeus, 1758.",
-                "species": [
-                  {
-                    "id": "tap2-species-214",
-                    "vnName": "Cá Vỏ Tôm",
-                    "scientificName": "Aeoliscus strigatus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Vỏ tôm Aeoliscus Jordan and Starks, 1817.",
-                "latin": "Aeoliscus Jordan and Starks, 1817.",
-                "species": [
-                  {
-                    "id": "tap2-species-213",
-                    "vnName": "Cá Lao Không Vẩy",
-                    "scientificName": "Fistularia petimba"
                   }
                 ]
               }
@@ -838,1125 +117,6 @@
                     "id": "tap1-species-62",
                     "vnName": "Cá Giống đĩa nhiều hàng gai",
                     "scientificName": "Platyrhina limboonkengi"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Hồi",
-        "latin": "SALMONIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Ngần",
-            "latin": "SALANGIDAE",
-            "children": [
-              {
-                "vn": "Cá Ngần Salanx Cuvier, 1817",
-                "latin": "Salanx Cuvier, 1817",
-                "species": [
-                  {
-                    "id": "tap2-species-61",
-                    "vnName": "Cá Ngần Vây Dài",
-                    "scientificName": "Salanx longianalis"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Ngần lớn Protosalanx Regan, 1908",
-                "latin": "Protosalanx Regan, 1908",
-                "species": [
-                  {
-                    "id": "tap2-species-59",
-                    "vnName": "Cá Lành Canh",
-                    "scientificName": "Coilia lindmani"
-                  },
-                  {
-                    "id": "tap2-species-60",
-                    "vnName": "Cá Ngần Lớn",
-                    "scientificName": "Protosalanx hyalocranius"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Ngần trắng Leucosoma Gray, 1831",
-                "latin": "Leucosoma Gray, 1831",
-                "species": [
-                  {
-                    "id": "tap2-species-62",
-                    "vnName": "Cá Ngần Đầu Nhọn",
-                    "scientificName": "Salanx acuticeps"
-                  },
-                  {
-                    "id": "tap2-species-63",
-                    "vnName": "Cá Ngần Trung Hoa",
-                    "scientificName": "Leucosoma chinensis"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Sao Gai",
-            "latin": "STERNOPTYCHIDAE",
-            "children": [
-              {
-                "vn": "Cá Sao gai Polyipnus Gunther, 1887",
-                "latin": "Polyipnus Gunther, 1887",
-                "species": [
-                  {
-                    "id": "tap2-species-65",
-                    "vnName": "Cá Răng Lổi",
-                    "scientificName": "Chauliodus sloani"
-                  },
-                  {
-                    "id": "tap2-species-66",
-                    "vnName": "Cá Sao Gai",
-                    "scientificName": "Polyipnus spinosus"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Ánh Bạc",
-            "latin": "ARGENTINIDAE",
-            "children": [
-              {
-                "vn": "Cá Ánh bạc Argentina Linnaeus, 1758",
-                "latin": "Argentina Linnaeus, 1758",
-                "species": [
-                  {
-                    "id": "tap2-species-64",
-                    "vnName": "Cá Ánh Bạc",
-                    "scientificName": "Argentina semifasciata"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Mặt Trăng Lampridiformes",
-        "latin": "ORDER LAMPRIDIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Cờ Mặt Trăng Veliferidae",
-            "latin": "FAMILY VELIFERIDAE",
-            "children": [
-              {
-                "vn": "Cá Cờ mặt trăng Velifer Temminck and Schlegel, 1850.",
-                "latin": "Velifer Temminck and Schlegel, 1850.",
-                "species": [
-                  {
-                    "id": "tap2-species-211",
-                    "vnName": "Cá Cờ Mặt Trăng",
-                    "scientificName": "Velifer hypselopterus"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Nheo Siluriformes",
-        "latin": "ORDER SILURIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Ngát Plotosidae",
-            "latin": "FAMILY PLOTOSIDAE",
-            "children": [
-              {
-                "vn": "Cá Ngát Plotosus Lacepede, 1803.",
-                "latin": "Plotosus Lacepede, 1803.",
-                "species": [
-                  {
-                    "id": "tap2-species-124",
-                    "vnName": "Cá Ngát",
-                    "scientificName": "Plotosus anguillaris"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Ngát môi trắng Paraplotosus Bleeker, 1862.",
-                "latin": "Paraplotosus Bleeker, 1862.",
-                "species": [
-                  {
-                    "id": "tap2-species-125",
-                    "vnName": "Cá Ngát Chó",
-                    "scientificName": "Plotosus canius"
-                  },
-                  {
-                    "id": "tap2-species-126",
-                    "vnName": "Cá Ngát Môi Trắng",
-                    "scientificName": "Paraplotosus albilabris"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Ngạnh Bagridae",
-            "latin": "FAMILY BAGRIDAE",
-            "children": [
-              {
-                "vn": "Cá Hau Cranoglanis Peters, 1880.",
-                "latin": "Cranoglanis Peters, 1880.",
-                "species": [
-                  {
-                    "id": "tap2-species-138",
-                    "vnName": "Cá Thiều",
-                    "scientificName": "Hemipimelodus siamensis"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Tra Schilbeidae",
-            "latin": "FAMILY SCHILBEIDAE",
-            "children": [
-              {
-                "vn": "Cá Thiều Hemipimelodus Bleeker, 1858.",
-                "latin": "Hemipimelodus Bleeker, 1858.",
-                "species": [
-                  {
-                    "id": "tap2-species-136",
-                    "vnName": "Cá Vổ Chó",
-                    "scientificName": "Arius sagor"
-                  },
-                  {
-                    "id": "tap2-species-137",
-                    "vnName": "Cá Úc Thiều Giả",
-                    "scientificName": "Arius harmandi"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Tra Pangasius Cuvier and Valenciennes, 1840.",
-                "latin": "Pangasius Cuvier and Valenciennes, 1840.",
-                "species": [
-                  {
-                    "id": "tap2-species-127",
-                    "vnName": "Cá Tra",
-                    "scientificName": "Pangasius krempfi"
-                  },
-                  {
-                    "id": "tap2-species-128",
-                    "vnName": "Cá Dứa",
-                    "scientificName": "Pangasius polyuranodon"
-                  },
-                  {
-                    "id": "tap2-species-129",
-                    "vnName": "Cá Úc Trung Hoa",
-                    "scientificName": "Arius sinensis"
-                  },
-                  {
-                    "id": "tap2-species-130",
-                    "vnName": "Cá Úc Đầu Cứng",
-                    "scientificName": "Arius leiotetocephaluds"
-                  },
-                  {
-                    "id": "tap2-species-131",
-                    "vnName": "Cá Úc Thường",
-                    "scientificName": "Arius thalassinus"
-                  },
-                  {
-                    "id": "tap2-species-132",
-                    "vnName": "Cá Úc Chấm",
-                    "scientificName": "Arius maculatus"
-                  },
-                  {
-                    "id": "tap2-species-133",
-                    "vnName": "Cá Úc Trắng",
-                    "scientificName": "Arius sciurus"
-                  },
-                  {
-                    "id": "tap2-species-134",
-                    "vnName": "Cá Úc Gai Mềm",
-                    "scientificName": "Arius maculacanthus"
-                  },
-                  {
-                    "id": "tap2-species-135",
-                    "vnName": "Cá Úc Quạt",
-                    "scientificName": "Arius caelatus"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Nhói Beloniformes",
-        "latin": "ORDER BELONIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Kìm Hemirhamphidae",
-            "latin": "FAMILY HEMIRHAMPHIDAE",
-            "children": [
-              {
-                "vn": "Cá Chuồn bay Exocoetus Linnaeus, 1758.",
-                "latin": "Exocoetus Linnaeus, 1758.",
-                "species": [
-                  {
-                    "id": "tap2-species-154",
-                    "vnName": "Cá Chuồn Bay",
-                    "scientificName": "Exocoetus volitans"
-                  },
-                  {
-                    "id": "tap2-species-155",
-                    "vnName": "Cá Chuồn Bay Có Râu",
-                    "scientificName": "Exocoetus monocirrhus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chuồn kìm Oxyporhamphus Gill, 1863.",
-                "latin": "Oxyporhamphus Gill, 1863.",
-                "species": [
-                  {
-                    "id": "tap2-species-151",
-                    "vnName": "Cá Chuồn Kìm",
-                    "scientificName": "Oxyporhamphus micropterus"
-                  },
-                  {
-                    "id": "tap2-species-152",
-                    "vnName": "Cá Chuồn Vây Ngắn",
-                    "scientificName": "Parexocoetus brachypterus brachypterus"
-                  },
-                  {
-                    "id": "tap2-species-153",
-                    "vnName": "Cá Chuồn Men-tô",
-                    "scientificName": "Parexocoetus mento mento"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chuồn vây ngang Hirundichthys Breder, 1928.",
-                "latin": "Hirundichthys Breder, 1928.",
-                "species": [
-                  {
-                    "id": "tap2-species-169",
-                    "vnName": "Cá Chuồn Nhiều Răng",
-                    "scientificName": "Hirundichthys speculiger"
-                  },
-                  {
-                    "id": "tap2-species-170",
-                    "vnName": "Cá Chuồn Ít Răng",
-                    "scientificName": "Hirundichthys oxycephalus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Chuồn vằn Cheilopogon Lowe, 1840.",
-                "latin": "Cheilopogon Lowe, 1840.",
-                "species": [
-                  {
-                    "id": "tap2-species-163",
-                    "vnName": "Cá Chuồn Cung",
-                    "scientificName": "Cheilopogon arcticeps"
-                  },
-                  {
-                    "id": "tap2-species-164",
-                    "vnName": "Cá Chuồn Có Vây Chấm Đen",
-                    "scientificName": "Cheilopogon spilopterus"
-                  },
-                  {
-                    "id": "tap2-species-165",
-                    "vnName": "Cá Chuồn Dài",
-                    "scientificName": "Cheilopogon atrisignis"
-                  },
-                  {
-                    "id": "tap2-species-166",
-                    "vnName": "Cá Chuồn Hạt Mít",
-                    "scientificName": "Cheilopogon katoptron"
-                  },
-                  {
-                    "id": "tap2-species-167",
-                    "vnName": "Cá Chuồn Vằn Bụng",
-                    "scientificName": "Cheilopogon suttoni"
-                  },
-                  {
-                    "id": "tap2-species-168",
-                    "vnName": "Cá Chuồn Xanh",
-                    "scientificName": "Cheilopogon cyanopterus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Kìm dưới Hyporhamphus Gill, 1859.",
-                "latin": "Hyporhamphus Gill, 1859.",
-                "species": [
-                  {
-                    "id": "tap2-species-146",
-                    "vnName": "Cá Kìm Gai-ma",
-                    "scientificName": "Hemirhamphus gaimard"
-                  },
-                  {
-                    "id": "tap2-species-147",
-                    "vnName": "Cá Kìm Giữa",
-                    "scientificName": "Hyporhamphus intermedius"
-                  },
-                  {
-                    "id": "tap2-species-148",
-                    "vnName": "Cá Kìm Trung Hoa",
-                    "scientificName": "Hyporhamphus sinensis"
-                  },
-                  {
-                    "id": "tap2-species-149",
-                    "vnName": "Cá Kìm Đús-su",
-                    "scientificName": "Hyporhamphus dussumierii"
-                  },
-                  {
-                    "id": "tap2-species-150",
-                    "vnName": "Cá Kìm Sông",
-                    "scientificName": "Hyporhamphus unifasciatus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Kìm mõm dài Euleptorhamphus Gill, 1859.",
-                "latin": "Euleptorhamphus Gill, 1859.",
-                "species": [
-                  {
-                    "id": "tap2-species-139",
-                    "vnName": "Cá Hau",
-                    "scientificName": "Cranoglanis multiradiatus"
-                  },
-                  {
-                    "id": "tap2-species-140",
-                    "vnName": "Cá Kìm Mõm Dài",
-                    "scientificName": "Euleptorhamphus longirostris"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Kìm thường Hemirhamphus Cuvier and Valenciennes, 1846.",
-                "latin": "Hemirhamphus Cuvier and Valenciennes, 1846.",
-                "species": [
-                  {
-                    "id": "tap2-species-141",
-                    "vnName": "Cá Kìm Biển Vây",
-                    "scientificName": "Zenarchopterus buffoni"
-                  },
-                  {
-                    "id": "tap2-species-142",
-                    "vnName": "Cá Kìm Môi Dài",
-                    "scientificName": "Hemirhamphus georgii"
-                  },
-                  {
-                    "id": "tap2-species-143",
-                    "vnName": "Cá Kìm Thân Dẹp",
-                    "scientificName": "Hemirhamphus marginatus"
-                  },
-                  {
-                    "id": "tap2-species-144",
-                    "vnName": "Cá Kìm Thân Tròn",
-                    "scientificName": "Hemirhamphus quoyi"
-                  },
-                  {
-                    "id": "tap2-species-145",
-                    "vnName": "Cá Kìm Chấm",
-                    "scientificName": "Hemirhamphus far"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá chuồn không râu Prognichthys Breder, 1828.",
-                "latin": "Prognichthys Breder, 1828.",
-                "species": [
-                  {
-                    "id": "tap2-species-156",
-                    "vnName": "Cá Chuồn Không Râu",
-                    "scientificName": "Prognichthys brevipinnis"
-                  },
-                  {
-                    "id": "tap2-species-157",
-                    "vnName": "Cá Chuồn Mắt To",
-                    "scientificName": "Cypselurus brevis"
-                  },
-                  {
-                    "id": "tap2-species-158",
-                    "vnName": "Cá Chuồn Vây Nhỏ",
-                    "scientificName": "Cypselurus oligolepis"
-                  },
-                  {
-                    "id": "tap2-species-159",
-                    "vnName": "Cá Chuồn Vây Lớn",
-                    "scientificName": "Cypselurus naresii"
-                  },
-                  {
-                    "id": "tap2-species-160",
-                    "vnName": "Cá Chuồn Đầu Cong",
-                    "scientificName": "Cypselurus opisthopus"
-                  },
-                  {
-                    "id": "tap2-species-161",
-                    "vnName": "Cá Chuồn Vây Vằn",
-                    "scientificName": "Cypselurus poecilopterus"
-                  },
-                  {
-                    "id": "tap2-species-162",
-                    "vnName": "Cá Chuồn Vây Đen",
-                    "scientificName": "Cypselurus bahiensis"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Nhói Belonidae",
-            "latin": "FAMILY BELONIDAE",
-            "children": [
-              {
-                "vn": "Cá Nhói Tylosurus Cocco, 1833.",
-                "latin": "Tylosurus Cocco, 1833.",
-                "species": [
-                  {
-                    "id": "tap2-species-173",
-                    "vnName": "Cá Nhói Lớn",
-                    "scientificName": "Tylosurus giganteus"
-                  },
-                  {
-                    "id": "tap2-species-174",
-                    "vnName": "Cá Nhói Lưng Đen",
-                    "scientificName": "Tylosurus melanotus"
-                  },
-                  {
-                    "id": "tap2-species-175",
-                    "vnName": "Cá Nhói Đuôi Chấm",
-                    "scientificName": "Tylosurus strongylurus"
-                  },
-                  {
-                    "id": "tap2-species-176",
-                    "vnName": "Cá Nhói Đuôi Không Chấm",
-                    "scientificName": "Tylosurus leiurus"
-                  },
-                  {
-                    "id": "tap2-species-177",
-                    "vnName": "Cá Nhói Sấu",
-                    "scientificName": "Tylosurus crocodilus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Quại Ablennes Jordan and Fordice, 1887.",
-                "latin": "Ablennes Jordan and Fordice, 1887.",
-                "species": [
-                  {
-                    "id": "tap2-species-171",
-                    "vnName": "Cá Quại Mõm Nhọn",
-                    "scientificName": "Ablennes anastomella"
-                  },
-                  {
-                    "id": "tap2-species-172",
-                    "vnName": "Cá Quại Vằn",
-                    "scientificName": "Ablennes hians"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Suốt Atheriniformes",
-        "latin": "ORDER ATHERINIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Suốt Atherinidae",
-            "latin": "FAMILY ATHERINIDAE",
-            "children": [
-              {
-                "vn": "Cá Suốt Atherina Linnaeus, 1758.",
-                "latin": "Atherina Linnaeus, 1758.",
-                "species": [
-                  {
-                    "id": "tap2-species-178",
-                    "vnName": "Cá Suốt Đầu Dẹp",
-                    "scientificName": "Atherina bleekeri"
-                  },
-                  {
-                    "id": "tap2-species-179",
-                    "vnName": "Cá Suốt Mắt To",
-                    "scientificName": "Atherina forskali"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Sữa",
-        "latin": "GONORHYNCHIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Măng Biển",
-            "latin": "CHANIDAE",
-            "children": [
-              {
-                "vn": "Cá Măng Chanos Lacepede, 1803",
-                "latin": "Chanos Lacepede, 1803",
-                "species": [
-                  {
-                    "id": "tap2-species-5",
-                    "vnName": "Cá Măng Biển",
-                    "scientificName": "Chanos chanos"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Tráp Mắt Vàng Beryciformes",
-        "latin": "ORDER BERYCIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Nành Xe Monocentridae",
-            "latin": "FAMILY MONOCENTRIDAE",
-            "children": [
-              {
-                "vn": "Cá Nành xe Monocentris Bloch and Schneider, 1801.",
-                "latin": "Monocentris Bloch and Schneider, 1801.",
-                "species": [
-                  {
-                    "id": "tap2-species-205",
-                    "vnName": "Cá Nành Xe Nhật Bản",
-                    "scientificName": "Monocentris japonicus"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Sơn Đá Holocentridae",
-            "latin": "FAMILY HOLOCENTRIDAE",
-            "children": [
-              {
-                "vn": "Cá Sơn đá dài Flammeo Jordan and Evermann, 1898.",
-                "latin": "Flammeo Jordan and Evermann, 1898.",
-                "species": [
-                  {
-                    "id": "tap2-species-204",
-                    "vnName": "Cá Sơn Đá Dài",
-                    "scientificName": "Flammeo sammara"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Sơn đá thường Holocentrus Scopoli, 1777.",
-                "latin": "Holocentrus Scopoli, 1777.",
-                "species": [
-                  {
-                    "id": "tap2-species-200",
-                    "vnName": "Cá Sơn Đá Đỏ",
-                    "scientificName": "Holocentrus ruber"
-                  },
-                  {
-                    "id": "tap2-species-201",
-                    "vnName": "Cá Sơn Đá Chấm Đuôi",
-                    "scientificName": "Holocentrus caudimaculatus"
-                  },
-                  {
-                    "id": "tap2-species-202",
-                    "vnName": "Cá Sơn Đá Sư Tử",
-                    "scientificName": "Holocentrus diadema"
-                  },
-                  {
-                    "id": "tap2-species-203",
-                    "vnName": "Cá Sơn Đá Sừng",
-                    "scientificName": "Holocentrus cornutus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Sơn đá vảy răng cưa Myripristis Cuvier, 1829.",
-                "latin": "Myripristis Cuvier, 1829.",
-                "species": [
-                  {
-                    "id": "tap2-species-195",
-                    "vnName": "Cá Sơn Đá Biển Sâu",
-                    "scientificName": "Ostichthys kaianus"
-                  },
-                  {
-                    "id": "tap2-species-196",
-                    "vnName": "Cá Sơn Đá Vảy Răng Cưa",
-                    "scientificName": "Myripristis murdjan"
-                  },
-                  {
-                    "id": "tap2-species-197",
-                    "vnName": "Cá Sơn Đá Răng Đôi",
-                    "scientificName": "Myripristis hexagonus"
-                  },
-                  {
-                    "id": "tap2-species-198",
-                    "vnName": "Cá Sơn Đá Má Nhẵn",
-                    "scientificName": "Myripristis pralinius"
-                  },
-                  {
-                    "id": "tap2-species-199",
-                    "vnName": "Cá Sơn Đá Môi Đen",
-                    "scientificName": "Myripristis melanostictis"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Sơn đá vẩy cứng Ostichthys Jordan and Evermann, 1896.",
-                "latin": "Ostichthys Jordan and Evermann, 1896.",
-                "species": [
-                  {
-                    "id": "tap2-species-194",
-                    "vnName": "Cá Sơn Đá Nhật Bản",
-                    "scientificName": "Ostichthys japonicus"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Tráp Mắt Vàng Berycidae",
-            "latin": "FAMILY BERYCIDAE",
-            "children": [
-              {
-                "vn": "Cá Tráp gai Trachichthodes Gilchrist, 1903.",
-                "latin": "Trachichthodes Gilchrist, 1903.",
-                "species": [
-                  {
-                    "id": "tap2-species-193",
-                    "vnName": "Cá Tráp Gai",
-                    "scientificName": "Trachichthodes lineatus"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Trích",
-        "latin": "CLUPEIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Lanh",
-            "latin": "CHIROCENTRIDAE",
-            "children": [
-              {
-                "vn": "Cá Lanh Chirocentrus Cuvier, 1817",
-                "latin": "Chirocentrus Cuvier, 1817",
-                "species": [
-                  {
-                    "id": "tap2-species-6",
-                    "vnName": "Cá Lanh",
-                    "scientificName": "Chirocentrus dorab"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Trích",
-            "latin": "CLUPEIDAE",
-            "children": [
-              {
-                "vn": "Cá Bẹ Ilisha Richardson, 1846",
-                "latin": "Ilisha Richardson, 1846",
-                "species": [
-                  {
-                    "id": "tap2-species-29",
-                    "vnName": "Cá Mai",
-                    "scientificName": "Kowala coval"
-                  },
-                  {
-                    "id": "tap2-species-30",
-                    "vnName": "Cá Đé",
-                    "scientificName": "Ilisha elongata"
-                  },
-                  {
-                    "id": "tap2-species-31",
-                    "vnName": "Cá Bẹ Ấn Độ",
-                    "scientificName": "Ilisha indica"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Bẹ không vây bụng Opisthopterus Gill, 1861",
-                "latin": "Opisthopterus Gill, 1861",
-                "species": [
-                  {
-                    "id": "tap2-species-32",
-                    "vnName": "Cá Bẹ Lẩm",
-                    "scientificName": "Ilisha dussumieri"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Cháy Macrura van Hasselt, 1823",
-                "latin": "Macrura van Hasselt, 1823",
-                "species": [
-                  {
-                    "id": "tap2-species-33",
-                    "vnName": "Cá Bẹ Vây Lưng Sau",
-                    "scientificName": "Opisthopterus tardoore"
-                  },
-                  {
-                    "id": "tap2-species-34",
-                    "vnName": "Cá Cháy Vạch Mây",
-                    "scientificName": "Macrura ilisha"
-                  },
-                  {
-                    "id": "tap2-species-35",
-                    "vnName": "Cá Cháy Thường",
-                    "scientificName": "Macrura reevesii"
-                  },
-                  {
-                    "id": "tap2-species-36",
-                    "vnName": "Cá Cháy Chấm Hoa",
-                    "scientificName": "Macrura kelee"
-                  },
-                  {
-                    "id": "tap2-species-37",
-                    "vnName": "Cá Cháy Trung Hoa",
-                    "scientificName": "Macrura sinensis"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Lẩm dài Dussumieria Cuvier & Valenciennes, 1847",
-                "latin": "Dussumieria Cuvier & Valenciennes, 1847",
-                "species": [
-                  {
-                    "id": "tap2-species-12",
-                    "vnName": "Cá Lẩm Bụng Dẹp",
-                    "scientificName": "Dussumieria acuta"
-                  },
-                  {
-                    "id": "tap2-species-13",
-                    "vnName": "Cá Lẩm Bụng Tròn",
-                    "scientificName": "Dussumieria hasseltii"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Lẩm mắt mỡ Etrumeus Bleeker, 1853",
-                "latin": "Etrumeus Bleeker, 1853",
-                "species": [
-                  {
-                    "id": "tap2-species-14",
-                    "vnName": "Cá Lẩm Mắt Mỡ",
-                    "scientificName": "Etrumeus micropus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Lẩm tròn Spratelloides Bleeker, 1852",
-                "latin": "Spratelloides Bleeker, 1852",
-                "species": [
-                  {
-                    "id": "tap2-species-15",
-                    "vnName": "Cá Lẩm Tròn",
-                    "scientificName": "Spratelloides decicatulus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Mai Kowala Valenciennes, 1847",
-                "latin": "Kowala Valenciennes, 1847",
-                "species": [
-                  {
-                    "id": "tap2-species-28",
-                    "vnName": "Cá Nhâm Phi",
-                    "scientificName": "Harengula schrammi"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Mòi Anodontostoma Bleeker, 1849",
-                "latin": "Anodontostoma Bleeker, 1849",
-                "species": [
-                  {
-                    "id": "tap2-species-7",
-                    "vnName": "Cá Lanh Hàm Dài",
-                    "scientificName": "Chirocentrus nudus"
-                  },
-                  {
-                    "id": "tap2-species-8",
-                    "vnName": "Cá Mòi Không Răng",
-                    "scientificName": "Anodontostoma chacunda"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Mòi Clupanodon Lacepede, 1803",
-                "latin": "Clupanodon Lacepede, 1803",
-                "species": [
-                  {
-                    "id": "tap2-species-10",
-                    "vnName": "Cá Mòi Cờ Hoa",
-                    "scientificName": "Clupanodon thrissa"
-                  },
-                  {
-                    "id": "tap2-species-11",
-                    "vnName": "Cá Mòi Cờ Chấm",
-                    "scientificName": "Clupanodon punctatus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Mòi mõm tròn Nematalosa Regan, 1917",
-                "latin": "Nematalosa Regan, 1917",
-                "species": [
-                  {
-                    "id": "tap2-species-9",
-                    "vnName": "Cá Mòi Mõm Tròn",
-                    "scientificName": "Nematalosa nasus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Trích Sardinella Cuvier & Valenciennes.",
-                "latin": "Sardinella Cuvier & Valenciennes",
-                "species": [
-                  {
-                    "id": "tap2-species-16",
-                    "vnName": "Cá Nhâm",
-                    "scientificName": "Sardinella aurita"
-                  },
-                  {
-                    "id": "tap2-species-17",
-                    "vnName": "Cá Trích Bụng Trắng",
-                    "scientificName": "Sardinella clupeoides"
-                  },
-                  {
-                    "id": "tap2-species-18",
-                    "vnName": "Cá Trích Thường",
-                    "scientificName": "Sardinella fimbriata"
-                  },
-                  {
-                    "id": "tap2-species-19",
-                    "vnName": "Cá Trích Dầu",
-                    "scientificName": "Sardinella longiceps"
-                  },
-                  {
-                    "id": "tap2-species-20",
-                    "vnName": "Cá Trích Đuôi Dài",
-                    "scientificName": "Sardinella melanura"
-                  },
-                  {
-                    "id": "tap2-species-21",
-                    "vnName": "Cá Trích Dầu Ngắn",
-                    "scientificName": "Sardinella perforata"
-                  },
-                  {
-                    "id": "tap2-species-22",
-                    "vnName": "Cá Trích Bầu",
-                    "scientificName": "Sardinella sindensis"
-                  },
-                  {
-                    "id": "tap2-species-23",
-                    "vnName": "Cá Trích Sơ",
-                    "scientificName": "Sardinella sirm"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Trích vẩy xanh Harengula Valenciennes, 1847",
-                "latin": "Harengula Valenciennes, 1847",
-                "species": [
-                  {
-                    "id": "tap2-species-24",
-                    "vnName": "Cá Trích Xương",
-                    "scientificName": "Sardinella jussieu"
-                  },
-                  {
-                    "id": "tap2-species-25",
-                    "vnName": "Cá Trích Vẩy Xanh Mắt To",
-                    "scientificName": "Harengula ovalis"
-                  },
-                  {
-                    "id": "tap2-species-26",
-                    "vnName": "Cá Trích Vẩy Xanh",
-                    "scientificName": "Harengula zunasi"
-                  },
-                  {
-                    "id": "tap2-species-27",
-                    "vnName": "Cá Nhâm Lẩm",
-                    "scientificName": "Harengula nymphaea"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Trỏng",
-            "latin": "ENGRAULIDAE",
-            "children": [
-              {
-                "vn": "Cá Cơm Stolephorus Lacepede, 1803",
-                "latin": "Stolephorus Lacepede, 1803",
-                "species": [
-                  {
-                    "id": "tap2-species-38",
-                    "vnName": "Cá Cơm Mõm Nhọn",
-                    "scientificName": "Stolephorus heterolobus"
-                  },
-                  {
-                    "id": "tap2-species-39",
-                    "vnName": "Cá Cơm Sọc Xanh",
-                    "scientificName": "Stolephorus zollingeri"
-                  },
-                  {
-                    "id": "tap2-species-40",
-                    "vnName": "Cá Cơm Thường",
-                    "scientificName": "Stolephorus commersonii"
-                  },
-                  {
-                    "id": "tap2-species-41",
-                    "vnName": "Cá Cơm Ấn Độ",
-                    "scientificName": "Stolephorus indicus"
-                  },
-                  {
-                    "id": "tap2-species-42",
-                    "vnName": "Cá Cơm Săng",
-                    "scientificName": "Stolephorus tri"
-                  },
-                  {
-                    "id": "tap2-species-43",
-                    "vnName": "Cá Cơm Trung Hoa",
-                    "scientificName": "Stolephorus chinensis"
-                  },
-                  {
-                    "id": "tap2-species-44",
-                    "vnName": "Cá Cơm Bata",
-                    "scientificName": "Stolephorus bataviensis"
-                  },
-                  {
-                    "id": "tap2-species-45",
-                    "vnName": "Cá Cơm Đỏ",
-                    "scientificName": "Stolephorus buccaneeri"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Lành canh Coilia Gray, 1831",
-                "latin": "Coilia Gray, 1831",
-                "species": [
-                  {
-                    "id": "tap2-species-55",
-                    "vnName": "Cá Lành Canh Trắng",
-                    "scientificName": "Coilia grayii"
-                  },
-                  {
-                    "id": "tap2-species-56",
-                    "vnName": "Cá Lành Canh Đuôi Phượng",
-                    "scientificName": "Coilia mystus"
-                  },
-                  {
-                    "id": "tap2-species-57",
-                    "vnName": "Cá Lành Canh Chóp Vàng",
-                    "scientificName": "Coilia dussumieri"
-                  },
-                  {
-                    "id": "tap2-species-58",
-                    "vnName": "Cá Mẻ Gà",
-                    "scientificName": "Coilia macrognathos"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Lẹp Thrissa Cuvier, 1817",
-                "latin": "Thrissa Cuvier, 1817",
-                "species": [
-                  {
-                    "id": "tap2-species-46",
-                    "vnName": "Cá Lẹp Cam",
-                    "scientificName": "Thrissa kammalensis"
-                  },
-                  {
-                    "id": "tap2-species-47",
-                    "vnName": "Cá Róp",
-                    "scientificName": "Thrissa hamiltonii"
-                  },
-                  {
-                    "id": "tap2-species-48",
-                    "vnName": "Cá Lẹp Hai Quai",
-                    "scientificName": "Thrissa mystax"
-                  },
-                  {
-                    "id": "tap2-species-49",
-                    "vnName": "Cá Lẹp Mõm Vàng",
-                    "scientificName": "Thrissa vitirostis"
-                  },
-                  {
-                    "id": "tap2-species-50",
-                    "vnName": "Cá Lẹp Đỏ",
-                    "scientificName": "Thrissa dussumieri"
-                  },
-                  {
-                    "id": "tap2-species-51",
-                    "vnName": "Cá Lẹp Hàm Dài",
-                    "scientificName": "Thrissa setirostris"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Lẹp vàng Setipinna Swainson, 1839",
-                "latin": "Setipinna Swainson, 1839",
-                "species": [
-                  {
-                    "id": "tap2-species-52",
-                    "vnName": "Cá Lẹp Vàng Vây Ngực Dài",
-                    "scientificName": "Setipinna taty"
-                  },
-                  {
-                    "id": "tap2-species-53",
-                    "vnName": "Cá Tóp Tươi",
-                    "scientificName": "Setipinna melanochir"
-                  },
-                  {
-                    "id": "tap2-species-54",
-                    "vnName": "Cá Lẹp Vàng Vây Ngực Ngắn",
-                    "scientificName": "Setipinna breviceps"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Tuyết Gadiformes",
-        "latin": "ORDER GADIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Tuyết Tê Giác Bregmacerotidae",
-            "latin": "FAMILY BREGMACEROTIDAE",
-            "children": [
-              {
-                "vn": "Cá Tuyết tê giác Bregmaceros Thompson, 1840.",
-                "latin": "Bregmaceros Thompson, 1840.",
-                "species": [
-                  {
-                    "id": "tap2-species-180",
-                    "vnName": "Cá Suốt Nhiệt Đới",
-                    "scientificName": "Atherina duodecimalis"
-                  },
-                  {
-                    "id": "tap2-species-181",
-                    "vnName": "Cá Tuyết Tê Giác",
-                    "scientificName": "Bregmaceros macclellandi"
-                  },
-                  {
-                    "id": "tap2-species-182",
-                    "vnName": "Cá Tuyết Tê Giác Vây Đen",
-                    "scientificName": "Bregmaceros atripinnis"
                   }
                 ]
               }
@@ -2407,362 +567,21 @@
         ]
       },
       {
-        "vn": "Bộ Cá Đèn Lồng Myctophiformes",
-        "latin": "MYCTOPHIFORMES",
+        "vn": "Bộ phụ Cá Mòi Đường",
+        "latin": "Albuloidei",
         "children": [
           {
-            "vn": "Họ Cá Khoai Harpodontidae",
-            "latin": "HARPODONTIDAE",
+            "vn": "Họ Cá Mòi Đường",
+            "latin": "Albulidae",
             "children": [
               {
-                "vn": "Cá Cơm sáng Symbolophorus Bolin and Wisner, 1959",
-                "latin": "Symbolophorus Bolin and Wisner, 1959",
+                "vn": "Cá Mòi đường Albula Scopoli, 1777",
+                "latin": "Albula Scopoli, 1777",
                 "species": [
                   {
-                    "id": "tap2-species-77",
-                    "vnName": "Cá Đèn Lồng",
-                    "scientificName": "Myctophum aurolaternatum"
-                  },
-                  {
-                    "id": "tap2-species-78",
-                    "vnName": "Cá Cơm Sáng",
-                    "scientificName": "Symbolophorus evermanni"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Khoai Harpodon le Sueur, 1825",
-                "latin": "Harpodon le Sueur, 1825",
-                "species": [
-                  {
-                    "id": "tap2-species-76",
-                    "vnName": "Cá Khoai",
-                    "scientificName": "Harpodon nehereus"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Mối Synodontidae",
-            "latin": "SYNODONTIDAE",
-            "children": [
-              {
-                "vn": "Cá Mối Saurida Cuvier and Valenciennes, 1849",
-                "latin": "Saurida Cuvier and Valenciennes, 1849",
-                "species": [
-                  {
-                    "id": "tap2-species-68",
-                    "vnName": "Cá Mối Vây Lưng Dài",
-                    "scientificName": "Saurida filamentosa"
-                  },
-                  {
-                    "id": "tap2-species-69",
-                    "vnName": "Cá Mối Hoa",
-                    "scientificName": "Saurida undosquamis"
-                  },
-                  {
-                    "id": "tap2-species-70",
-                    "vnName": "Cá Mối Thường",
-                    "scientificName": "Saurida tumbil"
-                  },
-                  {
-                    "id": "tap2-species-71",
-                    "vnName": "Cá Mối Dài",
-                    "scientificName": "Saurida elongata"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Mối vện Synodus Gronow, 1763",
-                "latin": "Synodus Gronow, 1763",
-                "species": [
-                  {
-                    "id": "tap2-species-72",
-                    "vnName": "Cá Mối Nhẳng",
-                    "scientificName": "Saurida gracilis"
-                  },
-                  {
-                    "id": "tap2-species-73",
-                    "vnName": "Cá Mối Vện To",
-                    "scientificName": "Synodus macrops"
-                  },
-                  {
-                    "id": "tap2-species-74",
-                    "vnName": "Cá Mối Vện",
-                    "scientificName": "Synodus variegatus"
-                  },
-                  {
-                    "id": "tap2-species-75",
-                    "vnName": "Cá Mối Vện Nhẳng",
-                    "scientificName": "Synodus similis"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Mối đầu to Trachinocephalus Gill, 1862",
-                "latin": "Trachinocephalus Gill, 1862",
-                "species": [
-                  {
-                    "id": "tap2-species-67",
-                    "vnName": "Cá Mối Đầu To",
-                    "scientificName": "Trachinocephalus myops"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Mối Sáng Chlorophthalmidae",
-            "latin": "CHLOROPHTHALMIDAE",
-            "children": [
-              {
-                "vn": "Cá Mối sáng Chlorophthalmus Bonaparte, 1834",
-                "latin": "Chlorophthalmus Bonaparte, 1834",
-                "species": [
-                  {
-                    "id": "tap2-species-79",
-                    "vnName": "Cá Mối Sáng",
-                    "scientificName": "Chlorophthalmus agassizii"
-                  },
-                  {
-                    "id": "tap2-species-80",
-                    "vnName": "Cá Nòng Nọc Nhật Bản",
-                    "scientificName": "Ateleopus japonicus"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "vn": "Bộ Cá Đối Mugiliformes",
-        "latin": "ORDER MUGILIFORMES",
-        "children": [
-          {
-            "vn": "Họ Cá Nhổng Sphyraenidae",
-            "latin": "FAMILY SPHYRAENIDAE",
-            "children": [
-              {
-                "vn": "Cá Nhồng Sphyraena Rose. 1793.",
-                "latin": "Sphyraena Rose. 1793.",
-                "species": [
-                  {
-                    "id": "tap2-species-231",
-                    "vnName": "Cá Nhồng Đỏ",
-                    "scientificName": "Sphyraena pinguis"
-                  },
-                  {
-                    "id": "tap2-species-232",
-                    "vnName": "Cá Nhồng Vằn",
-                    "scientificName": "Sphyraena jello"
-                  },
-                  {
-                    "id": "tap2-species-233",
-                    "vnName": "Cá Nhồng Mắt To",
-                    "scientificName": "Sphyraena forsteri"
-                  },
-                  {
-                    "id": "tap2-species-234",
-                    "vnName": "Cá Nhồng Đuôi Vàng",
-                    "scientificName": "Sphyraena obtusata"
-                  },
-                  {
-                    "id": "tap2-species-235",
-                    "vnName": "Cá Nhồng Thường",
-                    "scientificName": "Sphyraena langsar"
-                  },
-                  {
-                    "id": "tap2-species-236",
-                    "vnName": "Cá Nhồng Lớn",
-                    "scientificName": "Sphyraena barracuda"
-                  },
-                  {
-                    "id": "tap2-species-237",
-                    "vnName": "Cá Nhồng Hàm Ngắn",
-                    "scientificName": "Sphyraena brachygnathus"
-                  },
-                  {
-                    "id": "tap2-species-238",
-                    "vnName": "Cá Nhồng Xanh",
-                    "scientificName": "Sphyraena chrysotaenia"
-                  },
-                  {
-                    "id": "tap2-species-239",
-                    "vnName": "Cá Nhồng Vây Chấm",
-                    "scientificName": "Sphyraena acutipinnis"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Nhụ Polynemidae",
-            "latin": "FAMILY POLYNEMIDAE",
-            "children": [
-              {
-                "vn": "Cá Nhụ lớn Eleutheronema Bleeker, 1862.",
-                "latin": "Eleutheronema Bleeker, 1862.",
-                "species": [
-                  {
-                    "id": "tap2-species-261",
-                    "vnName": "Cá Nhụ Lớn",
-                    "scientificName": "Eleutheronema tetradactylus"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Nhụ thường Polynemus Linnaeus, 1758.",
-                "latin": "Polynemus Linnaeus, 1758.",
-                "species": [
-                  {
-                    "id": "tap2-species-262",
-                    "vnName": "Cá Nhụ Gộc",
-                    "scientificName": "Polynemus plebejus"
-                  },
-                  {
-                    "id": "tap2-species-263",
-                    "vnName": "Cá Nhụ Chấm",
-                    "scientificName": "Polynemus sextarius"
-                  },
-                  {
-                    "id": "tap2-species-264",
-                    "vnName": "Cá Nhụ Ấn Độ",
-                    "scientificName": "Polynemus indicus"
-                  },
-                  {
-                    "id": "tap2-species-265",
-                    "vnName": "Cá Nhụ Booc-nê-ô",
-                    "scientificName": "Polynemus borneensis"
-                  },
-                  {
-                    "id": "tap2-species-266",
-                    "vnName": "Cá Phèn Vàng",
-                    "scientificName": "Polynemus paradiseus"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "vn": "Họ Cá Đối Mugilidae",
-            "latin": "FAMILY MUGILIDAE",
-            "children": [
-              {
-                "vn": "Cá Đối Mugil Linnaeus, 1858.",
-                "latin": "Mugil Linnaeus, 1858.",
-                "species": [
-                  {
-                    "id": "tap2-species-240",
-                    "vnName": "Cá Đối Mục",
-                    "scientificName": "Mugil cephalus"
-                  },
-                  {
-                    "id": "tap2-species-241",
-                    "vnName": "Cá Đối Đất",
-                    "scientificName": "Mugil dussumieri"
-                  },
-                  {
-                    "id": "tap2-species-242",
-                    "vnName": "Cá Đối Anh",
-                    "scientificName": "Mugil engeli"
-                  },
-                  {
-                    "id": "tap2-species-243",
-                    "vnName": "Cá Đối Đầu Nhọn",
-                    "scientificName": "Mugil strongylocephalus"
-                  },
-                  {
-                    "id": "tap2-species-244",
-                    "vnName": "Cá Đối Vây Trước",
-                    "scientificName": "Mugil affinis"
-                  },
-                  {
-                    "id": "tap2-species-245",
-                    "vnName": "Cá Đối Hanh",
-                    "scientificName": "Mugil planiceps"
-                  },
-                  {
-                    "id": "tap2-species-246",
-                    "vnName": "Cá Đối Bạc",
-                    "scientificName": "Mugil anpinensis"
-                  },
-                  {
-                    "id": "tap2-species-247",
-                    "vnName": "Cá Đối Vây Dài",
-                    "scientificName": "Mugil longimanus"
-                  },
-                  {
-                    "id": "tap2-species-248",
-                    "vnName": "Cá Đối Booc-nê-ô",
-                    "scientificName": "Mugil borneensis"
-                  }
-                ]
-              },
-              {
-                "vn": "Cá Đối môi mỏng Liza Jordan and Swain, 1884.",
-                "latin": "Liza Jordan and Swain, 1884.",
-                "species": [
-                  {
-                    "id": "tap2-species-249",
-                    "vnName": "Cá Đối Xám",
-                    "scientificName": "Mugil speigleri"
-                  },
-                  {
-                    "id": "tap2-species-250",
-                    "vnName": "Cá Đối Lá",
-                    "scientificName": "Mugil kelaarti"
-                  },
-                  {
-                    "id": "tap2-species-251",
-                    "vnName": "Cá Đối Cổi",
-                    "scientificName": "Liza seheli"
-                  },
-                  {
-                    "id": "tap2-species-252",
-                    "vnName": "Cá Đối Lưng Gờ",
-                    "scientificName": "Liza carinata"
-                  },
-                  {
-                    "id": "tap2-species-253",
-                    "vnName": "Cá Đối Gành",
-                    "scientificName": "Liza tade"
-                  },
-                  {
-                    "id": "tap2-species-254",
-                    "vnName": "Cá Đối Vẩy To",
-                    "scientificName": "Liza macrolepis"
-                  },
-                  {
-                    "id": "tap2-species-255",
-                    "vnName": "Cá Đối Nhồng",
-                    "scientificName": "Liza so-iuy"
-                  },
-                  {
-                    "id": "tap2-species-256",
-                    "vnName": "Cá Đối Đuôi Bằng",
-                    "scientificName": "Liza vaigiensis"
-                  },
-                  {
-                    "id": "tap2-species-257",
-                    "vnName": "Cá Đối Môi Dầy",
-                    "scientificName": "Liza crenilabis"
-                  },
-                  {
-                    "id": "tap2-species-258",
-                    "vnName": "Cá Đối Chấm Vằn",
-                    "scientificName": "Liza caeruleomaculatus"
-                  },
-                  {
-                    "id": "tap2-species-259",
-                    "vnName": "Cá Đối Vẩy Thưa",
-                    "scientificName": "Liza oligolepis"
-                  },
-                  {
-                    "id": "tap2-species-260",
-                    "vnName": "Cá Đối Vẩy Cổ",
-                    "scientificName": "Liza melinoptera"
+                    "id": "tap2-species-4",
+                    "vnName": "Cá Mòi đường",
+                    "scientificName": "Albula vulpes"
                   }
                 ]
               }
@@ -4562,6 +2381,1067 @@
         ]
       },
       {
+        "vn": "Cá Cháo Biển",
+        "latin": "Elopiformes",
+        "children": [
+          {
+            "vn": "Cá Cháo Biển",
+            "latin": "Elopidae",
+            "children": [
+              {
+                "vn": "Cá Cháo biển Elops Linnaeus, 1758",
+                "latin": "Elops Linnaeus, 1758",
+                "species": [
+                  {
+                    "id": "tap2-species-1",
+                    "vnName": "Cá Cháo biển",
+                    "scientificName": "Elops saurus"
+                  },
+                  {
+                    "id": "tap2-species-2",
+                    "vnName": "Cá Cháo biển Hawai",
+                    "scientificName": "Elops hawaiensis"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Cháo Lớn",
+            "latin": "Megalopidae",
+            "children": [
+              {
+                "vn": "Cá Cháo lớn Megalops Lacepede, 1803",
+                "latin": "Megalops Lacepede, 1803",
+                "species": [
+                  {
+                    "id": "tap2-species-3",
+                    "vnName": "Cá Cháo lớn",
+                    "scientificName": "Megalops cyprinoides"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei",
+        "children": [
+          {
+            "vn": "Cá Chìa vôi",
+            "latin": "Syngnathidae",
+            "children": [
+              {
+                "vn": "Cá Chìa vôi gai Halicampus Kaup",
+                "latin": "Halicampus Kaup",
+                "species": [
+                  {
+                    "id": "tap2-species-223",
+                    "vnName": "Cá chìa vôi gai",
+                    "scientificName": "Halicampus koilomatodon"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chìa vôi không vây đuôi Solenognathus Swainson",
+                "latin": "Solenognathus Swainson",
+                "species": [
+                  {
+                    "id": "tap2-species-224",
+                    "vnName": "Cá Chìa vôi không vây",
+                    "scientificName": "Solenognathus hardwickii"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chìa vôi mõm dài Yozia Jordan and Snyder",
+                "latin": "Yozia Jordan and Snyder",
+                "species": [
+                  {
+                    "id": "tap2-species-222",
+                    "vnName": "Cá Chìa vôi mõm dài",
+                    "scientificName": "Yozia bicoarctata"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chìa vôi mõm răng cưa Trachyrhamphus Kaup",
+                "latin": "Trachyrhamphus Kaup",
+                "species": [
+                  {
+                    "id": "tap2-species-221",
+                    "vnName": "Cá Chìa vôi mõm răng cưa",
+                    "scientificName": "Trachyrhamphus serratus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chìa vôi ngắn Ichthyocampus Kaup",
+                "latin": "Ichthyocampus Kaup",
+                "species": [
+                  {
+                    "id": "tap2-species-220",
+                    "vnName": "Cá Chìa vôi ngắn",
+                    "scientificName": "Ichthyocampus belcheri"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chìa vôi sừng Syngnathoides Bleeker",
+                "latin": "Syngnathoides Bleeker",
+                "species": [
+                  {
+                    "id": "tap2-species-225",
+                    "vnName": "Cá Chìa vôi sừng",
+                    "scientificName": "Syngnathoides biaculeatus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chìa vôi thường Syngnathus Linnaeus",
+                "latin": "Syngnathus Linnaeus",
+                "species": [
+                  {
+                    "id": "tap2-species-216",
+                    "vnName": "Cá Chìa vôi thấp",
+                    "scientificName": "Syngnathus djarong"
+                  },
+                  {
+                    "id": "tap2-species-217",
+                    "vnName": "Cá Chìa vôi chấm trắng",
+                    "scientificName": "Syngnathus spicifer"
+                  },
+                  {
+                    "id": "tap2-species-218",
+                    "vnName": "Cá Chìa vôi mõm nhọn",
+                    "scientificName": "Syngnathus acus"
+                  },
+                  {
+                    "id": "tap2-species-219",
+                    "vnName": "Cá Chìa vôi xanh",
+                    "scientificName": "Syngnathus cyanospilus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chìa vôi đuôi ngắn Microphis (Kaup) Duncker",
+                "latin": "Microphis (Kaup) Duncker",
+                "species": [
+                  {
+                    "id": "tap2-species-226",
+                    "vnName": "Cá Chìa vôi đuôi ngắn",
+                    "scientificName": "Microphis boaja"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Ngựa Hippocampus Rafinesque",
+                "latin": "Hippocampus Rafinesque",
+                "species": [
+                  {
+                    "id": "tap2-species-227",
+                    "vnName": "Cá Ngựa Nhật Bản",
+                    "scientificName": "Hippocampus japonicus"
+                  },
+                  {
+                    "id": "tap2-species-228",
+                    "vnName": "Cá Ngựa gai",
+                    "scientificName": "Hippocampus histrix"
+                  },
+                  {
+                    "id": "tap2-species-229",
+                    "vnName": "Cá Ngựa đen",
+                    "scientificName": "Hippocampus kuda"
+                  },
+                  {
+                    "id": "tap2-species-230",
+                    "vnName": "Cá Ngựa chấm",
+                    "scientificName": "Hippocampus trimaculatus"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes",
+        "children": [
+          {
+            "vn": "Cá Chình biển",
+            "latin": "Anguillidae",
+            "children": [
+              {
+                "vn": "Cá Chình Anguilla Shaw, 1803",
+                "latin": "Anguilla Shaw, 1803",
+                "species": [
+                  {
+                    "id": "tap2-species-81",
+                    "vnName": "Cá Chình xê-lê-bét",
+                    "scientificName": "Anguilla celebesensis"
+                  },
+                  {
+                    "id": "tap2-species-82",
+                    "vnName": "Cá Chình cẩm thạch",
+                    "scientificName": "Anguilla marmorata"
+                  },
+                  {
+                    "id": "tap2-species-83",
+                    "vnName": "Cá Chình nhật",
+                    "scientificName": "Anguilla japonica"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Chình biển",
+            "latin": "Congridae",
+            "children": [
+              {
+                "vn": "Cá Chình bạc Anago Jordan and Hubbs",
+                "latin": "Anago Jordan and Hubbs",
+                "species": [
+                  {
+                    "id": "tap2-species-110",
+                    "vnName": "Cá Chình bạc",
+                    "scientificName": "Anago anago"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chình mõm nhọn Rhynchocymba Jordan and Hubbs",
+                "latin": "Rhynchocymba Jordan and Hubbs",
+                "species": [
+                  {
+                    "id": "tap2-species-111",
+                    "vnName": "Cá Chình đuôi đen",
+                    "scientificName": "Rhynchocymba ectenura"
+                  },
+                  {
+                    "id": "tap2-species-112",
+                    "vnName": "Cá Chình thường",
+                    "scientificName": "Rhynchocymba nystromi"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chình đuôi nhọn Uroconger Kaup",
+                "latin": "Uroconger Kaup",
+                "species": [
+                  {
+                    "id": "tap2-species-113",
+                    "vnName": "Cá Chình đuôi nhọn",
+                    "scientificName": "Uroconger lepturus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Chình giun",
+            "latin": "Moringuidae",
+            "children": [
+              {
+                "vn": "Cá Chình giun Moringua Gray",
+                "latin": "Moringua Gray",
+                "species": [
+                  {
+                    "id": "tap2-species-100",
+                    "vnName": "Cá Chình giun đầu to",
+                    "scientificName": "Moringua macrocephalus"
+                  },
+                  {
+                    "id": "tap2-species-101",
+                    "vnName": "Cá Chình giun Gia-va",
+                    "scientificName": "Moringua javanica"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Chình hậu môn trước",
+            "latin": "Dysommidae",
+            "children": [
+              {
+                "vn": "Cá Chình hậu môn trước Dysomma Alcock",
+                "latin": "Dysomma Alcock",
+                "species": [
+                  {
+                    "id": "tap2-species-123",
+                    "vnName": "Cá Chình hậu môn trước",
+                    "scientificName": "Dysomma anguillaris"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Chình mỏ vịt",
+            "latin": "Nettastomidae",
+            "children": [
+              {
+                "vn": "Cá Chình cò Chlopsis Rafinesque",
+                "latin": "Chlopsis Rafinesque",
+                "species": [
+                  {
+                    "id": "tap2-species-109",
+                    "vnName": "Cá Chình cò",
+                    "scientificName": "Chlopsis fierasfer"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Chình rắn",
+            "latin": "Ophichthyidae",
+            "children": [
+              {
+                "vn": "Cá Chình râu Cirrhimuraena Kaup",
+                "latin": "Cirrhimuraena Kaup",
+                "species": [
+                  {
+                    "id": "tap2-species-120",
+                    "vnName": "Cá Chình râu Trung Hoa",
+                    "scientificName": "Cirrhimuraena chinensis"
+                  },
+                  {
+                    "id": "tap2-species-121",
+                    "vnName": "Cá Chình râu phương đông",
+                    "scientificName": "Cirrhimuraena orientalis"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chình râu ngắn Brachysomophis Kaup",
+                "latin": "Brachysomophis Kaup",
+                "species": [
+                  {
+                    "id": "tap2-species-122",
+                    "vnName": "Cá Chình sấu",
+                    "scientificName": "Brachysomophis crocodilinus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chình rắn Ophichthys Ahl",
+                "latin": "Ophichthys Ahl",
+                "species": [
+                  {
+                    "id": "tap2-species-114",
+                    "vnName": "Cá Chình rắn vện",
+                    "scientificName": "Ophichthys evermani"
+                  },
+                  {
+                    "id": "tap2-species-115",
+                    "vnName": "Cá Chình rắn mõm nhọn",
+                    "scientificName": "Ophichthys apicalis"
+                  },
+                  {
+                    "id": "tap2-species-116",
+                    "vnName": "Cá Chình rắn mắt to",
+                    "scientificName": "Ophichthys celebicus"
+                  },
+                  {
+                    "id": "tap2-species-117",
+                    "vnName": "Cá Chình rắn hai hàng răng",
+                    "scientificName": "Ophichthys rutidodermatoides"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Nhệch Pisoodonophis Kaup",
+                "latin": "Pisoodonophis Kaup",
+                "species": [
+                  {
+                    "id": "tap2-species-118",
+                    "vnName": "Cá Nhệch răng hạt",
+                    "scientificName": "Pisoodonophis boro"
+                  },
+                  {
+                    "id": "tap2-species-119",
+                    "vnName": "Cá Nhệch ăn cua",
+                    "scientificName": "Pisoodonophis cancrivorus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Dưa",
+            "latin": "Muraenesocidae",
+            "children": [
+              {
+                "vn": "Cá Dưa Muraenesox McClelland",
+                "latin": "Muraenesox McClelland",
+                "species": [
+                  {
+                    "id": "tap2-species-102",
+                    "vnName": "Cá Dưa",
+                    "scientificName": "Muraenesox cinereus"
+                  },
+                  {
+                    "id": "tap2-species-103",
+                    "vnName": "Cá Lạt",
+                    "scientificName": "Muraenesox talabon"
+                  },
+                  {
+                    "id": "tap2-species-104",
+                    "vnName": "Cá Lạc",
+                    "scientificName": "Muraenesox talabonoides"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Lịch biển",
+            "latin": "Muraenidae",
+            "children": [
+              {
+                "vn": "Cá Lịch không vây Gymnomuraena Lacepede",
+                "latin": "Gymnomuraena Lacepede",
+                "species": [
+                  {
+                    "id": "tap2-species-99",
+                    "vnName": "Cá Lịch đồng mầu",
+                    "scientificName": "Gymnomuraena concolor"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Lịch khổng lồ Evenchelys Jordan & Evermann",
+                "latin": "Evenchelys Jordan & Evermann",
+                "species": [
+                  {
+                    "id": "tap2-species-87",
+                    "vnName": "Cá Lịch khổng lồ",
+                    "scientificName": "Evenchelys macrurus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Lịch trần Gymnothorax Bloch",
+                "latin": "Gymnothorax Bloch",
+                "species": [
+                  {
+                    "id": "tap2-species-88",
+                    "vnName": "Cá Lịch vân lớn",
+                    "scientificName": "Gymnothorax favagineus"
+                  },
+                  {
+                    "id": "tap2-species-89",
+                    "vnName": "Cá Lịch Ghi-nê",
+                    "scientificName": "Gymnothorax meleagris"
+                  },
+                  {
+                    "id": "tap2-species-94",
+                    "vnName": "Cá Lịch chấm tia",
+                    "scientificName": "Gymnothorax fimbriatus"
+                  },
+                  {
+                    "id": "tap2-species-95",
+                    "vnName": "Cá Lịch khoang răng khía",
+                    "scientificName": "Gymnothorax reticularis"
+                  },
+                  {
+                    "id": "tap2-species-96",
+                    "vnName": "Cá Lịch chấm đen",
+                    "scientificName": "Gymnothorax melanospilus"
+                  },
+                  {
+                    "id": "tap2-species-97",
+                    "vnName": "Cá Lịch khoang răng trơn",
+                    "scientificName": "Gymnothorax petelli"
+                  },
+                  {
+                    "id": "tap2-species-98",
+                    "vnName": "Cá Lịch sọc chấm",
+                    "scientificName": "Gymnothorax reevesi"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Lịch vân Echidna Forster, 1788",
+                "latin": "Echidna Forster, 1788",
+                "species": [
+                  {
+                    "id": "tap2-species-84",
+                    "vnName": "Cá Lịch vân chấm",
+                    "scientificName": "Echidna delicatula"
+                  },
+                  {
+                    "id": "tap2-species-85",
+                    "vnName": "Cá Lịch vân vạch",
+                    "scientificName": "Echidna nebulosa"
+                  },
+                  {
+                    "id": "tap2-species-86",
+                    "vnName": "Cá Lịch vân vòng",
+                    "scientificName": "Echidna polyzona"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Lịch rắn",
+            "latin": "Neenchelyidae",
+            "children": [
+              {
+                "vn": "Cá Lịch rắn Neenchelys Bamber",
+                "latin": "Neenchelys Bamber",
+                "species": [
+                  {
+                    "id": "tap2-species-105",
+                    "vnName": "Cá Lịch rắn",
+                    "scientificName": "Neenchelys buitendijki"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Nhệch",
+            "latin": "Echelidae",
+            "children": [
+              {
+                "vn": "Cá Nhệch không vây ngực Muraenichthys Bleeker",
+                "latin": "Muraenichthys Bleeker",
+                "species": [
+                  {
+                    "id": "tap2-species-106",
+                    "vnName": "Cá Nhệch vây trần",
+                    "scientificName": "Muraenichthys gymnopterus"
+                  },
+                  {
+                    "id": "tap2-species-107",
+                    "vnName": "Cá Nhệch răng một hàng",
+                    "scientificName": "Muraenichthys malabonensis"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Nhệch đầu Myrophis Lutken",
+                "latin": "Myrophis Lutken",
+                "species": [
+                  {
+                    "id": "tap2-species-108",
+                    "vnName": "Cá Nhệch đầu mắt to",
+                    "scientificName": "Myrophis macrophthalmus"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei",
+        "children": [
+          {
+            "vn": "Cá Chồn râu",
+            "latin": "Brotulidae",
+            "children": [
+              {
+                "vn": "Cá Chồn Acan Acanthonus Gunther",
+                "latin": "Acanthonus Gunther",
+                "species": [
+                  {
+                    "id": "tap2-species-183",
+                    "vnName": "Cá Chồn râu ac-ma",
+                    "scientificName": "Acanthonus armatus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chồn gai Hoplobrotula Gill",
+                "latin": "Hoplobrotula Gill",
+                "species": [
+                  {
+                    "id": "tap2-species-187",
+                    "vnName": "Cá Chồn ac-ma",
+                    "scientificName": "Hoprobrotula armata"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chồn gai Neobythites Goode and Bean",
+                "latin": "Neobythites Goode and Bean",
+                "species": [
+                  {
+                    "id": "tap2-species-185",
+                    "vnName": "Cá Chồn gai",
+                    "scientificName": "Neobythites sivicolus"
+                  },
+                  {
+                    "id": "tap2-species-186",
+                    "vnName": "Cá Chồn chấm đen",
+                    "scientificName": "Neobythites nigromaculatus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chồn râu Brotula Cuvier",
+                "latin": "Brotula Cuvier",
+                "species": [
+                  {
+                    "id": "tap2-species-184",
+                    "vnName": "Cá Chồn râu",
+                    "scientificName": "Brotula multibarbata"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chồn tiên Sirembo Bleeker",
+                "latin": "Sirembo Bleeker",
+                "species": [
+                  {
+                    "id": "tap2-species-188",
+                    "vnName": "Cá Chồn tiên",
+                    "scientificName": "Sirembo imberbis"
+                  },
+                  {
+                    "id": "tap2-species-189",
+                    "vnName": "Cá Chồn khoang",
+                    "scientificName": "Sirembo marmoratum"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Chồn",
+            "latin": "Ophidiidae",
+            "children": [
+              {
+                "vn": "Cá Chồn Ophidion Linnaeus",
+                "latin": "Ophidion Linnaeus",
+                "species": [
+                  {
+                    "id": "tap2-species-190",
+                    "vnName": "Cá Chồn mu-ra",
+                    "scientificName": "Ophidion muraenolepis"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Ngọc",
+            "latin": "Carapidae",
+            "children": [
+              {
+                "vn": "Cá Ngọc Carapus Rafinesque",
+                "latin": "Carapus Rafinesque",
+                "species": [
+                  {
+                    "id": "tap2-species-191",
+                    "vnName": "Cá Ngọc",
+                    "scientificName": "Carapus homei"
+                  },
+                  {
+                    "id": "tap2-species-192",
+                    "vnName": "Cá Ngọc mảnh",
+                    "scientificName": "Carapus gracilis"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Dây",
+        "latin": "Zeiformes",
+        "children": [
+          {
+            "vn": "Cá Dây",
+            "latin": "Zeidae",
+            "children": [
+              {
+                "vn": "Cá Dây Zeus Linnaeus",
+                "latin": "Zeus Linnaeus",
+                "species": [
+                  {
+                    "id": "tap2-species-207",
+                    "vnName": "Cá Dây Nhật Bản",
+                    "scientificName": "Zeus japonicus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Dây gương Zenopsis Gill",
+                "latin": "Zenopsis Gill",
+                "species": [
+                  {
+                    "id": "tap2-species-206",
+                    "vnName": "Cá Dây gương",
+                    "scientificName": "Zenopsis nebulosa"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Dây lưng gù Zen Jordan",
+                "latin": "Zen Jordan",
+                "species": [
+                  {
+                    "id": "tap2-species-208",
+                    "vnName": "Cá Dây lưng gù",
+                    "scientificName": "Zen cypho"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Thoi",
+            "latin": "Caproidae",
+            "children": [
+              {
+                "vn": "Cá Thoi Antigonia Lowe",
+                "latin": "Antigonia Lowe",
+                "species": [
+                  {
+                    "id": "tap2-species-209",
+                    "vnName": "Cá Thoi",
+                    "scientificName": "Antigonia capros"
+                  },
+                  {
+                    "id": "tap2-species-210",
+                    "vnName": "Cá Thoi đỏ",
+                    "scientificName": "Antigonia rubescens"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Dạng voi",
+        "latin": "Cetomimiformes",
+        "children": [
+          {
+            "vn": "Cá Nòng nọc",
+            "latin": "Ateleopidae",
+            "children": [
+              {
+                "vn": "Cá Nòng nọc Ateleopus Temminck and Schlegel, 1842",
+                "latin": "Ateleopus Temminck and Schlegel, 1842",
+                "species": [
+                  {
+                    "id": "tap2-species-80",
+                    "vnName": "Cá Nòng nọc Nhật Bản",
+                    "scientificName": "Ateleopus japonicus"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Gai",
+        "latin": "Gasterosteiformes",
+        "children": [
+          {
+            "vn": "Cá Mõm ống",
+            "latin": "Fistulariidae",
+            "children": [
+              {
+                "vn": "Cá Mõm ống Fistularia Linnaeus",
+                "latin": "Fistularia Linnaeus",
+                "species": [
+                  {
+                    "id": "tap2-species-212",
+                    "vnName": "Cá Lao có vẩy",
+                    "scientificName": "Fistularia serrata"
+                  },
+                  {
+                    "id": "tap2-species-213",
+                    "vnName": "Cá Lao không vẩy",
+                    "scientificName": "Fistularia petimba"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Múa đít",
+            "latin": "Centriscidae",
+            "children": [
+              {
+                "vn": "Cá Múa đít đỏ Centriscus Linnaeus",
+                "latin": "Centriscus Linnaeus",
+                "species": [
+                  {
+                    "id": "tap2-species-215",
+                    "vnName": "Cá Múa đít đỏ",
+                    "scientificName": "Centriscus scutatus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Vỏ tôm Aeoliscus Jordan and Starks",
+                "latin": "Aeoliscus Jordan and Starks",
+                "species": [
+                  {
+                    "id": "tap2-species-214",
+                    "vnName": "Cá Vỏ tôm",
+                    "scientificName": "Aeoliscus strigatus"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Hồi",
+        "latin": "Salmoniformes",
+        "children": [
+          {
+            "vn": "Cá Ngần",
+            "latin": "Salangidae",
+            "children": [
+              {
+                "vn": "Cá Ngần Salanx Cuvier, 1817",
+                "latin": "Salanx Cuvier, 1817",
+                "species": [
+                  {
+                    "id": "tap2-species-61",
+                    "vnName": "Cá Ngần vây dài",
+                    "scientificName": "Salanx longianalis"
+                  },
+                  {
+                    "id": "tap2-species-62",
+                    "vnName": "Cá Ngần đầu nhọn",
+                    "scientificName": "Salanx acuticeps"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Ngần lớn Protosalanx Regan, 1908",
+                "latin": "Protosalanx Regan, 1908",
+                "species": [
+                  {
+                    "id": "tap2-species-60",
+                    "vnName": "Cá Ngần lớn",
+                    "scientificName": "Protosalanx hyalocranius"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Ngần trắng Leucosoma Gray, 1831",
+                "latin": "Leucosoma Gray, 1831",
+                "species": [
+                  {
+                    "id": "tap2-species-63",
+                    "vnName": "Cá Ngần Trung Hoa",
+                    "scientificName": "Leucosoma chinensis"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Răng lỗi",
+            "latin": "Chauliodontidae",
+            "children": [
+              {
+                "vn": "Cá Răng lỗi Chauliodus Bloch et Schneider, 1801",
+                "latin": "Chauliodus Bloch et Schneider, 1801",
+                "species": [
+                  {
+                    "id": "tap2-species-65",
+                    "vnName": "Cá Răng lỗi",
+                    "scientificName": "Chauliodus sloani"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Sao gai",
+            "latin": "Sternoptychidae",
+            "children": [
+              {
+                "vn": "Cá Sao gai Polyipnus Gunther, 1887",
+                "latin": "Polyipnus Gunther, 1887",
+                "species": [
+                  {
+                    "id": "tap2-species-66",
+                    "vnName": "Cá Sao gai",
+                    "scientificName": "Polyipnus spinosus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Ánh bạc",
+            "latin": "Argentinidae",
+            "children": [
+              {
+                "vn": "Cá Ánh bạc Argentina Linnaeus, 1758",
+                "latin": "Argentina Linnaeus, 1758",
+                "species": [
+                  {
+                    "id": "tap2-species-64",
+                    "vnName": "Cá Ánh bạc",
+                    "scientificName": "Argentina semifasciata"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes",
+        "children": [
+          {
+            "vn": "Cá Khoai",
+            "latin": "Harpodontidae",
+            "children": [
+              {
+                "vn": "Cá Khoai Harpodon le Sueur, 1825",
+                "latin": "Harpodon le Sueur, 1825",
+                "species": [
+                  {
+                    "id": "tap2-species-76",
+                    "vnName": "Cá Khoai",
+                    "scientificName": "Harpodon nehereus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Mối sáng",
+            "latin": "Chlorophthalmidae",
+            "children": [
+              {
+                "vn": "Cá Mối sáng Chlorophthalmus Bonaparte, 1834",
+                "latin": "Chlorophthalmus Bonaparte, 1834",
+                "species": [
+                  {
+                    "id": "tap2-species-79",
+                    "vnName": "Cá Mối sáng",
+                    "scientificName": "Chlorophthalmus agassizii"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Mối",
+            "latin": "Synodontidae",
+            "children": [
+              {
+                "vn": "Cá Mối Saurida Cuvier and Valenciennes, 1849",
+                "latin": "Saurida Cuvier and Valenciennes, 1849",
+                "species": [
+                  {
+                    "id": "tap2-species-68",
+                    "vnName": "Cá Mối vây lưng dài",
+                    "scientificName": "Saurida filamentosa"
+                  },
+                  {
+                    "id": "tap2-species-69",
+                    "vnName": "Cá Mối hoa",
+                    "scientificName": "Saurida undosquamis"
+                  },
+                  {
+                    "id": "tap2-species-70",
+                    "vnName": "Cá Mối thường",
+                    "scientificName": "Saurida tumbil"
+                  },
+                  {
+                    "id": "tap2-species-71",
+                    "vnName": "Cá Mối dài",
+                    "scientificName": "Saurida elongata"
+                  },
+                  {
+                    "id": "tap2-species-72",
+                    "vnName": "Cá Mối nhẳng",
+                    "scientificName": "Saurida gracilis"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Mối vện Synodus Gronow, 1763",
+                "latin": "Synodus Gronow, 1763",
+                "species": [
+                  {
+                    "id": "tap2-species-73",
+                    "vnName": "Cá Mối vện to",
+                    "scientificName": "Synodus macrops"
+                  },
+                  {
+                    "id": "tap2-species-74",
+                    "vnName": "Cá Mối vện",
+                    "scientificName": "Synodus variegatus"
+                  },
+                  {
+                    "id": "tap2-species-75",
+                    "vnName": "Cá Mối vện nhẳng",
+                    "scientificName": "Synodus similis"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Mối đầu to Trachinocephalus Gill, 1861",
+                "latin": "Trachinocephalus Gill, 1861",
+                "species": [
+                  {
+                    "id": "tap2-species-67",
+                    "vnName": "Cá Mối đầu to",
+                    "scientificName": "Trachinocephalus myops"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Đèn lồng",
+            "latin": "Myctophidae",
+            "children": [
+              {
+                "vn": "Cá Cơm sáng Symbolophorus Bolin and Wisner, 1959",
+                "latin": "Symbolophorus Bolin and Wisner, 1959",
+                "species": [
+                  {
+                    "id": "tap2-species-78",
+                    "vnName": "Cá Cơm sáng",
+                    "scientificName": "Symbolophorus evermanni"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Đèn lồng Myctophum Rafinesque, 1810",
+                "latin": "Myctophum Rafinesque, 1810",
+                "species": [
+                  {
+                    "id": "tap2-species-77",
+                    "vnName": "Cá Đèn lồng",
+                    "scientificName": "Myctophum aurolaternatum"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
         "vn": "Cá Lưỡng Tiêm",
         "latin": "Amphioxiformes",
         "children": [
@@ -4577,6 +3457,175 @@
                     "id": "tap1-species-1",
                     "vnName": "Cá lưỡng tiêm",
                     "scientificName": "Branchiostoma belcheri"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Mặt trăng",
+        "latin": "Lampridiformes",
+        "children": [
+          {
+            "vn": "Cá Cờ mặt trăng",
+            "latin": "Veliferidae",
+            "children": [
+              {
+                "vn": "Cá Cờ mặt trăng Velifer Temminck and Schlegel",
+                "latin": "Velifer Temminck and Schlegel",
+                "species": [
+                  {
+                    "id": "tap2-species-211",
+                    "vnName": "Cá Cờ mặt trăng",
+                    "scientificName": "Velifer hypselopterus"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes",
+        "children": [
+          {
+            "vn": "Cá Ngát",
+            "latin": "Plotosidae",
+            "children": [
+              {
+                "vn": "Cá Ngát Plotosus Lacepede",
+                "latin": "Plotosus Lacepede",
+                "species": [
+                  {
+                    "id": "tap2-species-124",
+                    "vnName": "Cá Ngát",
+                    "scientificName": "Plotosus anguillaris"
+                  },
+                  {
+                    "id": "tap2-species-125",
+                    "vnName": "Cá Ngát chó",
+                    "scientificName": "Plotosus canius"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Ngát môi trắng Paraplotosus Bleeker",
+                "latin": "Paraplotosus Bleeker",
+                "species": [
+                  {
+                    "id": "tap2-species-126",
+                    "vnName": "Cá Ngát môi trắng",
+                    "scientificName": "Paraplotosus albilabris"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Ngạnh",
+            "latin": "Bagridae",
+            "children": [
+              {
+                "vn": "Cá Hau Cranoglanis Peters",
+                "latin": "Cranoglanis Peters",
+                "species": [
+                  {
+                    "id": "tap2-species-139",
+                    "vnName": "Cá Hau",
+                    "scientificName": "Cranoglanis multiradiatus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Tra",
+            "latin": "Schilbeidae",
+            "children": [
+              {
+                "vn": "Cá Tra Pangasius Cuvier and Valenciennes",
+                "latin": "Pangasius Cuvier and Valenciennes",
+                "species": [
+                  {
+                    "id": "tap2-species-127",
+                    "vnName": "Cá Tra",
+                    "scientificName": "Pangasius krempfi"
+                  },
+                  {
+                    "id": "tap2-species-128",
+                    "vnName": "Cá Dứa",
+                    "scientificName": "Pangasius polyuranodon"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Úc",
+            "latin": "Ariidae",
+            "children": [
+              {
+                "vn": "Cá Thiều Hemipimelodus Bleeker",
+                "latin": "Hemipimelodus Bleeker",
+                "species": [
+                  {
+                    "id": "tap2-species-138",
+                    "vnName": "Cá Thiều",
+                    "scientificName": "Hemipimelodus siamensis"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Úc Arius Cuvier and Valenciennes",
+                "latin": "Arius Cuvier and Valenciennes",
+                "species": [
+                  {
+                    "id": "tap2-species-129",
+                    "vnName": "Cá Úc Trung hoa",
+                    "scientificName": "Arius sinensis"
+                  },
+                  {
+                    "id": "tap2-species-130",
+                    "vnName": "Cá Úc đầu cứng",
+                    "scientificName": "Arius leiotetocephaluds"
+                  },
+                  {
+                    "id": "tap2-species-131",
+                    "vnName": "Cá Úc thường",
+                    "scientificName": "Arius thalassinus"
+                  },
+                  {
+                    "id": "tap2-species-132",
+                    "vnName": "Cá Úc chấm",
+                    "scientificName": "Arius maculatus"
+                  },
+                  {
+                    "id": "tap2-species-133",
+                    "vnName": "Cá Úc trắng",
+                    "scientificName": "Arius sciurus"
+                  },
+                  {
+                    "id": "tap2-species-134",
+                    "vnName": "Cá Úc gai mềm",
+                    "scientificName": "Arius maculacanthus"
+                  },
+                  {
+                    "id": "tap2-species-135",
+                    "vnName": "Cá Úc quạt",
+                    "scientificName": "Arius caelatus"
+                  },
+                  {
+                    "id": "tap2-species-136",
+                    "vnName": "Cá Vồ chó",
+                    "scientificName": "Arius sagor"
+                  },
+                  {
+                    "id": "tap2-species-137",
+                    "vnName": "Cá Úc thiều giả",
+                    "scientificName": "Arius harmandi"
                   }
                 ]
               }
@@ -5034,6 +4083,945 @@
                     "id": "tap1-species-53",
                     "vnName": "Cá Nhám nâu",
                     "scientificName": "Etmopterus lucifer"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes",
+        "children": [
+          {
+            "vn": "Cá Chuồn",
+            "latin": "Exocoetidae",
+            "children": [
+              {
+                "vn": "Cá Chuồn bay Exocoetus Linnaeus",
+                "latin": "Exocoetus Linnaeus",
+                "species": [
+                  {
+                    "id": "tap2-species-154",
+                    "vnName": "Cá Chuồn bay",
+                    "scientificName": "Exocoetus volitans"
+                  },
+                  {
+                    "id": "tap2-species-155",
+                    "vnName": "Cá Chuồn bay có râu",
+                    "scientificName": "Exocoetus monocirrhus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chuồn thường Cypselurus Swainson",
+                "latin": "Cypselurus Swainson",
+                "species": [
+                  {
+                    "id": "tap2-species-157",
+                    "vnName": "Cá Chuồn mắt to",
+                    "scientificName": "Cypselurus brevis"
+                  },
+                  {
+                    "id": "tap2-species-158",
+                    "vnName": "Cá Chuồn vây nhỏ",
+                    "scientificName": "Cypselurus oligolepis"
+                  },
+                  {
+                    "id": "tap2-species-159",
+                    "vnName": "Cá Chuồn vây lớn",
+                    "scientificName": "Cypselurus naresii"
+                  },
+                  {
+                    "id": "tap2-species-160",
+                    "vnName": "Cá Chuồn đầu cong",
+                    "scientificName": "Cypselurus opisthopus"
+                  },
+                  {
+                    "id": "tap2-species-161",
+                    "vnName": "Cá Chuồn vây vằn",
+                    "scientificName": "Cypselurus poecilopterus"
+                  },
+                  {
+                    "id": "tap2-species-162",
+                    "vnName": "Cá Chuồn vây đen",
+                    "scientificName": "Cypselurus bahiensis"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chuồn vây ngang Hirundichthys Breder",
+                "latin": "Hirundichthys Breder",
+                "species": [
+                  {
+                    "id": "tap2-species-169",
+                    "vnName": "Cá Chuồn nhiều răng",
+                    "scientificName": "Hirundichthys speculiger"
+                  },
+                  {
+                    "id": "tap2-species-170",
+                    "vnName": "Cá Chuồn ít răng",
+                    "scientificName": "Hirundichthys oxycephalus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Chuồn vằn Cheilopogon Lowe",
+                "latin": "Cheilopogon Lowe",
+                "species": [
+                  {
+                    "id": "tap2-species-163",
+                    "vnName": "Cá Chuồn cung",
+                    "scientificName": "Cheilopogon arcticeps"
+                  },
+                  {
+                    "id": "tap2-species-164",
+                    "vnName": "Cá Chuồn có vây chấm đen",
+                    "scientificName": "Cheilopogon spilopterus"
+                  },
+                  {
+                    "id": "tap2-species-165",
+                    "vnName": "Cá Chuồn dài",
+                    "scientificName": "Cheilopogon atrisignis"
+                  },
+                  {
+                    "id": "tap2-species-166",
+                    "vnName": "Cá Chuồn hạt mít",
+                    "scientificName": "Cheilopogon katoptron"
+                  },
+                  {
+                    "id": "tap2-species-167",
+                    "vnName": "Cá Chuồn vằn bụng",
+                    "scientificName": "Cheilopogon suttoni"
+                  },
+                  {
+                    "id": "tap2-species-168",
+                    "vnName": "Cá Chuồn xanh",
+                    "scientificName": "Cheilopogon cyanopterus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá chuồn không râu Prognichthys Breder",
+                "latin": "Prognichthys Breder",
+                "species": [
+                  {
+                    "id": "tap2-species-156",
+                    "vnName": "Cá Chuồn không râu",
+                    "scientificName": "Prognichthys brevipinnis"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá chuồn vây ngắn Parexocoetus Bleeker",
+                "latin": "Parexocoetus Bleeker",
+                "species": [
+                  {
+                    "id": "tap2-species-152",
+                    "vnName": "Cá Chuồn vây ngắn",
+                    "scientificName": "Parexocoetus brachypterus brachypterus"
+                  },
+                  {
+                    "id": "tap2-species-153",
+                    "vnName": "Cá Chuồn men-tô",
+                    "scientificName": "Parexocoetus mento mento"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Kìm",
+            "latin": "Hemirhamphidae",
+            "children": [
+              {
+                "vn": "Cá Chuồn kìm Oxyporhamphus Gill",
+                "latin": "Oxyporhamphus Gill",
+                "species": [
+                  {
+                    "id": "tap2-species-151",
+                    "vnName": "Cá Chuồn kìm",
+                    "scientificName": "Oxyporhamphus micropterus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Kìm biển vây Zenarchopterus Gill",
+                "latin": "Zenarchopterus Gill",
+                "species": [
+                  {
+                    "id": "tap2-species-141",
+                    "vnName": "Cá Kìm biển vây",
+                    "scientificName": "Zenarchopterus buffoni"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Kìm dưới Hyporhamphus Gill",
+                "latin": "Hyporhamphus Gill",
+                "species": [
+                  {
+                    "id": "tap2-species-147",
+                    "vnName": "Cá Kìm giữa",
+                    "scientificName": "Hyporhamphus intermedius"
+                  },
+                  {
+                    "id": "tap2-species-148",
+                    "vnName": "Cá Kìm Trung Hoa",
+                    "scientificName": "Hyporhamphus sinensis"
+                  },
+                  {
+                    "id": "tap2-species-149",
+                    "vnName": "Cá Kìm Đús-su",
+                    "scientificName": "Hyporhamphus dussumierii"
+                  },
+                  {
+                    "id": "tap2-species-150",
+                    "vnName": "Cá Kìm sông",
+                    "scientificName": "Hyporhamphus unifasciatus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Kìm mõm dài Euleptorhamphus Gill",
+                "latin": "Euleptorhamphus Gill",
+                "species": [
+                  {
+                    "id": "tap2-species-140",
+                    "vnName": "Cá Kìm mõm dài",
+                    "scientificName": "Euleptorhamphus longirostris"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Kìm thường Hemirhamphus Cuvier and Valenciennes",
+                "latin": "Hemirhamphus Cuvier and Valenciennes",
+                "species": [
+                  {
+                    "id": "tap2-species-142",
+                    "vnName": "Cá Kìm môi dài",
+                    "scientificName": "Hemirhamphus georgii"
+                  },
+                  {
+                    "id": "tap2-species-143",
+                    "vnName": "Cá Kìm thân dẹp",
+                    "scientificName": "Hemirhamphus marginatus"
+                  },
+                  {
+                    "id": "tap2-species-144",
+                    "vnName": "Cá Kìm thân tròn",
+                    "scientificName": "Hemirhamphus quoyi"
+                  },
+                  {
+                    "id": "tap2-species-145",
+                    "vnName": "Cá Kìm chấm",
+                    "scientificName": "Hemirhamphus far"
+                  },
+                  {
+                    "id": "tap2-species-146",
+                    "vnName": "Cá Kìm Gai-ma",
+                    "scientificName": "Hemirhamphus gaimard"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Nhói",
+            "latin": "Belonidae",
+            "children": [
+              {
+                "vn": "Cá Nhói Tylosurus Cocco",
+                "latin": "Tylosurus Cocco",
+                "species": [
+                  {
+                    "id": "tap2-species-173",
+                    "vnName": "Cá Nhói lớn",
+                    "scientificName": "Tylosurus giganteus"
+                  },
+                  {
+                    "id": "tap2-species-174",
+                    "vnName": "Cá Nhói lưng đen",
+                    "scientificName": "Tylosurus melanotus"
+                  },
+                  {
+                    "id": "tap2-species-175",
+                    "vnName": "Cá Nhói đuôi chấm",
+                    "scientificName": "Tylosurus strongylurus"
+                  },
+                  {
+                    "id": "tap2-species-176",
+                    "vnName": "Cá Nhói đuôi không chấm",
+                    "scientificName": "Tylosurus leiurus"
+                  },
+                  {
+                    "id": "tap2-species-177",
+                    "vnName": "Cá Nhói sấu",
+                    "scientificName": "Tylosurus crocodilus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Quại Ablennes Jordan and Fordice",
+                "latin": "Ablennes Jordan and Fordice",
+                "species": [
+                  {
+                    "id": "tap2-species-171",
+                    "vnName": "Cá Quại mõm nhọn",
+                    "scientificName": "Ablennes anastomella"
+                  },
+                  {
+                    "id": "tap2-species-172",
+                    "vnName": "Cá Quại vằn",
+                    "scientificName": "Ablennes hians"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Suốt",
+        "latin": "Atheriniformes",
+        "children": [
+          {
+            "vn": "Cá Suốt",
+            "latin": "Atherinidae",
+            "children": [
+              {
+                "vn": "Cá Suốt Atherina Linnaeus",
+                "latin": "Atherina Linnaeus",
+                "species": [
+                  {
+                    "id": "tap2-species-178",
+                    "vnName": "Cá Suốt đầu dẹp",
+                    "scientificName": "Atherina bleekeri"
+                  },
+                  {
+                    "id": "tap2-species-179",
+                    "vnName": "Cá Suốt mắt to",
+                    "scientificName": "Atherina forskali"
+                  },
+                  {
+                    "id": "tap2-species-180",
+                    "vnName": "Cá Suốt nhiệt đới",
+                    "scientificName": "Atherina duodecimalis"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Sữa",
+        "latin": "Gonorhynchiformes",
+        "children": [
+          {
+            "vn": "Cá Măng Biển",
+            "latin": "Chanidae",
+            "children": [
+              {
+                "vn": "Cá Măng Chanos Lacepede, 1803",
+                "latin": "Chanos Lacepede, 1803",
+                "species": [
+                  {
+                    "id": "tap2-species-5",
+                    "vnName": "Cá Măng biển",
+                    "scientificName": "Chanos chanos"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes",
+        "children": [
+          {
+            "vn": "Cá Nành xe",
+            "latin": "Monocentridae",
+            "children": [
+              {
+                "vn": "Cá Nành xe Monocentris Bloch and Schneider",
+                "latin": "Monocentris Bloch and Schneider",
+                "species": [
+                  {
+                    "id": "tap2-species-205",
+                    "vnName": "Cá Nành xe Nhật Bản",
+                    "scientificName": "Monocentris japonicus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Sơn đá",
+            "latin": "Holocentridae",
+            "children": [
+              {
+                "vn": "Cá Sơn đá dài Flammeo Jordan and Evermann",
+                "latin": "Flammeo Jordan and Evermann",
+                "species": [
+                  {
+                    "id": "tap2-species-204",
+                    "vnName": "Cá Sơn đá dài",
+                    "scientificName": "Flammeo sammara"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Sơn đá thường Holocentrus Scopoli",
+                "latin": "Holocentrus Scopoli",
+                "species": [
+                  {
+                    "id": "tap2-species-200",
+                    "vnName": "Cá Sơn đá đỏ",
+                    "scientificName": "Holocentrus ruber"
+                  },
+                  {
+                    "id": "tap2-species-201",
+                    "vnName": "Cá Sơn đá chấm đuôi",
+                    "scientificName": "Holocentrus caudimaculatus"
+                  },
+                  {
+                    "id": "tap2-species-202",
+                    "vnName": "Cá Sơn đá sư tử",
+                    "scientificName": "Holocentrus diadema"
+                  },
+                  {
+                    "id": "tap2-species-203",
+                    "vnName": "Cá Sơn đá sừng",
+                    "scientificName": "Holocentrus cornutus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Sơn đá vảy răng cưa Myripristis Cuvier",
+                "latin": "Myripristis Cuvier",
+                "species": [
+                  {
+                    "id": "tap2-species-196",
+                    "vnName": "Cá Sơn đá vảy răng cưa",
+                    "scientificName": "Myripristis murdjan"
+                  },
+                  {
+                    "id": "tap2-species-197",
+                    "vnName": "Cá Sơn đá răng đôi",
+                    "scientificName": "Myripristis hexagonus"
+                  },
+                  {
+                    "id": "tap2-species-198",
+                    "vnName": "Cá Sơn đá má nhẵn",
+                    "scientificName": "Myripristis pralinius"
+                  },
+                  {
+                    "id": "tap2-species-199",
+                    "vnName": "Cá Sơn đá môi đen",
+                    "scientificName": "Myripristis melanostictis"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Sơn đá vẩy cứng Ostichthys Jordan and Evermann",
+                "latin": "Ostichthys Jordan and Evermann",
+                "species": [
+                  {
+                    "id": "tap2-species-194",
+                    "vnName": "Cá Sơn đá Nhật Bản",
+                    "scientificName": "Ostichthys japonicus"
+                  },
+                  {
+                    "id": "tap2-species-195",
+                    "vnName": "Cá Sơn đá biển sâu",
+                    "scientificName": "Ostichthys kaianus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Tráp mắt vàng",
+            "latin": "Berycidae",
+            "children": [
+              {
+                "vn": "Cá Tráp gai Trachichthodes Gilchrist",
+                "latin": "Trachichthodes Gilchrist",
+                "species": [
+                  {
+                    "id": "tap2-species-193",
+                    "vnName": "Cá Tráp gai",
+                    "scientificName": "Trachichthodes lineatus"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes",
+        "children": [
+          {
+            "vn": "Cá Bẹ",
+            "latin": "Pristigasteridae",
+            "children": [
+              {
+                "vn": "Cá Bẹ Ilisha Richardson, 1846",
+                "latin": "Ilisha Richardson, 1846",
+                "species": [
+                  {
+                    "id": "tap2-species-30",
+                    "vnName": "Cá Đé",
+                    "scientificName": "Ilisha elongata"
+                  },
+                  {
+                    "id": "tap2-species-31",
+                    "vnName": "Cá Bẹ Ấn Độ",
+                    "scientificName": "Ilisha indica"
+                  },
+                  {
+                    "id": "tap2-species-32",
+                    "vnName": "Cá Bẹ lầm",
+                    "scientificName": "Ilisha dussumieri"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Bẹ không vây bụng Opisthopterus Gill, 1861",
+                "latin": "Opisthopterus Gill, 1861",
+                "species": [
+                  {
+                    "id": "tap2-species-33",
+                    "vnName": "Cá Bẹ vây lưng sau",
+                    "scientificName": "Opisthopterus tardoore"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Cháy",
+            "latin": "Alosinae",
+            "children": [
+              {
+                "vn": "Cá Cháy Macrura van Hasselt, 1823",
+                "latin": "Macrura van Hasselt, 1823",
+                "species": [
+                  {
+                    "id": "tap2-species-34",
+                    "vnName": "Cá Cháy vạch mây",
+                    "scientificName": "Macrura ilisha"
+                  },
+                  {
+                    "id": "tap2-species-35",
+                    "vnName": "Cá Cháy thường",
+                    "scientificName": "Macrura reevesii"
+                  },
+                  {
+                    "id": "tap2-species-36",
+                    "vnName": "Cá Cháy chấm hoa",
+                    "scientificName": "Macrura kelee"
+                  },
+                  {
+                    "id": "tap2-species-37",
+                    "vnName": "Cá Cháy Trung Hoa",
+                    "scientificName": "Macrura sinensis"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Lanh",
+            "latin": "Chirocentridae",
+            "children": [
+              {
+                "vn": "Cá Lanh Chirocentrus Cuvier, 1817",
+                "latin": "Chirocentrus Cuvier, 1817",
+                "species": [
+                  {
+                    "id": "tap2-species-6",
+                    "vnName": "Cá Lanh",
+                    "scientificName": "Chirocentrus dorab"
+                  },
+                  {
+                    "id": "tap2-species-7",
+                    "vnName": "Cá Lanh hàm dài",
+                    "scientificName": "Chirocentrus nudus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Lầm",
+            "latin": "Dussumieriidae",
+            "children": [
+              {
+                "vn": "Cá Lầm dài Dussumieria Cuvier & Valenciennes, 1847",
+                "latin": "Dussumieria Cuvier & Valenciennes, 1847",
+                "species": [
+                  {
+                    "id": "tap2-species-12",
+                    "vnName": "Cá Lầm bụng dẹp",
+                    "scientificName": "Dussumieria acuta"
+                  },
+                  {
+                    "id": "tap2-species-13",
+                    "vnName": "Cá Lầm bụng tròn",
+                    "scientificName": "Dussumieria hasseltii"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Lầm mắt mỡ Etrumeus Bleeker, 1853",
+                "latin": "Etrumeus Bleeker, 1853",
+                "species": [
+                  {
+                    "id": "tap2-species-14",
+                    "vnName": "Cá Lầm mắt mỡ",
+                    "scientificName": "Etrumeus micropus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Lầm tròn Spratelloides Bleeker, 1852",
+                "latin": "Spratelloides Bleeker, 1852",
+                "species": [
+                  {
+                    "id": "tap2-species-15",
+                    "vnName": "Cá Lầm tròn",
+                    "scientificName": "Spratelloides decicatulus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Trích",
+            "latin": "Clupeidae",
+            "children": [
+              {
+                "vn": "Cá Lẹp Thrissa Cuvier, 1817",
+                "latin": "Thrissa Cuvier, 1817",
+                "species": [
+                  {
+                    "id": "tap2-species-46",
+                    "vnName": "Cá Lẹp cam",
+                    "scientificName": "Thrissa kammalensis"
+                  },
+                  {
+                    "id": "tap2-species-47",
+                    "vnName": "Cá Róp",
+                    "scientificName": "Thrissa hamiltonii"
+                  },
+                  {
+                    "id": "tap2-species-48",
+                    "vnName": "Cá Lẹp hai quai",
+                    "scientificName": "Thrissa mystax"
+                  },
+                  {
+                    "id": "tap2-species-49",
+                    "vnName": "Cá Lẹp mõm vàng",
+                    "scientificName": "Thrissa vitirostris"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Mai Kowala Valenciennes, 1847",
+                "latin": "Kowala Valenciennes, 1847",
+                "species": [
+                  {
+                    "id": "tap2-species-29",
+                    "vnName": "Cá Mai",
+                    "scientificName": "Kowala coval"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Mòi Anodontostoma Bleeker, 1849",
+                "latin": "Anodontostoma Bleeker, 1849",
+                "species": [
+                  {
+                    "id": "tap2-species-8",
+                    "vnName": "Cá Mòi không răng",
+                    "scientificName": "Anodontostoma chacunda"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Mòi Clupanodon Lacepede, 1803",
+                "latin": "Clupanodon Lacepede, 1803",
+                "species": [
+                  {
+                    "id": "tap2-species-10",
+                    "vnName": "Cá Mòi cờ hoa",
+                    "scientificName": "Clupanodon thrissa"
+                  },
+                  {
+                    "id": "tap2-species-11",
+                    "vnName": "Cá Mòi cờ chấm",
+                    "scientificName": "Clupanodon punctatus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Mòi mõm tròn Nematalosa Regan, 1917",
+                "latin": "Nematalosa Regan, 1917",
+                "species": [
+                  {
+                    "id": "tap2-species-9",
+                    "vnName": "Cá Mòi mõm tròn",
+                    "scientificName": "Nematalosa nasus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Trích Sardinella Cuvier & Valenciennes",
+                "latin": "Sardinella Cuvier & Valenciennes",
+                "species": [
+                  {
+                    "id": "tap2-species-16",
+                    "vnName": "Cá Nhâm",
+                    "scientificName": "Sardinella aurita"
+                  },
+                  {
+                    "id": "tap2-species-17",
+                    "vnName": "Cá Trích bụng trắng",
+                    "scientificName": "Sardinella clupeoides"
+                  },
+                  {
+                    "id": "tap2-species-18",
+                    "vnName": "Cá Trích thường",
+                    "scientificName": "Sardinella fimbriata"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Trích Sardinella Valenciennes, 1847",
+                "latin": "Sardinella Valenciennes, 1847",
+                "species": [
+                  {
+                    "id": "tap2-species-19",
+                    "vnName": "Cá Trích dải",
+                    "scientificName": "Sardinella albella"
+                  },
+                  {
+                    "id": "tap2-species-20",
+                    "vnName": "Cá Trích đầu dài",
+                    "scientificName": "Sardinella melanura"
+                  },
+                  {
+                    "id": "tap2-species-21",
+                    "vnName": "Cá Trích dầu ngắn",
+                    "scientificName": "Sardinella perforata"
+                  },
+                  {
+                    "id": "tap2-species-22",
+                    "vnName": "Cá Trích bầu",
+                    "scientificName": "Sardinella sindensis"
+                  },
+                  {
+                    "id": "tap2-species-23",
+                    "vnName": "Cá Trích sơ",
+                    "scientificName": "Sardinella sirm"
+                  },
+                  {
+                    "id": "tap2-species-24",
+                    "vnName": "Cá Trích xương",
+                    "scientificName": "Sardinella jussieu"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Trích vẩy xanh Harengula Valenciennes, 1847",
+                "latin": "Harengula Valenciennes, 1847",
+                "species": [
+                  {
+                    "id": "tap2-species-25",
+                    "vnName": "Cá Trích vẩy xanh mắt to",
+                    "scientificName": "Harengula ovalis"
+                  },
+                  {
+                    "id": "tap2-species-26",
+                    "vnName": "Cá Trích vẩy xanh",
+                    "scientificName": "Harengula zunasi"
+                  },
+                  {
+                    "id": "tap2-species-27",
+                    "vnName": "Cá Nhâm lầm",
+                    "scientificName": "Harengula nymphaea"
+                  },
+                  {
+                    "id": "tap2-species-28",
+                    "vnName": "Cá Nhâm phi",
+                    "scientificName": "Harengula schrammi"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá cơm Stolephorus Lacepede, 1803",
+                "latin": "Stolephorus Lacepede, 1803",
+                "species": [
+                  {
+                    "id": "tap2-species-40",
+                    "vnName": "Cá Cơm thường",
+                    "scientificName": "Stolephorus commersonii"
+                  },
+                  {
+                    "id": "tap2-species-41",
+                    "vnName": "Cá Cơm Ấn Độ",
+                    "scientificName": "Stolephorus indicus"
+                  },
+                  {
+                    "id": "tap2-species-42",
+                    "vnName": "Cá Cơm săng",
+                    "scientificName": "Stolephorus tri"
+                  },
+                  {
+                    "id": "tap2-species-43",
+                    "vnName": "Cá Cơm Trung Hoa",
+                    "scientificName": "Stolephorus chinensis"
+                  },
+                  {
+                    "id": "tap2-species-44",
+                    "vnName": "Cá Cơm bata",
+                    "scientificName": "Stolephorus bataviensis"
+                  },
+                  {
+                    "id": "tap2-species-45",
+                    "vnName": "Cá Cơm đỏ",
+                    "scientificName": "Stolephorus buccaneeri"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Trỏng",
+            "latin": "Engraulidae",
+            "children": [
+              {
+                "vn": "Cá Cơm Stolephorus Lacepede, 1803",
+                "latin": "Stolephorus Lacepede, 1803",
+                "species": [
+                  {
+                    "id": "tap2-species-38",
+                    "vnName": "Cá Cơm mồm nhọn",
+                    "scientificName": "Stolephorus heterolobus"
+                  },
+                  {
+                    "id": "tap2-species-39",
+                    "vnName": "Cá Cơm sọc xanh",
+                    "scientificName": "Stolephorus zollingeri"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Trổng",
+            "latin": "Engraulidae",
+            "children": [
+              {
+                "vn": "Cá Lành canh Coilia Gray, 1831",
+                "latin": "Coilia Gray, 1831",
+                "species": [
+                  {
+                    "id": "tap2-species-53",
+                    "vnName": "Cá Lành canh đầu thon",
+                    "scientificName": "Coilia ramcarati"
+                  },
+                  {
+                    "id": "tap2-species-54",
+                    "vnName": "Cá Lành canh",
+                    "scientificName": "Coilia rebentischii"
+                  },
+                  {
+                    "id": "tap2-species-55",
+                    "vnName": "Cá Lành canh trắng",
+                    "scientificName": "Coilia grayii"
+                  },
+                  {
+                    "id": "tap2-species-56",
+                    "vnName": "Cá Lành canh đuôi phượng",
+                    "scientificName": "Coilia mystus"
+                  },
+                  {
+                    "id": "tap2-species-57",
+                    "vnName": "Cá Lành canh chóp vàng",
+                    "scientificName": "Coilia dussumieri"
+                  },
+                  {
+                    "id": "tap2-species-58",
+                    "vnName": "Cá Mè gà",
+                    "scientificName": "Coilia macrognathos"
+                  },
+                  {
+                    "id": "tap2-species-59",
+                    "vnName": "Cá Lành canh",
+                    "scientificName": "Coilia lindmani"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Lẹp Thrissa Cuvier, 1816",
+                "latin": "Thrissa Cuvier, 1816",
+                "species": [
+                  {
+                    "id": "tap2-species-50",
+                    "vnName": "Cá Lẹp đỏ",
+                    "scientificName": "Thrissa dussumieri"
+                  },
+                  {
+                    "id": "tap2-species-51",
+                    "vnName": "Cá Lẹp hàm dài",
+                    "scientificName": "Thrissa setirostris"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Lẹp vàng Setipinna Swainson, 1839",
+                "latin": "Setipinna Swainson, 1839",
+                "species": [
+                  {
+                    "id": "tap2-species-52",
+                    "vnName": "Cá Lẹp vàng vây ngực dài",
+                    "scientificName": "Setipinna taty"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Tuyết",
+        "latin": "Gadiformes",
+        "children": [
+          {
+            "vn": "Cá Tuyết tê giác",
+            "latin": "Bregmacerotidae",
+            "children": [
+              {
+                "vn": "Cá Tuyết tê giác Bregmaceros Thompson",
+                "latin": "Bregmaceros Thompson",
+                "species": [
+                  {
+                    "id": "tap2-species-181",
+                    "vnName": "Cá Tuyết tê giác",
+                    "scientificName": "Bregmaceros macclellandi"
+                  },
+                  {
+                    "id": "tap2-species-182",
+                    "vnName": "Cá Tuyết tê giác vây đen",
+                    "scientificName": "Bregmaceros atripinnis"
                   }
                 ]
               }
@@ -9169,6 +9157,240 @@
                     "id": "tap3-species-2",
                     "vnName": "Cá Vược mõm nhọn",
                     "scientificName": "Psammoperca usaigiensis"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes",
+        "children": [
+          {
+            "vn": "Cá Nhồng",
+            "latin": "Sphyraenidae",
+            "children": [
+              {
+                "vn": "Cá Nhồng Sphyraena Rose",
+                "latin": "Sphyraena Rose",
+                "species": [
+                  {
+                    "id": "tap2-species-231",
+                    "vnName": "Cá Nhồng đỏ",
+                    "scientificName": "Sphyraena pinguis"
+                  },
+                  {
+                    "id": "tap2-species-232",
+                    "vnName": "Cá Nhồng vằn",
+                    "scientificName": "Sphyraena jello"
+                  },
+                  {
+                    "id": "tap2-species-233",
+                    "vnName": "Cá Nhồng mắt to",
+                    "scientificName": "Sphyraena forsteri"
+                  },
+                  {
+                    "id": "tap2-species-234",
+                    "vnName": "Cá Nhồng đuôi vàng",
+                    "scientificName": "Sphyraena obtusata"
+                  },
+                  {
+                    "id": "tap2-species-235",
+                    "vnName": "Cá Nhồng thường",
+                    "scientificName": "Sphyraena langsar"
+                  },
+                  {
+                    "id": "tap2-species-236",
+                    "vnName": "Cá Nhồng lớn",
+                    "scientificName": "Sphyraena barracuda"
+                  },
+                  {
+                    "id": "tap2-species-237",
+                    "vnName": "Cá Nhồng hàm ngắn",
+                    "scientificName": "Sphyraena brachygnathus"
+                  },
+                  {
+                    "id": "tap2-species-238",
+                    "vnName": "Cá Nhồng xanh",
+                    "scientificName": "Sphyraena chrysotaenia"
+                  },
+                  {
+                    "id": "tap2-species-239",
+                    "vnName": "Cá Nhồng vây chấm",
+                    "scientificName": "Sphyraena acutipinnis"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Nhụ",
+            "latin": "Polynemidae",
+            "children": [
+              {
+                "vn": "Cá Nhụ lớn Eleutheronema Bleeker",
+                "latin": "Eleutheronema Bleeker",
+                "species": [
+                  {
+                    "id": "tap2-species-261",
+                    "vnName": "Cá Nhụ lớn",
+                    "scientificName": "Eleutheronema tetradactylus"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Nhụ thường Polynemus Linnaeus",
+                "latin": "Polynemus Linnaeus",
+                "species": [
+                  {
+                    "id": "tap2-species-262",
+                    "vnName": "Cá Nhụ gộc",
+                    "scientificName": "Polynemus plebejus"
+                  },
+                  {
+                    "id": "tap2-species-263",
+                    "vnName": "Cá Nhụ chấm",
+                    "scientificName": "Polynemus sextarius"
+                  },
+                  {
+                    "id": "tap2-species-264",
+                    "vnName": "Cá Nhụ Ấn Độ",
+                    "scientificName": "Polynemus indicus"
+                  },
+                  {
+                    "id": "tap2-species-265",
+                    "vnName": "Cá Nhụ Boọc-nê-ô",
+                    "scientificName": "Polynemus borneensis"
+                  },
+                  {
+                    "id": "tap2-species-266",
+                    "vnName": "Cá Phèn vàng",
+                    "scientificName": "Polynemus paradiseus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "vn": "Cá Đối",
+            "latin": "Mugilidae",
+            "children": [
+              {
+                "vn": "Cá Đối Mugil Linnaeus",
+                "latin": "Mugil Linnaeus",
+                "species": [
+                  {
+                    "id": "tap2-species-240",
+                    "vnName": "Cá Đối mục",
+                    "scientificName": "Mugil cephalus"
+                  },
+                  {
+                    "id": "tap2-species-241",
+                    "vnName": "Cá Đối đất",
+                    "scientificName": "Mugil dussumieri"
+                  },
+                  {
+                    "id": "tap2-species-242",
+                    "vnName": "Cá Đối anh",
+                    "scientificName": "Mugil engeli"
+                  },
+                  {
+                    "id": "tap2-species-243",
+                    "vnName": "Cá Đối đầu nhọn",
+                    "scientificName": "Mugil strongylocephalus"
+                  },
+                  {
+                    "id": "tap2-species-244",
+                    "vnName": "Cá Đối vây trước",
+                    "scientificName": "Mugil affinis"
+                  },
+                  {
+                    "id": "tap2-species-245",
+                    "vnName": "Cá Đối hanh",
+                    "scientificName": "Mugil planiceps"
+                  },
+                  {
+                    "id": "tap2-species-246",
+                    "vnName": "Cá Đối bạc",
+                    "scientificName": "Mugil anpinensis"
+                  },
+                  {
+                    "id": "tap2-species-247",
+                    "vnName": "Cá Đối vây dài",
+                    "scientificName": "Mugil longimanus"
+                  },
+                  {
+                    "id": "tap2-species-248",
+                    "vnName": "Cá Đối Booc-nê-ô",
+                    "scientificName": "Mugil borneensis"
+                  },
+                  {
+                    "id": "tap2-species-249",
+                    "vnName": "Cá Đối xám",
+                    "scientificName": "Mugil speigleri"
+                  },
+                  {
+                    "id": "tap2-species-250",
+                    "vnName": "Cá Đối lá",
+                    "scientificName": "Mugil kelaarti"
+                  }
+                ]
+              },
+              {
+                "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+                "latin": "Liza Jordan and Swain",
+                "species": [
+                  {
+                    "id": "tap2-species-251",
+                    "vnName": "Cá Đối cồi",
+                    "scientificName": "Liza seheli"
+                  },
+                  {
+                    "id": "tap2-species-252",
+                    "vnName": "Cá Đối lưng gờ",
+                    "scientificName": "Liza carinata"
+                  },
+                  {
+                    "id": "tap2-species-253",
+                    "vnName": "Cá Đối gành",
+                    "scientificName": "Liza tade"
+                  },
+                  {
+                    "id": "tap2-species-254",
+                    "vnName": "Cá Đối vẩy to",
+                    "scientificName": "Liza macrolepis"
+                  },
+                  {
+                    "id": "tap2-species-255",
+                    "vnName": "Cá Đối nhồng",
+                    "scientificName": "Liza so-iuy"
+                  },
+                  {
+                    "id": "tap2-species-256",
+                    "vnName": "Cá Đối đuôi bằng",
+                    "scientificName": "Liza vaigiensis"
+                  },
+                  {
+                    "id": "tap2-species-257",
+                    "vnName": "Cá Đối môi dầy",
+                    "scientificName": "Liza crenilabis"
+                  },
+                  {
+                    "id": "tap2-species-258",
+                    "vnName": "Cá Đối chấm vằn",
+                    "scientificName": "Liza caeruleomaculatus"
+                  },
+                  {
+                    "id": "tap2-species-259",
+                    "vnName": "Cá Đối vẩy thưa",
+                    "scientificName": "Liza oligolepis"
+                  },
+                  {
+                    "id": "tap2-species-260",
+                    "vnName": "Cá Đối vẩy cổ",
+                    "scientificName": "Liza melinoptera"
                   }
                 ]
               }

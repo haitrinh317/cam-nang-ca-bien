@@ -1,0 +1,499 @@
+[
+  {
+    "id": "tap2-species-80",
+    "volume": 2,
+    "speciesIndex": 80,
+    "vnName": "Cá Nòng nọc Nhật Bản",
+    "scientificName": "Ateleopus japonicus",
+    "authorship": "Bleeker, 1842",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Dạng voi",
+        "latin": "Cetomimiformes"
+      },
+      "family": {
+        "vn": "Cá Nòng nọc",
+        "latin": "Ateleopidae"
+      },
+      "genus": {
+        "vn": "Cá Nòng nọc Ateleopus Temminck and Schlegel, 1842",
+        "latin": "Ateleopus Temminck and Schlegel, 1842"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "[KHÔNG RÕ]",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Bulky-snouted tadpolefish",
+        "size": "[UNKNOWN]",
+        "distribution": "Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Ateleopus japonicus Bleeker, Fauna Japonica, Pisces, 1842, p.255; Norman, 1939."
+    ]
+  },
+  {
+    "id": "tap2-species-81",
+    "volume": 2,
+    "speciesIndex": 81,
+    "vnName": "Cá Chình xê-lê-bét",
+    "scientificName": "Anguilla celebesensis",
+    "authorship": "Kaup, 1856",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguillidae"
+      },
+      "genus": {
+        "vn": "Cá Chình Anguilla Shaw, 1803",
+        "latin": "Anguilla Shaw, 1803"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "150 cm.",
+        "distribution": "Australia, Indonesia, Polynesia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Weber and de Beaufort, 1916. Herre, 1953."
+      },
+      "en": {
+        "commonName": "Celebes eel",
+        "size": "150 cm.",
+        "distribution": "Australia, Indonesia, Polynesia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Weber and de Beaufort, 1916. Herre, 1953."
+      }
+    },
+    "synonyms": [
+      "Anguilla celebesensis Kaup, Cat. Apodal Fish British Mus., p.42, fig.31, 1856; Weber and de Beaufort, 1916; Herre, 1940-41.",
+      "Anguilla amboinensis Peters, Monatsber. Akad. Wiss. Berlin, p.523, 1866; Meyer, 1885.",
+      "Anguilla obscura Gunther, Proc. Zool. Soc. London, p.673, 1817.",
+      "Anguilla megastoma Seale, Occ. Papers Bishop Meseum, Vol.4, p.5, 1906."
+    ]
+  },
+  {
+    "id": "tap2-species-82",
+    "volume": 2,
+    "speciesIndex": 82,
+    "vnName": "Cá Chình cẩm thạch",
+    "scientificName": "Anguilla marmorata",
+    "authorship": "Quoy and Gaimard, 1824",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguillidae"
+      },
+      "genus": {
+        "vn": "Cá Chình Anguilla Shaw, 1803",
+        "latin": "Anguilla Shaw, 1803"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "160 cm.",
+        "distribution": "Đông Châu Phi, Australia, Indonesia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Madbled, Giant long-finned eel",
+        "size": "160 cm.",
+        "distribution": "Eastern Africa, Australia, Indonesia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Anguilla marmorata Quoy and Gaimard, Voy. Uranie et Physicienne, Zoologie, Poissons, p.241, pl.51, fig.2, 1824; Ege, 1939.",
+      "Anguilla mauritiana Bennett, Proc. Comm. Zool. Soc. London, p.128, 1831; Gunther, 1870; Meyer, 1885; Evermann and Seale, 1907; Jordan and Richardson, 1908; Weber and de Beaufort, 1916; Fowler, 1922; Herre, 1940-41.",
+      "Muraena maculata Bleeker, Atlas Ichth., Vol.4, p.9, 1864, pl.1, fig.2.",
+      "Muraena manillensis Bleeker, Atlas Ichth., Vol.4, p.10, 1864, pl.44, fig.2.",
+      "Muraena mauritiana Fowler, proc. Acad. Nat. Sci. Phila., Vol.79, p.259, 1927."
+    ]
+  },
+  {
+    "id": "tap2-species-83",
+    "volume": 2,
+    "speciesIndex": 83,
+    "vnName": "Cá Chình nhật",
+    "scientificName": "Anguilla japonica",
+    "authorship": "Temminck & Schlegel, 1847",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguillidae"
+      },
+      "genus": {
+        "vn": "Cá Chình Anguilla Shaw, 1803",
+        "latin": "Anguilla Shaw, 1803"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "22 - 34 cm. Lớn nhất 45 cm.",
+        "distribution": "Nhật Bản, Triều Tiên, Malaysia, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Trương Hữu Vi, 1963. Kuronuma, 1961. Mai Đình Yên, 1978."
+      },
+      "en": {
+        "commonName": "Japanese eel",
+        "size": "22 - 34 cm. Maximum 45 cm.",
+        "distribution": "Japan, Korea, Malaysia, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Truong Huu Vi, 1963. Kuronuma, 1961. Mai Dinh Yen, 1978."
+      }
+    },
+    "synonyms": [
+      "Anguilla japonica Temminck and Schlegel, Fauna Japonica, Pisces, p.258, pl.CXIII, fig.2, 1847; Nichols and Pope, 1927; Wu, 1929; Zhang, 1955."
+    ]
+  },
+  {
+    "id": "tap2-species-84",
+    "volume": 2,
+    "speciesIndex": 84,
+    "vnName": "Cá Lịch vân chấm",
+    "scientificName": "Echidna delicatula",
+    "authorship": "(Kaup, 1856)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch vân Echidna Forster, 1788",
+        "latin": "Echidna Forster, 1788"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "40 - 50 cm.",
+        "distribution": "Indonesia, Malaysia, Philippines, Samoa, Nhật Bản, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Mottled moray, Brindled moray",
+        "size": "40 - 50 cm.",
+        "distribution": "Indonesia, Malaysia, Philippines, Samoa, Japan, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Echidna delicatula Bleeker, Atlas Ichth., Vol.4, p.78, pl.23, fig.3, 1864; Jordan and Seale, 1905; Weber and de Beaufort, 1916; Herre, 1923.",
+      "Poecilophis delicatulus Kaup, Cat. Apodal Fish. British Mus., p.102, 1856.",
+      "Echidna kishinouyei Jordan and Snyder, Proc. U. S. Nat. Mus., Vol.23, p.885, fig. 21, 1901.",
+      "Echidna trossula Jordan & Seale, Bull. U. S. Bur. Fisheries, Vol.25, p.203, fig.8, 1906.",
+      "Muraena amblyodon Gunther, Fische der Sudsee, Vol.3, p.424, 1910, in part."
+    ]
+  },
+  {
+    "id": "tap2-species-85",
+    "volume": 2,
+    "speciesIndex": 85,
+    "vnName": "Cá Lịch vân vạch",
+    "scientificName": "Echidna nebulosa",
+    "authorship": "(Ahl, 1789)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch vân Echidna Forster, 1788",
+        "latin": "Echidna Forster, 1788"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "30 - 49 cm. Lớn nhất 75 cm.",
+        "distribution": "Đông Châu Phi, Autralia, Hawaii, Hồng Hải, Polynesia, Philippines, Guam, Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Floral moray, Starry moray",
+        "size": "30 - 49 cm. Maximum : 75 cm.",
+        "distribution": "Eastern Africa, Australia, Hawaii, Red Sea, Polynesia, Philippines, Guam, Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Muraena nebulosa Ahl, De Muraena et Ophichtho, p.5, pl.1, fig.2, 1789; Gunther, 1870; Meyer, 1885.",
+      "Gymnothorax echidna Bloch and Schneider, Syst. Ichth., p.526, 1801.",
+      "Muraena variegata Richardson, Zool. Voy. Erebus and Terror. Fishes, p.94, pl.47, fig.1-5 and 11-16, 1844.",
+      "Muraena ophis Ruppell, Atlas Reise Nordl. Afrika Fische Rothen Meeres, p.116, pl.29, fig.2, 1828.",
+      "Echidna variegata Forster, Descript. Animal., Lichtenstein ed., p. 181, 1844; Bleeker, 1864.",
+      "Thaerodontis ophis McClelland, Calcutta Jour. Nat. Hist., Vol.5, p.217, 1844.",
+      "Poecilophis variegata Kaup, Cat. Apodal Fish British Mus., p.98, 1856.",
+      "Echidna nebulosa Fowler, Proc. Acad. Sci. Phila., p.524, 1900; Jordan and Evermann, 1905; Jordan & Richardson, 1908; Weber & de Beaufort, 1916; Fowler & Bean, 1922; Chevey, 1932; Herre, 1940-41."
+    ]
+  },
+  {
+    "id": "tap2-species-86",
+    "volume": 2,
+    "speciesIndex": 86,
+    "vnName": "Cá Lịch vân vòng",
+    "scientificName": "Echidna polyzona",
+    "authorship": "(Richardson, 1844)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch vân Echidna Forster, 1788",
+        "latin": "Echidna Forster, 1788"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "55 - 60 cm.",
+        "distribution": "Từ Hồng Hải đến Formosa, Hawaii, Tuamoto, Archipelago, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962, Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Girdled moray",
+        "size": "55 - 60 cm.",
+        "distribution": "From Red Sea to Formosa, Hawaii, Tuamoto Archipelago, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Herre, 1953. Zhang, 1962. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Muraena polyzona Richardson, Voy. Sulphur. Fishes, Vol.3, p.112, pl.55, fig.11-14, 1844.",
+      "Poecilophis polyzona Kaup, Cat. Apodal Fish British Mus., p.101, 1856.",
+      "Muraena dizona Bleeker, Nat. Tijds. Ned.-Ind., Vol.22, p.260, 1860.",
+      "Echidna polyzona Bleeker, Atlas Ichth., Vol.4, p.81, pl.24, fig.3, 1864; Jordan & Richardson, 1908; Weber & de Beaufort, 1916; Herre, 1940-41.",
+      "Echidna tritor Vailland and Sauvage, Revue et Mag. Zool., Vol.3, p.287, 1875.",
+      "Echidna zonata Fowler, Proc. Acad. Nat. Sci. Phila., 1900, p.495, pl.18, fig.2.",
+      "Echidna zonophaea Jordan & Evermann, Bull. U. S. Fish. Comm., Vol.22, p.167, 1904.",
+      "Echidna leihala Jenkins, Bull. U. S. Fish. Comm., Vol.22, p.428, fig.9, 1904.",
+      "Echidna vincta Jenkins, Bull. U. S. Fish. Comm., Vol.22, p.429, fig.10, 1904.",
+      "Echidna obscura Jenkins, Bull. U. S. Fish. Comm., Vol.22, p.430, fig.11, 1904.",
+      "Echidna psalion Jenkins, Bull. U. S. Fish. Comm., Vol.22, p.431, fig.12, 1904."
+    ]
+  },
+  {
+    "id": "tap2-species-87",
+    "volume": 2,
+    "speciesIndex": 87,
+    "vnName": "Cá Lịch khổng lồ",
+    "scientificName": "Evenchelys macrurus",
+    "authorship": "(Bleeker, 1854)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch khổng lồ Evenchelys Jordan & Evermann",
+        "latin": "Evenchelys Jordan & Evermann"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "300 cm.",
+        "distribution": "Australia, Indonesia, Philippines, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Slender giant moray",
+        "size": "300 cm.",
+        "distribution": "Australia, Indonesia, Philippines, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Muraena macrurus Bleeker, Nat. Ned.-Ind., Vol.7, p.324, 1854.",
+      "Thyrsoidea longissima Kaup, Cat. Apodal Fish. British Mus., p.82, 1856.",
+      "Thyrsoidea macrurus Bleeker, Atlas Ichth., Vol.4, p.111, pl.22, fig.2, 1844; Weber & de Beaufort, 1916.",
+      "Muraena macrurus Gunther, Cat. Fishes British Mus., Vol.8, p.127, 1870.",
+      "Muraena macrura Day, Fishes India, p.672, 1878.",
+      "Evenchelys macrurus Jordan & Evermann, Proc. U. S. Nat. Mus., Vol.25, p.327, 1903; Fowler, 1918; Herre, 1940-41.",
+      "Rhabdura macrura Ogilby, Proc. Royal Soc. Queensland, Vol.20, p.13, 1906."
+    ]
+  },
+  {
+    "id": "tap2-species-88",
+    "volume": 2,
+    "speciesIndex": 88,
+    "vnName": "Cá Lịch vân lớn",
+    "scientificName": "Gymnothorax favagineus",
+    "authorship": "Bloch & Schneider, 1801",
+    "status": "abundant",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch trần Gymnothorax Bloch",
+        "latin": "Gymnothorax Bloch"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "110 cm. Lớn nhất 180 cm.",
+        "distribution": "Ấn Độ Dương, Đông Phi, Australia, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962, Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Congre mousquee moray",
+        "size": "110 cm. Maximum 180 cm.",
+        "distribution": "Indian Ocean, East Africa, Australia, Indonesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively numerous.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Gymnothorax favagineus Bloch & Schneider, Syst. Ichth., p.525, 1801.",
+      "Muraena isingteena Richardson, Zool., Voy. Sulphur, Fishes, p.108, 1843-45.",
+      "Muraena isingleena Richardson, Zool., Voy. Erebus and Terror, Fishes, p.86, 1844.",
+      "Muraena tesselata Richardson, Voy. Sulphur, Fishes, p.109, 1843-45; Richardson, 1844; Gunther, 1870.",
+      "Muraena python Kaup, Cat. Apodal Fishes British Mus., p.68, 1856.",
+      "Muraena favaginea Kaup, Ibid., p.68, 1856.",
+      "Thyrsoidea isingleena Kaup, Ibid., p.75, 1856.",
+      "Thrysoidea tesselata Kaup, Ibid., p.76, 1856.",
+      "Gymnothorax isingleena Bleeker, Atlas Ichth., Vol.4, p.92, pl.37, fig.1, 1864.",
+      "Gymnothorax tesselatus Bleeker, Atlas Ichth., Vol.4, p.93, pl.27, fig.3 and pl.28, fig.1, 1864.",
+      "Gymnothorax favageneus Jordan & Seale, Bull. U. S. Bur. Fisheries, Vol.25, p.199, 1906.",
+      "Muraena (Gymnothorax) favaginea Weber and de Beaufort, Fishes Indo-Australian Archipelago, Vol.3, p.378, fig.187, 1916.",
+      "Gymnothorax favagineus Herre, Philippine Jour. Sci., Vol.23, p.222, pl.11, fig.2, 1923.",
+      "Lucodontis favaginea Fowler, Mem. Bishop Mus., Vol.10, p.57, 1928."
+    ]
+  },
+  {
+    "id": "tap2-species-89",
+    "volume": 2,
+    "speciesIndex": 89,
+    "vnName": "Cá Lịch Ghi-nê",
+    "scientificName": "Gymnothorax meleagris",
+    "authorship": "(Shaw, 1809)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch trần Gymnothorax Bloch",
+        "latin": "Gymnothorax Bloch"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "100 - 120 cm.",
+        "distribution": "Vùng biển Ấn Độ - Thái Bình Dương, Indonesia, Nhật Bản, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Guinea fowl moray, Specked moray",
+        "size": "100 - 120 cm.",
+        "distribution": "Indo - Pacific, Indonesia, Japan, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Herre, 1953. Zhang, 1962. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Muraena meleagris Shaw, Naturalist's Miscellany, pl.220, 1809; Richardson, 1844-48; Kaup, 1856; Gunther, 1870.",
+      "Muraena griseo-badia Bleeker, Nat. Tijds. Ned.-Ind., Vol.8, p.325, 1855.",
+      "Thyrsoidea chlorostigma Kaup, Cat. Apodal Fishes, British Mus., p.89, 1856; Bleeker, 1858.",
+      "Muraena buroensis Bleeker, Nat. Tijds. Ned.-Ind., Vol.13, p.79, 1857.",
+      "Muraena chlorostigma Bleeker, Atlas Ichth., Vol.4, p.97, pl.24, fig.2, 1864.",
+      "Gymnothorax buroensis Bleeker, Atlas Ichth., Vol.4, p.90, pl.46, fig.1, 1864.",
+      "Muraena buroensis Gunther, Cat. Fishes British Mus., Vol.8, p.114, 1870.",
+      "Gymnothorax meleagris Bleeker, Rech. Faune, Poiss., Madagascar, p.73, 1875; Jordan & Evermann, 1905; Fowler & Bean, 1922; Herre, 1927.",
+      "Muraena afra Weber, in Semon, Zool. Forschungsreisen, Vol.5, p.275, 1895, not of Bloch and Schneider.",
+      "Gymnothorax monochrorus Weber, Siboga - Exped., Fishes, Vol.57, p.59, 1913., not of Bleeker.",
+      "Muraena (Gymnothorax) meleagris Weber & de Beaufort, Fishes Indo-Australian Archipelago, Vol.3, p.367, 1916."
+    ]
+  }
+]

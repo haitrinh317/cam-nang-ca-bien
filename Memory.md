@@ -130,7 +130,7 @@ Skill: `ocr-pdf-cabien` (v1.3.0 — dùng AI Vision built-in, KHÔNG gọi API G
 | Tập | Số loài | Trạng thái |
 |---|---|---|
 | I | 101 | ✅ Hoàn chỉnh nhất |
-| II | 266 | ⚠️ Đang OCR thủ công: 89/165 (Enriched: EN 232/266, VN 240/266) |
+| II | 266 | ✅ OCR thủ công + chuẩn hóa + upload Supabase hoàn tất (266/266) |
 | III | 518 | ⚠️ EN 100%, VN 47%, 60 skeleton cần FishBase |
 | IV | 316 | ⚠️ Loài 1-100 chuẩn, 101-316 còn thô |
 | V | 199 | ⚠️ OCR thô, tên VN lỗi |

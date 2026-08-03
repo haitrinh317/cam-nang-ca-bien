@@ -1,0 +1,379 @@
+[
+  {
+    "id": "tap2-species-19",
+    "volume": 2,
+    "speciesIndex": 19,
+    "vnName": "Cá Trích dải",
+    "scientificName": "Sardinella albella",
+    "authorship": "(Valenciennes, 1847)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích Sardinella Valenciennes, 1847", "latin": "Sardinella Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "10 - 13 cm. Lớn nhất 15 cm.",
+        "distribution": "Đông Phi, Ấn Độ, Indonesia, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Vịnh Thái Lan.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Durand, 1949. Herre, 1953. Kuronuma, 1961. Nguyễn Khắc Hường 1991."
+      },
+      "en": {
+        "size": "10 - 13 cm. Maximum 15 cm.",
+        "distribution": "East Africa, India, Indonesia, Thailand, China, Vietnam. Gulf of Tonkin, Gulf of Thailand.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Durand, 1949. Herre, 1953. Kuronuma, 1961. Nguyen Khac Huong 1991."
+      }
+    },
+    "synonyms": [
+      "Kowala albella Valenciennes, Hist. Nat. Poissons, Vol.20, p.362, 1847.",
+      "Sardinella albella Fowler, 1941."
+    ]
+  },
+  {
+    "id": "tap2-species-20",
+    "volume": 2,
+    "speciesIndex": 20,
+    "vnName": "Cá Trích đầu dài",
+    "scientificName": "Sardinella melanura",
+    "authorship": "(Cuvier, 1829)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích Sardinella Valenciennes, 1847", "latin": "Sardinella Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "10 - 12 cm. Lớn nhất 12 cm.",
+        "distribution": "Đông Phi, Ấn Độ, Micronesia, Polynesia, Philippines, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Durand, 1949. Herre, 1953. Whitehead, 1972."
+      },
+      "en": {
+        "size": "10 - 12 cm. Maximum 12 cm.",
+        "distribution": "East Africa, India, Micronesia, Polynesia, Philippines, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Durand, 1949: Herre, 1953. Whitehead, 1972."
+      }
+    },
+    "synonyms": [
+      "Clupea melanura Cuvier, Regne Animal, ed.2, Vol.2, p.318, 1829."
+    ]
+  },
+  {
+    "id": "tap2-species-21",
+    "volume": 2,
+    "speciesIndex": 21,
+    "vnName": "Cá Trích dầu ngắn",
+    "scientificName": "Sardinella perforata",
+    "authorship": "Cantor, 1849",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích Sardinella Valenciennes, 1847", "latin": "Sardinella Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "15 - 16 cm. Lớn nhất 20cm.",
+        "distribution": "Đông Ấn Độ Dương, Indonesia, Malaysia, Samoa, Philippines, Ả Rập, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Vịnh Thái Lan.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Kuronuma, 1961. Nguyễn Khắc Hường 1991."
+      },
+      "en": {
+        "commonName": "Deep-bodied sardine",
+        "size": "15 - 16cm. Maximum 20cm.",
+        "distribution": "Eastern Indian Ocean, Indonesia, Malaysia, Samoa, Philippines, Arabia, Thailand, China, Vietnam. Gulf of Tonkin and Gulf of Thailand.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Kuronuma, 1961, Nguyen Khac Huong, 1991"
+      }
+    },
+    "synonyms": [
+      "Clupeonia perforata Cantor, Jour. Asiatic Soc . Bengal, Vol.18. part 2, p.1276, 1849.",
+      "Spratella kowala Bleeker, Nat. Tijds. Ned.-Ind., Vol.2, p .492, 1851."
+    ]
+  },
+  {
+    "id": "tap2-species-22",
+    "volume": 2,
+    "speciesIndex": 22,
+    "vnName": "Cá Trích bầu",
+    "scientificName": "Sardinella sindensis",
+    "authorship": "(Day, 1878)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích Sardinella Valenciennes, 1847", "latin": "Sardinella Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "10 - 12 cm. Lớn nhất 15 cm.",
+        "distribution": "Ấn Độ, Đông Ấn Độ Dương, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải sản Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953."
+      },
+      "en": {
+        "commonName": "Sind sardine",
+        "size": "10 - 12 cm. Maximum 15 cm.",
+        "distribution": "India, Eastern Indian Ocean, Philippines, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Research of Institute of Marine products.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953."
+      }
+    },
+    "synonyms": [
+      "Clupea sindensis Day, Fishes India, p.638, pl.163, fig.2, 1878.",
+      "Sardinella sindensis Regan, Ann. Mag. Nat. Hist., ser.8, Vol.19, p.383, 1917; Herre, 1945."
+    ]
+  },
+  {
+    "id": "tap2-species-23",
+    "volume": 2,
+    "speciesIndex": 23,
+    "vnName": "Cá Trích sơ",
+    "scientificName": "Sardinella sirm",
+    "authorship": "(Walbaum, 1792)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích Sardinella Valenciennes, 1847", "latin": "Sardinella Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "15 - 17 cm. Lớn nhất 19cm.",
+        "distribution": "Ả Rập, Srilanca, Đông Ấn Độ Dương, Hồng Hải, Indonesia, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Trung Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Sirm sardine",
+        "size": "15 - 17 cm. Maximum 19 cm.",
+        "distribution": "Arabia, Sri Lanka, Eastern Indian Ocean, Red Sea, Indonesia, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupea sirm Walbaum, Artedi , Vol.3, p.38, 1792; Ruppell, 1835.",
+      "Sardinella leiogaster Cuvire & Valenciennes, Hist. Nat. Poissons, Vol.20, p.270, 1847; Herre, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-24",
+    "volume": 2,
+    "speciesIndex": 24,
+    "vnName": "Cá Trích xương",
+    "scientificName": "Sardinella jussieu",
+    "authorship": "(Lacepede, 1803)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích Sardinella Valenciennes, 1847", "latin": "Sardinella Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "10 - 13 cm. Lớn nhất 18cm.",
+        "distribution": "Micronesia, Polynesia, Bắc và Đông Bắc Australia, Đông và Nam châu Phi, Biển Arab, Malaysia, Indonesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Rất nhiều.",
+        "literature": "Vương Văn Tân, 1962. Whitehead, 1972. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Bony sardine",
+        "size": "10 - 13 cm. Maximum 18 cm.",
+        "distribution": "Micronesia, Polynesia, Northern and North-Eastern Australia, East and Southern Africa , Arabian Sea, Malaysia, Indonesia, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Very numerous.",
+        "literature": "Wang, 1962. Whitehead, 1972. Nguyen Khac Huong, 1991"
+      }
+    },
+    "synonyms": [
+      "Clupanodon jussieu Lacepede , Hist. Nat. Poissons, Vol.5, 1803, 469, pl.11, fig.2."
+    ]
+  },
+  {
+    "id": "tap2-species-25",
+    "volume": 2,
+    "speciesIndex": 25,
+    "vnName": "Cá Trích vẩy xanh mắt to",
+    "scientificName": "Harengula ovalis",
+    "authorship": "(Bennette, 1850)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích vẩy xanh Harengula Valenciennes, 1847", "latin": "Harengula Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "90 - 100 cm. Lớn nhất 105 cm.",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Thái Bình Dương, Đông Châu Phi, Hồng Hải, Australia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Big-eyed herring",
+        "size": "90 - 100 cm. Maximum 105 cm.",
+        "distribution": "Atlantic Ocean, Indian Ocean, Pacific Ocean, Eastern Africa, Australia , Red Sea, Philippines, Japan, China, Việt Nam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common.",
+        "literature": "Wang, 1962 Nguyen Khac Huong, 1991"
+      }
+    },
+    "synonyms": [
+      "Clupea ovalis Bennette, Mem . Life of Raffles, 1830, p.639."
+    ]
+  },
+  {
+    "id": "tap2-species-26",
+    "volume": 2,
+    "speciesIndex": 26,
+    "vnName": "Cá Trích vẩy xanh",
+    "scientificName": "Harengula zunasi",
+    "authorship": "Bleeker, 1854",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích vẩy xanh Harengula Valenciennes, 1847", "latin": "Harengula Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "10 - 12 cm. Lớn nhất 18 cm.",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam. Đông bắc Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Nguyễn Khắc Hường 1991."
+      },
+      "en": {
+        "commonName": "Blue-scaled herring",
+        "size": "10 - 12 cm. Maximum 18 cm.",
+        "distribution": "Japan, China, Vietnam. North-East of Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Harengula zunasi Bleeker, Verh. Batav. Gennotsch, Vol.26, p.117, 1854; Trương Xuân Lâm, 1955; Matsubara, 1955."
+    ]
+  },
+  {
+    "id": "tap2-species-27",
+    "volume": 2,
+    "speciesIndex": 27,
+    "vnName": "Cá Nhâm lầm",
+    "scientificName": "Harengula nymphaea",
+    "authorship": "(Richardson, 1846)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích vẩy xanh Harengula Valenciennes, 1847", "latin": "Harengula Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "9 - 10 cm. Lớn nhất 18 cm.",
+        "distribution": "Philippines, Nhật Bản, Trung Quốc, Việt Nam. Ven bờ biển miền Bắc Việt Nam.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Rất nhiều.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Blue sardine",
+        "size": "9 - 10 cm. Maximum 18 cm.",
+        "distribution": "Philippines, Japan, China, Vietnam. Coast of Northern Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Very numerous.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupea nymphaea Richardson, Ichth. China and Japan, p.304, 1846."
+    ]
+  },
+  {
+    "id": "tap2-species-28",
+    "volume": 2,
+    "speciesIndex": 28,
+    "vnName": "Cá Nhâm phi",
+    "scientificName": "Harengula schrammi",
+    "authorship": "(Bleeker, 1849)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích vẩy xanh Harengula Valenciennes, 1847", "latin": "Harengula Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "10 cm.",
+        "distribution": "Đông Ấn Độ Dương, Philippines, Việt Nam.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953."
+      },
+      "en": {
+        "commonName": "Sardine",
+        "size": "10 cm.",
+        "distribution": "Eastern Indian Ocean, Philippines, Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953."
+      }
+    },
+    "synonyms": [
+      "Alosa schrammi Bleeker, Verh. Bat. Gen., Vol.22, Bijdr. Ichth. Bali, p.11, 1849."
+    ]
+  },
+  {
+    "id": "tap2-species-29",
+    "volume": 2,
+    "speciesIndex": 29,
+    "vnName": "Cá Mai",
+    "scientificName": "Kowala coval",
+    "authorship": "(Cuvier, 1829)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Mai Kowala Valenciennes, 1847", "latin": "Kowala Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "size": "7 - 8 cm.",
+        "distribution": "Miama, Ấn Độ, Indonesia, Malaysia, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "size": "7 - 8 cm.",
+        "distribution": "Miama, India, Indonesia, Malaysia, Thailand, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Synonym : Kowala fibracata Valenciennes, Hist. Nat. Poiss., Vol.20, p.363, 1847; Suvatti, 1937.",
+      "Clupea lile Gunther, Cat. Fishes Brit. Mus., Vol.7, 1868, p.450; Tirant, 1929; Day, 1878.",
+      "Clupea coval Cuvier, 1829; Regne Animals, ed.2, Vol.2, p.318."
+    ]
+  }
+]

@@ -1,0 +1,417 @@
+[
+  {
+    "id": "tap2-species-40",
+    "volume": 2,
+    "speciesIndex": 40,
+    "vnName": "Cá Cơm thường",
+    "scientificName": "Stolephorus commersonii",
+    "authorship": "(Lacepede, 1803)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá cơm Stolephorus Lacepede, 1803", "latin": "Stolephorus Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "size": "50 - 70 mm. Lớn nhất 125 mm.",
+        "distribution": "Ấn Độ, Biển Arab, Srilanca, Indonesia, Malaysia, Philippines, Triều Tiên, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Trung Bộ, Vịnh Thái Lan",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Commerson's anchovy",
+        "size": "50 - 70 mm. Maximum 125 mm.",
+        "distribution": "India, Arabian Sea, Sri Lanka, Indonesia, Malaysia, Philippines, Korea, Thailand, China, Vietnam. Gulf of Tonkin and Gulf of Thailand, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Stolephorus commersonii Lacepede, Hist. Nat. Poiss., Vol.5, p.382, pl.2, fig.1, 1803; Weber & de Beaufort, 1913; Roxas, 1934; Umali, 1937; Domantay, 1940.",
+      "Clupea vittargentea Lacepede, Hist. Nat. Poiss., Vol.5, p.458, 1803.",
+      "Commersomian atherine Shaw, Geneal Zoology, Vol.5, pl.113, 1804.",
+      "Engraulis brownii Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.21, p.41, 1848.",
+      "Stolephorus brownii Bleeker, Ned. Tijds. Dierk., Vol.2, p.57, 1865.",
+      "Stolephorus (Stolephorus) brownii Bleeker, Verh. Akad. Amsterdam, ser.2, Vol.2, p.294, 1868.",
+      "Engraulis commersonianus Gunther. Cat. Fishes Brit. Mus., Vol.7, p.388, 1868; Day, 1878.",
+      "Stolephorus commersonianus Bleeker, Atlas Ichth., Vol.6, p.128, p.(1)259, fig.1, 1866-72.",
+      "Anchovia commersonii Fowler, Jour. Acad. Nat. Sci. Phila., ser.2, Vol.12, p.501, 1904.",
+      "Anchovia commersoniana Jordan and Seale, Proc. U.S. Nat. Mus., Vol.28, p.771, 1905; Jordan and Seale, 1907; Seale, 1908.",
+      "Anchovia commersonii Bean and Weed, Proc. U.S. Nat. Mus., Vol.42, p.592, 1912; Fowler, 1918.",
+      "Stolephorus commersonii Chabanaud, Service Oceanogr., Vol79, p.258, 1927.",
+      "Scutengraulis commersonii Fowler, Hong Kong Nat., Vol.2, p.200, 1931.",
+      "Anchovilla commersonii Fowler, Proc. Acad. Nat. Sci. Phila., Vol.86, p.69, 1934; Fowler, 1914.",
+      "Anchoviella commersonii Fowler, List Fishes Malaya, p.32, 1938."
+    ]
+  },
+  {
+    "id": "tap2-species-41",
+    "volume": 2,
+    "speciesIndex": 41,
+    "vnName": "Cá Cơm Ấn Độ",
+    "scientificName": "Stolephorus indicus",
+    "authorship": "(van Hasselt, 1823)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá cơm Stolephorus Lacepede, 1803", "latin": "Stolephorus Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "size": "90 - 100 mm. Lớn nhất 135 mm.",
+        "distribution": "Đông Phi, Ấn Độ, Hồng Hải, Indonesia, Micronesia, Polynesia, Malaysia, Philippines, Nhật Bản, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Vịnh Thái Lan, Trung Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Indian anchovy",
+        "size": "90 - 100 mm. Maximum 135 mm.",
+        "distribution": "East Africa, India, Red Sea, Indonesia, Micronesia, Polynesia, Malaysia, Philippines, Japan, Thailand, China, Vietnam. Gulf of Tonkin and Gulf of Thailand, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Engraulis indica van Hasselt, Algemeine Konst en Letterbore, p.329, 1823; Day, 1878; Fowler, 1927.",
+      "Engraulis albus Swainson, Nat. Hist. Animals, Fishes, Vol.2, p.293, 1839.",
+      "Engraulis browni Cantor, Jour. Asiatic Soc. Bengal, Vol.18, p.1285, 1849.",
+      "Engraulis balinensis Bleeker, Verh. Bat. Gen., Vol.22, 1849.",
+      "Engraulis russelli Bleeker, Nat. Tijds. Ned.-Ind., Vol.2, p.472, 1851.",
+      "Engraulis samaminan Thiolliere, Fauna Woodlark, p.208, 1857.",
+      "Stolephorus russeli Bleeker, Ned. Tijds. Dierk., Vol.1, p.236, 1863.",
+      "Stolephorus indicus Bleeker, Atlas Ichth., Vol.6, p.127, pl.(1)259, fig.2, 1866-72; Weber and de Beaufort, 1913; Umali, 1936; Herre, 1940-41.",
+      "Engraulis encrasicholus Gunther, Ann. Mag. Nat. Hist., ser.4, Vol.13, p.158, 1874.",
+      "Anchovia apiensis Jordan and Seale, Bull. Bur. Fish., Vol.25, p.187, 1906.",
+      "Anchovia indica Jordan and Evermann, Proc. U.S. Nat. Mus., Vol.25, p.302, 1902; Jordan and Seale, 1907.",
+      "Anchovia commersonii Fowler and Bean, Proc. U.S. Nat. Mus., Vol.62, p.2, 1922.",
+      "Scutengraulis indica Fowler, Hong Kong Nat., Vol.2, p.200, 1931.",
+      "Stolepholis indicus nanus Hardenberg, Nat. Tijds. Ned.-Ind., Vol.93, p.263, 1933.",
+      "Stolephorus insularum Jordan and Seale, Bull. Mus. Comp. Zool. Harvard, Vol.67, No.11, p.381, 1926.",
+      "Anchoviella indica Fowler, Proc. Acad. Nat. Sci. Phila., Vol.83, p.69, 1934; Fowler, 1941."
+    ]
+  },
+  {
+    "id": "tap2-species-42",
+    "volume": 2,
+    "speciesIndex": 42,
+    "vnName": "Cá Cơm săng",
+    "scientificName": "Stolephorus tri",
+    "authorship": "(Bleeker, 1852)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá cơm Stolephorus Lacepede, 1803", "latin": "Stolephorus Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "size": "50 - 60 mm. Lớn nhất 70 mm.",
+        "distribution": "Đông Ấn Độ, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học Nha Trang",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Tri anchovy",
+        "size": "50 - 60 mm. Maximum 70 mm.",
+        "distribution": "Eastern India, Indonesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Engraulis tri Bleeker, Verh. Bat. Gen., Vol.24, 1852; Gunther, 1868; Day, 1878; Fowler, 1927.",
+      "Stolephorus tri Bleeker, Ned. Tijds. Dierk., Vol.2, p.57, 1865; Bleeker, 1866-72.",
+      "Stolephorus (Thrissa) tri Bleeker, Atlas Ichth., Vol.6, p.(4)262, 1866-72.",
+      "Anchovia commersonii Fowler, Copeia, No.58, p.62, 1918.",
+      "Stolephorus rex Jordan and Seale, Bull. Mus. Comp. Zool., Vol.67, p.380, 1926.",
+      "Stolephorus baganensis Hardenberg, Treubia, Vol.13, No.1, p.107, 1931.",
+      "Scutengraulis tri Fowler, Hong Kong, Nat., Vol.2, p.201, 1931.",
+      "Stolephorus tri Herre, Fishes, 1931, Philippines Exped., p.16, 1934; Roxas, 1934.",
+      "Anchoviella tri Fowler, List. Fishes Malaysia, p.33, 1938."
+    ]
+  },
+  {
+    "id": "tap2-species-43",
+    "volume": 2,
+    "speciesIndex": 43,
+    "vnName": "Cá Cơm Trung Hoa",
+    "scientificName": "Stolephorus chinensis",
+    "authorship": "(Gunther, 1880)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá cơm Stolephorus Lacepede, 1803", "latin": "Stolephorus Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "size": "60 - 80 mm. Lớn nhất 130 mm.",
+        "distribution": "Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Chinese anchovy.",
+        "size": "60 - 80 mm. Maximum 130 mm.",
+        "distribution": "China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Engraulis chinensis Gunther, Rep. Voy.Challerger, Vol.1,1880, p.78.",
+      "Engraulis japonicus (Not Houttuyn) Gunther, Cat. Fishes Brit. Mus., Vol.7, 1868, p.390 (China).",
+      "Anchoviella chinensis Fowler, Bull. U.S. Nat. Mus., Vol.13, 1941; Vương Văn Tân, Nam Hải Ngư loại chí, 1962."
+    ]
+  },
+  {
+    "id": "tap2-species-44",
+    "volume": 2,
+    "speciesIndex": 44,
+    "vnName": "Cá Cơm bata",
+    "scientificName": "Stolephorus bataviensis",
+    "authorship": "Hardenberg, 1933",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá cơm Stolephorus Lacepede, 1803", "latin": "Stolephorus Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "size": "70 mm.",
+        "distribution": "Ấn Độ, Biển Ấn Độ - Malaysia, Philippines, Thái Lan, Trung Quốc, Việt Nam.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Whitehead, 1972."
+      },
+      "en": {
+        "commonName": "Bata anchovy",
+        "size": "70 mm.",
+        "distribution": "India, Indo-Malayan Sea, Philippines, Thailand, China, Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Whitehead, 1972."
+      }
+    },
+    "synonyms": [
+      "Stolephorus insularis Hardenberg, Nataurk. Tijds. Ned.-Indie, Vol.93, p.260, 1933.",
+      "Stolephorus insularis bataviensis Hardeberg, Nataurk. Tijds. Ned.-Ind., Vol.93, p.261, 1933."
+    ]
+  },
+  {
+    "id": "tap2-species-45",
+    "volume": 2,
+    "speciesIndex": 45,
+    "vnName": "Cá Cơm đỏ",
+    "scientificName": "Stolephorus buccaneeri",
+    "authorship": "Strasburg, 1960",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá cơm Stolephorus Lacepede, 1803", "latin": "Stolephorus Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "size": "50 - 60 mm. Lớn nhất 90 mm.",
+        "distribution": "Ấn Độ, Hawaii, Samoa, Philippines, Nhật Bản, Đài Loan, Trung Quốc, Việt Nam. Nam Bộ, Trung Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Whitehead, 1972."
+      },
+      "en": {
+        "commonName": "Round-head anchovy.",
+        "size": "50 - 60 mm. Maximum 90 mm.",
+        "distribution": "India, Hawaii, Samoa, Philippines, Japan, Taiwan, China, Vietnam. Southern and Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Whitehead, 1972."
+      }
+    },
+    "synonyms": [
+      "Stolephorus buccaneeri Strasburg, Pacific Sci., Vol.14(4), p.396, 1960.",
+      "Stolephorus zollinheri Hayashi and Tadokoro, Bull.Jap. Soc. Sci. Fish., Vol.28(1), p.279, 1962."
+    ]
+  },
+  {
+    "id": "tap2-species-46",
+    "volume": 2,
+    "speciesIndex": 46,
+    "vnName": "Cá Lẹp cam",
+    "scientificName": "Thrissa kammalensis",
+    "authorship": "(Bleeker, 1849)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Lẹp Thrissa Cuvier, 1817", "latin": "Thrissa Cuvier, 1817" }
+    },
+    "specs": {
+      "vn": {
+        "size": "10 - 11 cm. Lớn nhất 13 cm.",
+        "distribution": "Ấn Độ, Srilanca, Indonesia, Malaysia, Papua, Philippines, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Vịnh Thái Lan.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Herre, 1953. Whitehead, 1972. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Kamma thryssa.",
+        "size": "10 - 11 mm. Maximum 13 mm.",
+        "distribution": "India, Sri Lanka, Indonesia, Malaysia, Papua, Philippines, Thailand, China, Vietnam. Gulf of Tonkin, Gulf of Thailand.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Whitehead, 1972. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Engraulis kammalensis Bleeker, Verh. Batav. Genootsch, Vol.22, 1849, p.13; Day, 1878; Weber and de Beaufort, 1913; Tirant, 1885; Pellegrin, 1905, Chevey, 1932.",
+      "Trissocles kammalensis Fowler, Cat. Nat. Ser. Philia., Vol.89, 1937, p.131, fig.3.",
+      "Engraulis rhinorhynchos Bleeker, Verh. Bat. Gen., Vol.24, 1852, p.40.",
+      "Stolephorus (Thrissa) kammalensis Bleeker, Atlas Ichth., Vol.6, pl.(7)265, fig.2, 1866-72.",
+      "Engraulis rhinorhynchus Sauvage, Bull. Soc. Phila. Pari. Ser.7, Vol.5, p.107, 1881.",
+      "Stolephorus kammalensis Rutter, Proc. Acad. Nat. Sci. Phila., p.64, 1897.",
+      "Thrissa kammalensis Hardenberg, Treubia, Vol.15, p.228, 1936.",
+      "Scutengraulis kammalensis Fowler, Hong Kong Nat., Vol.2, p.200, 1931."
+    ]
+  },
+  {
+    "id": "tap2-species-47",
+    "volume": 2,
+    "speciesIndex": 47,
+    "vnName": "Cá Róp",
+    "scientificName": "Thrissa hamiltonii",
+    "authorship": "Gray, 1832",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Lẹp Thrissa Cuvier, 1817", "latin": "Thrissa Cuvier, 1817" }
+    },
+    "specs": {
+      "vn": {
+        "size": "16 - 21 cm. Lớn nhất 25 cm.",
+        "distribution": "Ấn Độ, Indonesia, Philippines, Trung Quốc, Việt Nam Vịnh Bắc Bộ, Vịnh Thái Lan.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Hamilton's thrissa, Deep-bodied anchovy.",
+        "size": "16 - 21 mm. Maximum 25 mm.",
+        "distribution": "India, Indonesia, Philippines, China, Vietnam. Gulf of Tonkin, Gulf of Thailand.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively abundant.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Thrissa hamiltonii Gray, Illustrations Indian Zoology, Vol.2, pl.92, fig.2, 1832-34.",
+      "Thrichosoma hamiltonii Swainson, Nat. Hist. Animals, Fishes, Vol.2, p.292, 1839.",
+      "Thrissa sub-spinosa Swainson, Nat. Hist. Animals, Fishes, Vol.2, p.293, 1939.",
+      "Thrissocles hamiltonii Fowler, Pro. Acad. Nat. Sci. Phila., Vol.87, 1935, p.94.",
+      "Thrissocles mytax Fowler, Copeia, No.58, p.62, 1918 (not of Bloch and Schneider).",
+      "Engraulis hamiltonii Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.21, p.66, 1848; Day, 1865; Gunther, 1868; Fowler, 1927.",
+      "Engraulis grayi Bleeker, Nat. Tijds. Ned.-Ind., Vol.2, p.492, 1851; Weber and de Beaufort, 1913.",
+      "Stolephorus hamiltonii Bleeker, Ned. Tijds. Dierk., Vol.1, p.261, 1863.",
+      "Engraulis poorawah Bleeker, Atlas Ichth., Vol.6, p.132, 1866-72.",
+      "Trichosoma hamiltonii Ruter, Proc. Acad. Nat. Sci. Phila., ser.2, p.66, 1897.",
+      "Anchovia hamiltonii Jordan and Richardson, Bull. U.S. Bur. Fisheries, Vol.27, p.236, 1908.",
+      "Scutengraulis hamiltonii Jordan and Seale, Bull. Mus. Comp. Zool., Vol.67, p.371, 1926; McCulloch, 1929; Herre, 1940.",
+      "Setipinna hamiltonii Fowler, Hong Kong Nat., Vol.2, p.204, 1931."
+    ]
+  },
+  {
+    "id": "tap2-species-48",
+    "volume": 2,
+    "speciesIndex": 48,
+    "vnName": "Cá Lẹp hai quai",
+    "scientificName": "Thrissa mystax",
+    "authorship": "Bloch and Schneider, 1801",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Lẹp Thrissa Cuvier, 1817", "latin": "Thrissa Cuvier, 1817" }
+    },
+    "specs": {
+      "vn": {
+        "size": "15 - 18 cm. Lớn nhất 23 cm.",
+        "distribution": "Ấn Độ, Australia, Malaysia, Philippines, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Vịnh Thái Lan.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Mustached anchovy.",
+        "size": "15 - 18 mm. Maximum 23 mm.",
+        "distribution": "India, Australias, Malaysia, Philippines, Thailand, China, Vietnam. Gulf of Tonkin, Gulf of Thailand.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupea mystax Bloch and Schneider, Syst. Ichth., 1801, p.426, pl.83.",
+      "Engraulis mystax Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.21. 1848, p.67; Bleeker, 1866-72; Day, 1878; Weber and de Beaufort, 1913.",
+      "Thrissa mystax Richardson, Ichth. China Japan, p.309, 1846.",
+      "Thrissocles mystax Fowler, Copeia, No.58, p.62, 1918.",
+      "Thryssa porava Bleeker, Verh. Bat. Gen., Vol.22, 1849, p.14.",
+      "Engraulis mystacoides Bleeker, Verh. Bat. Gen., Vol.24, 1854, p.42.",
+      "Stolephorus mystacoides Bleeker, Ned. Tijds. Dierk., Vol.2, p.57, 1865.",
+      "Stolephorus (Thryssa) valenciennesi Bleeker, Ned. Tijds. Dierk., Vol.3, p.306, 1866.",
+      "Engraulis hamiltonii Kner, Reise Novara, Fische, p.334, 1865.",
+      "Engraulis pooravah Bleeker, Ned. Tijds. Dierk., Vol.4, p.148, 1874.",
+      "Trichosoma porava Rutter, Proc. Acad. Nat. Sci. Phila., 1897, p.65.",
+      "Scutengraulis mystax Jordan and Seale, Bull. Mus. Comp. Zool., Vol.67, p.370, 1926; Herre, 1940.",
+      "Thryssa mystacoides Wu-Contrib. Biol. Lab. Sci. Soc. China, Vol.5, 11p.24, fig.18, 1929.",
+      "Setipinna mystax Fowler, Hong Kong Nat., Vol.2, p.203, 1931."
+    ]
+  },
+  {
+    "id": "tap2-species-49",
+    "volume": 2,
+    "speciesIndex": 49,
+    "vnName": "Cá Lẹp mõm vàng",
+    "scientificName": "Thrissa vitirostris",
+    "authorship": "(Gilchrist and Thompson, 1908)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Lẹp Thrissa Cuvier, 1817", "latin": "Thrissa Cuvier, 1817" }
+    },
+    "specs": {
+      "vn": {
+        "size": "90 - 100 mm. Lớn nhất 120 mm.",
+        "distribution": "Nam Phi, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Orange-mouthed thryssa.",
+        "size": "90 - 100 mm. Maximum 120 mm.",
+        "distribution": "South Africa, Philippines, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Engraulis vitirostris Gilchrist and Thompson, Ann. South. African Mus., Vol.6, 1908-11, p.201.",
+      "Thrissa vitirostris Bernard, Ann South. African Mus., Vol.21, No.1, p.118, 1923.",
+      "Thrisocles vitirostris Fowler, Proc. Acad. Nat. Sci. Phila., Vol.88, 1934, p.413."
+    ]
+  }
+]

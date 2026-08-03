@@ -1,0 +1,151 @@
+[
+  {
+    "id": "tap2-species-264",
+    "volume": 2,
+    "speciesIndex": 264,
+    "vnName": "Cá Nhụ Ấn Độ",
+    "scientificName": "Polynemus indicus",
+    "authorship": "Shaw, 1804",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemidae"
+      },
+      "genus": {
+        "vn": "Cá Nhụ thường Polynemus Linnaeus",
+        "latin": "Polynemus Linnaeus"
+      },
+      "suborder": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemoidei"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhụ Ấn Độ",
+        "size": "100 cm.",
+        "distribution": "Madagascar, Mauritius, Ấn Độ, Burma, Australia, Indonesia, Malaysia, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1922. Orsi. 1974."
+      },
+      "en": {
+        "commonName": "Indian threadfin, Indian tasselfish.",
+        "size": "100 cm.",
+        "distribution": "Madagascar, Mauritius, India, Burma, Australia, Indonesia, Malaysia, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1922. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Polynemus indicus Shaw, General Zoology, Vol.5, p.155,1804; Cantor, 1850; Bleeker, 1854; Gunther, 1860; Kner, 1865-67; Day, 1889-90.",
+      "Polynemus sele Hamilton-Buchanan, Fishes Ganges, pp.226 and 381, 1822.",
+      "Polynemus uronemus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.385, 1829; Bleeker, 1849.",
+      "Trichidion indicus Fowler, Proc. Acad. Nat. Sci. Phila., ser.2, Vol.57, p.501, 1905."
+    ]
+  },
+  {
+    "id": "tap2-species-265",
+    "volume": 2,
+    "speciesIndex": 265,
+    "vnName": "Cá Nhụ Boọc-nê-ô",
+    "scientificName": "Polynemus borneensis",
+    "authorship": "Bleeker, 1852",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemidae"
+      },
+      "genus": {
+        "vn": "Cá Nhụ thường Polynemus Linnaeus",
+        "latin": "Polynemus Linnaeus"
+      },
+      "suborder": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemoidei"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhụ Boọc-nê-ô",
+        "size": "",
+        "distribution": "Ở vùng nước lợ và nước ngọt, Indonesia, Malaysia, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1922. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Borneo tasselfish.",
+        "size": "",
+        "distribution": "In brackish and fresh waters, Indonesia, Malaysia, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1922. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Polynemus macronema Bleeker, Nat. Tijds. Ned.-Ind.,Vol.3. p.419, 1852 (not of Pel).",
+      "Polynemus borneensis Bleeker, Act. Soc. Sci. Indo-Neerl., Vol.2. 1857, Iode Bijdr. Borneo, p.3.",
+      "Trichidion hilleri Fowler, Proc. Acad. Nat. Sci. Phila., ser.2, Vol.57, p.502, 1905."
+    ]
+  },
+  {
+    "id": "tap2-species-266",
+    "volume": 2,
+    "speciesIndex": 266,
+    "vnName": "Cá Phèn vàng",
+    "scientificName": "Polynemus paradiseus",
+    "authorship": "Linnaeus, 1758",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemidae"
+      },
+      "genus": {
+        "vn": "Cá Nhụ thường Polynemus Linnaeus",
+        "latin": "Polynemus Linnaeus"
+      },
+      "suborder": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemoidei"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Phèn vàng",
+        "size": "6 - 13 cm. Lớn nhất 25 cm.",
+        "distribution": "Ở biển và cửa sông, Ấn Độ Dương, Thái Bình Dương, Thái Lan, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối ít.",
+        "literature": "Orsi, 1974. Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "Paradise threadfin, Longthread tasselfish.",
+        "size": "6 - 13 cm. Maximum 25 cm.",
+        "distribution": "In the sea and in the estuary, Indian Ocean, Pacific Ocean, Thailand, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively little.",
+        "literature": "Orsi, 1974. Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Polynemus paradiseus Linnaeus, Syst. Nat., ed.10, p.317 (India), 1758; Smith, 1945."
+    ]
+  }
+]

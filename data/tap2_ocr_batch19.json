@@ -1,0 +1,487 @@
+[
+  {
+    "id": "tap2-species-164",
+    "volume": 2,
+    "speciesIndex": 164,
+    "vnName": "Cá Chuồn có vây chấm đen",
+    "scientificName": "Cheilopogon spilopterus",
+    "authorship": "(Cuvier and Valenciennes, 1846)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn vằn Cheilopogon Lowe",
+        "latin": "Cheilopogon Lowe"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn có vây chấm đen",
+        "size": "25 - 27 cm. Lớn nhất 35 cm.",
+        "distribution": "Ấn Độ, Tahiti, Indonesia, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1922. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Black spot-winged flying fish.",
+        "size": "25 - 27 cm Maximum 35 cm.",
+        "distribution": "India, Tahiti, Indonesia, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1922. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus spilopterus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 19, p. 113, 1846; Bleeker, 1866; Gunther, 1866; Weber, 1913.",
+      "Exocoetus poecilopterus Day, Fish of India, No. 4, p. 518 (not of Cuvier and Valenciennes).",
+      "Cheilopogon (Machlocoetus) spilopterus Parin, Transactions of the Institute of Oceanology, Acad. Sci. USSR, Vol. 43, p. 64, 1961.",
+      "Cheilopogon spilopterus Bessednov, Problems Ichth., Vol. 3, No. 2 (27), p. 229, 1963."
+    ]
+  },
+  {
+    "id": "tap2-species-165",
+    "volume": 2,
+    "speciesIndex": 165,
+    "vnName": "Cá Chuồn dài",
+    "scientificName": "Cheilopogon atrisignis",
+    "authorship": "(Jenkins, 1903)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn vằn Cheilopogon Lowe",
+        "latin": "Cheilopogon Lowe"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn dài",
+        "size": "34 cm.",
+        "distribution": "Hawaii, Indonesia, Malaysia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Scales-densed flying fish.",
+        "size": "34 cm",
+        "distribution": "Hawaii, Indonesia, Malaysia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Cypsilurus atrisignis Jenkins, Bull. U. S Fish. Comm., Vol. 22, p. 436, pl. 3, 1903; Jordan and Evermann, 1905; Weber and de Beaufort, 1922.",
+      "Exocoetus atrisignis Gunther, Fische der Sudsee, Vol. 3, p. 368, 1910.",
+      "Cypselurus atrisignis Fowler, Mem Bishop Mus., Vol. 10, p. 83, 1928; Herre, 1934.",
+      "Maculocoetus atrisignis Fowler, Mem Bishop Mus., Vol. 12, No. 2, p. 59. 1949."
+    ]
+  },
+  {
+    "id": "tap2-species-166",
+    "volume": 2,
+    "speciesIndex": 166,
+    "vnName": "Cá Chuồn hạt mít",
+    "scientificName": "Cheilopogon katoptron",
+    "authorship": "(Bleeker, 1866)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn vằn Cheilopogon Lowe",
+        "latin": "Cheilopogon Lowe"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn hạt mít",
+        "size": "15 - 18 cm. Lớn nhất : 40 cm.",
+        "distribution": "Hồng Hải, Đông Phi, Australia, Indonesia, Hawaii, Samoa, Philippines, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Herre, 1953. Mai Đình Phong, 1978. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Black flying fish.",
+        "size": "15 - 18 cm Maximum : 40 cm.",
+        "distribution": "Red Sea, East Africa, Australia, Indonesia, Hawaii, Samoa, Philippines, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Herre, 1953. Mai Dinh Phong, 1978. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus altipennis Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 19, p. 80, pl. 560, 1846.",
+      "Exocoetus speculiger Bleeker, Nat. Tijds. Ned. Ind., Vol. 9, p. 273, 1885.",
+      "Exocoetus robustus Gunther, Cat. Fish. Bishop Mus., p. 289, 1866.",
+      "Exocoetus altipinnis Bleeker, Atlas Ichth., Vol. 6, p. 247, fig. 1, 1866-72; Day, 1878.",
+      "Cypsilurus katopron Jordan and Seale, Bull. U. S. Bur. Fisheries, Vol. 25, p. 211, fig. 16, 1906.",
+      "Cypselurus altipinnes Seale and Bean, Proc. U. S. Nat. Mus., Vol. 33, p. 240, 1907.",
+      "Cypselurus altipinnis Fowler, Mem Bishop Mus., Vol. 10, p. 82, 1928; Herre, 1936.",
+      "Cypsilurus altipennis Weber and de Beaufort, Fishes Indo-Australian Archipelago, Vol. 4, p. 184, 1922."
+    ]
+  },
+  {
+    "id": "tap2-species-167",
+    "volume": 2,
+    "speciesIndex": 167,
+    "vnName": "Cá Chuồn vằn bụng",
+    "scientificName": "Cheilopogon suttoni",
+    "authorship": "(Whitley and Colefax, 1938)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn vằn Cheilopogon Lowe",
+        "latin": "Cheilopogon Lowe"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn vằn bụng",
+        "size": "25 - 27 cm.",
+        "distribution": "Ấn Độ Dương, Thái Bình Dương, Đông Phi, Indonesia, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Belly-veined flying fish.",
+        "size": "25 - 27 cm",
+        "distribution": "Indian Ocean, Pacific Ocean, East Africa, Indonesia, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Maculocoetus suttoni Whitley and Colefax, Fishes from Nauru Gilbert island, Oceania Proc. Linn. Soc. N. S. Wales, Vol. 63, No. 3-4, p. 237, 1938.",
+      "Cypselurus vitiani Parin, Zool. Jour., Vol. 37, No. 9, p. 1412, 1958."
+    ]
+  },
+  {
+    "id": "tap2-species-168",
+    "volume": 2,
+    "speciesIndex": 168,
+    "vnName": "Cá Chuồn xanh",
+    "scientificName": "Cheilopogon cyanopterus",
+    "authorship": "(Cuvier and Valenciennes, 1846)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn vằn Cheilopogon Lowe",
+        "latin": "Cheilopogon Lowe"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn xanh",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Thái Bình Dương, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Margined flying fish.",
+        "distribution": "Atlantic Ocean, Indian Ocean, Pacific Ocean, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus cyanopterus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 9, p. 97, 1846.",
+      "Cypselurus cyanopterus Brunn, Dana Rap., Vol. 6, p. 40, 1935; Bleeker, 1938; Parin, 1960."
+    ]
+  },
+  {
+    "id": "tap2-species-169",
+    "volume": 2,
+    "speciesIndex": 169,
+    "vnName": "Cá Chuồn nhiều răng",
+    "scientificName": "Hirundichthys speculiger",
+    "authorship": "(Valenciennes, 1846)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn vây ngang Hirundichthys Breder",
+        "latin": "Hirundichthys Breder"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn nhiều răng",
+        "size": "18 - 20 cm. Lớn nhất : 30 cm.",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Thái Bình Dương, Australia, Indonesia, New Zealand, Malaysia, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Weber and de Beaufort, 1922. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Mirrowing flying fish, Cutsnout flying fish.",
+        "size": "18 - 20 cm. Maximum : 30 cm.",
+        "distribution": "Atlantic Ocean, Indian Ocean, Pacific Ocean, Australia, Indosnesia, New Zealand, Malaysia, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Weber and de Beaufort, 1922. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus speculiger Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 19, p. 94, 1846; Bleeker, 1866; Gunther, 1866; Lutken, 1876.",
+      "Cypselurus (Hirundichthys) speculiger Parin, Transactions of the Institute of Oceanology, Acad. Sci. USSR, Vol. 31, pp. 205-285, 1960.",
+      "Hirundichthys speculiger Parin, Transactions of the Institute of Oceanology, Acad. Sci. USSR, Vol. 43, p. 175, 1961.",
+      "Exocoetus affinis Gunther, Cat. British Mus., Vol. 6, p. 288, 1866.",
+      "Exocoetus volitans Jordan and Evermann, Fishes N. America, Vol. 1, p. 734, 1895 (not of Linnaeus).",
+      "Cypsilurus speculiger Jordan and Seale, Bull. Bureau Fish, Vol. 25, p. 209, 1906.",
+      "Exonautes speculiger McCulloch, Zool. Result \"Endeavour\" Fishes, Part. 1, p. 30, 1911.",
+      "Cypselurus speculiger McCulloch, Check List of Fishes of N. S. Wales, Part. 2, p. 30, 1919."
+    ]
+  },
+  {
+    "id": "tap2-species-170",
+    "volume": 2,
+    "speciesIndex": 170,
+    "vnName": "Cá Chuồn ít răng",
+    "scientificName": "Hirundichthys oxycephalus",
+    "authorship": "(Bleeker, 1852)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn vây ngang Hirundichthys Breder",
+        "latin": "Hirundichthys Breder"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn ít răng",
+        "size": "15 - 20 cm. Lớn nhất 23 cm.",
+        "distribution": "Australia, Samoa, Hawaii, Indonesia, Malaysia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Weber and de Beaufort, 1922. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Bony flying fish, Sharp-headed flying fish.",
+        "size": "15 - 20 cm. Maximum 23 cm.",
+        "distribution": "Australia, Samoa, Hawaii, Indonesia, Malaysia, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively abundant.",
+        "literature": "Weber and de Beaufort, 1922. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus oxycephalus Bleeker, Nat. Tijds. Ned.-Ind., Vol. 3, p. 771, 1852; Gunther, 1866.",
+      "Exonautes oxycephalus Ogilby, Ann. Queensl. Mus., No. 9, Part. 1, p. 5, 1908; Wang, 1958.",
+      "Cypselurus oxycephalus Bleeker, in Zhang : Fishes of the East China Sea, p. 165, fig. 133, 1963.",
+      "Hirundichthys (Hirundichths)oxycephalus Parin, Transactions of the Institute of Oceanology, Acad. Sci. USSR, Vol. 80, p. 141, 1961.",
+      "Hirundichthys oxycephalus Parin and Bessednov, Transactions of the Institute of Oceanology, Acad. Sci. USSR, Vol. 80, p. 141, 1965."
+    ]
+  },
+  {
+    "id": "tap2-species-171",
+    "volume": 2,
+    "speciesIndex": 171,
+    "vnName": "Cá Quại mõm nhọn",
+    "scientificName": "Ablennes anastomella",
+    "authorship": "(Cuvier and Valenciennes, 1846)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Nhói",
+        "latin": "Belonidae"
+      },
+      "genus": {
+        "vn": "Cá Quại Ablennes Jordan and Fordice",
+        "latin": "Ablennes Jordan and Fordice"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Quại mõm nhọn",
+        "size": "35 - 50 cm.",
+        "distribution": "Triều Tiên, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Sharp-headed flat billfish.",
+        "size": "35 - 50 cm.",
+        "distribution": "Korea, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Belone anastomella Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 18, p. 446, 1846; Gunther, 1866.",
+      "Tylosurus anastomella Randahl, Arkiv for Zoologi Band 16, No. 2 p. 6, 1924; Zhang, 1954.",
+      "Ablennes anastomella Matsubara, Fish Morphol and Hierar, p. 381, 1955; Zhang, 1962."
+    ]
+  },
+  {
+    "id": "tap2-species-172",
+    "volume": 2,
+    "speciesIndex": 172,
+    "vnName": "Cá Quại vằn",
+    "scientificName": "Ablennes hians",
+    "authorship": "(Cuvier and Valenciennes, 1846)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Nhói",
+        "latin": "Belonidae"
+      },
+      "genus": {
+        "vn": "Cá Quại Ablennes Jordan and Fordice",
+        "latin": "Ablennes Jordan and Fordice"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Quại vằn",
+        "size": "50 - 70 cm. Lớn nhất 90 cm.",
+        "distribution": "Hồng Hải, Ấn Độ, Australia, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962, Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Ribbon garfish, Barred longtom.",
+        "size": "50 - 70 cm. Maximum 90 cm.",
+        "distribution": "Red Sea, India, Autralia, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Belone crocodila Bleeker, Nat. Geneesk. Arch.. Ned. -Ind., Vol.2, p.512, 1845.",
+      "Belone hians Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.18, p.321, pl.548, 1846; Gunther, 1866.",
+      "Belone melanostigma Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.18, p.334, 1846; Gunther, 1866; Day, 1878.",
+      "Belone gracilis Schlegel, Fauna Japonica, Pisces, p.116, 1846, not of Lowe; Bleeker, 1854-57.",
+      "Belone schismatorhynchus Bleeker, Nat. Tijds. Ned.-Ind., Vol.1, p.95, 1850; Kner, 1865; Gunther, 1866.",
+      "Mastacembelus schismatorhynchus Bleeker, Atlas Ichth., Vol.6, p.49, pl.258, 1867.",
+      "Athlennes hians Jordan and Fordice, Proc. U.S. Nat. Mus., Vol.9, p.342, 1887; Jordan and Evermann, 1896; Jenkins, 1904; Weber and de Beaufort, 1922.",
+      "Tylosurus melanostigma Jordan and Evermann, Proc. U.S. Nat. Mus., Vol.25, p.329, 1902.",
+      "Tylosurus schismatorhynchus Jordan and Starks, Proc. U.S. Nat. Mus., Vol.26, p.528, 1903.",
+      "Tylosurus caeruleofasciatus Stead, New Fishes New South Wales, No.1, p.3, 1908.",
+      "Athlennes caeruleofasciatus Ogilby, Mem. Queensl. Mus., Vol.5, p.130, 1916; McCulloch, 1919.",
+      "Ablennes hians Jordan and Jordan, Mem. Carnegie Mus., Vol.10, p.18, 1922; Fowler, 1927; Herre, 1953."
+    ]
+  },
+  {
+    "id": "tap2-species-173",
+    "volume": 2,
+    "speciesIndex": 173,
+    "vnName": "Cá Nhói lớn",
+    "scientificName": "Tylosurus giganteus",
+    "authorship": "(Temminck and Schlegel, 1846)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Nhói",
+        "latin": "Belonidae"
+      },
+      "genus": {
+        "vn": "Cá Nhói Tylosurus Cocco",
+        "latin": "Tylosurus Cocco"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhói lớn",
+        "size": "50 - 65 cm. Lớn nhất 72 cm.",
+        "distribution": "Australia, Hawaii, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng ít."
+      },
+      "en": {
+        "commonName": "Giant needlefish, Common gar.",
+        "size": "50 - 65 cm. Maximum 72 cm",
+        "distribution": "Australia, Hawaii, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant."
+      }
+    },
+    "synonyms": [
+      "Belone gigantea Schlegel, Fauna Japonica, Pisces, p.245, 1846; Bleeker, 1858; Gunther, 1910.",
+      "Mastacembelus giganteus Bleeker, Ned. Tijds. Dierk., Vol.1, p.236, 1866.",
+      "Belone annulata Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.18, p.332, pl.550, 1846; Cantor, 1850; Gunther, 1866.",
+      "Belone melanurus Bleeker, Verh. Bat. Gen., Vol.22, Bijdr. Ichth. Madura, p.11, 1849.",
+      "Belone timucoides Bleeker, Jour. Ind. Arch., Vol.3, pp.67-68, 1849.",
+      "Belone cylindrica Bleeker, Nat. Tijds. Ned.-Ind., Vol.2, p.472, 1851.",
+      "Mastacembelus choram Bleeker, Ned. Tijds. Dierk., Vol.3, p.227, 1866.",
+      "Mastacembelus annulatus Bleeker, Ned. Tijds. Dierk., Vol.3, p.229, 1866.",
+      "Tylosurus giganteus Jenkins, Bull. U.S. Fish. Comm., Vol.22, p.433, 1902; Jordan and Starks, 1903; Seale, 1906; Jordan and Richardson, 1907; Herre, 1940.",
+      "Tylosurus annulatus Seale, Philippine Jour. Sci., Vol.5, sec.D, p.267, 1910; Weber and de Beaufort, 1922.",
+      "Tylosurus indicus Fowler, Hong Kong Naturalist, Vol.3, p.263, 1932."
+    ]
+  }
+]

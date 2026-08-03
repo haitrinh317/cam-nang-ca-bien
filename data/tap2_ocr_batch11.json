@@ -1,0 +1,228 @@
+[
+  {
+    "id": "tap2-species-90",
+    "volume": 2,
+    "speciesIndex": 90,
+    "vnName": "Cá Lịch vân hoa",
+    "scientificName": "Gymnothorax pictus",
+    "authorship": "(Ahl, 1789)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Bộ Cá Chình",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Họ Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch Gymnothorax Bloch, 1795",
+        "latin": "Gymnothorax Bloch, 1795"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch vân hoa",
+        "size": "75 cm.",
+        "distribution": "Từ Đông Phi đến đảo Ryukiu, Australia, Pacific Ocean, Costa Rica, Mexico, Philippines, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Painted moray, Peppered moray.",
+        "size": "75 cm.",
+        "distribution": "From East Africa to Ryukiu Islands, Australia, Pacific Ocean, Costa Rica, Mexico, Philippines, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Herre, 1953. Zhang, 1962. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Muraena picta Ahl, De Muraena et Ophichtho, Thunberg Dissert., Vol.3, p.6, pl.2, fig.2, 1789; Gunther, 1870; Day, 1878.",
+      "Muraenophis pantherina Lacepede, Hist. Nat. Poiss., Vol.5, pp.628, 641, 643, 1803.",
+      "Muraena variegata Quoy and Gaimard, Voy. Uranie, Zoologie, p.246, 1824.",
+      "Muraena lita Richardson, Zool., Voy. Erebus and Terror, Fishes, p.84, 1846.",
+      "Muraena siderea Richardson, Ibid., p.85, 1846.",
+      "Muraena pfeifferi Bleeker, Nat. Tijds. Ned.-Ind., Vol.5, p.173, 1853.",
+      "Sidera pantherina Kaup, Cat. Apodal Fish. British Mus., p 70, 1856.",
+      "Sidera pantherina Kaup, Ibid., p.71, 1856.",
+      "Muraena polyophthalmus Bleeker, Acta Soc. Sci. Indo-l rl., Vol.3, 1858.",
+      "Gymnothorax pantherinus Bleeker, Ned. Tijds. Dierk., Vol 1, p.152, 1863.",
+      "Gymnothorax pictus Bleeker, Atlas Ichth., Vol.4, p.87, pl.170, fig.3-4, pl.172, fig.3, pl.173, fig.1; and pl.189, fig.3, 1864; Jordan & Evermann, 1905; Jordan & Seale, 1906; Jordan & Richardson, 1908; Weber, 1913; Herre, 1936-37.",
+      "Echidna (Muraena) picta Peters, Monatsber. Akad. Wiss. Berlin, p.275, 1868.",
+      "Gymnothorax litus Jordan & Seale, Bull. U. S. Bur. Fisheries, Vol.25, p.198, 1906; Jordan & Richardson, 1908.",
+      "Gymnothorax polyophthalmus Jordan & Seale, Bull. U. S. Bur. Fisheries, Vol.25, p.199, 1906; Weber, 1913.",
+      "Muraena (Gymnothorax) picta Weber & de Beaufort, Fishes Indo-Austr. Arch., Vol.3, p.368, fig.175, 180, 182, and 183, 1916.",
+      "Lycodontis picta Fowler, Fishes Oceania, Mem. Bishop Mus., Vol.10, p.51, 1928."
+    ]
+  },
+  {
+    "id": "tap2-species-91",
+    "volume": 2,
+    "speciesIndex": 91,
+    "vnName": "Cá Lịch khoang chấm",
+    "scientificName": "Gymnothorax punctatofasciatus",
+    "authorship": "Bleeker, 1856",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Bộ Cá Chình",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Họ Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch Gymnothorax Bloch, 1795",
+        "latin": "Gymnothorax Bloch, 1795"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch khoang chấm",
+        "size": "47 cm.",
+        "distribution": "Zanzibar, Indonesia, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Punctato moray.",
+        "size": "47 cm.",
+        "distribution": "Zanzibar, Indonesia, Malaysia, Philippine, Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Muraena catenata Bleeker, Acta Soc. Sci., Indo-Neerl., Vol.1, Vischsoorten Amboina, p.66, 1856.",
+      "Gymnothorax punctatofasciatus Bleeker, Ned. Tijds. Dierk., Vol.1, p.167, 1863; Jordan & Seale, 1905. Herre, 1934.",
+      "Muraena punctatofasciata Gunther, Cat. Fishes British Mus., Vol.8, p.106, 1870; Day, 1878; Meyer, 1885.",
+      "Muraena (Gymnothorax) punctatofasciata Weber & de Beaufort, Fishes Indo-Australian Archipelago, Vol.3, p.371, 1916."
+    ]
+  },
+  {
+    "id": "tap2-species-92",
+    "volume": 2,
+    "speciesIndex": 92,
+    "vnName": "Cá Lịch mắt trắng",
+    "scientificName": "Gymnothorax thyrsoideus",
+    "authorship": "(Richardson, 1844)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Bộ Cá Chình",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Họ Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch Gymnothorax Bloch, 1795",
+        "latin": "Gymnothorax Bloch, 1795"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch mắt trắng",
+        "size": "65 cm.",
+        "distribution": "Ấn Độ - Thái Bình Dương, Autralia, Indonesia, Samoa, Philippines, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "White-eyed moray.",
+        "size": "65 cm.",
+        "distribution": "Indo-Pacific, Australia, Indonesia, Caroline, Samoa, Philippines, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Muraena thyrsoidea Richardson, Voy. Sulphur. Fishes, p.111, 1844, not pl.49, fig.1; Cantor, 1850; Gunther, 1870; Day, 1878.",
+      "Muraena griseo-badia Richardson, Zool., Voy. Erebus and Terror. Fishes, p.89, 1844.",
+      "Muraena prosopeion Bleeker, Nat. Tijds. Ned.-Ind., Vol.4, p.300, 1853.",
+      "Muraena griseo-badia Kaup, Cat. Apodal Fishes British Mus., p.74, 1856.",
+      "Thyrsoidea arenata Kaup, Cat. Apodal Fishes British Mus., p.85, 1856.",
+      "Gymnothorax prosopeion Bleeker, Atlas Ichth., Vol.4, p.88, pl.39, fig.3, 1864.",
+      "Gymnothorax thyrsoideus Bleeker, Atlas Ichth., Vol.4, p.103, 1864; Jordan & Seale, 1906; Herre, 1935-37.",
+      "Muraena tile Seale, Occas Papers Bishop Mus., Vol.1, No.3, p.62, 1901.",
+      "Muraena (Gymnothorax) thyrsoidea Weber & de Beaufort, Fishes Indo-Australian Archipelago, Vol.3, p.365, 1916; Chevey, 1932.",
+      "Lycodontis thyrsoidea Fowler, Fishes Oceania, Mem. Bishop Mus., Vol.10, p.52, 1928."
+    ]
+  },
+  {
+    "id": "tap2-species-93",
+    "volume": 2,
+    "speciesIndex": 93,
+    "vnName": "Cá Lịch vân sóng",
+    "scientificName": "Gymnothorax undulatus",
+    "authorship": "(Lacepede, 1803)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Bộ Cá Chình",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Họ Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch Gymnothorax Bloch, 1795",
+        "latin": "Gymnothorax Bloch, 1795"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch vân sóng",
+        "size": "30 - 50 cm. Lớn nhất 180 cm.",
+        "distribution": "Australia, Hawaii, Indonesia, Tahiti, Micronesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Mottled moray.",
+        "size": "30 - 50 cm. Maximum 180 cm.",
+        "distribution": "Australia, Hawaii, Indonesia, Tahiti, Micronesia, Philippines, Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Muraenophis undulata Lacepede, Hist. Nat. Poiss., Vol.5, pp.629 and 644, pl.64, fig.2, 1803.",
+      "Muraena fimbriata Bennett, Proc. Comm. Zool. Soc., Vol.1, p.168, 1831; Gunther, 1870; Day, 1878; Steindachner, 1901.",
+      "Muraena valenciennii Eydoux and Souleyet, Voy. Bonite. Zool. p.207, pl.8, fig.1, 1841.",
+      "Muraena cancellata Richardson, Zool., Voy. Erebus and Terror Fishes, p.87, pl.46, fig.1-5, 1844; Macleay, 1883.",
+      "Muraena agassizi Bleeker, Nat. Tijds. Ned.-Ind., Vol.8, p.458, 1855.",
+      "Muraena isingleena Bleeker, Nat. Tijds. Ned.-Ind., Vol.9, p.277, 1855.",
+      "Thyrsoidea ballata Kaup, Cat. Apodal Fishes British Mus., p.81, 1856.",
+      "Thyrsoidea cancellata Kaup, Cat. Apodal Fishes British Mus., p.76, 1856.",
+      "Thyrsoidea isingleenoides Kaup, Cat. Apodal Fishes British Mus., p.74, 1856.",
+      "Thyrsoidea kaupi Abbott, Proc. Acad. Nat. Sci. Phila., Vol.12, ser.2, p.477, 1860.",
+      "Gymnothorax bullatus Bleeker, Atlas Ichth., Vol.4, p.91, pl.27, fig.2, pl.43, fig.3, 1864.",
+      "Gymnothorax agassizi Bleeker, Atlas Ichth., Vol.4, p.95, pl.41, fig.2, 1864.",
+      "Muraena microspila Gunther, Cat. Fishes British Mus., Vol.8, p.108, 1870.",
+      "Muraena undulata Gunther, Cat. Fishes British Mus., Vol.8, p.110, 1870; Klunzinger, 1871; Day, 1878.",
+      "Gymnothorax fimbriatus Bleeker, Versl. Akad. Amsterdam, (2) Vol.7, p.37, 1873; Steindachner, 1906; Seale, 1907.",
+      "Lycodontis kaupi Fowler, Proc. Acad. Nat. Sci. Phila., p.494, pl.18, fig.6, 1900.",
+      "Gymnothorax undulatus Jenkins, Bull. U. S. Fishes Comm., Vol.22, p.4, 1903; Jordan & Evermann, 1905; Seale, 1906; Herre, 1940-41.",
+      "Gymnothorax philippinus Jordan & Seale, Bull.. U. S. Bur. Fisheries, Vol.26, p.7, fig.2, 1907; Herre, 1923.",
+      "Gymnothorax kaupi Fowler, Proc. Acad. Nat. Sci. Phila., Vol.64, p.21, 1912.",
+      "Gymnothorax stellatus Fowler, Proc. Acad. Nat. Sci. Phila., Vol.64, p.21, 1912; Snyder, 1912.",
+      "Gymnothorax favagineus Weber, Siboga-Exped., Vol.57, Fische, p.56, 1913.",
+      "Gymnothorax macassariensis Weber, Siboga-Exped., Vol.57, Fische, p.61, 1913.",
+      "Gymnothorax sagenodeta Weber, Siboga-Exped., Vol.57, Fische, p.61, 1913.",
+      "Muraena (Gymnothorax) undulata Weber & de Beaufort, Fishes Indo-Australian Archipelago, Vol.3, p.376, fig.186, 1916."
+    ]
+  }
+]

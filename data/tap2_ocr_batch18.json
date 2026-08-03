@@ -1,0 +1,472 @@
+[
+  {
+    "id": "tap2-species-154",
+    "volume": 2,
+    "speciesIndex": 154,
+    "vnName": "Cá Chuồn bay",
+    "scientificName": "Exocoetus volitans",
+    "authorship": "Linnaeus, 1758",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn bay Exocoetus Linnaeus",
+        "latin": "Exocoetus Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn bay",
+        "size": "3 - 14 cm. Lớn nhất 24 cm.",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Thái Bình Dương, Indonesia, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Weber and de Beaufort, 1922. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Blue two-winged flying fish.",
+        "size": "3 - 14 cm Maximum 24 cm.",
+        "distribution": "Atlantic Ocean, Indian Ocean, Pacific Ocean, Indonesia, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, numerous.",
+        "literature": "Weber and de Beaufort, 1922. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus volitans Linnaeus, Syst. Nat. ed. 10a, p.316, 1758, ed. 12a, p 520, 1766; Lacepede, 1803.",
+      "Exocoetus evolans Linnaeus, Syst. Nat., ed. 12a, p. 521, 1766; Bloch, 1795; Cuvier and Valenciennes, 1846",
+      "Exocoetus obtusirostris Gunther, Cat. British Mus., Vol. 6, p. 283, 1866."
+    ]
+  },
+  {
+    "id": "tap2-species-155",
+    "volume": 2,
+    "speciesIndex": 155,
+    "vnName": "Cá Chuồn bay có râu",
+    "scientificName": "Exocoetus monocirrhus",
+    "authorship": "Richardson, 1846",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn bay Exocoetus Linnaeus",
+        "latin": "Exocoetus Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn bay có râu",
+        "size": "12 - 17 cm. Lớn nhất 19 cm.",
+        "distribution": "Ấn Độ Dương, Thái Bình Dương, Nhật Bản, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Mai Đình Phong, 1978. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Barbel flying fish.",
+        "size": "12 - 17 cm Maximum 19 cm.",
+        "distribution": "Indian Ocean, Pacific Ocean, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Mai Dinh Phong, 1978. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus monocirrhus Richardson, Rept. Brit. Ass. Adv. Sci., 1845; Parin, 1965; Abe, 1955.",
+      "Exocoetus obtusirostris (non Gunther) Matsubara, Fish. Morpho. Hier., p. 398, 1955."
+    ]
+  },
+  {
+    "id": "tap2-species-156",
+    "volume": 2,
+    "speciesIndex": 156,
+    "vnName": "Cá Chuồn không râu",
+    "scientificName": "Prognichthys brevipinnis",
+    "authorship": "Cuvier and Valenciennes, 1846",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá chuồn không râu Prognichthys Breder",
+        "latin": "Prognichthys Breder"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn không râu",
+        "size": "Lớn nhất 19 cm.",
+        "distribution": "Ấn Độ Dương, Thái Bình Dương, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Short-finned flying fish.",
+        "size": "19 cm Maximum 19 cm.",
+        "distribution": "Indian Ocean, Pacific Ocean, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Prognichthys brevipinnis Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 19, p. 125, 1864; Parin, 1965.",
+      "Cyselurus zaca Seale, Proc. Calif. Akad. Sci., Vol. 21, p. 349. 1935."
+    ]
+  },
+  {
+    "id": "tap2-species-157",
+    "volume": 2,
+    "speciesIndex": 157,
+    "vnName": "Cá Chuồn mắt to",
+    "scientificName": "Cypselurus brevis",
+    "authorship": "Weber and de Beaufort, 1922",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn thường Cypselurus Swainson",
+        "latin": "Cypselurus Swainson"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn mắt to",
+        "size": "15 - 24 cm. Lớn nhất 26 cm.",
+        "distribution": "Indonesia, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Weber and de Beaufort, 1922. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Big-eyed flying fish",
+        "size": "15 - 24 cm Maximum 26 cm.",
+        "distribution": "Indonesia, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively numerous.",
+        "literature": "Weber and de Beaufort, 1922. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Cypselurus brevis Weber and de beaufort, Fishes Indo-Australian Archipelago, Vol. 4, p. 192-193, 1922; Parin, 1965."
+    ]
+  },
+  {
+    "id": "tap2-species-158",
+    "volume": 2,
+    "speciesIndex": 158,
+    "vnName": "Cá Chuồn vây nhỏ",
+    "scientificName": "Cypselurus oligolepis",
+    "authorship": "(Bleeker, 1866)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn thường Cypselurus Swainson",
+        "latin": "Cypselurus Swainson"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn vây nhỏ",
+        "size": "16 - 20 cm. Lớn nhất : 26 cm.",
+        "distribution": "Zanzibar, Đông Phi, Tahiti, Indonesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Four-winged flying fish.",
+        "size": "16 - 20 cm Maximum : 26 cm.",
+        "distribution": "Zanzibar, East Africa, Tahiti, Indonesia, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, numerous.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus oligolepis Bleeker, Ned. Tijds. Dierk., Vol. 3, p. 109, 1866; Gunther, 1866.",
+      "Exocoetus brachysoma Bleeker, Ned. Tijds. Dierk., Vol., p.111, 1866; Weber, 1913.",
+      "Cypselurus brachysoma Jordan and Seale, Bull. U.S. Bur. Fisheries, Vol. 26, p. 9, 1907.",
+      "Cypselurus brachysoma Fowler, Proc. Acad. Nat. Sci. Phila., Vol. 71, p. 13, 1920.",
+      "Cypselurus oligolepis Duncker and Mohr, Mitt. Zool. Mus. Hamburg, Vol. 42, p. 129, 1926.",
+      "Cypselurus oligolepis Fowler, Proc. Acad. Nat. Sci. Phila., Vol. 79, p. 263, 1927; Herre, 1940-41."
+    ]
+  },
+  {
+    "id": "tap2-species-159",
+    "volume": 2,
+    "speciesIndex": 159,
+    "vnName": "Cá Chuồn vây lớn",
+    "scientificName": "Cypselurus naresii",
+    "authorship": "(Gunther, 1889)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn thường Cypselurus Swainson",
+        "latin": "Cypselurus Swainson"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn vây lớn",
+        "size": "15 - 18 cm.",
+        "distribution": "Đại Tây Dương, Thái Bình Dương, Fiji, Indonesia, Nhật Bản, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải sản Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1922. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Pharaoh flying fish.",
+        "size": "15 - 18 cm",
+        "distribution": "Atlantic Ocean, Pacific Ocean, Fiji, Indonesia, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Research Institute of Marine Products.",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1922. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus naresii Gunther, Zool. Challenger Exp. 31, pt. 78, 1889; Pelagic Fish, p. 36.",
+      "Cypsilurus naresi Jordan and Seale, Bull. U. S. Bur. Fisheries, Vol. 25, p. 211, 1906; Fowler, 1928.",
+      "Exocoetus naresii. M. Weber, Siboga Expeditie, Fische, P. 128, 1913.",
+      "Cypsilurus comatus Abe, Fishes Jap., Vol. 49, p. 973, 1953.",
+      "Cypsilurus comatus naresii Parin and Bessednov, Transactions of the Institute of Oceanology, Acad. Sci. USSR, Vol. 31, p. 205-285, 1960."
+    ]
+  },
+  {
+    "id": "tap2-species-160",
+    "volume": 2,
+    "speciesIndex": 160,
+    "vnName": "Cá Chuồn đầu cong",
+    "scientificName": "Cypselurus opisthopus",
+    "authorship": "Bleeker, 1886",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn thường Cypselurus Swainson",
+        "latin": "Cypselurus Swainson"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn đầu cong",
+        "size": "24 cm.",
+        "distribution": "Australia, Indonesia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1922. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Opistho flying fish.",
+        "size": "24 cm",
+        "distribution": "Australia, Indonesia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1922. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus opisthopus Bleeker, Ned. Tijds. Dierk., Vol. 3, p. 121, 1866; Gunther, 1873.",
+      "Cypselurus oligolepis Seale, Occas. Papers Bishop Mus., Vol. 4, p. 15, 1906, not of Bleeker.",
+      "Cypsilurus opisthopus Bean and Weed, Proc. U. S. Nat. Mus., Vol. 12, p. 595, 1912.",
+      "Cypselurus opisthopus Fowler, Mem. Bishop Mus., Vol. 10, p. 84, 1928; Weber and de Beaufort, 1922; Herre, 1940-41."
+    ]
+  },
+  {
+    "id": "tap2-species-161",
+    "volume": 2,
+    "speciesIndex": 161,
+    "vnName": "Cá Chuồn vây vằn",
+    "scientificName": "Cypselurus poecilopterus",
+    "authorship": "(Cuvier and Valenciennes, 1846)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn thường Cypselurus Swainson",
+        "latin": "Cypselurus Swainson"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn vây vằn",
+        "size": "15 - 16 cm. Lớn nhất : 27 cm.",
+        "distribution": "Australia, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Yellow-winged flying fish.",
+        "size": "15 - 16 cm Maximum : 27 cm.",
+        "distribution": "Australia, Indonesia, Philippines, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus poecilopterus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 19, p. 112, pl. 561, 1846; Gunther, 1866.",
+      "Cypsilurus poecilopterus Jordan and Starkes, Proc. U. S. Nat. Mus., Vol. 26, p. 542, 1903; Weber and de Beaufort, 1922.",
+      "Cypselurus poecilopterus Snyder, Proc. U. S. Nat. Mus., Vol. 42, p. 409, 1912. Fowler and Ball, 1925; Herre, 1940-41."
+    ]
+  },
+  {
+    "id": "tap2-species-162",
+    "volume": 2,
+    "speciesIndex": 162,
+    "vnName": "Cá Chuồn vây đen",
+    "scientificName": "Cypselurus bahiensis",
+    "authorship": "(Ranzani, 1842)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn thường Cypselurus Swainson",
+        "latin": "Cypselurus Swainson"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn vây đen",
+        "size": "25 - 32 cm.",
+        "distribution": "Ấn Độ Dương, Hồng hải, Hawaii, Indonesia, Philippines, Triều Tiên, Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Black-winged flying fish.",
+        "size": "25 - 32 cm",
+        "distribution": "Indian Ocean, Red Sea, Hawaii, Indonesia, Philippines, Korea, Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993"
+      }
+    },
+    "synonyms": [
+      "Exocoetus bahiensis Ranzani, Novi Comm. Acad. Sci. Inst. Bonon., Vol. 5, p. 362, pl. 38, 1842; Gunther, 1866; Bleeker, 1866-72; Day, 1878; Steindachner, 1900.",
+      "Exocoetus spilonotopterus Bleeker, Ned. Tijds. Dierk., Vol. 3, p. 113, 1866.",
+      "Cypsilurus quindecimradiatus Fowler, Proc. Acad. Nat. Sci. Phila., p.482, pl. 17, 1809.",
+      "Cypsilurus spilonopterus Jordan and Richardson, Mem. Carnegie Mus., Vol. 4, p. 176, 1902; Jordan and Dickerson, 1908.",
+      "Cypsilurus bahiensis Jenkins, Bull. U. S. Fish. Comm., Vol. 22, p. 436, 1903; Jordan and Evermann, 1905; Weber and de Beaufort, 1922; Fowler and Ball, 1925.",
+      "Cypselurus tahitensis Seale, Occas. Papers Bishop Mus., Vol. 4, p. 13, fig. 3, 1906.",
+      "Cypselurus spilonopterus Jordan and Richardson, Bull. U. S. Bur. Fisheries, Vol. 27, p. 243, 1908.",
+      "Exocoetus tahiensis Gunther, Fische der Sudsee, Vol. 3, p. 371. 1910.",
+      "Cypselurus quindecimradiatus Fowler, Proc. Acad. Nat. Sci. Phila., p. 15, 1919.",
+      "Cypselurus bahiensis Fowler, Mem. Bishop Mus., Vol. 10, p. 84. 1928."
+    ]
+  },
+  {
+    "id": "tap2-species-163",
+    "volume": 2,
+    "speciesIndex": 163,
+    "vnName": "Cá Chuồn cung",
+    "scientificName": "Cheilopogon arcticeps",
+    "authorship": "(Gunther, 1866)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn vằn Cheilopogon Lowe",
+        "latin": "Cheilopogon Lowe"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn cung",
+        "size": "19 - 23 cm.",
+        "distribution": "Australia, New Guinea, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Arc-headed flying fish.",
+        "size": "19 - 23 cm",
+        "distribution": "Australia, New Guinea, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus arcticeps Gunther, Cat. Fishes British Mus., Vol. 6, p. 289, 1866.",
+      "Cypsilurus arcticeps Fowler, Mem. Bishop Mus., Vol. 10, p. 82, 1928. Herre, 1945.",
+      "Cheilopogon (Ptenichthys) arcticeps Parin, Transactions of the Institute of Oceanology, Acad. Sci. USSR, Vol. 43, P. 79, 1961.",
+      "Cheilopogon arcticeps Parin and Bessednov, Transactions of the Institute of Oceanology, Acad. Sci. USSR, Vol. 80, p. 116, 1965."
+    ]
+  }
+]

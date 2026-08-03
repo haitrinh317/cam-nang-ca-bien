@@ -1,0 +1,484 @@
+[
+  {
+    "id": "tap2-species-50",
+    "volume": 2,
+    "speciesIndex": 50,
+    "vnName": "Cá Lẹp đỏ",
+    "scientificName": "Thrissa dussumieri",
+    "authorship": "(Cuvier and Valenciennes, 1848)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes"
+      },
+      "family": {
+        "vn": "Cá Trổng",
+        "latin": "Engraulidae"
+      },
+      "genus": {
+        "vn": "Cá Lẹp Thrissa Cuvier, 1816",
+        "latin": "Thrissa Cuvier, 1816"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "90 - 100 mm. Lớn nhất 120 mm.",
+        "distribution": "Ấn Độ, Indonesia, Malaysia, Thái Lan, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Trung Bộ và Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Gold-spotted anchovy",
+        "size": "90 - 100 mm. Maximum 120 mm.",
+        "distribution": "India, Indonesia, Malaysia, Philippines, Thailand, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Engraulis dussumieri Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.21, 1848, p.69; Bleeker, 1866; Day, 1878; Weber and de Beaufort, 1913; Herre, 1934.",
+      "Engraulis hamiltoni Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.21, p.66, 1848.",
+      "Thrissocles dussumieri McCulloch and Whitley, Mem. Queensland Mus., Vol.8, 1925, p.133; Jordan and Seale, 1926; Fowler, 1943.",
+      "Engraulis auratus Day, Proc. Zool. Soc. London, p.312, 1865.",
+      "Engraulis mystax Gunther, Cat. Fishes British Mus., Vol.7, p.397, 1868.",
+      "Stolephorus (Thrissa) dussumieri Bleeker, Atlas Ichth., Vol.6, pl.(2)260, fig.2, 1866-72.",
+      "Trichosoma adelae Rutter, Proc. Acad. Nat. Sci. Phila., p.65, 1897.",
+      "Anchovia dussumieri Seale, Philippines Jour. Sci., Vol.3, Sec.A., p.513, pl.1, 1908."
+    ]
+  },
+  {
+    "id": "tap2-species-51",
+    "volume": 2,
+    "speciesIndex": 51,
+    "vnName": "Cá Lẹp hàm dài",
+    "scientificName": "Thrissa setirostris",
+    "authorship": "(Broussonet, 1782)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes"
+      },
+      "family": {
+        "vn": "Cá Trổng",
+        "latin": "Engraulidae"
+      },
+      "genus": {
+        "vn": "Cá Lẹp Thrissa Cuvier, 1816",
+        "latin": "Thrissa Cuvier, 1816"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "12 - 13 cm. Lớn nhất 15 cm.",
+        "distribution": "Đông Phi, Hồng Hải, Ấn Độ, Indonesia, Malaysia, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Vịnh Thái Lan.",
+        "specimen": "Phân viện Hải dương học Hải phòng.",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Long-jawed thryssa",
+        "size": "12 - 13 cm. Maximum 15 cm.",
+        "distribution": "East Africa, Red Sea, India, Indonesia, Malaysia, Thailand, China, Vietnam. Gulf of Tonkin, Gulf of Thailand.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupea setirostris Broussonet, Ichth., Dec.1, No Panigation, 1782, pl.2.",
+      "Clupea mystacina Schneider, Syst. Ichth. Bloch, p.428, 1801.",
+      "Engraulis setirostris Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.21, p.69; Bleeker, 1866-72; Weber and de Beaufort, 1913.",
+      "Clupea seticornis Rees, New Cyclopedia, Vol.8, No.2, pt.16, 1807.",
+      "Thrissa macrognathos Bleeker, Verh. Bat. Gen., Vol.22, 1849, p.14.",
+      "Stolephorus setirostris Bleeker, Nat. Tijds. Dierk., Vol.2, 1865, p.291.",
+      "Stolephorus (Thrissa) setirostris Martens, Preuss. Exped. Ost. Asien, Vol.1, p.404, 1876.",
+      "Thrissocles setirostris Fowler, Copeia, No.58, 1918, p.62; Herre, 1941."
+    ]
+  },
+  {
+    "id": "tap2-species-52",
+    "volume": 2,
+    "speciesIndex": 52,
+    "vnName": "Cá Lẹp vàng vây ngực dài",
+    "scientificName": "Setipinna taty",
+    "authorship": "(Cuvier and Valenciennes, 1848)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes"
+      },
+      "family": {
+        "vn": "Cá Trổng",
+        "latin": "Engraulidae"
+      },
+      "genus": {
+        "vn": "Cá Lẹp vàng Setipinna Swainson, 1839",
+        "latin": "Setipinna Swainson, 1839"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "13 - 14 cm. Lớn nhất 20 cm.",
+        "distribution": "Ấn Độ, Indonesia, Triều Tiên, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Durand, 1949."
+      },
+      "en": {
+        "commonName": "Hair-finned anchovy",
+        "size": "13 - 14 cm. Maximum 20 cm.",
+        "distribution": "India, Indonesia, Korea, Thailand, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Durand, 1949."
+      }
+    },
+    "synonyms": [
+      "Setipinna Swainson, Nat. Hist. Animals, Vol.2, 1839, p.292. Type: Setipinna megalura.",
+      "Telara Valenciennes, Hist. Nat. Poiss., Vol.21, 1848, p.54.",
+      "Engraulis taty Cuvier and Valenciennes, Hist. Nat. Poiss. Vol.21, 1848, p.60; Tirant, 1885.",
+      "Engraulis tenuifilis Valenciennes, Hist. Nat. Poiss., Vol.21, p.62, 1848.",
+      "Engraulis telaroides Bleeker, Verh. Batav. Genoot. Kunst. Wet., Vol.22, p.13, 1849.",
+      "Setipinna taty Bleeker, Atlas Ichth. Ind. Neerland, Vol.6, 1866-72, p.136; Brourret, 1927; Chevey, 1932; Durand and Poulain, 1949.",
+      "Setipinna giberti Jordan and Starks, Proc. U.S. Nat. Mus., Vol.28, p.194, fig.1, 1905."
+    ]
+  },
+  {
+    "id": "tap2-species-53",
+    "volume": 2,
+    "speciesIndex": 53,
+    "vnName": "Cá Lành canh đầu thon",
+    "scientificName": "Coilia ramcarati",
+    "authorship": "(Buchanan - Hamilton, 1822)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes"
+      },
+      "family": {
+        "vn": "Cá Trổng",
+        "latin": "Engraulidae"
+      },
+      "genus": {
+        "vn": "Cá Lành canh Coilia Gray, 1831",
+        "latin": "Coilia Gray, 1831"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "15 - 18 cm. Lớn nhất 20 cm.",
+        "distribution": "Ấn Độ, Indonesia, Thái Lan, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Tirant, 1885; Durand, 1949. Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "Ramcarat grenadier anchovy",
+        "size": "15 - 18 cm. Maximum 20 cm.",
+        "distribution": "India, Indonesia, Thailand, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, rather abundant.",
+        "literature": "Tirant, 1885; Durand, 1949. Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Coilia Gray, Illustr. Ind. Zool., Harwicke, Vol.1, 1831, pl.(2)82; Idem, 1831.",
+      "Mystus Lacepede, Hist. Nat. Poiss., Vol.5, 1803, p.466. Type: Mystus clupeoides Lacepede = Clupea mystus Linnaeus.",
+      "Choetomus McClelland, Calcutta J. Nat. Hist., Vol.4, 1843, p.405.",
+      "Leptonurus Jordan and Seale, Copeia, No.141, 1925, p.28.",
+      "Demicoilia Jordan and Seale, Copeia, No.141, p.28, 1925.",
+      "Mystus ramcarati Buchanan - Hamilton, Fish. Ganges, 1822, p.233, 382.",
+      "Coilia quadrigesimalis Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.21, 1848, p.83.",
+      "Coilia ramcarati Day, Fish. India, pt.4, 1878, p.731, pl.194, fig.4."
+    ]
+  },
+  {
+    "id": "tap2-species-54",
+    "volume": 2,
+    "speciesIndex": 54,
+    "vnName": "Cá Lành canh",
+    "scientificName": "Coilia rebentischii",
+    "authorship": "Bleeker, 1858",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes"
+      },
+      "family": {
+        "vn": "Cá Trổng",
+        "latin": "Engraulidae"
+      },
+      "genus": {
+        "vn": "Cá Lành canh Coilia Gray, 1831",
+        "latin": "Coilia Gray, 1831"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "14 - 15 cm. Lớn nhất 17 cm.",
+        "distribution": "Indonesia, Việt Nam. Vịnh Thái Lan.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Kuronuma, 1961."
+      },
+      "en": {
+        "commonName": "Rebentisch's grenadier anchovy",
+        "size": "14 - 15 cm. Maximum 17 cm.",
+        "distribution": "Indonesia, Vietnam. Gulf of Thailand.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Kuronuma, 1961."
+      }
+    },
+    "synonyms": [
+      "Coilia rebentischii Bleeker, Act. Soc. Sci. Indo - Neerl., Vol.5, 1858, p.5; Weber and de Beaufort, 1913; Fowler, 1941."
+    ]
+  },
+  {
+    "id": "tap2-species-55",
+    "volume": 2,
+    "speciesIndex": 55,
+    "vnName": "Cá Lành canh trắng",
+    "scientificName": "Coilia grayii",
+    "authorship": "Richardson, 1844",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes"
+      },
+      "family": {
+        "vn": "Cá Trổng",
+        "latin": "Engraulidae"
+      },
+      "genus": {
+        "vn": "Cá Lành canh Coilia Gray, 1831",
+        "latin": "Coilia Gray, 1831"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "20 - 25 cm. Lớn nhất 40 cm.",
+        "distribution": "Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Vương Văn Tân, 1963. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "White taper tailled anchovy",
+        "size": "20 - 25 cm. Maximum 40 cm.",
+        "distribution": "Thailand, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Wang, 1963. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Coilia grayii Richardson, Voy. Sulphur. Ichth., 1844, p.99, pl.54, fig.1-2; Gunther, 1868; Chabanaud, 1924; Brourret, 1927; Pellegrin, 1934; Chevey and Lemasson, 1937.",
+      "Coilia grayii Bleeker, Verh. Batav. Genootsch, Vol.25, p.18, 1853; Jordan and Seale, 1926.",
+      "Coilia (Choetomus) grayii Bleeker, Nederland Tijds. Dierk., Vol.4, p.148, 1878.",
+      "Mystus grayii Rutter, Proc. Acad. Nat. Sci. Phila., p.66, 1897."
+    ]
+  },
+  {
+    "id": "tap2-species-56",
+    "volume": 2,
+    "speciesIndex": 56,
+    "vnName": "Cá Lành canh đuôi phượng",
+    "scientificName": "Coilia mystus",
+    "authorship": "(Linnaeus, 1758)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes"
+      },
+      "family": {
+        "vn": "Cá Trổng",
+        "latin": "Engraulidae"
+      },
+      "genus": {
+        "vn": "Cá Lành canh Coilia Gray, 1831",
+        "latin": "Coilia Gray, 1831"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "15 - 18 cm. Lớn nhất 19 cm.",
+        "distribution": "Ấn Độ, Malaysia, Nhật bản, Triều Tiên, Trung Quốc, Campuchia, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Vương Văn Tân, 1963. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Phoenix-tailed anchovy",
+        "size": "15 - 18 cm. Maximum 19 cm.",
+        "distribution": "India, Malaysia, Japan, Korea, China, Campuchia, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Wang, 1963. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupea mystus Linnaeus, Syst. Nat. ed.10, Vol.1, 1758, p.319.",
+      "Coilia nasus Temminck and Schlegel, Fauna Japonica, Pisces, p.243, pl.109, fig.4, 1846.",
+      "Mystus clupeoides Lacepede, Hist. Nat. Poiss., Vol.5, p.466, 1803.",
+      "Choetomus playfairi McCelland, 1844; Calcutta Jour. Nat. Hist., Vol.4, p.405, pl.24, fig.3, 1844; Richardson, 1844.",
+      "Osteoglossum prionostoma Basilewsky, Nov. Mem. Soc. Nat. Moscow, Vol.10, p.244, 1855.",
+      "Coilia mystus Jordan and Seale, Bull. Mus. Comp. Zool. Harv. Cool., Vol.67, 1926, p.359; Chevey, 1936.",
+      "Coilia lindmani Bleeker, Ast. Soc. Sci. Indo-Neerl., Vol.3, p.48, 1858.",
+      "Coilia clupeoides Gunther, Cat. Fishes Brit. Mus., Vol.7, 1868, p.404; Fowler and Bean, 1902; Tirant, 1885; Chabanaud, 1924; Gruvel, 1925; Broureet, 1927.",
+      "Coilia brachygnathus Krayenberg and Pappenhiem, Sber. Ges. Nat. Freunde Berl., p.96, 1908."
+    ]
+  },
+  {
+    "id": "tap2-species-57",
+    "volume": 2,
+    "speciesIndex": 57,
+    "vnName": "Cá Lành canh chóp vàng",
+    "scientificName": "Coilia dussumieri",
+    "authorship": "Valenciennes, 1848",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes"
+      },
+      "family": {
+        "vn": "Cá Trổng",
+        "latin": "Engraulidae"
+      },
+      "genus": {
+        "vn": "Cá Lành canh Coilia Gray, 1831",
+        "latin": "Coilia Gray, 1831"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "[KHÔNG RÕ]",
+        "distribution": "Ấn Độ, Srilanca, Indonesia, Malaysia, Thái Lan, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Ít gặp.",
+        "literature": "Durand, 1949. Whitehead, 1972."
+      },
+      "en": {
+        "commonName": "Gold-spotted grenadier anchovy",
+        "size": "[KHÔNG RÕ]",
+        "distribution": "India, Sri Lanka, Indonesia, Malaysia, Thailand, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Durand, 1949. Whitehead, 1972."
+      }
+    },
+    "synonyms": [
+      "Coilia dussumieri Valenciennes, Hist. Nat. Poiss., Vol.21, 1848, p.81, pl.610.",
+      "Leptonurus chrysostigma Bleeker, Verh. Mus., Vol.7, 1849, p.403.",
+      "Demicoilia margaritifera Jordan and Seale, Bull. Mus. Comp. Zool. Harv., Vol.67, 1926, p.363.",
+      "Choetomus playfairii McClelland, Calcutta J. Nat. Hist., Vol.4, 1844, p.405, pl.24, fig.3."
+    ]
+  },
+  {
+    "id": "tap2-species-58",
+    "volume": 2,
+    "speciesIndex": 58,
+    "vnName": "Cá Mè gà",
+    "scientificName": "Coilia macrognathos",
+    "authorship": "Bleeker, 1852",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes"
+      },
+      "family": {
+        "vn": "Cá Trổng",
+        "latin": "Engraulidae"
+      },
+      "genus": {
+        "vn": "Cá Lành canh Coilia Gray, 1831",
+        "latin": "Coilia Gray, 1831"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "9 - 13 cm.",
+        "distribution": "Thái Lan, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Durand, 1949. Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "Macro tiper-tailed anchovy",
+        "size": "9 - 13 cm.",
+        "distribution": "Thailand, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Durand, 1949. Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Coilia macrognathos Bleeker, Nat. Tijds. Ned.-Ind., Vol.3, p.436, 1852.",
+      "Coilia macrognathos aequidentata Chabanaud, Bull. Mus. Nat. Paris, Vol.30, No.1, p.59-60, 1924; Gruvel, 1925; Brourret, 1927; Chevey and Polain, 1940."
+    ]
+  },
+  {
+    "id": "tap2-species-59",
+    "volume": 2,
+    "speciesIndex": 59,
+    "vnName": "Cá Lành canh",
+    "scientificName": "Coilia lindmani",
+    "authorship": "Bleeker, 1858",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Trích",
+        "latin": "Clupeiformes"
+      },
+      "family": {
+        "vn": "Cá Trổng",
+        "latin": "Engraulidae"
+      },
+      "genus": {
+        "vn": "Cá Lành canh Coilia Gray, 1831",
+        "latin": "Coilia Gray, 1831"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "19 cm.",
+        "distribution": "Indonesia, Thái Lan, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Durand, 1949. Kuronuma, 1961."
+      },
+      "en": {
+        "commonName": "Lindman's tiper-tailed anchovy",
+        "size": "19 cm.",
+        "distribution": "Indonesia, Thailand, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Durand, 1949. Kuronuma, 1961."
+      }
+    },
+    "synonyms": [
+      "Coilia lindmani Bleeker, Act. Soc. Sci. Indo. Neerl. III; Zesde Bijdr. Vischfauna Sumatra, 1858, p.48; Chabanaud, 1924; Gruvel, 1925; Brourret, 1927."
+    ]
+  }
+]

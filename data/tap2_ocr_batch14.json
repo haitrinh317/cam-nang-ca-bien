@@ -1,0 +1,491 @@
+[
+  {
+    "id": "tap2-species-114",
+    "volume": 2,
+    "speciesIndex": 114,
+    "vnName": "Cá Chình rắn vện",
+    "scientificName": "Ophichthys evermani",
+    "authorship": "Jordan and Richardson, 1911",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình rắn",
+        "latin": "Ophichthyidae"
+      },
+      "genus": {
+        "vn": "Cá Chình rắn Ophichthys Ahl",
+        "latin": "Ophichthys Ahl"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình rắn vện",
+        "size": "50 - 70 cm. Lớn nhất 88 cm.",
+        "distribution": "Australia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường. 1993."
+      },
+      "en": {
+        "commonName": "Spotted snake eel.",
+        "size": "50 - 70 cm. Maximum 88 cm.",
+        "distribution": "Australia, Philippines, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Ophichthys cephalozona var. Gunther, Cat. Fishes British Mus., Vol.8, p.70, 1870.",
+      "Ophichthus cephalozona Jordan and Snyder, Proc. U. S. Nat. Mus., Vol.23, p.872, 1901.",
+      "Ophichthus evermanni Jordan and Richardson, Mem. Carnegie Mus., Vol.4, p.172, 1909; Herre, 1953.",
+      "Ophichthys evermani Chen, Bull. Biol. Dep. Sun Yet-sen Univ., Vol.1, No.1, p.21, pl.1, fig.3, 1929."
+    ]
+  },
+  {
+    "id": "tap2-species-115",
+    "volume": 2,
+    "speciesIndex": 115,
+    "vnName": "Cá Chình rắn mõm nhọn",
+    "scientificName": "Ophichthys apicalis",
+    "authorship": "Bennett, 1830",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình rắn",
+        "latin": "Ophichthyidae"
+      },
+      "genus": {
+        "vn": "Cá Chình rắn Ophichthys Ahl",
+        "latin": "Ophichthys Ahl"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình rắn mõm nhọn",
+        "size": "26 - 43 cm. Lớn nhất : 53 cm.",
+        "distribution": "Madagascar, Ấn Độ, Indonesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Pointed snake eel.",
+        "size": "26 - 43 cm. Maximum 53cm.",
+        "distribution": "Madagascar, India, Indonesia, Philippines, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Ophisurus apicalis Bennett, Cat. Zool. Spec. in Memoir, Life Raffles, p.692, 1830.",
+      "Ophisurus compar Richardson, Zool. Voy. Erebus and Terror, p.105, 1844.",
+      "Ophisurus spadiceus Richardson, Ichth. China and Japan, p.313, 1846.",
+      "Ophisurus bangko Bleeker, Verh. Bat. Gen., Vol.25, Muraenidae, p.67, 1852.",
+      "Centrurophis spadiceus Kaup, Cat. Apodal Fishes British Mus., p.6, 1856.",
+      "Centrurophis compar Kaup, Cat. Apodal Fishes British Mus., p.6, 1856.",
+      "Ophisurus diepenhorsti Bleeker, Acta Soc. Indo-Neerl., Vol.8, Achtste Bijdr, Sumatra, p.85, 1860.",
+      "Ophichthys bangko Bleeker, Atlas Ichth., Vol.4, p.51, pl.14, fig.1, 1864.",
+      "Ophichthys diepenhorsti Bleeker, Atlas Ichth., Vol.4, p.52, pl.15, fig.14, 1864.",
+      "Ophichthys apicalis Gunther, Cat. Fishes British Mus., Vol.8, p.70, 1870; Weber and de Beaufort, 1916; Chen, 1929; Fowler, 1932.",
+      "Ophichthus apicalis Herre, Philippine Jour. Sci., Vol.23, p.174, 1923."
+    ]
+  },
+  {
+    "id": "tap2-species-116",
+    "volume": 2,
+    "speciesIndex": 116,
+    "vnName": "Cá Chình rắn mắt to",
+    "scientificName": "Ophichthys celebicus",
+    "authorship": "Bleeker, 1856",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình rắn",
+        "latin": "Ophichthyidae"
+      },
+      "genus": {
+        "vn": "Cá Chình rắn Ophichthys Ahl",
+        "latin": "Ophichthys Ahl"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình rắn mắt to",
+        "size": "30 - 40 cm. Lớn nhất 51 cm.",
+        "distribution": "Indonesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Big-eyed snake eel.",
+        "size": "30 - 40 cm. Maximum 51 cm.",
+        "distribution": "Indonesia, Philippines, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Ophisurus celebicus Bleeker, Acta Soc. Sci. Indo-Neerl., Vol.1, Visschen Menado, p.70, 1856.",
+      "Ophisurus brockmeyeri Bleeker, Acta Soc. Sci. Indo-Neerl., Vol.1, Visschen Menado, p.71, 1856.",
+      "Ophichthys amboinensis Bleeker, Ned. Tijds. Dierk., Vol.2, p.45, 1864-65.",
+      "Ophichthys celebicus Bleeker, Atlas Ichth., Vol.4, p.54, pl.15, fig.3, 1864; Weber and de Beaufort, 1916.",
+      "Ophichthys celebicus Herre, Philippine Jour. Sci., Vol.23, p.179, fig.6, 1923."
+    ]
+  },
+  {
+    "id": "tap2-species-117",
+    "volume": 2,
+    "speciesIndex": 117,
+    "vnName": "Cá Chình rắn hai hàng răng",
+    "scientificName": "Ophichthys rutidodermatoides",
+    "authorship": "(Bleeker, 1852)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình rắn",
+        "latin": "Ophichthyidae"
+      },
+      "genus": {
+        "vn": "Cá Chình rắn Ophichthys Ahl",
+        "latin": "Ophichthys Ahl"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình rắn hai hàng răng",
+        "size": "68 cm.",
+        "distribution": "Indonesia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Weber and de Beaufort, 1916. Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Biserial-teethed snake eel.",
+        "size": "68 cm.",
+        "distribution": "Indonesia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Weber and de Beaufort, 1916. Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Ophisurus breviceps Cantor, Jour. Asiatic Soc. Bengal, Vol.18, p.1308, 1850.",
+      "Ophisurus rutidodermatoides Bleeker, Verh. Bat. Gen., Vol.25, 1852.",
+      "Pisoodonophis rutidodermatoides Kaup, Cat. Apodal Fishes British Mus., p.18, 1856.",
+      "Ophichthys rutidodermatoides Bleeker, Atlas Ichth., Vol.4, p.55, pl.16, fig.1, 1864.",
+      "Ophichthys rhytidodermatoides Gunther, Cat. Fishes British Mus., Vol.8, p.62, 1870, in part; Weber & de Beaufort, 1916.",
+      "Ophichthus rutidodermatoides Herre, Philippine, Jour. Sci., Vol.23, p.178, 1923."
+    ]
+  },
+  {
+    "id": "tap2-species-118",
+    "volume": 2,
+    "speciesIndex": 118,
+    "vnName": "Cá Nhệch răng hạt",
+    "scientificName": "Pisoodonophis boro",
+    "authorship": "(Hamilton [not of Buchanan], 1822)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình rắn",
+        "latin": "Ophichthyidae"
+      },
+      "genus": {
+        "vn": "Cá Nhệch Pisoodonophis Kaup",
+        "latin": "Pisoodonophis Kaup"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhệch răng hạt",
+        "size": "22 - 76 cm. Lớn nhất 93 cm",
+        "distribution": "Ấn Độ, Australia, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Giant snake eel.",
+        "size": "22 - 76 cm. Maximum : 93 cm.",
+        "distribution": "India, Australia, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively numerous.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Ophisurus boro Hamilton (not of Buchanan), Fishes Ganges, p.20 and p.363, 1822.",
+      "Ophisurus haranchar Hamilton (not of Buchanan), Fishes Ganges, p.21 and p.363, 1822.",
+      "Ophisurus caudatus McClelland, Calcutta Jour. Nat. Hist., Vol.5, p.211, 1844.",
+      "Ophisurus potamophilus Bleeker, Nat. Tijds. Ned.-Ind., Vol.5, p.458, 1853.",
+      "Pisodonophis boro Kaup, Cat. Apodal Fishes British Mus., p.17, 1856.",
+      "Pisodonophis potamophilus Kaup, Cat. Apodal Fishes British Mus., p.20, 1856.",
+      "Ophichthys boro Gunther, Cat. Fishes British Mus., Vol.8, p.77, 1870.",
+      "Pisoodonophis boro Weber and de Beaufort, Fishes of Indo- Australian Archipelago, p.297, fig.138, 140 and 141, 1916; Fowler, 1927.",
+      "Pisodonophis boro Herre, Philippine Jour. Sci., Vol.23, p.168, fig.3, 1923."
+    ]
+  },
+  {
+    "id": "tap2-species-119",
+    "volume": 2,
+    "speciesIndex": 119,
+    "vnName": "Cá Nhệch ăn cua",
+    "scientificName": "Pisoodonophis cancrivorus",
+    "authorship": "Richardson, 1844",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình rắn",
+        "latin": "Ophichthyidae"
+      },
+      "genus": {
+        "vn": "Cá Nhệch Pisoodonophis Kaup",
+        "latin": "Pisoodonophis Kaup"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhệch ăn cua",
+        "size": "50 - 70 cm. Lớn nhất 89 cm.",
+        "distribution": "Australia, Samoa, Indonesia, Arabia, Madagascar, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Cancrivorus snake eel.",
+        "size": "50 - 70 cm. Maximum 89 cm.",
+        "distribution": "Australia, Samoa, Indonesia, Arabia, Madagascar, Japan, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Ophisurus cancrivorus Richardson, Voy. Erebus and Terror, Fishes, p.97, pl.50, fig.6-9, 1844.",
+      "Ophisurus sinensis Richardson, Ibid., p.98.",
+      "Ophisurus bacciden Cantor, Jour. Asiatic Soc. Bengal, Vol.18, p.1302, 1850.",
+      "Ophisurus schaapi Bleeker, Nat. Tijds. Ned.-Ind., Vol.3, p.735, 1852.",
+      "Ophisurus brachysoma Bleeker, Ibid., p.776, 1852.",
+      "Pisodonophis cancrivorus Kaup, Cat. Apodal Fishes British Mus., p.15, 1856.",
+      "Pisoodonophis brachysoma Bleeker, Atlas Ichth., Vol.14, p.60, 1864.",
+      "Pisoodonophis moluccensis Bleeker, Atlas Ichth., Vol.14, p.72, 1864.",
+      "Pisoodonophis cancrivorus Kner, Reise Novara, Fische, p.379, 1865-67. Jordan and Richardson, 1908; Weber and de Beaufort, 1916; Fowler, 1918.",
+      "Pisodonophis cancrivorus Herre, Philippine Jour. Sci., Vol.23, p.169, 1923. Fowler, 1927.",
+      "Pisoodonophis zophistius Jordan and Snyder, Proc. U. S. Nat. Mus., Vol.23, p.868, fig.15, 1901.",
+      "Pisoodonophis macgregori Jordan and Richardson, Bull. U. S. Bur. Fisheries, Vol.27, p.238, fig.2, 1908."
+    ]
+  },
+  {
+    "id": "tap2-species-120",
+    "volume": 2,
+    "speciesIndex": 120,
+    "vnName": "Cá Chình râu Trung Hoa",
+    "scientificName": "Cirrhimuraena chinensis",
+    "authorship": "Kaup, 1856",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình rắn",
+        "latin": "Ophichthyidae"
+      },
+      "genus": {
+        "vn": "Cá Chình râu Cirrhimuraena Kaup",
+        "latin": "Cirrhimuraena Kaup"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình râu Trung Hoa",
+        "size": "20 - 30 cm. Lớn nhất 40 cm.",
+        "distribution": "Indonesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Chinese fringelip snake eel.",
+        "size": "20 - 30 cm. Maximum 40 cm.",
+        "distribution": "Indonesia, Philippines, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Cirrhimuraena chinensis Kaup, Cat. Apodal Fishes British Mus., p.27, 1856. Weber and de Beaufort, 1916; Herre, 1934.",
+      "Ophisurus polyodon Bleeker, Acta Soc. Sci. Indo-Neerl., Vol.8, Achtste Bijdr. Vischfauna Sumatra, p.86, 1860.",
+      "Cirrhimuraena polyodon Bleeker, Atlas Ichth., Vol.4, p.41, pl.8, fig.1, 1864.",
+      "Ophichthys chinensis Gunther, Cat. Fishes British Mus., Vol.8, p.75, 1870."
+    ]
+  },
+  {
+    "id": "tap2-species-121",
+    "volume": 2,
+    "speciesIndex": 121,
+    "vnName": "Cá Chình râu phương đông",
+    "scientificName": "Cirrhimuraena orientalis",
+    "authorship": "Nguyen, 1992",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình rắn",
+        "latin": "Ophichthyidae"
+      },
+      "genus": {
+        "vn": "Cá Chình râu Cirrhimuraena Kaup",
+        "latin": "Cirrhimuraena Kaup"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình râu phương đông",
+        "size": "54 cm.",
+        "distribution": "Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Rất hiếm.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Oriental fringelip snake eel.",
+        "size": "54 cm.",
+        "distribution": "Vietnam. Gulf fo Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Very rare.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Cirrhimuraena orietalis Nguyen. The Marine Fishes of Vietnam, Vol.2, No.2, pp.44-45, fig.18, 1992."
+    ]
+  },
+  {
+    "id": "tap2-species-122",
+    "volume": 2,
+    "speciesIndex": 122,
+    "vnName": "Cá Chình sấu",
+    "scientificName": "Brachysomophis crocodilinus",
+    "authorship": "(Bennett, 1831)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình rắn",
+        "latin": "Ophichthyidae"
+      },
+      "genus": {
+        "vn": "Cá Chình râu ngắn Brachysomophis Kaup",
+        "latin": "Brachysomophis Kaup"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình sấu",
+        "size": "40 - 70 cm. Lớn nhất 137 cm.",
+        "distribution": "Arabia, Nam Phi, Australia, Indonesia, Philippnes, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Weber and de Beaufort, 1916. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Crocodile sand eel, Crocodile snake eel.",
+        "size": "40 - 70 cm. Maximum 137 cm.",
+        "distribution": "Arabia, South Africa, Australia, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Weber and de Beaufort, 1916. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Ophisurus crocodilinus Bennett, Proc. Zool. Soc. London, p.32, 1833.",
+      "Brachysomophis horridus Kaup, Cat. Apodal Fishes British Mus., p.9, 1856; Bleeker, 1868.",
+      "Ophichthys crocodilinus Gunther, Cat. British Mus., Vol.8, p.64, 1870.",
+      "Brachysomophis crocodilinus Jordan and Snyder, Proc. U. S. Nat. Mus., Vol.23, p.875, 1901."
+    ]
+  },
+  {
+    "id": "tap2-species-123",
+    "volume": 2,
+    "speciesIndex": 123,
+    "vnName": "Cá Chình hậu môn trước",
+    "scientificName": "Dysomma anguillaris",
+    "authorship": "Barnard, 1925",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình hậu môn trước",
+        "latin": "Dysommidae"
+      },
+      "genus": {
+        "vn": "Cá Chình hậu môn trước Dysomma Alcock",
+        "latin": "Dysomma Alcock"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình hậu môn trước",
+        "size": "14 - 44 cm.",
+        "distribution": "Nam Phi, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Mustard eel, Arrowtooth eel.",
+        "size": "14 - 44 cm.",
+        "distribution": "South Africa, Japan, China, Vietnam. Gulf fo Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Dysomma anguillare Barnard, Ann. South Africa Mus., Vol.21, p.1-1065, 1925-27. Bohlke, 1949.",
+      "Dysomma anguillaris Zhang, Nam Hải Ngư loại chí, p.183, fig.150, 1962.",
+      "Synomyrus angustus Lin., Lingnan Sci. Jour., Vol.12(1), p.94, fig.1, 1933."
+    ]
+  }
+]

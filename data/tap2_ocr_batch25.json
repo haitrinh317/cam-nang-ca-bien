@@ -1,0 +1,472 @@
+[
+  {
+    "id": "tap2-species-224",
+    "volume": 2,
+    "speciesIndex": 224,
+    "vnName": "Cá Chìa vôi không vây",
+    "scientificName": "Solenognathus hardwickii",
+    "authorship": "(Gray, 1830)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi không vây đuôi Solenognathus Swainson",
+        "latin": "Solenognathus Swainson"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chìa vôi không vây",
+        "size": "26 - 47 cm.",
+        "distribution": "Đông Phi, New Zealand, Ấn Độ, Indonesia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Spiny seadragon",
+        "size": "26 - 47 cm.",
+        "distribution": "East Africa, New Zealand, India, Indonesia, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Syngnathus hardwickii Gray, Illust. Ind. Zool., pl.89, fig.3, 1830-34.",
+      "Solenognathus hardwickii Kaup, Cat. Lophobr. Fish., p.20; Gunther, 1870; Chen, 1935.",
+      "Solenognathus guntheri Duncker, Mitt. Naturh. Mus. Hamburg, Vol.32, p.65, 1915.",
+      "Solenognathus guntheri Duncker, in Weber and de Beaufort, Fishes Indo-Australian archipelago, Vol.4, p.67, fig.29, 1922."
+    ]
+  },
+  {
+    "id": "tap2-species-225",
+    "volume": 2,
+    "speciesIndex": 225,
+    "vnName": "Cá Chìa vôi sừng",
+    "scientificName": "Syngnathoides biaculeatus",
+    "authorship": "(Bloch, 1785)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi sừng Syngnathoides Bleeker",
+        "latin": "Syngnathoides Bleeker"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chìa vôi sừng",
+        "size": "26 - 30 cm.",
+        "distribution": "Đông Phi, Samoa, Madagascar, Hồng Hải, New Guinea, Australia, Indoneisa, Malaysia, Philippines, Thái Lan, Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962."
+      },
+      "en": {
+        "commonName": "Horned pipefish.",
+        "size": "26 - 30 cm.",
+        "distribution": "East Africa, Samoa, Madagascar, Red Sea, New Guinea, Guinea, Australia, Indonesia, Malaysia, Philippines, Thailand, Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962."
+      }
+    },
+    "synonyms": [
+      "Syngnathoides biaculeatus Bloch, Naturges-Ausland Fische, Vol.1, p.10, pl.12, fig.1-2, 1785; Bloch and Schneider, 1801; Cantor, 1850.",
+      "Gastrotokeus biaculeatus Peters, Archiv Naturges., Vol.1, p.277, 1855; Bleeker, 1858; Dumeril, 1870; Gunther, 1870; Klunzinger, 1871; Day, 1878; Duncker, 1910.",
+      "Gasterotokeus biaculeatus Castelnau, Proc; Acclimat. Soc. Victoria, Vol.2, p.120, 1873; Jordan and Seale, 1905; Evermann and Seale, 1907; Jordan and Richardson, 1908; Weber, 1913.",
+      "Syngnathoides biaculeatus McCulloch, Check list Fish New South Wales, p.27, 1919; Weber and de Beaufort, 1922; Fowler, 1927; Herre, 1940-41.",
+      "Syngnathus tetragonus Thunberg, Beskrifl., Physiogr. Selsk. Handlgr. Lund, Vol.1; no.4, p.301, 1776-1786.",
+      "Syngnathoides blochii Bleeker, Nat. Tijds. Ned.-Ind, Vol.2, pp.231 and 259, 1851."
+    ]
+  },
+  {
+    "id": "tap2-species-226",
+    "volume": 2,
+    "speciesIndex": 226,
+    "vnName": "Cá Chìa vôi đuôi ngắn",
+    "scientificName": "Microphis boaja",
+    "authorship": "(Bleeker, 1851)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi đuôi ngắn Microphis (Kaup) Duncker",
+        "latin": "Microphis (Kaup) Duncker"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chìa vôi đuôi ngắn",
+        "size": "43 cm.",
+        "distribution": "Indonesia, Malaysia, Thái Lan, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Weber and de Beaufort, 1922. Trần Định, 1985."
+      },
+      "en": {
+        "commonName": "Short-tailed pipefish.",
+        "size": "43 cm.",
+        "distribution": "Indonesia, Malaysia, Thailand, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Weber and de Beaufort, 1922. Tran, 1985."
+      }
+    },
+    "synonyms": [
+      "Syngnathus boaja Bleeker, Nat. Tijds. Ned.-Indie, Vol.1, p.16, 1851.",
+      "Doryichthys spinosus Kaup, Cat. Lophobr. Fish, p.57, 1856.",
+      "Microphis boaja Bleeker, Acta. Soc. Sci. Indo-Neerl., Vol.8, p.8, 1860, Bijdr. Vischfauna Sumatra, p.63; Dmeril, 1870; Duncker, 1915.",
+      "Doryichthys boaja Gunther, Cat. British Mus., Vol.8, p.180, 1870; Bleeker, 1873; Steindachner, 1881.",
+      "Syngnathus jullieni Sauvage, Revue et Mag. de Zool., Vol.2, no.3, p.338, 1874.",
+      "Syngnathus zonatus Karoli, Termeszetrajzi Fuzetek, Vol.5, p.39, 1882.",
+      "Doryichthys boaja Volz, Zoll. Jahrb. Abt. System, Vol.19, p.411, 1903; Duncker, 1904."
+    ]
+  },
+  {
+    "id": "tap2-species-227",
+    "volume": 2,
+    "speciesIndex": 227,
+    "vnName": "Cá Ngựa Nhật Bản",
+    "scientificName": "Hippocampus japonicus",
+    "authorship": "Kaup, 1856",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Ngựa Hippocampus Rafinesque",
+        "latin": "Hippocampus Rafinesque"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Ngựa Nhật Bản",
+        "size": "8 - 10 cm.",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Japanese seahorse.",
+        "size": "8 - 10 cm.",
+        "distribution": "Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hippocampus japonicus Kaup, Cat. Lophobr. Fish., p.7, 1856; Redali, 1924; Chen, 1935."
+    ]
+  },
+  {
+    "id": "tap2-species-228",
+    "volume": 2,
+    "speciesIndex": 228,
+    "vnName": "Cá Ngựa gai",
+    "scientificName": "Hippocampus histrix",
+    "authorship": "Kaup, 1856",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Ngựa Hippocampus Rafinesque",
+        "latin": "Hippocampus Rafinesque"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Ngựa gai",
+        "size": "14 - 15 cm. Lớn nhất 24 cm.",
+        "distribution": "Hồng Hải, Zanzibar, Hawaii, Tahiti, Indonesia, Malaysia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Weber and de Beaufort, 1922. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Spiny seahorse.",
+        "size": "14 - 15 cm. Maximum 24 cm.",
+        "distribution": "Red Sea, Zanzibar, Hawaii, Tahiti, Indonesia, Malaysia, Japan, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Weber and de Beaufort, 1922. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hippocampus histrix Kaup, Cat. Lophobr. Fish., p.17, 1856; Gunther, 1870; Dumeril, 1870; Day, 1888; Fowler, 1935."
+    ]
+  },
+  {
+    "id": "tap2-species-229",
+    "volume": 2,
+    "speciesIndex": 229,
+    "vnName": "Cá Ngựa đen",
+    "scientificName": "Hippocampus kuda",
+    "authorship": "Bleeker, 1852",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Ngựa Hippocampus Rafinesque",
+        "latin": "Hippocampus Rafinesque"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Ngựa đen",
+        "size": "15 - 20 cm. Lớn nhất 30 cm.",
+        "distribution": "Ấn Độ Dương, Australia, Hawaii, New Guinea, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Spotted seahorse, Yellow seahorse.",
+        "size": "15 - 20 cm. Maximum 30 cm.",
+        "distribution": "Indian Ocean, Australia, Hawaii, New Guinea, Malaysia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hippocampus kuda Bleeker, Nat. Tijds. Ned.-Ind., Vol.3, p.82, 1852; Dumeril, 1870; Jordan and Snyder, 1901; Jordan and Seale, 1907; Weber and de Beaufort, 1922; Fowler, 1928; Herre, 1953.",
+      "Hippocampus moluccensis Bleeker, Nat. Tijds. Ned.-Ind., Vol.3, p.305, 1852.",
+      "Hippocampus taeniopterus Bleeker, Nat. Tijds. Ned.-Ind., Vol.3, p.306, 1852.",
+      "Hippocampus polytaenia Bleeker, Nat. Tijds. Ned -Ind., Vol.6, p.338, 1854; Dumeril, 1870.",
+      "Hippocampus melanospilos Bleeker, Nat. Tijds. Ned.-Ind., Vol.6, p.505, 1854.",
+      "Hippocampus comes Kner, Reise Novara, Fische, Vol.1, p.390, 1865-67; Vaillant, 1904.",
+      "Hippocapus rhynchomacer Dumeril, Hist. Nat. Poiss., Vol.2, p.519, 1870.",
+      "Hippocampus guttulatus Gunther, Cat. Fishes British Mus., Vol.8, p.202, 1870, in part; Meyer, 1885; Gunther, 1910, not of Cuvier.",
+      "Hippocampus kelloggi Jordan and Snyder, Proc. U. S. Nat. Mus., Vol.24, p.14, pl.8, 1901; Jordan, Tanaka and Snyder, 1913.",
+      "Hippocampus aterrinus Jordan ans Snyder, Proc. U. S.Nat. Mus., Vol.24, p.14, pl.9, 1902; Jordan and Seale, 1907.",
+      "Hippocampus hilonis Jordan and Evermann, Bull. U. S. Fish. Comm., Vol.22, p.169, 1903.",
+      "Hippocampus barbouri Jordan and Richardson, Bull. U. S. Bur. Fisheries, Vol.27, p.247, fig.8, 1908."
+    ]
+  },
+  {
+    "id": "tap2-species-230",
+    "volume": 2,
+    "speciesIndex": 230,
+    "vnName": "Cá Ngựa chấm",
+    "scientificName": "Hippocampus trimaculatus",
+    "authorship": "Leach, 1814",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Ngựa Hippocampus Rafinesque",
+        "latin": "Hippocampus Rafinesque"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Ngựa chấm",
+        "size": "11 - 18 cm.",
+        "distribution": "Indonesia, Malaysia, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Weber and de Beaufort, 1922. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Tri-spotted seahorse.",
+        "size": "11 - 18 cm.",
+        "distribution": "Indonesia, Malaysia, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Weber and de Beaufort, 1922. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hippocampus trimaculatus Leach, Zool. Miscellany, p.104, 1814; Gunther, 1870; Day, 1878-88.",
+      "Hippocampus manulus Cator, Jour. Asiat. Soc. Bengal, Vol.18 p.1370, 1850; Kaup, 1856; Dumeril, 1870.",
+      "Hippocampus kampylotrachelos Bleeker, Nat. Tijds. Ned.-Indie, Vol.7, p.107, 1854; Dumeril, 1870.",
+      "Hippocampus manadensis Bleeker, Beschrijv. Nieuwe Vischsoorten van Manado en Makassar, Act. Soc. Sci. Indo-Neerl., Vol.1, p.79, 1856; Dumeril, 1870."
+    ]
+  },
+  {
+    "id": "tap2-species-231",
+    "volume": 2,
+    "speciesIndex": 231,
+    "vnName": "Cá Nhồng đỏ",
+    "scientificName": "Sphyraena pinguis",
+    "authorship": "Gunther, 1874",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhồng",
+        "latin": "Sphyraenidae"
+      },
+      "genus": {
+        "vn": "Cá Nhồng Sphyraena Rose",
+        "latin": "Sphyraena Rose"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhồng đỏ",
+        "size": "20 - 30 cm. Lớn nhất 50 cm.",
+        "distribution": "Triều Tiên, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1963. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Red barracuda, Brown barracuda.",
+        "size": "20 - 30 cm. Maximum 50 cm.",
+        "distribution": "Korea, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1963. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Sphyraena pinguis Gunther, Ann. Mag. Nat. Hist. Vol.13, p.157, 1874; Chu, 1931, Wang, 1933."
+    ]
+  },
+  {
+    "id": "tap2-species-232",
+    "volume": 2,
+    "speciesIndex": 232,
+    "vnName": "Cá Nhồng vằn",
+    "scientificName": "Sphyraena jello",
+    "authorship": "Cuvier and Valenciennes, 1829",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhồng",
+        "latin": "Sphyraenidae"
+      },
+      "genus": {
+        "vn": "Cá Nhồng Sphyraena Rose",
+        "latin": "Sphyraena Rose"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhồng vằn",
+        "size": "20 - 30 cm. Lớn nhất 150 cm, có khi 240 cm.",
+        "distribution": "Ở biển và vùng nước lợ, Đông Phi, Hồng Hải, Ấn Độ, Sri Lanka, Australia, Indonesia, Malaysia, Melanesia, Micronesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Herre, 1853. Trương Xuân Lâm, 1963. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Banded barracuda, Giant sea pike.",
+        "size": "20 - 30 cm. Maximum 50 cm, sometimes 240 cm.",
+        "distribution": "In the sea and brackish waters, East Africa, Red Sea, India, Sri Lanka, Australia, Indonesia, Malaysia, Melanesia, Micronesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Zhang, 1963. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Sphyraena jello Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.349, 1829; Bleeker, 1849; Cantor, 1850; Gunther,1860; Klunzinger, 1870; Day, 1888; Jordan and Seale, 1906; Evermann and Seale, 1906; Gilchrist and Thompson, 1908; M. Weber, 1913; Fowler, 1928; Herre, 1937."
+    ]
+  },
+  {
+    "id": "tap2-species-233",
+    "volume": 2,
+    "speciesIndex": 233,
+    "vnName": "Cá Nhồng mắt to",
+    "scientificName": "Sphyraena forsteri",
+    "authorship": "Cuvier and Valenciennes, 1829",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhồng",
+        "latin": "Sphyraenidae"
+      },
+      "genus": {
+        "vn": "Cá Nhồng Sphyraena Rose",
+        "latin": "Sphyraena Rose"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhồng mắt to",
+        "size": "25 - 27 cm. Lớn nhất 55 cm.",
+        "distribution": "Ở biển và vùng nước lợ, Ấn Độ, Indonesia, Fiji, Tahiti, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Big-eyed barracuda.",
+        "size": "25 - 27 cm. Maximum 55 cm.",
+        "distribution": "In the sea and brackish waters, India, Indonesia, Fiji, Tahiti, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Sphyraena forsteri Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.261, 1829; Gunther, 1860; Steindachner, 1879; Macleay, 1881; Jordan and Seale, 1906; Weber and de Beaufort, 1922; Fowler, 1928; Herre, 1934.",
+      "Sphyraena toxeuma Fowler, Jour. Acad. Nat. Sci. Phila., ser.2, Vol.12, p.502, 1904.",
+      "Sphyraena goodingi Seale, Occas. Papers Bishop Mus., Vol.4, p.18, fig.4, 1906."
+    ]
+  }
+]

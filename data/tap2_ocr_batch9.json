@@ -1,0 +1,479 @@
+[
+  {
+    "id": "tap2-species-70",
+    "volume": 2,
+    "speciesIndex": 70,
+    "vnName": "Cá Mối thường",
+    "scientificName": "Saurida tumbil",
+    "authorship": "(Bloch & Schneider, 1795)",
+    "status": "abundant",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Mối",
+        "latin": "Synodontidae"
+      },
+      "genus": {
+        "vn": "Cá Mối Saurida Cuvier and Valenciennes, 1849",
+        "latin": "Saurida Cuvier and Valenciennes, 1849"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "25 - 30 cm. Lớn nhất 50 cm.",
+        "distribution": "Đông Phi, Australia, Indonesia, Malaysia, Hồng Hải, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, rất nhiều.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Greater lizardfish, Dogstick",
+        "size": "25 - 30 cm. Maximum 50 cm.",
+        "distribution": "East Africa, Australia, Indonesia, Malaysia, Red Sea, Philippines, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, very abundant.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Salmo tumbil Bloch, Naturges Ausland Fishes, Vol.9, 1795, p.112, pl.430.",
+      "Saurus tumbil Cuvier, Regne Animals, Vol.2, 1817, p.169.",
+      "Saurus tumbil Cuvier, Nat. Tijds. Ned.-Ind., Vol.18, 1859, p.356; Gunther, 1864; Pellegrin, 1905; Tirant, 1929; Chevey, 1934; Bleeker, 1866-72; Weber and de Beaufort, 1913; Fowler, 1928.",
+      "Osmerus tumbil Lacepede, Hist. Nat. Poiss., Vol.5, pp.230, 236, 1803.",
+      "Saurus badi Cuvier, Regne Animals, ed.2, Vol.2, p.314, 1829; Cantor, 1850.",
+      "Saurida tumbil Swainson, Nat. Hist. Animals, Vol.2, Fishes, p.288, 1839.",
+      "Saurus argyrophanes Richardson, Ichth. China, Japan, p.302, 1846.",
+      "Saurida tumbil Playfair and Gunther, Fishes Zanzibar, p.116, 1866; in part Day, 1878.",
+      "Saurida australis Castelnau, Proc. Linn. Soc. New South Wales, Vol.3, p.393, 1879.",
+      "Saurida truculenta Macleay, Proc. Linn. Soc. New South Wales, Vol.6, p.219, 1881.",
+      "Saurida argyrophanes Meyer, Ann. Soc. Espana. Hist. Nat. Madrid, Vol.14, p.41, 1885; Evermann and Seale, 1907; Jordan and Richardson, 1908; Fowler, 1918; Herre, 1934.",
+      "Saurida badi Jordan and Seale, Proc. U.S. Nat. Mus., Vol.28, p.772, 1905."
+    ]
+  },
+  {
+    "id": "tap2-species-71",
+    "volume": 2,
+    "speciesIndex": 71,
+    "vnName": "Cá Mối dài",
+    "scientificName": "Saurida elongata",
+    "authorship": "(Temminck and Schlegel, 1846)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Mối",
+        "latin": "Synodontidae"
+      },
+      "genus": {
+        "vn": "Cá Mối Saurida Cuvier and Valenciennes, 1849",
+        "latin": "Saurida Cuvier and Valenciennes, 1849"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "20 - 25 cm. Lớn nhất 35 cm.",
+        "distribution": "Thái Lan, Nhật Bản, Trung Quốc, Việt Nam.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Vương Văn Tân, 1963. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Slender lizardfish",
+        "size": "20 - 25 cm. Maximum 35 cm.",
+        "distribution": "Thailand, Japan, China, Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Wang, 1963. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Aulopus elongata Temminck and Schneider, Fauna Japonica, Fishes, 1846, p.223, pl.105, fig.2.",
+      "Saurida eso Jordan and Herre, Proc. U.S. Nat. Mus., Vol.32, 1907, p.223 (Japan).",
+      "Saurida elongata Zhang, Báo cáo điều tra Ngư loại Hoàng Bột Hải, 1955, p.65, fig.46; Vương Văn Tân, 1962.",
+      "Saurida microlepis Wu and Wang, Cont. Biol. Lab. Sci. Soc. China. Zool. ser.8(1), 1931, pp.1-7, fig.1-4."
+    ]
+  },
+  {
+    "id": "tap2-species-72",
+    "volume": 2,
+    "speciesIndex": 72,
+    "vnName": "Cá Mối nhẳng",
+    "scientificName": "Saurida gracilis",
+    "authorship": "(Quoy and Gaimard, 1824)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Mối",
+        "latin": "Synodontidae"
+      },
+      "genus": {
+        "vn": "Cá Mối Saurida Cuvier and Valenciennes, 1849",
+        "latin": "Saurida Cuvier and Valenciennes, 1849"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "15 - 20 cm. Lớn nhất 31,5 cm.",
+        "distribution": "Đông Phi, Australia, Hawaii, Microesia, Philippines, Nhật Bản, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Myers, 1991."
+      },
+      "en": {
+        "commonName": "Graceful lizardfish",
+        "size": "15 - 20 cm. Maximum 31,5 cm.",
+        "distribution": "East Africa, Australia, Hawaii, Micronesia, Philippines, Japan, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Myers, 1991."
+      }
+    },
+    "synonyms": [
+      "Saurus gracilis Quoy and Gaimard, Voy. Uranie, Zool, p.244, 1824",
+      "Saurus forox Eydoux and Souleyet, Voy. Bonite, Zool., Vol.1, p. 197, 1842.",
+      "Saurida nebulosa Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.22, p.504, pl.648, 1849; Gunther, 1864; Playfair and Gunther, 1866; Kner, 1869; Klunzinger, 1871; Weber, 1913.",
+      "Saurida tumbil Fowler, Proc. Acad. Nat. Sci. Phila., p.498, 1900.",
+      "Synodus sharpi Fowler, Proc. Acad. Nat. Sci. Phila., p.497, pl.19, fig.2, 1901.",
+      "Saurida gracilis Jenkins, Bull. U.S. Fish. Comm., Vol.22, p.433, 1904; Jordan and Evermann, 1905; Jordan and Seale, 1906; Jordan and Richardson, 1908; Gunther, 1910; Weber and de Beaufort, 1913; McCulloch, 1912-22; Fowler, 1928; Herre, 1934; Norman, 1935."
+    ]
+  },
+  {
+    "id": "tap2-species-73",
+    "volume": 2,
+    "speciesIndex": 73,
+    "vnName": "Cá Mối vện to",
+    "scientificName": "Synodus macrops",
+    "authorship": "Tanaka, 1908",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Mối",
+        "latin": "Synodontidae"
+      },
+      "genus": {
+        "vn": "Cá Mối vện Synodus Gronow, 1763",
+        "latin": "Synodus Gronow, 1763"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "10 - 12 cm.",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Vương Văn Tân, 1963. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Crossmark lizardfish",
+        "size": "10 - 12 cm.",
+        "distribution": "Japan, China, Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Wang, 1963. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Synodus macrops Tanaka, Annot. Zool. Jap., 1908, Vol.7, No.1, p.27-47, Fishes of Japan, Vol.4, 1911, p.319-342.",
+      "Synodus macrops Schultz, 1953. U.S. Nat. Bull. 202, Vol.1, p.31."
+    ]
+  },
+  {
+    "id": "tap2-species-74",
+    "volume": 2,
+    "speciesIndex": 74,
+    "vnName": "Cá Mối vện",
+    "scientificName": "Synodus variegatus",
+    "authorship": "(Lacepede, 1803)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Mối",
+        "latin": "Synodontidae"
+      },
+      "genus": {
+        "vn": "Cá Mối vện Synodus Gronow, 1763",
+        "latin": "Synodus Gronow, 1763"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "Lớn nhất 19,5 cm.",
+        "distribution": "Đông Phi, Australia, Hồng Hải, Micronesia, Philippines, Nhật Bản, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1991. Myers, 1991"
+      },
+      "en": {
+        "commonName": "Variegated lizardfish, Redbrown lizardfish",
+        "size": "Maximum 19,5 cm.",
+        "distribution": "East Africa, Australia, Red Sea, Micronesia, Philippines, Japan, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1991. Myers, 1991."
+      }
+    },
+    "synonyms": [
+      "Salmo variegatus Lacepede, Hist. Nat. Poiss., Vol.5, p.157, pl.3, fig.3, 1803.",
+      "Salmo varius Lacepede, Hist. Nat. Poiss., Vol.5, p.224, pl.3, fig.3, 1803.",
+      "Saurus variegatus Quoy and Gaimard, Voy. Uranie Zool., p.223, pl.48, fig.3, 1824; Weber and de Beaufort, 1913.",
+      "Saurius lucius Schlegel, Fauna Japonica, Pisces, p.232, pl.106, fig.1, 1846.",
+      "Saurus synodus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.22, p.354, 1849.",
+      "Saurius synodus Bleeker, Nat. Tijds. Ned.-Ind., Vol.2, p.257, 1857; Bleeker, 1852.",
+      "Synodus synodus Bleeker, Atlas Ichth., Vol.6, p.154, pl.278, fig.5, 1866-72; Weber, 1913.",
+      "Saurus varius Gunther, Cat. Fishes British Mus., Vol.5, p.395, 1865; Klunzinger, 1971.",
+      "Synodus varius Steidachner, Denks. Akad. Wiss. Wien, Vol.70, p.513, 1901; Jenkins, 1904; Jordan and Snyder, 1904; Gilbert, 1905; Jordan and Seale, 1906; Evermann and Seale, 1907; Regan, 1918.",
+      "Synodus variegatus Seale, Occas. Papers Bishops Mus., Vol.1, p.63, 1901; de Beaufort, 1913; Norman, 1935.",
+      "Saurida japonica Jordan and Seale, Bull. U.S. Bur. Fisheries, Vol.26, p.5, 1907.",
+      "Synondus japonicus Jordan and Herre, Proc. U.S. Nat. Mus., Vol.32, p.516, 1907; Jordan and Richardson, 1907; Fowler, 1927; Herre, 1940-41.",
+      "Synodus dermatogenys Fowler, Proc. Acad. Nat. Sci. Phila., p.566, fig.3, 1912."
+    ]
+  },
+  {
+    "id": "tap2-species-75",
+    "volume": 2,
+    "speciesIndex": 75,
+    "vnName": "Cá Mối vện nhẳng",
+    "scientificName": "Synodus similis",
+    "authorship": "McCulloch, 1921",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Mối",
+        "latin": "Synodontidae"
+      },
+      "genus": {
+        "vn": "Cá Mối vện Synodus Gronow, 1763",
+        "latin": "Synodus Gronow, 1763"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "[KHÔNG RÕ]",
+        "distribution": "Đông Phi, Australia, Philippines, Nhật Bản, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Herre, 1953."
+      },
+      "en": {
+        "commonName": "Lavender lizardfish",
+        "size": "[UNKNOWN]",
+        "distribution": "East Africa, Australia, Philippines, Japan, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Herre, 1953."
+      }
+    },
+    "synonyms": [
+      "Saurus intermedius Gunther, Report Voy. Challeger, Shore Fishes, Vol.1, p.50, 1880.",
+      "Synodus similis McCulloch, Mem. Bishops Mus., Vol.7, p.167, pl.8, fig.2, 1921.",
+      "Synodus intermedius Fowler, Mem. Bishops Mus., Vol.10, p.64, 1928; Herre, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-76",
+    "volume": 2,
+    "speciesIndex": 76,
+    "vnName": "Cá Khoai",
+    "scientificName": "Harpodon nehereus",
+    "authorship": "(Hamilton - Buchanan, 1822)",
+    "status": "abundant",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Khoai",
+        "latin": "Harpodontidae"
+      },
+      "genus": {
+        "vn": "Cá Khoai Harpodon le Sueur, 1825",
+        "latin": "Harpodon le Sueur, 1825"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "16 - 27 cm. Lớn nhất 40 cm.",
+        "distribution": "Đông Phi, Ấn Độ, Indonesia, Triều Tiên, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Vương Văn Tân, 1963. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Indian Bombay duck",
+        "size": "16 - 27 cm. Maximum 40 cm.",
+        "distribution": "East Africa, India, Indonesia, Korea, Japan, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Wang, 1963. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Osmerus nehereus Hamilton-Buchanan, Account Fishes Ganges Edimburgh, 1822, p.29.",
+      "Harpodon nehereus Tirant. Serv. Oceanogr. Peches Indochine, 6è Note, 1929, p.173; Chevey, 1934; Matsubara, 1955."
+    ]
+  },
+  {
+    "id": "tap2-species-77",
+    "volume": 2,
+    "speciesIndex": 77,
+    "vnName": "Cá Đèn lồng",
+    "scientificName": "Myctophum aurolaternatum",
+    "authorship": "Garman, 1899",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Đèn lồng",
+        "latin": "Myctophidae"
+      },
+      "genus": {
+        "vn": "Cá Đèn lồng Myctophum Rafinesque, 1810",
+        "latin": "Myctophum Rafinesque, 1810"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "Lớn nhất 11 cm.",
+        "distribution": "Ấn Độ Dương, Thái Bình Dương, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Becker, 1983. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Lanternfish",
+        "size": "Maximum 11 cm.",
+        "distribution": "Indian Ocean, Pacific Ocean, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Becker, 1983. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Myctophum aurolaternatum Garman, Vol.264, 1899, p.55, fig.3; Bleeker, 1982."
+    ]
+  },
+  {
+    "id": "tap2-species-78",
+    "volume": 2,
+    "speciesIndex": 78,
+    "vnName": "Cá Cơm sáng",
+    "scientificName": "Symbolophorus evermanni",
+    "authorship": "(Gilbert, 1905)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Đèn lồng",
+        "latin": "Myctophidae"
+      },
+      "genus": {
+        "vn": "Cá Cơm sáng Symbolophorus Bolin and Wisner, 1959",
+        "latin": "Symbolophorus Bolin and Wisner, 1959"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "[KHÔNG RÕ]",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Thái Bình Dương, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Evermann's lanternfish",
+        "size": "[UNKNOWN]",
+        "distribution": "Atlantic Ocean, Indian Ocean, Pacific Ocean, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Myctophum evermanni Gilbert, 1905, p.597, pl.70, fig.2",
+      "Myctophum (Scopelus) evermanni Praser-Brunner, 1949, p.1055.",
+      "Symbolophorus evermanni Becker, 1982, p.133, fig.18a, 6, 8."
+    ]
+  },
+  {
+    "id": "tap2-species-79",
+    "volume": 2,
+    "speciesIndex": 79,
+    "vnName": "Cá Mối sáng",
+    "scientificName": "Chlorophthalmus agassizii",
+    "authorship": "Bonaparte, 1834",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Mối sáng",
+        "latin": "Chlorophthalmidae"
+      },
+      "genus": {
+        "vn": "Cá Mối sáng Chlorophthalmus Bonaparte, 1834",
+        "latin": "Chlorophthalmus Bonaparte, 1834"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "[KHÔNG RÕ]",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Thái Bình Dương, Việt Nam.",
+        "specimen": "Viện Hải sản Hải Phòng.",
+        "status": "Rất hiếm.",
+        "literature": "Vương Văn Tân, 1963. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Short-nosed greeneye",
+        "size": "[UNKNOWN]",
+        "distribution": "Atlantic Ocean, Indian Ocean, Pacific Ocean, Vietnam.",
+        "specimen": "Haiphong Research Institute of Marine Products.",
+        "status": "Very rare.",
+        "literature": "Wang, 1963. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Chlorophthalmus agassizii Bonaparte, Op. Cit., pl.121, 1834."
+    ]
+  }
+]

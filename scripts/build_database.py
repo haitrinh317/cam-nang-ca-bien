@@ -246,8 +246,8 @@ def build_taxonomy_tree(all_species):
 def build_database():
     all_species = []
 
-    # Load Tap 1 & 2 from translated JSON files in data/parsed/
-    for vol in [1, 2]:
+    # Load Tap 1 from translated JSON files in data/parsed/
+    for vol in [1]:
         path = os.path.join(PARSED, f"tap{vol}_from_html.json")
         if os.path.exists(path):
             with open(path, "r", encoding="utf-8") as f:
@@ -256,6 +256,11 @@ def build_database():
             all_species.extend(species)
         else:
             print(f"Tập {vol}: file not found, skipping")
+
+    # Load Tap 2
+    tap2 = load_tap4_or_5("tap2_parsed_details.json", 2)
+    print(f"Tập II:  {len(tap2)} loài")
+    all_species.extend(tap2)
 
     # Load Tap 3
     tap3 = load_tap3()

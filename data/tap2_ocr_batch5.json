@@ -1,0 +1,343 @@
+[
+  {
+    "id": "tap2-species-30",
+    "volume": 2,
+    "speciesIndex": 30,
+    "vnName": "Cá Đé",
+    "scientificName": "Ilisha elongata",
+    "authorship": "(Bennette, 1830)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Bẹ", "latin": "Pristigasteridae" },
+      "genus": { "vn": "Cá Bẹ Ilisha Richardson, 1846", "latin": "Ilisha Richardson, 1846" }
+    },
+    "specs": {
+      "vn": {
+        "size": "24 - 33 cm. Lớn nhất 60 cm.",
+        "distribution": "Ấn Độ, Malaysia, Indonesia, Philippines, Triều Tiên, Thái Lan, Nhật Bản, Viễn Đông (Liên Xô cũ), Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Trung Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Elongate ilisha, Slender shad",
+        "size": "24 - 33 cm. Maximum 60 cm.",
+        "distribution": "India, Malaysia, Indonesia, Philippines, Korea, Thailand, Japan, Eastern Russia, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively abundant.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Alosa elongata Bennette, Mem. Life Raffles, 1830, p.691.",
+      "Clupea melastoma Temminck and Schlegel, Faune Japonica Poiss., p.257, 1846, tab.108, fig.1."
+    ]
+  },
+  {
+    "id": "tap2-species-31",
+    "volume": 2,
+    "speciesIndex": 31,
+    "vnName": "Cá Bẹ Ấn Độ",
+    "scientificName": "Ilisha indica",
+    "authorship": "(Swainson, 1839)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Bẹ", "latin": "Pristigasteridae" },
+      "genus": { "vn": "Cá Bẹ Ilisha Richardson, 1846", "latin": "Ilisha Richardson, 1846" }
+    },
+    "specs": {
+      "vn": {
+        "size": "15 - 20 cm. Lớn nhất 26 cm.",
+        "distribution": "Đông Phi, Ấn Độ, Indonesia, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Indian pellona, Tooth-headed shad",
+        "size": "15 - 20 cm. Maximum 26 cm.",
+        "distribution": "East Africa, India, Indonesia, Malaysia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Platygaster indicus Swainson, Nat. Hist. Animals, Vol.3, Fishes, 1839, p.294."
+    ]
+  },
+  {
+    "id": "tap2-species-32",
+    "volume": 2,
+    "speciesIndex": 32,
+    "vnName": "Cá Bẹ lầm",
+    "scientificName": "Ilisha dussumieri",
+    "authorship": "(Cuvier and Valenciennes, 1847)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Bẹ", "latin": "Pristigasteridae" },
+      "genus": { "vn": "Cá Bẹ Ilisha Richardson, 1846", "latin": "Ilisha Richardson, 1846" }
+    },
+    "specs": {
+      "vn": {
+        "size": "13 cm. Lớn nhất 40 cm.",
+        "distribution": "Ở biển và cửa sông, Thái Lan, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Thuỷ sản 2, tp Hồ Chí Minh.",
+        "status": "Ít gặp.",
+        "literature": "Mai Đình Yên, 1992"
+      },
+      "en": {
+        "commonName": "Dussumieri pellona",
+        "size": "13 cm. Maximum 40 cm.",
+        "distribution": "In the sea and in the estuary, Thailand, Vietnam. Southern Vietnam.",
+        "specimen": "HoChiMinh City Research Institute of Aquatic Products.",
+        "status": "Uncommon.",
+        "literature": "Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Pellona dussumieri Cuvier and Valenciennes, 1847, Vol.20, p.316."
+    ]
+  },
+  {
+    "id": "tap2-species-33",
+    "volume": 2,
+    "speciesIndex": 33,
+    "vnName": "Cá Bẹ vây lưng sau",
+    "scientificName": "Opisthopterus tardoore",
+    "authorship": "(Cuvier, 1829)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Bẹ", "latin": "Pristigasteridae" },
+      "genus": { "vn": "Cá Bẹ không vây bụng Opisthopterus Gill, 1861", "latin": "Opisthopterus Gill, 1861" }
+    },
+    "specs": {
+      "vn": {
+        "size": "20 - 25 cm. Lớn nhất 30 cm.",
+        "distribution": "Ấn Độ, Malaysia, Indonesia, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Tương đối ít.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Tardoore herring, Long-finned herring",
+        "size": "20 - 25 cm. Maximum 30 cm.",
+        "distribution": "India, Malaysia, Indonesia, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography",
+        "status": "Relatively rare.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Pristigaster tardoore Cuvier, Regne Animals, ed.2, Vol.29, p.321."
+    ]
+  },
+  {
+    "id": "tap2-species-34",
+    "volume": 2,
+    "speciesIndex": 34,
+    "vnName": "Cá Cháy vạch mây",
+    "scientificName": "Macrura ilisha",
+    "authorship": "(Buchanan-Hamilton, 1822)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Cháy", "latin": "Alosinae" },
+      "genus": { "vn": "Cá Cháy Macrura van Hasselt, 1823", "latin": "Macrura van Hasselt, 1823" }
+    },
+    "specs": {
+      "vn": {
+        "size": "11 - 15 cm. Lớn nhất 35 cm.",
+        "distribution": "Ấn Độ, Srilanca, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng không nhiều.",
+        "literature": "Vương Văn Tân, 1962. Whitehead, 1972. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Hilsa shad, Hilsa herring",
+        "size": "11 - 15 cm. Maximum 35 cm.",
+        "distribution": "India, Sri Lanka, Thailand, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography",
+        "status": "Common, seldom abundant.",
+        "literature": "Wang, 1962. Whitehead, 1972. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupanodon ilisha Buchanan-Hamilton, Fishes of Ganges, 1822, p.382, p.243, pl.19, fig.73."
+    ]
+  },
+  {
+    "id": "tap2-species-35",
+    "volume": 2,
+    "speciesIndex": 35,
+    "vnName": "Cá Cháy thường",
+    "scientificName": "Macrura reevesii",
+    "authorship": "(Richardson, 1846)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Cháy", "latin": "Alosinae" },
+      "genus": { "vn": "Cá Cháy Macrura van Hasselt, 1823", "latin": "Macrura van Hasselt, 1823" }
+    },
+    "specs": {
+      "vn": {
+        "size": "20 - 24 cm. Lớn nhất 64 cm.",
+        "distribution": "Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, tương đối ít.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Reeves shad",
+        "size": "20 - 24 cm. Maximum 64 cm.",
+        "distribution": "Philippines, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography",
+        "status": "Common, seldom abundant.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Alosa reevesii Richardson, Ichth. China and Japan, Rept. Brit. Assoc. Adv. Sci., 1846, p.305."
+    ]
+  },
+  {
+    "id": "tap2-species-36",
+    "volume": 2,
+    "speciesIndex": 36,
+    "vnName": "Cá Cháy chấm hoa",
+    "scientificName": "Macrura kelee",
+    "authorship": "Cuvier, 1829",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Cháy", "latin": "Alosinae" },
+      "genus": { "vn": "Cá Cháy Macrura van Hasselt, 1823", "latin": "Macrura van Hasselt, 1823" }
+    },
+    "specs": {
+      "vn": {
+        "size": "13 - 15 cm. Lớn nhất 22 cm.",
+        "distribution": "Đông Phi, Ấn Độ, Sri Lanka, Malaysia, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Vương Văn Tân, 1962. Whitehead, 1972. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Kelee shad, five spotted herring",
+        "size": "13 - 15 cm. Maximum 22 cm.",
+        "distribution": "East Africa, India, Sri Lanka, Malaysia, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography",
+        "status": "Uncommon.",
+        "literature": "Wang, 1962. Whitehead, 1972. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Macrura kelee Cuvier, Regne Animals, ed.2, Vol.21, p.320, 1829."
+    ]
+  },
+  {
+    "id": "tap2-species-37",
+    "volume": 2,
+    "speciesIndex": 37,
+    "vnName": "Cá Cháy Trung Hoa",
+    "scientificName": "Macrura sinensis",
+    "authorship": "Linnaeus, 1758",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Cháy", "latin": "Alosinae" },
+      "genus": { "vn": "Cá Cháy Macrura van Hasselt, 1823", "latin": "Macrura van Hasselt, 1823" }
+    },
+    "specs": {
+      "vn": {
+        "size": "14 - 15 cm. Lớn nhất 20 cm.",
+        "distribution": "Ấn Độ, Malaysia, Indonesia, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Trung Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Chinese herring",
+        "size": "14 - 15 cm. Maximum 20 cm.",
+        "distribution": "India, Malaysia, Indonesia, Thailand, China, Vietnam. Gulf of Tonkin, South of Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupea sinensis Linnaeus, Syst. Nat. ed.10, No.1, 1758, p.319."
+    ]
+  },
+  {
+    "id": "tap2-species-38",
+    "volume": 2,
+    "speciesIndex": 38,
+    "vnName": "Cá Cơm mồm nhọn",
+    "scientificName": "Stolephorus heterolobus",
+    "authorship": "(Ruppell, 1835)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trỏng", "latin": "Engraulidae" },
+      "genus": { "vn": "Cá Cơm Stolephorus Lacepede, 1803", "latin": "Stolephorus Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "size": "50 - 70 mm. Lớn nhất 90 mm.",
+        "distribution": "Australia, Hồng Hải, Indonesia, Malaysia, Philippines, Đông Ấn Độ, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Trung Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Blue anchovy, Short headed anchovy",
+        "size": "50 - 70 mm. Maximum 90mm.",
+        "distribution": "Australia, Red Sea, Indonesia, Malaysia, Philippines, Thailand, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, numerous.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Engraulis heterolobus Ruppell, Neue Wirbelt., Fische Rothen Meeres, p.79, pl.21, fig.4, 1935; Gunther, 1868."
+    ]
+  },
+  {
+    "id": "tap2-species-39",
+    "volume": 2,
+    "speciesIndex": 39,
+    "vnName": "Cá Cơm sọc xanh",
+    "scientificName": "Stolephorus zollingeri",
+    "authorship": "(Bleeker, 1849)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trỏng", "latin": "Engraulidae" },
+      "genus": { "vn": "Cá Cơm Stolephorus Lacepede, 1803", "latin": "Stolephorus Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "size": "50 - 70 mm. Lớn nhất 100 mm.",
+        "distribution": "Đông Ấn Độ Dương, Indonesia, Malaysia, Thái Lan, Trung Quốc, Việt Nam. Ở các bãi cá vùng bờ biển.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, sản lượng lớn.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Red anchovy",
+        "size": "50 - 70 mm. Maximum 100 mm.",
+        "distribution": "Eastern Indian Ocean, Indonesia, Malaysia, Thailand, China, Vietnam. On the fishing grounds in the coastal zones.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, great product.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Engraulis zollingeri Bleeker, Jour. Indian Archipelago, Vol.2, p.73, 1849."
+    ]
+  }
+]

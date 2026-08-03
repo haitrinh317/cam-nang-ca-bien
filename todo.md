@@ -13,7 +13,7 @@
 - [x] Viết lại `scripts/build_database.py` — đọc trực tiếp từ OCR parsed JSON
 
 ### OCR & Chuẩn hóa dữ liệu
-- [x] Tập II: OCR thủ công + upload Supabase từ loài 1-89 (đang WIP)
+- [x] Tập II: 266/266 loài (OCR thủ công + chuẩn hóa + upload Supabase hoàn tất)
 - [x] Tập III: 518 loài (OCR + parse hoàn tất, `scratch/tap3_parsed_details.json`)
 - [x] Tập IV loài 1-100: OCR + chuẩn hóa thủ công hoàn tất
 - [x] Tập V: 199 loài (OCR thô, `scratch/tap5_parsed_details.json`)
@@ -55,7 +55,7 @@
 ### OCR còn thiếu
 - [ ] Tập IV loài 101-316: cần OCR + chuẩn hóa thủ công
 - [ ] Tập V: dữ liệu thô chưa được chuẩn hóa (tên VN bị lỗi, taxonomy trống)
-- [ ] Tập I & II: chưa có dữ liệu OCR parsed JSON (chỉ có PSV cũ cho 50 loài Tập I)
+- [ ] Tập I: chưa có dữ liệu OCR parsed JSON (chỉ có PSV cũ cho 50 loài Tập I)
 
 ### Chất lượng dữ liệu
 - [x] `commonName` (EN) — Tập II: 232/266, Tập III: 518/518 ✅

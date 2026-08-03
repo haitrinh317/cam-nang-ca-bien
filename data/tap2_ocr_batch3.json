@@ -1,0 +1,398 @@
+[
+  {
+    "id": "tap2-species-9",
+    "volume": 2,
+    "speciesIndex": 9,
+    "vnName": "Cá Mòi mõm tròn",
+    "scientificName": "Nematalosa nasus",
+    "authorship": "(Bloch, 1895)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Mòi mõm tròn Nematalosa Regan, 1917", "latin": "Nematalosa Regan, 1917" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "14 - 21 cm.",
+        "distribution": "Australia, Đông Ấn Độ Dương, Ấn Độ, Philippines, Arabia, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Trung Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Whitehead, 1972. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Long-finned gizzard shad",
+        "size": "14 - 21 cm.",
+        "distribution": "Australia, Eastern Indian Ocean, India, Philippines, Arabia, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Wang, 1962. Whitehead, 1972. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupea nasus Bloch, Naturges. Ausland. Fische, vol.9, p.116, pl.429, fig.1, 1795.",
+      "Clupanodon nasica Lacepede, Hist. Nat. Poiss., Vol. 5, pp.468, 472, 1803.",
+      "Chatoessus altus Gray, Illustrations Indian Zoology, Vol. 2, p.91, fig.2, 1832-34.",
+      "Chatoessus nasus Cuvier & Valenciennes, Hist. Nat. Poissons, Vol.21, p.104, 1848; Gunther, 1868 ; Day, 1878 .",
+      "Chatoessus selangkat Kner, Reise Novara , Fische, p. 337, 1865",
+      "Dorosoma nasus Bleeker, Atlas Ichth., Vol.6, p.142, pl.260, fig.4, 1866-72; Weber & de Beaufort, 1913 ; Chevey, 1932",
+      "Chatoessus chanpole Gunther, Cat. Fishes British Mus., Vol.7, p.410, 1868.",
+      "Clupanodon nasus Jordan & Evermann, Proc. U.S. Nat. Mus., Vol.25, p.238, 1902.",
+      "Konosirus nasus Jordan & Herre, Proc . U. S. Nat. Mus., Vol.31, p.625, 1906; Seale & Bean, 1907.",
+      "Nematolosa nasus Suvatti, Index Fishes Siam, p.14, 1937"
+    ]
+  },
+  {
+    "id": "tap2-species-10",
+    "volume": 2,
+    "speciesIndex": 10,
+    "vnName": "Cá Mòi cờ hoa",
+    "scientificName": "Clupanodon thrissa",
+    "authorship": "Linnaeus, 1758",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Mòi Clupanodon Lacepede, 1803", "latin": "Clupanodon Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "10 - 13 cm. Lớn nhất 20 cm.",
+        "distribution": "Philippines, Nhật Bản, Trung Quốc, Việt nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Small gizzard shad.",
+        "size": "10 - 13 cm. Maximum 20 cm.",
+        "distribution": "Philippines, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Wang, Nguyen Khac Huong, 1991"
+      }
+    },
+    "synonyms": [
+      "Clupanodon thrissa Linnaeus , Syst. Nat., ed.10, vol.1, p.318, 1758; Bloch, 1795.",
+      "Clupanodon thrissa Lacepede, Hist. Nat. Poissons, Vol.5,pp. 468,470, 1803; Regan, 1917; Fowler, 1941.",
+      "Konosirus thrissa Jordan & Seale, Proc. Davenport Acad. Sci., Vol.10, p.2, 1905; Evermann and Seale, 1907; Herre, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-11",
+    "volume": 2,
+    "speciesIndex": 11,
+    "vnName": "Cá Mòi cờ chấm",
+    "scientificName": "Clupanodon punctatus",
+    "authorship": "Schlegel, 1846",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Mòi Clupanodon Lacepede, 1803", "latin": "Clupanodon Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "15 - 19 cm. Lớn nhất 27cm.",
+        "distribution": "Ấn Độ, Indonesia, Trung Quốc, Nhật Bản, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Konoshiro gizzard shad, Spotted sardine.",
+        "size": "15 - 19 cm. Maximum 27 cm.",
+        "distribution": "India, Indonesia, China, Japan, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively numerous.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupanodon punctatus Schlegel, Faune Japonica Poiss., 1846, pts.10-14, p.240, pl.109, fig.1."
+    ]
+  },
+  {
+    "id": "tap2-species-12",
+    "volume": 2,
+    "speciesIndex": 12,
+    "vnName": "Cá Lầm bụng dẹp",
+    "scientificName": "Dussumieria acuta",
+    "authorship": "Cuvier & Valenciennes, 1847",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Lầm", "latin": "Dussumieriidae" },
+      "genus": { "vn": "Cá Lầm dài Dussumieria Cuvier & Valenciennes, 1847", "latin": "Dussumieria Cuvier & Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "12 - 13 cm. Lớn nhất 15 cm.",
+        "distribution": "Đông Ấn Độ, Hồng Hải, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Common sprat, Rainbow sardine.",
+        "size": "12 - 13 cm. Maximum 15 cm.",
+        "distribution": "East In dia, Red Sea, Indonesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, numerous.",
+        "literature": "Herre, 1953 . Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Dussumieria acuta Cuvier & Valenciennes, Hist. Nat. Poissons, Vol.20, p.467, pl.606, 1847; Kner, 1865; Bleeker, 1866-72; Gunther, 1866; Day, 1878; Weber & de Beaufort, 1913; Roxas, 1934; Fowler, 1941.",
+      "Dussumieria clopsoides Bleeker, Verh. Bat. Gen., Vol.22 , 1849; Ichth. Madura, p.12."
+    ]
+  },
+  {
+    "id": "tap2-species-13",
+    "volume": 2,
+    "speciesIndex": 13,
+    "vnName": "Cá Lầm bụng tròn",
+    "scientificName": "Dussumieria hasseltii",
+    "authorship": "Bleeker, 1850",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Lầm", "latin": "Dussumieriidae" },
+      "genus": { "vn": "Cá Lầm dài Dussumieria Cuvier & Valenciennes, 1847", "latin": "Dussumieria Cuvier & Valenciennes, 1847" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "11 - 15 cm. Lớn nhất 18 cm.",
+        "distribution": "Australia, Ấn Độ, Hồng Hải, Indonesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất nhiều.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Slender rainbow sardine.",
+        "size": "11 - 15 cm. Maximum 18 cm.",
+        "distribution": "Australia, India, Red Sea , Indonesia, Philippines, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very numerous.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991"
+      }
+    },
+    "synonyms": [
+      "Dussumieria hasseltii Bleeker, Nat. Tijds. Ned-Ind., Vol.1, p.422, 1850; Bleeker, 1866- 72; Day, 1878",
+      "Dussumieria elopsoides Gunther, Cat. Fishes British Mus. , Vol.7, p.466, 1866; Meyer, 1885; Jordan & Seale, 1907; Jordan& Richardson, 1908.",
+      "Dussumieria hasseltii Jordan & Richardson, Bull . U. S. Bur. Fisheries, Vol.27, p.236, 1908; Weber & de Beaufort, 1913; Herre, 1940-41; Fowler, 1940.",
+      "Dussumieria elopsoides Bleeker, 1849. in Myers: Micronesian Reef Fishes, p.62, 1991."
+    ]
+  },
+  {
+    "id": "tap2-species-14",
+    "volume": 2,
+    "speciesIndex": 14,
+    "vnName": "Cá Lầm mắt mỡ",
+    "scientificName": "Etrumeus micropus",
+    "authorship": "(Schlegel, 1846)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Lầm", "latin": "Dussumieriidae" },
+      "genus": { "vn": "Cá Lầm mắt mỡ Etrumeus Bleeker, 1853", "latin": "Etrumeus Bleeker, 1853" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "18 - 19 cm. Lớn nhất 22 cm.",
+        "distribution": "Ấn Độ Dương, Thái Bình Dương, Đông Nam Châu Phi, Australia, Trung Quốc, Triều Tiên, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải sản Hải Phòng",
+        "status": "Tương đối ít.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Round herring.",
+        "size": "18 - 19 cm. Maximum 22 cm.",
+        "distribution": "Indian Ocean, Pacific Ocean, East-South of Africa, Australia, China, Korea, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Research Institute of Marine Products.",
+        "status": "Relatively little.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupea micropus Schlegel, In Siebold's Faune japonica, Poiss., 1946, pts.10-14, p.236, pl.107, fig.9 .",
+      "Etrumeus micropus Mori, Jour. Pan. Pacific Res. Inst., Vol.3, 1928, p.3; Vuong V.Tân, 1962."
+    ]
+  },
+  {
+    "id": "tap2-species-15",
+    "volume": 2,
+    "speciesIndex": 15,
+    "vnName": "Cá Lầm tròn",
+    "scientificName": "Spratelloides decicatulus",
+    "authorship": "(Bennett, 1831)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Lầm", "latin": "Dussumieriidae" },
+      "genus": { "vn": "Cá Lầm tròn Spratelloides Bleeker, 1852", "latin": "Spratelloides Bleeker, 1852" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "Khoảng 10 cm.",
+        "distribution": "Đông Ấn Độ Dương, Hawaii, Samoa, Australia, Mauritius, Philippines, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Durand, 1949. Herre, 1953. Whitehead, 1972."
+      },
+      "en": {
+        "commonName": "Blue spart, Delicate round herring.",
+        "size": "About 10 cm.",
+        "distribution": "East of Indian Ocean, Hawaii, Samoa, Australia, Mauritius, Philippines, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Durand, 1949. Herre, 1953. Whitehead, 1972."
+      }
+    },
+    "synonyms": [
+      "Clupea delicatula Bennett, Proc. Comm. Zool. Soc. London, Vol.1, p.168, 1831.",
+      "Clupea macassariensis Bleeker, Jour. Ind. Arch., Vol.3, p.72, 1849.",
+      "Spratelloides delicatulus Gunther, Cat. Fishes British Mus., Vol.7, p.464, 1868; Bleeker, 1866; Weber, 1913; Roxas, 1934; Herre, 1940-41.",
+      "Spratelloides robustus Ogilby, Proc. Linn. Soc.N.S. Wales, Vol.22, p.64, 1897.",
+      "Stolephorus delicatulus Jordan & Seale, Bull. U. S. Bur. Fisheries, Vol.25, p.186, 1906; Evermann & Seale, 1907; Kendall & Goldsborough, 1911; Fowler, 1941.",
+      "Alausa alburnus Kner and Steindachner , Sitzb. K. Akad. Wiss. Wien, Vol.54, p.387, pl.1(16)."
+    ]
+  },
+  {
+    "id": "tap2-species-16",
+    "volume": 2,
+    "speciesIndex": 16,
+    "vnName": "Cá Nhâm",
+    "scientificName": "Sardinella aurita",
+    "authorship": "Valenciennes, 1847",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích Sardinella Cuvier & Valenciennes", "latin": "Sardinella Cuvier & Valenciennes" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "15 - 27 cm. Lớn nhất 33 cm.",
+        "distribution": "Bờ Tây Thái Bình Dương, Đại Tây Dương, Địa Trung Hải, Hồng Hải, Hắc Hải, Indonesia, Philippines, Trung Quốc, Nhật Bản, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất nhiều.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991"
+      },
+      "en": {
+        "commonName": "Smooth sardine, Gilt pilshard, Gilt sardine.",
+        "size": "15 - 27 cm. Maximum 33 cm.",
+        "distribution": "Western Pacific Ocean, Atlantic Ocean, Mediterranean Sea, Red Sea, Black Sea, Indonesia, Philippines, China, Japan, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very numerous.",
+        "literature": "Herre, 1953 . Wang, 1962. Nguyen Khac Huong, 1991"
+      }
+    },
+    "synonyms": [
+      "Sardinella aurita Cuvier & Valenciennes, Hist. Nat. Poissons, Vol.20, p.261, pl.394, 1847; Regan, 1917; Herre , 1945.",
+      "Sardinella anchovia Cuvier & Valenciennes, Hist. Nat. Poissons, Vol.20, p.269, 1847.",
+      "Meletta mediterranea Cuvier & Valenciennes, Hist. Nat. Poissons, Vol.20, p.369, 1847.",
+      "Chlupea allecia Rafinesque. Caratteri nuovi animalipiant Sicilia, 1810 : 57.",
+      "Sardinella lemuru Bleeker, Nat. Tijds . Ned-Ind., Vol.4, p.500, 1853.",
+      "Clupea (Sardinella) lemuru Bleeker, Atlas Ichth., Vol.6, pl.(9)267, fig.1, 1866-72.",
+      "Clupea (Harengula) lemuru Bleeker, Atlas Ichth., Vol.6, p.108, 1866-72.",
+      "Clupea aurita Gunther, Cat . Fishes British Mus., Vol.7, p.420, 1868.",
+      "Clupea anchovia Gunther, Cat . Fishes British Mus., Vol.7, p.421, 1868.",
+      "Clupea lemuru Gunther, Cat. Fishes British Mus., Vol.7, p.430, 1868.",
+      "Clupea longiceps Day, Fishes India, p.637, 1878.",
+      "Sardinella euxina Antipa, Denk. Akad. Wiss. Wien, Vol.78 , p.46, pl.3, fig.12, 1806.",
+      "Clupea immaculata Kishinouye, Jour. Imperial Fisheries Bureau, Vol.14, p.96, pl.19, fig.1, 1907.",
+      "Clupea (Harengula) longiceps Weber & de Beaufort, Fishes. Indo-Australian Archigelago, Vol.2 , p.82, 1913."
+    ]
+  },
+  {
+    "id": "tap2-species-17",
+    "volume": 2,
+    "speciesIndex": 17,
+    "vnName": "Cá Trích bụng trắng",
+    "scientificName": "Sardinella clupeoides",
+    "authorship": "(Bleeker, 1849)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích Sardinella Cuvier & Valenciennes", "latin": "Sardinella Cuvier & Valenciennes" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "15 - 17 cm. Lớn nhất 19 cm",
+        "distribution": "Đông Ấn Độ Dương, Hồng Hải, Malaysia, Indonesia, Philippines, Trung Quốc, Nhật Bản, Việt Nam. Vịnh Bắc Bộ, Vịnh Thái Lan.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Tương đối nhiều.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "White-belly sardine.",
+        "size": "15 - 17 cm. Maximum 19 cm.",
+        "distribution": "East of Indian Ocean, Red Sea, Malaysia, Indonesia, Philippines, China, Japan, Vietnam. Gulf of Tonkin and Gulf of Thailand.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Relatively numerous.",
+        "literature": "Herre, 1953 . Wang, 1962 Nguyen Khac Huong, 1991"
+      }
+    },
+    "synonyms": [
+      "Amblygaster clupeoides Bleeker, Jour. Indian Archigelago, Vol.3, p.73, 1949.",
+      "Clupea clupeoides Gunther, Cat. Fishes British Mus., Vol.7, p.425, 1868.",
+      "Clupea (Sardinella) clupeoides Bleeker, Atlas Ichth., Vol.6, pl.(14)272, fig.1, 1866-72.",
+      "Clupea (Amblygastes) clupeoides Bleeker, Atlas Ichth., Vol.6, p.103, 1866-72; Weber & de Beaufort, 1913.",
+      "Sardinella clupeoides Jordan & Seale, Proc. U. S. Nat. Mus., Vol.28, p.770, 1905; Evermann & Seale, 1907; Regan, 1917; Herre, 1940-41; Fowler, 1941.",
+      "Clupea okinawensis Kishonouye, Jour. Imperial Fishes Bur., Vol.14, p.96, pl.19, fig.2, 1907."
+    ]
+  },
+  {
+    "id": "tap2-species-18",
+    "volume": 2,
+    "speciesIndex": 18,
+    "vnName": "Cá Trích thường",
+    "scientificName": "Sardinella fimbriata",
+    "authorship": "(Cuvier & Valenciennes, 1847)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Trích Sardinella Cuvier & Valenciennes", "latin": "Sardinella Cuvier & Valenciennes" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "11 - 15 cm.",
+        "distribution": "Hồng Hải, Ấn Độ Dương, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Vịnh Thái Lan.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Round-bodied sardine.",
+        "size": "11 - 15 cm.",
+        "distribution": "Red Sea, Indian Ocean, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin and Gulf of Thailand.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Comman, but relatively little.",
+        "literature": "Herre, 1953 . Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Spratella fimbriata Cuvier & Valenciennes, Hist. Nat. Poissons, Vol.20, p.359, pl.600, 1847.",
+      "Kowala lauta Cantor, Jour. Asiatic Soc. Bengal, Vol.8, p.1279, 1850.",
+      "Clupea (Sardinella) fimbriata Bleeker , Atlas Ichth., Vol.6, pl.(13) p.271, fig.5, 1866-72.",
+      "Clupea fimbriata Gunther, Cat. Fishes British Mus., Vol.7, p.427, 1868; Day,1878.",
+      "Clupea (Harengula) fimbriata Bleeker, Verh. Akad. Amsterdam, Vol.18, p.3, 1879; Weber & de Beaufort, 1913.",
+      "Harengula sundaica Jordan & Richardson, Bull. U. S.Bur. Fisheries, Vol.27, p.236, 1908.",
+      "Sardinella fimbriata Regan, Ann. Mag. Nat. Hist., ser.8, Vol.19, p.382, 1917; Fowler, 1927; Herre, 1936-37; Roxas, 1934; Umali,1936; Blanco, 1938; Domantay, 1940.",
+      "Clupea (Harengus) fimbriata Deraniyagala, Spoikia. Zeylanica, Vol.15, p.4.1., 1929."
+    ]
+  }
+]

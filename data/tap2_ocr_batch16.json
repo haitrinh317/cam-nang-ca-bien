@@ -1,0 +1,470 @@
+[
+  {
+    "id": "tap2-species-134",
+    "volume": 2,
+    "speciesIndex": 134,
+    "vnName": "Cá Úc gai mềm",
+    "scientificName": "Arius maculacanthus",
+    "authorship": "H. M. Smith, 1945",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Úc",
+        "latin": "Ariidae"
+      },
+      "genus": {
+        "vn": "Cá Úc Arius Cuvier and Valenciennes",
+        "latin": "Arius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Úc gai mềm",
+        "size": "10 - 16 cm.",
+        "distribution": "Ở biển và cửa sông, Thái Lan, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Thuỷ Sản 2 tp Hồ Chí Minh.",
+        "status": "Ít gặp.",
+        "literature": "Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "Weak spines sea catfish.",
+        "size": "10 - 16 cm.",
+        "distribution": "In the sea and in the estuary, Thailand, Vietnam. Southern Vietnam.",
+        "specimen": "HoChiMinh City Research Institute of Aquatic Products.",
+        "status": "Uncommon.",
+        "literature": "Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Arius malacanthus H. M. Smith, 1945 (Siam)."
+    ]
+  },
+  {
+    "id": "tap2-species-135",
+    "volume": 2,
+    "speciesIndex": 135,
+    "vnName": "Cá Úc quạt",
+    "scientificName": "Arius caelatus",
+    "authorship": "Cuvier and Valenciennes, 1840",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Úc",
+        "latin": "Ariidae"
+      },
+      "genus": {
+        "vn": "Cá Úc Arius Cuvier and Valenciennes",
+        "latin": "Arius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Úc quạt",
+        "size": "16 - 18cm. Lớn nhất 40 cm.",
+        "distribution": "Ở biển và cửa sông, Indonesia, Thái Lan, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Thuỷ Sản 2 tp Hồ Chí Minh.",
+        "status": "Ít gặp.",
+        "literature": "Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "Engraved sea catfish.",
+        "size": "16 - 18 cm. Maximum 40 cm.",
+        "distribution": "In the sea and in the estuary, Indonesia, Thailand, Vietsnam. Southern Vietnam.",
+        "specimen": "HoChiMinh City Research Institute of Aquatic Products.",
+        "status": "Uncommon.",
+        "literature": "Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Arius caelatus Cuvier and Valenciennes, 1840, Vol.5, p.66 (Batavia).",
+      "Tachysurus caelatus H. M. Smith, 1945, pp.410-411 (Siam)."
+    ]
+  },
+  {
+    "id": "tap2-species-136",
+    "volume": 2,
+    "speciesIndex": 136,
+    "vnName": "Cá Vồ chó",
+    "scientificName": "Arius sagor",
+    "authorship": "(Hamilton [né Bunchanan], 1822)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Úc",
+        "latin": "Ariidae"
+      },
+      "genus": {
+        "vn": "Cá Úc Arius Cuvier and Valenciennes",
+        "latin": "Arius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Vồ chó",
+        "size": "18 - 20 cm.",
+        "distribution": "Ở biển và cửa sông, Indonesia, Philippines, Thái Lan, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Thuỷ Sản 2 tp Hồ Chí Minh.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "Canine sea catfish.",
+        "size": "18 - 20 cm.",
+        "distribution": "In the sea and in the estuary, Indonesia, Philippines, Thailand, Vietnam. Southern Vietnam.",
+        "specimen": "HoChiMinh City Research Institute of Aquatic Products.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Pimelodus sagor Hamilton (né Buchanan), Fishes Ganges, pp.169, 376, 1822.",
+      "Bagrus sagor Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.14, p.444, 1839.",
+      "Bagrus sondaicus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.14, p.444, 1839; Cantor, 1849.",
+      "Bagrus javensis Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.14, p.445, 1839.",
+      "Bagrus doroides Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.14, p.448, 1839; Gunther, 1864.",
+      "Arius doroides Bleeker, Verh. Bat. Gen., Vol.25, p.56, 1853.",
+      "Arius sagor Bleeker, Verh. Bat. Gen., Vol.25, p.56, 1853; Gunther, 1864; Day, 1878; Seale, 1910; Weber and de Beaufort, 1913; Herre, 1936-37.",
+      "Hexanematichthys sundaicus Bleeker, Atlas Ichth., Vol.2, p.26, pl.62, 1862.",
+      "Hexanematichthys sagor Ogilby, Proc. Linn. Soc. New. South Wales, Vol.26, p.62, 1862.",
+      "Galeichthys sundaicus Fowler, Proc. Acad. Nat. Sci. Phil., p.462, 1905.",
+      "Tachysurus sagor Suvatti, Index Fishes Siam, p.63, 1937; Fowler, 1941."
+    ]
+  },
+  {
+    "id": "tap2-species-137",
+    "volume": 2,
+    "speciesIndex": 137,
+    "vnName": "Cá Úc thiều giả",
+    "scientificName": "Arius harmandi",
+    "authorship": "(Sauvage, 1880)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Úc",
+        "latin": "Ariidae"
+      },
+      "genus": {
+        "vn": "Cá Úc Arius Cuvier and Valenciennes",
+        "latin": "Arius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Úc thiều giả",
+        "size": "15 cm.",
+        "distribution": "Thái Lan, Việt Nam. Phú Quốc.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "False sea catfish.",
+        "size": "15 cm.",
+        "distribution": "Thailand, Vietnam. Phuquoc Islands.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Hemiarius harmandi Sauvage, p.230, 1880; also 1881, p.162 (Ile de Phu Quoc, in Gulf of Siam); p.171, pl.8, fig.3, Bull. Soc. Philom."
+    ]
+  },
+  {
+    "id": "tap2-species-138",
+    "volume": 2,
+    "speciesIndex": 138,
+    "vnName": "Cá Thiều",
+    "scientificName": "Hemipimelodus siamensis",
+    "authorship": "Sauvage, 1878",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Úc",
+        "latin": "Ariidae"
+      },
+      "genus": {
+        "vn": "Cá Thiều Hemipimelodus Bleeker",
+        "latin": "Hemipimelodus Bleeker"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Thiều",
+        "size": "20 cm.",
+        "distribution": "Thái Lan, Việt Nam. Phú Quốc.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Ít gặp.",
+        "literature": "Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "Siam sea catfish.",
+        "size": "20 cm.",
+        "distribution": "Thailand, Vietnam. Phuquoc Islands.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Hemipimelodus siamensis Sauvage, Bull. Soc. Philom, p.234, 1878; H. M. Smith, 1945."
+    ]
+  },
+  {
+    "id": "tap2-species-139",
+    "volume": 2,
+    "speciesIndex": 139,
+    "vnName": "Cá Hau",
+    "scientificName": "Cranoglanis multiradiatus",
+    "authorship": "(Koller, 1927)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Ngạnh",
+        "latin": "Bagridae"
+      },
+      "genus": {
+        "vn": "Cá Hau Cranoglanis Peters",
+        "latin": "Cranoglanis Peters"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Hau",
+        "size": "25 - 35 cm.",
+        "distribution": "Ở biển và cửa sông, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Chinese bagrid catfish.",
+        "size": "25 - 35 cm.",
+        "distribution": "In the sea and in the estuary, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Cranoglanis sinensis Petres, Monatsb. Akad. Wiss. Berl., 1880, p.1030; Chevey and Lemasson, 1937.",
+      "Cranoglanis multiradiatus Koller, Linnan Sci. Jour., Vol.10, No.2-3, p.262, 1931."
+    ]
+  },
+  {
+    "id": "tap2-species-140",
+    "volume": 2,
+    "speciesIndex": 140,
+    "vnName": "Cá Kìm mõm dài",
+    "scientificName": "Euleptorhamphus longirostris",
+    "authorship": "(Cuvier, 1817)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm mõm dài Euleptorhamphus Gill",
+        "latin": "Euleptorhamphus Gill"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm mõm dài",
+        "size": "Lớn nhất 49 cm.",
+        "distribution": "Nam Phi, Ấn Độ Dương, Indonesia, Nhật Bản, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Oceanic flying halfbeak.",
+        "size": "Maximum 49 cm.",
+        "distribution": "South Africa, Indian Ocean, Indonesia, Japan, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hemirhamphus longirostris Cuvier, Regne Animal., ed.2, No.2, p.235, 1829.",
+      "Euleptorhamphus longirostris Barnard, Ann. South African Mus., Vol.20,No.1, p.264, 1925; Bessednov, 1963."
+    ]
+  },
+  {
+    "id": "tap2-species-141",
+    "volume": 2,
+    "speciesIndex": 141,
+    "vnName": "Cá Kìm biển vây",
+    "scientificName": "Zenarchopterus buffoni",
+    "authorship": "(Cuvier and Valenciennes, 1846)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm biển vây Zenarchopterus Gill",
+        "latin": "Zenarchopterus Gill"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm biển vây",
+        "size": "9 - 12 cm. Lớn nhất 23 cm.",
+        "distribution": "Ấn Độ, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Buffo halfbeak.",
+        "size": "9 - 12 cm. Maximum 23 cm.",
+        "distribution": "India, Indonesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hemirhamphus buffonis Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.19, p.48, 1846; Bleeker, 1852; Gunther, 1966; Day, 1878.",
+      "Hemirhamphus striga Blyth, Jour. Asiatic Soc. Bengal, Vol.27, p.288, 1859.",
+      "Zenarchopterus buffonis Bleeker, Ned. Tijds. Dierk., Vol.3, p.162, 1866; Fowler, 1905; Seale, 1910; Herre, 1933.",
+      "Zenarchopterus buffoni Bleeker, Atlas Ichth., Vol.6, p.62, pl.254, fig.3, 1866-72; Weber and de Beaufort, 1922; Herre, 1944; Morh, 1926.",
+      "Zenarchopterus maculosus Garman, Bull. Mus. Comp. Zool., Vol.39, p.239, pl.5, fig.4, 1903."
+    ]
+  },
+  {
+    "id": "tap2-species-142",
+    "volume": 2,
+    "speciesIndex": 142,
+    "vnName": "Cá Kìm môi dài",
+    "scientificName": "Hemirhamphus georgii",
+    "authorship": "Cuvier and Valenciennes, 1846",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm thường Hemirhamphus Cuvier and Valenciennes",
+        "latin": "Hemirhamphus Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm môi dài",
+        "size": "15 - 20 cm. Lớn nhất 29 cm.",
+        "distribution": "Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Long-tipped garfish.",
+        "size": "15 - 20 cm. Maximum 29 cm.",
+        "distribution": "Indonesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively numerous.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hemirhamphus georgii Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.19, p.37, pl.555, 1846; Cantor, 1850; Meyer, 1885.",
+      "Hemirhamphus georgii Bleeker, Vreh. Bat. Gen., Vol.24, Snoekacht. Viss., p.19, 1852; Day, 1878.",
+      "Hemirhamphus cantoris Gunther, Cat. Fishes British Mus., Vol.6, p.264, 1866.",
+      "Hemirhamphus cantori Bleeker, Ned. Tijds. Dierk., Vol.3, p.145, 1868; Day, 1878.",
+      "Hemirhamphus cantoris Jordan and Seale, Bull. U.S. Bur. Fisheries, Vol.26, p.8, 1907; Fowler, 1918.",
+      "Hemirhamphus georgii Weber and de Beaufort, Fishes Indo-Australian Archipelago, Vol.4, p.147, fig.56, 1922.",
+      "Hemirhamphus georgii Fowler, Proc. Acad. Nat. Sci. Phila., Vol.79, p.262, 1927; Herre, 1944."
+    ]
+  },
+  {
+    "id": "tap2-species-143",
+    "volume": 2,
+    "speciesIndex": 143,
+    "vnName": "Cá Kìm thân dẹp",
+    "scientificName": "Hemirhamphus marginatus",
+    "authorship": "(Forskal, 1775)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm thường Hemirhamphus Cuvier and Valenciennes",
+        "latin": "Hemirhamphus Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm thân dẹp",
+        "size": "30 cm.",
+        "distribution": "Hồng Hải, Indonesia, New Caledonia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Flat-bodied garfish, Barred halfbeak.",
+        "size": "30 cm.",
+        "distribution": "Red Sea, Indonesia, New Caledonia, Philippines, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Esox marginatus Forskal, Descript. Animal., p.67, 1775.",
+      "Hemirhamphus lutkei Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.19, p.36, 1846.",
+      "Hemirhamphus russelli Bleeker, Verh. Bat. Gen., Vol.24, Snoekacht. Viss., p.17, 1852, not of Cuvier and Valenciennes.",
+      "Hemirhamphus fasciatus Bleeker, Nat. Tijds. Ned.-Ind., Vol.5, p.80, 1853; Gunther, 1866; Weber, 1913.",
+      "Hemirhamphus marginatus Gunther, Cat. Fishes British Mus., Vol.6, p.270, 1866; Bleeker, 1866; Weber and de Beaufort, 1922.",
+      "Hemirhamphus marginatus Evermann and Seale, Bull. U.S. Bur. Fisheries, Vol.26, p.58, 1907; Jordan and Richardson, 1908; Fowler, 1927; Herre, 1944."
+    ]
+  }
+]

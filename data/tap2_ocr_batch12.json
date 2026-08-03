@@ -1,0 +1,480 @@
+[
+  {
+    "id": "tap2-species-94",
+    "volume": 2,
+    "speciesIndex": 94,
+    "vnName": "Cá Lịch chấm tia",
+    "scientificName": "Gymnothorax fimbriatus",
+    "authorship": "(Bennett, 1831)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch trần Gymnothorax Bloch",
+        "latin": "Gymnothorax Bloch"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch chấm tia",
+        "size": "12 - 24 cm. Lớn nhất 80 cm.",
+        "distribution": "Đông Châu Phi, Hồng Hải, Ấn Độ Dương, Australia, Indonesia, Micronesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Fimbriated moray.",
+        "size": "12 - 24 cm. Maximum 80 cm.",
+        "distribution": "Eastern Africa, Red Sea, Indian Ocean, Australia, Indonesia, Micronesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Muraena fimbriata Bennett, Proc. Comm. Zool. Soc., p.168, 1831; Gunther, 1870.",
+      "Muraena fimbriata Day, Fishes of India, p.670, 1878.",
+      "Gymnothorax fimbriatus Chen, Bull. Biol. Dep. Sun Yet-sen Univ., Vol.1, No.1, p.35, fig.20, 1929."
+    ]
+  },
+  {
+    "id": "tap2-species-95",
+    "volume": 2,
+    "speciesIndex": 95,
+    "vnName": "Cá Lịch khoang răng khía",
+    "scientificName": "Gymnothorax reticularis",
+    "authorship": "Bloch, 1795",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch trần Gymnothorax Bloch",
+        "latin": "Gymnothorax Bloch"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch khoang răng khía",
+        "size": "30 - 40 cm. Lớn nhất 43 cm.",
+        "distribution": "Ấn Độ Dương, Autralia, Indonesia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Reticular moray.",
+        "size": "30 - 40 cm. Maximum 43 cm.",
+        "distribution": "India Ocean, Australia, Indonesia, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Gymnothorax reticularis Bloch, Nauturges Austand. Fische, Vol.9, p.85, pl.416, 1795; Wu, 1929.",
+      "Muraena (Priodonophis) reticularis Chevey, 9e note Inst. Ocean. Indo-Chine, 1932, p.18.",
+      "Priodonophis reticularis Wang, Ngư loại phân loại học, p.215, fig.220, 1958.",
+      "Muraena reticularis Gunther, Cat. Fishes Brit. Mus., Vol.8, p.105, 1870.",
+      "Lycodontis reticularis Fowler, Hong Kong Naturalist; Vol.3, p.137, fig.12, 1932."
+    ]
+  },
+  {
+    "id": "tap2-species-96",
+    "volume": 2,
+    "speciesIndex": 96,
+    "vnName": "Cá Lịch chấm đen",
+    "scientificName": "Gymnothorax melanospilus",
+    "authorship": "(Bleeker, 1955)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch trần Gymnothorax Bloch",
+        "latin": "Gymnothorax Bloch"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch chấm đen",
+        "size": "50 - 65 cm. Lớn nhất 100 cm.",
+        "distribution": "Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Weber and de Beaufort, 1916. Trương Xuân Lâm, 1962, Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Black-pointed moray.",
+        "size": "50 - 65 cm. Maximum 100 cm.",
+        "distribution": "China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Weber and de Beaufort, 1916. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Muraena melanospila Bleeker, Nat.Tijds. Ned.-Ind., Vol.9, p.279, 1855; Gunther, 1870.",
+      "Gymnothorax melanospilus Bleeker, Atl. Ichth., Vol.4, p.90, 1864.",
+      "Gymnothorax pescadoris Jordan and Evermann, Proc. U. S. Nat. Mus., Vol.25, p.326, 1902.",
+      "Gymnothorax melanospilos Jordan & Richardson, Mem. Carnegie Mus., Vol.4, p.174, 1909."
+    ]
+  },
+  {
+    "id": "tap2-species-97",
+    "volume": 2,
+    "speciesIndex": 97,
+    "vnName": "Cá Lịch khoang răng trơn",
+    "scientificName": "Gymnothorax petelli",
+    "authorship": "Bleeker, 1856",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch trần Gymnothorax Bloch",
+        "latin": "Gymnothorax Bloch"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch khoang răng trơn",
+        "size": "110 cm.",
+        "distribution": "Ấn Độ Dương, Mauritius, Hồng Hải, Nhật Bản, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Weber and de Beaufort, 1916. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Petelli moray.",
+        "size": "110 cm.",
+        "distribution": "Indian Ocean, Mauritius, Red Sea, Japan, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Weber and de Beaufort, 1916. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Muraena petelli Bleeker, Nat. Tijds. Ned.-Ind. Vol.11, p.54, 1856; Gunther, 1870.",
+      "Muraena interrupta Kaup, Cat. Apodal Fish., p.67, 1856.",
+      "Gymnothorax petelli Bleeker, Atlas. Ichth., Vol.4, p.99, 1864. Jordan and Richardson, 1908.",
+      "Gymnothorax leucacme Jenkins, Bull. U. S. Fish. Comm., Vol.22, p.427, (1902) 1904.",
+      "Gymnothorax waialuae Snyder, Bull. U. S. Fish. Comm., Vol.22, p.520, (1902) 1904."
+    ]
+  },
+  {
+    "id": "tap2-species-98",
+    "volume": 2,
+    "speciesIndex": 98,
+    "vnName": "Cá Lịch sọc chấm",
+    "scientificName": "Gymnothorax reevesi",
+    "authorship": "(Richardson, 1844)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch trần Gymnothorax Bloch",
+        "latin": "Gymnothorax Bloch"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch sọc chấm",
+        "size": "40 - 50 cm. Lớn nhất 69 cm.",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Reevesi moray.",
+        "size": "40 - 50 cm. Maximum 69 cm.",
+        "distribution": "Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Muraena reevesi Richardson, Voy. Sulphur. Fishes, p.109, pl.49, fig.2, 1844. Gunther, 1870.",
+      "Lycodontis reevesi Fowler, Hong Kong Naturalist, Vol.3, p.139, 1932.",
+      "Gymnothorax reevesi (Richardson) in Zhang, Nam Hải Ngư loại chí, p.192, 1962, fig.160."
+    ]
+  },
+  {
+    "id": "tap2-species-99",
+    "volume": 2,
+    "speciesIndex": 99,
+    "vnName": "Cá Lịch đồng mầu",
+    "scientificName": "Gymnomuraena concolor",
+    "authorship": "Ruppell, 1835",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch biển",
+        "latin": "Muraenidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch không vây Gymnomuraena Lacepede",
+        "latin": "Gymnomuraena Lacepede"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch đồng mầu",
+        "size": "16 cm. Lớn nhất 32 cm.",
+        "distribution": "Australia, Indonesia, Hồng Hải, Mauritius, Philippines, Hawaii, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Weber and de Beaufort, 1916. Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Unicolor snake moray.",
+        "size": "16 cm. Maximum 32 cm.",
+        "distribution": "Autralia, Indonesia, Red Sea, Mauritius, Philippines, Hawaii, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Weber and de Beaufort, 1916. Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Uropterygius concolor Ruppell, New Wirbelt., Fische, Rothen Meeres, p.83, 1835; Jordan and Seale, 1905; Herre, 1928.",
+      "Gymnomuraena fusca Peters, Monasber, Akad. Wiss. Berlin, p.524, 1867; Gunther, 1870.",
+      "Gymnomuraena concolor Gunther, Monasber. Akad. Wiss. Berlin. p.134, 1870. Weber and Beaufort, 1916.",
+      "Muraena tile Seale, Occas. Papers Bishop Mus., Vol.1, p.62, 1901."
+    ]
+  },
+  {
+    "id": "tap2-species-100",
+    "volume": 2,
+    "speciesIndex": 100,
+    "vnName": "Cá Chình giun đầu to",
+    "scientificName": "Moringua macrocephalus",
+    "authorship": "Bleeker, 1863",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình giun",
+        "latin": "Moringuidae"
+      },
+      "genus": {
+        "vn": "Cá Chình giun Moringua Gray",
+        "latin": "Moringua Gray"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình giun đầu to",
+        "size": "20 - 30 cm. Lớn nhất 70 cm.",
+        "distribution": "Australia, Indonesia, New Guinea, Samoa, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Big-headed spaghetti eel.",
+        "size": "20 - 30 cm. Maximum 70 cm.",
+        "distribution": "Australia, New Guinea, Samoa, Philippines, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Aphthalmichthys macrocephalus Bleeker, Ned. Tijds. Dierk., Vol.1, p.165, 1863 - Atl. Ichth., Vol.4, p.17, 1864; Weber, 1913.",
+      "Moringua macrocephala Gunther, Cat. Brit. Mus., Vol.8, p.92, 1870. Day, 1878; Jordan and Seale, 1906.",
+      "Rataboura macrocephalus Chen, Bull. Biol. Dep. Sun. Yet-Sen Univ., Vol.1, No.1, p.27, fig.13, 1929.",
+      "Moringua (Aphthalmichthys) macrocephala Steindachner, Sitzb. Akad. Wien, Vol.115, p.1422, 1906."
+    ]
+  },
+  {
+    "id": "tap2-species-101",
+    "volume": 2,
+    "speciesIndex": 101,
+    "vnName": "Cá Chình giun Gia-va",
+    "scientificName": "Moringua javanica",
+    "authorship": "(Kaup, 1856)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình giun",
+        "latin": "Moringuidae"
+      },
+      "genus": {
+        "vn": "Cá Chình giun Moringua Gray",
+        "latin": "Moringua Gray"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình giun Gia-va",
+        "size": "95 cm.",
+        "distribution": "Đông Ấn Độ, Australia, Indonesia, Polynesia, Philippines, Nhật Bản, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Hiếm.",
+        "literature": "Weber and de Beaufort, 1916. Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Java spaghetti eel, Finless spaghetti eel.",
+        "size": "95 cm.",
+        "distribution": "Eastern India, Australia, Indonesia, Polynesia, Philippines, Japan, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Weber and de Beaufort, 1916. Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Aphthalmichthys javanicus Kaup, Cat. Apodal Fish, Vol.105, 1856. Bleeker, 1864; Herre, 1953.",
+      "Moringua javanica Gunther, Cat. Fishes British Mus., Vol.8, p.92, 1870; Weber and de Beaufort, 1916.",
+      "Moringua hawaiiensis Snyder, Bull. U. S. Fish. Comm., Vol.22, p.517, 1904; Jordan and Evermann, 1905.",
+      "Moringua javanica Gunther, Fische der Sudsee, Heft.9, p.405, 1910."
+    ]
+  },
+  {
+    "id": "tap2-species-102",
+    "volume": 2,
+    "speciesIndex": 102,
+    "vnName": "Cá Dưa",
+    "scientificName": "Muraenesox cinereus",
+    "authorship": "(Forskal, 1775)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Dưa",
+        "latin": "Muraenesocidae"
+      },
+      "genus": {
+        "vn": "Cá Dưa Muraenesox McClelland",
+        "latin": "Muraenesox McClelland"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Dưa",
+        "size": "130 - 150 cm. Lớn nhất 200 cm",
+        "distribution": "Đồng Phi, Ấn Độ Dương, Australia, Indonesia, Polynesia, Hồng Hải, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Thường gặp, nhiều.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Sharp toothed eel, Pike eel, Pike conger.",
+        "size": "130 - 150 cm. Maximum : 200 cm.",
+        "distribution": "East Africa, Indian Ocean, Australia, Indonesia, Polynesia, Red Sea, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Muraena cinerea Forskal, Descript. Animals, p.10, pl.22, 1775.",
+      "Muraena arabica Bloch & Schneider, Syst. Ichth., p.488, 1801.",
+      "Muraenesox bagio Kaup, Cat. Apodal Fishes British Mus., p.116, pl.14, fig.73, 1856; Bleeker, 1864.",
+      "Ophisurus rostratus Quoy and Gaimard, Voy. Uranie, p.242, 1846.",
+      "Muraenesox singapurensis Bleeker, Atlas Ichth., Vol.4, p.25, pl.7, fig.2, 1864.",
+      "Muraenesox arabicus Fowler, Hong Kong Naturalist, Vol.3, No.1, pp.53-55, fig.3, 1932.",
+      "Muraenesox cinereus Gunther, Cat. Fishes British Mus., Vol.8, p.46, 1870; Day, 1878; Meyer, 1885; Jordan & Richardson, 1908; Seale, 1910; Weber and de Beaufort, 1916; Herre, 1923; Fowler, 1927; Herre, 1933; Blanco, 1938.",
+      "Congrus tricuspidatus Richardson, Voy. Sulphur, Fish, p.105, 1846.",
+      "Conger hamo Schlegel, Fauna Japon. Poiss., p.262, 1846.",
+      "Conger longirostris Bennett, Life of Raffles, p.692, 1830.",
+      "Muraenesox hamiltoni McClelland, Calcutta Jour. Nat. Hist., Vol.4, p.182, 1845.",
+      "Muraenesox bengalensis McClelland, Calcutta Jour. Nat. Hist., Vol.5, p.182, 1845."
+    ]
+  },
+  {
+    "id": "tap2-species-103",
+    "volume": 2,
+    "speciesIndex": 103,
+    "vnName": "Cá Lạt",
+    "scientificName": "Muraenesox talabon",
+    "authorship": "(Cantor, 1850)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Dưa",
+        "latin": "Muraenesocidae"
+      },
+      "genus": {
+        "vn": "Cá Dưa Muraenesox McClelland",
+        "latin": "Muraenesox McClelland"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lạt",
+        "size": "150 cm.",
+        "distribution": "Indonesia, Andamans, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Weber & de Beaufort, 1916. Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Talabon pike eel.",
+        "size": "150cm.",
+        "distribution": "Indonesia, Andamans, Malaysia, Philippines, Japan, China, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Weber & de Beaufort, 1916. Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Conger talabon Cantor, Jour. Asiatic Soc. Bengal, Vol.18, p.1294, 1850; Bleeker, 1852.",
+      "Conger (Muraena) tababon Cuvier, Regne Animals, Vol.2, edit, p.350.",
+      "Muraenesox pristis Kaup, Cat. Apodal Fishes British Mus., p.116, 1856.",
+      "Muraenesox tababon Bleeker, Atlas Ichth., Vol.4, p.22, pl.8, fig.2, 1864; Day, 1878; Weber & de Beaufort, 1916; Herre, 1933."
+    ]
+  }
+]

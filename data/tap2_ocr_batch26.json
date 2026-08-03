@@ -1,0 +1,466 @@
+[
+  {
+    "id": "tap2-species-234",
+    "volume": 2,
+    "speciesIndex": 234,
+    "vnName": "Cá Nhồng đuôi vàng",
+    "scientificName": "Sphyraena obtusata",
+    "authorship": "Cuvier and Valenciennes, 1829",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhồng",
+        "latin": "Sphyraenidae"
+      },
+      "genus": {
+        "vn": "Cá Nhồng Sphyraena Rose",
+        "latin": "Sphyraena Rose"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhồng đuôi vàng",
+        "size": "25 - 30 cm. Lớn nhất 180 cm.",
+        "distribution": "Đông Phi, Madagascar, Hồng Hải, Ấn Độ, Australia, Indonesia, Malaysia, Micronesia, Polynesia, Philippines, Thái Lan, Nhật Bản, Trung Quốc, Việt Nam.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường 1993"
+      },
+      "en": {
+        "commonName": "Blunt barracuda, Obtuse barracuda.",
+        "size": "25 - 30 cm. Maximum 180 cm.",
+        "distribution": "East Africa, Madagascar, Red Sea, India, Australia, Indonesia, Malaysia, Micronesia, Polynesia, Philippines, Thailand, Japan, China, Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Sphyraena obtusata Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.324, pl.10, fig.2, 1803; Bleeker, 1849; Cantor, 1850; Gunther, 1860; Kner, 1865-67; Klunzinger, 1870; Seale, 1901; Jordan and Seale, 1906; Seale and Bean, 1907; Weber and de Beaufort, 1922; Fowler, 1935; Herre, 1934.",
+      "Sphyraena flavicauda Ruppell, Neue Wirbelthiere, Fische des Rothen Meers, p.100, 1835.",
+      "Sphyraena forsteri Jordan and Seale, Bull. Bur. Fish. Washington, Vol.25, p.219, 1906, not of Cuvier and Valenciennes."
+    ]
+  },
+  {
+    "id": "tap2-species-235",
+    "volume": 2,
+    "speciesIndex": 235,
+    "vnName": "Cá Nhồng thường",
+    "scientificName": "Sphyraena langsar",
+    "authorship": "Bleeker, 1803",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhồng",
+        "latin": "Sphyraenidae"
+      },
+      "genus": {
+        "vn": "Cá Nhồng Sphyraena Rose",
+        "latin": "Sphyraena Rose"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhồng thường",
+        "size": "31 cm.",
+        "distribution": "Srilanca, Australia, Fiji, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Common barracuda, Langsar barracuda.",
+        "size": "31 cm.",
+        "distribution": "Sri Lanka, Australia, Fiji, Indonesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Cenrtral Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Sphyraena langsar Bleeker, Nat. Tijds. Ned.-Ind., Vol.7, p.367, 1854; Gunther, 1860; Evermann and Seale, 1907; Jordan and Starks, 1917; Weber and de Beaufort, 1922; Fowler, 1927; Herre, 1940-41."
+    ]
+  },
+  {
+    "id": "tap2-species-236",
+    "volume": 2,
+    "speciesIndex": 236,
+    "vnName": "Cá Nhồng lớn",
+    "scientificName": "Sphyraena barracuda",
+    "authorship": "(Walbaum, 1792)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhồng",
+        "latin": "Sphyraenidae"
+      },
+      "genus": {
+        "vn": "Cá Nhồng Sphyraena Rose",
+        "latin": "Sphyraena Rose"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhồng lớn",
+        "size": "Lớn nhất 180cm.",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Thái Bình Dương, Hồng Hải, Madagascar, Hawaii, Indonesia, Malaysia, Philippines, Nhật Bản, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Great barracuda, Short barracuda.",
+        "size": "Maximum 180 cm.",
+        "distribution": "Atlantic Ocean, Indian Ocean, Pacific Ocean, Red Sea, Madagascar, Hawaii, Indonesia, Malaysia, Philippines, Japan, Vietnam. Cenrtral Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Orsi, 1974"
+      }
+    },
+    "synonyms": [
+      "Umbra minor (the barracuda) Catesby, Fishes of Carolina, Vol.2, p.1, pl.1, 1743.",
+      "Esox barracuda Walbaum, Artedi Piscium, Vol.3, p.94, 1792.",
+      "Sphyraena sphyraena var. picuda Bloch and Schneider, Syst. Ichth., p.110, 1801.",
+      "Sphyraena barracuda Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.343, 1829; Fowler, 1929; Herre, 1936-37.",
+      "Sphyraena commersonii Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.352, 1829; Bleeker, 1849.",
+      "Sphyraena commersoni Day, Fishes India, p.343, 1878; Jordan and Richardson, 1908.",
+      "Sphyraena picuda Bloch and Schneider, in Weber and de Beaufort, Fishes Indo-Australian archipelago, Vol.4, p.224, 1922."
+    ]
+  },
+  {
+    "id": "tap2-species-237",
+    "volume": 2,
+    "speciesIndex": 237,
+    "vnName": "Cá Nhồng hàm ngắn",
+    "scientificName": "Sphyraena brachygnathus",
+    "authorship": "Bleeker, 1854",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhồng",
+        "latin": "Sphyraenidae"
+      },
+      "genus": {
+        "vn": "Cá Nhồng Sphyraena Rose",
+        "latin": "Sphyraena Rose"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhồng hàm ngắn",
+        "size": "33 cm.",
+        "distribution": "Australia, Indonesia, Malaysia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Short-jawed barracuda.",
+        "size": "33 cm.",
+        "distribution": "Australia, Indonesia, Malaysia, Philippines, Vietnam. Cenrtral Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Sphyraena brachygnathus Bleeker, Nat. Tijds. ned.-Ind., Vol.7, p.368, 1854; Kner, 1865-67; Weber and de Beaufort, 1922; Herre, 1940-41."
+    ]
+  },
+  {
+    "id": "tap2-species-238",
+    "volume": 2,
+    "speciesIndex": 238,
+    "vnName": "Cá Nhồng xanh",
+    "scientificName": "Sphyraena chrysotaenia",
+    "authorship": "Klunzinger, 1884",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhồng",
+        "latin": "Sphyraenidae"
+      },
+      "genus": {
+        "vn": "Cá Nhồng Sphyraena Rose",
+        "latin": "Sphyraena Rose"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhồng xanh",
+        "size": "",
+        "distribution": "Hồng Hải, Indonesia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Green-and-gold barracuda.",
+        "size": "",
+        "distribution": "Red Sea, Indonesia, Philippines, Vietnam. Cenrtral Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Sphyraena chrysotaenia Klunzinger, Fische Rothen Meeres, Vol.1, p.128, pl.9, fig.3, 1884; Boulenger, 1887; Steindachner, 1902; Myers, 1940.",
+      "Sphyraena aureoflammea Seale, Philippines Jour. Sci., Vol.4A, p.502, 1909; Fowler and Bean, 1922; Herre, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-239",
+    "volume": 2,
+    "speciesIndex": 239,
+    "vnName": "Cá Nhồng vây chấm",
+    "scientificName": "Sphyraena acutipinnis",
+    "authorship": "Day, 1876",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhồng",
+        "latin": "Sphyraenidae"
+      },
+      "genus": {
+        "vn": "Cá Nhồng Sphyraena Rose",
+        "latin": "Sphyraena Rose"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhồng vây chấm",
+        "size": "60 - 69 cm. Lớn nhất 80 cm.",
+        "distribution": "Đông Phi, Australia, Hawaii, Micronesia, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Myers, 1991. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Cheekflap barracuda, Point-finned sea pike.",
+        "size": "60 - 69 cm. Maximum 80 cm.",
+        "distribution": "East Africa, Australia, Hawaii, Micronesia, Vietnam. Cenrtral Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Myers, 1991. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Sphyraena acutipinnis Day, Fishes India, 1876.",
+      "Sphyraena helleri Jenkins, 1901."
+    ]
+  },
+  {
+    "id": "tap2-species-240",
+    "volume": 2,
+    "speciesIndex": 240,
+    "vnName": "Cá Đối mục",
+    "scientificName": "Mugil cephalus",
+    "authorship": "Linnaeus, 1758",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối mục",
+        "size": "30 - 40 cm. Lớn nhất 90 cm.",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Thái Bình Dương, Hồng Hải, Mauritius, Ấn Độ, Australia, New Zealand, Địa Trung Hải, Indonesia, Hawaii, Malaysia, Philippines, Thái Lan, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1963. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Common mullet, Striped mullet.",
+        "size": "30 - 40 cm. Maximum 90 cm.",
+        "distribution": "Atlantic Ocean, Indian Ocean, Pacific Ocean, Red Sea, Madagascar, Mauritius, India, Australia, New Zealand, Mediterranean Sea, Indonesia, Hawaii, Malaysia, Philippines, Thailand, Japan, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Zhang, 1963. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil cephalus Linnaeus, Syst. Nat., ed.10, p.316, 1758; Hamilton (not of Buchanan), 1822; Evermann and Jenkins, 1892; Jordan and Richardson, 1908; Weber and de Beaufort, 1922; Jordan and Hubbs, 1925; Fowler, 1928.",
+      "Mugil albula Linnaeus, Syst. Nat., ed.12, p.520, 1766; Snyder, 1904.",
+      "Mugil our Forskal, Descript. Animal., p.74, 1775; Ruppell, 1835; Jordan and Snyder, 1901.",
+      "Mugil cephalotus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.11, p.110, 1836; Kner, 1815; Bleeker, 1873.",
+      "Mugil japonicus Schlegel, Fauna Japonica, Pisces, p.134, pl.72 (bad), 1846; Bleeker, 1878.",
+      "Mugil macrolepidotus Richardson, Ichth. China and Japan, p.249, 1846.",
+      "Mugil dobula Gunther, Cat. Fishes British Mus., Vol.3, p.420, with text fig. 1861.",
+      "Mugil oeur Klunzinger, Abh. Zool. Bot. Gesell. Wien, Vol.20, p.829, 1870; Day, 1878; Rutter, 1897."
+    ]
+  },
+  {
+    "id": "tap2-species-241",
+    "volume": 2,
+    "speciesIndex": 241,
+    "vnName": "Cá Đối đất",
+    "scientificName": "Mugil dussumieri",
+    "authorship": "(Cuvier and Valenciennes, 1836)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối đất",
+        "size": "10 - 15 cm. Lớn nhất 35 cm.",
+        "distribution": "Ấn Độ, Srilanca, Australia, Indonesia, Malaysia, Philippines, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Thicklipped mullet.",
+        "size": "10 - 15 cm. Maximum 35 cm.",
+        "distribution": "India, Sri Lanka, Australia, Indonesia, Malaysia, Philippines, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil dussumieri Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.11, p.109, 1836; Bleeker, 1848; Day, 1878; Weber and de Beaufort, 1922; Herre, 1927; Fowler, 1928.",
+      "Mugil sundanensis Bleeker, Nat. Tijds. Ned.-Ind, Vol.4, p.265, 1853; Bleeker, 1858; Gunther, 1861; Meyer, 1885; Jordan and Seale, 1907; Evermann and Seale, 1907.",
+      "Mugil meyeri Gunther, Ann. Mag. Nat. Hist., ser.4, Vol.9, p.439, 1872; Meyer, 1885.",
+      "Mugil lepidoterus Fowler, Proc. Acad. Nat. Sci. Phila., Vol.70, p.9, fig.4, 1918; Rosax, 1934.",
+      "Mugil javanicus Bleeker, Nat. Tijds. Ned.-Ind., Vol.3, p.701, 1852.",
+      "Mugil brachysoma Bleeker, Nat. Tijds. Ned.-Ind., Vol.9, p.309, 1855.",
+      "Mugil valenciennesii Bleeker, Nat. Tijds. Ned.-Ind., Vol.16, p.277, 1858-59."
+    ]
+  },
+  {
+    "id": "tap2-species-242",
+    "volume": 2,
+    "speciesIndex": 242,
+    "vnName": "Cá Đối anh",
+    "scientificName": "Mugil engeli",
+    "authorship": "Bleeker, 1858",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối anh",
+        "size": "12 - 15 cm.",
+        "distribution": "Indonesia, Hawaii, Melanesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Kanda mullet.",
+        "size": "12 - 15 cm.",
+        "distribution": "Indonesia, Hawaii, Melanesia, Philippines, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil engeli Bleeker, Nat. Tijds. End.-Ind., Vol.16, p.277, 1858-59; Gunther, 1861; Weber and de Beaufort, 1922; Fowler, 1927; Herre, 1934; Rosax, 1934.",
+      "Liza labiosa Fowler, Copeia, No.58, p.62, 1918."
+    ]
+  },
+  {
+    "id": "tap2-species-243",
+    "volume": 2,
+    "speciesIndex": 243,
+    "vnName": "Cá Đối đầu nhọn",
+    "scientificName": "Mugil strongylocephalus",
+    "authorship": "Richardson, 1846",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối đầu nhọn",
+        "size": "25 cm.",
+        "distribution": "Ở biển và cửa sông, Đông Phi, Australia, Indonesia, Malaysia, Melanesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối ít.",
+        "literature": "Herre, 1953. Carcasson, 1977. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Head-pointed mullet.",
+        "size": "25 cm.",
+        "distribution": "In the sea and in the estuary, East Africa, Australia, Indonesia, Malaysia, Melanesia, Philippines, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively little.",
+        "literature": "Herre, 1953. Carcasson, 1977. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil strongylocephalus Richardson, Ichth., China and Japan, p.249, 1846; Bleeker, 1860; Gunther, 1861; Rutter, 1879; Herre, 1936; Fowler, 1935."
+    ]
+  }
+]
