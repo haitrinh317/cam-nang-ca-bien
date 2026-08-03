@@ -8,23 +8,11 @@
     <style>
         .species-card {
             background: var(--bg-surface);
-            border: 1px solid var(--border-color);
             border-radius: 4px;
             padding: 2.5rem;
             margin-top: 1.5rem;
-            box-shadow: none;
             position: relative;
             overflow: hidden;
-        }
-
-        /* Volume accent bar - left edge */
-        .species-card::before {
-            content: '';
-            position: absolute;
-            left: 0; top: 0; bottom: 0;
-            width: 3px;
-            background: var(--vol-color, var(--brand-primary));
-            border-radius: 4px 0 0 4px;
         }
 
         /* Volume color tokens */
@@ -58,12 +46,12 @@
 
         .sp-sci-title {
             font-size: 1.25rem;
-            color: #94a3b8;
+            color: #cbd5e1;
             font-style: italic;
         }
         
         .sp-author {
-            color: #64748b;
+            color: #94a3b8;
             font-style: normal;
         }
 
@@ -112,7 +100,7 @@
         .fb-not-found .fb-label, .fb-unknown .fb-label { color: #94a3b8; }
 
         .fb-detail {
-            color: #64748b;
+            color: #94a3b8;
             font-size: 0.82rem;
         }
 
@@ -153,7 +141,7 @@
         }
 
         .tax-badge-label {
-            color: #94a3b8;
+            color: #cbd5e1;
             flex-shrink: 0;
         }
 
@@ -164,7 +152,7 @@
         }
 
         .tax-badge-en {
-            color: #64748b;
+            color: #94a3b8;
             font-style: italic;
             word-break: break-word;
         }
@@ -206,7 +194,7 @@
             justify-content: space-between;
             align-items: center;
             font-size: 0.95rem;
-            color: #64748b;
+            color: #94a3b8;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 1.5rem;
@@ -233,7 +221,7 @@
 
         .info-label {
             font-size: 0.8rem;
-            color: #64748b;
+            color: #94a3b8;
             margin-bottom: 0.25rem;
         }
 
@@ -252,9 +240,10 @@
 
         .synonym-content {
             font-size: 0.9rem;
-            color: #94a3b8;
+            color: #cbd5e1;
             line-height: 1.8;
             white-space: pre-line;
+            padding: 0 1.5rem 1.5rem;
         }
 
         .synonym-content i {
@@ -268,7 +257,7 @@
             align-items: center;
             gap: 0.5rem;
             margin-bottom: 1rem;
-            color: #94a3b8;
+            color: #cbd5e1;
             font-weight: 500;
         }
         

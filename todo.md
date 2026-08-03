@@ -1,7 +1,7 @@
 # TODO — Dự án OCR Cá biển Việt Nam
 
-> Cập nhật: 2026-07-30 16:08
-> Next Session Starting Point: Vá RLS species table → setup Supabase Auth → Admin UI
+> Cập nhật: 2026-07-31 16:30
+> Next Session Starting Point: Tiếp tục OCR mẻ 11 (Tập II), bắt đầu từ loài 90 ở page 99 PDF.
 
 ## ✅ Hoàn thành
 
@@ -13,6 +13,7 @@
 - [x] Viết lại `scripts/build_database.py` — đọc trực tiếp từ OCR parsed JSON
 
 ### OCR & Chuẩn hóa dữ liệu
+- [x] Tập II: OCR thủ công + upload Supabase từ loài 1-89 (đang WIP)
 - [x] Tập III: 518 loài (OCR + parse hoàn tất, `scratch/tap3_parsed_details.json`)
 - [x] Tập IV loài 1-100: OCR + chuẩn hóa thủ công hoàn tất
 - [x] Tập V: 199 loài (OCR thô, `scratch/tap5_parsed_details.json`)
