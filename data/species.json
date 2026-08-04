@@ -17690,36 +17690,45 @@
         "latin": "Centropomidae"
       },
       "genus": {
-        "vn": "Giống Lates",
-        "latin": "Lates"
+        "vn": "Cá Chẽm Lates Cuvier and Valenciennes, 1828",
+        "latin": "Lates Cuvier and Valenciennes, 1828"
       }
     },
     "specs": {
       "vn": {
         "alternateNames": "Cá Chẽm",
-        "size": "",
-        "distribution": "",
-        "specimen": "",
-        "status": "",
-        "literature": ""
+        "size": "1500 - 1700 mm.",
+        "distribution": "Bắc Australia, Ấn Độ, Indonesia, New Guinea, Philippines, Nam Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp.",
+        "literature": "Weber and de Beaufort, 1929. Herre, 1953. Nguyễn Nhật Thi, 1991."
       },
       "en": {
-        "commonName": "Lates calcarifer",
-        "size": "",
-        "distribution": "",
-        "specimen": "",
-        "status": "",
-        "literature": ""
+        "commonName": "White sea-bass, Giant Sea Perch.",
+        "size": "1500 - 1700 mm.",
+        "distribution": "Northern Australia, India, Indonesia, New Guinea, Philippines, Southern China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common.",
+        "literature": "Weber and de Beaufort, 1929. Herre, 1953. Nguyen Nhat Thi, 1991."
       }
     },
-    "synonyms": []
+    "synonyms": [
+      "Holocentrus calcarifer Bloch, Naturges. Ausl. Fische 4. 1790, p. 100, pl. 244.",
+      "Holocentrus heptadactylus Lacépède, Hist. Nat. Poiss., Vol. 4, 1802, p. 344.",
+      "Coius vacti Hamilton-Buchanan, Fishes Ganges, pl. 16, p. 86, fig. 28, 1822.",
+      "Lates nobilis Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 2. 1828, p. 96.",
+      "Lates calcarifer Cuvier and Valenciennes, Vol. 2. p. 100. Richardson, 1846; Gunther, 1859; Seale, 1908; Fowler, 1918; Herre, 1941.",
+      "Plectropoma calcarifer Bleeker, Atl. Ichth., Vol. 7, 1873 - 1876, p. 109.",
+      "Lates darwiniensis Macleay, Proc. Linn. Soc. N. S. Wales, Vol. 2, 1878, p. 345.",
+      "Pseudolates cavifrons Alleyne and Macleay, Proc. Linn. Soc. New South Wales, Vol. 1, p. 262, pl. 3, 1877."
+    ]
   },
   {
     "id": "tap3-species-2",
     "volume": 3,
     "speciesIndex": 2,
     "vnName": "Cá Vược mõm nhọn",
-    "scientificName": "Psammoperca usaigiensis",
+    "scientificName": "Psammoperca waigiensis",
     "authorship": "(Cuvier and Valenciennes, 1828)",
     "status": "common",
     "taxonomy": {
@@ -17732,43 +17741,34 @@
         "latin": "Centropomidae"
       },
       "genus": {
-        "vn": "Giống Psammoperca",
-        "latin": "Psammoperca"
+        "vn": "Cá Vược Psammoperca Richardson, 1844",
+        "latin": "Psammoperca Richardson, 1844"
       }
     },
     "specs": {
       "vn": {
         "alternateNames": "Cá Vược mõm nhọn",
-        "size": "thưởc 340 mm",
-        "distribution": "ổ BBBBắc Australia Quổc, Việt Nam. Vinh Bấc Bộ, miền Trung; Nam Bộ",
-        "specimen": "Viện Hải dương học (Nha Trang)",
-        "status": "",
-        "literature": "Weber and de Litcrature Weber and de Beaufort, 1929. Herre, 1953 Beaufort, 1929- Herre, 1953. Nguyen Nhat Thi, 1991"
+        "size": "320 - 340 mm.",
+        "distribution": "Bắc Australia, Singapore, Java, Borneo, New Guinea, Indonesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp.",
+        "literature": "Weber and de Beaufort, 1929. Herre, 1953. Nguyễn Nhật Thi, 1991."
       },
       "en": {
-        "commonName": "Psammoperca usaigiensis",
-        "size": "320 340 mm 320 340 mm",
-        "distribution": "Northern Australin Singapore, Java Borneo, New Singapore, Java, Borneo, New Guinea IndonesiaPhilippines, Guinen, Indonesia, Philippines, China Vietnam 18 Gulf of Tonkin Central and Southern Vietnam",
-        "specimen": "Conservalion Institute of hoc (Nha Trang). Ocaenography (Nhatrang).",
-        "status": "Thuang gp- Common",
-        "literature": "Weber and de Litcrature Weber and de Beaufort, 1929. Herre, 1953 Beaufort, 1929- Herre, 1953. Nguyen Nhat Thi, 1991"
+        "commonName": "Sand Bass.",
+        "size": "320 - 340 mm.",
+        "distribution": "Northern Australia, Singapore, Java, Borneo, New Guinea, Indonesia, Philippines, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Ocaenography (Nhatrang).",
+        "status": "Common.",
+        "literature": "Weber and de Beaufort, 1929. Herre, 1953. Nguyen Nhat Thi, 1991."
       }
     },
     "synonyms": [
-      "Valenciennes,",
-      "Poiss , Vol2 1828, P. 83",
-      "Psammoperca",
-      "datnioides Richardson, Zool. Voyage Erebus",
-      "and Terror,",
-      "Ichth , 1844, P- 116, pl. 57",
-      "Cnidon chinensis Muller and Troschel, Horae Ichth , Vol. 3. 1849, P. 21",
-      "Psammoperca waigiensis Bleeker, Nat . Tijdschr . Ned. Indie, Vol. 5, 1853,",
-      "P- 177; Gunther,  1859;",
-      "and Senle, 1907; Fowler, 1918; Herre",
-      "Psammoperca",
-      "waigiensis   Boulenger, Cat.",
-      "Fishes   British Mus -, ed",
-      "Vol. 1, P. 365, 1895."
+      "Labrax waigiensis cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 2, 1828, p. 83.",
+      "Psammoperca datnioides Richardson, Zool. Voyage Erebus and Terror, Ichth., 1844, p. 116, pl. 57.",
+      "Cnidon chinensis Muller and Troschel, Horae Ichth., Vol. 3. 1849, p. 21.",
+      "Psammoperca waigiensis Bleeker, Nat. Tijdschr. Ned. Indie, Vol. 5, 1853, p. 177; Gunther, 1859; Evermann and Seale, 1907; Fowler, 1918; Herre, 1933.",
+      "Psammoperca waigiensis Boulenger, Cat. Fishes British Mus., ed. 2, Vol. 1, p. 365, 1895."
     ]
   },
   {
@@ -17789,40 +17789,35 @@
         "latin": "Centropomidae"
       },
       "genus": {
-        "vn": "Giống Ambassis",
-        "latin": "Ambassis"
+        "vn": "Cá Sơn biển Ambassis Cuvier and Valenciennes, 1828",
+        "latin": "Ambassis Cuvier and Valenciennes, 1828"
       }
     },
     "specs": {
       "vn": {
         "alternateNames": "Cá Sơn đầu trần",
-        "size": "thưởc 70 mm",
-        "distribution": "BBBắc Australia , Quổc, Việt Nam. Vịnh Bắc Bộ, miền Trung; Nam Bộ",
-        "specimen": "Viện Hải dương học (Nha Trang)",
-        "status": "Thường gặp",
-        "literature": "Weber and Beaufort Weber and Beaufort, 1929 . Herre 1953. Orsi, 1974. 1929- Herre 1953. Orsi, 1974 ."
+        "size": "60 - 70 mm.",
+        "distribution": "Bắc Australia, Seychelles, Singapore, Indonesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp.",
+        "literature": "Weber and Beaufort, 1929. Herre, 1953. Orsi, 1974."
       },
       "en": {
-        "commonName": "Naked Head Classy Perchlel",
-        "size": "60 70 mm 60 70 mm",
-        "distribution": "Northern Australia, Seychelles, Singapore; Indonesia, Seychelles , Singapore; Philippines, Philippines, Indonesia China Vietnam Gulf of TonkinCentral and Southern Vietnam .",
-        "specimen": "Institute of hoc (Nha Trang) Oceanography (Nhatrang) .",
-        "status": "Common",
-        "literature": "Weber and Beaufort Weber and Beaufort, 1929 . Herre 1953. Orsi, 1974. 1929- Herre 1953. Orsi, 1974 ."
+        "commonName": "Naked- Head Glassy Perchlet.",
+        "size": "60 - 70 mm.",
+        "distribution": "Northern Australia, Seychelles, Singapore, Philippines, Indonesia, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common.",
+        "literature": "Weber and Beaufort, 1929. Herre, 1953. Orsi, 1974."
       }
     },
     "synonyms": [
-      "pl. 23, 1802, P. 216.",
-      "Ambassis dussumieri Quoy and Gaimard",
-      "Astrolabe, 1826",
-      "P. 650, pl. 1, fig- 3; Cuvier and Valenciennes, 1828; Gunther, 1859.",
-      "(nec. Richardson)",
-      "gymnocephalus",
-      "Wetensch. 3 de Verz , Vol.",
-      "Day; 1878; Fowler, 1927; Weber and de Beaufort, 1929; Herre, 1940",
-      "Priopis gymnocephalus Jordan and Seale, Proc. U. S. Nat. Mus , Vol. 28,",
-      "P. 780, 1905; Seale  1910.",
-      "Cantor, Jour- Asiatic Soc. Bengal,  Vol. 18,"
+      "Lutjanus gymnocephalus Lacépède, Hist. Nat. Poiss., Vol. 3, pl. 23, 1802, p. 216.",
+      "Ambassis dussumieri Quoy and Gaimard, Voy. Astrolabe, 1826 - 1834, p. 650, pl. 1, fig. 3; Cuvier and Valenciennes, 1828; Gunther, 1859.",
+      "Ambassis vachelli Peters, Monatsber, Akad. Wiss. Berlin, 1868, p. 255 (nec. Richardson).",
+      "Ambassis gymnocephalus Bleeker, Nat. Verh. Holl. Maatsch. v. Wetensch. 3 de Verz., Vol. 2. No 2 (1873) 1874, Révision Ambassis, p. 99; Day, 1878; Fowler, 1927; Weber and de Beaufort, 1929; Herre, 1940 - 41.",
+      "Priopis gymnocephalus Jordan and Seale, Proc. U. S. Nat. Mus., Vol. 28, p. 780, 1905; Seale, 1910.",
+      "Chanda dussumieri Cantor, Jour. Asiatic Soc. Bengal, Vol. 18, p. 988, 1850."
     ]
   },
   {
@@ -17843,58 +17838,47 @@
         "latin": "Centropomidae"
       },
       "genus": {
-        "vn": "Giống Ambassis",
-        "latin": "Ambassis"
+        "vn": "Cá Sơn biển Ambassis Cuvier and Valenciennes, 1828",
+        "latin": "Ambassis Cuvier and Valenciennes, 1828"
       }
     },
     "specs": {
       "vn": {
         "alternateNames": "Cá Sơn biển sọc bạc",
-        "size": "thưdc 94 mm",
-        "distribution": "Madagascar, Seychelles , Thẩỉ Lan, Philippines, Indonesia, Việt Nam. Vịnh Bắc Bộ, miền Trung; Nam Bộ",
-        "specimen": "Viện Hải dương học (Nha Trang)",
-        "status": "Thường gặp",
-        "literature": "Weber and Beaufort Weber and Beaufort 1929; Herre, 1953. Orsi, 1974 . 1929; Herre 1953. Orsi 1974 64 ' '"
+        "size": "94 mm.",
+        "distribution": "Australia, New Guinea, Madagascar, Seychelles, Thái Lan, Philippines, Indonesia, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp.",
+        "literature": "Weber and de Beaufort, 1929; Herre, 1953. Orsi, 1974."
       },
       "en": {
-        "commonName": "Cuvier and Valenciennes",
-        "size": "94 mm 94 mm 14)6 04",
-        "distribution": "Australia, New Guinen, AustralinNew Guinea Madagascar; Seychelles, Thailand,Philippines, Indonesia Vietnam Gulf of TonkinCentral and 04 Southern Vietnam",
-        "specimen": "Institute of 148 f hoc (Nha Trang). Oceanography (Nhatrang) -",
-        "status": "Common",
-        "literature": "Weber and Beaufort Weber and Beaufort 1929; Herre, 1953. Orsi, 1974 . 1929; Herre 1953. Orsi 1974 64 ' '"
+        "commonName": "Commerson's Glassy Perchlet.",
+        "size": "94 mm.",
+        "distribution": "Australia, New Guinea, Madagascar, Seychelles, Thailand, Philippines, Indonesia, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common.",
+        "literature": "Weber and de Beaufort, 1929; Herre, 1953. Orsi, 1974."
       }
     },
     "synonyms": [
-      "Poiss , Vol 2 1828, P. 176, pl. 25; Gunther, 1959; Day, 1878",
-      "Ambassis macracanthus Blecker, Verh. Bat.",
-      "Gen , Vol. 22.1849, Perc ,",
-      "P-30 et Nat.Tijdschr- Ned. Indie, Vol. 4, 1853, P. 455",
-      "Ambassis batjanensis Bleeker, Nat. Tijdschr. Ned   Indie Vol9, 1855,",
-      "P. 196; Gunther; 1859; Meyer; 1885; Herre, 1927 .",
-      "Ambassis   productus   Guichenot,",
-      "Cherb _ Vol 12",
-      "(2 ser.T. 2) 1866, P- 130 (fide Sauvage)",
-      "Ambassis commersonii",
-      "Klunzinger, Verh. Zoo- Bot. Gesell.",
-      "P. 719, 1870; Bleeker; 1876",
-      "77; Weber and de Beaufort, 1929; Herre 1933 .",
-      "Priopis buruensis Fowler; Copeia No. 58, p- 63, 1918 (not of Bleeker) .",
-      "grundleri C. Popta, Med",
-      "Leiden  1918 P. 3",
-      "Ambassis   safgha Fowler;",
-      "Proc.  Acad.",
-      "Nat. Sci. Phila , Vol. 79,"
+      "Ambassis commersoni Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 2, 1828, p. 176, pl. 25; Gunther, 1959; Day, 1878.",
+      "Ambassis macracanthus Bleeker, Verh. Bat. Gen., Vol. 22. 1849, Perc., p. 30 et Nat. Tijdschr. Ned. Indie, Vol. 4, 1853, p. 455.",
+      "Ambassis batjanensis Bleeker, Nat. Tijdschr. Ned. Indie, Vol. 9, 1855, p. 196; Gunther, 1859; Meyer, 1885; Herre, 1927.",
+      "Ambassis productus Guichenot, Mem. Soc. Sci. Nat. Cherb., Vol. 12. (2 ser. T. 2) 1866, p. 130 (fide Sauvage).",
+      "Ambassis commersonii Klunzinger, Verh. Zoo. Bot. Gesell. Wien, Vol. 20, p. 719, 1870; Bleeker, 1876 - 77; Weber and de Beaufort, 1929; Herre, 1933.",
+      "Priopis buruensis Fowler, Copeia, No. 58, p. 63, 1918 (not of Bleeker).",
+      "Ambassis grundleri C. Popta, Med. mus. Leiden, 1918, p. 3.",
+      "Ambassis safgha Fowler, Proc. Acad. Nat. Sci. Phila., Vol. 79, p. 275, 1927."
     ]
   },
   {
     "id": "tap3-species-5",
     "volume": 3,
     "speciesIndex": 5,
-    "vnName": "Cá Sơn biển sọc đuôi",
+    "vnName": "Cá Sơn biển đuôi sọc",
     "scientificName": "Ambassis urotaenia",
     "authorship": "Bleeker, 1852",
-    "status": "common",
+    "status": "uncommon",
     "taxonomy": {
       "order": {
         "vn": "Cá Vược",
@@ -17905,43 +17889,33 @@
         "latin": "Centropomidae"
       },
       "genus": {
-        "vn": "Giống Ambassis",
-        "latin": "Ambassis"
+        "vn": "Cá Sơn biển Ambassis Cuvier and Valenciennes, 1828",
+        "latin": "Ambassis Cuvier and Valenciennes, 1828"
       }
     },
     "specs": {
       "vn": {
-        "alternateNames": "Cá Sơn biển sọc đuôi",
-        "size": "110 mm",
-        "distribution": "Trung Quốc, Việt Nam Vịnh Bắc Bộ, miền Trung; Nam Bộ",
-        "specimen": "Phân viện Hải dương học (Hải Phòng)",
-        "status": "",
-        "literature": "Herre, 1953 Herre 1953 ."
+        "alternateNames": "Cá Sơn biển đuôi sọc",
+        "size": "100 - 110 mm.",
+        "distribution": "Caroline, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953."
       },
       "en": {
-        "commonName": "Banded-Tail Glassy Perchlet",
-        "size": "thudc 10o 110 mm 100 1lO mm 1+ {",
-        "distribution": "Caroline, Philippines , Caroline Philippines, China Vietnam Gulf of TonkinCentral and Southern Vietnam",
-        "specimen": "Haiphong Branch of Institute of Oceanography . 1",
-        "status": "Ỉt gaP. Uncommon",
-        "literature": "Herre, 1953 Herre 1953 ."
+        "commonName": "Banded-Tail Glassy Perchlet.",
+        "size": "100 - 110 mm.",
+        "distribution": "Caroline, Philippines, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953."
       }
     },
     "synonyms": [
-      "Ambassis urotaenia Bleeker, Nat  Tijds",
-      "Ned   Ind _ Vol. 3,",
-      "257,  1852; Playfair",
-      "and   Gunther;",
-      "and  Seale,",
-      "Jordan and Richardson , 1908; Fowler, 1927; Herre 1927",
-      "Priopis urotaenia Smith and Seale, Proc. Biol. Soc. Washington Vol. 19,",
-      "P. 77, 1906; Seale and Bean, 1907.",
-      "Priopsis lungi Jordan and Seale, Bull.U.S. Bur. Fisheries, Vol. 26, P. 18,",
-      "fig 6, 1907.",
-      "Ambassis lungi",
-      "and Seale   Bull. U. S.",
-      "Fish , Vol. 26,",
-      "P. 75, 1907"
+      "Ambassis urotaenia Bleeker, Nat. Tijds. Ned. Ind., Vol. 3, p. 257, 1852; Playfair and Gunther, 1866; Evermann and Seale, 1907; Jordan and Richardson, 1908; Fowler, 1927; Herre, 1927.",
+      "Priopis urotaenia Smith and Seale, Proc. Biol. Soc. Washington, Vol. 19, p. 77, 1906; Seale and Bean, 1907.",
+      "Priopsis lungi Jordan and Seale, Bull. U. S. Bur. Fisheries, Vol. 26, p. 18, fig. 6, 1907.",
+      "Ambassis lungi Evermann and Seale, Bull. U. S. Bur. Fish., Vol. 26, p. 75, 1907."
     ]
   },
   {
@@ -17951,7 +17925,7 @@
     "vnName": "Cá Sơn biển kốp-sơ",
     "scientificName": "Ambassis kopsi",
     "authorship": "Bleeker, 1858",
-    "status": "common",
+    "status": "uncommon",
     "taxonomy": {
       "order": {
         "vn": "Cá Vược",
@@ -17962,38 +17936,43 @@
         "latin": "Centropomidae"
       },
       "genus": {
-        "vn": "Giống Ambassis",
-        "latin": "Ambassis"
+        "vn": "Cá Sơn biển Ambassis Cuvier and Valenciennes, 1828",
+        "latin": "Ambassis Cuvier and Valenciennes, 1828"
       }
     },
     "specs": {
       "vn": {
         "alternateNames": "Cá Sơn biển kốp-sơ",
-        "size": "",
-        "distribution": "",
-        "specimen": "",
-        "status": "",
-        "literature": ""
+        "size": "70 - 80 mm.",
+        "distribution": "Singapore, Borneo, Philippines, Indonesia, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1929. Herre, 1953. Orsi, 1974."
       },
       "en": {
-        "commonName": "Ambassis kopsi",
-        "size": "",
-        "distribution": "",
-        "specimen": "",
-        "status": "",
-        "literature": ""
+        "commonName": "Kop's Perchlet.",
+        "size": "70 - 80 mm.",
+        "distribution": "Singapore, Borneo, Philippines, Indonesia, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1929. Herre, 1953. Orsi, 1974."
       }
     },
-    "synonyms": []
+    "synonyms": [
+      "Ambassis kopsii Bleeker, Nat. Tijdschr. Ned. Indie, Vol. 15. 1858, p. 253.",
+      "Ambassis kopsi Bleeker, Nat. Verh. Holl. Maat. v. Wetensch. 3 de Verz., Vol. 2, No 2, (1873) 1874. Révision Ambassis p. 91; Jordan and Seale, 1907; Fowler, 1927; Weber and de Beaufort, 1929; Herre, 1933.",
+      "Ambassis kopsi Seale, Philippines Journ. Science, Vol. 5, No 4, 1910, p. 274.",
+      "Ambassis ambassis Fowler, Copeia, No. 58, p. 63, 1918."
+    ]
   },
   {
     "id": "tap3-species-7",
     "volume": 3,
     "speciesIndex": 7,
     "vnName": "Cá Sơn biển lớn",
-    "scientificName": "Ambassis usolffi",
+    "scientificName": "Ambassis wolffi",
     "authorship": "Bleeker, 1850",
-    "status": "common",
+    "status": "uncommon",
     "taxonomy": {
       "order": {
         "vn": "Cá Vược",
@@ -18004,34 +17983,32 @@
         "latin": "Centropomidae"
       },
       "genus": {
-        "vn": "Giống Ambassis",
-        "latin": "Ambassis"
+        "vn": "Cá Sơn biển Ambassis Cuvier and Valenciennes, 1828",
+        "latin": "Ambassis Cuvier and Valenciennes, 1828"
       }
     },
     "specs": {
       "vn": {
         "alternateNames": "Cá Sơn biển lớn",
-        "size": "thưóc 200 mm",
-        "distribution": "Sumatra, Borneo, Thái Lan Indonesia, Viêt Nam Vịnh Bắc Bộ, miền Trung Nam Bộ",
-        "specimen": "Viện Hải dương học (Nha Trang)",
-        "status": "",
-        "literature": "Weber and Beaufort Literalurc Weber and Beaufort, 1929. Orsi, 1974. 1929. Orsi, 1974 -"
+        "size": "200 mm.",
+        "distribution": "Sumatra, Borneo, Thái Lan, Indonesia, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and Beaufort, 1929. Orsi, 1974."
       },
       "en": {
-        "commonName": "Ambassis usolffi",
-        "size": "200 mm 200 mm",
-        "distribution": "Sumatra , Bornco, Thailand , Indonesia, Vietnam Gulf of Tonkin Central and 1' < Southern Vietnam",
-        "specimen": "Conscrvation Institute of hoc (Nha Trang) Oceanography (Nhatrang)",
-        "status": "It gap Uncommon",
-        "literature": "Weber and Beaufort Literalurc Weber and Beaufort, 1929. Orsi, 1974. 1929. Orsi, 1974 -"
+        "commonName": "Wolff's Perchlet.",
+        "size": "200 mm.",
+        "distribution": "Sumatra, Borneo, Thailand, Indonesia, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and Beaufort, 1929. Orsi, 1974."
       }
     },
     "synonyms": [
-      "Ambassis wolffii Bleeker, Nat . Tijdschr. Ned. Indie, Vol. 1",
-      "Ambassis robustus Gunther, Cat.Brit. Mus - Vol. 1, 1859, P- 222",
-      "Ambassis boulengeri",
-      "Zool- Anz , Vol. 26, 1903,",
-      "Syst ,, Vol. 19. 1903, P- 352"
+      "Ambassis wolffii Bleeker, Nat. Tijdschr. Ned. Indie, Vol. 1. 1850, p. 9.",
+      "Ambassis robustus Gunther, Cat. Brit. Mus., Vol. 1, 1859, p. 222.",
+      "Ambassis boulengeri Volz, Zool. Anz., Vol. 26, 1903, p. 553 - Zool. Abt. Syst., Vol. 19. 1903, p. 352."
     ]
   },
   {
@@ -18041,7 +18018,7 @@
     "vnName": "Cá Sơn biển u mõm",
     "scientificName": "Ambassis nalua",
     "authorship": "(Hamilton-Buchanan, 1822)",
-    "status": "common",
+    "status": "uncommon",
     "taxonomy": {
       "order": {
         "vn": "Cá Vược",
@@ -18052,32 +18029,31 @@
         "latin": "Centropomidae"
       },
       "genus": {
-        "vn": "Giống Ambassis",
-        "latin": "Ambassis"
+        "vn": "Cá Sơn biển Ambassis Cuvier and Valenciennes, 1828",
+        "latin": "Ambassis Cuvier and Valenciennes, 1828"
       }
     },
     "specs": {
       "vn": {
         "alternateNames": "Cá Sơn biển u mõm",
-        "size": "125 mm",
-        "distribution": "ổ : Singapore; Sumatra, Indonesia Việt Nam- Vịnh Bác Bô",
-        "specimen": "Viện Hải dương học (Nha Trang)",
-        "status": "Thường gặp",
-        "literature": "Weber and de Weber and de Beaufort , 1929; Herre, 1953. Beaufort , 1929; Herre, 1953"
+        "size": "120 - 125 mm.",
+        "distribution": "Singapore, Sumatra, Java, Borneo, Philippines, Indonesia, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải sản Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1929; Herre, 1953."
       },
       "en": {
-        "commonName": "Scalloped Perchlel",
-        "size": "thuoc 120 125 mm 120 125 mm",
-        "distribution": "Singapore; Sumatra, Java Borneo, Philippines Java, Borneo, Philippines, Indonesia , Vietnam- Gulf of Tonkin",
-        "specimen": "Haiphong Research Institute of Marine Products",
-        "status": "Common",
-        "literature": "Weber and de Weber and de Beaufort , 1929; Herre, 1953. Beaufort , 1929; Herre, 1953"
+        "commonName": "Scalloped Perchlet.",
+        "size": "120 - 125 mm.",
+        "distribution": "Singapore, Sumatra, Java, Borneo, Philippines, Indonesia, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Research Institute of Marine Products.",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1929; Herre, 1953."
       }
     },
     "synonyms": [
-      "1822, P- 107, pl. 6, fig- 36",
-      "Ambassis nalua Cuvier and Valenciennes, Hist. Nat . Poiss -, Vol. 2. 1828,",
-      "Herre, 1936"
+      "Chanda nalua Hamilton (né. Buchanan), Fishes Ganges, 1822, p. 107, pl. 6, fig. 36.",
+      "Ambassis nalua Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 2. 1828, p. 182; Bleeker, 1849; Day, 1878; Weber and de Beaufort, 1929. Herre, 1936 - 37."
     ]
   },
   {
@@ -18087,7 +18063,7 @@
     "vnName": "Cá Sơn biển đồng tiền",
     "scientificName": "Ambassis ranga",
     "authorship": "(Hamilton-Buchanan, 1822)",
-    "status": "common",
+    "status": "uncommon",
     "taxonomy": {
       "order": {
         "vn": "Cá Vược",
@@ -18098,32 +18074,31 @@
         "latin": "Centropomidae"
       },
       "genus": {
-        "vn": "Giống Ambassis",
-        "latin": "Ambassis"
+        "vn": "Cá Sơn biển Ambassis Cuvier and Valenciennes, 1828",
+        "latin": "Ambassis Cuvier and Valenciennes, 1828"
       }
     },
     "specs": {
       "vn": {
         "alternateNames": "Cá Sơn biển đồng tiền",
-        "size": "90 mm",
-        "distribution": "ổ Việt Nam Vịnh Bac Bộ, miền Trung; Nam Bộ",
-        "specimen": "",
-        "status": "",
-        "literature": "Günther; 1859 Günther; 1859 Orsi, 1974 Orsi, 1974. 45 Vien duong"
+        "size": "80 - 90 mm.",
+        "distribution": "Cửa sông Ganges, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Gunther, 1859. Orsi, 1974."
       },
       "en": {
-        "commonName": "Glassy Perchlet",
-        "size": "thudc 80 90 mm 80 90 mm. 1 ' '",
-        "distribution": "Cua Ganges, Estuary of Ganges Vietnam Gulf of Tonkin, Central Vietnam, Southern Vietnam",
-        "specimen": "Hai Conscrvation Institute of hoc (Nha Trang). Oceanography (Nhatrang) .",
-        "status": "It gap. Uncommon",
-        "literature": "Günther; 1859 Günther; 1859 Orsi, 1974 Orsi, 1974. 45 Vien duong"
+        "commonName": "Glassy Perchlet.",
+        "size": "80 - 90 mm.",
+        "distribution": "Estuary of Ganges, Vietnam. Gulf of Tonkin, Central Vietnam, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Gunther, 1859. Orsi, 1974."
       }
     },
     "synonyms": [
-      "Chanda ranga",
-      "Buchanan-Hamilton, P- 113, pl. 16, fig  38,",
-      "Ambassis ranga Cuvier and Valenciennes, Vol. 2, P- 183, 1828."
+      "Chanda ranga Buchanan-Hamilton, p. 113, pl. 16, fig. 38, 1822.",
+      "Ambassis ranga Cuvier and Valenciennes, Vol. 2, p. 183, 1828."
     ]
   },
   {
@@ -18133,7 +18108,7 @@
     "vnName": "Cá Mú mắt to",
     "scientificName": "Chelidoperca hirundinacea",
     "authorship": "Cuvier and Valenciennes, 1831",
-    "status": "common",
+    "status": "uncommon",
     "taxonomy": {
       "order": {
         "vn": "Cá Vược",
@@ -18144,40 +18119,31 @@
         "latin": "Serranidae"
       },
       "genus": {
-        "vn": "Giống Chelidoperca",
-        "latin": "Chelidoperca"
+        "vn": "Cá Mú đỏ Chelidoperca Boulenger, 1895",
+        "latin": "Chelidoperca Boulenger, 1895"
       }
     },
     "specs": {
       "vn": {
         "alternateNames": "Cá Mú mắt to",
-        "size": "thưđc 13 cm",
-        "distribution": "ổ nhiệt dởi tay Thai Binh Dưong, Indonesia, Nhật Bản, Trung Quốc, Việt Nam Vinh Bac Bô",
-        "specimen": "Phân viện Hải dương học (Hải Phòng)",
-        "status": "",
-        "literature": "Beaufort, 1931. Thành Khánh Thái, 1962. Nguyễn Nhật Thi, 1991. Nguyen Nhat Thỉ, 1991."
+        "size": "12 - 13 cm.",
+        "distribution": "Vùng nhiệt đới tây Thái Bình Dương, Indonesia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1931. Thành Khánh Thái, 1962. Nguyễn Nhật Thi, 1991."
       },
       "en": {
-        "commonName": "Cuvier and Valenclennes 1831",
-        "size": "12 13 cm 12 13 cm",
-        "distribution": "All tropical West- Pacific Ocean, Indonesia, Japan, China Vietnam . Gulf of Tonkin.",
-        "specimen": "Haiphong Branch of Institute of Oceanography -",
-        "status": "Ỉt g#P- Uncommon",
-        "literature": "Weber and de Literaturc Weber and de Beaufort, 1931. Cheng, 1962 46 Vung"
+        "commonName": "Princess perch.",
+        "size": "12 - 13 cm.",
+        "distribution": "All tropical West-Pacific Ocean, Indonesia, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1931. Cheng, 1962. Nguyen Nhat Thi, 1991."
       }
     },
     "synonyms": [
-      "Centropristis hirundinacea Cuvier",
-      "and Valenciennes, Hist.",
-      "Nat. Poiss .",
-      "Vol. 7, P. 450, 1831",
-      "Chelidoperca",
-      "hirunduacea",
-      "Boulenger, Cat. Perci",
-      "Orm. Fish ,",
-      "P- 305, 1895; Weber and de Beaufort, 1931; Matsubara  1955",
-      "Centropristis",
-      "pleurospilus Gunther, Shore Fishes . Chalenger, P- 37, 1880."
+      "Centropristis hirundinacea Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 7, p. 450, 1831.",
+      "Chelidoperca hirundinacea Boulenger, Cat. Perci. Orm. Fish., Vol. 1, p. 305, 1895; Weber and de Beaufort, 1931; Matsubara, 1955. Centropristis pleurospilus Gunther, Shore Fishes. Chalenger, p. 37, 1880."
     ]
   },
   {

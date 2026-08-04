@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Loài — Bảo tàng Hải dương học</title>
+    <link rel="stylesheet" href="/src/assets/shared.css">
+    <style>
+        .species-card {
+            background: var(--bg-surface);
+            border-radius: 4px;
+            padding: 2.5rem;
+            margin-top: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Volume color tokens */
+        .vol-1 { --vol-color: #818cf8; --vol-color-rgb: 129,140,248; }
+        .vol-2 { --vol-color: #34d399; --vol-color-rgb: 52,211,153; }
+        .vol-3 { --vol-color: #f87171; --vol-color-rgb: 248,113,113; }
+        .vol-4 { --vol-color: #fbbf24; --vol-color-rgb: 251,191,36; }
+        .vol-5 { --vol-color: #60a5fa; --vol-color-rgb: 96,165,250; }
+
+        /* Highlight row for key fields */
+        .info-item-featured {
+            background: rgba(var(--vol-color-rgb, 14, 165, 233), 0.06);
+            border-left: 2px solid rgba(var(--vol-color-rgb, 14, 165, 233), 0.35);
+            border-radius: 0;
+            margin-left: -0.5rem;
+            padding-left: 0.5rem;
+        }
+
+        .sp-header {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sp-title {
+            font-size: 2.5rem;
+            margin-bottom: 0.25rem;
+            color: #ffffff;
+            font-weight: 800;
+        }
+
+        .sp-sci-title {
+            font-size: 1.25rem;
+            color: #cbd5e1;
+            font-style: italic;
+        }
+        
+        .sp-author {
+            color: #94a3b8;
+            font-style: normal;
+        }
+
+        /* FishBase Status Badge */
+        .fishbase-bar {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            padding: 0.85rem 1rem;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .fishbase-bar.fb-valid {
+            background: rgba(52, 211, 153, 0.08);
+            border: 1px solid rgba(52, 211, 153, 0.2);
+        }
+
+        .fishbase-bar.fb-synonym {
+            background: rgba(251, 191, 36, 0.08);
+            border: 1px solid rgba(251, 191, 36, 0.25);
+        }
+
+        .fishbase-bar.fb-not-found, .fishbase-bar.fb-unknown {
+            background: rgba(148, 163, 184, 0.06);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+        }
+
+        .fb-icon {
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .fb-body {}
+
+        .fb-label {
+            font-weight: 700;
+            margin-bottom: 0.1rem;
+        }
+
+        .fb-valid   .fb-label { color: #6ee7b7; }
+        .fb-synonym .fb-label { color: #fcd34d; }
+        .fb-not-found .fb-label, .fb-unknown .fb-label { color: #94a3b8; }
+
+        .fb-detail {
+            color: #94a3b8;
+            font-size: 0.82rem;
+        }
+
+        .fb-accepted {
+            font-style: italic;
+            color: #e2e8f0;
+        }
+
+        .fb-link {
+            display: inline-block;
+            margin-top: 0.25rem;
+            color: #5865f2;
+            font-size: 0.8rem;
+            font-style: normal;
+        }
+        .fb-link:hover { color: #818cf8; }
+
+
+        .taxonomy-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .tax-badge {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            max-width: 100%;
+            flex-wrap: wrap;
+            word-break: break-word;
+        }
+
+        .tax-badge-label {
+            color: #cbd5e1;
+            flex-shrink: 0;
+        }
+
+        .tax-badge-value {
+            color: #e2e8f0;
+            font-weight: 600;
+            word-break: break-word;
+        }
+
+        .tax-badge-en {
+            color: #94a3b8;
+            font-style: italic;
+            word-break: break-word;
+        }
+
+        .grid-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .species-card { padding: 1.25rem 1rem; }
+            .grid-info {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            /* Separator visual giữa 2 panel trên mobile */
+            .grid-info .info-panel + .info-panel {
+                margin-top: 0.75rem;
+                border-top: 1px solid rgba(255,255,255,0.06);
+            }
+            .sp-header { margin-bottom: 1rem; padding-bottom: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            .species-card { padding: 1rem 0.875rem; }
+        }
+
+        .info-panel {
+            background: rgba(15, 20, 30, 0.4);
+            border: 1px solid rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .panel-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-weight: 700;
+        }
+
+        .panel-badge {
+            background: rgba(255,255,255,0.05);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            color: #94a3b8;
+        }
+
+        .info-item {
+            margin-bottom: 1.25rem;
+        }
+        
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-value {
+            font-size: 1.05rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .synonym-panel {
+            background: rgba(15, 20, 30, 0.4);
+            border: 1px solid rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .synonym-content {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+            white-space: pre-line;
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .synonym-content i {
+            font-style: italic;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Logo Bảo tàng Hải dương học" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;">
+                <span class="logo-full">BẢO TÀNG HẢI DƯƠNG HỌC</span><span class="logo-short">BTHD</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Trang Chủ</a>
+                <a href="browse.html" class="nav-link">Duyệt Theo Loài</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <a href="javascript:history.back()" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Quay lại
+        </a>
+        
+        <div id="speciesDetail" class="species-card" style="display: none;">
+            <!-- Rendered by JS -->
+        </div>
+        
+        <div id="loadingState" style="text-align: center; padding: 4rem; color: #64748b;">
+            Đang tải dữ liệu loài cá...
+        </div>
+        <div id="errorState" style="display:none; text-align: center; padding: 4rem; color: #f87171;">
+            Không tìm thấy thông tin loài cá này.
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; margin-top: 4rem; border-top: 1px solid rgba(255,255,255,0.05); color: #64748b; font-size: 0.9rem;">
+        <p>Chuyển đổi số phục vụ công tác nghiên cứu khoa học. Đơn vị thực hiện: Phòng Thông tin - Truyền thông, Viện Hải dương học</p>
+        <p style="margin-top: 0.5rem;">Phiên bản: 1.0.0</p>
+    </footer>
+
+<script type="module" src="/src/pages/species.js"></script>
+</body>
+</html>

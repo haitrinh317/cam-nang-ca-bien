@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duyệt Phân Loại — Bảo tàng Hải dương học</title>
+    <link rel="stylesheet" href="/src/assets/shared.css">
+    <style>
+        .taxonomy-container {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tree-level {
+            margin-left: 1.5rem;
+            border-left: 1px solid var(--border-color);
+            padding-left: 1rem;
+            display: none;
+        }
+        
+        .tree-level.expanded {
+            display: block;
+        }
+
+        .tree-node {
+            margin: 0.5rem 0;
+        }
+
+        .node-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            background: transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            border: 1px solid transparent;
+        }
+
+        .node-header:hover {
+            background: var(--bg-surface-hover);
+            border-color: var(--border-color);
+        }
+
+        .node-toggle {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-normal);
+        }
+        
+        .node-toggle.expanded {
+            transform: rotate(90deg);
+        }
+
+        .rank-badge {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+        }
+        .rank-order { background: rgba(88, 101, 242, 0.2); color: #a5b4fc; }
+        .rank-family { background: rgba(52, 211, 153, 0.2); color: #6ee7b7; }
+        .rank-genus { background: rgba(251, 191, 36, 0.2); color: #fcd34d; }
+        .rank-class { background: rgba(167, 139, 250, 0.2); color: #c4b5fd; font-size: 0.75rem; }
+
+        .species-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            margin: 0.25rem 0;
+            background: rgba(255,255,255,0.01);
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-primary);
+            border: 1px solid rgba(255,255,255,0.03);
+            transition: var(--transition-fast);
+        }
+
+        .species-item:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: var(--brand-primary);
+            transform: translateX(5px);
+        }
+        
+        .sp-name { font-weight: 600; }
+        .sp-sci { color: var(--text-secondary); font-size: 0.9em; font-style: italic; margin-left: 0.5rem; }
+        
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Logo Bảo tàng Hải dương học" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;">
+                <span class="logo-full">BẢO TÀNG HẢI DƯƠNG HỌC</span><span class="logo-short">BTHD</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Trang Chủ</a>
+                <a href="browse.html" class="nav-link active">Duyệt Theo Loài</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <div style="margin-bottom: 2rem;">
+            <h1>Hệ thống phân loại khoa học</h1>
+            <p style="color: var(--text-secondary)">Duyệt cây phân loại từ Bộ, Họ, Giống đến Loài.</p>
+        </div>
+
+        <div class="search-input-container" style="max-width: 500px; margin-bottom: 2rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="treeFilter" class="search-input" placeholder="Tìm loài theo tên tiếng Việt hoặc tên khoa học..." autocomplete="off">
+        </div>
+
+        <!-- Search Results Panel -->
+        <div id="searchResults" style="display:none; margin-top: 0.5rem;">
+            <div id="searchResultsList"></div>
+        </div>
+
+        <div class="taxonomy-container" id="treeContainer">
+            <div id="loadingState" style="text-align: center; padding: 4rem; color: #64748b;">
+            Đang tải dữ liệu phân loại...
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; margin-top: 4rem; border-top: 1px solid rgba(255,255,255,0.05); color: #64748b; font-size: 0.9rem;">
+        <p>Chuyển đổi số phục vụ công tác nghiên cứu khoa học. Đơn vị thực hiện: Phòng Thông tin - Truyền thông, Viện Hải dương học</p>
+        <p style="margin-top: 0.5rem;">Phiên bản: 1.0.0</p>
+    </footer>
+
+<script type="module" src="/src/pages/browse.js"></script>
+</body>
+</html>

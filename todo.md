@@ -60,7 +60,7 @@
 ### Chất lượng dữ liệu
 - [x] `commonName` (EN) — Tập II: 232/266, Tập III: 518/518 ✅
 - [x] `alternateNames` (VN) — Tập II: 240/266, Tập III: 246/518 (đúng bản chất)
-- [ ] 50 loài skeleton Tập III — cần re-OCR targeted pages từ PDF gốc (Hướng 1)
+- [x] Tập III — đã re-OCR toàn bộ 518 loài cực kỳ chuẩn xác và đưa lên Supabase (2026-08-04)
 - [ ] Deploy bản restore mới nhất lên Vercel
 - [ ] WoRMS sync cho loài mới (Tập III chưa sync)
 - [ ] Loài 78 Tập IV bị thiếu data trong OCR gốc

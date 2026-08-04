@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&subset=vietnamese&display=swap');
+
+:root {
+    --bg-base: #0B0F19; /* Deep Navy/Black */
+    --bg-surface: #131B2B; /* Solid Dark Slate */
+    --bg-surface-hover: #1A2438;
+    
+    --brand-primary: #0EA5E9; /* Sky 500 */
+    --brand-secondary: #38BDF8; /* Sky 400 */
+    --brand-accent: #E0F2FE; /* Sky 100 */
+    
+    --text-primary: #F8FAFC; /* Slate 50 */
+    --text-secondary: #94A3B8; /* Slate 400 */
+    --text-muted: #64748B; /* Slate 500 */
+    
+    --border-color: #1E293B; /* Slate 800 */
+    
+    --font-display: 'Be Vietnam Pro', sans-serif;
+    --font-body: 'Be Vietnam Pro', sans-serif;
+    
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+a {
+    color: var(--brand-primary);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+a:hover {
+    color: var(--brand-accent);
+}
+
+/* Archive Panel (Former Glass Panel) */
+.glass-panel {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+/* Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0.75rem 0;
+    background: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Logo text */
+.logo span {
+    color: var(--text-primary);
+}
+
+/* Logo khi dùng ảnh (img tag) */
+.logo img {
+    border-radius: 50%;
+    filter: brightness(1.05);
+}
+
+/* logo-full: hiện desktop, ẩn mobile */
+.logo .logo-short { display: none; }
+.logo .logo-full  { display: inline; }
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-primary);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--brand-primary);
+}
+
+/* Container */
+.main-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.hero p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Hero Stats */
+.hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2.5rem auto 0;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.stat-num {
+    font-size: 2.8rem;
+    font-weight: 800;
+    font-family: var(--font-display);
+    color: var(--brand-primary);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.stat-sep {
+    width: 1px;
+    height: 3rem;
+    background: rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .stat-sep { display: none; }
+    .hero-stats { gap: 1.5rem; }
+    .stat-num { font-size: 2rem; }
+}
+
+/* Search Box */
+.search-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 50;
+}
+
+.search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0.5rem 1.5rem;
+    transition: var(--transition-normal);
+}
+
+.search-input-container:focus-within {
+    border-color: var(--brand-primary);
+    transform: translateY(-1px);
+}
+
+.search-input-container svg {
+    color: var(--text-muted);
+    width: 24px;
+    height: 24px;
+}
+
+.search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+    font-family: var(--font-body);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: var(--text-muted);
+}
+
+/* Search Results Dropdown */
+.search-results {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 0;
+    width: 100%;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition-normal);
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.search-results.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.search-results::-webkit-scrollbar {
+    width: 6px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 10px;
+}
+
+.result-item {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition-fast);
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+.result-item .ri-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.result-item .ri-sci {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.vol-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: var(--bg-surface-hover);
+    color: var(--brand-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.vol-badge.v1, .vol-badge.v2, .vol-badge.v3, .vol-badge.v4, .vol-badge.v5 {
+    background: var(--bg-surface-hover); 
+    color: var(--brand-secondary);
+}
+
+/* Micro Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Taste-Skill Upgrades */
+.info-panel {
+    transition: var(--transition-normal);
+}
+.info-panel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+    border-color: rgba(255,255,255,0.08);
+}
+
+.hero-image-container {
+    width: 100%;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-image-container:hover .hero-image {
+    transform: scale(1.03);
+}
+
+details.synonym-details {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 0;
+    overflow: hidden;
+    transition: var(--transition-normal);
+}
+details.synonym-details:hover {
+    border-color: var(--text-muted);
+}
+
+summary.synonym-summary {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+summary.synonym-summary::-webkit-details-marker {
+    display: none;
+}
