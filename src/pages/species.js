@@ -80,7 +80,11 @@ function buildWormsBadge(sp) {
 // ── Helpers ──────────────────────────────────────────────────────
 function formatOneSynonym(text) {
   if (!text) return ''
-  return text.trim().replace(/^([A-Z][a-z\-]+(?: \([A-Z][a-z\-]+\))? [a-z\-]+)(.*)/, '<i>$1</i>$2')
+  let s = text.trim()
+  if (s.includes('<span class="syn-name">')) {
+    return s.replace('<span class="syn-name">', '<i>').replace('</span>', '</i>')
+  }
+  return s.replace(/^([A-Z][a-z\-]+(?: \([A-Z][a-z\-]+\))? [a-z\-]+)(.*)/, '<i>$1</i>$2')
 }
 
 // ── Render ───────────────────────────────────────────────────────
