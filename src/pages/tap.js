@@ -3,6 +3,7 @@
  */
 import { createClient } from '@supabase/supabase-js'
 import '../assets/shared.css'
+import '../lib/pwa.js'
 
 const db = createClient(
   import.meta.env.VITE_SUPABASE_URL,
