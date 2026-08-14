@@ -269,6 +269,47 @@
         .back-link:hover {
             color: #fff;
         }
+
+        /* ── Biology Panel ── */
+        .biology-panel {
+            background: rgba(15, 20, 30, 0.4);
+            border: 1px solid rgba(255,255,255,0.03);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .bio-grid { grid-template-columns: 1fr; gap: 0; }
+        }
+
+        .bio-notes {
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 1.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .bio-notes-block {
+            margin-bottom: 1.25rem;
+        }
+
+        .bio-notes-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .bio-notes-text {
+            font-size: 0.92rem;
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin-top: 0.25rem;
+        }
     </style>
 </head>
 <body>
