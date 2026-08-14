@@ -69,6 +69,7 @@ a:hover {
     padding: 0.75rem 0;
     background: var(--bg-surface);
     border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -101,8 +102,8 @@ a:hover {
 
 /* Logo khi dùng ảnh (img tag) */
 .logo img {
-    border-radius: 50%;
-    filter: brightness(1.1) drop-shadow(0 0 8px rgba(14, 165, 233, 0.55));
+    border-radius: 0;
+    filter: drop-shadow(0 0 6px rgba(14, 165, 233, 0.4));
 }
 
 /* logo-full: hiện desktop, ẩn mobile */
@@ -148,6 +149,21 @@ a:hover {
     text-align: center;
     margin-bottom: 4rem;
     animation: fadeUp 0.8s ease-out forwards;
+    position: relative;
+}
+
+/* Hero subtle radial gradient for depth */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(14, 165, 233, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: -1;
 }
 
 .hero h1 {
@@ -233,6 +249,7 @@ a:hover {
 .search-input-container:focus-within {
     border-color: var(--brand-primary);
     transform: translateY(-1px);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.12), 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .search-input-container svg {
@@ -302,7 +319,16 @@ a:hover {
     transition: var(--transition-fast);
     cursor: pointer;
     color: var(--text-primary);
+    animation: fadeUp 0.25s ease-out both;
 }
+
+/* Stagger search result items */
+.result-item:nth-child(1) { animation-delay: 0ms; }
+.result-item:nth-child(2) { animation-delay: 40ms; }
+.result-item:nth-child(3) { animation-delay: 80ms; }
+.result-item:nth-child(4) { animation-delay: 120ms; }
+.result-item:nth-child(5) { animation-delay: 160ms; }
+.result-item:nth-child(6) { animation-delay: 200ms; }
 
 .result-item:last-child {
     border-bottom: none;
@@ -458,8 +484,8 @@ footer {
     text-align: center;
     padding: 2rem;
     margin-top: 4rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: #64748b;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94A3B8; /* Slate 400 — WCAG 5.1:1 on #0B0F19 */
     font-size: 0.9rem;
 }
 
