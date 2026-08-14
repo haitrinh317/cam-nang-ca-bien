@@ -103,12 +103,16 @@
                 <img src="assets/logo.png" alt="Logo Bảo tàng Hải dương học" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;">
                 <span class="logo-full">BẢO TÀNG HẢI DƯƠNG HỌC</span><span class="logo-short">BTHD</span>
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-link">Trang Chủ</a>
                 <a href="browse.html" class="nav-link">Cây Phân Loại</a>
                 <a href="tap.html" class="nav-link active">Duyệt Theo Tập</a>
             </div>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Mở menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+        <div class="nav-overlay" id="navOverlay"></div>
     </header>
 
     <main class="main-container">
@@ -135,11 +139,31 @@
         </div>
     </main>
 
-    <footer style="text-align: center; padding: 2rem; margin-top: 4rem; border-top: 1px solid rgba(255,255,255,0.05); color: #64748b; font-size: 0.9rem;">
+    <footer>
         <p>Chuyển đổi số phục vụ công tác nghiên cứu khoa học. Đơn vị thực hiện: Phòng Thông tin - Truyền thông, Viện Hải dương học</p>
         <p style="margin-top: 0.5rem;">Phiên bản: 1.0.0</p>
     </footer>
 
     <script type="module" src="/src/pages/tap.js?v=2"></script>
+    <script>
+    (function() {
+        const btn = document.getElementById('hamburgerBtn');
+        const nav = document.getElementById('navLinks');
+        const overlay = document.getElementById('navOverlay');
+        function toggleMenu() {
+            const open = nav.classList.toggle('open');
+            btn.classList.toggle('active', open);
+            overlay.classList.toggle('active', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+        btn?.addEventListener('click', toggleMenu);
+        overlay?.addEventListener('click', toggleMenu);
+        nav?.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (nav.classList.contains('open')) toggleMenu();
+            });
+        });
+    })();
+    </script>
 </body>
 </html>
