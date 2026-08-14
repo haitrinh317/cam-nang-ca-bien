@@ -78,6 +78,79 @@ function buildWormsBadge(sp) {
   </div>`
 }
 
+// ── Biology Panel (FishBase + GBIF) ─────────────────────────────
+function buildBiologyPanel(bio) {
+  if (!bio) return ''
+
+  const iucnColor = {
+    LC: '#22c55e', NT: '#84cc16', VU: '#f59e0b',
+    EN: '#f97316', CR: '#ef4444', EX: '#7c3aed', DD: '#94a3b8'
+  }
+
+  function row(label, val) {
+    if (!val && val !== 0) return ''
+    return `<div class="info-item">
+      <div class="info-label">${label}</div>
+      <div class="info-value">${val}</div>
+    </div>`
+  }
+
+  const iucn = bio.iucnStatus
+  const iucnBadge = iucn ? `<span style="
+    display:inline-block;padding:0.2rem 0.55rem;border-radius:5px;
+    background:${iucnColor[iucn] || '#94a3b8'}22;
+    border:1px solid ${iucnColor[iucn] || '#94a3b8'}55;
+    color:${iucnColor[iucn] || '#94a3b8'};
+    font-weight:700;font-size:0.85rem;letter-spacing:.05em;
+  ">${iucn}</span>` : ''
+
+  const cols = [
+    // Left col
+    [
+      row('English name (FishBase)', bio.fbName),
+      row('Max length', bio.maxLength),
+      row('Max weight', bio.maxWeight),
+      row('Longevity', bio.longevity),
+      row('Depth range', bio.depth),
+      row('Habitat', bio.habitat),
+      iucn ? `<div class="info-item"><div class="info-label">IUCN Red List</div><div class="info-value">${iucnBadge}</div></div>` : '',
+      row('Danger to humans', bio.dangerous),
+    ].filter(Boolean).join(''),
+    // Right col
+    [
+      row('Feeding type', bio.feedingType),
+      bio.trophicLevel ? row('Trophic level', bio.trophicLevel.toFixed(2)) : '',
+      row('Reproduction', bio.reproduction),
+      row('Spawning', bio.spawning),
+      bio.spawnAggregation ? row('Spawn aggregation', 'Yes — forms spawning aggregations') : '',
+      row('Parental care', bio.parentalCare),
+      row('Importance', bio.importance),
+      row('Aquaculture', bio.aquaculture),
+    ].filter(Boolean).join(''),
+  ]
+
+  // Long text blocks (full width)
+  const notes = [
+    bio.biologySummary   ? `<div class="bio-notes-block"><div class="info-label">Biology summary (FishBase)</div><div class="bio-notes-text">${bio.biologySummary}</div></div>` : '',
+    bio.ecologyNotes     ? `<div class="bio-notes-block"><div class="info-label">Ecology notes</div><div class="bio-notes-text">${bio.ecologyNotes}</div></div>` : '',
+    bio.reproductionNotes? `<div class="bio-notes-block"><div class="info-label">Reproduction notes</div><div class="bio-notes-text">${bio.reproductionNotes}</div></div>` : '',
+    bio.morphDescription ? `<div class="bio-notes-block"><div class="info-label">Morphological description (GBIF)</div><div class="bio-notes-text">${bio.morphDescription}</div></div>` : '',
+  ].filter(Boolean).join('')
+
+  const hasData = cols[0] || cols[1] || notes
+  if (!hasData) return ''
+
+  return `
+  <div class="biology-panel">
+    <div class="panel-title">Sinh học — Sinh thái <span class="panel-badge">BIO</span></div>
+    <div class="bio-grid">
+      <div>${cols[0]}</div>
+      <div>${cols[1]}</div>
+    </div>
+    ${notes ? `<div class="bio-notes">${notes}</div>` : ''}
+  </div>`
+}
+
 // ── Helpers ──────────────────────────────────────────────────────
 function formatOneSynonym(text) {
   if (!text) return ''
@@ -154,6 +227,7 @@ function renderSpecies(sp) {
       </div>
 
       ${synsHtml}
+      ${buildBiologyPanel(sp.biology)}
     </div>`
 
   containerEl.style.display = 'block'
