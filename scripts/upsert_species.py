@@ -92,11 +92,16 @@ def flatten(sp: dict) -> dict:
         # Conservation
         "conservation_status": cs,
         "synonyms": json.dumps(syns, ensure_ascii=False),
+        "worms_status": sp.get("worms_status", ""),
+        "worms_accepted_name": sp.get("worms_accepted_name", ""),
+        "worms_id": sp.get("worms_id", None),
+        # Biology — FishBase + GBIF enrichment (JSONB, nullable)
+        # "biology": sp.get("biology") or None,
     }
 
-    # Null → empty string for text fields
+    # Null → empty string for text fields, but keep worms_id and biology as None
     for k, v in row.items():
-        if v is None:
+        if v is None and k not in ("worms_id", "biology"):
             row[k] = ""
 
     return row

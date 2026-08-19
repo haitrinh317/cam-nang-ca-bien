@@ -8,14 +8,14 @@
     "5": 279
   },
   "byStatus": {
-    "common": 921,
+    "common": 561,
     "very_rare": 33,
-    "rare": 101,
-    "uncommon": 450
+    "rare": 96,
+    "uncommon": 815
   },
-  "totalSynonyms": 39616,
+  "totalSynonyms": 4415,
   "totalClasses": 2,
-  "totalOrders": 34,
-  "totalFamilies": 158,
-  "totalGenera": 494
+  "totalOrders": 32,
+  "totalFamilies": 164,
+  "totalGenera": 577
 }

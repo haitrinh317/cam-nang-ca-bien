@@ -1,6 +1,6 @@
 # Memory — OCR Cá biển Việt Nam
 
-> Cập nhật lần cuối: 2026-07-31 16:30
+> Cập nhật lần cuối: 2026-08-19 21:33 — Phase 3 Hallmark Redesign + nav fix + Lora font + xóa public/*.html cũ
 > Production URL: https://cam-nang-ca-bien.vercel.app
 > Vercel Dashboard: https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien
 
@@ -133,7 +133,7 @@ Skill: `ocr-pdf-cabien` (v1.3.0 — dùng AI Vision built-in, KHÔNG gọi API G
 | II | 266 | ✅ OCR thủ công + chuẩn hóa + upload Supabase hoàn tất (266/266) |
 | III | 518 | ⚠️ EN 100%, VN 47%, 60 skeleton cần FishBase |
 | IV | 316 | ⚠️ Loài 1-100 chuẩn, 101-316 còn thô |
-| V | 199 | ⚠️ OCR thô, tên VN lỗi |
+| V | 279 | ✅ OCR thủ công + chuẩn hóa + upload Supabase hoàn tất (279/279) |
 
 ## Taxonomy Tree
 - **3 lớp**: Cá Sụn (93 loài, 6 bộ) · Cá Lưỡng Tiêm (1) · Cá Xương (1.107, 21 bộ)
@@ -154,6 +154,25 @@ Skill: `ocr-pdf-cabien` (v1.3.0 — dùng AI Vision built-in, KHÔNG gọi API G
 - **CSS versioning**: Dùng `?v=N` trong link CSS để bust CDN cache
 - **PowerShell encoding**: PHẢI dùng `[System.IO.File]::ReadAllText/WriteAllText` với `UTF8`
 - **Lưu ý Rollback**: Nếu đã dùng Instant Rollback trên Vercel, bản deploy mới sẽ bị ghim — phải vào dashboard Promote to Production thủ công
+
+### ⚠️ Vercel Account (BẮT BUỘC — đã gây lỗi deploy nhầm 2026-08-13)
+| Mục | Giá trị |
+|---|---|
+| **Account đúng** | `haitrinh082@gmail.com` |
+| **Scope/Team** | `haitrinh082-6335s-projects` |
+| **Project ID** | `prj_UAcAXHMGSOq5iOLChKBHOPoam596` |
+| **Org/Team ID** | `team_38z7f9cGS9vAyalMqjKVPJZJ` |
+| **Production URL** | `https://cam-nang-ca-bien.vercel.app` |
+| **Dashboard** | `https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien` |
+| **Account SAI** | `haitrinhnt@gmail.com` (haitrinhnt-6798s-projects) — KHÔNG DÙNG |
+
+**Trước khi deploy, PHẢI chạy:** `vercel whoami` → xác nhận scope = `haitrinh082-6335s-projects`.
+Nếu sai → `vercel logout` rồi `vercel login` lại.
+
+### PWA
+- `manifest.json`, `sw.js`, `pwa.js` đã deploy production (2026-08-13)
+- SW strategy: App Shell (cache-first) + Data (stale-while-revalidate)
+- Installable trên Chrome mobile/desktop
 
 ## Supabase Database (v2 — hiện tại)
 
@@ -195,3 +214,33 @@ Skill: `ocr-pdf-cabien` (v1.3.0 — dùng AI Vision built-in, KHÔNG gọi API G
 - 2026-07-30: Skill ocr-pdf-cabien v1.3.0 — bỏ Gemini Vision API, dùng AI Vision built-in (view_file)
 - 2026-07-30: Vercel Rollback ghim production — cần Promote to Production thủ công sau deploy mới
 - 2026-07-30: Admin Panel → Hướng 1 (Supabase Auth + Admin Dashboard), 3 phase: vá RLS → Auth+CRUD → multi-user
+- 2026-08-13: Vercel account chính xác = haitrinh082@gmail.com (scope haitrinh082-6335s-projects). Account haitrinhnt@gmail.com là SAI.
+- 2026-08-13: PWA (manifest + SW + pwa.js) deploy thành công lên production
+- 2026-08-13: WoRMS sync cho Tập IV loài 11-50 hoàn tất (40 loài)
+- 2026-08-14: Bổ sung 1251 loài có thông tin Sinh học - Sinh thái (Habitat, IUCN, Morphological Description, Diet, Depth) từ FishBase và GBIF vào Supabase (`biology` column).
+- 2026-08-19: Phase 3 Hallmark Redesign — full UI rewrite, Lora font (Vietnamese), tokens.css v3.0, shared.css audit-clean
+- 2026-08-19: Root-cause fix Vite: public/*.html cũ override root files → xóa 4 HTML khỏi public/
+- 2026-08-19: Nav layout 1/3–2/3 (flex:1/flex:2), đồng bộ 3 links trên 4 trang
+
+## Upgrade Plan v3.0 — Roadmap
+
+> Chi tiết: `implementation_plan.md` (artifact session 02b1c773)
+
+| Phase | Mục tiêu | Trạng thái |
+|-------|----------|-----------|
+| **Phase 1** | Redesign UI + Song ngữ VN/EN + Light/Dark mode | 🔶 Đang làm — CSS xong, còn i18n + toggle |
+| **Phase 2** | Admin Panel CRUD hoàn chỉnh (Form + Import CSV + Audit Log) | ⬜ Chưa bắt đầu |
+| **Phase 3** | Supabase Auth + Phân quyền 3 role (admin/editor/viewer) | ⬜ Chưa bắt đầu |
+| **Phase 4** | Polish + Mobile test + Deploy production | ⬜ Chưa bắt đầu |
+
+### Phase 1 còn lại
+- `src/lib/i18n.js` — module song ngữ nhẹ, không cần thư viện ngoài
+- `locales/vi.json` + `locales/en.json` — toàn bộ label UI tĩnh
+- Toggle VN/EN + light/dark trên header (lưu `localStorage`)
+- Deploy Phase 1 lên Vercel sau khi i18n xong
+
+### Ràng buộc kỹ thuật (KHÔNG thay đổi)
+- Static HTML + Vanilla JS (không React/Vue)
+- Vite build + Supabase backend
+- Font: Be Vietnam Pro (body) + Lora (display/heading)
+- Deploy: GitHub + Vercel workflow

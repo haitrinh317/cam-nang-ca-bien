@@ -98,6 +98,7 @@ const treeWrap    = document.getElementById('treeContainer')
 document.getElementById('treeFilter')?.addEventListener('input', function (e) {
   const query = e.target.value.trim()
   if (!query) {
+    searchPanel.classList.remove('active')
     searchPanel.style.display = 'none'
     treeWrap.style.display = ''
     return
@@ -109,6 +110,9 @@ document.getElementById('treeFilter')?.addEventListener('input', function (e) {
 
   treeWrap.style.display    = 'none'
   searchPanel.style.display = 'block'
+  
+  // Thêm class active để hiển thị vì CSS mới ẩn opacity 0
+  setTimeout(() => searchPanel.classList.add('active'), 10)
 
   searchList.innerHTML = hits.length === 0
     ? `<p style="color:var(--text-muted);padding:2rem;text-align:center">Không tìm thấy loài nào phù hợp.</p>`

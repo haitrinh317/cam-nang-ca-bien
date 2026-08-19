@@ -4,160 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duyệt Theo Tập — Bảo tàng Hải dương học</title>
-    <meta name="theme-color" content="#1a1a2e">
+    <meta name="description" content="Xem danh sách loài cá biển Việt Nam theo từng tập sách gốc I đến V.">
+    <meta name="theme-color" content="#0c142a">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
     <link rel="stylesheet" href="/src/assets/shared.css">
-    <style>
-        .page-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .vol-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-
-        .vol-tab {
-            padding: 0.75rem 1.5rem;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            color: var(--text-secondary);
-            font-weight: 600;
-            transition: var(--transition-fast);
-            cursor: pointer;
-        }
-
-        .vol-tab:hover, .vol-tab.active {
-            background: var(--bg-surface-hover);
-            border-color: var(--brand-primary);
-            color: var(--brand-primary);
-        }
-
-        .grid-species {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .species-card-mini {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            padding: 1.5rem;
-            transition: var(--transition-normal);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .species-card-mini:hover {
-            background: var(--bg-surface-hover);
-            border-color: var(--brand-secondary);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-
-        .scm-id {
-            font-family: var(--font-display);
-            color: var(--brand-primary);
-            font-weight: 800;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.5;
-        }
-
-        .scm-name {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #fff;
-            margin-bottom: 0.25rem;
-        }
-
-        .scm-sci {
-            color: var(--text-secondary);
-            font-style: italic;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            flex-grow: 1;
-        }
-
-        .scm-tax {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            padding-top: 0.75rem;
-        }
-    </style>
 </head>
 <body>
-    <header class="site-header">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Logo Bảo tàng Hải dương học" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;">
-                <span class="logo-full">BẢO TÀNG HẢI DƯƠNG HỌC</span><span class="logo-short">BTHD</span>
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" class="nav-link">Trang Chủ</a>
-                <a href="browse.html" class="nav-link">Cây Phân Loại</a>
-                <a href="tap.html" class="nav-link active">Duyệt Theo Tập</a>
-            </div>
-            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Mở menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-        <div class="nav-overlay" id="navOverlay"></div>
+    <!-- N5 Floating Pill Nav -->
+    <header class="site-header" role="banner">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Logo Bảo tàng Hải dương học">
+            <span class="logo-full">Bảo tàng Hải dương học</span><span class="logo-short">BTHD</span>
+        </a>
+        <nav class="nav-links" id="navLinks" aria-label="Điều hướng chính">
+            <a href="index.html" class="nav-link">Trang Chủ</a>
+            <a href="browse.html" class="nav-link">Cây Phân Loại</a>
+            <a href="tap.html" class="nav-link active">Duyệt Theo Tập</a>
+        </nav>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Mở menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </header>
+    <div class="nav-overlay" id="navOverlay"></div>
 
+    <!-- Main Container: Bento Grid Macrostructure -->
     <main class="main-container">
-        <div class="page-header">
-            <h1>Duyệt Theo Tập (Volume)</h1>
-            <p style="color: var(--text-secondary)">Xem danh sách loài cá theo thứ tự trích xuất trong từng tập sách gốc.</p>
+        <section class="page-header" aria-label="Tiêu đề tập">
+            <h1>Duyệt Theo Tập Sách Gốc</h1>
+            <p>Trích xuất 5 tập tài liệu khoa học Danh mục Cá biển Việt Nam — Viện Hải dương học.</p>
+        </section>
+
+        <!-- Volume Selection Tabs -->
+        <nav class="vol-tabs" id="volTabs" aria-label="Chọn tập">
+            <button class="vol-tab" data-vol="1" type="button">Tập I</button>
+            <button class="vol-tab" data-vol="2" type="button">Tập II</button>
+            <button class="vol-tab" data-vol="3" type="button">Tập III</button>
+            <button class="vol-tab active" data-vol="4" type="button">Tập IV</button>
+            <button class="vol-tab" data-vol="5" type="button">Tập V</button>
+        </nav>
+
+        <!-- Quick Filter Input -->
+        <div class="search-input-container" style="max-width: 540px; margin-bottom: var(--space-3xl);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="localFilter" class="search-input" placeholder="Lọc nhanh tên cá trong tập này..." autocomplete="off">
         </div>
 
-        <div class="vol-tabs" id="volTabs">
-            <div class="vol-tab" data-vol="1">Tập I</div>
-            <div class="vol-tab" data-vol="2">Tập II</div>
-            <div class="vol-tab" data-vol="3">Tập III</div>
-            <div class="vol-tab active" data-vol="4">Tập IV</div>
-            <div class="vol-tab" data-vol="5">Tập V</div>
-        </div>
-
-        <div class="search-input-container" style="max-width: 500px; margin: 0 auto 3rem;">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            <input type="text" id="localFilter" class="search-input" placeholder="Lọc nhanh tên cá trong Tập này..." autocomplete="off">
-        </div>
-
-        <div id="gridContainer" class="grid-species">
-            <div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted)">Đang tải dữ liệu...</div>
-        </div>
+        <!-- Species Cards Grid (Bento Grid) -->
+        <section id="gridContainer" class="grid-species" aria-label="Danh sách loài trong tập">
+            <div style="grid-column: 1/-1; text-align: center; padding: 4rem; color: var(--color-muted);">
+                Đang tải dữ liệu loài trong tập...
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>Chuyển đổi số phục vụ công tác nghiên cứu khoa học. Đơn vị thực hiện: Phòng Thông tin - Truyền thông, Viện Hải dương học</p>
-        <p style="margin-top: 0.5rem;">Phiên bản: 1.0.0</p>
+    <!-- Ft5 Statement Footer -->
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <p class="footer__statement">Khám phá đại dương, bảo tồn di sản biển Việt Nam.</p>
+            <div class="footer__meta">
+                <div class="footer__org">
+                    <strong>Viện Hải dương học — Nha Trang</strong>
+                    Phòng Thông tin – Truyền thông<br>
+                    Chuyển đổi số phục vụ nghiên cứu khoa học
+                </div>
+                <span class="footer__version">v3.0.0</span>
+            </div>
+        </div>
     </footer>
 
-    <script type="module" src="/src/pages/tap.js?v=2"></script>
+    <script type="module" src="/src/pages/tap.js?v=3"></script>
     <script>
+    /* Hamburger menu */
     (function() {
         const btn = document.getElementById('hamburgerBtn');
         const nav = document.getElementById('navLinks');
         const overlay = document.getElementById('navOverlay');
+
         function toggleMenu() {
             const open = nav.classList.toggle('open');
             btn.classList.toggle('active', open);
+            btn.setAttribute('aria-expanded', open);
             overlay.classList.toggle('active', open);
             document.body.style.overflow = open ? 'hidden' : '';
         }
+
         btn?.addEventListener('click', toggleMenu);
         overlay?.addEventListener('click', toggleMenu);
+
         nav?.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 if (nav.classList.contains('open')) toggleMenu();
