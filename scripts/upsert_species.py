@@ -95,13 +95,22 @@ def flatten(sp: dict) -> dict:
         "worms_status": sp.get("worms_status", ""),
         "worms_accepted_name": sp.get("worms_accepted_name", ""),
         "worms_id": sp.get("worms_id", None),
+        # Morphology — seaweed: from OCR, fish: from FishBase enrichment
+        "morphology_vn": t(vn, "morphology") if t(vn, "morphology") else sp.get("morphology_vn", ""),
+        "morphology_en": t(en, "morphology") if t(en, "morphology") else sp.get("morphology_en", ""),
+        # Photo metadata — shared across all collections
+        "photo_place": sp.get("photo_place", "") or sp.get("photoPlace", ""),
+        "photo_depth": sp.get("photo_depth", "") or sp.get("photoDepth", ""),
+        "photo_date": sp.get("photo_date", "") or sp.get("photoDate", ""),
         # Biology — FishBase + GBIF enrichment (JSONB, nullable)
         # "biology": sp.get("biology") or None,
+        # Collection (default: ca-bien)
+        "collection_id": sp.get("collection_id", "ca-bien"),
     }
 
     # Null → empty string for text fields, but keep worms_id and biology as None
     for k, v in row.items():
-        if v is None and k not in ("worms_id", "biology"):
+        if v is None and k not in ("worms_id", "biology", "collection_id"):
             row[k] = ""
 
     return row

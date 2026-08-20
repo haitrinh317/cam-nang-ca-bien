@@ -34,6 +34,13 @@ interface Species {
   en_literature: string | null
   synonyms: string | string[] | null
   biology: Biology | null
+  // Morphology + Photo data — shared across all collections
+  morphology_vn: string | null
+  morphology_en: string | null
+  photo_place: string | null
+  photo_depth: string | null
+  photo_date: string | null
+  collection_id: string | null
 }
 
 interface Biology {
@@ -242,6 +249,24 @@ export default function SpecimenCard({ sp }: { sp: Species }) {
         <KvRow labelVn="Tình trạng" valVn={sp.vn_status} labelEn="Status" valEn={sp.en_status} />
         <KvRow labelVn="Tài liệu dẫn" valVn={sp.vn_literature} labelEn="Literature" valEn={sp.en_literature} />
       </section>
+
+      {/* Section: Hình thái học — hiện khi có morphology */}
+      {(sp.morphology_vn || sp.morphology_en) && (
+        <section className="specimen__section">
+          <h2 className="specimen__section-title">Hình thái học</h2>
+          <KvRow labelVn="Mô tả (VN)" valVn={sp.morphology_vn} labelEn="Morphology (EN)" valEn={sp.morphology_en} />
+        </section>
+      )}
+
+      {/* Section: Thông tin thu mẫu — hiện khi có photo data */}
+      {(sp.photo_place || sp.photo_depth || sp.photo_date) && (
+        <section className="specimen__section">
+          <h2 className="specimen__section-title">Thông tin thu mẫu</h2>
+          {sp.photo_place && <KvRow labelVn="Địa điểm" valVn={sp.photo_place} />}
+          {sp.photo_depth && <KvRow labelVn="Độ sâu" valVn={sp.photo_depth} />}
+          {sp.photo_date && <KvRow labelVn="Ngày thu mẫu" valVn={sp.photo_date} />}
+        </section>
+      )}
 
       {/* Synonyms */}
       {syns.length > 0 && (
