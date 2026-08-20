@@ -271,6 +271,10 @@ Nếu sai → `vercel logout` rồi `vercel login` lại.
 - 2026-08-20: Cleanup: xóa next-app/ (shell rỗng), vite_legacy/, .vite/. Di chuyển file rời rạc vào v1_backup/
 - 2026-08-20: Git commit a2b1a3e — Next.js source + cleanup + gitignore/vercelignore update. Push master thành công
 - 2026-08-20: Next.js app đã ở ROOT (không còn next-app/). Dev: `npm run dev` từ root
+- 2026-08-20: Deploy Vercel bản Next.js 16 thành công (`vercel --prod`). Production READY
+- 2026-08-20: Migration 004 — thêm 5 cột chung: morphology_vn/en, photo_place/depth/date. Dùng cho MỌI collection
+- 2026-08-20: Phân tích PDF "Rong biển thường thấy ở VN" (254tr, ~160 loài). Schema rong biển khác cá 6 điểm → chọn Phương án B (mở rộng schema)
+- 2026-08-20: Quyết định: morphology + photo data là trường CHUNG — cá biển lấy từ FishBase, rong biển lấy từ OCR sách
 
 ## Upgrade Plan v3.0 — Roadmap
 
