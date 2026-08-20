@@ -44,10 +44,17 @@ def flatten(sp: dict) -> dict:
     vn    = specs.get("vn", {}) if isinstance(specs, dict) else {}
     en    = specs.get("en", {}) if isinstance(specs, dict) else {}
 
+    collection_id = sp.get("collection_id", "ca-bien")
+    
+    class_vn = t(tax.get("class", {}), "vn") if isinstance(tax.get("class"), dict) else ""
+    class_latin = t(tax.get("class", {}), "latin") if isinstance(tax.get("class"), dict) else ""
+
     order_latin = ""
     if isinstance(tax.get("order"), dict):
         order_latin = tax["order"].get("latin", "")
-    class_vn, class_latin = get_class(order_latin)
+        
+    if not class_vn and not class_latin and collection_id == "ca-bien":
+        class_vn, class_latin = get_class(order_latin)
 
     syns = sp.get("synonyms", [])
     if not isinstance(syns, list):

@@ -214,7 +214,9 @@ export default function SpecimenCard({ sp }: { sp: Species }) {
       <header className="specimen__hero">
         <div className="specimen__meta">
           <span className="specimen__index">#{sp.species_index || ''}</span>
-          <span className="specimen__vol">Tập {sp.volume || ''}</span>
+          <span className="specimen__vol">
+            {sp.collection_id === 'thuc-vat-bien' ? 'Sách Thực vật' : `Tập ${sp.volume || ''}`}
+          </span>
         </div>
         <h1 className="specimen__name">{sp.vn_name}</h1>
         <p className="specimen__sci">{sp.scientific_name} <span className="specimen__author">{cleanAuthor}</span></p>
