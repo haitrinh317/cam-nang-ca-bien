@@ -1,0 +1,69 @@
+{
+  "nav": {
+    "home": "Trang Chủ",
+    "browse": "Cây Phân Loại",
+    "byVolume": "Duyệt Theo Tập",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu"
+  },
+  "home": {
+    "heroTitle": "Danh mục Cá biển Việt Nam",
+    "heroSubtitle": "Cơ sở dữ liệu số hóa phục vụ công tác nghiên cứu khoa học — Viện Hải dương học, Nha Trang.",
+    "searchPlaceholder": "Tìm kiếm tên cá...",
+    "searchAriaLabel": "Tìm kiếm loài cá",
+    "statsSpecies": "loài",
+    "statsVolumes": "tập",
+    "statsSynced": "đã đồng bộ WoRMS",
+    "volPrefix": "Tập",
+    "volSpecies": "loài",
+    "volUpdating": "Đang cập nhật"
+  },
+  "tap": {
+    "pageTitle": "Duyệt Theo Tập",
+    "pageSubtitle": "Chọn một tập để xem danh sách loài",
+    "searchPlaceholder": "Lọc loài trong tập...",
+    "loading": "Đang tải...",
+    "noResult": "Không tìm thấy loài nào phù hợp",
+    "volLabel": "Tập"
+  },
+  "browse": {
+    "pageTitle": "Cây Phân Loại",
+    "searchPlaceholder": "Tìm tên loài hoặc tên khoa học...",
+    "loading": "Đang tải cây phân loại...",
+    "noResult": "Không tìm thấy kết quả"
+  },
+  "species": {
+    "backLink": "Quay lại danh sách",
+    "loading": "Đang tải dữ liệu hồ sơ loài cá...",
+    "notFound": "Không tìm thấy thông tin loài cá này.",
+    "sectionMain": "Thông số chính",
+    "sectionSpecimen": "Mẫu vật & Tình trạng",
+    "taxLabel": "Phân loại học",
+    "synonymsLabel": "Danh pháp đồng nghĩa (Synonyms) & Phân loại học gốc",
+    "volPrefix": "Tập",
+    "labelAltNames": "Tên gọi khác",
+    "labelCommonName": "Common Name",
+    "labelSize": "Kích thước",
+    "labelSizeEn": "Size",
+    "labelDistrib": "Phân bố",
+    "labelDistribEn": "Distribution",
+    "labelSpecimen": "Nơi lưu trữ mẫu",
+    "labelSpecimenEn": "Specimen",
+    "labelStatus": "Tình trạng",
+    "labelStatusEn": "Status",
+    "labelLit": "Tài liệu dẫn",
+    "labelLitEn": "Literature"
+  },
+  "footer": {
+    "statement": "Bảo tàng Hải dương học - Lăng kính đại dương",
+    "org": "Viện Hải dương học, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
+    "dept": "Phòng Thông tin – Truyền thông",
+    "mission": "Chuyển đổi số phục vụ nghiên cứu khoa học"
+  },
+  "ui": {
+    "toggleDark": "Chế độ tối",
+    "toggleLight": "Chế độ sáng",
+    "langVN": "VN",
+    "langEN": "EN"
+  }
+}

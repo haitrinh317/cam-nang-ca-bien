@@ -1,28 +1,23 @@
-# Thư mục backup & làm việc — không deploy lên Vercel
+# Heavy working dirs — don't upload to Vercel
 v1_backup/
 scratch/
 scratch_images/
 scripts/
 Documents/
+Logs/
+backups/
+.backups/
 .agents/
-logs/
 
-# Data thô — không cần thiết cho webapp
+# Data subdirs not needed for web
 data/raw/
-data/tap3_species_all.json
-data/tap4_species_all.json
-data/tap5_species_all.json
-data/taxonomy.json
+data/tap2_images/
+data/fishbase_cache/
+data/parsed/
 
-# File docs
+# OCR batch files (intermediate)
+data/tap2_ocr_batch*.json
+
+# Docs
 *.md
-todo.md
-Memory.md
 
-# File legacy (đã chuyển vào v1_backup, nhưng giữ dòng này đề phòng)
-cam_nang_ca_bien_sample.html
-tap-1.html
-tap-2.html
-tap-3.html
-tap-4.html
-tap-5.html

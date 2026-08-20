@@ -1,8 +1,40 @@
 # Memory — OCR Cá biển Việt Nam
 
-> Cập nhật lần cuối: 2026-08-19 21:33 — Phase 3 Hallmark Redesign + nav fix + Lora font + xóa public/*.html cũ
-> Production URL: https://cam-nang-ca-bien.vercel.app
+> Cập nhật lần cuối: **2026-08-19 23:43** — ✅ Migration Next.js hoàn thành M0→M5
+> Production URL (cũ, Vite): https://cam-nang-ca-bien.vercel.app
+> **App mới (Next.js)**: `next-app/` — chạy `cd next-app && npm run dev` → localhost:3001
 > Vercel Dashboard: https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien
+
+## ⚡ Kiến trúc Web App (v4 — Next.js App Router)
+
+| Route | Component | Chức năng |
+|---|---|---|
+| `/` | `app/page.tsx` | Landing + GlobalSearch + Collection cards |
+| `/ca-bien` | `app/[collection]/page.tsx` + `SpeciesGrid` | Duyệt theo Tập |
+| `/ca-bien/taxonomy` | `app/[collection]/taxonomy/page.tsx` + `TaxonomyTree` | Cây phân loại |
+| `/ca-bien/[speciesId]` | `app/[collection]/[speciesId]/page.tsx` + `SpecimenCard` | Chi tiết loài |
+| `/admin` | `app/admin/page.tsx` | Dashboard stats |
+| `/admin/ca-bien` | `app/admin/[collection]/page.tsx` + `SpeciesTable` | CRUD loài |
+| `/login` | `app/login/page.tsx` + `LoginForm` | Supabase Auth |
+| `/api/species` | `app/api/species/route.ts` | GET/POST/PATCH/DELETE |
+| `/sitemap.xml` | `app/sitemap.ts` | Dynamic sitemap |
+| `/robots.txt` | `app/robots.ts` | Robots rules |
+
+### Middleware: bảo vệ `/admin/*` → redirect `/login?next=`
+
+### Supabase DB Tables
+| Table | Mô tả |
+|---|---|
+| `species` | 1574 loài, có `collection_id` FK |
+| `collections` | registry: `ca-bien` (active), `thuc-vat-bien` (draft) |
+| `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
+
+### Migrations đã chạy
+- `migrations/001_create_collections.sql` ✅
+- `migrations/002_species_collection_id.sql` ✅
+- `migrations/003_user_roles.sql` ✅
+
+
 
 ## Kiến trúc Web App (v2 — hiện tại)
 
@@ -239,8 +271,8 @@ Nếu sai → `vercel logout` rồi `vercel login` lại.
 - Toggle VN/EN + light/dark trên header (lưu `localStorage`)
 - Deploy Phase 1 lên Vercel sau khi i18n xong
 
-### Ràng buộc kỹ thuật (KHÔNG thay đổi)
-- Static HTML + Vanilla JS (không React/Vue)
-- Vite build + Supabase backend
-- Font: Be Vietnam Pro (body) + Lora (display/heading)
-- Deploy: GitHub + Vercel workflow
+### Ràng buộc kỹ thuật (MỚI)
+- Next.js 16 App Router + React + TypeScript
+- Supabase (Backend & Auth)
+- Tailwind KHÔNG DÙNG (giữ nguyên Vanilla CSS cũ)
+- Deploy: GitHub + Vercel workflow (Framework Preset: Next.js)

@@ -1,19 +1,29 @@
-# ===== Vercel local =====
+# ===== Next.js =====
+.next/
 .vercel/
 
-# ===== Vite / Node =====
+# ===== Node =====
 node_modules/
 dist/
+
+# ===== Environment =====
 .env
 .env.local
+.env*.local
 
-# ===== OCR / Raw data =====
+# ===== OCR / Raw data (heavy) =====
 *.png
 *.jpg
 *.jpeg
 *.pdf
 *.csv
 *.psv
+
+# ===== Data subdirs (heavy, not needed in repo) =====
+data/raw/
+data/tap2_images/
+data/fishbase_cache/
+data/tap2_ocr_batch*.json
 
 # ===== Python artifacts =====
 __pycache__/
@@ -22,14 +32,14 @@ __pycache__/
 .venv/
 venv/
 
-# ===== Scratch & temp =====
+# ===== Scratch & working dirs =====
 scratch/
 scratch_images/
 v1_backup/
 .backups/
-
-# ===== Legacy HTML (đã backup) =====
-cam_nang_ca_bien_sample.html
+backups/
+Logs/
+Documents/
 
 # ===== Agent / IDE internal =====
 .agents/
@@ -39,6 +49,3 @@ cam_nang_ca_bien_sample.html
 Thumbs.db
 .DS_Store
 desktop.ini
-
-.vercel
-.env*

@@ -1,7 +1,22 @@
 # TODO — Dự án OCR Cá biển Việt Nam
 
-> Cập nhật: 2026-08-19 21:33
-> Next Session Starting Point: Deploy lên Vercel sau khi confirm nav layout ổn. Tiếp theo: OCR Tập IV (101-316), WoRMS sync Tập III, Admin Panel Phase 2 (Form CRUD).
+> Cập nhật: 2026-08-19 23:43
+> **Next Session Starting Point**: Next.js app đang chạy tại `localhost:3001`. Migrations 001+002+003 đã chạy xong. Admin role đã seed. Tiếp theo: OCR Tập IV (101-316), WoRMS sync Tập III.
+
+## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
+
+- [x] **Phase M0** — Scaffold Next.js 16, TypeScript, Supabase clients, Nav/Footer/Layout
+- [x] **Phase M1** — Port 4 trang: GlobalSearch, SpeciesGrid, TaxonomyTree, SpecimenCard
+- [x] **Phase M2** — Multi-collection: DB collections table, collection_id FK, dynamic routing
+- [x] **Phase M3** — Admin CRUD: API routes, SpeciesTable, SpeciesForm 4-tab, 26 trường
+- [x] **Phase M4** — Auth: middleware /admin/*, Login page, Logout, AuthStatus, user_roles RLS
+- [x] **Phase M5** — SEO: OG/Twitter, sitemap.xml, robots.txt, redirects, 404, PWA manifest
+- [x] **SQL migrations**: 001 (collections) + 002 (collection_id) + 003 (user_roles) — đã chạy
+- [x] **Admin role seed**: haitrinh082@gmail.com đã có role admin
+
+> App: `next-app/` — `npm run dev` → localhost:3001
+
+
 
 ## ✅ Hoàn thành
 
@@ -51,11 +66,11 @@
 ### Phase 1 — Redesign UI + Song ngữ VN/EN
 - [x] Redesign CSS: design system, tokens, Hallmark macrostructures *(done 2026-08-19)*
 - [x] Font: Lora (Vietnamese subset), Be Vietnam Pro giữ nguyên *(done 2026-08-19)*
-- [ ] Light/dark mode toggle (`[data-theme="light"]` / `[data-theme="dark"]`)
-- [ ] I18n module nhẹ: `src/lib/i18n.js` + `locales/vi.json` + `locales/en.json`
-- [ ] Thêm toggle VN/EN trên header (lưu `localStorage`)
-- [ ] Dịch label UI: menu, button, placeholder, heading cho 4 trang HTML
-- [ ] Deploy Phase 1 lên Vercel
+- [x] Light/dark mode toggle (`[data-theme="light"]` / `[data-theme="dark"]`) *(done 2026-08-19)*
+- [x] I18n module nhẹ: `src/lib/i18n.js` + `locales/vi.json` + `locales/en.json` *(done 2026-08-19)*
+- [x] Thêm toggle VN/EN trên header (lưu `localStorage`) *(done 2026-08-19)*
+- [x] Dịch label UI: menu, button, placeholder, heading cho 4 trang HTML *(done 2026-08-19)*
+- [x] Deploy Phase 1 lên Vercel *(done 2026-08-20 - Next.js live)*
 
 ### Phase 2 — Admin Panel CRUD hoàn chỉnh
 - [ ] Modal Form CRUD loài: 21+ trường, chia tab (Chung / VN / EN / Taxonomy / Biology)
@@ -112,7 +127,7 @@
 - [x] `commonName` (EN) — Tập II: 232/266, Tập III: 518/518 ✅
 - [x] `alternateNames` (VN) — Tập II: 240/266, Tập III: 246/518 (đúng bản chất)
 - [x] Tập III — đã re-OCR toàn bộ 518 loài cực kỳ chuẩn xác và đưa lên Supabase (2026-08-04)
-- [ ] Deploy bản Phase 3 mới nhất lên Vercel (CHƯA deploy)
+- [x] Deploy bản Next.js mới nhất lên Vercel (Hoàn tất 2026-08-20)
 - [ ] WoRMS sync cho loài mới (Tập III chưa sync)
 - [ ] Loài 78 Tập IV bị thiếu data trong OCR gốc
 

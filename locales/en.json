@@ -1,0 +1,69 @@
+{
+  "nav": {
+    "home": "Home",
+    "browse": "Taxonomy Tree",
+    "byVolume": "Browse by Volume",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "home": {
+    "heroTitle": "Vietnamese Marine Fish Catalog",
+    "heroSubtitle": "Digitized species database for scientific research — Institute of Oceanography, Nha Trang.",
+    "searchPlaceholder": "Search fish name...",
+    "searchAriaLabel": "Search species",
+    "statsSpecies": "species",
+    "statsVolumes": "volumes",
+    "statsSynced": "synced with WoRMS",
+    "volPrefix": "Vol.",
+    "volSpecies": "species",
+    "volUpdating": "Updating"
+  },
+  "tap": {
+    "pageTitle": "Browse by Volume",
+    "pageSubtitle": "Select a volume to view species list",
+    "searchPlaceholder": "Filter species in volume...",
+    "loading": "Loading...",
+    "noResult": "No matching species found",
+    "volLabel": "Vol."
+  },
+  "browse": {
+    "pageTitle": "Taxonomy Tree",
+    "searchPlaceholder": "Search species or scientific name...",
+    "loading": "Loading taxonomy tree...",
+    "noResult": "No results found"
+  },
+  "species": {
+    "backLink": "Back to list",
+    "loading": "Loading species record...",
+    "notFound": "Species not found.",
+    "sectionMain": "Main Specifications",
+    "sectionSpecimen": "Specimen & Status",
+    "taxLabel": "Taxonomy",
+    "synonymsLabel": "Synonyms & Original Classification",
+    "volPrefix": "Vol.",
+    "labelAltNames": "Alternate Names",
+    "labelCommonName": "Common Name",
+    "labelSize": "Size (VN)",
+    "labelSizeEn": "Size",
+    "labelDistrib": "Distribution (VN)",
+    "labelDistribEn": "Distribution",
+    "labelSpecimen": "Specimen Location",
+    "labelSpecimenEn": "Specimen",
+    "labelStatus": "Status (VN)",
+    "labelStatusEn": "Status",
+    "labelLit": "Literature (VN)",
+    "labelLitEn": "Literature"
+  },
+  "footer": {
+    "statement": "Museum of Oceanography — Window to the Ocean",
+    "org": "Institute of Oceanography, Vietnam Academy of Science and Technology",
+    "dept": "Information & Communication Division",
+    "mission": "Digital transformation for scientific research"
+  },
+  "ui": {
+    "toggleDark": "Dark mode",
+    "toggleLight": "Light mode",
+    "langVN": "VN",
+    "langEN": "EN"
+  }
+}
