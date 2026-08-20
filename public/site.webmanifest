@@ -1,0 +1,15 @@
+{
+  "name": "Bảo tàng Hải dương học — Tra cứu Cá biển Việt Nam",
+  "short_name": "Cá biển VN",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0c142a",
+  "background_color": "#0c142a",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
