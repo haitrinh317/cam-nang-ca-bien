@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import '@/styles/tokens.css'
 import '@/styles/globals.css'
-import Nav from '@/components/layout/Nav'
-import Footer from '@/components/layout/Footer'
 import { ThemeScript } from '@/components/layout/ThemeScript'
 
 const SITE_URL = 'https://cam-nang-ca-bien.vercel.app'
@@ -55,11 +53,7 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body>
-        <Nav />
-        <main className="main-container">
-          {children}
-        </main>
-        <Footer />
+        {children}
       </body>
     </html>
   )
