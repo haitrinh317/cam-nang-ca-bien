@@ -51,6 +51,19 @@ export default function RootLayout({
         <meta name="theme-color" content="#0c142a" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <ThemeScript />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                  for(let registration of registrations) {
+                    registration.unregister();
+                  }
+                });
+              }
+            `,
+          }}
+        />
       </head>
       <body>
         {children}
