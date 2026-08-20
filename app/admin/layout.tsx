@@ -11,13 +11,24 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     <div className="admin-wrapper">
       <aside className="admin-sidebar">
         <div className="admin-sidebar__brand">
-          <span>⚙️</span>
-          <span>Admin Panel</span>
+          <div className="brand-icon">⚙</div>
+          <div>
+            <span className="brand-label">Admin Panel</span>
+            <span className="brand-sub">Bảo tàng Hải dương học</span>
+          </div>
         </div>
         <nav className="admin-sidebar__nav">
-          <a href="/admin" className="admin-nav-link">📊 Tổng quan</a>
-          <a href="/admin/ca-bien" className="admin-nav-link">🐟 Cá biển</a>
-          <a href="/admin/thuc-vat-bien" className="admin-nav-link">🌿 Thực vật biển</a>
+          <span className="admin-nav-section-label">Tổng quan</span>
+          <a href="/admin" className="admin-nav-link">
+            <span className="nav-icon">📊</span> Thống kê
+          </a>
+          <span className="admin-nav-section-label">Bộ sưu tập</span>
+          <a href="/admin/ca-bien" className="admin-nav-link">
+            <span className="nav-icon">🐟</span> Cá biển
+          </a>
+          <a href="/admin/thuc-vat-bien" className="admin-nav-link">
+            <span className="nav-icon">🌿</span> Thực vật biển
+          </a>
         </nav>
         <div className="admin-sidebar__footer">
           <AuthStatus />
