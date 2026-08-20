@@ -1,9 +1,10 @@
 # Memory — OCR Cá biển Việt Nam
 
-> Cập nhật lần cuối: **2026-08-19 23:43** — ✅ Migration Next.js hoàn thành M0→M5
-> Production URL (cũ, Vite): https://cam-nang-ca-bien.vercel.app
-> **App mới (Next.js)**: `next-app/` — chạy `cd next-app && npm run dev` → localhost:3001
+> Cập nhật lần cuối: **2026-08-20 12:32** — ✅ Cleanup + Git push Next.js migration
+> Production URL: https://cam-nang-ca-bien.vercel.app
+> **Dev**: `npm run dev` từ root → localhost:3000
 > Vercel Dashboard: https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien
+> Git: `a2b1a3e` — commit cleanup + Next.js migration
 
 ## ⚡ Kiến trúc Web App (v4 — Next.js App Router)
 
@@ -102,38 +103,52 @@
 - specs values: KHÔNG có prefix label ("Kích thước:", "Size:")
 - status chỉ nhận: `common`, `uncommon`, `rare`, `unknown`
 
-## Cấu trúc thư mục
+## Cấu trúc thư mục (v4 — Next.js, sau cleanup 2026-08-20)
 
 ```
-OCR Document/
-├── index.html, browse.html, species.html, tap.html  ← source HTML (sửa ở đây)
-├── assets/
-│   ├── shared.css, shared.js                        ← source CSS/JS
-│   └── logo.png
+OCR Document/                         ← Next.js project root
+├── app/                              ← Next.js App Router
+│   ├── page.tsx                      ← Landing + Search
+│   ├── layout.tsx                    ← Root layout
+│   ├── [collection]/                 ← Dynamic: /ca-bien
+│   │   ├── page.tsx                  ← SpeciesGrid
+│   │   ├── taxonomy/page.tsx         ← TaxonomyTree
+│   │   └── [speciesId]/page.tsx      ← SpecimenCard
+│   ├── admin/                        ← /admin + /admin/[collection]
+│   ├── login/                        ← Supabase Auth
+│   ├── api/species/route.ts          ← REST API
+│   ├── sitemap.ts, robots.ts         ← SEO
+│   └── not-found.tsx
+├── components/                       ← React components
+│   ├── admin/    (SpeciesTable, SpeciesForm)
+│   ├── browse/   (SpeciesGrid, TaxonomyTree)
+│   ├── layout/   (Nav, Footer, AuthStatus, HeaderControls, ThemeScript)
+│   ├── search/   (GlobalSearch)
+│   └── species/  (SpecimenCard)
+├── lib/                              ← Utilities
+│   ├── supabase-browser.ts, supabase-server.ts
+│   ├── i18n.ts, theme.ts, collections.ts
+├── styles/
+│   ├── tokens.css                    ← Design tokens (9KB)
+│   └── globals.css                   ← Full CSS (47KB)
+├── locales/vi.json, en.json          ← i18n
+├── middleware.ts                     ← Auth guard /admin/*
+├── next.config.ts, tsconfig.json     ← Next.js config
 ├── data/
-│   ├── species.json          (2.8MB — CSDL chính)
-│   ├── taxonomy_tree.json    (341KB — cây phân loại)
-│   ├── fishbase_sync.json    (569KB — WoRMS validation)
-│   ├── stats.json            (thống kê)
-│   ├── parsed/               ← nguồn build database
-│   │   ├── tap3_parsed_details.json
-│   │   ├── tap4_parsed_details.json
-│   │   └── tap5_parsed_details.json
-│   └── raw/                  ← PDF nguồn gốc (tap1-5)
-├── scripts/                  ← 6 pipeline scripts chính
-│   ├── build_database.py     (build species.json)
-│   ├── build_taxonomy_tree.py
-│   ├── enrich_names.py       (enrichment pipeline)
-│   ├── audit_species.py      (data quality)
-│   ├── sync_fishbase.py      (WoRMS sync)
-│   └── update_indexes.py
-├── public/                   ← Vercel serve từ đây
-│   ├── *.html, assets/, data/
-├── Documents/                ← PDF sách gốc
-├── .agents/                  ← AI skills
-├── v1_backup/                ← scripts cũ, scratch, legacy HTML
+│   ├── species.json      (3.4MB — CSDL chính, 1279 loài)
+│   ├── taxonomy_tree.json (335KB)
+│   ├── fishbase_sync.json (569KB — WoRMS)
+│   ├── stats.json
+│   ├── parsed/            ← nguồn build database
+│   └── raw/               ← PDF nguồn gốc (gitignored)
+├── scripts/               ← Pipeline scripts
+├── migrations/            ← SQL migrations (001-003)
+├── Documents/             ← PDF sách gốc (gitignored)
+├── scratch/               ← OCR batches (gitignored)
+├── v1_backup/             ← Legacy archive (gitignored)
+├── .agents/               ← AI skills (gitignored)
 ├── Memory.md, todo.md
-├── vercel.json, .gitignore, .vercelignore
+├── .gitignore, .vercelignore
 ```
 
 ### Build pipeline
@@ -253,6 +268,9 @@ Nếu sai → `vercel logout` rồi `vercel login` lại.
 - 2026-08-19: Phase 3 Hallmark Redesign — full UI rewrite, Lora font (Vietnamese), tokens.css v3.0, shared.css audit-clean
 - 2026-08-19: Root-cause fix Vite: public/*.html cũ override root files → xóa 4 HTML khỏi public/
 - 2026-08-19: Nav layout 1/3–2/3 (flex:1/flex:2), đồng bộ 3 links trên 4 trang
+- 2026-08-20: Cleanup: xóa next-app/ (shell rỗng), vite_legacy/, .vite/. Di chuyển file rời rạc vào v1_backup/
+- 2026-08-20: Git commit a2b1a3e — Next.js source + cleanup + gitignore/vercelignore update. Push master thành công
+- 2026-08-20: Next.js app đã ở ROOT (không còn next-app/). Dev: `npm run dev` từ root
 
 ## Upgrade Plan v3.0 — Roadmap
 

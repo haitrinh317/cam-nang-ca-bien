@@ -1,7 +1,7 @@
 # TODO — Dự án OCR Cá biển Việt Nam
 
-> Cập nhật: 2026-08-19 23:43
-> **Next Session Starting Point**: Next.js app đang chạy tại `localhost:3001`. Migrations 001+002+003 đã chạy xong. Admin role đã seed. Tiếp theo: OCR Tập IV (101-316), WoRMS sync Tập III.
+> Cập nhật: 2026-08-20 12:32
+> **Next Session Starting Point**: Next.js app ở ROOT — `npm run dev` → localhost:3000. Git push `a2b1a3e` xong. Cleanup hoàn tất. Tiếp theo: OCR Tập IV (101-316), WoRMS sync Tập III, deploy Vercel bản Next.js.
 
 ## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
 
