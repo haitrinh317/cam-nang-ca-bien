@@ -10,6 +10,7 @@ interface SearchResult {
   vn_name: string
   scientific_name: string
   authorship: string | null
+  collection_id: string
 }
 
 export default function GlobalSearch() {
@@ -23,7 +24,7 @@ export default function GlobalSearch() {
     setStatus('loading')
     const { data, error } = await db
       .from('species')
-      .select('id, volume, vn_name, scientific_name, authorship')
+      .select('id, volume, vn_name, scientific_name, authorship, collection_id')
       .or(`vn_name.ilike.%${q}%,scientific_name.ilike.%${q}%,en_common_name.ilike.%${q}%`)
       .order('volume')
       .limit(12)
@@ -80,7 +81,7 @@ export default function GlobalSearch() {
           {status === 'idle' && results.map(item => (
             <Link
               key={item.id}
-              href={`/ca-bien/${item.id}`}
+              href={`/${item.collection_id || 'ca-bien'}/${item.id}`}
               className="result-item"
               onClick={() => setOpen(false)}
             >
@@ -88,7 +89,9 @@ export default function GlobalSearch() {
                 <div className="ri-name">{item.vn_name}</div>
                 <div className="ri-sci">{item.scientific_name} {item.authorship || ''}</div>
               </div>
-              <span className={`vol-badge v${item.volume}`}>Tập {item.volume}</span>
+              <span className={`vol-badge ${item.collection_id === 'thuc-vat-bien' ? 'v-plant' : `v${item.volume}`}`}>
+                {item.collection_id === 'thuc-vat-bien' ? 'Thực vật' : `Tập ${item.volume}`}
+              </span>
             </Link>
           ))}
         </div>

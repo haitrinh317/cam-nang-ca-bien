@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 import { db } from '@/lib/supabase-browser'
+import SkeletonGrid from '@/components/ui/SkeletonGrid'
 
 interface Species {
   id: string
@@ -11,29 +12,34 @@ interface Species {
   vn_name: string
   scientific_name: string
   tax_order_vn: string | null
+  tax_order_latin: string | null
   tax_family_vn: string | null
+  tax_family_latin: string | null
+  photo_url: string | null
 }
 
 interface Props {
   collection: string // e.g. 'ca-bien'
   initialVol?: number
+  volumeCount?: number
 }
 
-const VOLUMES = [1, 2, 3, 4, 5]
-
-export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
+export default function SpeciesGrid({ collection, initialVol = 1, volumeCount = 1 }: Props) {
   const [currentVol, setCurrentVol] = useState(initialVol)
   const [species, setSpecies] = useState<Species[]>([])
   const [filtered, setFiltered] = useState<Species[]>([])
   const [status, setStatus] = useState<'loading' | 'error' | 'ok'>('loading')
   const [filterQuery, setFilterQuery] = useState('')
 
+  const VOLUMES = Array.from({ length: volumeCount }, (_, i) => i + 1)
+
   const loadVolume = useCallback(async (vol: number) => {
     setStatus('loading')
     setFilterQuery('')
     const { data, error } = await db
       .from('species')
-      .select('id, volume, species_index, vn_name, scientific_name, tax_order_vn, tax_family_vn')
+      .select('id, volume, species_index, vn_name, scientific_name, tax_order_vn, tax_family_vn, tax_order_latin, tax_family_latin, photo_url')
+      .eq('collection_id', collection)
       .eq('volume', vol)
       .order('species_index')
       .limit(700) // ponytail: largest volume ~518 species
@@ -42,7 +48,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
     setSpecies(data)
     setFiltered(data)
     setStatus('ok')
-  }, [])
+  }, [collection])
 
   useEffect(() => { loadVolume(currentVol) }, [currentVol, loadVolume])
 
@@ -60,18 +66,20 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
   return (
     <>
       {/* Volume tabs */}
-      <nav className="vol-tabs" aria-label="Chọn tập">
-        {VOLUMES.map(v => (
-          <button
-            key={v}
-            className={`vol-tab${currentVol === v ? ' active' : ''}`}
-            onClick={() => setCurrentVol(v)}
-            type="button"
-          >
-            Tập {['I', 'II', 'III', 'IV', 'V'][v - 1]}
-          </button>
-        ))}
-      </nav>
+      {volumeCount > 1 && (
+        <nav className="vol-tabs" aria-label="Chọn tập">
+          {VOLUMES.map(v => (
+            <button
+              key={v}
+              className={`vol-tab${currentVol === v ? ' active' : ''}`}
+              onClick={() => setCurrentVol(v)}
+              type="button"
+            >
+              Tập {['I', 'II', 'III', 'IV', 'V'][v - 1]}
+            </button>
+          ))}
+        </nav>
+      )}
 
       {/* Filter input */}
       <div className="search-input-container" style={{ maxWidth: '540px', marginBottom: 'var(--space-3xl)' }}>
@@ -82,7 +90,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
           type="text"
           id="localFilter"
           className="search-input"
-          placeholder="Lọc nhanh tên cá trong tập này..."
+          placeholder="Lọc nhanh tên loài trong tập này..."
           autoComplete="off"
           value={filterQuery}
           onChange={handleFilter}
@@ -91,11 +99,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
 
       {/* Grid */}
       <section id="gridContainer" className="grid-species" aria-label="Danh sách loài trong tập">
-        {status === 'loading' && (
-          <div style={{ gridColumn: '1/-1', textAlign: 'center', padding: '3rem', color: 'var(--color-muted)' }}>
-            Đang tải dữ liệu loài trong tập...
-          </div>
-        )}
+        {status === 'loading' && <SkeletonGrid />}
         {status === 'error' && (
           <div style={{ gridColumn: '1/-1', textAlign: 'center', padding: '3rem', color: '#f87171' }}>
             Lỗi tải dữ liệu. Thử lại sau.
@@ -106,17 +110,22 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
             {filterQuery ? 'Không tìm thấy loài phù hợp.' : `Tập ${currentVol} chưa có dữ liệu.`}
           </div>
         )}
-        {status === 'ok' && filtered.map(sp => (
-          <Link key={sp.id} href={`/${collection}/${sp.id}`} className="species-card-mini">
-            <div className="scm-id">#{sp.species_index}</div>
-            <div className="scm-name">{sp.vn_name}</div>
-            <div className="scm-sci">{sp.scientific_name}</div>
-            <div className="scm-tax">
-              {sp.tax_order_vn || ''}
-              {sp.tax_family_vn ? ` → ${sp.tax_family_vn}` : ''}
-            </div>
-          </Link>
-        ))}
+        {status === 'ok' && filtered.map(sp => {
+          const order = sp.tax_order_vn || sp.tax_order_latin || ''
+          const family = sp.tax_family_vn || sp.tax_family_latin || ''
+          return (
+            <Link key={sp.id} href={`/${collection}/${sp.id}`} className="species-card-mini">
+              {sp.photo_url && <img src={sp.photo_url} alt="" className="scm-thumb" loading="lazy" />}
+              <div className="scm-id">#{sp.species_index}</div>
+              <div className="scm-name">{sp.vn_name}</div>
+              <div className="scm-sci">{sp.scientific_name}</div>
+              <div className="scm-tax">
+                {order}
+                {family ? ` → ${family}` : ''}
+              </div>
+            </Link>
+          )
+        })}
       </section>
     </>
   )

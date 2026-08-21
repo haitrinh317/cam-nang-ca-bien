@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import PhotoManager from './PhotoManager'
 
 interface SpeciesRow {
   id?: string
@@ -29,6 +30,7 @@ interface SpeciesRow {
   en_specimen?: string | null
   en_status?: string | null
   en_literature?: string | null
+  photo_url?: string | null
 }
 
 interface Props {
@@ -38,7 +40,7 @@ interface Props {
   onClose: () => void
 }
 
-type Tab = 'basic' | 'taxonomy' | 'vn' | 'en'
+type Tab = 'basic' | 'taxonomy' | 'vn' | 'en' | 'photo'
 
 function Field({ label, name, value, onChange, required, textarea }: {
   label: string; name: string; value: string; onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
@@ -60,6 +62,7 @@ function Field({ label, name, value, onChange, required, textarea }: {
 export default function SpeciesForm({ initial, collection, onSave, onClose }: Props) {
   const [tab, setTab] = useState<Tab>('basic')
   const [saving, setSaving] = useState(false)
+  const genusLabel = collection === 'thuc-vat-bien' ? 'Chi' : 'Giống'
   const [form, setForm] = useState<Record<string, string>>({
     id:               initial?.id || '',
     volume:           String(initial?.volume || 1),
@@ -115,6 +118,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
     { key: 'taxonomy', label: '🌿 Phân loại' },
     { key: 'vn', label: '🇻🇳 Tiếng Việt' },
     { key: 'en', label: '🇬🇧 English' },
+    ...(initial?.id ? [{ key: 'photo' as Tab, label: '📷 Ảnh' }] : []),
   ]
 
   return (
@@ -167,8 +171,8 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                 <Field label="Bộ (Latin)" name="tax_order_latin" value={form.tax_order_latin} onChange={onChange} />
                 <Field label="Họ (Tiếng Việt)" name="tax_family_vn" value={form.tax_family_vn} onChange={onChange} />
                 <Field label="Họ (Latin)" name="tax_family_latin" value={form.tax_family_latin} onChange={onChange} />
-                <Field label="Giống (Tiếng Việt)" name="tax_genus_vn" value={form.tax_genus_vn} onChange={onChange} />
-                <Field label="Giống (Latin)" name="tax_genus_latin" value={form.tax_genus_latin} onChange={onChange} />
+                <Field label={`${genusLabel} (Tiếng Việt)`} name="tax_genus_vn" value={form.tax_genus_vn} onChange={onChange} />
+                <Field label={`${genusLabel} (Latin)`} name="tax_genus_latin" value={form.tax_genus_latin} onChange={onChange} />
               </div>
             )}
 
@@ -193,6 +197,17 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                 <Field label="Specimen" name="en_specimen" value={form.en_specimen} onChange={onChange} textarea />
                 <Field label="Status" name="en_status" value={form.en_status} onChange={onChange} textarea />
                 <Field label="Literature" name="en_literature" value={form.en_literature} onChange={onChange} textarea />
+              </div>
+            )}
+
+            {/* Tab: Ảnh */}
+            {tab === 'photo' && initial?.id && (
+              <div className="form-grid form-grid--single">
+                <PhotoManager
+                  speciesId={initial.id}
+                  currentUrl={form.photo_url || initial?.photo_url || null}
+                  onUpdated={(url) => setForm(f => ({ ...f, photo_url: url }))}
+                />
               </div>
             )}
           </div>

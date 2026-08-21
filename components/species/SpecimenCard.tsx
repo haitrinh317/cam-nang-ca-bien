@@ -40,6 +40,7 @@ interface Species {
   photo_place: string | null
   photo_depth: string | null
   photo_date: string | null
+  photo_url: string | null
   collection_id: string | null
 }
 
@@ -205,7 +206,7 @@ export default function SpecimenCard({ sp }: { sp: Species }) {
     sp.tax_class_vn  ? { rank: 'Lớp',   vn: sp.tax_class_vn,  lat: sp.tax_class_latin }  : null,
     sp.tax_order_vn  ? { rank: 'Bộ',    vn: sp.tax_order_vn,  lat: sp.tax_order_latin }  : null,
     sp.tax_family_vn ? { rank: 'Họ',    vn: sp.tax_family_vn, lat: sp.tax_family_latin } : null,
-    sp.tax_genus_vn  ? { rank: 'Giống', vn: sp.tax_genus_vn,  lat: sp.tax_genus_latin }  : null,
+    sp.tax_genus_vn  ? { rank: sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống', vn: sp.tax_genus_vn,  lat: sp.tax_genus_latin }  : null,
   ].filter(Boolean) as { rank: string; vn: string; lat: string | null }[]
 
   return (
@@ -222,6 +223,13 @@ export default function SpecimenCard({ sp }: { sp: Species }) {
         <p className="specimen__sci">{sp.scientific_name} <span className="specimen__author">{cleanAuthor}</span></p>
         <WormsBadge sp={sp} />
       </header>
+
+      {/* Ảnh minh họa */}
+      {sp.photo_url && (
+        <figure className="specimen__photo">
+          <img src={sp.photo_url} alt={sp.vn_name} loading="lazy" />
+        </figure>
+      )}
 
       {/* Taxonomy breadcrumb */}
       <nav className="specimen__taxonomy" aria-label="Phân loại học">

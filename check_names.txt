@@ -1,0 +1,114 @@
+thucvat-species-24 | Rong Câu lục | Caulerpa cupressoides | (Vahl) C. Agardh
+thucvat-species-40 | Rong Cọ [dạng phiến cầu] | Avrainvillea obscura [spherical blade form] | (C. Agardh) J. Agardh
+thucvat-species-105 | Rong Kim nhũ | Galaxaura lapidescens | (Ellis et Solander) Lamouroux
+thucvat-species-39 | Rong Cọ [dạng phiến dẹp] | Avrainvillea obscura [flat blade form] | (C. Agardh) J. Agardh
+thucvat-species-49 | Rong Nhung Ả Rập [dạng bò] | Codium arabicum [decumbent form] | Kützing
+thucvat-species-50 | Rong Nhung Ả Rập [dạng đứng] | Codium arabicum [erect form] | Kützing
+thucvat-species-55 | Rong Biệt nang | Bornetella nitida | Sonder
+thucvat-species-54 | Rong Lông chim | Bryopsis plumosa | (Hudson) C. Agardh
+thucvat-species-57 | Rong Tân tiết ngấn | Neomeris annulata | Dickie
+thucvat-species-64 | Rong Võng chạc | Dictyota dichotoma | (Hudson) Lamouroux
+thucvat-species-72 | Rong Mào kép | Dilophus sp. | 
+thucvat-species-70 | Rong Võng | Dictyota sp.3 | 
+thucvat-species-71 | Rong Võng | Dictyota sp.4 | 
+thucvat-species-79 | Rong Đại võng | Spatoglossum vietnamense | Pham
+thucvat-species-84 | Rong Đỗ quyên Nha Trang | Rosenvingea nhatrangensis | Dawson
+thucvat-species-95 | Rong Lá mơ Swartz | Sargassum swartzii | (Turner) C. Agardh
+thucvat-species-7 | Rong Hải nga xếp | Anadyomene plicata | C. Agardh
+thucvat-species-8 | Rong Hải nga Wright | Anadyomene wrightii | Harvey
+thucvat-species-18 | Rong Võng cầu bộng | Dictyosphaeria cavernosa | (Forsskål) Børgesen
+thucvat-species-103 | Rong Xạ mao dòn [dạng bụi] | Actinotrichia fragilis | (Forsskål) Børgesen [clump form]
+thucvat-species-102 | Rong Hải giác | Dermonema frappieri | (Montagne et Millardet) Børgesen
+thucvat-species-97 | Rong Lá mơ | Sargassum sp.2 | 
+thucvat-species-104 | Rong Xạ mao dòn [dạng phẳng] | Actinotrichia fragilis | (Forsskål) Børgesen [plane form]
+thucvat-species-14 | Rong Bôtlea | Boodlea sp. | 
+thucvat-species-19 | Rong Võng cầu verluys | Dictyosphaeria versluysii | Weber-van Bosse
+thucvat-species-20 | Rong Đại bào dề | Valonia aegagropila | C. Agardh
+thucvat-species-23 | Rong Đại bào trứng | Ventricaria ventricosa | (J. Agardh) Olsen et West
+thucvat-species-38 | Rong Cọ đứng | Avrainvillea erecta | (Berkeley) A. et E. S. Gepp
+thucvat-species-43 | Rong Hải cốt [dạng đốt hẹp] | Halimeda discoidea [narrow segment form] | Decaisne
+thucvat-species-45 | Rong Hải cốt | Halimeda opuntia | (Linnaeus) Lamouroux
+thuc-vat-bien-species-3 | Rong Cải biển nhăn | Ulva lactuca | Linnaeus
+thuc-vat-bien-species-2 | Rong Bún dài | Enteromorpha prolifera | (Müller) J. Agardh
+thuc-vat-bien-species-4 | Rong Lục võng | Ulva reticulata | Forsskål
+thuc-vat-bien-species-5 | Rong Cải biển | Ulva sp.1 | 
+thuc-vat-bien-species-6 | Rong Cải biển | Ulva sp.2 | 
+thucvat-species-5 | Rong Cải biển | Ulva sp.1 | 
+thucvat-species-4 | Rong Lục võng | Ulva reticulata | Forsskål
+thucvat-species-56 | Rong Biệt nang tròn | Bornetella sphaerica | (Zanardini) Solms-Laubach
+thucvat-species-1 | Rong Bún thắt | Enteromorpha compressa | (Linnaeus) Nees
+thucvat-species-2 | Rong Bún dài | Enteromorpha prolifera | (Müller) J. Agardh
+thucvat-species-86 | Rong Căn nang | Hormophysa cuneiformis | (Gmelin) Silva
+thucvat-species-58 | Rong Lọng hình dĩa | Acetabularia caliculus | Lamouroux
+thucvat-species-59 | Rong Lọng hình dùi | Acetabularia clavata | Yamada
+thucvat-species-88 | Rong Lá mơ | Sargassum denticarpum | Ajisaka et Huynh
+thucvat-species-89 | Rong Lá mơ bìa đôi | Sargassum duplicatum | Bory
+thucvat-species-96 | Rong Lá mơ | Sargassum sp.1 | 
+thucvat-species-100 | Rong Mứt tròn | Porphyra suborbiculata | Kjellman
+thuc-vat-bien-species-31 | Rong Cầu lục chùm | Caulerpa racemosa var. peltata | (Lamouroux) Eubank
+thucvat-species-6 | Rong Cải biển | Ulva sp.2 | 
+thuc-vat-bien-species-1 | Rong Bún thắt | Enteromorpha compressa | (Linnaeus) Nees
+thucvat-species-94 | Rong Mơ Qui Nhơn | Sargassum quinhonese | Nguyen
+thucvat-species-98 | Rong Chùy diệp chùy | Turbinaria conoides | (J. Agardh) Kützing
+thucvat-species-3 | Rong Cải biển nhăn | Ulva lactuca | Linnaeus
+thucvat-species-11 | Rong Tóc đốt thô | Chaetomorpha crassa | (C. Agardh) Kützing
+thucvat-species-12 | Rong Bôtlea | Boodlea coacta | (Dickie) Murray et De Toni
+thucvat-species-16 | Rong Biệt sinh Forbes | Boergesenia forbesii | (Harvey) Feldmann
+thucvat-species-17 | Rong Chi đài hình rắn | Cladophoropsis herpestica | (Montagne) Howe
+thucvat-species-29 | Rong Câu lục chùm | Caulerpa racemosa var. laete-virens | (Montagne) Weber-van Bosse
+thucvat-species-44 | Rong Hải cốt | Halimeda macroloba | Decaisne
+thucvat-species-47 | Rong Hải nữ Java | Rhipidosiphon javensis | Montagne
+thucvat-species-21 | Rong Đại bào bó | Valonia fastigiata | Harvey ex J. Agardh
+thucvat-species-22 | Rong Đại bào túi | Valonia utricularis | (Roth) C. Agardh
+thucvat-species-27 | Rong Câu lục bi nhỏ | Caulerpa lentillifera | J. Agardh
+thucvat-species-26 | Rong Câu lục đỉnh | Caulerpa fastigiata | Montagne
+thucvat-species-32 | Rong Câu lục có răng | Caulerpa serrulata var. boryana | (J. Agardh) Yamada et Tanaka
+thucvat-species-48 | Rong Hải nữ | Udotea orientalis | A. et E. S. Gepp
+thucvat-species-92 | Rong Lá mơ | Sargassum oligocystum | Montagne
+thucvat-species-37 | Rong Cọ | Avrainvillea amadelpha | (Montagne) A. et E. S. Gepp
+thucvat-species-36 | Rong Câu lục luân sinh | Caulerpa verticillata f. charoides | Harvey ex Weber-van Bosse
+thucvat-species-93 | Rong Lá mơ nhiều phao | Sargassum polycystum | C. Agardh
+thucvat-species-41 | Rong Cọ | Avrainvillea sp. | 
+thucvat-species-42 | Rong Hải cốt [dạng đốt rộng] | Halimeda discoidea [broad segment form] | Decaisne
+thucvat-species-46 | Rong Hải cốt | Halimeda velasquezii | Taylor
+thucvat-species-51 | Rong Nhung Gepp | Codium geppiorum | O. C. Schmidt
+thucvat-species-52 | Rong Nhung | Codium sp. | 
+thucvat-species-77 | Rong Quạt bấc | Padina boryana | Thivy
+thucvat-species-67 | Rong Võng | Dictyota spinulosa | Harvey
+thucvat-species-63 | Rong Võng răng cưa | Dictyota dentata | Lamouroux
+thucvat-species-61 | Rong Hải tu lóng ngắn | Asteronema breviarticulatum | (J. Agardh) Ouriques et Bouzon
+thucvat-species-65 | Rong Võng bò | Dictyota friabilis | Setchell
+thucvat-species-80 | Rong Lông bao rối | Chnoospora implexa | J. Agardh
+thucvat-species-90 | Rong Lá mơ Mcclurei | Sargassum mcclurei | Setchell
+thucvat-species-68 | Rong Võng | Dictyota sp.1 | 
+thucvat-species-73 | Rong Thùy đài | Lobophora variegata | (Lamouroux) Womersley ex Oliveira [decumbent form]
+thucvat-species-74 | Rong Thùy đài | Lobophora variegata | (Lamouroux) Womersley ex Oliveira [erect form]
+thucvat-species-69 | Rong Võng | Dictyota sp.2 | 
+thucvat-species-83 | Rong Mặt lưới | Hydroclathrus clathratus | (C. Agardh) Howe
+thucvat-species-75 | Rong Thùy | Lobophora sp. | 
+thucvat-species-85 | Rong Đỗ quyên đông | Rosenvingea orientalis | (J. Agardh) Børgesen
+thucvat-species-10 | Rong Tóc đốt cần | Chaetomorpha antennina | (Bory) Kützing
+thucvat-species-33 | Rong Câu lục có răng | Caulerpa serrulata var. serrulata f. lata | (Weber-van Bosse) Tseng
+thucvat-species-9 | Rong Mạng lưới | Microdictyon japonicum | Setchell
+thucvat-species-76 | Rong Quạt Úc | Padina australis | Hauck
+thucvat-species-78 | Rong Quạt | Padina minor | Yamada
+thucvat-species-13 | Rong Bôtlea ghép | Boodlea composita | (Harvey) Brand
+thucvat-species-15 | Rong Trụ đèn | Struvea anastomosans | (Harvey) Piccone et Grunow
+thucvat-species-25 | Rong Câu lục | Caulerpa cupressoides | (Vahl) C. Agardh
+thucvat-species-30 | Rong Câu lục chùm | Caulerpa racemosa var. lamourouxii | (Turner) Weber-van Bosse
+thucvat-species-81 | Rong Lông bao chổi | Chnoospora minima | (Hering) Papenfuss
+thucvat-species-82 | Rong Bao tử | Colpomenia sinuosa | (Mertens ex Roth) Derbès et Solier
+thucvat-species-34 | Rong Câu lục lông chim | Caulerpa sertularioides f. longipes | (J. Agardh) Collins
+thucvat-species-35 | Rong Câu lục song đính | Caulerpa taxifolia | (Vahl) C. Agardh
+thucvat-species-62 | Rong Võng gân rộng | Dictyopteris sp. | 
+thucvat-species-66 | Rong Võng vạch | Dictyota linearis | (C. Agardh) Greville
+thucvat-species-91 | Rong Mơ lá phao | Sargassum mcclurei f. duplicatum | Zinova et Nguyen
+thucvat-species-99 | Rong Chùy diệp đẹp | Turbinaria ornata | (Turner) J. Agardh
+thucvat-species-101 | Rong Mứt Việt | Porphyra vietnamensis | Tanaka et Pham
+thucvat-species-106 | Rong Kim nhũ | Galaxaura sp. | 
+thucvat-species-107 | chưa có tên Việt Nam | Tricleocarpa cylindrica | (Ellis et Solander) Huisman et Borowitzka
+thucvat-species-28 | Rong Câu lục chùm | Caulerpa racemosa var. clavifera f. macrophysa | (Kützing) Weber-van Bosse
+thucvat-species-31 | Rong Câu lục chùm | Caulerpa racemosa var. peltata | (Lamouroux) Eubank
+thucvat-species-53 | Rong Lông chim | Bryopsis harveyana | J. Agardh
+thucvat-species-60 | Rong Lọng | Acetabularia parvula | Solms-Laubach
+thucvat-species-87 | Rong Lá mơ lá dày | Sargassum crassifolium | J. Agardh

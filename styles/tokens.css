@@ -176,6 +176,16 @@
   --nav-height:            60px;
   --measure:               68ch;
   --measure-narrow:        48ch;
+
+  /* ─── Admin / Brand (aliases for admin panel) ─── */
+  --brand-primary:         var(--color-accent);
+  --brand-primary-rgb:     111, 255, 232;
+  --color-surface:         var(--color-paper);
+  --color-surface-2:       var(--color-paper-2);
+  --color-surface-3:       var(--color-paper-3);
+  --color-border:          var(--color-rule);
+  --color-ink-base:        var(--color-ink);
+  --color-heading:         var(--color-ink);
 }
 
 /* ═══════════════════════════════════════════

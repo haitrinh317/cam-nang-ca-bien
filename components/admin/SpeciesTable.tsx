@@ -2,8 +2,11 @@
 
 import { useEffect, useState, useCallback, useRef } from 'react'
 import SpeciesForm from './SpeciesForm'
+import ImportModal from './ImportModal'
+import AuditLog from './AuditLog'
 
 interface SpeciesRow {
+  [key: string]: unknown
   id: string
   volume: number
   species_index: number | null
@@ -24,7 +27,7 @@ export default function SpeciesTable({ collection }: Props) {
   const [vol, setVol] = useState('')
   const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(false)
-  const [editTarget, setEditTarget] = useState<SpeciesRow | null>(null)
+  const [editTarget, setEditTarget] = useState<Record<string, unknown> | null>(null)
   const [showForm, setShowForm] = useState(false)
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null)
   const [toast, setToast] = useState<{ msg: string; type: 'ok' | 'err' } | null>(null)
@@ -63,6 +66,19 @@ export default function SpeciesTable({ collection }: Props) {
   const handleVolChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setVol(e.target.value)
     setPage(1)
+  }
+
+  const fetchAndEdit = async (id: string) => {
+    const fullRes = await fetch(`/api/species/detail?id=${id}`)
+    if (fullRes.ok) {
+      const { data } = await fullRes.json()
+      setEditTarget(data)
+    } else {
+      // Fallback: use the row we already have
+      const row = rows.find(r => r.id === id)
+      setEditTarget(row || null)
+    }
+    setShowForm(true)
   }
 
   const handleSave = async (data: Record<string, unknown>, id?: string) => {
@@ -128,13 +144,16 @@ export default function SpeciesTable({ collection }: Props) {
             ))}
           </select>
         </div>
-        <button
-          className="btn btn-primary"
-          onClick={() => { setEditTarget(null); setShowForm(true) }}
-          type="button"
-        >
-          + Thêm loài mới
-        </button>
+        <div style={{ display: 'flex', gap: '0.75rem' }}>
+          <ImportModal collection={collection} onImported={() => load(page, vol, search)} />
+          <button
+            className="btn btn-primary"
+            onClick={() => { setEditTarget(null); setShowForm(true) }}
+            type="button"
+          >
+            + Thêm loài mới
+          </button>
+        </div>
       </div>
 
       {/* Table */}
@@ -163,14 +182,14 @@ export default function SpeciesTable({ collection }: Props) {
                   <code style={{ fontSize: '0.7rem', color: 'var(--color-muted)' }}>{row.id}</code>
                 </td>
                 <td style={{ fontWeight: 500 }}>{row.vn_name || '—'}</td>
-                <td style={{ fontStyle: 'italic', color: 'var(--brand-primary)' }}>{row.scientific_name || '—'}</td>
-                <td>{row.tax_family_latin || '—'}</td>
+                <td style={{ fontStyle: 'italic', color: 'var(--color-ink-2)' }}>{row.scientific_name || '—'}</td>
+                <td style={{ color: 'var(--color-ink-3)' }}>{row.tax_family_latin || '—'}</td>
                 <td>
                   <div style={{ display: 'flex', gap: '0.5rem' }}>
                     <button
                       className="btn btn-outline"
                       style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem' }}
-                      onClick={() => { setEditTarget(row); setShowForm(true) }}
+                      onClick={() => fetchAndEdit(row.id)}
                       type="button"
                     >
                       Sửa
@@ -232,6 +251,9 @@ export default function SpeciesTable({ collection }: Props) {
           onClose={() => { setShowForm(false); setEditTarget(null) }}
         />
       )}
+
+      {/* Audit Log */}
+      <AuditLog collection={collection} />
     </div>
   )
 }

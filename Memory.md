@@ -14,10 +14,12 @@
 | `/ca-bien` | `app/[collection]/page.tsx` + `SpeciesGrid` | Duyệt theo Tập |
 | `/ca-bien/taxonomy` | `app/[collection]/taxonomy/page.tsx` + `TaxonomyTree` | Cây phân loại |
 | `/ca-bien/[speciesId]` | `app/[collection]/[speciesId]/page.tsx` + `SpecimenCard` | Chi tiết loài |
-| `/admin` | `app/admin/page.tsx` | Dashboard stats |
-| `/admin/ca-bien` | `app/admin/[collection]/page.tsx` + `SpeciesTable` | CRUD loài |
-| `/login` | `app/login/page.tsx` + `LoginForm` | Supabase Auth |
-| `/api/species` | `app/api/species/route.ts` | GET/POST/PATCH/DELETE |
+| `/admin` | `app/(admin)/admin/page.tsx` | Dashboard stats + audit log gần đây |
+| `/admin/ca-bien` | `app/(admin)/admin/[collection]/page.tsx` + `SpeciesTable` | CRUD loài + Import JSON + Audit Log |
+| `/admin/thuc-vat-bien` | tương tự | CRUD thực vật biển |
+| `/login` | `app/(auth)/login/page.tsx` + `LoginForm` | Supabase Auth |
+| `/api/species` | `app/api/species/route.ts` | GET/POST/PATCH/DELETE + audit logging |
+| `/api/species/import` | `app/api/species/import/route.ts` | POST bulk upsert JSON |
 | `/sitemap.xml` | `app/sitemap.ts` | Dynamic sitemap |
 | `/robots.txt` | `app/robots.ts` | Robots rules |
 
@@ -26,14 +28,37 @@
 ### Supabase DB Tables
 | Table | Mô tả |
 |---|---|
-| `species` | 1574 loài, có `collection_id` FK |
-| `collections` | registry: `ca-bien` (active), `thuc-vat-bien` (draft) |
+| `species` | ~1680 loài (cá biển + thực vật biển), có `collection_id` FK |
+| `collections` | registry: `ca-bien` (active), `thuc-vat-bien` (active) |
 | `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
+| `audit_log` | Nhật ký thay đổi: ai sửa gì, lúc nào, old/new data (jsonb) |
+
+### Admin Panel Components
+| Component | File | Chức năng |
+|---|---|---|
+| `SpeciesTable` | `components/admin/SpeciesTable.tsx` | Bảng CRUD + tìm kiếm + phân trang |
+| `SpeciesForm` | `components/admin/SpeciesForm.tsx` | Modal 4 tab: Cơ bản, Phân loại, VN, EN |
+| `ImportModal` | `components/admin/ImportModal.tsx` | Upload JSON → preview → bulk upsert |
+| `AuditLog` | `components/admin/AuditLog.tsx` | Bảng nhật ký thay đổi |
+
+### Admin Panel Progress (2026-08-21)
+- ✅ Phase 1: CRUD hoạt động (GET/POST/PATCH/DELETE + audit log)
+- ✅ Phase 2: Dashboard nâng cấp (thống kê tổng/cá/thực vật, breakdown tập)
+- ✅ Phase 3: Import JSON hàng loạt (upload file → preview → upsert)
+- ✅ Phase 4: Quản lý ảnh loài (upload/xóa/preview — Supabase Storage bucket `species-photos`)
+- ✅ Phase 5: Audit Log (bảng DB + component + API ghi log)
+- ⚠️ Chú Chình cần tự test CRUD bằng tay (bot browser không gõ được tiếng Việt có dấu)
+
+### WoRMS Taxonomy Sync (2026-08-21)
+- ✅ 107 loài thực vật biển đã sync cây phân loại đầy đủ từ WoRMS
+- Script: `scripts/sync_taxonomy_worms.py` — lấy Classification Tree từ WoRMS API
+- Rule: Thực vật biển dùng "Chi" thay cho "Giống" (đã apply ở TaxonomyTree, SpecimenCard, SpeciesForm)
 
 ### Migrations đã chạy
 - `migrations/001_create_collections.sql` ✅
 - `migrations/002_species_collection_id.sql` ✅
 - `migrations/003_user_roles.sql` ✅
+- `audit_log` table ✅ (tạo bằng SQL trên Supabase Dashboard)
 
 
 

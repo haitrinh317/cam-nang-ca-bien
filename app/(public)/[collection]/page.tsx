@@ -30,7 +30,8 @@ export default async function CollectionPage({ params, searchParams }: Props) {
   const col = getCollectionBySlug(collection)
   if (!col) notFound()
 
-  const initialVol = parseInt(vol || '1') || 1
+  const defaultVol = 1
+  const initialVol = parseInt(vol || String(defaultVol)) || defaultVol
 
   return (
     <>
@@ -38,7 +39,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
         <h1>Duyệt Theo Tập Sách Gốc</h1>
         <p>Trích xuất {col.volumeCount} tập tài liệu khoa học {col.nameVn} — Viện Hải dương học.</p>
       </section>
-      <SpeciesGrid collection={collection} initialVol={initialVol} />
+      <SpeciesGrid collection={collection} initialVol={initialVol} volumeCount={col.volumeCount} />
     </>
   )
 }

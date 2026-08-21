@@ -69,9 +69,9 @@ def flatten(sp: dict) -> dict:
     row = {
         "id":            sp.get("id", ""),
         "volume":        sp.get("volume", 0),
-        "species_index": sp.get("speciesIndex", 0),
-        "vn_name":       sp.get("vnName", ""),
-        "scientific_name": sp.get("scientificName", ""),
+        "species_index": sp.get("speciesIndex", 0) or sp.get("species_index", 0),
+        "vn_name":       sp.get("vnName", "") or sp.get("vn_name", ""),
+        "scientific_name": sp.get("scientificName", "") or sp.get("scientific_name", ""),
         "authorship":    sp.get("authorship", ""),
         "en_common_name": t(en, "commonName"),
         "vn_alternate_names": t(vn, "alternateNames"),

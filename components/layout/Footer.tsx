@@ -11,7 +11,13 @@ export default function Footer() {
             <span>{t('footer.dept')}</span><br />
             <span>{t('footer.mission')}</span>
           </div>
-          <span className="footer__version">v4.0.0</span>
+          <span className="footer__version">v4.1.0</span>
+        </div>
+        <div className="footer__links">
+          <a href="https://www.marinespecies.org" target="_blank" rel="noopener">WoRMS</a>
+          <a href="https://www.fishbase.se" target="_blank" rel="noopener">FishBase</a>
+          <a href="https://www.algaebase.org" target="_blank" rel="noopener">AlgaeBase</a>
+          <a href="https://github.com/haitrinh317/cam-nang-ca-bien" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </footer>

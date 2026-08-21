@@ -1,0 +1,91 @@
+/* ═══════════════════════════════════════════
+   ADMIN DASHBOARD KPI CARDS
+   ═══════════════════════════════════════════ */
+.admin-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+.admin-kpi-card {
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.admin-kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.admin-kpi-card__title {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+.admin-kpi-card__value {
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  color: var(--color-ink);
+  line-height: 1;
+  margin: 0;
+}
+
+/* Volume Chart */
+.admin-chart-card {
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+.admin-chart-card h2 {
+  font-size: 1.25rem;
+  margin: 0 0 var(--space-xl) 0;
+  font-weight: 600;
+}
+.admin-vol-bar-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.admin-vol-bar-label {
+  width: 80px;
+  font-weight: 600;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+.admin-vol-bar-track {
+  flex: 1;
+  background: var(--color-paper-3);
+  height: 24px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.admin-vol-bar-fill {
+  height: 100%;
+  background: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.5rem;
+  color: var(--color-accent-dark);
+  font-weight: 700;
+  font-size: 0.8rem;
+  min-width: 24px;
+}
+.admin-vol-bar-value {
+  width: 50px;
+  text-align: right;
+  font-weight: 600;
+  color: var(--color-ink);
+  font-size: 0.9rem;
+}
