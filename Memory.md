@@ -1,6 +1,6 @@
 # Memory — OCR Cá biển Việt Nam
 
-> Cập nhật lần cuối: **2026-08-21 16:23** — ✅ Tinh chỉnh Admin Dashboard, Sửa điều hướng Search, Auto sync WoRMS authorship.
+> Cập nhật lần cuối: **2026-08-21 17:55** — ✅ Hoàn tất OCR Thực vật biển (201 loài), Đồng bộ WoRMS hàng loạt cho các tập cá biển còn thiếu.
 > Production URL: https://cam-nang-ca-bien.vercel.app
 > **Dev**: `npm run dev` từ root → localhost:3000
 > Vercel Dashboard: https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien
@@ -50,7 +50,7 @@
 - ⚠️ Chú Chình cần tự test CRUD bằng tay (bot browser không gõ được tiếng Việt có dấu)
 
 ### WoRMS Taxonomy Sync (2026-08-21)
-- ✅ 107 loài thực vật biển đã sync cây phân loại đầy đủ từ WoRMS
+- ✅ 201 loài thực vật biển (hoàn tất) và các loài cá biển còn sót (Tập III, IV, V) đã đồng bộ taxonomy đầy đủ từ WoRMS.
 - Script: `scripts/sync_taxonomy_worms.py` — lấy Classification Tree từ WoRMS API
 - Rule: Thực vật biển dùng "Chi" thay cho "Giống" (đã apply ở TaxonomyTree, SpecimenCard, SpeciesForm)
 

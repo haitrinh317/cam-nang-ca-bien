@@ -1,0 +1,62 @@
+[
+  {
+    "id": "thucvat-species-120",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 120,
+    "vn_name": "chưa có tên Việt Nam",
+    "scientific_name": "Cheilosporum acutilobum",
+    "authorship": "(Decaisne) Piccone",
+    "tax_order_latin": "Corallinales",
+    "tax_family_latin": "Corallinaceae",
+    "morphology_en": "Plants are heavily calcified, pinkish to light purple, and form clumps. The branches have successive arrow-shaped segments that are small, 1.5-3mm in width, and with acute or slightly incised edges. This species grows on rocks or corals in the lower intertidal zone of moderately wave-exposed shores.\n1. Natural habit. 2. Dried specimen of the plant in picture 1. 3. Close-up of the branches.",
+    "morphology_vn": "Rong mọc thành bụi, tẩm nhiều vôi, màu hồng đến tím nhạt. Nhánh gồm các đốt ngang hình mũi tên nhỏ, rộng 1.5-3mm, bờ nhọn hay hơi khía. Rong mọc trên đá hay san hô ở mực triều thấp, nơi sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1. 3. Nhìn chi tiết nhánh.",
+    "photo_place": "Bãi Tiên, Nha Trang",
+    "photo_depth": "1.5 m",
+    "photo_date": "05 Jun. 2002"
+  },
+  {
+    "id": "thucvat-species-121",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 121,
+    "vn_name": "chưa có tên Việt Nam",
+    "scientific_name": "Cheilosporum spectabile",
+    "authorship": "Harvey ex Grunow",
+    "tax_order_latin": "Corallinales",
+    "tax_family_latin": "Corallinaceae",
+    "morphology_en": "This species is heavily calcified and pink to red. The branches are composed of successive arrow-shaped segments that have prominent midribs their entire length, and divide alternately, dichotomously or trifurcately. Plants are found on shaded rocks in the subtidal zone of moderately wave-exposed shores.\n1. Natural habit. 2. Dried specimen of the plant in picture 1. 3. Close-up of the branches.",
+    "morphology_vn": "Rong tẩm nhiều vôi, màu hồng đến đỏ. Nhánh gồm những đốt ngang hình mũi tên, có gân rõ và chạy suốt chiều dài, chẻ đôi rộng, chạc hai hay chạc ba. Rong mọc chỗ tối của phiến đá ở vùng dưới triều, nơi sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1. 3. Nhìn chi tiết nhánh.",
+    "photo_place": "Suối Ớt, Côn Sơn",
+    "photo_depth": "2.5 m",
+    "photo_date": "25 Jun. 2003"
+  },
+  {
+    "id": "thucvat-species-122",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 122,
+    "vn_name": "chưa có tên Việt Nam",
+    "scientific_name": "Hydrolithon samoense",
+    "authorship": "(Foslie) Keats et Chamberlain",
+    "tax_order_latin": "Corallinales",
+    "tax_family_latin": "Corallinaceae",
+    "morphology_en": "Plants are heavily calcified, stony, crustose, and variable in shape. The surface is slightly rough with mottled patterns. The plant is pink to red when seen underwater, but changes to whitish pink when dried. This species adheres tightly to rocks and dead corals, or overgrows on other coralline seaweeds, in the subtidal zone of shores exposed to strong to moderate wave action.\n1. Natural habit. 2. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong dạng đá, tẩm nhiều vôi, hình dạng bất định, mặt thô nháp có gờ, màu hồng đến đỏ khi ở dưới nước, chuyển thành màu hồng trắng khi khô. Rong dính chặt trên đá hay san hô chết, hoặc trên các rong san hô khác ở vùng dưới triều, nơi sóng vừa đến mạnh.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Hòn Chồng, Nha Trang",
+    "photo_depth": "2.0 m",
+    "photo_date": "14 Jun. 2004"
+  },
+  {
+    "id": "thucvat-species-123",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 123,
+    "vn_name": "Rong Bạch giác",
+    "scientific_name": "Jania adhaerens",
+    "authorship": "Lamouroux",
+    "tax_order_latin": "Corallinales",
+    "tax_family_latin": "Corallinaceae",
+    "morphology_en": "This species is small (4-5mm high), heavily calcified, and forms intricately entwined clumps. The branches are regularly dichotomous, terete or slightly compressed, and curve slightly downward. This is an epiphytic species, decumbent on other seaweeds such as Sargassum species, growing in the subtidal zone of shores exposed to moderate wave action.\n1. Natural habit. 2. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong nhỏ, mọc thành bụi rối, cao 4-5mm, tẩm nhiều vôi. Nhánh trụ đứng hoặc hơi dẹp, hơi cong xuống, chia chạc hai đều. Rong phụ sinh, bò lan trên các rong khác, như rong Mơ, ở vùng dưới triều, nơi dòng chảy vừa.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Bãi Tiên, Nha Trang",
+    "photo_depth": "1.5 m",
+    "photo_date": "31 May 2002"
+  }
+]

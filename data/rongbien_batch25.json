@@ -1,0 +1,62 @@
+[
+  {
+    "id": "thucvat-species-116",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 116,
+    "vn_name": "Rong Thạch giác",
+    "scientific_name": "Amphiroa fragilissima [elongate branch form]",
+    "authorship": "(Linnaeus) Lamouroux",
+    "tax_order_latin": "Corallinales",
+    "tax_family_latin": "Corallinaceae",
+    "morphology_en": "This species is delicate, fragile, calcified and white. The branches are cylindrical, irregularly dichotomously divided, and with acute apices. Plants grow on rocks or gravel in the subtidal zone of calm shores.\n1. Natural habit. 2. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong mảnh, dễ nát, tẩm vôi, màu trắng. Nhánh trụ tròn, chia chạc hai không đều, đỉnh nhọn. Rong mọc trên đá, sỏi đá nhỏ ở vùng dưới triều, nơi nước yên.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Đường Đệ, Nha Trang",
+    "photo_depth": "2.5 m",
+    "photo_date": "29 Mar. 2002"
+  },
+  {
+    "id": "thucvat-species-117",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 117,
+    "vn_name": "Rong Thạch giác",
+    "scientific_name": "Amphiroa fragilissima [short branch form]",
+    "authorship": "(Linnaeus) Lamouroux",
+    "tax_order_latin": "Corallinales",
+    "tax_family_latin": "Corallinaceae",
+    "morphology_en": "Plants are fragile, and have heavily calcified branches that are short, cylindrical, dichotomous, pink, and with obtuse apices. This seaweed is found on rocks in the subtidal zone of moderately wave-exposed shores.\n1. Natural habit. 2. Fresh specimen of the plant in picture 1. 3. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Nhánh trụ tròn, tẩm nhiều vôi, chia chạc hai không đều, màu hồng, đỉnh tù. Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu tươi của cây rong ở hình 1. 3. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Bãi Miếu, Nha Trang",
+    "photo_depth": "1.5 m",
+    "photo_date": "16 Mar. 2004"
+  },
+  {
+    "id": "thucvat-species-118",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 118,
+    "vn_name": "Rong Thạch giác",
+    "scientific_name": "Amphiroa foliacea",
+    "authorship": "Lamouroux",
+    "tax_order_latin": "Corallinales",
+    "tax_family_latin": "Corallinaceae",
+    "morphology_en": "Plants are heavily calcified, pinkish, and form loose and intricate clumps. The branches of the lower to middle portions are irregularly dichotomous, and have midrib-like axes that are bordered on both sides by flattened extensions. Those of the upper parts are somewhat flat with acute tips. This is found on rocks or corals in the subtidal zone of calm to moderate wave-exposed shores.\n1. Natural habit. 2. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong tẩm nhiều vôi, dễ nát. Nhánh trụ tròn, ngắn, chia chạc hai không đều, đỉnh tù. Rong màu hồng, mọc trên đá, san hô ở vùng dưới triều, nơi sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Bãi Tiên, Nha Trang",
+    "photo_depth": "1.5 m",
+    "photo_date": "31 May 2002"
+  },
+  {
+    "id": "thucvat-species-119",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 119,
+    "vn_name": "Rong Thạch giác",
+    "scientific_name": "Amphiroa sp.",
+    "authorship": "",
+    "tax_order_latin": "Corallinales",
+    "tax_family_latin": "Corallinaceae",
+    "morphology_en": "Plants have flat and dichotomous branches that are heavily calcified, with uneven edges and obtuse tips. This species is pink to whitish pink. It grows on shaded rocks or rock walls in the subtidal zone of shores exposed to moderate wave action.\n1. Natural habit. 2. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Nhánh dẹp, chia chạc hai, tẩm nhiều vôi, mép không phẳng, đỉnh tù, màu hồng đến màu hồng trắng. Rong mọc ở chỗ tối hoặc vách của phiến đá, ở vùng dưới triều, nơi sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Bãi Tiên, Nha Trang",
+    "photo_depth": "1.5 m",
+    "photo_date": "31 May 2002"
+  }
+]

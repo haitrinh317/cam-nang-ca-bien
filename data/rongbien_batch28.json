@@ -1,0 +1,62 @@
+[
+  {
+    "id": "thucvat-species-128",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 128,
+    "vn_name": "Rau Câu rễ tre, Rong Câu rễ tre, Rong Đá cong",
+    "scientific_name": "Gelidiella acerosa",
+    "authorship": "(Forsskål) Feldmann et Hamel",
+    "tax_order_latin": "Gelidiales",
+    "tax_family_latin": "Gelidiaceae",
+    "morphology_en": "Plants are prostrate, cartilaginous, and elastic. The main axes of the branches are slightly compressed, alternate, and arc down towards the substrate. The branchlets are short, terete, acuminate, pinnately arranged, and curve up, away from the substrate. Plants are green, yellowish brown to dark red, and grow on rocks and corals in the middle to lower intertidal zone of shores exposed to strong to moderate wave action.\n1. Natural habit. 2. Fresh specimen of the plant in picture 1. 3. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong mọc bò, chất rong sụn dẻo. Trục chính của nhánh hơi dẹp, mọc cách, cong xuống như một cung tròn. Nhánh nhỏ ngắn, trụ đứng, nhọn, xếp hình lông chim, cong lên theo hướng đối diện với vật bám. Rong màu lục, nâu vàng, đỏ thẫm, mọc trên đá hoặc san hô ở mực triều giữa đến triều thấp, nơi sóng vừa đến mạnh.\n1. Dạng sống tự nhiên. 2. Mẫu tươi của cây rong ở hình 1. 3. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Đá Trắng, Côn Sơn",
+    "photo_depth": "1.5 m",
+    "photo_date": "23 Jun. 2004"
+  },
+  {
+    "id": "thucvat-species-129",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 129,
+    "vn_name": "Rong Đá, Rong Tiểu sương tảo",
+    "scientific_name": "Gelidiella sp.",
+    "authorship": "",
+    "tax_order_latin": "Gelidiales",
+    "tax_family_latin": "Gelidiaceae",
+    "morphology_en": "Plants are similar to G. acerosa, but are small, light red to reddish brown, and have many lateral branchlets. This species grows on rocks in the subtidal zone of shores exposed to moderate wave actions.\n1. Natural habit. 2. Fresh specimen of the plant in picture 1. 3. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Gần giống như rong Câu rễ tre (G. acerosa), nhưng nhỏ, màu đỏ nhạt đến nâu đỏ, có nhiều nhánh nhỏ bên. Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu tươi của cây rong ở hình 1. 3. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Đá Trắng, Côn Sơn",
+    "photo_depth": "1.5 m",
+    "photo_date": "23 Jun. 2004"
+  },
+  {
+    "id": "thucvat-species-130",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 130,
+    "vn_name": "Rong Hồng giao, Rong Thạch",
+    "scientific_name": "Gelidium sp.",
+    "authorship": "",
+    "tax_order_latin": "Gelidiales",
+    "tax_family_latin": "Gelidiaceae",
+    "morphology_en": "This species is composed of horizontal stolons and erect, filiform branches. The branchlets are filiform. Plants are light to dark red, and form turf-like masses on sandy rocks in the subtidal zone of moderately wave-exposed shores.\n1. Natural habit. 2. Fresh specimen of the plant in picture 1. 3. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong gồm phần thân bò dạng sợi nằm ngang và các nhánh đứng dạng sợi. Nhánh nhỏ dạng sợi, nhọn đầu. Rong mọc thành chùm khối, màu đỏ nhạt đến đậm, trên đá có cát ở vùng dưới triều, nơi sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu tươi của cây rong ở hình 1. 3. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Bãi Miếu, Nha Trang",
+    "photo_depth": "1.5 m",
+    "photo_date": "16 Mar. 2004"
+  },
+  {
+    "id": "thucvat-species-131",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 131,
+    "vn_name": "Rong Dực tiết nhỏ",
+    "scientific_name": "Pterocladia parva",
+    "authorship": "Dawson",
+    "tax_order_latin": "Gelidiales",
+    "tax_family_latin": "Gelidiaceae",
+    "morphology_en": "Plants have horizontal filiform stolons and erect linear flat branches with alternately arranged branchlets. The apices of the branchlets are obtuse, and basal parts are slightly constricted. This species is dark greenish red, and is found on rocks in the subtidal zone of shores exposed to moderate wave action.\n1. Natural habit. 2. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong gồm phần bò dạng sợi nằm ngang và nhánh dẹp phẳng, với các nhánh nhỏ mọc cách, có đỉnh tù, gốc hơi thắt lại. Rong màu đỏ lục thẫm, mọc trên đá ở vùng dưới triều, nơi sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Bãi Tiên, Nha Trang",
+    "photo_depth": "2.0 m",
+    "photo_date": "30 Mar. 2002"
+  }
+]

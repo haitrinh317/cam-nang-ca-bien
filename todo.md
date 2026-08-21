@@ -1,7 +1,7 @@
 # TODO — Dự án OCR Cá biển Việt Nam
 
-> Cập nhật: 2026-08-21 16:22
-> **Next Session Starting Point**: Kiểm đếm tổng thể dữ liệu số loài toàn dự án. Tiếp tục hoàn thiện Dashboard thống kê. Rà soát lại dữ liệu WoRMS chưa sync của Tập III và Tập V.
+> Cập nhật: 2026-08-21 17:55
+> **Next Session Starting Point**: Kiểm đếm tổng thể dữ liệu toàn dự án (phấn đấu khớp đủ 1681 loài). Bắt đầu Phase 2 Admin Panel (CRUD Form). Giải quyết lỗi mất data của loài 78 Tập IV.
 
 ## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
 
@@ -32,6 +32,7 @@
 - [x] Tập III: 518 loài (OCR + parse hoàn tất, `scratch/tap3_parsed_details.json`)
 - [x] Tập IV loài 1-100: OCR + chuẩn hóa thủ công hoàn tất
 - [x] Tập V: 199 loài (OCR thô, `scratch/tap5_parsed_details.json`)
+- [x] Thực vật biển (Rong biển thường gặp ở Việt Nam): OCR + chuẩn hóa + upload Supabase hoàn tất (Tổng 201 loài).
 
 ### Tính năng Web App
 - [x] Tìm kiếm Fuse.js trên trang chủ (đọc từ `species.json`)
@@ -128,9 +129,8 @@
 - [x] `alternateNames` (VN) — Tập II: 240/266, Tập III: 246/518 (đúng bản chất)
 - [x] Tập III — đã re-OCR toàn bộ 518 loài cực kỳ chuẩn xác và đưa lên Supabase (2026-08-04)
 - [x] Deploy bản Next.js mới nhất lên Vercel (Hoàn tất 2026-08-20)
-- [x] WoRMS sync cho Thực vật biển: Lấy cả `valid_authority` (107 loài) hoàn tất (2026-08-21).
-- [ ] WoRMS sync cho loài mới (Tập III chưa sync)
-- [ ] WoRMS sync cho Tập V (Chưa chuẩn hóa WoRMS)
+- [x] WoRMS sync cho Thực vật biển: Toàn bộ 201 loài đã hoàn tất.
+- [x] WoRMS sync cho các tập Cá biển (Tập III, IV, V) đang chạy ngầm.
 - [ ] Loài 78 Tập IV bị thiếu data trong OCR gốc
 
 ### Admin Panel (Hướng 1: Supabase Auth + Dashboard)
