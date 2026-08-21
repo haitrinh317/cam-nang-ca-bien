@@ -85,10 +85,11 @@
 ### Phase 3 — Phân quyền User + Đăng ký
 - [ ] Enable Supabase Auth (email/password)
 - [ ] Trang `register.html` hoặc modal đăng ký (role mặc định: `viewer`)
-- [ ] Trigger auto-assign role `viewer` khi user mới đăng ký
-- [ ] Header auth state: đã login hiện tên + "Đăng xuất" / chưa login hiện "Login"
-- [ ] Admin: nâng cấp role viewer → editor từ admin panel
-- [ ] RLS 3 role: admin (toàn quyền), editor (sửa loài), viewer (chỉ xem)
+- [x] (1) Fix Vercel cache issue + Fix OCR structure & Supabase sync
+- [x] (2) Audit data + Synonyms Enrichment for Cá biển (Batch)
+- [x] (3) Hoàn thiện layout trang chủ & card detail (CSS / Design System)
+- [x] (4) Bổ sung 201 Loài Thực Vật Biển (OCR, WoRMS, Tách tên thường gọi)
+- [ ] (5) Admin Panel Phase 2 (CRUD form, soft delete, CSV import)
 - [ ] Deploy Phase 3
 
 ### Phase 4 — Polish + Deploy Production
