@@ -1,10 +1,10 @@
 # Memory — OCR Cá biển Việt Nam
 
-> Cập nhật lần cuối: **2026-08-20 17:28** — ✅ Cấu trúc Route Groups UI, Thêm biến môi trường Vercel.
+> Cập nhật lần cuối: **2026-08-21 16:23** — ✅ Tinh chỉnh Admin Dashboard, Sửa điều hướng Search, Auto sync WoRMS authorship.
 > Production URL: https://cam-nang-ca-bien.vercel.app
 > **Dev**: `npm run dev` từ root → localhost:3000
 > Vercel Dashboard: https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien
-> Git: `773d970` — commit cấu trúc lại Route Groups cho Next.js
+> Git: `527ba8c` — commit feat(ui): update admin dashboard KPI styles, fix search collection link, and enhance WoRMS sync script
 
 ## ⚡ Kiến trúc Web App (v4 — Next.js App Router)
 

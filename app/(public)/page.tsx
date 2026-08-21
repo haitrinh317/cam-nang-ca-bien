@@ -4,6 +4,9 @@ import GlobalSearch from '@/components/search/GlobalSearch'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 export const metadata: Metadata = {
   title: 'Bảo tàng Hải dương học — Tra cứu Sinh vật biển Việt Nam',
   description: 'Cơ sở dữ liệu số hóa sinh vật biển Việt Nam — Viện Hải dương học, Nha Trang.',

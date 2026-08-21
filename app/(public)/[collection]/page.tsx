@@ -3,6 +3,9 @@ import { notFound } from 'next/navigation'
 import SpeciesGrid from '@/components/browse/SpeciesGrid'
 import type { Metadata } from 'next'
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 interface Props {
   params: Promise<{ collection: string }>
   searchParams: Promise<{ vol?: string }>

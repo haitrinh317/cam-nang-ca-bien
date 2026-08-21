@@ -4,6 +4,8 @@ import Link from 'next/link'
 import SpecimenCard from '@/components/species/SpecimenCard'
 import type { Metadata } from 'next'
 
+export const dynamic = 'force-dynamic'
+
 interface Props {
   params: Promise<{ collection: string; speciesId: string }>
 }
