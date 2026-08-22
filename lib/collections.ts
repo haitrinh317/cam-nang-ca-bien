@@ -1,36 +1,13 @@
 /**
- * collections.ts — Collection registry
- * Phase M2: Fetches from Supabase `collections` table with static fallback.
+ * collections.ts — Collection registry (server-side)
+ * Re-exports static data + adds Supabase fetcher for server components.
  */
 import { createServerClient } from '@/lib/supabase-server'
+import type { Collection } from '@/lib/collections-static'
 
-export interface Collection {
-  id: string
-  slug: string
-  nameVn: string
-  nameEn: string
-  icon: string
-  accentColor: string
-  volumeCount: number
-  status: 'active' | 'draft' | 'archived'
-  sortOrder: number
-}
-
-// Static fallback — used if DB isn't set up yet (Phase M0-M1)
-const STATIC_COLLECTIONS: Collection[] = [
-  {
-    id: 'ca-bien', slug: 'ca-bien',
-    nameVn: 'Cá biển Việt Nam', nameEn: 'Vietnamese Marine Fish',
-    icon: '🐟', accentColor: '#6fffe8', volumeCount: 5,
-    status: 'active', sortOrder: 1,
-  },
-  {
-    id: 'thuc-vat-bien', slug: 'thuc-vat-bien',
-    nameVn: 'Rong biển thường gặp ở Việt Nam', nameEn: 'Common Seaweeds of Vietnam',
-    icon: '🌿', accentColor: '#a7f3d0', volumeCount: 1,
-    status: 'active', sortOrder: 2,
-  },
-]
+// Re-export everything from static module
+export type { Collection }
+export { STATIC_COLLECTIONS, getCollectionBySlug, getAllCollections, getActiveCollections } from '@/lib/collections-static'
 
 function mapRow(row: Record<string, unknown>): Collection {
   return {
@@ -48,6 +25,7 @@ function mapRow(row: Record<string, unknown>): Collection {
 
 /** Server-side: fetch from DB with static fallback */
 export async function getCollections(): Promise<Collection[]> {
+  const { STATIC_COLLECTIONS } = await import('@/lib/collections-static')
   try {
     const db = createServerClient()
     const { data, error } = await db
@@ -59,17 +37,4 @@ export async function getCollections(): Promise<Collection[]> {
   } catch {
     return STATIC_COLLECTIONS
   }
-}
-
-/** Sync helper for server components that can't await at module level */
-export function getCollectionBySlug(slug: string): Collection | undefined {
-  return STATIC_COLLECTIONS.find(c => c.slug === slug)
-}
-
-export function getAllCollections(): Collection[] {
-  return STATIC_COLLECTIONS
-}
-
-export function getActiveCollections(): Collection[] {
-  return STATIC_COLLECTIONS.filter(c => c.status === 'active')
 }

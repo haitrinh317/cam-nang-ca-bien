@@ -48,5 +48,5 @@ export default async function CollectionPage({ params, searchParams }: Props) {
 }
 
 export async function generateStaticParams() {
-  return [{ collection: 'ca-bien' }]
+  return [{ collection: 'ca-bien' }, { collection: 'thuc-vat-bien' }]
 }
