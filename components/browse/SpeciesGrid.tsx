@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 import { db } from '@/lib/supabase-browser'
+import { getCollectionBySlug } from '@/lib/collections-static'
 
 interface Species {
   id: string
@@ -19,9 +20,12 @@ interface Props {
   initialVol?: number
 }
 
-const VOLUMES = [1, 2, 3, 4, 5]
+const ROMAN = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
 
 export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
+  const col = getCollectionBySlug(collection)
+  const volumes = Array.from({ length: col?.volumeCount || 1 }, (_, i) => i + 1)
+
   const [currentVol, setCurrentVol] = useState(initialVol)
   const [species, setSpecies] = useState<Species[]>([])
   const [filtered, setFiltered] = useState<Species[]>([])
@@ -34,6 +38,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
     const { data, error } = await db
       .from('species')
       .select('id, volume, species_index, vn_name, scientific_name, tax_order_vn, tax_family_vn')
+      .eq('collection_id', collection)  // ← FIX: filter by collection
       .eq('volume', vol)
       .order('species_index')
       .limit(700) // ponytail: largest volume ~518 species
@@ -42,9 +47,12 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
     setSpecies(data)
     setFiltered(data)
     setStatus('ok')
-  }, [])
+  }, [collection])
 
   useEffect(() => { loadVolume(currentVol) }, [currentVol, loadVolume])
+
+  // Reset to vol 1 if collection changes
+  useEffect(() => { setCurrentVol(1) }, [collection])
 
   const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
     const q = e.target.value.toLowerCase()
@@ -59,19 +67,21 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
 
   return (
     <>
-      {/* Volume tabs */}
-      <nav className="vol-tabs" aria-label="Chọn tập">
-        {VOLUMES.map(v => (
-          <button
-            key={v}
-            className={`vol-tab${currentVol === v ? ' active' : ''}`}
-            onClick={() => setCurrentVol(v)}
-            type="button"
-          >
-            Tập {['I', 'II', 'III', 'IV', 'V'][v - 1]}
-          </button>
-        ))}
-      </nav>
+      {/* Volume tabs — dynamic from collection config */}
+      {volumes.length > 1 && (
+        <nav className="vol-tabs" aria-label="Chọn tập">
+          {volumes.map(v => (
+            <button
+              key={v}
+              className={`vol-tab${currentVol === v ? ' active' : ''}`}
+              onClick={() => setCurrentVol(v)}
+              type="button"
+            >
+              Tập {ROMAN[v - 1]}
+            </button>
+          ))}
+        </nav>
+      )}
 
       {/* Filter input */}
       <div className="search-input-container" style={{ maxWidth: '540px', marginBottom: 'var(--space-3xl)' }}>
@@ -82,7 +92,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
           type="text"
           id="localFilter"
           className="search-input"
-          placeholder="Lọc nhanh tên cá trong tập này..."
+          placeholder={`Lọc nhanh tên loài trong ${volumes.length > 1 ? `tập ${ROMAN[currentVol - 1]}` : 'bộ sưu tập'}...`}
           autoComplete="off"
           value={filterQuery}
           onChange={handleFilter}
@@ -93,7 +103,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
       <section id="gridContainer" className="grid-species" aria-label="Danh sách loài trong tập">
         {status === 'loading' && (
           <div style={{ gridColumn: '1/-1', textAlign: 'center', padding: '3rem', color: 'var(--color-muted)' }}>
-            Đang tải dữ liệu loài trong tập...
+            Đang tải dữ liệu loài...
           </div>
         )}
         {status === 'error' && (
@@ -103,7 +113,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
         )}
         {status === 'ok' && filtered.length === 0 && (
           <div style={{ gridColumn: '1/-1', textAlign: 'center', padding: '3rem', color: 'var(--color-muted)' }}>
-            {filterQuery ? 'Không tìm thấy loài phù hợp.' : `Tập ${currentVol} chưa có dữ liệu.`}
+            {filterQuery ? 'Không tìm thấy loài phù hợp.' : `Chưa có dữ liệu.`}
           </div>
         )}
         {status === 'ok' && filtered.map(sp => (

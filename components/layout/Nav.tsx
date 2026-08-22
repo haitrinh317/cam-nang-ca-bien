@@ -12,9 +12,6 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const collections = getActiveCollections()
 
-  // Detect which collection is active from URL
-  const activeCollection = collections.find(c => pathname.startsWith(`/${c.slug}`))
-
   const toggleMenu = () => setMenuOpen(prev => !prev)
 
   return (
@@ -34,25 +31,16 @@ export default function Nav() {
             {t('nav.home')}
           </Link>
 
-          {/* Collection links */}
+          {/* One flat link per collection */}
           {collections.map(col => (
-            <div key={col.slug} className="nav-group">
-              <span className="nav-group-label">{col.icon} {col.nameVn}</span>
-              <Link
-                href={`/${col.slug}`}
-                className={`nav-link${pathname === `/${col.slug}` ? ' active' : ''}`}
-                onClick={() => setMenuOpen(false)}
-              >
-                Duyệt Theo Tập
-              </Link>
-              <Link
-                href={`/${col.slug}/taxonomy`}
-                className={`nav-link${pathname === `/${col.slug}/taxonomy` ? ' active' : ''}`}
-                onClick={() => setMenuOpen(false)}
-              >
-                Cây Phân Loại
-              </Link>
-            </div>
+            <Link
+              key={col.slug}
+              href={`/${col.slug}`}
+              className={`nav-link${pathname.startsWith(`/${col.slug}`) ? ' active' : ''}`}
+              onClick={() => setMenuOpen(false)}
+            >
+              {col.icon} {col.nameVn}
+            </Link>
           ))}
         </nav>
         <HeaderControls />
