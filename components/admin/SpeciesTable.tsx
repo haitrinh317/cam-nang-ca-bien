@@ -14,6 +14,7 @@ interface SpeciesRow {
   scientific_name: string
   tax_family_latin: string | null
   collection_id: string
+  deleted_at: string | null
 }
 
 interface Props { collection: string }
@@ -29,6 +30,7 @@ export default function SpeciesTable({ collection }: Props) {
   const [loading, setLoading] = useState(false)
   const [editTarget, setEditTarget] = useState<Record<string, unknown> | null>(null)
   const [showForm, setShowForm] = useState(false)
+  const [showDeleted, setShowDeleted] = useState(false)
   const [deleteConfirm, setDeleteConfirm] = useState<string | null>(null)
   const [toast, setToast] = useState<{ msg: string; type: 'ok' | 'err' } | null>(null)
   const searchTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -41,20 +43,21 @@ export default function SpeciesTable({ collection }: Props) {
     setTimeout(() => setToast(null), 3000)
   }
 
-  const load = useCallback(async (p = page, v = vol, s = search) => {
+  const load = useCallback(async (p = page, v = vol, s = search, incDel = showDeleted) => {
     setLoading(true)
     const params = new URLSearchParams({ collection, page: String(p) })
     if (v) params.set('vol', v)
     if (s) params.set('search', s)
+    if (incDel) params.set('include_deleted', 'true')
     const res = await fetch(`/api/species?${params}`)
     const json = await res.json()
     if (!res.ok) { showToast(json.error, 'err'); setLoading(false); return }
     setRows(json.data || [])
     setTotal(json.total || 0)
     setLoading(false)
-  }, [collection, page, vol, search])
+  }, [collection, page, vol, search, showDeleted])
 
-  useEffect(() => { load(page, vol, search) }, [page, vol]) // eslint-disable-line
+  useEffect(() => { load(page, vol, search, showDeleted) }, [page, vol, showDeleted]) // eslint-disable-line
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const v = e.target.value
@@ -98,12 +101,25 @@ export default function SpeciesTable({ collection }: Props) {
   }
 
   const handleDelete = async (id: string) => {
+    // Soft-delete by default (sets deleted_at)
     const res = await fetch(`/api/species?id=${id}`, { method: 'DELETE' })
     const json = await res.json()
     if (!res.ok) { showToast(json.error, 'err'); return }
-    showToast('Đã xóa ✓')
+    showToast('Đã xóa mềm ✓ (có thể khôi phục)')
     setDeleteConfirm(null)
     load(page, vol, search)
+  }
+
+  const handleRestore = async (id: string) => {
+    const res = await fetch(`/api/species?id=${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ deleted_at: null }),
+    })
+    const json = await res.json()
+    if (!res.ok) { showToast(json.error, 'err'); return }
+    showToast('Đã khôi phục ✓')
+    load(page, vol, search, showDeleted)
   }
 
   return (
@@ -144,7 +160,15 @@ export default function SpeciesTable({ collection }: Props) {
             ))}
           </select>
         </div>
-        <div style={{ display: 'flex', gap: '0.75rem' }}>
+        <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.82rem', color: 'var(--color-ink-3)', cursor: 'pointer' }}>
+            <input
+              type="checkbox"
+              checked={showDeleted}
+              onChange={e => { setShowDeleted(e.target.checked); setPage(1) }}
+            />
+            Hiện đã xóa
+          </label>
           <ImportModal collection={collection} onImported={() => load(page, vol, search)} />
           <button
             className="btn btn-primary"
@@ -175,37 +199,54 @@ export default function SpeciesTable({ collection }: Props) {
             {!loading && rows.length === 0 && (
               <tr><td colSpan={5} style={{ textAlign: 'center', padding: '2rem', color: 'var(--color-muted)' }}>Không tìm thấy kết quả.</td></tr>
             )}
-            {!loading && rows.map(row => (
-              <tr key={row.id}>
-                <td>
-                  <span className={`vol-badge v${row.volume}`}>Tập {row.volume}</span><br />
-                  <code style={{ fontSize: '0.7rem', color: 'var(--color-muted)' }}>{row.id}</code>
-                </td>
-                <td style={{ fontWeight: 500 }}>{row.vn_name || '—'}</td>
-                <td style={{ fontStyle: 'italic', color: 'var(--color-ink-2)' }}>{row.scientific_name || '—'}</td>
-                <td style={{ color: 'var(--color-ink-3)' }}>{row.tax_family_latin || '—'}</td>
-                <td>
-                  <div style={{ display: 'flex', gap: '0.5rem' }}>
-                    <button
-                      className="btn btn-outline"
-                      style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem' }}
-                      onClick={() => fetchAndEdit(row.id)}
-                      type="button"
-                    >
-                      Sửa
-                    </button>
-                    <button
-                      className="btn btn-outline"
-                      style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem', borderColor: '#ef4444', color: '#ef4444' }}
-                      onClick={() => setDeleteConfirm(row.id)}
-                      type="button"
-                    >
-                      Xóa
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            ))}
+            {!loading && rows.map(row => {
+              const isDeleted = !!row.deleted_at
+              return (
+                <tr key={row.id} style={isDeleted ? { opacity: 0.5, background: 'rgba(239,68,68,0.05)' } : {}}>
+                  <td>
+                    <span className={`vol-badge v${row.volume}`}>Tập {row.volume}</span><br />
+                    <code style={{ fontSize: '0.7rem', color: 'var(--color-muted)' }}>{row.id}</code>
+                    {isDeleted && <span style={{ display: 'block', fontSize: '0.7rem', color: '#ef4444', marginTop: '2px' }}>✕ Đã xóa</span>}
+                  </td>
+                  <td style={{ fontWeight: 500 }}>{row.vn_name || '—'}</td>
+                  <td style={{ fontStyle: 'italic', color: 'var(--color-ink-2)' }}>{row.scientific_name || '—'}</td>
+                  <td style={{ color: 'var(--color-ink-3)' }}>{row.tax_family_latin || '—'}</td>
+                  <td>
+                    <div style={{ display: 'flex', gap: '0.5rem' }}>
+                      {isDeleted ? (
+                        <button
+                          className="btn btn-outline"
+                          style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem', borderColor: '#10b981', color: '#10b981' }}
+                          onClick={() => handleRestore(row.id)}
+                          type="button"
+                        >
+                          Khôi phục
+                        </button>
+                      ) : (
+                        <>
+                          <button
+                            className="btn btn-outline"
+                            style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem' }}
+                            onClick={() => fetchAndEdit(row.id)}
+                            type="button"
+                          >
+                            Sửa
+                          </button>
+                          <button
+                            className="btn btn-outline"
+                            style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem', borderColor: '#ef4444', color: '#ef4444' }}
+                            onClick={() => setDeleteConfirm(row.id)}
+                            type="button"
+                          >
+                            Xóa
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  </td>
+                </tr>
+              )
+            })}
           </tbody>
         </table>
       </div>

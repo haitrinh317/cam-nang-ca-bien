@@ -42,7 +42,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
         <h1>Duyệt Theo Tập Sách Gốc</h1>
         <p>Trích xuất {col.volumeCount} tập tài liệu khoa học {col.nameVn} — Viện Hải dương học.</p>
       </section>
-      <SpeciesGrid collection={collection} initialVol={initialVol} volumeCount={col.volumeCount} />
+      <SpeciesGrid collection={collection} initialVol={initialVol} />
     </>
   )
 }

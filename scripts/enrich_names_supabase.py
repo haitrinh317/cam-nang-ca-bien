@@ -10,14 +10,27 @@ import urllib.error
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-# Cố gắng lấy từ env, nếu không thì dùng key cứng (public/anon key)
-# Lưu ý: script sẽ cần service_role key để bypass RLS nếu bảng species khóa với anon
-# Trong project này, public có quyền read, nhưng write cần cẩn thận (tùy RLS config)
-SUPABASE_URL = "https://cjxqogvtzrvnlsssnfob.supabase.co"
-SUPABASE_KEY = os.environ.get(
-    "SUPABASE_SERVICE_ROLE_KEY",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqeHFvZ3Z0enJ2bmxzc3NuZm9iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUzOTUxNjIsImV4cCI6MjEwMDk3MTE2Mn0.HBi2zicdL9O7uMJD6r8IYPXI7ztHcv-5PsTdBwa65_I"
-)
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def _load_dotenv():
+    env_path = os.path.join(BASE, '.env')
+    if os.path.exists(env_path):
+        with open(env_path, 'r', encoding='utf-8-sig') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    k, v = line.split('=', 1)
+                    os.environ.setdefault(k.strip(), v.strip())
+
+_load_dotenv()
+
+SUPABASE_URL = os.environ.get('NEXT_PUBLIC_SUPABASE_URL') or os.environ.get('VITE_SUPABASE_URL')
+SUPABASE_KEY = os.environ.get('SUPABASE_SERVICE_ROLE_KEY')
+
+if not SUPABASE_URL or not SUPABASE_KEY:
+    print('✗ Missing SUPABASE_SERVICE_ROLE_KEY or SUPABASE_URL in .env', file=sys.stderr)
+    sys.exit(1)
+
 
 # Bypass SSL
 ctx = ssl.create_default_context()

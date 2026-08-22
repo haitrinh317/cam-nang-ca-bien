@@ -1,7 +1,8 @@
-# TODO — Dự án OCR Cá biển Việt Nam
+# TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-08-21 17:55
-> **Next Session Starting Point**: Kiểm đếm tổng thể dữ liệu toàn dự án (phấn đấu khớp đủ 1681 loài). Bắt đầu Phase 2 Admin Panel (CRUD Form). Giải quyết lỗi mất data của loài 78 Tập IV.
+> Cập nhật: 2026-08-22 10:51
+> **Next Session Starting Point**: Tier 3 — Hoàn thiện Admin CRUD (soft-delete, inline-edit) + xác minh 17 loài volume=0 + loài 78 Tập IV + sync species.json từ Supabase export + update design-system.md cho Next.js.
+> **Supabase (SSOT):** 1,518 cá biển + 201 thực vật = 1,719 loài. species.json là backup local (1,279 — stale).
 
 ## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
 

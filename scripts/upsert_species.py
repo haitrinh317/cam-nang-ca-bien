@@ -14,11 +14,28 @@ import argparse
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-SUPABASE_URL = "https://cjxqogvtzrvnlsssnfob.supabase.co"
-SUPABASE_KEY = os.environ.get(
-    "SUPABASE_SERVICE_ROLE_KEY",
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNqeHFvZ3Z0enJ2bmxzc3NuZm9iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODUzOTUxNjIsImV4cCI6MjEwMDk3MTE2Mn0.HBi2zicdL9O7uMJD6r8IYPXI7ztHcv-5PsTdBwa65_I"
-)
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# ── Load .env ──
+def _load_dotenv():
+    env_path = os.path.join(BASE, '.env')
+    if os.path.exists(env_path):
+        with open(env_path, 'r', encoding='utf-8-sig') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    k, v = line.split('=', 1)
+                    os.environ.setdefault(k.strip(), v.strip())
+
+_load_dotenv()
+
+SUPABASE_URL = os.environ.get('NEXT_PUBLIC_SUPABASE_URL') or os.environ.get('VITE_SUPABASE_URL')
+SUPABASE_KEY = os.environ.get('SUPABASE_SERVICE_ROLE_KEY')
+
+if not SUPABASE_URL or not SUPABASE_KEY:
+    print('✗ Missing SUPABASE_SERVICE_ROLE_KEY or SUPABASE_URL in .env', file=sys.stderr)
+    sys.exit(1)
+
 
 SUN_ORDERS = [
     "lamniformes","squaliformes","rajiformes","torpediniformes",
@@ -35,6 +52,47 @@ def get_class(order_latin: str):
     if any(o in ol for o in SUN_ORDERS):
         return "Lớp Cá Sụn", "Chondrichthyes"
     return "Lớp Cá Xương", "Osteichthyes"
+
+
+def is_flat(sp: dict) -> bool:
+    """Return True if record is already in flat Supabase schema (new OCR output).
+    Flat records have direct flat keys like vn_name, tax_order_latin, etc.
+    Nested records have taxonomy.* or specs.* dicts.
+    """
+    return (
+        "taxonomy" not in sp and
+        "specs" not in sp and
+        ("vn_name" in sp or "scientific_name" in sp)
+    )
+
+
+def normalize_flat(sp: dict) -> dict:
+    """Light normalization for already-flat records from ocr-sinhvat-bien."""
+    syns = sp.get("synonyms", [])
+    if not isinstance(syns, list):
+        syns = [syns] if syns else []
+
+    cs = sp.get("conservation_status", "unknown") or "unknown"
+    if cs not in ("common", "uncommon", "rare", "unknown"):
+        cs = "unknown"
+
+    row = dict(sp)  # copy
+    row["synonyms"] = json.dumps(syns, ensure_ascii=False)
+    row["conservation_status"] = cs
+    row.setdefault("collection_id", "ca-bien")
+
+    # Infer tax_class for ca-bien if missing
+    if row.get("collection_id") == "ca-bien" and not row.get("tax_class_vn"):
+        class_vn, class_latin = get_class(row.get("tax_order_latin", ""))
+        row["tax_class_vn"] = class_vn
+        row["tax_class_latin"] = class_latin
+
+    # Null → empty string for text fields, keep worms_id/biology as None
+    for k, v in row.items():
+        if v is None and k not in ("worms_id", "biology"):
+            row[k] = ""
+
+    return row
 
 
 def flatten(sp: dict) -> dict:
@@ -156,7 +214,18 @@ def main():
     if isinstance(records, dict):
         records = [records]   # single record
 
-    rows = [flatten(r) for r in records]
+    # Auto-detect flat vs nested schema
+    flat_count = sum(1 for r in records if is_flat(r))
+    nested_count = len(records) - flat_count
+    if flat_count and nested_count:
+        print(f"  ℹ Mixed: {flat_count} flat + {nested_count} nested records")
+    elif flat_count:
+        print(f"  ℹ Flat schema detected ({flat_count} records) — direct upsert")
+    else:
+        print(f"  ℹ Nested schema detected ({nested_count} records) — flattening...")
+
+    rows = [normalize_flat(r) if is_flat(r) else flatten(r) for r in records]
+
 
     # Deduplicate by id
     seen = {}

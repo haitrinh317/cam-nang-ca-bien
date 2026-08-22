@@ -12,9 +12,8 @@ export default function Nav() {
 
   const links = [
     { href: '/', label: t('nav.home') },
-    { href: '/ca-bien', label: '🐟 Cá biển' },
     { href: '/ca-bien/taxonomy', label: t('nav.browse') },
-    { href: '/thuc-vat-bien', label: '🌿 Thực vật biển' },
+    { href: '/ca-bien', label: t('nav.byVolume') },
   ]
 
   const toggleMenu = () => setMenuOpen(prev => !prev)

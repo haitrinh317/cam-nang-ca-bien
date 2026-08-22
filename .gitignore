@@ -1,51 +1,66 @@
-# ===== Next.js =====
-.next/
-.vercel/
-
-# ===== Node =====
+# Dependencies
 node_modules/
+.pnp
+.pnp.js
+
+# Next.js build output
+.next/
+out/
+
+# Production
+build/
 dist/
 
-# ===== Environment =====
+# Environment variables — NEVER commit real keys
 .env
 .env.local
-.env*.local
+.env.*.local
 
-# ===== OCR / Raw data (heavy) =====
+# Vercel
+.vercel/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+scripts/__pycache__/
+*.egg-info/
+.venv/
+
+# Raw data & large files (gitignored — store locally only)
+data/raw/
+data/tap2_images/
+scratch_images/
 *.png
 *.jpg
 *.jpeg
+*.webp
 *.pdf
-*.csv
-*.psv
 
-# ===== Data subdirs (heavy, not needed in repo) =====
-data/raw/
-data/tap2_images/
-data/fishbase_cache/
-data/tap2_ocr_batch*.json
-
-# ===== Python artifacts =====
-__pycache__/
-*.pyc
-*.pyo
-.venv/
-venv/
-
-# ===== Scratch & working dirs =====
-scratch/
-scratch_images/
-v1_backup/
+# Backup files
 .backups/
+v1_backup/
 backups/
+
+# Logs
 Logs/
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Project-specific scratch
+scratch/
 Documents/
 
-# ===== Agent / IDE internal =====
-.agents/
-.gemini/
+# Duplicate public assets (legacy from Vite era)
+"public/logo (1).png"
+"public/site (1).webmanifest"
 
-# ===== OS =====
-Thumbs.db
-.DS_Store
-desktop.ini
+# Agent working files
+.agents/

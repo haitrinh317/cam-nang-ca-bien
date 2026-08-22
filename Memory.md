@@ -1,151 +1,122 @@
-# Memory — OCR Cá biển Việt Nam
+# Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật lần cuối: **2026-08-21 17:55** — ✅ Hoàn tất OCR Thực vật biển (201 loài), Đồng bộ WoRMS hàng loạt cho các tập cá biển còn thiếu.
-> Production URL: https://cam-nang-ca-bien.vercel.app
+> **Cập nhật lần cuối:** 2026-08-22
+> **Giai đoạn hiện tại:** Hoàn thành OCR 1,518 loài cá biển + 201 loài thực vật biển. Chuẩn hóa pipeline & bảo mật.
+> **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local, KHÔNG phải nguồn chính.
+> **Production URL:** https://cam-nang-ca-bien.vercel.app/
 > **Dev**: `npm run dev` từ root → localhost:3000
-> Vercel Dashboard: https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien
-> Git: `527ba8c` — commit feat(ui): update admin dashboard KPI styles, fix search collection link, and enhance WoRMS sync script
+> **Vercel Dashboard:** https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien
+> **Git:** `c4a4fd0` — chore: wrap up session
 
-## ⚡ Kiến trúc Web App (v4 — Next.js App Router)
+---
+
+## ⚡ Source of Truth
+
+> **Supabase** là nguồn dữ liệu DUY NHẤT cho toàn bộ dự án.
+> - Frontend (Next.js) fetch trực tiếp từ Supabase
+> - Admin Panel CRUD ghi/đọc Supabase
+> - OCR pipeline upsert thẳng vào Supabase
+> - `species.json` (local) là file backup cũ — KHÔNG đồng bộ realtime, KHÔNG dùng để build
+> - `fishbase_sync.json` — deprecated, WoRMS data nằm trong bảng `species` (cột worms_*)
+
+---
+
+## 📊 Kiểm Kê Dữ Liệu (từ Supabase — 2026-08-22)
+
+### Collection: Cá biển (`ca-bien`) — 1,518 loài
+
+| Tập | Số loài | Trạng thái |
+|-----|---------|-----------|
+| I | 100 | ✅ (1 loài bị thiếu so với species.json — cần verify) |
+| II | 266 | ✅ Hoàn chỉnh |
+| III | 518 | ✅ Hoàn chỉnh |
+| IV | 338 | ⚠️ Thiếu loài 78 (data OCR gốc không có). species.json local có 374 — chênh lệch cần verify |
+| V | 279 | ✅ Hoàn chỉnh (chỉ 20 loài trong species.json — phần lớn upsert trực tiếp DB) |
+| volume=0 | 17 | ⚠️ Orphan — cần xác minh hoặc gán volume đúng |
+
+### Collection: Thực vật biển (`thuc-vat-bien`) — 201 loài
+
+| Tập | Số loài | Trạng thái |
+|-----|---------|-----------|
+| 1 | 201 | ✅ Hoàn chỉnh |
+
+### Tổng: **1,719 loài** trong Supabase
+
+---
+
+## 🏗️ Kiến Trúc Web App (Next.js 16 App Router)
+
+### Tech Stack
+```
+Next.js 16 (App Router) + React 19 + TypeScript
+Supabase (PostgreSQL + Auth + Storage)
+Vanilla CSS (tokens.css + globals.css)
+Deploy: Vercel CLI + GitHub (branch: master)
+```
+
+### Routes
 
 | Route | Component | Chức năng |
 |---|---|---|
-| `/` | `app/page.tsx` | Landing + GlobalSearch + Collection cards |
-| `/ca-bien` | `app/[collection]/page.tsx` + `SpeciesGrid` | Duyệt theo Tập |
-| `/ca-bien/taxonomy` | `app/[collection]/taxonomy/page.tsx` + `TaxonomyTree` | Cây phân loại |
-| `/ca-bien/[speciesId]` | `app/[collection]/[speciesId]/page.tsx` + `SpecimenCard` | Chi tiết loài |
-| `/admin` | `app/(admin)/admin/page.tsx` | Dashboard stats + audit log gần đây |
-| `/admin/ca-bien` | `app/(admin)/admin/[collection]/page.tsx` + `SpeciesTable` | CRUD loài + Import JSON + Audit Log |
-| `/admin/thuc-vat-bien` | tương tự | CRUD thực vật biển |
-| `/login` | `app/(auth)/login/page.tsx` + `LoginForm` | Supabase Auth |
-| `/api/species` | `app/api/species/route.ts` | GET/POST/PATCH/DELETE + audit logging |
+| `/` | `app/(public)/page.tsx` | Landing + GlobalSearch + Collection cards |
+| `/ca-bien` | `app/(public)/[collection]/page.tsx` | Duyệt theo Tập |
+| `/ca-bien/taxonomy` | `app/(public)/[collection]/taxonomy/page.tsx` | Cây phân loại |
+| `/ca-bien/[speciesId]` | `app/(public)/[collection]/[speciesId]/page.tsx` | Chi tiết loài |
+| `/admin` | `app/(admin)/admin/page.tsx` | Dashboard stats + audit log |
+| `/admin/ca-bien` | `app/(admin)/admin/[collection]/page.tsx` | CRUD loài |
+| `/login` | `app/(auth)/login/page.tsx` | Supabase Auth |
+| `/api/species` | `app/api/species/route.ts` | GET/POST/PATCH/DELETE + role check + audit |
 | `/api/species/import` | `app/api/species/import/route.ts` | POST bulk upsert JSON |
 | `/sitemap.xml` | `app/sitemap.ts` | Dynamic sitemap |
-| `/robots.txt` | `app/robots.ts` | Robots rules |
 
 ### Middleware: bảo vệ `/admin/*` → redirect `/login?next=`
 
 ### Supabase DB Tables
+
 | Table | Mô tả |
 |---|---|
-| `species` | ~1680 loài (cá biển + thực vật biển), có `collection_id` FK |
-| `collections` | registry: `ca-bien` (active), `thuc-vat-bien` (active) |
+| `species` | ~1,719 loài (cá biển + thực vật biển), `collection_id` FK |
+| `collections` | registry: `ca-bien`, `thuc-vat-bien` (active) |
 | `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
 | `audit_log` | Nhật ký thay đổi: ai sửa gì, lúc nào, old/new data (jsonb) |
 
 ### Admin Panel Components
+
 | Component | File | Chức năng |
 |---|---|---|
 | `SpeciesTable` | `components/admin/SpeciesTable.tsx` | Bảng CRUD + tìm kiếm + phân trang |
 | `SpeciesForm` | `components/admin/SpeciesForm.tsx` | Modal 4 tab: Cơ bản, Phân loại, VN, EN |
 | `ImportModal` | `components/admin/ImportModal.tsx` | Upload JSON → preview → bulk upsert |
 | `AuditLog` | `components/admin/AuditLog.tsx` | Bảng nhật ký thay đổi |
+| `PhotoManager` | `components/admin/PhotoManager.tsx` | Upload/xóa/preview ảnh loài |
 
-### Admin Panel Progress (2026-08-21)
-- ✅ Phase 1: CRUD hoạt động (GET/POST/PATCH/DELETE + audit log)
-- ✅ Phase 2: Dashboard nâng cấp (thống kê tổng/cá/thực vật, breakdown tập)
-- ✅ Phase 3: Import JSON hàng loạt (upload file → preview → upsert)
-- ✅ Phase 4: Quản lý ảnh loài (upload/xóa/preview — Supabase Storage bucket `species-photos`)
+### Admin Panel Progress
+
+- ✅ Phase 1: Vá RLS — chỉ service_role/admin write
+- ✅ Phase 2: Dashboard (thống kê tổng/cá/thực vật, breakdown tập)
+- ✅ Phase 3: Import JSON hàng loạt
+- ✅ Phase 4: Quản lý ảnh loài (Supabase Storage bucket `species-photos`)
 - ✅ Phase 5: Audit Log (bảng DB + component + API ghi log)
-- ⚠️ Chú Chình cần tự test CRUD bằng tay (bot browser không gõ được tiếng Việt có dấu)
+- ✅ Phase 6: API route role-check (POST/PATCH/DELETE verify admin role)
+- ⚠️ Chưa: soft-delete, inline edit, CSV import
 
-### WoRMS Taxonomy Sync (2026-08-21)
-- ✅ 201 loài thực vật biển (hoàn tất) và các loài cá biển còn sót (Tập III, IV, V) đã đồng bộ taxonomy đầy đủ từ WoRMS.
-- Script: `scripts/sync_taxonomy_worms.py` — lấy Classification Tree từ WoRMS API
-- Rule: Thực vật biển dùng "Chi" thay cho "Giống" (đã apply ở TaxonomyTree, SpecimenCard, SpeciesForm)
+---
 
-### Migrations đã chạy
-- `migrations/001_create_collections.sql` ✅
-- `migrations/002_species_collection_id.sql` ✅
-- `migrations/003_user_roles.sql` ✅
-- `audit_log` table ✅ (tạo bằng SQL trên Supabase Dashboard)
-
-
-
-## Kiến trúc Web App (v2 — hiện tại)
-
-### 4 file HTML + shared assets
-| File | Data source | Chức năng |
-|---|---|---|
-| `index.html` | `data/species.json` | Trang chủ + tìm kiếm Fuse.js + Hero Stats |
-| `tap.html` | `data/species.json` | Duyệt loài theo Tập (filter `volume`) |
-| `browse.html` | `data/taxonomy_tree.json` | Cây phân loại: Lớp > Bộ > Họ > Giống > Loài |
-| `species.html` | `data/species.json` + `data/fishbase_sync.json` | Chi tiết loài |
-| `assets/shared.css` | — | CSS toàn cục + back-to-top styles |
-| `assets/shared.js` | — | Back-to-top button injection |
-| `assets/logo.png` | — | Logo website |
-
-### Volume Color System
-| Tập | Hex | CSS var |
-|-----|-----|---------|
-| 1 | #818cf8 (indigo) | `--vol-color` via `.vol-1` |
-| 2 | #34d399 (emerald) | `.vol-2` |
-| 3 | #f87171 (rose) | `.vol-3` |
-| 4 | #fbbf24 (amber) | `.vol-4` |
-| 5 | #60a5fa (blue) | `.vol-5` |
-
-### Schema chuẩn `species.json` (Gold Standard: `tap1-species-1`)
-```json
-{
-  "id": "tap1-species-1",
-  "volume": 1,
-  "speciesIndex": 1,
-  "vnName": "Cá lưỡng tiêm",
-  "scientificName": "Branchiostoma belcheri",
-  "authorship": "(Gray, 1847)",
-  "status": "common",
-  "taxonomy": {
-    "order":  { "vn": "Cá Lưỡng Tiêm", "latin": "Amphioxiformes" },
-    "family": { "vn": "Cá Lưỡng Tiêm", "latin": "Branchiostomidae" },
-    "genus":  { "vn": "Cá lưỡng tiêm Branchiostoma Costa, 1834", "latin": "Branchiostoma Costa, 1834" }
-  },
-  "specs": {
-    "vn": {
-      "alternateNames": "Cá lưỡng tiêm",
-      "size": "Thường gặp 42 - 47mm, lớn nhất 57mm.",
-      "distribution": "Đông Phi, Ấn Độ, Indonesia, ..., Việt Nam. Vịnh Bắc Bộ, Trung Bộ.",
-      "specimen": "Viện Hải Dương học (Nha Trang).",
-      "status": "Thường gặp, nhưng số lượng ít.",
-      "literature": "Chu Nguyên Đinh, 1963. Nguyễn Khắc Hường, 1992."
-    },
-    "en": {
-      "commonName": "Lancelet",
-      "size": "Ordinary 42 - 47mm, maximum 57mm.",
-      "distribution": "East Africa, India, ..., Vietnam. Gulf of Tonkin, Coast of Central Vietnam.",
-      "specimen": "Institute of Oceanography (Nha Trang).",
-      "status": "Common, seldom abundant.",
-      "literature": "Chu, 1963. Nguyen Khac Huong, 1992."
-    }
-  },
-  "synonyms": ["Branchiostoma Costa, Cenni Zool. Napol., p. 49, 1834. ..."]
-}
-```
-
-**Lưu ý schema:**
-- taxonomy chỉ có 3 cấp: `order`, `family`, `genus` (KHÔNG có class/subclass/suborder)
-- taxonomy.*.vn: KHÔNG có prefix "Bộ"/"Họ"/"Giống"
-- taxonomy.*.latin: Title Case (KHÔNG ALL CAPS)
-- specs values: KHÔNG có prefix label ("Kích thước:", "Size:")
-- status chỉ nhận: `common`, `uncommon`, `rare`, `unknown`
-
-## Cấu trúc thư mục (v4 — Next.js, sau cleanup 2026-08-20)
+## 📂 Cấu trúc thư mục
 
 ```
 OCR Document/                         ← Next.js project root
 ├── app/                              ← Next.js App Router
-│   ├── page.tsx                      ← Landing + Search
-│   ├── layout.tsx                    ← Root layout
-│   ├── [collection]/                 ← Dynamic: /ca-bien
-│   │   ├── page.tsx                  ← SpeciesGrid
-│   │   ├── taxonomy/page.tsx         ← TaxonomyTree
-│   │   └── [speciesId]/page.tsx      ← SpecimenCard
-│   ├── admin/                        ← /admin + /admin/[collection]
-│   ├── login/                        ← Supabase Auth
-│   ├── api/species/route.ts          ← REST API
-│   ├── sitemap.ts, robots.ts         ← SEO
+│   ├── (public)/                     ← Public pages
+│   │   ├── page.tsx                  ← Landing + Search
+│   │   └── [collection]/             ← Grid + Taxonomy + Detail
+│   ├── (admin)/admin/                ← Admin dashboard + CRUD
+│   ├── (auth)/login/                 ← Supabase Auth
+│   ├── api/species/                  ← REST API + Import
+│   ├── sitemap.ts, robots.ts        ← SEO
 │   └── not-found.tsx
 ├── components/                       ← React components
-│   ├── admin/    (SpeciesTable, SpeciesForm)
+│   ├── admin/    (SpeciesTable, SpeciesForm, ImportModal, AuditLog, PhotoManager)
 │   ├── browse/   (SpeciesGrid, TaxonomyTree)
 │   ├── layout/   (Nav, Footer, AuthStatus, HeaderControls, ThemeScript)
 │   ├── search/   (GlobalSearch)
@@ -154,172 +125,138 @@ OCR Document/                         ← Next.js project root
 │   ├── supabase-browser.ts, supabase-server.ts
 │   ├── i18n.ts, theme.ts, collections.ts
 ├── styles/
-│   ├── tokens.css                    ← Design tokens (9KB)
-│   └── globals.css                   ← Full CSS (47KB)
+│   ├── tokens.css                    ← Design tokens
+│   └── globals.css                   ← Full CSS
 ├── locales/vi.json, en.json          ← i18n
 ├── middleware.ts                     ← Auth guard /admin/*
 ├── next.config.ts, tsconfig.json     ← Next.js config
-├── data/
-│   ├── species.json      (3.4MB — CSDL chính, 1279 loài)
-│   ├── taxonomy_tree.json (335KB)
-│   ├── fishbase_sync.json (569KB — WoRMS)
-│   ├── stats.json
-│   ├── parsed/            ← nguồn build database
+├── data/                             ← Local data (backup, not source of truth)
+│   ├── species.json      (backup — stale, chỉ 1279 loài)
+│   ├── taxonomy_tree.json
+│   ├── fishbase_sync.json (deprecated)
+│   ├── parsed/            ← OCR parsed sources
 │   └── raw/               ← PDF nguồn gốc (gitignored)
 ├── scripts/               ← Pipeline scripts
-├── migrations/            ← SQL migrations (001-003)
-├── Documents/             ← PDF sách gốc (gitignored)
-├── scratch/               ← OCR batches (gitignored)
-├── v1_backup/             ← Legacy archive (gitignored)
-├── .agents/               ← AI skills (gitignored)
+├── migrations/            ← SQL migrations (001-004)
+├── .agents/               ← AI skills
 ├── Memory.md, todo.md
-├── .gitignore, .vercelignore
 ```
 
-### Build pipeline
-```
-data/parsed/tap3_parsed_details.json  ─┐
-data/parsed/tap4_parsed_details.json  ─┼─> scripts/build_database.py ─> data/species.json
-data/parsed/tap5_parsed_details.json  ─┘                              ─> data/taxonomy_tree.json
-```
+---
 
-### Enrichment pipeline
-```
-data/species.json → scripts/enrich_names.py --volume X → Wikidata (commonName EN + alternateNames VN)
-                  → scripts/audit_species.py --volume X --fix → OCR batch restore + mirror VN→EN
-```
-Skills: `enrich-cabien` (tên gọi) + `audit-cabien` (data quality)
+## 🔧 Pipelines
 
 ### OCR pipeline
 ```
-PDF → scripts/pdf_to_images.py → PNG → view_file (AI Vision built-in) → JSON
-→ Chuẩn hóa → WoRMS verify → Merge 3 file CSDL
+PDF → scripts/pdf_to_images.py → PNG → view_file (AI Vision) → JSON
+→ Chuẩn hóa → WoRMS verify → scripts/upsert_species.py → Supabase
 ```
-Skill: `ocr-pdf-cabien` (v1.3.0 — dùng AI Vision built-in, KHÔNG gọi API Gemini)
+Skill: `ocr-pdf-cabien` v2.0
 
-## Dữ liệu nguồn
+### Enrichment pipeline
+```
+Supabase → scripts/enrich_names.py → Wikidata (commonName EN + alternateNames VN)
+         → scripts/audit_species.py → data quality fix
+         → scripts/sync_fishbase_biology.py → FishBase/GBIF biology
+         → scripts/sync_taxonomy_worms.py → WoRMS taxonomy
+```
 
-| Tập | Số loài | Trạng thái |
-|---|---|---|
-| I | 101 | ✅ Hoàn chỉnh nhất |
-| II | 266 | ✅ OCR thủ công + chuẩn hóa + upload Supabase hoàn tất (266/266) |
-| III | 518 | ⚠️ EN 100%, VN 47%, 60 skeleton cần FishBase |
-| IV | 316 | ⚠️ Loài 1-100 chuẩn, 101-316 còn thô |
-| V | 279 | ✅ OCR thủ công + chuẩn hóa + upload Supabase hoàn tất (279/279) |
+### Deploy pipeline
+```
+git push (GitHub) + vercel --prod (CDN)
+```
 
-## Taxonomy Tree
-- **3 lớp**: Cá Sụn (93 loài, 6 bộ) · Cá Lưỡng Tiêm (1) · Cá Xương (1.107, 21 bộ)
-- Mapping order → class: hardcoded trong `scripts/build_taxonomy_tree.py`
-- **Quan trọng**: Phải rebuild tree sau mỗi lần thêm/sửa loài
+---
 
-## Quy tắc quan trọng
-- **alternateNames** là trường BẮT BUỘC — UI luôn hiển thị (dùng '—' nếu trống)
-- **commonName (EN)** — tương tự, luôn hiển thị
-- **Encoding**: luôn dùng `sys.stdout.reconfigure(encoding='utf-8')` trong Python trên Windows
-- **Template species.html**: luôn hiển thị 12 trường (6 VN + 6 EN), dùng '—' cho null
-- **Sync public/**: Sau mỗi thay đổi HTML/CSS/JS, phải copy sang `public/` trước khi deploy
+## 📋 Schema chuẩn Supabase (flat)
 
-## Deploy
-- Platform: Vercel CLI (`vercel --prod --yes` từ root)
-- GitHub: `https://github.com/haitrinh317/cam-nang-ca-bien` (branch: master)
-- Workflow: git push (version history) + vercel --prod (CDN)
-- **CSS versioning**: Dùng `?v=N` trong link CSS để bust CDN cache
-- **PowerShell encoding**: PHẢI dùng `[System.IO.File]::ReadAllText/WriteAllText` với `UTF8`
-- **Lưu ý Rollback**: Nếu đã dùng Instant Rollback trên Vercel, bản deploy mới sẽ bị ghim — phải vào dashboard Promote to Production thủ công
+| Column | Type | Ghi chú |
+|--------|------|---------|
+| `id` | text PK | `tap{vol}-species-{N}` hoặc `thucvat-species-{N}` |
+| `collection_id` | text FK | `ca-bien` / `thuc-vat-bien` |
+| `volume` | int | Tập (1-5 cho cá, 1 cho thực vật) |
+| `species_index` | int | STT trong tập |
+| `vn_name` | text | Tên Việt Nam |
+| `scientific_name` | text | Tên khoa học |
+| `authorship` | text | Tác giả + năm |
+| `en_common_name` | text | Tên tiếng Anh |
+| `vn_alternate_names` | text | Tên gọi khác |
+| `tax_class_vn/latin` | text | Lớp |
+| `tax_order_vn/latin` | text | Bộ |
+| `tax_family_vn/latin` | text | Họ |
+| `tax_genus_vn/latin` | text | Chi/Giống |
+| `vn_size/distribution/specimen/status/literature` | text | Specs VN |
+| `en_size/distribution/specimen/status/literature` | text | Specs EN |
+| `conservation_status` | text | common/uncommon/rare/unknown |
+| `synonyms` | jsonb | Array of synonym strings |
+| `morphology_vn/en` | text | Mô tả hình thái |
+| `photo_place/depth/date` | text | Thông tin ảnh |
+| `biology` | jsonb | FishBase/GBIF enrichment data |
+| `worms_status/accepted_name/id` | text/int | WoRMS validation |
 
-### ⚠️ Vercel Account (BẮT BUỘC — đã gây lỗi deploy nhầm 2026-08-13)
+---
+
+## 🔐 Bảo mật
+
+- RLS: write locked cho `service_role` + authenticated admin only
+- API routes: POST/PATCH/DELETE verify `user_roles.role = 'admin'`
+- Middleware: `/admin/*` redirect → `/login`
+- Scripts Python: credentials từ `.env` (SUPABASE_SERVICE_ROLE_KEY), KHÔNG hardcode
+
+---
+
+## ⚠️ Vercel Account (BẮT BUỘC)
+
 | Mục | Giá trị |
 |---|---|
 | **Account đúng** | `haitrinh082@gmail.com` |
 | **Scope/Team** | `haitrinh082-6335s-projects` |
 | **Project ID** | `prj_UAcAXHMGSOq5iOLChKBHOPoam596` |
-| **Org/Team ID** | `team_38z7f9cGS9vAyalMqjKVPJZJ` |
 | **Production URL** | `https://cam-nang-ca-bien.vercel.app` |
-| **Dashboard** | `https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien` |
-| **Account SAI** | `haitrinhnt@gmail.com` (haitrinhnt-6798s-projects) — KHÔNG DÙNG |
+| **Account SAI** | `haitrinhnt@gmail.com` — KHÔNG DÙNG |
 
-**Trước khi deploy, PHẢI chạy:** `vercel whoami` → xác nhận scope = `haitrinh082-6335s-projects`.
-Nếu sai → `vercel logout` rồi `vercel login` lại.
+Trước khi deploy: `vercel whoami` → xác nhận scope đúng.
 
-### PWA
-- `manifest.json`, `sw.js`, `pwa.js` đã deploy production (2026-08-13)
-- SW strategy: App Shell (cache-first) + Data (stale-while-revalidate)
-- Installable trên Chrome mobile/desktop
+---
 
-## Supabase Database (v2 — hiện tại)
+## 📝 Quy tắc quan trọng
 
-### Bảng `species`
-- 21+ trường: identity, taxonomy (4 cấp), specs VN/EN, WoRMS, metadata
-- RLS enabled, FTS index (simple tokenizer)
-- View `taxonomy_tree` thay thế taxonomy_tree.json
-- Scripts: `import_to_supabase.py`, `upsert_species.py`, `build_database.py`
-- Migration: `scripts/migrations/001_create_species_table.sql`
+- **Source of Truth**: Supabase. species.json là backup.
+- **alternateNames** BẮT BUỘC — UI hiển thị (dùng '—' nếu trống)
+- **commonName (EN)** — tương tự
+- **Encoding Python**: `sys.stdout.reconfigure(encoding='utf-8')` trên Windows
+- **File Python đọc từ PowerShell**: `encoding='utf-8-sig'` để strip BOM
+- **OCR thật**: KHÔNG báo cáo tiến độ ảo
+- **Thực vật biển**: dùng "Chi" thay cho "Giống" (taxonomy level)
+- **Rong biển schema** khác cá: có morphology_vn/en, photo_place/depth/date
 
-### ⚠️ Lỗ hổng RLS hiện tại
-- Policy "Service write access" đang `USING (true)` — anon key ghi được
-- anon key đã public trên frontend → ai cũng INSERT/UPDATE/DELETE được
-- **Cần vá ngay**: lock write cho `service_role` only
+---
 
-### Admin Panel — Hướng 1: Supabase Auth + Admin Dashboard
-**Quyết định 2026-07-30**: Đi theo Hướng 1 (Supabase Auth + Custom Admin UI), chia 3 phase:
+## 📜 Decisions
 
-| Phase | Nội dung | Trạng thái |
-|---|---|---|
-| **Phase 1** | Vá RLS — lock write cho `service_role` only | 🔲 Chưa làm |
-| **Phase 2** | Supabase Auth + bảng `profiles` + `/admin.html` (CRUD, bulk import, audit log) | 🔲 Chưa làm |
-| **Phase 3** | Phân quyền multi-user (editor chỉ sửa loài mình, admin toàn quyền) | 🔲 Tương lai |
+| Ngày | Quyết định |
+|------|-----------|
+| 2026-07-24 | Kiến trúc 4-HTML + species.json (v1) |
+| 2026-07-24 | Volume color system (5 màu cố định) |
+| 2026-07-27 | Wikidata không phải nguồn tốt cho alternateNames cá biển VN |
+| 2026-07-30 | Admin Panel → Hướng 1 (Supabase Auth + Dashboard) |
+| 2026-07-30 | OCR skill v1.3.0 — dùng AI Vision built-in (view_file) |
+| 2026-08-13 | PWA deploy production |
+| 2026-08-14 | Bổ sung 1,251 loài biology (FishBase + GBIF) |
+| 2026-08-19 | Phase 3 Hallmark Redesign — full UI rewrite, Lora font |
+| 2026-08-20 | Next.js 16 migration hoàn tất, deploy Vercel thành công |
+| 2026-08-20 | Rong biển schema khác cá 6 điểm → mở rộng schema chung |
+| 2026-08-20 | morphology + photo data = trường CHUNG cho mọi collection |
+| 2026-08-22 | **Supabase = Single Source of Truth** (species.json deprecated) |
+| 2026-08-22 | API route: thêm role-check cho POST/PATCH/DELETE |
+| 2026-08-22 | Scripts Python: chuyển key sang .env, bỏ hardcode |
 
-## Decisions
-- 2026-07-24: Volume color system (5 màu cố định) — CSS custom properties
-- 2026-07-24: `shared.js` inject back-to-top — không copy-paste HTML
-- 2026-07-24: Tập I hoàn chỉnh nhất, II-V badge "Đang cập nhật"
-- 2026-07-24: Kiến trúc 4-HTML + species.json. Bỏ legacy tap-N.html và PSV
-- 2026-07-24: Mobile logo dùng 2 span `.logo-full`/`.logo-short` toggle CSS
-- 2026-07-24: Vercel CLI deploy — phải chạy cả `git push` + `vercel --prod`
-- 2026-07-24: Vercel CDN cache — dùng `?v=N` query string bust cache
-- 2026-07-24: PowerShell encoding — `[System.IO.File]::ReadAllText/WriteAllText` UTF8
-- 2026-07-27: Skill `enrich-cabien` — enrichment tên gọi
-- 2026-07-27: Skill `audit-cabien` — data quality + auto-fix
-- 2026-07-27: Wikidata không phải nguồn tốt cho alternateNames cá biển VN
-- 2026-07-30: Dọn dẹp project — chuyển ~400 files (52 scripts cũ + 328 scratch + data trung gian) vào v1_backup/
-- 2026-07-30: Parsed details chuyển từ scratch/ sang data/parsed/ (nguồn build database)
-- 2026-07-30: Skill ocr-pdf-cabien v1.3.0 — bỏ Gemini Vision API, dùng AI Vision built-in (view_file)
-- 2026-07-30: Vercel Rollback ghim production — cần Promote to Production thủ công sau deploy mới
-- 2026-07-30: Admin Panel → Hướng 1 (Supabase Auth + Admin Dashboard), 3 phase: vá RLS → Auth+CRUD → multi-user
-- 2026-08-13: Vercel account chính xác = haitrinh082@gmail.com (scope haitrinh082-6335s-projects). Account haitrinhnt@gmail.com là SAI.
-- 2026-08-13: PWA (manifest + SW + pwa.js) deploy thành công lên production
-- 2026-08-13: WoRMS sync cho Tập IV loài 11-50 hoàn tất (40 loài)
-- 2026-08-14: Bổ sung 1251 loài có thông tin Sinh học - Sinh thái (Habitat, IUCN, Morphological Description, Diet, Depth) từ FishBase và GBIF vào Supabase (`biology` column).
-- 2026-08-19: Phase 3 Hallmark Redesign — full UI rewrite, Lora font (Vietnamese), tokens.css v3.0, shared.css audit-clean
-- 2026-08-19: Root-cause fix Vite: public/*.html cũ override root files → xóa 4 HTML khỏi public/
-- 2026-08-19: Nav layout 1/3–2/3 (flex:1/flex:2), đồng bộ 3 links trên 4 trang
-- 2026-08-20: Cleanup: xóa next-app/ (shell rỗng), vite_legacy/, .vite/. Di chuyển file rời rạc vào v1_backup/
-- 2026-08-20: Git commit a2b1a3e — Next.js source + cleanup + gitignore/vercelignore update. Push master thành công
-- 2026-08-20: Next.js app đã ở ROOT (không còn next-app/). Dev: `npm run dev` từ root
-- 2026-08-20: Deploy Vercel bản Next.js 16 thành công (`vercel --prod`). Production READY
-- 2026-08-20: Migration 004 — thêm 5 cột chung: morphology_vn/en, photo_place/depth/date. Dùng cho MỌI collection
-- 2026-08-20: Phân tích PDF "Rong biển thường thấy ở VN" (254tr, ~160 loài). Schema rong biển khác cá 6 điểm → chọn Phương án B (mở rộng schema)
-- 2026-08-20: Quyết định: morphology + photo data là trường CHUNG — cá biển lấy từ FishBase, rong biển lấy từ OCR sách
+---
 
-## Upgrade Plan v3.0 — Roadmap
+## 🛣️ Ràng buộc kỹ thuật
 
-> Chi tiết: `implementation_plan.md` (artifact session 02b1c773)
-
-| Phase | Mục tiêu | Trạng thái |
-|-------|----------|-----------|
-| **Phase 1** | Redesign UI + Song ngữ VN/EN + Light/Dark mode | 🔶 Đang làm — CSS xong, còn i18n + toggle |
-| **Phase 2** | Admin Panel CRUD hoàn chỉnh (Form + Import CSV + Audit Log) | ⬜ Chưa bắt đầu |
-| **Phase 3** | Supabase Auth + Phân quyền 3 role (admin/editor/viewer) | ⬜ Chưa bắt đầu |
-| **Phase 4** | Polish + Mobile test + Deploy production | ⬜ Chưa bắt đầu |
-
-### Phase 1 còn lại
-- `src/lib/i18n.js` — module song ngữ nhẹ, không cần thư viện ngoài
-- `locales/vi.json` + `locales/en.json` — toàn bộ label UI tĩnh
-- Toggle VN/EN + light/dark trên header (lưu `localStorage`)
-- Deploy Phase 1 lên Vercel sau khi i18n xong
-
-### Ràng buộc kỹ thuật (MỚI)
-- Next.js 16 App Router + React + TypeScript
+- Next.js 16 App Router + React 19 + TypeScript
 - Supabase (Backend & Auth)
-- Tailwind KHÔNG DÙNG (giữ nguyên Vanilla CSS cũ)
-- Deploy: GitHub + Vercel workflow (Framework Preset: Next.js)
+- Tailwind KHÔNG DÙNG (Vanilla CSS)
+- Deploy: GitHub + Vercel (Framework Preset: Next.js)
+- Scripts Python: credentials từ `.env` hoặc `os.environ`
