@@ -13652,14 +13652,14 @@
   },
   "tap5-species-143": {
     "status": "synonym",
-    "acceptedName": "Paraplagusia bilineata",
-    "acceptedBy": "(Bloch, 1787)",
-    "wormsId": 219858,
-    "lastUpdated": "2023-01-10",
-    "note": "Tên cũ (synonym). Tên hiện hành: Paraplagusia bilineata",
-    "syncedAt": "2026-07-24T04:05:04.970910Z",
+    "acceptedName": "Brachirus villosus",
+    "acceptedBy": "WoRMS",
+    "wormsId": 1531740,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Brachirus villosus (Weber, 1908)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-143",
-    "sourceName": "Paraplagusia formosana"
+    "sourceName": "Synaptura villosa"
   },
   "tap5-species-145": {
     "status": "synonym",
@@ -13715,11 +13715,15 @@
     "sourceName": "Cynoglossus monopus"
   },
   "tap5-species-165": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:05:13.052273Z",
+    "status": "valid",
+    "acceptedName": "Cynoglossus waandersii",
+    "acceptedBy": "WoRMS",
+    "wormsId": 1021637,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Tên hợp lệ (WoRMS)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-165",
-    "sourceName": "Cynoglossus waandersi"
+    "sourceName": "Cynoglossus waandersii"
   },
   "tap5-species-167": {
     "status": "synonym",
@@ -13857,11 +13861,11 @@
   "tap5-species-191": {
     "status": "valid",
     "acceptedName": "Aluterus monoceros",
-    "acceptedBy": "(Linnaeus, 1758)",
+    "acceptedBy": "WoRMS",
     "wormsId": 127407,
-    "lastUpdated": "2008-01-15",
-    "note": "Tên hợp lệ trên WoRMS",
-    "syncedAt": "2026-07-24T04:05:31.437680Z",
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Tên hợp lệ (WoRMS)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-191",
     "sourceName": "Aluterus monoceros"
   },
@@ -13926,11 +13930,13 @@
     "sourceName": "Lactoria fornasini"
   },
   "tap5-species-216": {
-    "status": "uncertain",
-    "acceptedName": "Ostracion immaculatus",
+    "status": "synonym",
+    "acceptedName": "Ostracion immaculatum",
+    "acceptedBy": "WoRMS",
     "wormsId": 1621605,
-    "note": "Trạng thái WoRMS: misspelling - incorrect subsequent spelling",
-    "syncedAt": "2026-07-24T04:05:53.270941Z",
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Ostracion immaculatum Temminck & Schlegel, 1850",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-216",
     "sourceName": "Ostracion immaculatus"
   },
@@ -13957,11 +13963,13 @@
     "sourceName": "Pterois volitans"
   },
   "tap5-species-220": {
-    "status": "uncertain",
-    "acceptedName": "Rhynchostracion nasus",
+    "status": "synonym",
+    "acceptedName": "Ostracion nasus",
+    "acceptedBy": "WoRMS",
     "wormsId": 219914,
-    "note": "Trạng thái WoRMS: superseded combination",
-    "syncedAt": "2026-07-24T04:05:57.289718Z",
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Ostracion nasus Bloch, 1785",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-220",
     "sourceName": "Rhynchostracion nasus"
   },
@@ -14087,16 +14095,24 @@
     "sourceName": "Vespicula trachinoides"
   },
   "tap5-species-240": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:06:16.368108Z",
+    "status": "synonym",
+    "acceptedName": "Pao palembangensis",
+    "acceptedBy": "WoRMS",
+    "wormsId": 1018818,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Pao palembangensis (Bleeker, 1852)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-240",
     "sourceName": "Tetraodon palembangensis"
   },
   "tap5-species-244": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:06:17.603981Z",
+    "status": "synonym",
+    "acceptedName": "Pao fangi",
+    "acceptedBy": "WoRMS",
+    "wormsId": 1014845,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Pao fangi (Pellegrin & Chevey, 1940)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-244",
     "sourceName": "Tetraodon fangi"
   },
@@ -14469,11 +14485,15 @@
     "sourceName": "Dactyloptena macracanthus"
   },
   "tap5-species-87": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:07:14.974693Z",
+    "status": "synonym",
+    "acceptedName": "Laiopteryx novaezeelandiae",
+    "acceptedBy": "WoRMS",
+    "wormsId": 279986,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Laiopteryx novaezeelandiae (Günther, 1862)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-87",
-    "sourceName": "Brachypleura novae"
+    "sourceName": "Brachypleura novaezeelandiae"
   },
   "tap5-species-88": {
     "status": "valid",
@@ -14681,9 +14701,13 @@
     "sourceName": "Sebastapistes cyanostigma"
   },
   "tap5-species-13": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:07:56.925903Z",
+    "status": "synonym",
+    "acceptedName": "Neomerinthe megalepis",
+    "acceptedBy": "WoRMS",
+    "wormsId": 306454,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Neomerinthe megalepis (Fowler, 1938)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-13",
     "sourceName": "Sebastapistes megalepis"
   },
@@ -15069,11 +15093,11 @@
   "tap5-species-93": {
     "status": "valid",
     "acceptedName": "Pseudorhombus dupliciocellatus",
-    "acceptedBy": "Regan, 1905",
+    "acceptedBy": "WoRMS",
     "wormsId": 277078,
-    "lastUpdated": "2008-01-15",
-    "note": "Tên hợp lệ trên WoRMS",
-    "syncedAt": "2026-07-24T04:09:00.819598Z",
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Tên hợp lệ (WoRMS)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-93",
     "sourceName": "Pseudorhombus dupliciocellatus"
   },
@@ -15248,13 +15272,13 @@
   "tap5-species-114": {
     "status": "valid",
     "acceptedName": "Crossorhombus valderostratus",
-    "acceptedBy": "(Alcock, 1890)",
+    "acceptedBy": "WoRMS",
     "wormsId": 219798,
-    "lastUpdated": "2008-01-15",
-    "note": "Tên hợp lệ trên WoRMS",
-    "syncedAt": "2026-07-24T04:09:35.374647Z",
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Tên hợp lệ (WoRMS)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-114",
-    "sourceName": "Crossorhombus valde-rostratus"
+    "sourceName": "Crossorhombus valderostratus"
   },
   "tap5-species-115": {
     "status": "valid",
@@ -15484,9 +15508,13 @@
     "sourceName": "Paraplagusia guttata"
   },
   "tap5-species-144": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:10:04.700168Z",
+    "status": "synonym",
+    "acceptedName": "Brachirus siamensis",
+    "acceptedBy": "WoRMS",
+    "wormsId": 305887,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Brachirus siamensis (Sauvage, 1878)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-144",
     "sourceName": "Synaptura krempfi"
   },
@@ -15531,9 +15559,13 @@
     "sourceName": "Cynoglossus borneensis"
   },
   "tap5-species-151": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:10:25.834590Z",
+    "status": "valid",
+    "acceptedName": "Cynoglossus cynoglossus",
+    "acceptedBy": "WoRMS",
+    "wormsId": 274198,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Tên hợp lệ (WoRMS)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-151",
     "sourceName": "Cynoglossus cynoglossus"
   },
@@ -15615,9 +15647,13 @@
     "sourceName": "Cynoglossus melampetalus"
   },
   "tap5-species-160": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:10:41.715280Z",
+    "status": "valid",
+    "acceptedName": "Cynoglossus microlepis",
+    "acceptedBy": "WoRMS",
+    "wormsId": 1020152,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Tên hợp lệ (WoRMS)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-160",
     "sourceName": "Cynoglossus microlepis"
   },
@@ -15701,11 +15737,11 @@
   "tap5-species-172": {
     "status": "valid",
     "acceptedName": "Tripodichthys blochii",
-    "acceptedBy": "(Bleeker, 1852)",
+    "acceptedBy": "WoRMS",
     "wormsId": 283056,
-    "lastUpdated": "2008-01-15",
-    "note": "Tên hợp lệ trên WoRMS",
-    "syncedAt": "2026-07-24T04:10:51.885701Z",
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Tên hợp lệ (WoRMS)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-172",
     "sourceName": "Tripodichthys blochii"
   },
@@ -16087,11 +16123,13 @@
     "sourceName": "Takifugu niphobles"
   },
   "tap5-species-234": {
-    "status": "uncertain",
+    "status": "valid",
     "acceptedName": "Amblyrhynchotes honckenii",
+    "acceptedBy": "WoRMS",
     "wormsId": 219919,
-    "note": "Trạng thái WoRMS: superseded combination",
-    "syncedAt": "2026-07-24T04:11:59.674825Z",
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Tên hợp lệ (WoRMS)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-234",
     "sourceName": "Amblyrhynchotes honckenii"
   },
@@ -16118,9 +16156,13 @@
     "sourceName": "Chelonodon patoca"
   },
   "tap5-species-239": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:12:11.344301Z",
+    "status": "synonym",
+    "acceptedName": "Dichotomyctere ocellatus",
+    "acceptedBy": "WoRMS",
+    "wormsId": 1533344,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Dichotomyctere ocellatus (Steindachner, 1870)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-239",
     "sourceName": "Chelonodon biocellatus"
   },
@@ -16136,16 +16178,24 @@
     "sourceName": "Tetraodon leiurus"
   },
   "tap5-species-242": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:12:13.992031Z",
+    "status": "synonym",
+    "acceptedName": "Carinotetraodon lorteti",
+    "acceptedBy": "WoRMS",
+    "wormsId": 1467068,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Carinotetraodon lorteti (Tirant, 1885)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-242",
     "sourceName": "Tetraodon lorteti"
   },
   "tap5-species-243": {
-    "status": "not_found",
-    "note": "Chưa xác minh được trên WoRMS",
-    "syncedAt": "2026-07-24T04:12:15.326859Z",
+    "status": "synonym",
+    "acceptedName": "Pao cambodgiensis",
+    "acceptedBy": "WoRMS",
+    "wormsId": 1016621,
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Đồng nghĩa của Pao cambodgiensis (Chabanaud, 1923)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-243",
     "sourceName": "Tetraodon cambodgiensis"
   },
@@ -16372,11 +16422,11 @@
   "tap5-species-270": {
     "status": "valid",
     "acceptedName": "Histrio histrio",
-    "acceptedBy": "(Linnaeus, 1758)",
+    "acceptedBy": "WoRMS",
     "wormsId": 126533,
-    "lastUpdated": "2008-01-15",
-    "note": "Tên hợp lệ trên WoRMS",
-    "syncedAt": "2026-07-24T04:12:42.491303Z",
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Tên hợp lệ (WoRMS)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-270",
     "sourceName": "Histrio histrio"
   },
@@ -16456,11 +16506,11 @@
   "tap5-species-278": {
     "status": "valid",
     "acceptedName": "Pegasus laternarius",
-    "acceptedBy": "Cuvier, 1829",
+    "acceptedBy": "WoRMS",
     "wormsId": 279116,
-    "lastUpdated": "2008-01-15",
-    "note": "Tên hợp lệ trên WoRMS",
-    "syncedAt": "2026-07-24T04:13:19.341883Z",
+    "lastUpdated": "2026-09-02T17:49:42.066791Z",
+    "note": "Tên hợp lệ (WoRMS)",
+    "syncedAt": "2026-09-02T17:49:42.066791Z",
     "sourceId": "tap5-species-278",
     "sourceName": "Pegasus laternarius"
   },

@@ -304,7 +304,7 @@ a:focus-visible {
 .main-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: calc(var(--nav-height) + var(--space-4xl)) var(--space-xl) var(--space-5xl);
+  padding: calc(var(--nav-height) + var(--space-sm)) var(--space-xl) var(--space-xl);
 }
 
 /* ═══════════════════════════════════════════
@@ -955,7 +955,7 @@ a:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-sm);
   color: var(--color-ink-3);
   font-weight: 600;
   font-size: var(--text-sm);
@@ -1000,7 +1000,7 @@ a:focus-visible {
 /* ─── Hero ─── */
 .specimen__hero {
   background: linear-gradient(160deg, var(--color-paper) 0%, var(--color-paper-2) 100%);
-  padding: var(--space-3xl) var(--space-3xl) var(--space-2xl);
+  padding: var(--space-xl) var(--space-xl) var(--space-md);
   border-bottom: 3px solid var(--vol-color, var(--color-navy-raw));
   position: relative;
 }
@@ -1009,7 +1009,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-xs);
 }
 
 .specimen__index {
@@ -1668,8 +1668,8 @@ details[open] .bio-notes-en-toggle::before { transform: rotate(90deg); }
 footer {
   background: var(--color-navy-raw);
   color: var(--color-ink-on-navy);
-  margin-top: var(--space-5xl);
-  padding: var(--space-4xl) var(--space-xl) var(--space-3xl);
+  margin-top: var(--space-lg);
+  padding: var(--space-3xl) var(--space-xl) var(--space-2xl);
   border-top: 3px solid var(--color-cyan-raw);
 }
 
@@ -1801,7 +1801,7 @@ footer {
   }
 
   .main-container {
-    padding: calc(var(--nav-height) + var(--space-2xl)) var(--space-md) var(--space-4xl);
+    padding: calc(var(--nav-height) + var(--space-xs)) var(--space-md) var(--space-lg);
   }
 
   .hero {
@@ -1824,7 +1824,7 @@ footer {
   .bio-grid  { grid-template-columns: 1fr; gap: 0; }
 
   /* Specimen card mobile */
-  .specimen__hero { padding: var(--space-2xl) var(--space-xl) var(--space-xl); }
+  .specimen__hero { padding: var(--space-lg) var(--space-md) var(--space-md); }
   .specimen__name { font-size: clamp(1.8rem, 7vw, var(--text-display-s)); }
   .specimen__taxonomy { padding: var(--space-md) var(--space-xl); }
   .specimen__section { padding: var(--space-xl); }
