@@ -1,8 +1,8 @@
 # TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-08-22 10:51
-> **Next Session Starting Point**: Tier 3 — Hoàn thiện Admin CRUD (soft-delete, inline-edit) + xác minh 17 loài volume=0 + loài 78 Tập IV + sync species.json từ Supabase export + update design-system.md cho Next.js.
-> **Supabase (SSOT):** 1,518 cá biển + 201 thực vật = 1,719 loài. species.json là backup local (1,279 — stale).
+> Cập nhật: 2026-09-02 23:00
+> **Next Session Starting Point**: (1) Giai đoạn B (Làm giàu dữ liệu từ Fishbase/GBIF) cho Tập I-V. (2) Bổ sung CSV Import và Inline edit cho Admin. (3) Bổ sung data loài 78 Tập IV và tên VN 17 loài rong biển.
+> **Supabase (SSOT):** 1,765 loài (6 tập cá biển) + 201 thực vật biển = 1,966 loài. Tập VI đã hoàn tất clean OCR, chuẩn hóa 9 trường và enrich sinh thái. Dọn sạch loài orphan volume=0.
 
 ## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
 
@@ -75,13 +75,14 @@
 - [x] Deploy Phase 1 lên Vercel *(done 2026-08-20 - Next.js live)*
 
 ### Phase 2 — Admin Panel CRUD hoàn chỉnh
-- [ ] Modal Form CRUD loài: 21+ trường, chia tab (Chung / VN / EN / Taxonomy / Biology)
-- [ ] Soft-delete: `deleted_at` thay vì xóa thật
-- [ ] CSV/JSON Import: parse → preview → confirm → batch upsert Supabase
+- [x] Modal Form CRUD loài: 26+ trường, chia tab (Cơ bản / Phân loại / VN / EN / Ảnh), hỗ trợ morphology, ecology, economic_value *(done)*
+- [x] Soft-delete: `deleted_at` thay vì xóa thật, hỗ trợ khôi phục tại chỗ *(done)*
+- [x] JSON Import: parse → preview → confirm → batch upsert Supabase *(done)*
+- [x] Audit Log: bảng audit_log + component AuditLog + server route logging *(done)*
+- [x] Admin dashboard: thống kê nhanh (tổng loài, theo tập, thống kê ảnh) *(done)*
+- [ ] CSV Import: bổ sung parser CSV bên cạnh JSON
 - [ ] Inline edit nhanh: double-click ô bảng → sửa tại chỗ
-- [ ] Audit Log: migration `005_audit_log.sql` + trigger tự động
-- [ ] Admin dashboard: thống kê nhanh (tổng loài, theo tập, loài thiếu data)
-- [ ] Deploy Phase 2 lên Vercel
+- [x] Deploy Phase 2 lên Vercel *(live)*
 
 ### Phase 3 — Phân quyền User + Đăng ký
 - [ ] Enable Supabase Auth (email/password)
@@ -108,6 +109,13 @@
 - [x] Tạo skill `deploy-cabien` (sync + git push + vercel CLI)
 - [x] Setup git repo + .gitignore + vercel.json cho project
 
+### Polish UI & About Page (2026-08-23)
+- [x] Đồng bộ padding, typography 3 tab (Thông số, Sinh học, Phân loại) trên mobile.
+- [x] Chuyển đổi giao diện desktop sang Tab UI.
+- [x] Cắt giảm khoảng trắng thừa ở homepage (hero & browse section).
+- [x] Cập nhật Footer (link VNIO, iNaturalist, version).
+- [x] Xây dựng trang `/about` chuẩn Hallmark (Long Document), deploy Vercel.
+
 ### Enrichment & Data Quality (2026-07-27)
 - [x] Tạo skill `enrich-cabien` — tách từ ocr-pdf-cabien, script `enrich_names.py`
 - [x] Tạo skill `audit-cabien` — kiểm tra + auto-fix data quality, script `audit_species.py`
@@ -124,6 +132,7 @@
 ### OCR còn thiếu
 - [x] Tập IV loài 101-316: OCR + chuẩn hóa thủ công hoàn tất
 - [x] Tập V: dữ liệu thô chưa được chuẩn hóa (tên VN bị lỗi, taxonomy trống) -> Đã hoàn thành (279/279 loài chuẩn hóa và đưa lên Supabase)
+- [x] Tập VI: OCR + đưa lên Supabase (Atlas cá rạn san hô Việt Nam, 263 loài) hoàn tất
 - [ ] Tập I: chưa có dữ liệu OCR parsed JSON (chỉ có PSV cũ cho 50 loài Tập I)
 
 ### Chất lượng dữ liệu
@@ -134,6 +143,42 @@
 - [x] WoRMS sync cho Thực vật biển: Toàn bộ 201 loài đã hoàn tất.
 - [x] WoRMS sync cho các tập Cá biển (Tập III, IV, V) đang chạy ngầm.
 - [ ] Loài 78 Tập IV bị thiếu data trong OCR gốc
+- [x] Xóa 17 bản sao duplicate thực vật biển (idx 202-218) — 2026-08-22
+- [x] Bổ sung vn_name 26 loài rong biển từ PDF gốc — 2026-08-22
+
+### Tên VN rong biển còn thiếu (~17 loài chưa tra sách)
+- [ ] Spyridia filamentosa (idx=17) — trang sách?
+- [ ] Spyridia hypnoides (idx=18) — trang sách?
+- [ ] Dasyaceae sp.1/2/3 (idx=19-21) — sách ghi "chưa có tên VN"?
+- [ ] Hypoglossum barbatum (idx=22)
+- [ ] Acanthophora spicifera (idx=23)
+- [ ] Bostrychia tenella (idx=24)
+- [ ] Chondria armata (idx=25)
+- [ ] Chondria ryukyuensis (idx=26)
+- [ ] Amansia rhodantha (idx=35)
+- [ ] Tolypiocladia glomerulata (idx=36)
+- [ ] Rhodophyta sp.1/2/3 (idx=37-39) — sách ghi "chưa có tên VN"?
+- [ ] Thalassia hemprichii (idx=46)
+- [ ] Cheilosporum spectabile (idx=132)
+- [ ] Hydrolithon samoense (idx=133)
+- [ ] Mesophyllum erubescens (idx=137)
+- [ ] Sporolithon sp. (idx=138)
+- [ ] Tylotus sp. (idx=145)
+- [ ] Chondracanthus intermedius (idx=146)
+- [ ] Carpopeltis maillardii (idx=152)
+- [ ] Yonagunia formosana (idx=157)
+- [ ] Stenopeltis setchelliae (idx=167)
+- [ ] Portieria hornemannii (idx=168)
+- [ ] Portieria japonica (idx=169)
+
+### Xác nhận sách ghi "chưa có tên VN" (GIỮU NGUYÊN)
+- [x] Gracilaria textorii (idx=1) — không có trong sách
+- [x] Laurencia concreta (idx=27) — sách ghi chưa có
+- [x] Tricleocarpa cylindrica (idx=118) — sách ghi chưa có
+- [x] Ganonema farinosa (idx=119) — sách ghi chưa có
+- [x] Helminthocladia australis (idx=120) — sách ghi chưa có
+- [x] Trichogloeopsis sp. (idx=125) — sách ghi chưa có
+- [x] Cheilosporum acutilobum (idx=131) — sách ghi chưa có
 
 ### Admin Panel (Hướng 1: Supabase Auth + Dashboard)
 

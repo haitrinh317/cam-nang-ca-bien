@@ -696,7 +696,6 @@ a:focus-visible {
   background: var(--color-paper-2);
   border: 1.5px solid var(--color-rule);
   border-radius: var(--radius-lg);
-  padding: var(--space-lg) var(--space-xl);
   text-decoration: none;
   transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), outline-color var(--dur-fast) var(--ease-out);
   position: relative;
@@ -704,6 +703,37 @@ a:focus-visible {
   box-shadow: var(--shadow-xs);
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.scm-thumb {
+  width: 100%;
+  height: 180px;
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.scm-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-normal) var(--ease-out);
+}
+
+.species-card-mini:hover .scm-thumb img {
+  transform: scale(1.05);
+}
+
+.scm-thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--color-paper-3);
+}
+
+.scm-content {
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .species-card-mini::after {
@@ -768,6 +798,7 @@ a:focus-visible {
 }
 
 .scm-tax {
+
   font-family: var(--font-outlier);
   font-size: 0.72rem;
   color: var(--color-muted);
@@ -1028,19 +1059,160 @@ a:focus-visible {
   font-size: var(--text-base);
 }
 
-/* ─── Species Photo ─── */
-.specimen__photo {
+/* ─── Species Photo Gallery ─── */
+.specimen__gallery {
   margin: var(--space-xl) 0;
   text-align: center;
 }
-.specimen__photo img {
-  max-width: 100%;
-  max-height: 420px;
+.specimen__photo {
+  margin: 0 0 var(--space-sm);
+  text-align: center;
+  cursor: zoom-in;
+  /* Fixed height — no layout shift when switching photos */
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-paper);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
-  object-fit: contain;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
 }
+.specimen__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  transition: opacity 0.2s ease;
+}
+
+/* Thumbnail strip */
+.specimen__photo-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+.specimen__thumb {
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.15s;
+  flex-shrink: 0;
+}
+.specimen__thumb:hover { transform: scale(1.05); }
+.specimen__thumb.active { border-color: var(--color-accent); }
+.specimen__thumb img {
+  width: 72px;
+  height: 54px;
+  object-fit: cover;
+  display: block;
+  border-radius: calc(var(--radius-sm) - 2px);
+}
+
+/* Dot indicators (Mobile only) */
+.specimen__photo-dots {
+  display: none;
+}
+.specimen__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-rule);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.specimen__dot.active {
+  background: var(--color-navy-raw);
+  transform: scale(1.25);
+}
+
+/* Photo credit */
+.specimen__photo-credit {
+  font-size: var(--text-xs);
+  color: var(--color-ink-3);
+  margin-top: var(--space-xs);
+  line-height: var(--lh-normal);
+}
+.specimen__photo-credit a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ─── Lightbox ─── */
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: zoom-out;
+  animation: lightbox-in 0.2s ease-out;
+}
+@keyframes lightbox-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.photo-lightbox img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  cursor: default;
+}
+.photo-lightbox__close {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.photo-lightbox__close:hover { background: rgba(255,255,255,0.3); }
+.photo-lightbox__credit {
+  color: rgba(255,255,255,0.7);
+  font-size: var(--text-xs);
+  margin-top: var(--space-sm);
+}
+.photo-lightbox__credit a { color: rgba(255,255,255,0.9); text-decoration: underline; }
+.photo-lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+}
+.photo-lightbox__nav:hover { background: rgba(255,255,255,0.25); }
+.photo-lightbox__nav--prev { left: var(--space-lg); }
+.photo-lightbox__nav--next { right: var(--space-lg); }
 
 /* ─── Taxonomy breadcrumb ─── */
 .specimen__taxonomy {
@@ -1225,6 +1397,23 @@ a:focus-visible {
   letter-spacing: 0.08em;
 }
 
+/* Attribution tag for EN-only reference data (FishBase/GBIF) */
+.source-tag {
+  display: inline-block;
+  margin-left: var(--space-xs);
+  margin-top: var(--space-2xs);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-3);
+  background: var(--color-info-bg);
+  border: 1px solid var(--color-info-border);
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
 /* ─── Synonyms accordion (inside specimen) ─── */
 .specimen details.synonym-details {
   margin: 0 var(--space-3xl) var(--space-xl);
@@ -1289,7 +1478,7 @@ details[open] summary.synonym-summary::after { transform: rotate(90deg); }
   overflow-wrap: anywhere;
 }
 
-.synonym-content i {
+.kv-value i {
   font-style: italic;
   color: var(--color-navy-raw);
   font-weight: 600;
@@ -1317,16 +1506,115 @@ details[open] summary.synonym-summary::after { transform: rotate(90deg); }
   margin-top: var(--space-sm);
 }
 
-.bio-notes-block { margin-bottom: var(--space-md); }
-.bio-notes-block:last-child { margin-bottom: 0; }
+/* ─── Bio Row inline (bilingual) ─── */
+.bio-row-inline {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-rule-2);
+  line-height: 1.7;
+  /* block + inline spans: value wraps naturally with label */
+}
+.bio-row-inline:last-child { border-bottom: none; }
+
+.bio-label-inline {
+  font-weight: 600;
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+}
+.bio-sep {
+  color: var(--color-ink-3);
+  font-size: var(--text-xs);
+  margin: 0 0.15em;
+}
+.bio-label-en {
+  color: var(--color-ink-3);
+  font-size: var(--text-xs);
+}
+.bio-value-en {
+  color: var(--color-ink);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+.bio-value-vn {
+  /* teal visible on both light (#0f766e) and dark (#2dd4bf) via custom prop */
+  color: #0f766e;
+  font-size: var(--text-xs);
+  font-style: italic;
+  margin-left: 0.2em;
+}
+[data-theme="dark"] .bio-value-vn { color: #2dd4bf; }
+
+/* ─── Bio Notes (bilingual blocks) ─── */
+.bio-notes-block {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-rule-2);
+}
+.bio-notes-block:last-child { border-bottom: none; margin-bottom: 0; }
+
+.bio-notes-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4em;
+  margin-bottom: var(--space-sm);
+}
+.bio-notes-label-vn {
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--color-ink-1);
+}
+.bio-notes-label-en {
+  font-size: var(--text-xs);
+  color: var(--color-ink-3);
+}
+
+/* VN translated text */
+.bio-notes-vn { margin-bottom: var(--space-sm); }
 
 .bio-notes-text {
+  max-width: none;  /* override global p { max-width: 68ch } */
   font-size: var(--text-sm);
-  color: var(--color-ink-3);
+  color: var(--color-ink-2);
   line-height: 1.8;
-  margin-top: var(--space-3xs);
+  margin: 0 0 var(--space-xs);
   overflow-wrap: anywhere;
 }
+.bio-notes-text--en {
+  max-width: none;
+  color: var(--color-ink-3);
+  font-size: var(--text-xs);
+  margin-top: var(--space-xs);
+}
+.bio-notes-disclaimer {
+  font-size: var(--text-xs);
+  color: var(--color-ink-3);
+  font-style: italic;
+  margin: 0;
+}
+.bio-notes-loading, .bio-notes-error {
+  font-size: var(--text-xs);
+  color: var(--color-ink-3);
+  font-style: italic;
+}
+.bio-notes-error { color: #f87171; }
+
+/* EN original collapsible */
+.bio-notes-en-details { margin-top: var(--space-xs); }
+.bio-notes-en-toggle {
+  font-size: var(--text-xs);
+  color: #0f766e;
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  user-select: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  outline: none;
+}
+[data-theme="dark"] .bio-notes-en-toggle { color: #2dd4bf; }
+.bio-notes-en-toggle::before { content: '▶'; font-size: 0.6rem; transition: transform 0.15s; }
+details[open] .bio-notes-en-toggle::before { transform: rotate(90deg); }
 
 /* ─── Image container ─── */
 .hero-image-container {
@@ -1531,11 +1819,100 @@ footer {
 }
 
 /* ═══════════════════════════════════════════
+   ABOUT PAGE (LONG DOCUMENT)
+   ═══════════════════════════════════════════ */
+.about-page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-xl) var(--space-5xl);
+  min-height: 70vh;
+}
+
+.about__header {
+  border-bottom: 1px solid var(--color-rule-2);
+  padding-bottom: var(--space-3xl);
+  margin-bottom: var(--space-3xl);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 768px) {
+  .about__header {
+    grid-template-columns: 2fr 1fr;
+    align-items: end;
+  }
+}
+
+.about__title {
+  font-family: var(--font-outlier);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.1;
+  color: var(--color-navy-raw);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.about__meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.about__meta-label {
+  font-family: var(--font-outlier);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-3);
+  margin-top: var(--space-sm);
+  text-transform: uppercase;
+}
+
+.about__meta-value {
+  font-size: 0.95rem;
+  color: var(--color-navy-raw);
+  line-height: var(--lh-relaxed);
+}
+
+.about__content {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (min-width: 768px) {
+  .about__content {
+    padding-left: 20%;
+  }
+}
+
+.about__reading-column {
+  max-width: 65ch;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--color-ink-1);
+}
+
+.about__lead {
+  font-size: 1.35rem;
+  line-height: 1.6;
+  color: var(--color-navy-raw);
+  margin-bottom: var(--space-2xl);
+}
+
+.about__reading-column p {
+  margin-bottom: var(--space-xl);
+}
+
+
+/* ═══════════════════════════════════════════
    RESPONSIVE — 480px
    ═══════════════════════════════════════════ */
 @media (max-width: 480px) {
-  .hero { padding: var(--space-xl) var(--space-md); }
-
+  .hero { padding: var(--space-xl) var(--space-md) var(--space-md); }
+  .hero__stats { margin-top: var(--space-lg); }
+  .section-browse { margin-bottom: var(--space-2xl); }
+  .section-browse-header { margin-bottom: var(--space-lg); }
   .hero h1 { font-size: clamp(1.75rem, 10vw, 2.5rem); }
 
   .vol-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-sm); }
@@ -2564,3 +2941,285 @@ footer {
   transition: color 0.15s;
 }
 .footer__links a:hover { color: var(--brand-primary); }
+
+
+/* ═══════════════════════════════════════════
+   MOBILE — v2 (Hallmark modern-minimal)
+   Safe areas · Bottom Nav · 2-col grid
+   Tab strip · Gallery responsive
+   ═══════════════════════════════════════════ */
+
+/* ─── Safe area tokens ─── */
+:root {
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --bottom-nav-h: 56px;
+}
+
+/* ─── Bottom Nav — base (hidden on desktop) ─── */
+.bottom-nav {
+  display: none;
+}
+
+/* ─── Tab Strip (species detail) — base ─── */
+.detail-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--color-rule);
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.detail-tabs::-webkit-scrollbar { display: none; }
+
+.detail-tab {
+  flex: 1;
+  min-width: max-content;
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-ink-3);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+  min-height: 44px;
+}
+.detail-tab:hover { color: var(--color-ink); }
+.detail-tab.active {
+  color: var(--color-navy-raw);
+  border-bottom-color: var(--color-accent);
+}
+.detail-tab:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -2px;
+}
+
+.detail-tab-panel { display: none; }
+.detail-tab-panel.active { display: block; }
+
+/* Desktop: Tabs now function normally instead of showing all panels */
+@media (min-width: 769px) {
+  .detail-tabs { border-bottom: 2px solid var(--color-rule); margin-bottom: var(--space-md); }
+}
+
+.specimen__empty {
+  padding: var(--space-xl);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  font-style: italic;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  /* ─── Body: make room for bottom nav ─── */
+  body {
+    padding-bottom: calc(var(--bottom-nav-h) + var(--safe-bottom));
+  }
+
+  /* ─── Bottom Nav ─── */
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(var(--bottom-nav-h) + var(--safe-bottom));
+    padding-bottom: var(--safe-bottom);
+    background: var(--color-navy-raw);
+    border-top: 1px solid rgba(111, 255, 232, 0.12);
+    z-index: 300;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .bottom-nav__tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex: 1;
+    height: var(--bottom-nav-h);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color var(--dur-fast) var(--ease-out);
+    position: relative;
+    padding-top: var(--space-xs);
+  }
+
+  .bottom-nav__tab.active { color: var(--color-cyan-raw); }
+  .bottom-nav__tab:focus-visible {
+    outline: 2px solid var(--color-cyan-raw);
+    outline-offset: -3px;
+  }
+
+  .bottom-nav__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  .bottom-nav__label {
+    font-family: var(--font-outlier);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  .bottom-nav__dot {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-cyan-raw);
+  }
+
+  /* ─── Hide hamburger when bottom nav is present ─── */
+  .hamburger-btn { display: none !important; }
+  .nav-links { display: none !important; }
+
+  /* ─── Back to top: avoid bottom nav ─── */
+  .back-to-top {
+    bottom: calc(var(--bottom-nav-h) + var(--safe-bottom) + var(--space-md));
+    right: var(--space-md);
+    z-index: 200;
+  }
+
+  /* ─── Species grid: 2 column on mobile ─── */
+  .grid-species {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+  }
+
+  .species-card-mini {
+    padding: 0;
+  }
+  .scm-content {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  /* Allow long names to wrap — no line-clamp */
+  .scm-name {
+    font-size: 0.875rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: var(--lh-snug);
+  }
+
+  .scm-sci {
+    font-size: 0.75rem;
+  }
+
+  .scm-id {
+    font-size: 0.65rem;
+  }
+
+  /* Thumbnail: full card width on mobile */
+  .scm-thumb {
+    height: 90px;
+  }
+
+  /* ─── Gallery: responsive height ─── */
+  .specimen__gallery {
+    margin: var(--space-md) 0; /* Tighter margins on mobile */
+  }
+  .specimen__photo {
+    height: min(56vw, 280px) !important;
+  }
+
+  /* Hide thumb strip on mobile, swipe dot-based preferred */
+  .specimen__photo-thumbs {
+    display: none;
+  }
+  .specimen__photo-dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+  }
+
+  /* ─── Header: compact + safe area top ─── */
+  .site-header {
+    padding-top: calc(var(--space-xs) + var(--safe-top));
+  }
+
+  /* ─── Footer: add bottom padding to avoid nav overlap ─── */
+  footer {
+    padding-bottom: calc(var(--space-2xl) + var(--bottom-nav-h) + var(--safe-bottom));
+  }
+
+  /* ─── Tab strip on detail: sticky under header ─── */
+  .specimen .detail-tabs {
+    position: sticky;
+    top: 60px;
+    background: var(--color-paper-2);
+    z-index: 10;
+    border-radius: 0;
+    margin: 0 calc(-1 * var(--space-xl));
+    padding: 0 var(--space-xl);
+  }
+
+  /* ─── Biology Panel on mobile (match clean layout) ─── */
+  .biology-panel, .specimen .biology-panel {
+    background: transparent;
+    border: none;
+    padding: var(--space-lg) var(--space-md);
+    margin: 0;
+  }
+
+  /* ─── Synonyms Panel on mobile (match clean layout) ─── */
+  details.synonym-details, .specimen details.synonym-details {
+    background: transparent;
+    border: none;
+    margin: 0;
+  }
+  summary.synonym-summary {
+    padding: var(--space-lg) var(--space-md) var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-rule);
+    margin-bottom: var(--space-xl);
+  }
+  .synonym-content {
+    padding: 0 var(--space-md) var(--space-md);
+  }
+
+  /* ─── Touch targets ─── */
+  .vol-tab {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .detail-tab {
+    min-height: 44px;
+    font-size: 0.8125rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Tighter grid on very small phones */
+  .grid-species {
+    gap: var(--space-sm);
+  }
+
+  .scm-thumb {
+    height: 80px;
+  }
+
+  .scm-name { font-size: 0.8125rem; }
+}
+

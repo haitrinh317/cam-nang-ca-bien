@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { Download, X, FileJson, Folder } from 'lucide-react'
 
 interface Props {
   collection: string
@@ -24,12 +25,30 @@ export default function ImportModal({ collection, onImported }: Props) {
 
     try {
       const text = await f.text()
-      const json = JSON.parse(text)
-      const arr = Array.isArray(json) ? json : [json]
-      setPreview(arr.slice(0, 5))
+      if (f.name.endsWith('.csv')) {
+        import('papaparse').then((Papa) => {
+          Papa.parse(text, {
+            header: true,
+            skipEmptyLines: true,
+            complete: (results) => {
+              const arr = results.data as Record<string, unknown>[]
+              setPreview(arr.slice(0, 5))
+            },
+            error: (err: unknown) => {
+              setPreview(null)
+              setResult(`Lỗi parse CSV: ${err}`)
+              setStatus('error')
+            }
+          })
+        })
+      } else {
+        const json = JSON.parse(text)
+        const arr = Array.isArray(json) ? json : [json]
+        setPreview(arr.slice(0, 5))
+      }
     } catch {
       setPreview(null)
-      setResult('File không phải JSON hợp lệ.')
+      setResult('File không hợp lệ (hỗ trợ JSON/CSV).')
       setStatus('error')
     }
   }
@@ -40,12 +59,21 @@ export default function ImportModal({ collection, onImported }: Props) {
 
     try {
       const text = await file.text()
-      const json = JSON.parse(text)
-      const arr = Array.isArray(json) ? json : [json]
+      let arr: Record<string, unknown>[] = []
+      
+      if (file.name.endsWith('.csv')) {
+        const Papa = (await import('papaparse')).default
+        const result = Papa.parse(text, { header: true, skipEmptyLines: true })
+        arr = result.data as Record<string, unknown>[]
+      } else {
+        const json = JSON.parse(text)
+        arr = Array.isArray(json) ? json : [json]
+      }
 
       const res = await fetch('/api/species/import', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify({ species: arr, collection_id: collection }),
       })
       const data = await res.json()
@@ -74,7 +102,7 @@ export default function ImportModal({ collection, onImported }: Props) {
   if (!open) {
     return (
       <button className="btn btn-outline" onClick={() => setOpen(true)} type="button">
-        📥 Import JSON
+        <Download size={16} className="inline-block mr-1" /> Import JSON
       </button>
     )
   }
@@ -83,8 +111,8 @@ export default function ImportModal({ collection, onImported }: Props) {
     <div className="admin-modal-overlay" onClick={() => { setOpen(false); reset() }}>
       <div className="admin-modal admin-modal--wide" onClick={e => e.stopPropagation()}>
         <div className="admin-modal__header">
-          <h3>📥 Import loài từ file JSON</h3>
-          <button className="admin-modal__close" onClick={() => { setOpen(false); reset() }} type="button" aria-label="Đóng">✕</button>
+          <h3 className="flex items-center gap-2"><Download size={20} /> Import loài từ file JSON/CSV</h3>
+          <button className="admin-modal__close" onClick={() => { setOpen(false); reset() }} type="button" aria-label="Đóng"><X size={20} /></button>
         </div>
 
         <div className="admin-modal__body">
@@ -93,7 +121,7 @@ export default function ImportModal({ collection, onImported }: Props) {
             <input
               ref={inputRef}
               type="file"
-              accept=".json"
+              accept=".json,.csv"
               onChange={handleFile}
               id="import-file"
               style={{ display: 'none' }}
@@ -101,15 +129,15 @@ export default function ImportModal({ collection, onImported }: Props) {
             <label htmlFor="import-file" className="import-drop-label">
               {file ? (
                 <>
-                  <span className="import-icon">📄</span>
+                  <span className="import-icon"><FileJson size={24} /></span>
                   <span className="import-filename">{file.name}</span>
                   <span className="import-filesize">{(file.size / 1024).toFixed(1)} KB</span>
                 </>
               ) : (
                 <>
-                  <span className="import-icon">📂</span>
-                  <span>Chọn file JSON hoặc kéo thả vào đây</span>
-                  <span className="import-hint">Hỗ trợ file JSON chứa mảng loài (tối đa 200 loài/lần)</span>
+                  <span className="import-icon"><Folder size={24} /></span>
+                  <span>Chọn file JSON/CSV hoặc kéo thả vào đây</span>
+                  <span className="import-hint">Hỗ trợ file JSON/CSV chứa danh sách loài (tối đa 200 loài/lần)</span>
                 </>
               )}
             </label>

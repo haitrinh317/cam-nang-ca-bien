@@ -4,15 +4,17 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import AuthStatus from '@/components/layout/AuthStatus'
 
-interface NavItem { href: string; icon: string; label: string; exact?: boolean }
+import { BarChart3, Fish, Leaf } from 'lucide-react'
+
+interface NavItem { href: string; icon: React.ReactNode; label: string; exact?: boolean }
 
 const NAV_ITEMS: { section: string; items: NavItem[] }[] = [
   { section: 'Tổng quan', items: [
-    { href: '/admin', icon: '📊', label: 'Thống kê', exact: true },
+    { href: '/admin', icon: <BarChart3 size={18} />, label: 'Thống kê', exact: true },
   ]},
   { section: 'Bộ sưu tập', items: [
-    { href: '/admin/ca-bien', icon: '🐟', label: 'Cá biển' },
-    { href: '/admin/thuc-vat-bien', icon: '🌿', label: 'Thực vật biển' },
+    { href: '/admin/ca-bien', icon: <Fish size={18} />, label: 'Cá biển' },
+    { href: '/admin/thuc-vat-bien', icon: <Leaf size={18} />, label: 'Thực vật biển' },
   ]},
 ]
 
@@ -25,7 +27,7 @@ export default function AdminSidebar() {
   return (
     <aside className="admin-sidebar">
       <div className="admin-sidebar__brand">
-        <div className="brand-icon">🐠</div>
+        <div className="brand-icon"><Fish size={24} /></div>
         <div>
           <span className="brand-label">Admin Panel</span>
           <span className="brand-sub">Bảo tàng Hải dương học</span>

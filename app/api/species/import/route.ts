@@ -4,12 +4,12 @@
  * Body: { species: [...], collection_id: string }
  */
 import { NextRequest, NextResponse } from 'next/server'
-import { createServerClient } from '@/lib/supabase-server'
+import { createSSRClient } from '@/lib/supabase-server'
 
 const MAX_BATCH = 200
 
 export async function POST(req: NextRequest) {
-  const db = createServerClient()
+  const db = await createSSRClient()
 
   // Auth check
   const { data: { user } } = await db.auth.getUser()

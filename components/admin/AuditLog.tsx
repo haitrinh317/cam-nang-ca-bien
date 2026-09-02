@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import { db } from '@/lib/supabase-browser'
+import { Edit2, Trash2, ClipboardList, PlusCircle, Database, Settings } from 'lucide-react'
 
 interface LogEntry {
   id: number
@@ -15,12 +16,12 @@ interface LogEntry {
 
 interface Props { collection?: string }
 
-const ACTION_LABELS: Record<string, { icon: string; label: string }> = {
-  create: { icon: '➕', label: 'Thêm mới' },
-  update: { icon: '✏️', label: 'Cập nhật' },
-  delete: { icon: '🗑️', label: 'Xóa' },
-  bulk_import: { icon: '📥', label: 'Import hàng loạt' },
-  table_test: { icon: '🔧', label: 'Test hệ thống' },
+const ACTION_LABELS: Record<string, { icon: React.ReactNode; label: string }> = {
+  create: { icon: <PlusCircle size={14} />, label: 'Thêm mới' },
+  update: { icon: <Edit2 size={14} />, label: 'Cập nhật' },
+  delete: { icon: <Trash2 size={14} />, label: 'Xóa' },
+  bulk_import: { icon: <Database size={14} />, label: 'Import hàng loạt' },
+  table_test: { icon: <Settings size={14} />, label: 'Test hệ thống' },
 }
 
 export default function AuditLog({ collection }: Props) {
@@ -52,7 +53,7 @@ export default function AuditLog({ collection }: Props) {
   return (
     <div className="audit-log-section">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-lg)' }}>
-        <h3 style={{ margin: 0 }}>📋 Nhật ký thay đổi</h3>
+        <h3 style={{ margin: 0, display: 'inline-flex', alignItems: 'center', gap: '8px' }}><ClipboardList size={18} /> Nhật ký thay đổi</h3>
         <button className="btn btn-outline" onClick={load} type="button" style={{ fontSize: '0.8rem', padding: '0.3rem 0.8rem' }}>
           Làm mới
         </button>

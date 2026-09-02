@@ -2,8 +2,8 @@
  * route: custom (tuned) · genre: editorial
  * vibe: "fluorescent cyan dominant, oxford-navy scholarly, museum archival"
  * paper: #e6fffa (cyan-tint light) · accent: #6fffe8 (Fluorescent Cyan) · ink: #0c142a (Oxford Blue)
- * display: Lora · body: Be Vietnam Pro · outlier: JetBrains Mono
- * axes: light / classical-serif / cool-cyan
+ * display: Be Vietnam Pro · body: Be Vietnam Pro · outlier: JetBrains Mono
+ * axes: light / sans-serif / cool-cyan
  * gates: all-pass
  */
 
@@ -12,8 +12,7 @@
    Theme: Fluorescent Cyan · Custom Tuned
    ═══════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&subset=vietnamese&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&subset=vietnamese&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&subset=vietnamese&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 :root {
@@ -88,7 +87,7 @@
   --color-rank-genus-bd:   #fde68a;
 
   /* ─── Typography ─── */
-  --font-display:          'Lora', ui-serif, Georgia, serif;
+  --font-display:          'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
   --font-body:             'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
   --font-outlier:          'JetBrains Mono', ui-monospace, monospace;
 

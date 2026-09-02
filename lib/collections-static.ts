@@ -19,7 +19,7 @@ export const STATIC_COLLECTIONS: Collection[] = [
   {
     id: 'ca-bien', slug: 'ca-bien',
     nameVn: 'Cá biển Việt Nam', nameEn: 'Vietnamese Marine Fish',
-    icon: '🐟', accentColor: '#6fffe8', volumeCount: 5,
+    icon: '🐟', accentColor: '#6fffe8', volumeCount: 6,
     status: 'active', sortOrder: 1,
   },
   {

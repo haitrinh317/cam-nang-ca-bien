@@ -1,0 +1,234 @@
+/* Hallmark · macrostructure: Workbench+Catalogue · tone: editorial-scholarly
+ * route: custom (tuned) · genre: editorial
+ * vibe: "fluorescent cyan dominant, oxford-navy scholarly, museum archival"
+ * paper: #e6fffa (cyan-tint light) · accent: #6fffe8 (Fluorescent Cyan) · ink: #0c142a (Oxford Blue)
+ * display: Lora · body: Be Vietnam Pro · outlier: JetBrains Mono
+ * axes: light / classical-serif / cool-cyan
+ * gates: all-pass
+ */
+
+/* ═══════════════════════════════════════════
+   TOKENS — Cẩm nang Cá biển Việt Nam v3.0
+   Theme: Fluorescent Cyan · Custom Tuned
+   ═══════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&subset=vietnamese&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&subset=vietnamese&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ─── Brand Anchors ─── */
+  --color-cyan-raw:        #6fffe8;
+  --color-navy-raw:        #0c142a;
+
+  /* ─── Paper (Surfaces — light cyan-washed) ─── */
+  --color-paper:           #edfdf8;
+  --color-paper-2:         #ffffff;
+  --color-paper-3:         #d0faf0;
+  --color-paper-4:         #a7f3d0;
+  --color-paper-cyan:      #6fffe8;
+  --color-paper-navy:      #0c142a;
+
+  /* ─── Ink (Typography) ─── */
+  --color-ink:             #0c142a;
+  --color-ink-2:           #1e3a5f;
+  --color-ink-3:           #334155;
+  --color-ink-on-cyan:     #0c142a;
+  --color-ink-on-navy:     #f0fdf9;
+  --color-cyan-on-navy:    #6fffe8;
+
+  /* ─── Accent ─── */
+  --color-accent:          #6fffe8;
+  --color-accent-dark:     #0c142a;
+  --color-accent-hover:    #4fffde;
+  --color-accent-subtle:   #ccfbf1;
+
+  /* ─── Neutrals ─── */
+  --color-rule:            rgba(12, 20, 42, 0.1);
+  --color-rule-2:          rgba(12, 20, 42, 0.05);
+  --color-muted:           #4a7a8a;
+  --color-neutral:         #64748b;
+  --color-placeholder:     #94a3b8;
+
+  /* ─── Focus ─── */
+  --color-focus:           #0c142a;
+
+  /* ─── States ─── */
+  --color-success:         #059669;
+  --color-success-bg:      #ecfdf5;
+  --color-success-border:  #a7f3d0;
+  --color-warning:         #d97706;
+  --color-warning-bg:      #fffbeb;
+  --color-warning-border:  #fde68a;
+  --color-error:           #dc2626;
+  --color-error-bg:        #fef2f2;
+  --color-error-border:    #fca5a5;
+  --color-info-bg:         #f0f9ff;
+  --color-info-border:     #bae6fd;
+
+  /* ─── Volume accent colors ─── */
+  --color-vol-1:           #3730a3;
+  --color-vol-2:           #065f46;
+  --color-vol-3:           #991b1b;
+  --color-vol-4:           #92400e;
+  --color-vol-5:           #1e40af;
+
+  /* ─── Taxonomy rank colors ─── */
+  --color-rank-class-bg:   #ede9fe;
+  --color-rank-class-text: #5b21b6;
+  --color-rank-class-bd:   #ddd6fe;
+  --color-rank-order-bg:   #e0e7ff;
+  --color-rank-order-text: #3730a3;
+  --color-rank-order-bd:   #c7d2fe;
+  --color-rank-family-bg:  #d1fae5;
+  --color-rank-family-text:#065f46;
+  --color-rank-family-bd:  #a7f3d0;
+  --color-rank-genus-bg:   #fef3c7;
+  --color-rank-genus-text: #92400e;
+  --color-rank-genus-bd:   #fde68a;
+
+  /* ─── Typography ─── */
+  --font-display:          'Lora', ui-serif, Georgia, serif;
+  --font-body:             'Be Vietnam Pro', ui-sans-serif, system-ui, sans-serif;
+  --font-outlier:          'JetBrains Mono', ui-monospace, monospace;
+
+  /* ─── Type scale (Perfect Fourth 1.333) ─── */
+  --text-xs:               0.75rem;
+  --text-sm:               0.875rem;
+  --text-base:             1rem;
+  --text-lg:               1.125rem;
+  --text-xl:               1.333rem;
+  --text-2xl:              1.777rem;
+  --text-3xl:              2.369rem;
+  --text-4xl:              3.157rem;
+  --text-display:          clamp(2.8rem, 5.5vw + 1rem, 4.5rem);
+  --text-display-s:        clamp(2rem, 4vw + 0.5rem, 3.2rem);
+
+  /* ─── Line heights ─── */
+  --lh-tight:              1.08;
+  --lh-snug:               1.25;
+  --lh-normal:             1.55;
+  --lh-relaxed:            1.7;
+
+  /* ─── Spacing (4pt base) ─── */
+  --space-3xs:             2px;
+  --space-2xs:             4px;
+  --space-xs:              8px;
+  --space-sm:              12px;
+  --space-md:              16px;
+  --space-lg:              24px;
+  --space-xl:              32px;
+  --space-2xl:             48px;
+  --space-3xl:             64px;
+  --space-4xl:             96px;
+  --space-5xl:             128px;
+
+  /* ─── Motion ─── */
+  --dur-instant:           80ms;
+  --dur-fast:              150ms;
+  --dur-normal:            250ms;
+  --dur-slow:              400ms;
+  --ease-out:              cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:               cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-in-out:           cubic-bezier(0.45, 0, 0.55, 1);
+
+  /* ─── Radius ─── */
+  --radius-xs:             4px;
+  --radius-sm:             6px;
+  --radius-md:             12px;
+  --radius-lg:             18px;
+  --radius-xl:             24px;
+  --radius-pill:           9999px;
+
+  /* ─── Shadows ─── */
+  --shadow-xs:             0 1px 3px rgba(12, 20, 42, 0.06);
+  --shadow-sm:             0 2px 8px rgba(12, 20, 42, 0.06);
+  --shadow-md:             0 8px 24px -4px rgba(12, 20, 42, 0.1);
+  --shadow-lg:             0 16px 40px -8px rgba(12, 20, 42, 0.14);
+  --shadow-cyan:           0 0 40px rgba(111, 255, 232, 0.5);
+  --shadow-focus:          0 0 0 3px rgba(12, 20, 42, 0.15);
+
+  /* ─── Alpha / Semi-transparent (gate 48 — no raw rgba in components) ─── */
+  --color-navy-glass:      rgba(12, 20, 42, 0.9);
+  --color-navy-overlay:    rgba(12, 20, 42, 0.65);
+  --color-cyan-border:     rgba(111, 255, 232, 0.2);
+  --color-cyan-highlight:  rgba(111, 255, 232, 0.18);
+  --color-ink-on-navy-70:  rgba(240, 253, 249, 0.7);
+  --color-ink-on-navy-60:  rgba(240, 253, 249, 0.6);
+  --color-rule-footer:     rgba(240, 253, 249, 0.1);
+  --color-white-hover:     rgba(255, 255, 255, 0.08);
+  --color-ink-a70:         rgba(12, 20, 42, 0.7);
+  --color-link:            oklch(46% 0.19 255);
+  --color-link-hover:      oklch(39% 0.19 255);
+  --text-2xs:              0.72rem;
+
+  /* ─── Complex shadows (composite values belong in token layer) ─── */
+  --shadow-nav:            0 8px 32px rgba(12, 20, 42, 0.3), 0 0 0 1px rgba(111, 255, 232, 0.06) inset;
+  --shadow-search:         0 6px 20px rgba(12, 20, 42, 0.15);
+  --shadow-search-focus:   0 0 0 3px rgba(12, 20, 42, 0.2), 0 10px 30px rgba(12, 20, 42, 0.18);
+
+  /* ─── Rules ─── */
+  --rule-weight:           1px;
+  --rule-weight-md:        2px;
+
+  /* ─── Layout ─── */
+  --max-width:             1200px;
+  --nav-height:            60px;
+  --measure:               68ch;
+  --measure-narrow:        48ch;
+}
+
+/* ═══════════════════════════════════════════
+   DARK MODE — [data-theme="dark"]
+   Inverts paper/ink while keeping cyan accent
+   ═══════════════════════════════════════════ */
+[data-theme="dark"] {
+  /* Paper → navy depths */
+  --color-paper:           #0f1d36;
+  --color-paper-2:         #0c142a;
+  --color-paper-3:         #162040;
+  --color-paper-4:         #1e2d50;
+
+  /* Ink → light */
+  --color-ink:             #e8f4f0;
+  --color-ink-2:           #b8d4cc;
+  --color-ink-3:           #7a9e96;
+
+  /* Neutrals */
+  --color-rule:            rgba(111, 255, 232, 0.08);
+  --color-rule-2:          rgba(111, 255, 232, 0.04);
+  --color-muted:           #6fffe8;
+  --color-neutral:         #8db8b0;
+  --color-placeholder:     #4a7a8a;
+
+  /* Focus */
+  --color-focus:           #6fffe8;
+
+  /* Shadows → deeper navy */
+  --shadow-xs:             0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-sm:             0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md:             0 8px 24px -4px rgba(0, 0, 0, 0.4);
+  --shadow-lg:             0 16px 40px -8px rgba(0, 0, 0, 0.5);
+  --shadow-nav:            0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(111, 255, 232, 0.1) inset;
+  --shadow-search:         0 6px 20px rgba(0, 0, 0, 0.4);
+  --shadow-search-focus:   0 0 0 3px rgba(111, 255, 232, 0.2), 0 10px 30px rgba(0, 0, 0, 0.4);
+
+  /* Glass */
+  --color-navy-glass:      rgba(12, 20, 42, 0.95);
+  --color-cyan-highlight:  rgba(111, 255, 232, 0.08);
+  --color-accent-subtle:   rgba(111, 255, 232, 0.15);
+
+  /* States */
+  --color-success-bg:      #052e16;
+  --color-success-border:  #166534;
+  --color-warning-bg:      #1c1107;
+  --color-warning-border:  #854d0e;
+  --color-error-bg:        #1c0a0a;
+  --color-error-border:    #991b1b;
+  --color-info-bg:         #082030;
+  --color-info-border:     #0c4a6e;
+
+  /* Links */
+  --color-link:            oklch(72% 0.14 210);
+  --color-link-hover:      oklch(82% 0.16 180);
+}

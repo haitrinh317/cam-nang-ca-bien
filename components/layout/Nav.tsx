@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { t } from '@/lib/i18n'
 import { getActiveCollections } from '@/lib/collections-static'
 import HeaderControls from './HeaderControls'
+import { Fish, Leaf } from 'lucide-react'
 
 export default function Nav() {
   const pathname = usePathname()
@@ -39,7 +40,10 @@ export default function Nav() {
               className={`nav-link${pathname.startsWith(`/${col.slug}`) ? ' active' : ''}`}
               onClick={() => setMenuOpen(false)}
             >
-              {col.icon} {col.nameVn}
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                {col.slug === 'ca-bien' ? <Fish size={16} /> : col.slug === 'thuc-vat-bien' ? <Leaf size={16} /> : col.icon}
+                {col.nameVn}
+              </span>
             </Link>
           ))}
         </nav>

@@ -19,7 +19,7 @@ interface SpeciesRow {
 
 interface Props { collection: string }
 
-const VOLS = ['Tất cả', '1', '2', '3', '4', '5']
+const VOLS = ['Tất cả', '1', '2', '3', '4', '5', '6']
 
 export default function SpeciesTable({ collection }: Props) {
   const [rows, setRows] = useState<SpeciesRow[]>([])
@@ -49,6 +49,7 @@ export default function SpeciesTable({ collection }: Props) {
     if (v) params.set('vol', v)
     if (s) params.set('search', s)
     if (incDel) params.set('include_deleted', 'true')
+    params.set('t', String(Date.now()))
     const res = await fetch(`/api/species?${params}`)
     const json = await res.json()
     if (!res.ok) { showToast(json.error, 'err'); setLoading(false); return }
@@ -89,6 +90,7 @@ export default function SpeciesTable({ collection }: Props) {
     const res = await fetch(isNew ? '/api/species' : `/api/species?id=${id}`, {
       method: isNew ? 'POST' : 'PATCH',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify({ ...data, collection_id: collection }),
     })
     const json = await res.json()
@@ -102,7 +104,7 @@ export default function SpeciesTable({ collection }: Props) {
 
   const handleDelete = async (id: string) => {
     // Soft-delete by default (sets deleted_at)
-    const res = await fetch(`/api/species?id=${id}`, { method: 'DELETE' })
+    const res = await fetch(`/api/species?id=${id}`, { method: 'DELETE', credentials: 'include' })
     const json = await res.json()
     if (!res.ok) { showToast(json.error, 'err'); return }
     showToast('Đã xóa mềm ✓ (có thể khôi phục)')
@@ -114,6 +116,7 @@ export default function SpeciesTable({ collection }: Props) {
     const res = await fetch(`/api/species?id=${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
       body: JSON.stringify({ deleted_at: null }),
     })
     const json = await res.json()
@@ -155,7 +158,7 @@ export default function SpeciesTable({ collection }: Props) {
           >
             {VOLS.map(v => (
               <option key={v} value={v === 'Tất cả' ? '' : v}>
-                {v === 'Tất cả' ? 'Tất cả các tập' : `Tập ${v}`}
+                {v === 'Tất cả' ? 'Tất cả các tập' : v === '6' && collection === 'ca-bien' ? 'Atlas cá rạn san hô VN' : `Tập ${v}`}
               </option>
             ))}
           </select>
@@ -189,7 +192,7 @@ export default function SpeciesTable({ collection }: Props) {
               <th>Tên tiếng Việt</th>
               <th>Tên khoa học</th>
               <th>Họ (Latin)</th>
-              <th style={{ width: '120px' }}>Thao tác</th>
+              <th style={{ width: '180px', textAlign: 'right' }}>Thao tác</th>
             </tr>
           </thead>
           <tbody>
@@ -208,15 +211,88 @@ export default function SpeciesTable({ collection }: Props) {
                     <code style={{ fontSize: '0.7rem', color: 'var(--color-muted)' }}>{row.id}</code>
                     {isDeleted && <span style={{ display: 'block', fontSize: '0.7rem', color: '#ef4444', marginTop: '2px' }}>✕ Đã xóa</span>}
                   </td>
-                  <td style={{ fontWeight: 500 }}>{row.vn_name || '—'}</td>
-                  <td style={{ fontStyle: 'italic', color: 'var(--color-ink-2)' }}>{row.scientific_name || '—'}</td>
-                  <td style={{ color: 'var(--color-ink-3)' }}>{row.tax_family_latin || '—'}</td>
-                  <td>
-                    <div style={{ display: 'flex', gap: '0.5rem' }}>
+                  
+                  {/* Inline edit cho vn_name */}
+                  <td 
+                    className="inline-edit-cell"
+                    onDoubleClick={() => !isDeleted && setEditTarget({ id: row.id, field: 'vn_name', value: row.vn_name })}
+                  >
+                    {editTarget?.id === row.id && editTarget?.field === 'vn_name' ? (
+                      <input 
+                        type="text" 
+                        className="form-input" 
+                        autoFocus 
+                        defaultValue={String(row.vn_name || '')}
+                        onBlur={(e) => {
+                          setEditTarget(null)
+                          if (e.target.value !== row.vn_name) handleSave({ vn_name: e.target.value }, row.id)
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') e.currentTarget.blur()
+                          if (e.key === 'Escape') setEditTarget(null)
+                        }}
+                      />
+                    ) : (
+                      <span style={{ fontWeight: 500 }} title="Nháy đúp để sửa nhanh">{row.vn_name || '—'}</span>
+                    )}
+                  </td>
+
+                  {/* Inline edit cho scientific_name */}
+                  <td 
+                    className="inline-edit-cell"
+                    onDoubleClick={() => !isDeleted && setEditTarget({ id: row.id, field: 'scientific_name', value: row.scientific_name })}
+                  >
+                    {editTarget?.id === row.id && editTarget?.field === 'scientific_name' ? (
+                      <input 
+                        type="text" 
+                        className="form-input" 
+                        autoFocus 
+                        defaultValue={String(row.scientific_name || '')}
+                        onBlur={(e) => {
+                          setEditTarget(null)
+                          if (e.target.value !== row.scientific_name) handleSave({ scientific_name: e.target.value }, row.id)
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') e.currentTarget.blur()
+                          if (e.key === 'Escape') setEditTarget(null)
+                        }}
+                      />
+                    ) : (
+                      <span style={{ fontStyle: 'italic', color: 'var(--color-ink-2)' }} title="Nháy đúp để sửa nhanh">{row.scientific_name || '—'}</span>
+                    )}
+                  </td>
+
+                  {/* Inline edit cho tax_family_latin */}
+                  <td 
+                    className="inline-edit-cell"
+                    onDoubleClick={() => !isDeleted && setEditTarget({ id: row.id, field: 'tax_family_latin', value: row.tax_family_latin })}
+                  >
+                    {editTarget?.id === row.id && editTarget?.field === 'tax_family_latin' ? (
+                      <input 
+                        type="text" 
+                        className="form-input" 
+                        autoFocus 
+                        defaultValue={String(row.tax_family_latin || '')}
+                        onBlur={(e) => {
+                          setEditTarget(null)
+                          if (e.target.value !== row.tax_family_latin) handleSave({ tax_family_latin: e.target.value }, row.id)
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') e.currentTarget.blur()
+                          if (e.key === 'Escape') setEditTarget(null)
+                        }}
+                      />
+                    ) : (
+                      <span style={{ color: 'var(--color-ink-3)' }} title="Nháy đúp để sửa nhanh">{row.tax_family_latin || '—'}</span>
+                    )}
+                  </td>
+                  
+                  <td style={{ textAlign: 'right' }}>
+                    <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'flex-end' }}>
                       {isDeleted ? (
                         <button
                           className="btn btn-outline"
-                          style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem', borderColor: '#10b981', color: '#10b981' }}
+                          style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem', borderColor: '#10b981', color: '#10b981', whiteSpace: 'nowrap' }}
                           onClick={() => handleRestore(row.id)}
                           type="button"
                         >
@@ -226,15 +302,15 @@ export default function SpeciesTable({ collection }: Props) {
                         <>
                           <button
                             className="btn btn-outline"
-                            style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem' }}
+                            style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem', whiteSpace: 'nowrap' }}
                             onClick={() => fetchAndEdit(row.id)}
                             type="button"
                           >
-                            Sửa
+                            Sửa chi tiết
                           </button>
                           <button
                             className="btn btn-outline"
-                            style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem', borderColor: '#ef4444', color: '#ef4444' }}
+                            style={{ padding: '0.25rem 0.6rem', fontSize: '0.8rem', borderColor: '#ef4444', color: '#ef4444', whiteSpace: 'nowrap' }}
                             onClick={() => setDeleteConfirm(row.id)}
                             type="button"
                           >

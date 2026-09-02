@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import '@/styles/tokens.css'
 import '@/styles/globals.css'
 import { ThemeScript } from '@/components/layout/ThemeScript'
+import { BottomNav } from '@/components/layout/BottomNav'
 
 const SITE_URL = 'https://cam-nang-ca-bien.vercel.app'
 
@@ -50,23 +51,14 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#0c142a" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Cá biển VN" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
         <ThemeScript />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.getRegistrations().then(function(registrations) {
-                  for(let registration of registrations) {
-                    registration.unregister();
-                  }
-                });
-              }
-            `,
-          }}
-        />
       </head>
       <body>
         {children}
+        <BottomNav />
       </body>
     </html>
   )

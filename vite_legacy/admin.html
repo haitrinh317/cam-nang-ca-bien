@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Tra cứu Cá biển Việt Nam</title>
+    <meta name="description" content="Khu vực quản trị Danh mục Cá biển Việt Nam.">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="icon" href="/assets/logo.png">
+    <link rel="stylesheet" href="/src/assets/shared.css">
+    <style>
+        .admin-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 1rem;
+        }
+        .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .btn:hover { background: #2563eb; }
+        .btn-danger { background: #ef4444; }
+        .btn-danger:hover { background: #dc2626; }
+        .btn-outline { background: transparent; border: 1px solid #3b82f6; color: #3b82f6; }
+        .btn-outline:hover { background: rgba(59,130,246,0.1); }
+        
+        .auth-container {
+            max-width: 400px;
+            margin: 4rem auto;
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .auth-container h2 { margin-top: 0; text-align: center; margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: #94a3b8; }
+        .form-group input { 
+            width: 100%; padding: 0.75rem; 
+            background: rgba(0,0,0,0.2); 
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white; border-radius: 4px; 
+            box-sizing: border-box;
+        }
+        .form-group input:focus { outline: none; border-color: #3b82f6; }
+        .auth-btn { width: 100%; padding: 0.75rem; margin-top: 1rem; font-size: 1rem; }
+
+        .hidden { display: none !important; }
+
+        table.admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        table.admin-table th, table.admin-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        table.admin-table th { color: #94a3b8; font-weight: 600; }
+        table.admin-table tr:hover { background: rgba(255,255,255,0.02); }
+        
+        .filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .filters input, .filters select {
+            padding: 0.5rem;
+            background: rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Logo" style="width:36px;height:36px;object-fit:contain;flex-shrink:0;">
+                <span class="logo-full">BẢO TÀNG HẢI DƯƠNG HỌC</span><span class="logo-short">BTHD</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Trang Chủ</a>
+                <a href="admin.html" class="nav-link active">Quản Trị</a>
+            </div>
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Mở menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+    </header>
+
+    <main class="main-container">
+        <!-- AUTH SECTION -->
+        <div id="authSection" class="auth-container">
+            <h2>Đăng nhập Quản trị</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn auth-btn" id="loginBtn">Đăng nhập</button>
+            </form>
+            <p id="authError" style="color: #ef4444; margin-top: 1rem; text-align: center; display: none;"></p>
+        </div>
+
+        <!-- ADMIN DASHBOARD SECTION -->
+        <div id="adminSection" class="admin-container hidden">
+            <div class="admin-header">
+                <div>
+                    <h1 style="margin: 0; font-size: 1.5rem;">Quản trị dữ liệu</h1>
+                    <p style="color: #94a3b8; margin: 0.25rem 0 0 0;" id="userInfo"></p>
+                </div>
+                <div>
+                    <button id="addBtn" class="btn">Thêm mới</button>
+                    <button id="logoutBtn" class="btn btn-outline" style="margin-left: 0.5rem;">Đăng xuất</button>
+                </div>
+            </div>
+
+            <div class="filters">
+                <input type="text" id="searchAdmin" placeholder="Tìm kiếm tên loài..." style="flex: 1;">
+                <select id="filterVol">
+                    <option value="">Tất cả các Tập</option>
+                    <option value="1">Tập 1</option>
+                    <option value="2">Tập 2</option>
+                    <option value="3">Tập 3</option>
+                    <option value="4">Tập 4</option>
+                    <option value="5">Tập 5</option>
+                </select>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID / Tập</th>
+                            <th>Tên Tiếng Việt</th>
+                            <th>Tên Khoa Học</th>
+                            <th>Họ (Family)</th>
+                            <th style="width: 150px;">Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="speciesTableBody">
+                        <tr><td colspan="5" style="text-align:center;">Đang tải dữ liệu...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="pagination" style="margin-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                <button id="prevPage" class="btn btn-outline" disabled>Trước</button>
+                <span id="pageInfo">Trang 1</span>
+                <button id="nextPage" class="btn btn-outline">Sau</button>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/src/pages/admin.js"></script>
+</body>
+</html>

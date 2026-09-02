@@ -1,6 +1,7 @@
 """
 enrich_names.py — Tổng quát hóa cho mọi tập
 Bổ sung specs.en.commonName và specs.vn.alternateNames từ Wikidata.
+(Cập nhật 2026-08-23: Sử dụng trực tiếp Supabase REST API, không dùng file json local)
 
 Usage:
   python scripts/enrich_names.py               # Tất cả tập, missing-only
@@ -21,6 +22,68 @@ sys.stdout.reconfigure(encoding='utf-8')
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
+
+# ── Load .env ──
+def _load_dotenv():
+    BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    env_path = os.path.join(BASE, '.env')
+    if os.path.exists(env_path):
+        with open(env_path, 'r', encoding='utf-8-sig') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    k, v = line.split('=', 1)
+                    os.environ.setdefault(k.strip(), v.strip())
+
+_load_dotenv()
+SUPABASE_URL = os.environ.get('NEXT_PUBLIC_SUPABASE_URL') or os.environ.get('VITE_SUPABASE_URL')
+SUPABASE_KEY = os.environ.get('SUPABASE_SERVICE_ROLE_KEY')
+
+if not SUPABASE_URL or not SUPABASE_KEY:
+    print('✗ Missing SUPABASE_SERVICE_ROLE_KEY or SUPABASE_URL in .env', file=sys.stderr)
+    sys.exit(1)
+
+def fetch_supabase(collection_id="ca-bien", volume=None):
+    all_data = []
+    limit = 1000
+    offset = 0
+    while True:
+        url = f"{SUPABASE_URL}/rest/v1/species?collection_id=eq.{collection_id}"
+        if volume:
+            url += f"&volume=eq.{volume}"
+        url += f"&limit={limit}&offset={offset}"
+        
+        req = urllib.request.Request(url, headers={
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json"
+        })
+        with urllib.request.urlopen(req) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            if not data:
+                break
+            all_data.extend(data)
+            offset += limit
+            if len(data) < limit:
+                break
+    return all_data
+
+def update_supabase(rows):
+    url = f"{SUPABASE_URL}/rest/v1/species"
+    headers = {
+        "apikey": SUPABASE_KEY,
+        "Authorization": f"Bearer {SUPABASE_KEY}",
+        "Content-Type": "application/json",
+        "Prefer": "resolution=merge-duplicates",
+    }
+    data = json.dumps(rows, ensure_ascii=False).encode("utf-8")
+    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
+    try:
+        with urllib.request.urlopen(req) as resp:
+            return resp.status
+    except urllib.error.HTTPError as e:
+        print(f"  ✗ HTTP {e.code}: {e.read().decode('utf-8')[:300]}", file=sys.stderr)
+        return e.code
 
 def fetch_wikidata_info(sci_name):
     try:
@@ -56,56 +119,43 @@ def is_valid_vi(name):
 def needs_enrich(sp, force=False):
     if force:
         return True
-    specs = sp.get('specs') or {}
-    en = specs.get('en') or {}
-    vn = specs.get('vn') or {}
-    common = (en.get('commonName') or '').strip()
-    alt = (vn.get('alternateNames') or '').strip()
-    sci = sp.get('scientificName', '')
+    common = (sp.get('en_common_name') or '').strip()
+    alt = (sp.get('vn_alternate_names') or '').strip()
+    sci = sp.get('scientific_name', '')
     return not common or common == sci or not alt
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--volume', type=int, default=None, help='Chỉ enrich tập cụ thể (1-6)')
+    parser.add_argument('--volume', type=int, default=None, help='Chỉ enrich tập cụ thể (1-5)')
     parser.add_argument('--force', action='store_true', help='Ghi đè kể cả khi đã có dữ liệu')
     args = parser.parse_args()
 
-    with open('data/species.json', 'r', encoding='utf-8') as f:
-        species_db = json.load(f)
-
-    fb_sync = {}
-    if os.path.exists('data/fishbase_sync.json'):
-        with open('data/fishbase_sync.json', 'r', encoding='utf-8') as f:
-            fb_sync = json.load(f)
-
-    # Filter by volume
-    if args.volume:
-        targets = [s for s in species_db if s.get('volume') == args.volume]
-        label = f"Tập {args.volume}"
-    else:
-        targets = species_db
-        label = "Tất cả các tập"
+    targets = fetch_supabase(collection_id="ca-bien", volume=args.volume)
+    label = f"Tập {args.volume}" if args.volume else "Tất cả các tập"
 
     need_enrich = [s for s in targets if needs_enrich(s, args.force)]
     print(f"📊 {label}: {len(targets)} loài tổng")
     print(f"   Cần enrich: {len(need_enrich)} loài")
     print("─" * 50)
 
+    if not need_enrich:
+        print("✅ Tất cả đã có tên, không cần enrich.")
+        return
+
     success_count = 0
     updated_count = 0
     missing = []
-
-    # Build index for fast lookup
-    id_to_index = {sp['id']: i for i, sp in enumerate(species_db)}
+    
+    batch = []
+    batch_size = 50
 
     for idx, sp in enumerate(need_enrich, 1):
         sp_id = sp.get('id')
-        sci_name = sp.get('scientificName', '').strip()
-        vn_name = sp.get('vnName', '').strip().lower()
+        sci_name = sp.get('scientific_name', '').strip()
+        vn_name = sp.get('vn_name', '').strip().lower()
 
         # Dùng acceptedName từ WoRMS nếu có (tên hiện hành)
-        fb_info = fb_sync.get(sp_id, {})
-        query_name = (fb_info.get('acceptedName') or '').strip() or sci_name
+        query_name = (sp.get('worms_accepted_name') or '').strip() or sci_name
 
         print(f"[{idx}/{len(need_enrich)}] {sp_id}: {query_name} ...", end=" ", flush=True)
 
@@ -115,12 +165,7 @@ def main():
 
         changed = False
         if info:
-            # Gom alternateNames tiếng Việt
-            specs = sp.get('specs') or {}
-            vn_specs = specs.get('vn') or {}
-            en_specs = specs.get('en') or {}
-            
-            current_alt = (vn_specs.get('alternateNames') or '').strip()
+            current_alt = (sp.get('vn_alternate_names') or '').strip()
             alt_names = set(n.strip() for n in current_alt.split(',') if n.strip()) if current_alt else set()
 
             if is_valid_vi(info['vi_name']) and info['vi_name'].strip().lower() != vn_name:
@@ -129,8 +174,7 @@ def main():
                 if is_valid_vi(va) and va.strip().lower() != vn_name:
                     alt_names.add(va.strip())
 
-            # CommonName tiếng Anh
-            current_en = (en_specs.get('commonName') or '').strip()
+            current_en = (sp.get('en_common_name') or '').strip()
             new_en = current_en
             if info['en_name'] and info['en_name'].strip().lower() != query_name.lower():
                 new_en = info['en_name'].strip()
@@ -138,49 +182,50 @@ def main():
                 new_en = info['en_aliases'][0].strip()
 
             alt_str = ', '.join(sorted(alt_names)) if alt_names else ''
+            
+            update_row = {}
+            if new_en and (args.force or not current_en or current_en == sci_name):
+                update_row['en_common_name'] = new_en
+                changed = True
+            if alt_str and (args.force or not current_alt):
+                update_row['vn_alternate_names'] = alt_str
+                changed = True
 
-            # Ghi vào DB (đúng path)
-            db_idx = id_to_index.get(sp_id)
-            if db_idx is not None:
-                if 'specs' not in species_db[db_idx]:
-                    species_db[db_idx]['specs'] = {'vn': {}, 'en': {}}
-                if 'vn' not in species_db[db_idx]['specs']:
-                    species_db[db_idx]['specs']['vn'] = {}
-                if 'en' not in species_db[db_idx]['specs']:
-                    species_db[db_idx]['specs']['en'] = {}
-
-                if new_en and (args.force or not species_db[db_idx]['specs']['en'].get('commonName') or species_db[db_idx]['specs']['en'].get('commonName') == sci_name):
-                    species_db[db_idx]['specs']['en']['commonName'] = new_en
-                    changed = True
-                if alt_str and (args.force or not species_db[db_idx]['specs']['vn'].get('alternateNames')):
-                    species_db[db_idx]['specs']['vn']['alternateNames'] = alt_str
-                    changed = True
+            if changed:
+                update_row['id'] = sp_id # PK required for upsert
+                if 'en_common_name' not in update_row:
+                    update_row['en_common_name'] = current_en
+                if 'vn_alternate_names' not in update_row:
+                    update_row['vn_alternate_names'] = current_alt
+                batch.append(update_row)
+                updated_count += 1
 
             print(f"OK -> EN: '{new_en}', Alt VN: '{alt_str}'")
             success_count += 1
-            if changed:
-                updated_count += 1
         else:
             print("Không tìm thấy.")
             missing.append(f"{sp_id}: {sci_name}")
 
         time.sleep(0.2)
 
-        # Checkpoint mỗi 50 loài
-        if idx % 50 == 0:
-            with open('data/species.json', 'w', encoding='utf-8') as f:
-                json.dump(species_db, f, ensure_ascii=False, indent=2)
-            print(f"--- ✅ Checkpoint {idx}/{len(need_enrich)} ---")
+        # Batch upsert
+        if len(batch) >= batch_size:
+            status = update_supabase(batch)
+            if status in (200, 201):
+                print(f"--- ✅ Đã ghi {len(batch)} thay đổi vào DB ---")
+            else:
+                print(f"--- ✗ Lỗi khi ghi vào DB (HTTP {status}) ---")
+            batch = []
 
-    # Ghi cuối
-    with open('data/species.json', 'w', encoding='utf-8') as f:
-        json.dump(species_db, f, ensure_ascii=False, indent=2)
-
-    import shutil
-    shutil.copy('data/species.json', 'public/data/species.json')
+    # Dọn nốt batch cuối
+    if batch:
+        status = update_supabase(batch)
+        if status in (200, 201):
+            print(f"--- ✅ Đã ghi {len(batch)} thay đổi vào DB ---")
 
     # Ghi log loài còn thiếu
     if missing:
+        os.makedirs('scratch', exist_ok=True)
         with open('scratch/enrichment_missing.txt', 'w', encoding='utf-8') as f:
             f.write('\n'.join(missing))
 
@@ -191,7 +236,6 @@ def main():
     print(f"  ❌ Không tìm thấy:  {len(missing)}")
     if missing:
         print(f"\n📋 Loài cần tra thủ công → scratch/enrichment_missing.txt")
-    print(f"\n📁 Đã sync: public/data/species.json")
 
 if __name__ == '__main__':
     main()

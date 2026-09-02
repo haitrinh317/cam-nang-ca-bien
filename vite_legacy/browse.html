@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duyệt Phân Loại — Bảo tàng Hải dương học</title>
+    <meta name="description" content="Duyệt cây phân loại học từ Lớp, Bộ, Họ, Giống đến Loài cá biển Việt Nam.">
+    <meta name="theme-color" content="#0c142a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="/src/assets/shared.css">
+</head>
+<body>
+    <script>/* Apply theme before paint */
+    (function(){ const t=localStorage.getItem('cabien-theme')||'light'; document.documentElement.setAttribute('data-theme',t); })();
+    </script>
+    <!-- N5 Floating Pill Nav -->
+    <header class="site-header" role="banner">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Logo Bảo tàng Hải dương học">
+            <span class="logo-full">Bảo tàng Hải dương học</span><span class="logo-short">BTHD</span>
+        </a>
+        <nav class="nav-links" id="navLinks" aria-label="Điều hướng chính">
+            <a href="index.html" class="nav-link" data-i18n="nav.home">Trang Chủ</a>
+            <a href="browse.html" class="nav-link active" data-i18n="nav.browse">Cây Phân Loại</a>
+            <a href="tap.html" class="nav-link" data-i18n="nav.byVolume">Duyệt Theo Tập</a>
+        </nav>
+        <div class="nav-controls" id="navControls"></div>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Mở menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Main Container: Long Document Macrostructure -->
+    <main class="main-container">
+        <section class="page-header" aria-label="Tiêu đề phân loại">
+            <h1 data-i18n="browse.pageTitle">Hệ thống Phân loại Học</h1>
+            <p>Cây phân loại học sinh học biển từ Lớp, Bộ, Họ, Giống đến từng Loài.</p>
+        </section>
+
+        <!-- Live Search / Filter in Tree -->
+        <div class="search-input-container" style="max-width: 540px; margin-bottom: var(--space-2xl);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="treeFilter" class="search-input" placeholder="Lọc nhanh tên loài tiếng Việt hoặc tên khoa học..." data-i18n-placeholder="browse.searchPlaceholder" autocomplete="off">
+        </div>
+
+        <!-- Search Results Dropdown/Panel if active -->
+        <div id="searchResults" class="search-results" style="position: relative; top: 0; margin-bottom: var(--space-xl);">
+            <div id="searchResultsList"></div>
+        </div>
+
+        <!-- Taxonomy Tree Container -->
+        <section class="taxonomy-container" id="treeContainer" aria-label="Cây phân loại">
+            <div id="loadingState" style="text-align: center; padding: 4rem; color: var(--color-muted);">
+                Đang tải dữ liệu phân loại học...
+            </div>
+        </section>
+    </main>
+
+    <!-- Ft5 Statement Footer -->
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <p class="footer__statement" data-i18n="footer.statement">Bảo tàng Hải dương học - Lăng kính đại dương</p>
+            <div class="footer__meta">
+                <div class="footer__org">
+                    <strong data-i18n="footer.org">Viện Hải dương học, Viện Hàn lâm Khoa học và Công nghệ Việt Nam</strong>
+                    <span data-i18n="footer.dept">Phòng Thông tin – Truyền thông</span><br>
+                    <span data-i18n="footer.mission">Chuyển đổi số phục vụ nghiên cứu khoa học</span>
+                </div>
+                <span class="footer__version">v3.0.0</span>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/pages/browse.js"></script>
+    <script type="module">
+        import { initI18n } from '/src/lib/i18n.js'
+        import { initTheme } from '/src/lib/theme.js'
+        import { mountHeaderControls } from '/src/lib/controls.js'
+        initTheme()
+        await initI18n()
+        mountHeaderControls()
+    </script>
+    <script>
+    /* Hamburger menu */
+    (function() {
+        const btn = document.getElementById('hamburgerBtn');
+        const nav = document.getElementById('navLinks');
+        const overlay = document.getElementById('navOverlay');
+
+        function toggleMenu() {
+            const open = nav.classList.toggle('open');
+            btn.classList.toggle('active', open);
+            btn.setAttribute('aria-expanded', open);
+            overlay.classList.toggle('active', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+
+        btn?.addEventListener('click', toggleMenu);
+        overlay?.addEventListener('click', toggleMenu);
+
+        nav?.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (nav.classList.contains('open')) toggleMenu();
+            });
+        });
+    })();
+    </script>
+</body>
+</html>

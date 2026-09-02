@@ -1,15 +1,35 @@
 {
-  "name": "Bảo tàng Hải dương học — Tra cứu Cá biển Việt Nam",
+  "name": "Bảo tàng Hải dương học — Sinh vật biển Việt Nam",
   "short_name": "Cá biển VN",
+  "description": "Cơ sở dữ liệu số hóa sinh vật biển Việt Nam — Viện Hải dương học, Nha Trang",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "theme_color": "#0c142a",
   "background_color": "#0c142a",
+  "theme_color": "#0c142a",
+  "orientation": "portrait-primary",
+  "lang": "vi",
   "icons": [
     {
-      "src": "/logo.png",
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "screenshots": [
+    {
+      "src": "/og-default.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["education", "science", "reference"]
 }

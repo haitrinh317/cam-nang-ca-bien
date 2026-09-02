@@ -3,9 +3,10 @@ import { createServerClient } from '@/lib/supabase-server'
 import GlobalSearch from '@/components/search/GlobalSearch'
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import { Fish, Leaf } from 'lucide-react'
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+// ponytail: ISR 1h — stats data changes rarely, no need for force-dynamic
+export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: 'Bảo tàng Hải dương học — Tra cứu Sinh vật biển Việt Nam',
@@ -75,7 +76,9 @@ export default async function HomePage() {
                 pointerEvents: col.status === 'draft' ? 'none' : undefined,
               }}
             >
-              <span className="vol-card-num" style={{ fontSize: '2.2rem' }}>{col.icon}</span>
+              <span className="vol-card-num" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                {col.slug === 'ca-bien' ? <Fish size={44} strokeWidth={1.5} /> : col.slug === 'thuc-vat-bien' ? <Leaf size={44} strokeWidth={1.5} /> : col.icon}
+              </span>
               <span className="vol-card-title">{col.nameVn}</span>
               <span className="vol-card-count">
                 {col.status === 'draft'

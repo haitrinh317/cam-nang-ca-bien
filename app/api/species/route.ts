@@ -6,7 +6,9 @@
  * DELETE ?id=xxx → delete species (admin only)
  */
 import { NextRequest, NextResponse } from 'next/server'
-import { createServerClient } from '@/lib/supabase-server'
+import { createServerClient, createSSRClient } from '@/lib/supabase-server'
+
+export const dynamic = 'force-dynamic'
 
 const PAGE_SIZE = 20
 
@@ -16,21 +18,23 @@ function sanitizeSearch(raw: string): string {
 }
 
 /** Check if current user has admin role. Returns user email or null. */
-async function requireAdmin(db: ReturnType<typeof createServerClient>): Promise<{ email: string } | null> {
+async function requireAdmin(db: Awaited<ReturnType<typeof createSSRClient>>): Promise<{ email: string } | null> {
   const { data: { user } } = await db.auth.getUser()
   if (!user?.email) return null
 
-  const { data: role } = await db
+  // Use service client to bypass broken RLS on user_roles
+  const adminDb = createServerClient()
+  const { data: role } = await adminDb
     .from('user_roles')
     .select('role')
-    .eq('email', user.email)
+    .eq('user_id', user.id)
     .single()
 
   if (role?.role !== 'admin') return null
   return { email: user.email }
 }
 
-async function auditLog(db: ReturnType<typeof createServerClient>, action: string, userEmail: string, opts: {
+async function auditLog(db: Awaited<ReturnType<typeof createSSRClient>>, action: string, userEmail: string, opts: {
   collection_id?: string; species_id?: string; details?: string
   old_data?: unknown; new_data?: unknown
 }) {
@@ -46,6 +50,7 @@ async function auditLog(db: ReturnType<typeof createServerClient>, action: strin
 }
 
 export async function GET(req: NextRequest) {
+  // GET is public, doesn't need cookies
   const db = createServerClient()
   const { searchParams } = req.nextUrl
   const collection = searchParams.get('collection') || 'ca-bien'
@@ -75,7 +80,7 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-  const db = createServerClient()
+  const db = await createSSRClient()
   const admin = await requireAdmin(db)
   if (!admin) return NextResponse.json({ error: 'Forbidden: admin role required' }, { status: 403 })
 
@@ -94,7 +99,7 @@ export async function POST(req: NextRequest) {
 }
 
 export async function PATCH(req: NextRequest) {
-  const db = createServerClient()
+  const db = await createSSRClient()
   const admin = await requireAdmin(db)
   if (!admin) return NextResponse.json({ error: 'Forbidden: admin role required' }, { status: 403 })
 
@@ -119,7 +124,7 @@ export async function PATCH(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
-  const db = createServerClient()
+  const db = await createSSRClient()
   const admin = await requireAdmin(db)
   if (!admin) return NextResponse.json({ error: 'Forbidden: admin role required' }, { status: 403 })
 
