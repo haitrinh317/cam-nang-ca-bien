@@ -65,6 +65,20 @@ export const FAQ_DATA: FaqItem[] = [
       'Cung cấp liên kết trực tiếp đến trang gốc của từng loài trên CSDL WoRMS toàn cầu'
     ]
   },
+  {
+    id: 'sources-3',
+    category: 'sources',
+    categoryLabel: 'Nguồn tài liệu',
+    question: 'Vì sao một số loài bị thiếu thông tin (như kích thước, số lượng mẫu vật, hoặc tên tiếng Việt)?',
+    questionEn: 'Why do some species have missing fields (such as size, specimen count, or Vietnamese names)?',
+    answer: 'Việc một số trường dữ liệu hiển thị dấu gạch ngang hoặc chưa có thông tin bắt nguồn từ các nguyên nhân khoa học và lịch sử thực tế:\n\n1. Tôn trọng tuyệt đối tính nguyên bản khoa học: Trong các chuyến khảo sát biển sâu từ thế kỷ trước, nhiều loài chỉ được ghi nhận qua quan sát thực địa hoặc trích dẫn lại từ tư liệu khảo sát trước đó mà tác giả chưa trực tiếp thu thập hay bảo quản được mẫu vật nguyên vẹn trong phòng thí nghiệm. Các nhà khoa học tiền bối luôn tuân thủ nguyên tắc trung thực: chỉ ghi chép những gì có bằng chứng vật lý rõ ràng, tuyệt đối không suy đoán hay bịa đặt số liệu.\n\n2. Loài quý hiếm hoặc sinh sống ở biển sâu (Data Deficient): Nhiều loài cá sống ở tầng đáy sâu hàng nghìn mét, cá mù hoặc loài di cư xa rất hiếm khi bắt gặp. Ngay cả trên các cơ sở dữ liệu quốc tế lớn như FishBase hay Sách Đỏ IUCN, dữ liệu sinh học của chúng vẫn đang thuộc diện thiếu hụt nghiên cứu.\n\n3. Chưa có tên tiếng Việt chính thức: Nhiều loài cá không có giá trị thương mại hoặc sống ngoài khơi xa chưa từng được ngư dân khai thác, do đó dân gian chưa từng đặt tên địa phương. Nhóm biên tập quyết định giữ nguyên tên khoa học La-tinh, tránh tùy tiện gán ghép tên tự phát có thể gây hiểu lầm hoặc xung đột định loại.\n\n4. Dự án CSDL sống (Living Compendium): Nền tảng liên tục được rà soát, đối soát và bổ sung dữ liệu qua từng giai đoạn từ kho mẫu vật lưu trữ thực tế của Bảo tàng Hải dương học và các nghiên cứu khoa học mới được công bố.',
+    highlights: [
+      'Tôn trọng tính chân thực lịch sử: Không tự ý bịa đặt số liệu nếu sách gốc không ghi nhận',
+      'Đặc thù ngư học: Nhiều loài cá biển sâu hoặc loài cực hiếm trên toàn cầu vẫn thiếu dữ liệu',
+      'Giữ nguyên tên La-tinh đối với những loài chưa có tên gọi dân gian chính thức',
+      'Dự án CSDL sống: Liên tục được bổ sung, hiệu đính và làm giàu dữ liệu theo thời gian'
+    ]
+  },
 
   // ── Nhóm 3: Công nghệ số hóa & Dữ liệu bổ sung ──
   {
