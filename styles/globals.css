@@ -1824,16 +1824,51 @@ footer {
   .bio-grid  { grid-template-columns: 1fr; gap: 0; }
 
   /* Specimen card mobile */
-  .specimen__hero { padding: var(--space-lg) var(--space-md) var(--space-md); }
-  .specimen__name { font-size: clamp(1.8rem, 7vw, var(--text-display-s)); }
-  .specimen__taxonomy { padding: var(--space-md) var(--space-xl); }
-  .specimen__section { padding: var(--space-xl); }
-  .kv-row { grid-template-columns: 1fr; gap: var(--space-md); }
-  .specimen details.synonym-details { margin: 0 var(--space-xl) var(--space-lg); }
-  .specimen .biology-panel { margin: 0 var(--space-xl) var(--space-xl); }
+  .specimen__hero { padding: var(--space-md) var(--space-md) var(--space-sm); }
+  .specimen__name { font-size: clamp(1.5rem, 6.5vw, var(--text-display-s)); }
+  .specimen__taxonomy { padding: var(--space-sm) var(--space-md); }
+  .specimen__section { padding: var(--space-md) var(--space-md); }
+  .kv-row { grid-template-columns: 1fr; gap: var(--space-sm); }
+  .specimen details.synonym-details { margin: 0; }
+  .specimen .biology-panel { margin: 0; }
 
   footer { padding: var(--space-3xl) var(--space-md) var(--space-2xl); }
   .footer__statement { font-size: clamp(1.5rem, 6vw, var(--text-2xl)); }
+}
+
+/* ═══════════════════════════════════════════
+   IPAD & TABLET (769px – 1024px)
+   ═══════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .site-header {
+    width: calc(100% - var(--space-lg));
+    padding: 8px var(--space-md);
+  }
+  .logo {
+    font-size: 0.85rem;
+    gap: var(--space-2xs);
+  }
+  .logo-full { display: none; }
+  .logo-short { display: inline; }
+  .nav-links {
+    gap: var(--space-2xs);
+  }
+  .nav-link {
+    font-size: 0.85rem;
+    padding: var(--space-2xs) var(--space-xs);
+  }
+  .main-container {
+    padding: calc(var(--nav-height) + var(--space-xs)) var(--space-md) var(--space-lg);
+  }
+  .specimen__hero {
+    padding: var(--space-lg) var(--space-lg) var(--space-md);
+  }
+  .specimen__section {
+    padding: var(--space-md) var(--space-lg);
+  }
+  .kv-row {
+    gap: var(--space-md);
+  }
 }
 
 /* ═══════════════════════════════════════════
@@ -3252,13 +3287,65 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .site-header {
+    width: calc(100% - var(--space-sm));
+    padding: 6px var(--space-xs);
+  }
+
+  .main-container {
+    padding: calc(var(--nav-height) + 6px) 10px var(--space-md);
+  }
+
+  .specimen {
+    border-radius: var(--radius-md);
+  }
+
+  .specimen__hero {
+    padding: var(--space-md) var(--space-sm) var(--space-xs);
+  }
+
+  .specimen__name {
+    font-size: clamp(1.35rem, 5.5vw, 1.65rem);
+  }
+
+  .specimen__sci {
+    font-size: 0.95rem;
+  }
+
+  .specimen__taxonomy {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: 0.75rem;
+  }
+
+  .detail-tabs {
+    padding: 6px 8px;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .detail-tab {
+    font-size: 0.82rem;
+    padding: 8px 12px;
+    scroll-snap-align: start;
+  }
+
+  .specimen__section {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .specimen__section-title {
+    font-size: 1.1rem;
+  }
+
   /* Tighter grid on very small phones */
   .grid-species {
     gap: var(--space-sm);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .scm-thumb {
-    height: 80px;
+    height: 110px;
   }
 
   .scm-name { font-size: 0.8125rem; }
