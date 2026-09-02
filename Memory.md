@@ -44,7 +44,7 @@
 - **Độ phủ tên tiếng Anh (`en_common_name`)**: 1,764 / 1,765 loài (99.9% — 100% loài hợp lệ)
 - **Độ phủ tên gọi khác tiếng Việt (`vn_alternate_names`)**: 1,764 / 1,765 loài (99.9% — 100% loài hợp lệ)
 - **Toàn bộ 6 Tập Cá biển (I, II, III, IV, V, VI)**: Đạt **100.0%** trọn vẹn ở cả hai trường `vn_alternate_names` và `en_common_name` (1,764/1,765 loài hợp lệ, loài 78 Tập IV chờ OCR trang sách gốc).
-- **Tập VI (Atlas cá rạn san hô)**: Đã chuẩn hóa toàn diện trường `morphology_vn` và trường `vn_size` (bổ sung 15 loài bị khuyết kích thước từ OCR thô/FishBase, loại bỏ rác OCR/số trang dính đuôi cho toàn bộ 263 loài).
+- **Tập VI (Atlas cá rạn san hô)**: Đã chuẩn hóa toàn diện 100% các trường: `morphology_vn`, `vn_size`, `en_size` (dịch từ tiếng Việt sang chuẩn quốc tế), `vn_specimen` (làm sạch OCR) và `en_specimen` (dịch sang tên các viện chuẩn tiếng Anh RIMF, IO, IMER).
 
 ---
 
