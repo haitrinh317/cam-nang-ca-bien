@@ -41,6 +41,9 @@
 | 1    | 201       | ✅ Hoàn chỉnh |
 
 ### Tổng: **1,966 loài** trong Supabase (đã dọn sạch orphan volume=0)
+- **Độ phủ tên tiếng Anh (`en_common_name`)**: 1,754 / 1,765 loài (99.4%)
+- **Độ phủ tên gọi khác tiếng Việt (`vn_alternate_names`)**: 756 / 1,765 loài (42.8% — tăng vọt từ 344 loài nhờ đồng bộ FishBase Comnames)
+- **Tập I, II, III, VI**: 100% loài đã có tên tiếng Anh thường gọi chuẩn xác.
 
 ---
 
