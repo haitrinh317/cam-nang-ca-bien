@@ -458,7 +458,19 @@ function TabStrip({ sp, bio, syns, speciesId }: {
         {(sp.vn_distribution || sp.en_distribution) && (
           <section className="specimen__section">
             <h2 className="specimen__section-title">Phân bố</h2>
-            <KvRow labelVn="" valVn={sp.vn_distribution} labelEn="" valEn={sp.en_distribution} />
+            <div className="kv-row">
+              <div className="kv-cell kv-full">
+                {sp.vn_distribution
+                  ? <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>{sp.vn_distribution}</div>
+                  : sp.en_distribution && (
+                    <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>
+                      {sp.en_distribution}
+                      <span className="source-tag">EN · FishBase/GBIF</span>
+                    </div>
+                  )
+                }
+              </div>
+            </div>
           </section>
         )}
 
