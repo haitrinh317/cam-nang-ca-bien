@@ -81,25 +81,41 @@ interface Biology {
 
 // ── WoRMS Badge ───────────────────────────────────────────────────
 function WormsBadge({ sp }: { sp: Species }) {
-  if (!sp.worms_status) return null
+  if (!sp.worms_status && !sp.worms_id) return null
 
-  const statusMap: Record<string, { cls: string; icon: React.ReactNode; label: string }> = {
-    valid:       { cls: 'fb-valid',     icon: <CheckCircle size={14} />, label: 'Tên hợp lệ trên WoRMS' },
-    synonym:     { cls: 'fb-synonym',   icon: <AlertTriangle size={14} />, label: 'Tên cũ — đã được cập nhật' },
-    uncertain:   { cls: 'fb-synonym',   icon: <AlertTriangle size={14} />, label: 'Trạng thái phân loại chưa rõ' },
-    not_found:   { cls: 'fb-not-found', icon: <AlertTriangle size={14} />, label: 'Chưa xác minh được trên WoRMS' },
-    parse_error: { cls: 'fb-unknown',   icon: <AlertTriangle size={14} />, label: 'Không phân tích được tên khoa học' },
+  const statusRaw = (sp.worms_status || '').toLowerCase().trim()
+  const isValid = statusRaw === 'valid' || statusRaw === 'accepted'
+  const isSynonym = statusRaw === 'synonym' || statusRaw === 'unaccepted' ||
+                    statusRaw.includes('synonym') || statusRaw.includes('misspelling') ||
+                    statusRaw.includes('superseded')
+  const isUncertain = statusRaw === 'uncertain' || statusRaw === 'doubtful' || statusRaw === 'nomen dubium'
+
+  let s = {
+    cls: 'fb-valid',
+    icon: <CheckCircle size={14} />,
+    label: 'Tên hợp lệ trên WoRMS'
   }
-  const s = statusMap[sp.worms_status] || statusMap['not_found']
+  let detail = ''
+
+  if (isValid || (sp.worms_id && !isSynonym && !isUncertain && statusRaw !== 'not_found' && statusRaw !== 'parse_error')) {
+    s = { cls: 'fb-valid', icon: <CheckCircle size={14} />, label: 'Tên hợp lệ trên WoRMS' }
+    detail = `Tên được xác nhận${sp.worms_synced_at ? ` · cập nhật WoRMS: ${sp.worms_synced_at.substring(0, 10)}` : ''}`
+  } else if (isSynonym) {
+    s = { cls: 'fb-synonym', icon: <AlertTriangle size={14} />, label: 'Tên cũ — đã được cập nhật' }
+    detail = `Tên hiện hành: <span class="fb-accepted">${sp.worms_accepted_name || '?'}</span>`
+  } else if (isUncertain) {
+    s = { cls: 'fb-synonym', icon: <AlertTriangle size={14} />, label: 'Trạng thái phân loại chưa rõ' }
+    detail = sp.worms_accepted_name ? `Ghi nhận: ${sp.worms_accepted_name}` : 'Cần thêm tư liệu khảo sát thực địa'
+  } else if (statusRaw === 'parse_error') {
+    s = { cls: 'fb-unknown', icon: <AlertTriangle size={14} />, label: 'Không phân tích được tên khoa học' }
+    detail = 'Lỗi cú pháp định dạng danh pháp'
+  } else {
+    s = { cls: 'fb-not-found', icon: <AlertTriangle size={14} />, label: 'Chưa xác minh được trên WoRMS' }
+    detail = 'Chưa tìm thấy bản ghi tương ứng trong CSDL WoRMS'
+  }
+
   const wormsUrl = sp.worms_id
     ? `https://www.marinespecies.org/aphia.php?p=taxdetails&id=${sp.worms_id}` : null
-
-  let detail = 'Chưa xác minh được trên WoRMS'
-  if (sp.worms_status === 'valid') {
-    detail = `Tên được xác nhận${sp.worms_synced_at ? ` · cập nhật WoRMS: ${sp.worms_synced_at.substring(0, 10)}` : ''}`
-  } else if (sp.worms_status === 'synonym') {
-    detail = `Tên hiện hành: <span class="fb-accepted">${sp.worms_accepted_name || '?'}</span>`
-  }
 
   return (
     <div className={`fishbase-bar ${s.cls}`}>
