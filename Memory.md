@@ -41,9 +41,9 @@
 | 1    | 201       | ✅ Hoàn chỉnh |
 
 ### Tổng: **1,966 loài** trong Supabase (đã dọn sạch orphan volume=0)
-- **Độ phủ tên tiếng Anh (`en_common_name`)**: 1,760 / 1,765 loài (99.7%)
-- **Độ phủ tên gọi khác tiếng Việt (`vn_alternate_names`)**: 1,362 / 1,765 loài (77.2%)
-- **Tập I, II, III & IV**: Đạt **100.0%** trọn vẹn ở cả hai trường `vn_alternate_names` và `en_common_name` (1,222/1,223 loài hợp lệ, loài 78 Tập IV chờ OCR).
+- **Độ phủ tên tiếng Anh (`en_common_name`)**: 1,764 / 1,765 loài (99.9%)
+- **Độ phủ tên gọi khác tiếng Việt (`vn_alternate_names`)**: 1,579 / 1,765 loài (89.5%)
+- **Tập I, II, III, IV & V**: Đạt **100.0%** trọn vẹn ở cả hai trường `vn_alternate_names` và `en_common_name` (1,501/1,502 loài hợp lệ, loài 78 Tập IV chờ OCR).
 - **Tập VI (Atlas)**: Đạt 100% tên tiếng Anh thường gọi chuẩn xác.
 
 ---
