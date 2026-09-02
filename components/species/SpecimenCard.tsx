@@ -212,7 +212,7 @@ function BiologyPanel({ bio, speciesId }: { bio: Biology; speciesId: string }) {
   const iucn = bio.iucnStatus
   const iucnColor = iucn ? (IUCN_COLOR[iucn] || '#94a3b8') : ''
   return (
-    <div className="biology-panel" style={{ padding: 0 }}>
+    <>
       <section className="specimen__section">
         <h2 className="specimen__section-title">Sinh học — Sinh thái <span className="panel-badge">BIO</span></h2>
         <BioRow label="English name (FishBase)" val={bio.fbName} />
@@ -279,7 +279,7 @@ function BiologyPanel({ bio, speciesId }: { bio: Biology; speciesId: string }) {
           )}
         </section>
       )}
-    </div>
+    </>
   )
 }
 
