@@ -1,8 +1,8 @@
 # TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-02 23:00
-> **Next Session Starting Point**: (1) Giai đoạn B (Làm giàu dữ liệu từ Fishbase/GBIF) cho Tập I-V. (2) Bổ sung CSV Import và Inline edit cho Admin. (3) Bổ sung data loài 78 Tập IV và tên VN 17 loài rong biển.
-> **Supabase (SSOT):** 1,765 loài (6 tập cá biển) + 201 thực vật biển = 1,966 loài. Tập VI đã hoàn tất clean OCR, chuẩn hóa 9 trường và enrich sinh thái. Dọn sạch loài orphan volume=0.
+> Cập nhật: 2026-09-03 06:35 (Session End)
+> **Next Session Starting Point**: (1) Bổ sung CSV Import và Inline edit cho Admin Panel. (2) Bổ sung tên VN ~17 loài rong biển còn thiếu. (3) Mở rộng bộ sưu tập mới (San hô, Thân mềm) khi có tài liệu OCR tiếp theo.
+> **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology) + 201 thực vật biển = 1,965 loài. Toàn bộ 6 tập cá biển đã đạt 100% WoRMS Sync và 100% Biology. Đã dọn sạch phantom row loài 78 Tập IV.
 
 ## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
 
@@ -141,8 +141,11 @@
 - [x] Tập III — đã re-OCR toàn bộ 518 loài cực kỳ chuẩn xác và đưa lên Supabase (2026-08-04)
 - [x] Deploy bản Next.js mới nhất lên Vercel (Hoàn tất 2026-08-20)
 - [x] WoRMS sync cho Thực vật biển: Toàn bộ 201 loài đã hoàn tất.
-- [x] WoRMS sync cho các tập Cá biển (Tập III, IV, V) đang chạy ngầm.
-- [ ] Loài 78 Tập IV bị thiếu data trong OCR gốc
+- [x] WoRMS sync cho toàn bộ 6 tập Cá biển (Tập I-VI): Đạt 100.00% (1.764 / 1.764 loài, 2026-09-03)
+- [x] Giai đoạn B (Làm giàu sinh học FishBase): Đạt 100.00% (1.764 / 1.764 loài, 2026-09-03)
+- [x] Xây dựng trang FAQ (/faq) và tái thiết kế trang About (/about) chuẩn Hallmark (2026-09-03)
+- [x] Tối ưu typography, hierarchy 3 tab và responsive iPad/Mobile (2026-09-03)
+- [x] Dọn sạch phantom row loài 78 Tập IV (soft-delete bản ghi rỗng không có trong sách)
 - [x] Xóa 17 bản sao duplicate thực vật biển (idx 202-218) — 2026-08-22
 - [x] Bổ sung vn_name 26 loài rong biển từ PDF gốc — 2026-08-22
 

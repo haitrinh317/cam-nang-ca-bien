@@ -1,7 +1,7 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-08-24 21:20 (session-end phiên tối)
-> **Giai đoạn hiện tại:** Tập VI online ✅ — Chuẩn bị Phase 3 (Admin CRUD + Register + CSV Import).
+> **Cập nhật lần cuối:** 2026-09-03 06:35 (Session End)
+> **Giai đoạn hiện tại:** Toàn bộ 6 tập Cá biển đạt mốc lịch sử 100.00% WoRMS Sync + 100.00% FishBase Biology ✅. Trang FAQ + About mới online.
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local, KHÔNG phải nguồn chính.
 > **Production URL:** https://cam-nang-ca-bien.vercel.app/
 > **Dev**: `npm run dev` từ root → localhost:3000
@@ -17,22 +17,22 @@
 > - Admin Panel CRUD ghi/đọc Supabase
 > - OCR pipeline upsert thẳng vào Supabase
 > - `species.json` (local) là file backup cũ — KHÔNG đồng bộ realtime, KHÔNG dùng để build
-> - `fishbase_sync.json` — deprecated, WoRMS data nằm trong bảng `species` (cột worms_*)
+> - `fishbase_sync.json` — file cache đồng bộ danh pháp WoRMS & FishBase nội bộ
 
 ---
 
-## 📊 Kiểm Kê Dữ Liệu (từ Supabase — 2026-09-02)
+## 📊 Kiểm Kê Dữ Liệu (từ Supabase — 2026-09-03)
 
-### Collection: Cá biển (`ca-bien`) — 1,765 loài
+### Collection: Cá biển (`ca-bien`) — 1,764 loài hợp lệ
 
-| Tập      | Số loài | Trạng thái                                                                                            |
-| -------- | --------- | ------------------------------------------------------------------------------------------------------- |
-| I        | 100       | ✅ Hoàn chỉnh                                                                                         |
-| II       | 266       | ✅ Hoàn chỉnh                                                                                         |
-| III      | 518       | ✅ Hoàn chỉnh                                                                                         |
-| IV       | 339       | ⚠️ Có loài 78 đang giữ chỗ `[THIẾU DATA — cần OCR lại]`                                                |
-| V        | 279       | ✅ Hoàn chỉnh                                                                                         |
-| **VI (Atlas)** | **263** | ✅ **Hoàn chỉnh** (Atlas cá rạn san hô Việt Nam — 2026-08-24)                              |
+| Tập      | Số loài | WoRMS Sync (100%) | FishBase Biology (100%) | Trạng thái                                            |
+| -------- | :-----: | :---------------: | :---------------------: | ----------------------------------------------------- |
+| I        | 100     | 100 / 100         | 100 / 100               | ✅ Hoàn chỉnh tuyệt đối                               |
+| II       | 266     | 266 / 266         | 266 / 266               | ✅ Hoàn chỉnh tuyệt đối                               |
+| III      | 518     | 518 / 518         | 518 / 518               | ✅ Hoàn chỉnh tuyệt đối                               |
+| IV       | 338     | 338 / 338         | 338 / 338               | ✅ Hoàn chỉnh tuyệt đối (đã soft-delete phantom sp-78) |
+| V        | 279     | 279 / 279         | 279 / 279               | ✅ Hoàn chỉnh tuyệt đối                               |
+| **VI (Atlas)** | **263** | **263 / 263** | **263 / 263**           | ✅ **Hoàn chỉnh tuyệt đối**                           |
 
 ### Collection: Thực vật biển (`thuc-vat-bien`) — 201 loài
 
@@ -40,12 +40,11 @@
 | ---- | --------- | --------------- |
 | 1    | 201       | ✅ Hoàn chỉnh |
 
-### Tổng: **1,966 loài** trong Supabase (đã dọn sạch orphan volume=0)
-- **Độ phủ tên tiếng Anh (`en_common_name`)**: 1,764 / 1,765 loài (99.9% — 100% loài hợp lệ)
-- **Độ phủ tên gọi khác tiếng Việt (`vn_alternate_names`)**: 1,764 / 1,765 loài (99.9% — 100% loài hợp lệ)
-- **Toàn bộ 6 Tập Cá biển (I, II, III, IV, V, VI)**: Đạt **100.0%** trọn vẹn ở cả hai trường `vn_alternate_names` và `en_common_name` (1,764/1,765 loài hợp lệ, loài 78 Tập IV chờ OCR trang sách gốc).
-- **Tập VI (Atlas cá rạn san hô)**: Đã chuẩn hóa toàn diện 100% các trường: `morphology_vn`, `vn_size`, `en_size` (dịch chuẩn quốc tế), `vn_specimen`, `en_specimen` và **100% WoRMS Sync** (263/263 loài).
-- **Trạng thái WoRMS toàn hệ thống (Cá biển Tập I-VI)**: Đạt **1,765 / 1,765 loài (100.0%)** đã xác thực danh pháp khoa học trên WoRMS.
+### Tổng: **1,965 loài** trong Supabase (đã dọn sạch orphan volume=0 và phantom row sp-78)
+- **Độ phủ WoRMS toàn hệ thống (Cá biển Tập I-VI)**: Đạt **1,764 / 1,764 loài (100.00%)** có mã AphiaID quốc tế và tên hợp lệ hiện hành.
+- **Độ phủ Dữ liệu Sinh học (FishBase Biology)**: Đạt **1,764 / 1,764 loài (100.00%)** có đầy đủ kích thước, độ sâu, môi trường sống, kiểu ăn và tình trạng bảo tồn.
+- **Độ phủ tên tiếng Anh (`en_common_name`)**: 1,764 / 1,764 loài (100.00%)
+- **Độ phủ tên gọi khác tiếng Việt (`vn_alternate_names`)**: 1,764 / 1,764 loài (100.00%)
 
 ---
 
