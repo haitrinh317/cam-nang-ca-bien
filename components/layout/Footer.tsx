@@ -18,6 +18,7 @@ export default function Footer() {
         </div>
         <div className="footer__links">
           <Link href="/about">Giới thiệu</Link>
+          <Link href="/faq">Câu hỏi thường gặp</Link>
           <a href="https://www.marinespecies.org" target="_blank" rel="noopener">WoRMS</a>
           <a href="https://www.fishbase.se" target="_blank" rel="noopener">FishBase</a>
           <a href="https://www.algaebase.org" target="_blank" rel="noopener">AlgaeBase</a>

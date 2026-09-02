@@ -70,9 +70,13 @@ interface Biology {
   importance?: string
   aquaculture?: string
   biologySummary?: string
+  biologySummaryVn?: string
   ecologyNotes?: string
+  ecologyNotesVn?: string
   reproductionNotes?: string
+  reproductionNotesVn?: string
   morphDescription?: string
+  morphDescriptionVn?: string
 }
 
 // ── WoRMS Badge ───────────────────────────────────────────────────
@@ -256,25 +260,25 @@ function BiologyPanel({ bio, speciesId }: { bio: Biology; speciesId: string }) {
           {bio.biologySummary && (
             <BilingualNoteBlock
               labelEn="Biology summary (FishBase)" labelVn="Tóm tắt sinh học (FishBase)"
-              text={bio.biologySummary} cacheKey={`bio_summary_${speciesId}`}
+              text={bio.biologySummary} textVn={bio.biologySummaryVn} cacheKey={`bio_summary_${speciesId}`}
             />
           )}
           {bio.ecologyNotes && (
             <BilingualNoteBlock
               labelEn="Ecology notes" labelVn="Ghi chú sinh thái"
-              text={bio.ecologyNotes} cacheKey={`ecology_${speciesId}`}
+              text={bio.ecologyNotes} textVn={bio.ecologyNotesVn} cacheKey={`ecology_${speciesId}`}
             />
           )}
           {bio.reproductionNotes && (
             <BilingualNoteBlock
               labelEn="Reproduction notes" labelVn="Ghi chú sinh sản"
-              text={bio.reproductionNotes} cacheKey={`repro_${speciesId}`}
+              text={bio.reproductionNotes} textVn={bio.reproductionNotesVn} cacheKey={`repro_${speciesId}`}
             />
           )}
           {bio.morphDescription && (
             <BilingualNoteBlock
               labelEn="Morphological description (GBIF)" labelVn="Mô tả hình thái (GBIF)"
-              text={bio.morphDescription} cacheKey={`morph_${speciesId}`}
+              text={bio.morphDescription} textVn={bio.morphDescriptionVn} cacheKey={`morph_${speciesId}`}
             />
           )}
         </section>
