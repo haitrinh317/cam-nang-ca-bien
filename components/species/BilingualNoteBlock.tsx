@@ -58,7 +58,9 @@ export default function BilingualNoteBlock({ labelEn, labelVn, text, cacheKey, t
           <p className="bio-notes-text" style={{ lineHeight: 1.6 }}>{textVn}</p>
         </div>
         <details className="bio-notes-en-details">
-          <summary className="bio-notes-en-toggle">Xem văn bản gốc tiếng Anh (FishBase / GBIF)</summary>
+          <summary className="bio-notes-en-toggle">
+            Xem văn bản gốc tiếng Anh ({labelEn.includes('AlgaeBase') ? 'AlgaeBase' : 'FishBase / GBIF'})
+          </summary>
           <div className="bio-notes-en" style={{ marginTop: '0.5rem' }}>
             <p className="bio-notes-text bio-notes-text--en">{text}</p>
           </div>

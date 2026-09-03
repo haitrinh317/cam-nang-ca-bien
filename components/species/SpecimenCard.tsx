@@ -142,6 +142,7 @@ const IUCN_COLOR: Record<string, string> = {
 // Static label translations (EN → VN)
 const LABEL_VN: Record<string, string> = {
   'English name (FishBase)': 'Tên tiếng Anh (FishBase)',
+  'English name (AlgaeBase)': 'Tên tiếng Anh (AlgaeBase)',
   'Max length': 'Chiều dài tối đa',
   'Max weight': 'Trọng lượng tối đa',
   'Longevity': 'Tuổi thọ',
@@ -228,14 +229,16 @@ function BioRow({ label, val }: { label: string; val?: string | number | null })
   )
 }
 
-function BiologyPanel({ bio, speciesId }: { bio: Biology; speciesId: string }) {
+function BiologyPanel({ bio, speciesId, collectionId }: { bio: Biology; speciesId: string; collectionId?: string | null }) {
+  const isSeaweed = collectionId === 'thuc-vat-bien' || speciesId.startsWith('thucvat-')
+  const srcName = isSeaweed ? 'AlgaeBase' : 'FishBase'
   const iucn = bio.iucnStatus
   const iucnColor = iucn ? (IUCN_COLOR[iucn] || '#94a3b8') : ''
   return (
     <>
       <section className="specimen__section">
         <h2 className="specimen__section-title">Sinh học — Sinh thái <span className="panel-badge">BIO</span></h2>
-        <BioRow label="English name (FishBase)" val={bio.fbName} />
+        <BioRow label={`English name (${srcName})`} val={bio.fbName} />
         <BioRow label="Max length" val={bio.maxLength} />
         <BioRow label="Max weight" val={bio.maxWeight} />
         <BioRow label="Longevity" val={bio.longevity} />
@@ -275,7 +278,7 @@ function BiologyPanel({ bio, speciesId }: { bio: Biology; speciesId: string }) {
           <h2 className="specimen__section-title">Ghi chú chi tiết</h2>
           {bio.biologySummary && (
             <BilingualNoteBlock
-              labelEn="Biology summary (FishBase)" labelVn="Tóm tắt sinh học (FishBase)"
+              labelEn={`Biology summary (${srcName})`} labelVn={`Tóm tắt sinh học (${srcName})`}
               text={bio.biologySummary} textVn={bio.biologySummaryVn} cacheKey={`bio_summary_${speciesId}`}
             />
           )}
@@ -541,7 +544,7 @@ function TabStrip({ sp, bio, syns, speciesId }: {
         className={`detail-tab-panel${active === 'sinhhoc' ? ' active' : ''}`}
       >
         {bio
-          ? <BiologyPanel bio={bio} speciesId={speciesId} />
+          ? <BiologyPanel bio={bio} speciesId={speciesId} collectionId={sp.collection_id} />
           : <p className="specimen__empty">Chưa có dữ liệu sinh học cho loài này.</p>
         }
       </div>
