@@ -43,6 +43,8 @@
 ### Tổng: **1,965 loài** trong Supabase (đã dọn sạch orphan volume=0 và phantom row sp-78)
 - **Độ phủ WoRMS toàn hệ thống (Cá biển Tập I-VI)**: Đạt **1,764 / 1,764 loài (100.00%)** có mã AphiaID quốc tế và tên hợp lệ hiện hành.
 - **Độ phủ Dữ liệu Sinh học (FishBase Biology)**: Đạt **1,764 / 1,764 loài (100.00%)** có đầy đủ kích thước, độ sâu, môi trường sống, kiểu ăn và tình trạng bảo tồn.
+- **Bản dịch Sinh học tiếng Việt khoa học (Biology Summary VN)**: Đạt **1,074 / 1,128 loài (95.2%)** đã dịch chuẩn ngữ loại học và lưu trực tiếp vào CSDL Supabase.
+- **Độ phủ Ảnh minh họa Tập VI (Atlas cá rạn san hô)**: Đạt **259 / 263 loài (98.5%)** với **987 bức ảnh Research Grade** từ iNaturalist, có đầy đủ tác giả, bản quyền và ảnh đại diện (`photo_url`).
 - **Độ phủ tên tiếng Anh (`en_common_name`)**: 1,764 / 1,764 loài (100.00%)
 - **Độ phủ tên gọi khác tiếng Việt (`vn_alternate_names`)**: 1,764 / 1,764 loài (100.00%)
 
@@ -264,6 +266,7 @@ Trước khi deploy: `vercel whoami` → xác nhận scope đúng.
 | 2026-08-22 | Các loài sách ghi "chưa có tên VN" → giữ nguyên trong DB, không bịa tên                              |
 | 2026-08-23 | WoRMS link giữ nguyên mở new tab, không dùng iframe do policy `frame-ancestors` chặn                   |
 | 2026-08-23 | Tạo trang `/about` dùng macrostructure Long Document của Hallmark                                      |
+| 2026-09-03 | Tạo skill `algaebase-sync` & engine `scripts/sync_algaebase.py` đồng bộ danh pháp, ảnh và biology song ngữ cho Thực vật biển |
 
 ---
 
