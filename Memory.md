@@ -1,10 +1,10 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-03 06:35 (Session End)
-> **Giai đoạn hiện tại:** Toàn bộ 6 tập Cá biển đạt mốc lịch sử 100.00% WoRMS Sync + 100.00% FishBase Biology ✅. Trang FAQ + About mới online.
+> **Cập nhật lần cuối:** 2026-09-03 21:30 (Session End)
+> **Giai đoạn hiện tại:** Toàn bộ 6 tập Cá biển đạt 100.00% WoRMS Sync + 100.00% FishBase Biology ✅. Hoàn thành tái thiết kế trang tra cứu `/ca-bien` (GlobalSearch cross-tập, phân 2 đầu sách chính quy, Compact List View siêu nhẹ cắt giảm 99% bandwidth, fix khoảng cách navbar).
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local, KHÔNG phải nguồn chính.
 > **Production URL:** https://cam-nang-ca-bien.vercel.app/
-> **Dev**: `npm run dev` từ root → localhost:3000
+> **Dev**: `npm run dev` từ root → localhost:3001
 > **Vercel Dashboard:** https://vercel.com/haitrinh082-6335s-projects/cam-nang-ca-bien
 
 ---
@@ -43,8 +43,8 @@
 ### Tổng: **1,965 loài** trong Supabase (đã dọn sạch orphan volume=0 và phantom row sp-78)
 - **Độ phủ WoRMS toàn hệ thống (Cá biển Tập I-VI)**: Đạt **1,764 / 1,764 loài (100.00%)** có mã AphiaID quốc tế và tên hợp lệ hiện hành.
 - **Độ phủ Dữ liệu Sinh học (FishBase Biology)**: Đạt **1,764 / 1,764 loài (100.00%)** có đầy đủ kích thước, độ sâu, môi trường sống, kiểu ăn và tình trạng bảo tồn.
-- **Bản dịch Sinh học tiếng Việt khoa học (Biology Summary VN)**: Đạt **1,074 / 1,128 loài (95.2%)** đã dịch chuẩn ngữ loại học và lưu trực tiếp vào CSDL Supabase.
-- **Độ phủ Ảnh minh họa Tập VI (Atlas cá rạn san hô)**: Đạt **259 / 263 loài (98.5%)** với **987 bức ảnh Research Grade** từ iNaturalist, có đầy đủ tác giả, bản quyền và ảnh đại diện (`photo_url`).
+- **Bản dịch Sinh học tiếng Việt khoa học (Biology Summary VN)**: Đạt **1,127 / 1,127 loài (100.00% HOÀN TẤT TUYỆT ĐỐI)** đã dịch chuẩn ngữ loại học và lưu trực tiếp vào CSDL Supabase.
+- **Độ phủ Ảnh minh họa Tập VI (Atlas cá rạn san hô)**: Đạt **259 / 263 loài (98.5%)** với **1,069 bức ảnh Research Grade** từ iNaturalist, có đầy đủ tác giả, bản quyền và ảnh đại diện (`photo_url`).
 - **Độ phủ tên tiếng Anh (`en_common_name`)**: 1,764 / 1,764 loài (100.00%)
 - **Độ phủ tên gọi khác tiếng Việt (`vn_alternate_names`)**: 1,764 / 1,764 loài (100.00%)
 
@@ -66,7 +66,7 @@ Deploy: Vercel CLI + GitHub (branch: master)
 | Route                    | Component                                          | Chức năng                                |
 | ------------------------ | -------------------------------------------------- | ------------------------------------------ |
 | `/`                    | `app/(public)/page.tsx`                          | Landing + GlobalSearch + Collection cards  |
-| `/ca-bien`             | `app/(public)/[collection]/page.tsx`             | Duyệt theo Tập                           |
+| `/ca-bien`             | `app/(public)/[collection]/page.tsx`             | Duyệt theo 2 Đầu sách & Compact List View  |
 | `/ca-bien/taxonomy`    | `app/(public)/[collection]/taxonomy/page.tsx`    | Cây phân loại                           |
 | `/ca-bien/[speciesId]` | `app/(public)/[collection]/[speciesId]/page.tsx` | Chi tiết loài                            |
 | `/admin`               | `app/(admin)/admin/page.tsx`                     | Dashboard stats + audit log                |

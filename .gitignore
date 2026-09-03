@@ -70,3 +70,7 @@ Documents/
 
 # Agent working files
 .agents/
+
+# Understand-Anything local data
+.ua/
+

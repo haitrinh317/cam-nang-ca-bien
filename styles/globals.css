@@ -195,7 +195,7 @@ a:focus-visible {
   top: 100%;
   left: 0;
   min-width: 180px;
-  background: var(--color-navy-deep);
+  background: var(--color-paper-navy);
   border: 1px solid var(--color-cyan-border);
   border-radius: var(--radius-md);
   padding: var(--space-2xs) 0;
@@ -304,7 +304,7 @@ a:focus-visible {
 .main-container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: calc(var(--nav-height) + var(--space-sm)) var(--space-xl) var(--space-xl);
+  padding: calc(var(--nav-height) + var(--space-2xl) + var(--space-2xs)) var(--space-xl) var(--space-xl);
 }
 
 /* ═══════════════════════════════════════════
@@ -320,6 +320,7 @@ a:focus-visible {
   position: relative;
   z-index: 50;
   overflow: visible;
+  margin-top: var(--space-xl);
   margin-bottom: var(--space-5xl);
   box-shadow: var(--shadow-lg);
 }
@@ -353,11 +354,13 @@ a:focus-visible {
   margin-bottom: var(--space-md);
 }
 
+/* Hallmark Gate 2: gradient text banned — solid accent colour + underline instead */
 .hero__accent {
-  background: linear-gradient(135deg, var(--brand-primary) 0%, #0ea5e9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-ink-on-cyan);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
 }
 
 .hero p {
@@ -1323,21 +1326,22 @@ a:focus-visible {
 
 .kv-label {
   font-family: var(--font-body);
-  font-size: 0.72rem;
-  color: var(--color-muted);
+  font-size: 0.85rem;
+  color: var(--color-ink-3);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: var(--space-3xs);
-  font-weight: 600;
+  margin-bottom: var(--space-2xs);
+  font-weight: 700;
 }
 
 .kv-label-en {
-  color: var(--color-neutral);
+  color: var(--color-ink-3);
+  opacity: 0.85;
 }
 
 .kv-value {
   font-family: var(--font-body);
-  font-size: var(--text-base);
+  font-size: 1.08rem;
   color: var(--color-ink);
   line-height: var(--lh-normal);
   font-weight: 500;
@@ -1347,6 +1351,7 @@ a:focus-visible {
 .kv-value-en {
   color: var(--color-ink-2);
   font-weight: 400;
+  font-size: 1.02rem;
 }
 
 /* ─── WoRMS / FishBase Bar ─── */
@@ -1809,7 +1814,7 @@ footer {
   }
 
   .main-container {
-    padding: calc(var(--nav-height) + var(--space-xs)) var(--space-md) var(--space-lg);
+    padding: calc(var(--nav-height) + var(--space-md)) var(--space-md) var(--space-lg);
   }
 
   .hero {
@@ -1836,12 +1841,17 @@ footer {
   .specimen__name { font-size: clamp(1.5rem, 6.5vw, var(--text-display-s)); }
   .specimen__taxonomy { padding: var(--space-sm) var(--space-md); }
   .specimen__section { padding: var(--space-md) var(--space-md); }
-  .kv-row { grid-template-columns: 1fr; gap: var(--space-sm); }
+  /* kv-row collapses at 900px (covers iPad Air portrait) — see separate rule below */
   .specimen details.synonym-details { margin: 0; }
   .specimen .biology-panel { margin: 0; }
 
   footer { padding: var(--space-3xl) var(--space-md) var(--space-2xl); }
   .footer__statement { font-size: clamp(1.5rem, 6vw, var(--text-2xl)); }
+}
+
+/* ─── kv-row: 1-column dưới 900px để cover cả iPad Air portrait ─── */
+@media (max-width: 900px) {
+  .kv-row { grid-template-columns: 1fr; gap: var(--space-sm); }
 }
 
 /* ═══════════════════════════════════════════
@@ -1866,7 +1876,7 @@ footer {
     padding: var(--space-2xs) var(--space-xs);
   }
   .main-container {
-    padding: calc(var(--nav-height) + var(--space-xs)) var(--space-md) var(--space-lg);
+    padding: calc(var(--nav-height) + var(--space-xl)) var(--space-md) var(--space-lg);
   }
   .specimen__hero {
     padding: var(--space-lg) var(--space-lg) var(--space-md);
@@ -3668,7 +3678,7 @@ footer {
   }
 
   .main-container {
-    padding: calc(var(--nav-height) + 6px) 10px var(--space-md);
+    padding: calc(var(--nav-height) + var(--space-md)) 12px var(--space-md);
   }
 
   .specimen {
@@ -4141,5 +4151,560 @@ footer {
     padding: var(--space-sm) var(--space-md);
   }
 }
+
+/* ═══════════════════════════════════════════
+   BOOK BROWSER & SPECIES LIST TABLE VIEW
+   Tối ưu hóa tải cực nhanh: không ảnh, chia theo đầu sách, list text-only
+   ═══════════════════════════════════════════ */
+
+/* Container chính của browser */
+.book-browser-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+  margin-bottom: var(--space-md);
+}
+
+/* 1. Thẻ đầu sách (Book Cards Grid) */
+.book-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.book-card {
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-out);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xs);
+}
+
+.book-card:hover {
+  border-color: var(--color-navy-raw);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.book-card.is-selected {
+  border-color: var(--color-cyan-raw);
+  background: linear-gradient(180deg, rgba(14, 165, 233, 0.08) 0%, var(--color-paper-2) 100%);
+  box-shadow: 0 6px 24px rgba(14, 165, 233, 0.15);
+}
+
+.bc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.bc-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(14, 165, 233, 0.15);
+  color: var(--color-cyan-raw);
+  letter-spacing: 0.02em;
+}
+
+.bc-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.bc-title {
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: var(--color-ink-1);
+  margin: 0 0 var(--space-xs) 0;
+  line-height: 1.3;
+}
+
+.bc-author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink-2);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.bc-desc {
+  font-size: 0.825rem;
+  color: var(--color-ink-3);
+  line-height: 1.5;
+  margin: 0 0 var(--space-md) 0;
+  flex: 1;
+}
+
+.bc-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color-ink-3);
+  border-top: 1px solid var(--color-rule);
+  padding-top: var(--space-sm);
+  margin-top: auto;
+}
+
+.bc-species-total {
+  font-weight: 800;
+  color: var(--color-ink-1);
+}
+
+/* 2. Danh sách tập trong đầu sách (Volume Tabs with full name) */
+.volume-full-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.volume-full-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-out);
+  width: 100%;
+}
+
+.volume-full-tab:hover {
+  border-color: var(--color-navy-raw);
+  background: var(--color-paper-3);
+  transform: translateX(2px);
+}
+
+.volume-full-tab.is-active {
+  background: var(--color-navy-raw);
+  border-color: var(--color-navy-raw);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.vft-roman {
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--color-paper-3);
+  color: var(--color-ink-2);
+  white-space: nowrap;
+  font-family: var(--font-outlier, inherit);
+}
+
+.volume-full-tab.is-active .vft-roman {
+  background: var(--color-cyan-raw);
+  color: #0f172a;
+}
+
+.vft-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.vft-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-ink-1);
+  margin-bottom: 2px;
+}
+
+.volume-full-tab.is-active .vft-title {
+  color: #ffffff;
+}
+
+.vft-sub {
+  font-size: 0.825rem;
+  color: var(--color-ink-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.volume-full-tab.is-active .vft-sub {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.vft-count {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-paper-3);
+  color: var(--color-ink-3);
+  white-space: nowrap;
+}
+
+.volume-full-tab.is-active .vft-count {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.single-volume-banner {
+  padding: var(--space-md) var(--space-xl);
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-md);
+}
+
+.svb-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-ink-1);
+  margin-bottom: 4px;
+}
+
+.svb-sub {
+  font-size: 0.85rem;
+  color: var(--color-ink-3);
+}
+
+/* 3. Bảng danh sách loài dạng List (Compact Table) */
+.species-list-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.species-list-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.slt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.slt-volume-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-ink-1);
+  margin: 0;
+}
+
+.slt-counter {
+  font-size: 0.85rem;
+  color: var(--color-ink-3);
+}
+
+.slt-filter-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 340px;
+}
+
+.slt-filter-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--color-ink-3);
+  pointer-events: none;
+}
+
+.slt-filter-input {
+  width: 100%;
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 2.25rem 0.55rem 2.4rem;
+  font-size: 0.875rem;
+  color: var(--color-ink-1);
+  font-family: var(--font-body);
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.slt-filter-input:focus {
+  outline: none;
+  border-color: var(--color-navy-raw);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.slt-filter-clear {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--color-ink-3);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.species-table-wrapper {
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  box-shadow: var(--shadow-xs);
+}
+
+.species-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.species-list-table th {
+  background: var(--color-paper-3);
+  padding: var(--space-md) var(--space-lg);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-3);
+  border-bottom: 1px solid var(--color-rule);
+  white-space: nowrap;
+}
+
+.species-list-table th.th-stt {
+  width: 80px;
+  text-align: center;
+}
+
+.species-list-table th.th-vn {
+  width: 40%;
+}
+
+.species-list-table th.th-action {
+  width: 50px;
+  text-align: right;
+}
+
+.species-row {
+  border-bottom: 1px solid var(--color-rule);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+.species-row:last-child {
+  border-bottom: none;
+}
+
+.species-row:hover {
+  background: rgba(14, 165, 233, 0.06);
+}
+
+.species-row td {
+  padding: var(--space-md) var(--space-xl);
+  vertical-align: middle;
+}
+
+.td-stt {
+  text-align: center;
+  width: 80px;
+}
+
+.stt-badge {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-ink-2);
+  font-family: var(--font-mono, monospace);
+  background: var(--color-paper-3);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--color-rule);
+}
+
+.td-vn {
+  font-weight: 700;
+}
+
+.species-vn-link {
+  color: var(--color-navy-raw);
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.35;
+  display: inline-block;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.species-row:hover .species-vn-link {
+  color: var(--color-cyan-raw);
+}
+
+.td-sci {
+  color: var(--color-ink-2);
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.sci-name {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--color-ink-1);
+  margin-right: var(--space-xs);
+}
+
+.sci-author {
+  font-size: 0.92rem;
+  color: var(--color-ink-3);
+  font-weight: 400;
+}
+
+.td-action {
+  text-align: right;
+  width: 50px;
+}
+
+.row-arrow {
+  color: var(--color-ink-4, #94a3b8);
+  transition: transform var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+
+.species-row:hover .row-arrow {
+  transform: translateX(4px);
+  color: var(--color-cyan-raw);
+}
+
+.td-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--color-ink-3);
+  font-size: var(--text-base);
+}
+
+.list-status-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 4rem 1rem;
+  color: var(--color-ink-3);
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+}
+
+.list-status-message.is-error {
+  color: #ef4444;
+}
+
+.species-mobile-sci {
+  display: none;
+}
+
+.desktop-only {
+  display: table-cell;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE TABLET & MOBILE (Tối ưu tra cứu to rõ)
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .book-cards-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .volume-full-tab {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .vft-count {
+    align-self: flex-start;
+  }
+
+  .species-list-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .slt-filter-box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .slt-filter-input {
+    font-size: 1.05rem;
+    padding: var(--space-sm) var(--space-md) var(--space-sm) 2.6rem;
+  }
+
+  /* Chuyển cột khoa học gộp vào cột tên Việt Nam trên mobile */
+  .desktop-only {
+    display: none !important;
+  }
+
+  .species-mobile-sci {
+    display: block;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  .species-list-table th.th-vn {
+    width: auto;
+  }
+
+  .species-row td {
+    padding: var(--space-md) var(--space-md);
+    vertical-align: middle;
+  }
+
+  .species-vn-link {
+    font-size: 1.15rem;
+    line-height: 1.35;
+  }
+
+  .species-mobile-sci .sci-name {
+    font-size: 1.02rem;
+  }
+
+  .species-mobile-sci .sci-author {
+    font-size: 0.88rem;
+  }
+
+  .td-stt {
+    width: 60px;
+  }
+
+  .stt-badge {
+    font-size: 0.9rem;
+    padding: 3px 8px;
+  }
+}
+
+
+
 
 

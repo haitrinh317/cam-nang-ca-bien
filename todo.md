@@ -1,8 +1,8 @@
 # TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-03 14:15
-> **Next Session Starting Point**: (1) Bổ sung CSV Import và Inline edit cho Admin Panel. (2) Bổ sung tên VN ~17 loài rong biển còn thiếu. (3) Mở rộng bộ sưu tập mới (San hô, Thân mềm) khi có tài liệu OCR tiếp theo.
-> **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Toàn bộ CSDL cá biển đạt 100% bản dịch sinh học tiếng Việt chuẩn khoa học.
+> Cập nhật: 2026-09-03 21:30 (Session End)
+> **Next Session Starting Point**: (1) Chạy /deploy đẩy phiên bản tra cứu theo đầu sách mới lên Vercel Production. (2) Bổ sung CSV Import và Inline edit cho Admin Panel. (3) Bổ sung tên VN ~17 loài rong biển còn thiếu. (4) Mở rộng bộ sưu tập mới (San hô, Thân mềm) khi có tài liệu OCR tiếp theo.
+> **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Trang tra cứu /ca-bien đã được thiết kế lại tối ưu: GlobalSearch cross-tập + Phân chia 2 đầu sách chính quy + Compact List View text-only cắt giảm 99% data transfer.
 
 ## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
 
@@ -213,3 +213,8 @@
 - [x] Giai đoạn 2: Tối ưu LCP PhotoGallery với fetchPriority="high" & decoding="async".
 - [x] Giai đoạn 2: Bổ sung vn_alternate_names và lọc deleted_at trong GlobalSearch.
 - [x] Giai đoạn 2: Tối ưu đếm số Họ từ taxonomy_tree trên trang chủ.
+- [x] Tái thiết kế trang `/ca-bien`: Tích hợp GlobalSearch cross-tập cho 1,764 loài.
+- [x] Phân nhóm theo 2 đầu sách chính quy: Danh mục Cá biển VN (5 tập) & Atlas Cá rạn san hô VN (Tập VI).
+- [x] Chuyển đổi toàn bộ sang Compact List View (STT - Tên VN - Tên khoa học), giảm 99% data transfer, load <100ms.
+- [x] Fix khoảng thở padding-top cho layout container tránh dính navbar cố định; đồng bộ 100% màu sắc và layout Card Hero trang cá biển.
+

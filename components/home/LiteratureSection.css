@@ -1,0 +1,269 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   LITERATURE SECTION — HERITAGE SCIENTIFIC ARCHIVE
+   Chuẩn thiết kế: Hallmark (Editorial Archival) + UI-UX-PRO-MAX (Glassmorphism)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.lit-section {
+  margin: var(--space-4xl) 0 var(--space-5xl);
+  position: relative;
+}
+
+/* ── Section Header ── */
+.lit-header {
+  margin-bottom: var(--space-3xl);
+}
+
+.lit-badge-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  margin-bottom: var(--space-md);
+}
+
+.lit-badge-text {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-cyan-raw);
+}
+
+.lit-title {
+  font-family: var(--font-display, 'Lora', serif);
+  font-size: clamp(1.85rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--color-navy-raw);
+  line-height: 1.25;
+  margin: 0 0 var(--space-sm) 0;
+  letter-spacing: -0.01em;
+}
+
+.lit-subtitle {
+  font-size: var(--text-base);
+  color: var(--color-ink-3);
+  max-width: 68ch;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Literature Grid ── */
+.lit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-xl);
+  align-items: stretch;
+}
+
+/* ── Literature Card ── */
+.lit-card {
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px -2px rgba(12, 20, 42, 0.05);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+/* Top Accent Bar */
+.lit-card__accent-bar {
+  height: 5px;
+  width: 100%;
+  background: var(--card-accent-grad, linear-gradient(90deg, #0ea5e9, #38bdf8));
+  transition: height 0.2s ease;
+}
+
+.lit-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--card-accent-color, var(--color-cyan-raw));
+  box-shadow: 0 16px 36px -4px var(--card-accent-shadow, rgba(14, 165, 233, 0.18));
+}
+
+.lit-card:hover .lit-card__accent-bar {
+  height: 7px;
+}
+
+/* Card Body */
+.lit-card__body {
+  padding: var(--space-2xl) var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Top Meta Row */
+.lit-card__top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.lit-card__icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-lg);
+  background: var(--card-icon-bg, rgba(14, 165, 233, 0.1));
+  color: var(--card-accent-color, var(--color-cyan-raw));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.lit-card:hover .lit-card__icon-box {
+  transform: scale(1.08);
+}
+
+.lit-card__pill {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--card-pill-bg, rgba(14, 165, 233, 0.1));
+  color: var(--card-accent-color, var(--color-cyan-raw));
+  border: 1px solid var(--card-pill-border, rgba(14, 165, 233, 0.2));
+}
+
+/* Title & Authors */
+.lit-card__title {
+  font-family: var(--font-display, 'Lora', serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-navy-raw);
+  line-height: 1.35;
+  margin: 0 0 var(--space-xs) 0;
+  transition: color 0.2s ease;
+}
+
+.lit-card:hover .lit-card__title {
+  color: var(--card-accent-color, var(--color-cyan-raw));
+}
+
+.lit-card__author {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--color-ink-2);
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lit-card__pub {
+  font-size: 0.9rem;
+  color: var(--color-ink-3);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.lit-card__desc {
+  font-size: 0.98rem;
+  color: var(--color-ink-3);
+  line-height: 1.6;
+  margin: 0 0 var(--space-lg) 0;
+  flex: 1;
+}
+
+/* Mini Chips Scope */
+.lit-card__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--color-rule);
+}
+
+.lit-chip {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--color-paper-3);
+  color: var(--color-ink-2);
+  border: 1px solid var(--color-rule);
+}
+
+/* Card Footer CTA */
+.lit-card__footer {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--color-paper-1);
+  border-top: 1.5px solid var(--color-rule);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lit-card__stat-count {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-navy-raw);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.lit-card__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--card-accent-color, var(--color-cyan-raw));
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: gap 0.2s ease;
+}
+
+.lit-card:hover .lit-card__cta-btn {
+  gap: 10px;
+}
+
+/* ── Dark Mode Harmony ── */
+[data-theme="dark"] .lit-card {
+  background: rgba(18, 28, 54, 0.7);
+  backdrop-filter: blur(12px);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .lit-card__footer {
+  background: rgba(12, 20, 42, 0.6);
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .lit-chip {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-ink-2);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1080px) {
+  .lit-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .lit-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .lit-card__body {
+    padding: var(--space-xl) var(--space-xl) var(--space-lg);
+  }
+  .lit-card__footer {
+    padding: var(--space-md) var(--space-xl);
+  }
+}
