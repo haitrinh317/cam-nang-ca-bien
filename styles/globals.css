@@ -374,7 +374,7 @@ a:focus-visible {
 /* Hero live stats */
 .hero__stats {
   display: flex;
-  align-items: center;
+  align-items: flex-start;   /* numbers always top-align, labels can vary */
   gap: var(--space-xl);
   margin-top: var(--space-2xl);
   animation: fadeUp 0.6s var(--ease-out) 0.3s both;
@@ -385,24 +385,28 @@ a:focus-visible {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.hero__stat { text-align: center; }
+.hero__stat { text-align: left; }
 .hero__stat-num {
   display: block;
   font-size: 2rem;
   font-weight: 800;
   color: var(--color-navy-raw);
   line-height: 1;
+  font-variant-numeric: tabular-nums;  /* all digits same width — no shifting */
 }
 .hero__stat-label {
   font-size: 0.85rem;
   color: var(--color-ink-a70);
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
+  white-space: nowrap;                  /* prevent multi-line label */
 }
 .hero__stat-divider {
   width: 1px;
   height: 2rem;
   background: var(--color-ink-a70);
   opacity: 0.25;
+  flex-shrink: 0;
+  margin-top: 0.2rem;   /* align with number baseline */
 }
 
 /* ─── Search Box ─── */

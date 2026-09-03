@@ -19,6 +19,8 @@ export default function GlobalSearch() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'empty' | 'error'>('idle')
   const [open, setOpen] = useState(false)
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  // ponytail: flag prevents onBlur closing dropdown before touch navigation fires
+  const clickingResult = useRef(false)
 
   const doSearch = useCallback(async (q: string) => {
     setStatus('loading')
@@ -53,7 +55,10 @@ export default function GlobalSearch() {
       className={`search-wrapper${open ? ' is-open' : ''}`}
       style={{ zIndex: open ? 1000 : 50 }}
       onBlur={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget)) setOpen(false)
+        // Only close if focus left the wrapper AND we're not mid-tap on a result
+        if (!e.currentTarget.contains(e.relatedTarget) && !clickingResult.current) {
+          setOpen(false)
+        }
       }}
     >
       <div className="search-input-container">
@@ -88,7 +93,11 @@ export default function GlobalSearch() {
               key={item.id}
               href={`/${item.collection_id || 'ca-bien'}/${item.id}`}
               className="result-item"
-              onClick={() => setOpen(false)}
+              onPointerDown={() => { clickingResult.current = true }}
+              onClick={() => {
+                clickingResult.current = false
+                setOpen(false)
+              }}
             >
               <div>
                 <div className="ri-name">{item.vn_name}</div>
