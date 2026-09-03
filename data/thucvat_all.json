@@ -204,7 +204,8 @@
     "tax_family_vn": "Họ Rau Câu",
     "tax_genus_latin": "Gracilaria",
     "tax_genus_vn": "Chi Gracilaria",
-    "biology": "{\"fbName\": \"Salicornia Gracilaria / Jointed Gracilaria\", \"depth\": \"0 - 4 m\", \"depthVn\": \"0 - 4 m\", \"habitat\": \"Lower intertidal to shallow subtidal reef flats, attached to rocks and coral rubbles\", \"habitatVn\": \"Đới triều thấp đến dưới triều cạn trên các rạn san hô phẳng, bám trên đá và vụn san hô\", \"importance\": \"Wild harvest for agar production and local food consumption\", \"importanceVn\": \"Khai thác tự nhiên để sản xuất thạch agar và chế biến món ăn địa phương\", \"biologySummary\": \"Thallus bright yellow-green to dark brown, forming dense stiff clumps up to 15 cm across. Branches distinctly constricted at intervals into cylindrical or clavate nodes/joints resembling Salicornia stems. Highly tolerant of high light and temperature on intertidal reef flats.\", \"biologySummaryVn\": \"Tản rong màu vàng lục sáng đến nâu sẫm, mọc thành bụi dày cứng rộng tới 15 cm. Các cành nhánh thắt ngẫng rõ rệt thành từng đốt hình trụ hoặc hình dùi đặc trưng như cây rong đốt. Có khả năng chịu đựng cao với cường độ chiếu sáng và nhiệt độ lớn ở các đới triều phẳng.\", \"algaebaseId\": 1920, \"algaebaseUrl\": \"https://www.algaebase.org/search/species/detail/?species_id=1920\"}"
+    "biology": "{\"fbName\": \"Salicornia Gracilaria / Jointed Gracilaria\", \"depth\": \"0 - 4 m\", \"depthVn\": \"0 - 4 m\", \"habitat\": \"Lower intertidal to shallow subtidal reef flats, attached to rocks and coral rubbles\", \"habitatVn\": \"Đới triều thấp đến dưới triều cạn trên các rạn san hô phẳng, bám trên đá và vụn san hô\", \"importance\": \"Wild harvest for agar production and local food consumption\", \"importanceVn\": \"Khai thác tự nhiên để sản xuất thạch agar và chế biến món ăn địa phương\", \"biologySummary\": \"Thallus bright yellow-green to dark brown, forming dense stiff clumps up to 15 cm across. Branches distinctly constricted at intervals into cylindrical or clavate nodes/joints resembling Salicornia stems. Highly tolerant of high light and temperature on intertidal reef flats.\", \"biologySummaryVn\": \"Tản rong màu vàng lục sáng đến nâu sẫm, mọc thành bụi dày cứng rộng tới 15 cm. Các cành nhánh thắt ngẫng rõ rệt thành từng đốt hình trụ hoặc hình dùi đặc trưng như cây rong đốt. Có khả năng chịu đựng cao với cường độ chiếu sáng và nhiệt độ lớn ở các đới triều phẳng.\", \"algaebaseId\": 1920, \"algaebaseUrl\": \"https://www.algaebase.org/search/species/detail/?species_id=1920\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-4/01.webp"
   },
   {
     "id": "thucvat-species-5",
@@ -359,7 +360,8 @@
     "tax_family_vn": "Họ Rau Câu",
     "tax_genus_latin": "Gracilaria",
     "tax_genus_vn": "Chi Gracilaria",
-    "biology": "{\"fbName\": \"Gracilaria Seaweed\", \"depth\": \"0.5 - 3 m\", \"depthVn\": \"0,5 - 3 m\", \"habitat\": \"Shallow coastal waters and reef flats\", \"habitatVn\": \"Vùng nước ven bờ và bãi triều san hô cạn\", \"importance\": \"Traditional harvesting for food and local home-made jelly\", \"importanceVn\": \"Khai thác dân gian làm thạch giải khát và chế biến thực phẩm\", \"biologySummary\": \"Unidentified species of the genus Gracilaria recorded in Vietnam coastal waters.\", \"biologySummaryVn\": \"Loài thuộc chi Rau Câu Gracilaria ghi nhận tại vùng biển ven bờ Việt Nam.\", \"algaebaseId\": 144188, \"algaebaseUrl\": \"https://www.algaebase.org/search/genus/detail/?genus_id=144188\"}"
+    "biology": "{\"fbName\": \"Gracilaria Seaweed\", \"depth\": \"0.5 - 3 m\", \"depthVn\": \"0,5 - 3 m\", \"habitat\": \"Shallow coastal waters and reef flats\", \"habitatVn\": \"Vùng nước ven bờ và bãi triều san hô cạn\", \"importance\": \"Traditional harvesting for food and local home-made jelly\", \"importanceVn\": \"Khai thác dân gian làm thạch giải khát và chế biến thực phẩm\", \"biologySummary\": \"Unidentified species of the genus Gracilaria recorded in Vietnam coastal waters.\", \"biologySummaryVn\": \"Loài thuộc chi Rau Câu Gracilaria ghi nhận tại vùng biển ven bờ Việt Nam.\", \"algaebaseId\": 144188, \"algaebaseUrl\": \"https://www.algaebase.org/search/genus/detail/?genus_id=144188\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-7/01.webp"
   },
   {
     "id": "thucvat-species-8",
@@ -410,7 +412,8 @@
     "tax_family_vn": "Họ Rau Câu",
     "tax_genus_latin": "Gracilaria",
     "tax_genus_vn": "Chi Gracilaria",
-    "biology": "{\"fbName\": \"Gracilaria Seaweed\", \"depth\": \"0.5 - 3 m\", \"depthVn\": \"0,5 - 3 m\", \"habitat\": \"Shallow coastal waters and reef flats\", \"habitatVn\": \"Vùng nước ven bờ và bãi triều san hô cạn\", \"importance\": \"Local food consumption\", \"importanceVn\": \"Khai thác làm thực phẩm\", \"biologySummary\": \"Unidentified species of the genus Gracilaria recorded in Vietnam coastal waters.\", \"biologySummaryVn\": \"Loài thuộc chi Rau Câu Gracilaria ghi nhận tại vùng biển ven bờ Việt Nam.\", \"algaebaseId\": 144188, \"algaebaseUrl\": \"https://www.algaebase.org/search/genus/detail/?genus_id=144188\"}"
+    "biology": "{\"fbName\": \"Gracilaria Seaweed\", \"depth\": \"0.5 - 3 m\", \"depthVn\": \"0,5 - 3 m\", \"habitat\": \"Shallow coastal waters and reef flats\", \"habitatVn\": \"Vùng nước ven bờ và bãi triều san hô cạn\", \"importance\": \"Local food consumption\", \"importanceVn\": \"Khai thác làm thực phẩm\", \"biologySummary\": \"Unidentified species of the genus Gracilaria recorded in Vietnam coastal waters.\", \"biologySummaryVn\": \"Loài thuộc chi Rau Câu Gracilaria ghi nhận tại vùng biển ven bờ Việt Nam.\", \"algaebaseId\": 144188, \"algaebaseUrl\": \"https://www.algaebase.org/search/genus/detail/?genus_id=144188\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-8/01.webp"
   },
   {
     "id": "thucvat-species-9",
@@ -513,7 +516,8 @@
     "tax_family_vn": "Họ Rau Câu",
     "tax_genus_latin": "Hydropuntia",
     "tax_genus_vn": "Chi Hydropuntia",
-    "biology": "{\"fbName\": \"Edible Gracilaria\", \"depth\": \"0.5 - 6 m\", \"depthVn\": \"0,5 - 6 m\", \"habitat\": \"Subtidal coral reef flats and lagoons attached to sandy rocks\", \"habitatVn\": \"Vùng triều thấp và đới dưới triều rạn san hô, bám vào đá cát\", \"importance\": \"Traditional culinary delicacy and source of agar\", \"importanceVn\": \"Thực phẩm truyền thống lâu đời và nguồn nguyên liệu sản xuất agar\", \"biologySummary\": \"Thallus erect, caespitose, dark purple to dark reddish-brown, 10–25 cm long. Branches cylindrical, succulent, tapering towards apices. Highly edible and consumed fresh or dried throughout Southeast Asia.\", \"biologySummaryVn\": \"Tản rong mọc đứng thành bụi, màu đỏ tím sẫm đến nâu đỏ, cao 10–25 cm. Cành nhánh hình trụ mọng nước, thon dần về ngọn. Rất ngon miệng, được dùng ăn tươi trong các món gỏi hoặc phơi khô nấu thạch khắp Đông Nam Á.\", \"algaebaseId\": 1946, \"algaebaseUrl\": \"https://www.algaebase.org/search/species/detail/?species_id=1946\"}"
+    "biology": "{\"fbName\": \"Edible Gracilaria\", \"depth\": \"0.5 - 6 m\", \"depthVn\": \"0,5 - 6 m\", \"habitat\": \"Subtidal coral reef flats and lagoons attached to sandy rocks\", \"habitatVn\": \"Vùng triều thấp và đới dưới triều rạn san hô, bám vào đá cát\", \"importance\": \"Traditional culinary delicacy and source of agar\", \"importanceVn\": \"Thực phẩm truyền thống lâu đời và nguồn nguyên liệu sản xuất agar\", \"biologySummary\": \"Thallus erect, caespitose, dark purple to dark reddish-brown, 10–25 cm long. Branches cylindrical, succulent, tapering towards apices. Highly edible and consumed fresh or dried throughout Southeast Asia.\", \"biologySummaryVn\": \"Tản rong mọc đứng thành bụi, màu đỏ tím sẫm đến nâu đỏ, cao 10–25 cm. Cành nhánh hình trụ mọng nước, thon dần về ngọn. Rất ngon miệng, được dùng ăn tươi trong các món gỏi hoặc phơi khô nấu thạch khắp Đông Nam Á.\", \"algaebaseId\": 1946, \"algaebaseUrl\": \"https://www.algaebase.org/search/species/detail/?species_id=1946\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-10/01.webp"
   },
   {
     "id": "thucvat-species-11",
@@ -564,7 +568,8 @@
     "tax_family_vn": "Họ Rau Câu",
     "tax_genus_latin": "Hydropuntia",
     "tax_genus_vn": "Chi Hydropuntia",
-    "biology": "{\"fbName\": \"Hydropuntia Seaweed\", \"depth\": \"0.5 - 5 m\", \"depthVn\": \"0,5 - 5 m\", \"habitat\": \"Subtidal coral reef flats and rocky bottoms\", \"habitatVn\": \"Đới dưới triều rạn san hô và nền đáy đá\", \"importance\": \"Source of agar and food\", \"importanceVn\": \"Nguồn sản xuất agar và thực phẩm\", \"biologySummary\": \"Species belonging to genus Hydropuntia recorded in coastal waters of Vietnam.\", \"biologySummaryVn\": \"Loài thuộc chi Rong Câu đỏ Hydropuntia ghi nhận ở vùng biển ven bờ Việt Nam.\", \"algaebaseId\": 369787, \"algaebaseUrl\": \"https://www.algaebase.org/search/genus/detail/?genus_id=369787\"}"
+    "biology": "{\"fbName\": \"Hydropuntia Seaweed\", \"depth\": \"0.5 - 5 m\", \"depthVn\": \"0,5 - 5 m\", \"habitat\": \"Subtidal coral reef flats and rocky bottoms\", \"habitatVn\": \"Đới dưới triều rạn san hô và nền đáy đá\", \"importance\": \"Source of agar and food\", \"importanceVn\": \"Nguồn sản xuất agar và thực phẩm\", \"biologySummary\": \"Species belonging to genus Hydropuntia recorded in coastal waters of Vietnam.\", \"biologySummaryVn\": \"Loài thuộc chi Rong Câu đỏ Hydropuntia ghi nhận ở vùng biển ven bờ Việt Nam.\", \"algaebaseId\": 369787, \"algaebaseUrl\": \"https://www.algaebase.org/search/genus/detail/?genus_id=369787\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-11/01.webp"
   },
   {
     "id": "thucvat-species-12",
@@ -615,7 +620,8 @@
     "tax_family_vn": "Họ Rong Sơn Biên",
     "tax_genus_latin": "Champia",
     "tax_genus_vn": "Chi Champia",
-    "biology": "{\"fbName\": \"Small Barrel Seaweed\", \"depth\": \"0 - 10 m\", \"depthVn\": \"0 - 10 m\", \"habitat\": \"Epiphytic on other seaweeds or attached to coral fragments in tide pools and shallow subtidal zones\", \"habitatVn\": \"Mọc biểu sinh trên các loài rong khác hoặc bám mảnh san hô trong vũng triều và vùng dưới triều nông\", \"importance\": \"Ecological indicator species, source of bioactive polysaccharides\", \"importanceVn\": \"Loài chỉ thị sinh thái rạn san hô, nguồn chiết xuất polysaccharide hoạt tính sinh học\", \"biologySummary\": \"Thallus small, delicate, tubular and gelatinous, 3–10 cm tall, displaying beautiful blue or greenish iridescence under water. Branches barrel-shaped, segmented with internal diaphragms.\", \"biologySummaryVn\": \"Tản rong nhỏ nhắn, dạng ống mềm chứa chất keo, cao 3–10 cm, phát ánh sắc óng ánh xanh lam hoặc lục tuyệt đẹp dưới làn nước biển. Các nhánh hình thùng nhỏ có vách ngăn ngang bên trong.\", \"algaebaseId\": 160, \"algaebaseUrl\": \"https://www.algaebase.org/search/species/detail/?species_id=160\"}"
+    "biology": "{\"fbName\": \"Small Barrel Seaweed\", \"depth\": \"0 - 10 m\", \"depthVn\": \"0 - 10 m\", \"habitat\": \"Epiphytic on other seaweeds or attached to coral fragments in tide pools and shallow subtidal zones\", \"habitatVn\": \"Mọc biểu sinh trên các loài rong khác hoặc bám mảnh san hô trong vũng triều và vùng dưới triều nông\", \"importance\": \"Ecological indicator species, source of bioactive polysaccharides\", \"importanceVn\": \"Loài chỉ thị sinh thái rạn san hô, nguồn chiết xuất polysaccharide hoạt tính sinh học\", \"biologySummary\": \"Thallus small, delicate, tubular and gelatinous, 3–10 cm tall, displaying beautiful blue or greenish iridescence under water. Branches barrel-shaped, segmented with internal diaphragms.\", \"biologySummaryVn\": \"Tản rong nhỏ nhắn, dạng ống mềm chứa chất keo, cao 3–10 cm, phát ánh sắc óng ánh xanh lam hoặc lục tuyệt đẹp dưới làn nước biển. Các nhánh hình thùng nhỏ có vách ngăn ngang bên trong.\", \"algaebaseId\": 160, \"algaebaseUrl\": \"https://www.algaebase.org/search/species/detail/?species_id=160\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-12/01.webp"
   },
   {
     "id": "thucvat-species-13",
@@ -666,7 +672,8 @@
     "tax_family_vn": "Họ Lomentariaceae",
     "tax_genus_latin": "Ceratodictyon",
     "tax_genus_vn": "Chi Ceratodictyon",
-    "biology": "{\"fbName\": \"Sponge Seaweed / Horn-sponge Algae\", \"depth\": \"0.5 - 5 m\", \"depthVn\": \"0,5 - 5 m\", \"habitat\": \"Symbiotic association with marine sponges (*Haliclona cymaeformis*) on shallow coral reef flats\", \"habitatVn\": \"Cộng sinh bắt buộc với bọt biển (*Haliclona cymaeformis*) trên các rạn san hô nông\", \"importance\": \"Key reef-building organism, model organism for marine symbiosis research\", \"importanceVn\": \"Cấu thành sinh thái rạn san hô, đối tượng nghiên cứu cộng sinh tảo - bọt biển độc đáo\", \"biologySummary\": \"Unique obligate symbiotic association where the red alga forms a hard cartilaginous branching network thoroughly embedded within the tissues of a marine sponge. Branches irregular, resembling deer antlers, forming sprawling green-brown masses on reef surfaces.\", \"biologySummaryVn\": \"Hiện tượng cộng sinh bắt buộc độc nhất vô nhị giữa rong đỏ và bọt biển: tản rong tạo thành mạng lưới sừng cứng phân nhánh nằm trọn bên trong mô của bọt biển biển. Nhánh gồ ghề như gạc nai, tạo thành các tảng xốp màu nâu lục trên mặt rạn san hô.\", \"algaebaseId\": 2100, \"algaebaseUrl\": \"https://www.algaebase.org/search/species/detail/?species_id=2100\"}"
+    "biology": "{\"fbName\": \"Sponge Seaweed / Horn-sponge Algae\", \"depth\": \"0.5 - 5 m\", \"depthVn\": \"0,5 - 5 m\", \"habitat\": \"Symbiotic association with marine sponges (*Haliclona cymaeformis*) on shallow coral reef flats\", \"habitatVn\": \"Cộng sinh bắt buộc với bọt biển (*Haliclona cymaeformis*) trên các rạn san hô nông\", \"importance\": \"Key reef-building organism, model organism for marine symbiosis research\", \"importanceVn\": \"Cấu thành sinh thái rạn san hô, đối tượng nghiên cứu cộng sinh tảo - bọt biển độc đáo\", \"biologySummary\": \"Unique obligate symbiotic association where the red alga forms a hard cartilaginous branching network thoroughly embedded within the tissues of a marine sponge. Branches irregular, resembling deer antlers, forming sprawling green-brown masses on reef surfaces.\", \"biologySummaryVn\": \"Hiện tượng cộng sinh bắt buộc độc nhất vô nhị giữa rong đỏ và bọt biển: tản rong tạo thành mạng lưới sừng cứng phân nhánh nằm trọn bên trong mô của bọt biển biển. Nhánh gồ ghề như gạc nai, tạo thành các tảng xốp màu nâu lục trên mặt rạn san hô.\", \"algaebaseId\": 2100, \"algaebaseUrl\": \"https://www.algaebase.org/search/species/detail/?species_id=2100\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-13/01.webp"
   },
   {
     "id": "thucvat-species-14",
@@ -716,7 +723,8 @@
     "tax_family_vn": "Họ Rong Thạch Giả Lomentaria",
     "tax_genus_latin": "Gelidiopsis",
     "tax_genus_vn": "Chi Gelidiopsis",
-    "biology": "{\"fbName\": \"Ceratodictyon intricatum\", \"depth\": \"1.0 m\", \"depthVn\": \"1.0 m\", \"habitat\": \"This species is found on rocks and gravel that are frequently covered with grit in the lower intertidal zone of shores with calm to moderate wave action\", \"habitatVn\": \"mọc trên đá hay sỏi đá nhỏ có phủ đá mịn ở mực triều thấp, nơi nước yên đến sóng vừa\", \"importance\": \"Wild harvest for agar production / edible seaweed\", \"importanceVn\": \"Khai thác tự nhiên, sản xuất agar / thực phẩm\", \"biologySummary\": \"Plants have erect branches that are terete to slightly compressed, dichotomously divided with narrow angles, and acuminate at their apices. The colour is light to dark brown. This species is found on rocks and gravel that are frequently covered with grit in the lower intertidal zone of shores with calm to moderate wave action.\", \"biologySummaryVn\": \"Nhánh đứng trụ tròn đến hơi dẹp, chia nhánh chạc hai với góc hẹp, đỉnh nhọn. Rong màu nâu nhạt đến thẫm, mọc trên đá hay sỏi đá nhỏ có phủ đá mịn ở mực triều thấp, nơi nước yên đến sóng vừa.\", \"algaebaseId\": 145819, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=145819\"}"
+    "biology": "{\"fbName\": \"Ceratodictyon intricatum\", \"depth\": \"1.0 m\", \"depthVn\": \"1.0 m\", \"habitat\": \"This species is found on rocks and gravel that are frequently covered with grit in the lower intertidal zone of shores with calm to moderate wave action\", \"habitatVn\": \"mọc trên đá hay sỏi đá nhỏ có phủ đá mịn ở mực triều thấp, nơi nước yên đến sóng vừa\", \"importance\": \"Wild harvest for agar production / edible seaweed\", \"importanceVn\": \"Khai thác tự nhiên, sản xuất agar / thực phẩm\", \"biologySummary\": \"Plants have erect branches that are terete to slightly compressed, dichotomously divided with narrow angles, and acuminate at their apices. The colour is light to dark brown. This species is found on rocks and gravel that are frequently covered with grit in the lower intertidal zone of shores with calm to moderate wave action.\", \"biologySummaryVn\": \"Nhánh đứng trụ tròn đến hơi dẹp, chia nhánh chạc hai với góc hẹp, đỉnh nhọn. Rong màu nâu nhạt đến thẫm, mọc trên đá hay sỏi đá nhỏ có phủ đá mịn ở mực triều thấp, nơi nước yên đến sóng vừa.\", \"algaebaseId\": 145819, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=145819\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-14/01.webp"
   },
   {
     "id": "thucvat-species-15",
@@ -971,7 +979,8 @@
     "tax_order_vn": "Bộ Rong Đỏ Ceramiales",
     "tax_family_latin": "Dasyaceae",
     "tax_family_vn": "Họ Rong Bông Dasyaceae",
-    "biology": "{\"fbName\": \"Plumose Red Seaweed\", \"depth\": \"1 - 5 m\", \"depthVn\": \"1 - 5 m\", \"habitat\": \"Subtidal rocky reefs exposed to moderate wave action\", \"habitatVn\": \"Rạn đá vùng dưới triều nơi sóng vừa\", \"importance\": \"Reef ecosystem component\", \"importanceVn\": \"Cấu phần hệ sinh thái rạn san hô\", \"biologySummary\": \"Delicate red alga with feathery plumose branchlets giving a soft fuzzy appearance underwater.\", \"biologySummaryVn\": \"Rong đỏ thanh mảnh với các nhánh nhỏ dạng lông chim mềm mại tạo vẻ bông xù dưới nước.\", \"algaebaseId\": null, \"algaebaseUrl\": null}"
+    "biology": "{\"fbName\": \"Plumose Red Seaweed\", \"depth\": \"1 - 5 m\", \"depthVn\": \"1 - 5 m\", \"habitat\": \"Subtidal rocky reefs exposed to moderate wave action\", \"habitatVn\": \"Rạn đá vùng dưới triều nơi sóng vừa\", \"importance\": \"Reef ecosystem component\", \"importanceVn\": \"Cấu phần hệ sinh thái rạn san hô\", \"biologySummary\": \"Delicate red alga with feathery plumose branchlets giving a soft fuzzy appearance underwater.\", \"biologySummaryVn\": \"Rong đỏ thanh mảnh với các nhánh nhỏ dạng lông chim mềm mại tạo vẻ bông xù dưới nước.\", \"algaebaseId\": null, \"algaebaseUrl\": null}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-19/01.webp"
   },
   {
     "id": "thucvat-species-20",
@@ -1020,7 +1029,8 @@
     "tax_order_vn": "Bộ Rong Đỏ Ceramiales",
     "tax_family_latin": "Dasyaceae",
     "tax_family_vn": "Họ Rong Bông Dasyaceae",
-    "biology": "{\"fbName\": \"Pink Plumose Seaweed\", \"depth\": \"2 - 6 m\", \"depthVn\": \"2 - 6 m\", \"habitat\": \"Rocks in the subtidal zone of shores exposed to moderate to strong wave action\", \"habitatVn\": \"Mọc trên đá ở vùng dưới triều, nơi sóng vừa đến mạnh\", \"importance\": \"Marine biodiversity indicator\", \"importanceVn\": \"Chỉ thị đa dạng sinh học biển\", \"biologySummary\": \"Light pink underwater changing to reddish brown when dried, branches cylindrical with dense plumose ramuli.\", \"biologySummaryVn\": \"Màu hồng nhạt dưới nước đổi thành nâu đỏ khi khô, nhánh trụ tròn mang nhiều nhánh nhỏ dạng lông chim.\", \"algaebaseId\": null, \"algaebaseUrl\": null}"
+    "biology": "{\"fbName\": \"Pink Plumose Seaweed\", \"depth\": \"2 - 6 m\", \"depthVn\": \"2 - 6 m\", \"habitat\": \"Rocks in the subtidal zone of shores exposed to moderate to strong wave action\", \"habitatVn\": \"Mọc trên đá ở vùng dưới triều, nơi sóng vừa đến mạnh\", \"importance\": \"Marine biodiversity indicator\", \"importanceVn\": \"Chỉ thị đa dạng sinh học biển\", \"biologySummary\": \"Light pink underwater changing to reddish brown when dried, branches cylindrical with dense plumose ramuli.\", \"biologySummaryVn\": \"Màu hồng nhạt dưới nước đổi thành nâu đỏ khi khô, nhánh trụ tròn mang nhiều nhánh nhỏ dạng lông chim.\", \"algaebaseId\": null, \"algaebaseUrl\": null}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-20/01.webp"
   },
   {
     "id": "thucvat-species-21",
@@ -1069,7 +1079,8 @@
     "tax_order_vn": "Bộ Rong Đỏ Ceramiales",
     "tax_family_latin": "Dasyaceae",
     "tax_family_vn": "Họ Rong Bông Dasyaceae",
-    "biology": "{\"fbName\": \"Bushy Feather Seaweed\", \"depth\": \"2 - 8 m\", \"depthVn\": \"2 - 8 m\", \"habitat\": \"Subtidal rock faces in turbulent clean water\", \"habitatVn\": \"Vách đá dưới triều nơi nước trong và sóng mạnh\", \"importance\": \"Benthic habitat builder\", \"importanceVn\": \"Tạo nơi cư trú cho sinh vật đáy nhỏ\", \"biologySummary\": \"Erect bushy thallus with dense spiral plumose branchlets, dark red to purple.\", \"biologySummaryVn\": \"Tản rong mọc đứng thành bụi mang các cành nhánh lông chim dày đặc màu đỏ sẫm đến tím.\", \"algaebaseId\": null, \"algaebaseUrl\": null}"
+    "biology": "{\"fbName\": \"Bushy Feather Seaweed\", \"depth\": \"2 - 8 m\", \"depthVn\": \"2 - 8 m\", \"habitat\": \"Subtidal rock faces in turbulent clean water\", \"habitatVn\": \"Vách đá dưới triều nơi nước trong và sóng mạnh\", \"importance\": \"Benthic habitat builder\", \"importanceVn\": \"Tạo nơi cư trú cho sinh vật đáy nhỏ\", \"biologySummary\": \"Erect bushy thallus with dense spiral plumose branchlets, dark red to purple.\", \"biologySummaryVn\": \"Tản rong mọc đứng thành bụi mang các cành nhánh lông chim dày đặc màu đỏ sẫm đến tím.\", \"algaebaseId\": null, \"algaebaseUrl\": null}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-21/01.webp"
   },
   {
     "id": "thucvat-species-22",
@@ -1322,7 +1333,8 @@
     "tax_family_vn": "Họ Rong Mào Gà",
     "tax_genus_latin": "Chondria",
     "tax_genus_vn": "Chi Chondria",
-    "biology": "{\"fbName\": \"Chondria ryukyuensis\", \"depth\": \"3.5 m\", \"depthVn\": \"3.5 m\", \"habitat\": \"Intertidal to shallow subtidal coastal waters\", \"habitatVn\": \"Vùng triều và đới dưới triều cạn ven biển\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants have thick, terete, rigid stipes and flat branches that divide alternately. This species is greenish and fluoresces pink when underwater, and is orange to light red when dried. Like C. armata, plants frequently associate with corals such as Fuvia species.\", \"biologySummaryVn\": \"Rong có cuống trụ đứng, dày, cứng. Nhánh dẹp chia chạc hai cách. Rong màu lục, phát huỳnh quang hồng khi ở dưới nước, khi khô có màu hơi cam đến đỏ nhạt, mọc chung với san hô, như loài Fuvia spp., giống như Chondria armata.\", \"algaebaseId\": 372457, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=372457\"}"
+    "biology": "{\"fbName\": \"Chondria ryukyuensis\", \"depth\": \"3.5 m\", \"depthVn\": \"3.5 m\", \"habitat\": \"Intertidal to shallow subtidal coastal waters\", \"habitatVn\": \"Vùng triều và đới dưới triều cạn ven biển\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants have thick, terete, rigid stipes and flat branches that divide alternately. This species is greenish and fluoresces pink when underwater, and is orange to light red when dried. Like C. armata, plants frequently associate with corals such as Fuvia species.\", \"biologySummaryVn\": \"Rong có cuống trụ đứng, dày, cứng. Nhánh dẹp chia chạc hai cách. Rong màu lục, phát huỳnh quang hồng khi ở dưới nước, khi khô có màu hơi cam đến đỏ nhạt, mọc chung với san hô, như loài Fuvia spp., giống như Chondria armata.\", \"algaebaseId\": 372457, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=372457\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-26/01.webp"
   },
   {
     "id": "thucvat-species-27",
@@ -1779,7 +1791,8 @@
     "tax_family_vn": "Họ Rong Mào Gà",
     "tax_genus_latin": "Amansia",
     "tax_genus_vn": "Chi Amansia",
-    "biology": "{\"fbName\": \"Amansia rhodantha\", \"depth\": \"1.5 m\", \"depthVn\": \"1.5 m\", \"habitat\": \"Plants are found on shaded rock walls and under corals in the subtidal zone of shores exposed to moderate to strong wave action\", \"habitatVn\": \"Rong mọc trên vách tối của phiến đá hoặc dưới san hô ở vùng dưới triều, nơi sóng vừa đến mạnh\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"The leaves are given off from the stipes and overlapped like the petals of a flower. There are numerous serrations on the leaf margins, and the apices of the leaves usually roll inwards. Plants are found on shaded rock walls and under corals in the subtidal zone of shores exposed to moderate to strong wave action.\", \"biologySummaryVn\": \"Rong gồm các lá mọc lên từ các cuống, chồng xếp thành dạng bông hoa. Mép lá nhiều răng cưa, đỉnh cuốn cong lên. Rong mọc trên vách tối của phiến đá hoặc dưới san hô ở vùng dưới triều, nơi sóng vừa đến mạnh.\", \"algaebaseId\": 213667, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=213667\"}"
+    "biology": "{\"fbName\": \"Amansia rhodantha\", \"depth\": \"1.5 m\", \"depthVn\": \"1.5 m\", \"habitat\": \"Plants are found on shaded rock walls and under corals in the subtidal zone of shores exposed to moderate to strong wave action\", \"habitatVn\": \"Rong mọc trên vách tối của phiến đá hoặc dưới san hô ở vùng dưới triều, nơi sóng vừa đến mạnh\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"The leaves are given off from the stipes and overlapped like the petals of a flower. There are numerous serrations on the leaf margins, and the apices of the leaves usually roll inwards. Plants are found on shaded rock walls and under corals in the subtidal zone of shores exposed to moderate to strong wave action.\", \"biologySummaryVn\": \"Rong gồm các lá mọc lên từ các cuống, chồng xếp thành dạng bông hoa. Mép lá nhiều răng cưa, đỉnh cuốn cong lên. Rong mọc trên vách tối của phiến đá hoặc dưới san hô ở vùng dưới triều, nơi sóng vừa đến mạnh.\", \"algaebaseId\": 213667, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=213667\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-35/01.webp"
   },
   {
     "id": "thucvat-species-36",
@@ -1872,7 +1885,8 @@
     "worms_accepted_name": "Rhodophyta",
     "worms_synced_at": "2026-09-03T04:27:07Z",
     "biology": "{\"fbName\": \"Rhodophyta Seaweed\", \"depth\": \"1.0 m\", \"depthVn\": \"1.0 m\", \"habitat\": \"found on rocks in the mid intertidal zone of moderately wave-exposed shores\", \"habitatVn\": \"mọc trên đá ở mực triều giữa, nơi nước yên đến sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"The branches are terete to compressed, irregularly dichotomous or alternately, and give off alternate branchlets that are short, upwardly curved, acuminate, and with bifurcate apices. This species is light green, and is found on rocks in the mid intertidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Nhánh trụ đứng đến dẹp, chia nhánh chạc hai không đều, nhánh nhỏ ngắn, cong lên, đỉnh nhọn, xẻ chạc hai, mọc cách trên nhánh. Rong màu lục nhạt, mọc trên đá ở mực triều giữa, nơi nước yên đến sóng vừa.\", \"algaebaseId\": 852, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=852\"}",
-    "en_common_name": "Rhodophyta Seaweed"
+    "en_common_name": "Rhodophyta Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-37/01.webp"
   },
   {
     "id": "thucvat-species-38",
@@ -1914,7 +1928,8 @@
     "worms_accepted_name": "Rhodophyta",
     "worms_synced_at": "2026-09-03T04:27:09Z",
     "biology": "{\"fbName\": \"Rhodophyta Seaweed\", \"depth\": \"2.0 m\", \"depthVn\": \"2.0 m\", \"habitat\": \"This species is found on rocks and corals in the subtidal zone of calm to moderately wave-exposed shores, such as those of inner reef flats\", \"habitatVn\": \"Rong mọc trên đá hoặc san hô ở vùng dưới triều, bên trong các rạn phẳng, nơi sóng vừa đến êm\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"The main branches are prostrate, divide irregularly, and give off near-vertical branchlets. The main branches is golden to bright fluorescent green, but the branchlets are light brown. This species is found on rocks and corals in the subtidal zone of calm to moderately wave-exposed shores, such as those of inner reef flats.\", \"biologySummaryVn\": \"Nhánh chính bò, chia chạc hai không đều, mang nhánh nhỏ gần thẳng. Nhánh chính có màu vàng đến huỳnh quang lục sáng, nhánh nhỏ màu nâu nhạt. Rong mọc trên đá hoặc san hô ở vùng dưới triều, bên trong các rạn phẳng, nơi sóng vừa đến êm.\", \"algaebaseId\": 852, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=852\"}",
-    "en_common_name": "Rhodophyta Seaweed"
+    "en_common_name": "Rhodophyta Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-38/01.webp"
   },
   {
     "id": "thucvat-species-39",
@@ -1956,7 +1971,8 @@
     "worms_accepted_name": "Rhodophyta",
     "worms_synced_at": "2026-09-03T04:27:12Z",
     "biology": "{\"fbName\": \"Rhodophyta Seaweed\", \"depth\": \"1.0 m\", \"depthVn\": \"1.0 m\", \"habitat\": \"in the lower intertidal zone of calm shores, such as on inner reef flats or in tidal pools\", \"habitatVn\": \"Rong mọc trên đá có phủ lớp cát, ở mực triều thấp hay trong các vũng ở vùng triều, nơi nước yên\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are soft, filiform and have horizontal stolons and erect branches that divide irregularly. The apices of the branches are acute. This species grows on sand-overed rocks in the lower intertidal zone of calm shores, such as on inner reef flats or in tidal pools.\", \"biologySummaryVn\": \"Rong dạng sợi, bàn bám dạng rễ giả nằm ngang, nhánh đứng, chia chạc hai không đều, đỉnh nhọn. Rong mọc trên đá có phủ lớp cát, ở mực triều thấp hay trong các vũng ở vùng triều, nơi nước yên.\", \"algaebaseId\": 852, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=852\"}",
-    "en_common_name": "Rhodophyta Seaweed"
+    "en_common_name": "Rhodophyta Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-39/01.webp"
   },
   {
     "id": "thucvat-species-40",
@@ -2495,7 +2511,8 @@
     "tax_genus_latin": "Halimeda",
     "tax_genus_vn": "Chi Halimeda",
     "biology": "{\"fbName\": \"Halimeda Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants are found on rocks and dead corals in the subtidal zone of wave exposed shores\", \"habitatVn\": \"Rong mọc trên đá hay san hô chết, ở vùng dưới triều, nơi sóng đập\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"The branch segments of this species are small, flat, weakly calcified, flabellate to reniform, and lack of ribs. These linearly arranged segments diverge once or twice in the same plane. Plants are found on rocks and dead corals in the subtidal zone of wave exposed shores.\", \"biologySummaryVn\": \"Đốt màu trắng, nhỏ, dẹp, không gân, tẩm vôi cứng, dạng quạt đến quả thận, ít liên kết thành chuỗi 1 hoặc 2 dãy trên cùng một phẳng. Rong mọc trên đá hay san hô chết, ở vùng dưới triều, nơi sóng đập.\", \"algaebaseId\": 371845, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=371845\"}",
-    "en_common_name": "Halimeda Seaweed"
+    "en_common_name": "Halimeda Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-52/01.webp"
   },
   {
     "id": "thucvat-species-53",
@@ -2582,7 +2599,8 @@
     "tax_family_vn": "Họ Rong Codium",
     "tax_genus_latin": "Codium",
     "tax_genus_vn": "Chi Codium",
-    "biology": "{\"fbName\": \"Codium arabicum\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks that are covered with a thin layer of sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action\", \"habitatVn\": \"mọc trên đá có phủ lớp cát mỏng, ở mực triều thấp đến vùng dưới triều, nơi nước chảy vừa đến êm\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are velvety, amorphous or contorted in shape, covered with short hairs, and adhere to the substrate. The utricles are clavate, approximately 0.1mm in diameter, and slightly constricted near their upper portions. This species is light to dark green, and is found on rocks that are covered with a thin layer of sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action.\", \"biologySummaryVn\": \"Rong có hình dạng bất định hoặc uốn vặn, dính vào vật bám, bề mặt mịn như nhung. Túi nhỏ hình chùy, đường kính 0.1mm, hơi thắt ở gần phần ngọn. Rong màu lục nhạt đến đậm, mọc trên đá có phủ lớp cát mỏng, ở mực triều thấp đến vùng dưới triều, nơi nước chảy vừa đến êm.\", \"algaebaseId\": 211739, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211739\"}"
+    "biology": "{\"fbName\": \"Codium arabicum\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks that are covered with a thin layer of sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action\", \"habitatVn\": \"mọc trên đá có phủ lớp cát mỏng, ở mực triều thấp đến vùng dưới triều, nơi nước chảy vừa đến êm\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are velvety, amorphous or contorted in shape, covered with short hairs, and adhere to the substrate. The utricles are clavate, approximately 0.1mm in diameter, and slightly constricted near their upper portions. This species is light to dark green, and is found on rocks that are covered with a thin layer of sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action.\", \"biologySummaryVn\": \"Rong có hình dạng bất định hoặc uốn vặn, dính vào vật bám, bề mặt mịn như nhung. Túi nhỏ hình chùy, đường kính 0.1mm, hơi thắt ở gần phần ngọn. Rong màu lục nhạt đến đậm, mọc trên đá có phủ lớp cát mỏng, ở mực triều thấp đến vùng dưới triều, nơi nước chảy vừa đến êm.\", \"algaebaseId\": 211739, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211739\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-55/01.webp"
   },
   {
     "id": "thucvat-species-56",
@@ -2610,7 +2628,8 @@
     "tax_family_vn": "Họ Rong Codium",
     "tax_genus_latin": "Codium",
     "tax_genus_vn": "Chi Codium",
-    "biology": "{\"fbName\": \"Codium arabicum\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks that are covered with thin layer of sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action\", \"habitatVn\": \"mọc trên đá có phủ lớp cát mỏng, ở mực triều thấp đến vùng dưới triều, nơi nước chảy vừa phải đến yên\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are contorted, erect, velvety, and covered with short hairs. The utricles are clavate, approximately 0.1mm in diameter, and slightly constricted near their upper portions. This species is light to dark green, and is found on rocks that are covered with thin layer of sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action.\", \"biologySummaryVn\": \"Rong xoắn uốn, đứng, phủ lông ngắn. Các túi nhỏ dạng chùy, đường kính 0.1mm, hơi thắt lại ở gần phần ngọn. Rong màu lục nhạt đến đậm, mọc trên đá có phủ lớp cát mỏng, ở mực triều thấp đến vùng dưới triều, nơi nước chảy vừa phải đến yên.\", \"algaebaseId\": 211739, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211739\"}"
+    "biology": "{\"fbName\": \"Codium arabicum\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks that are covered with thin layer of sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action\", \"habitatVn\": \"mọc trên đá có phủ lớp cát mỏng, ở mực triều thấp đến vùng dưới triều, nơi nước chảy vừa phải đến yên\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are contorted, erect, velvety, and covered with short hairs. The utricles are clavate, approximately 0.1mm in diameter, and slightly constricted near their upper portions. This species is light to dark green, and is found on rocks that are covered with thin layer of sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action.\", \"biologySummaryVn\": \"Rong xoắn uốn, đứng, phủ lông ngắn. Các túi nhỏ dạng chùy, đường kính 0.1mm, hơi thắt lại ở gần phần ngọn. Rong màu lục nhạt đến đậm, mọc trên đá có phủ lớp cát mỏng, ở mực triều thấp đến vùng dưới triều, nơi nước chảy vừa phải đến yên.\", \"algaebaseId\": 211739, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211739\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-56/01.webp"
   },
   {
     "id": "thucvat-species-57",
@@ -2699,7 +2718,8 @@
     "tax_genus_latin": "Bryopsis",
     "tax_genus_vn": "Chi Bryopsis",
     "biology": "{\"fbName\": \"Bryopsis Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants grow on rocks and gravel in the mid to lower intertidal zone of shores exposed to moderate wave action\", \"habitatVn\": \"Rong mọc trên đá, sỏi đá nhỏ ở mực triều giữa đến triều thấp, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species has feather-like, erect branches composed of main axes with bent apices. The pinnules extend in the same direction. Plants grow on rocks and gravel in the mid to lower intertidal zone of shores exposed to moderate wave action.\", \"biologySummaryVn\": \"Nhánh đứng dạng lông chim, gồm trục chính với phần ngọn cong về một hướng và các nhánh nhỏ vươn theo một hướng. Rong mọc trên đá, sỏi đá nhỏ ở mực triều giữa đến triều thấp, nơi sóng vừa.\", \"algaebaseId\": 381125, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=381125\"}",
-    "en_common_name": "Bryopsis Seaweed"
+    "en_common_name": "Bryopsis Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-59/01.webp"
   },
   {
     "id": "thucvat-species-60",
@@ -2878,7 +2898,8 @@
     "tax_family_vn": "Họ Polyphysaceae",
     "tax_genus_latin": "Acetabularia",
     "tax_genus_vn": "Chi Acetabularia",
-    "biology": "{\"fbName\": \"Parvocaulis clavatus\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants are found on rocks in the lower intertidal to subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc trên đá ở mực triều thấp đến vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species is composed of a short, calcified stipe and a cap that is 2mm in diameter. The cap has 9-11 sporangial rays that are clavate, apiculate, and that do not adhere to each other. Plants are found on rocks in the lower intertidal to subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong gồm cuống nhỏ tẩm vôi và mũ có đường kính 2mm. Mũ có 9-11 tia túi bào tử hình bầu dục, đỉnh nhọn, không dính với nhau. Rong mọc trên đá ở mực triều thấp đến vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 211910, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211910\"}"
+    "biology": "{\"fbName\": \"Parvocaulis clavatus\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants are found on rocks in the lower intertidal to subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc trên đá ở mực triều thấp đến vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species is composed of a short, calcified stipe and a cap that is 2mm in diameter. The cap has 9-11 sporangial rays that are clavate, apiculate, and that do not adhere to each other. Plants are found on rocks in the lower intertidal to subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong gồm cuống nhỏ tẩm vôi và mũ có đường kính 2mm. Mũ có 9-11 tia túi bào tử hình bầu dục, đỉnh nhọn, không dính với nhau. Rong mọc trên đá ở mực triều thấp đến vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 211910, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211910\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-65/01.webp"
   },
   {
     "id": "thucvat-species-66",
@@ -2908,7 +2929,8 @@
     "tax_genus_latin": "Acetabularia",
     "tax_genus_vn": "Chi Acetabularia",
     "biology": "{\"fbName\": \"Acetabularia Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"This species is found on accumulated coralline pebbles in the lower intertidal to subtidal zone of reef flats of shores exposed to moderate wave action\", \"habitatVn\": \"Rong mọc trên đá san hô vụn ở mực triều thấp đến dưới triều của các rạn phẳng, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are composed of a 1-5mm long calcified stipe and a cap that is 3mm in diameter. The cap has 18-20 sporangial rays that are a slightly compressed clavate, each having a rounded tip and adhering to the rays either side of it. This species is found on accumulated coralline pebbles in the lower intertidal to subtidal zone of reef flats of shores exposed to moderate wave action.\", \"biologySummaryVn\": \"Rong gồm cuống tẩm vôi, dài 1-5mm, và mũ, có đường kính 3mm. Mũ có 18-20 tia túi bào tử hình chùy hơi dẹp, đỉnh tròn, dính nhau ở bên. Rong mọc trên đá san hô vụn ở mực triều thấp đến dưới triều của các rạn phẳng, nơi sóng vừa.\", \"algaebaseId\": 145304, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=145304\"}",
-    "en_common_name": "Acetabularia Seaweed"
+    "en_common_name": "Acetabularia Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-66/01.webp"
   },
   {
     "id": "thucvat-species-67",
@@ -3118,7 +3140,8 @@
     "tax_genus_latin": "Dictyota",
     "tax_genus_vn": "Chi Dictyota",
     "biology": "{\"fbName\": \"Dictyota Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"This species is found on rocks and gravel in the lower intertidal to subtidal zone of shores exposed to moderate wave action\", \"habitatVn\": \"Rong mọc trên đá và sỏi đá nhỏ, ở mực triều thấp đến vùng dưới triều, nơi sóng vừa\", \"importance\": \"Alginate extraction, biofertilizer, and pharmaceutical potential\", \"importanceVn\": \"Nguồn chiết xuất alginate, phân bón sinh học và dược liệu\", \"biologySummary\": \"Plants are erect. The branches are strap-like, alternately to dichotomously divided, have spines on their surfaces and margins, and have aculeate tips. This species is found on rocks and gravel in the lower intertidal to subtidal zone of shores exposed to moderate wave action.\", \"biologySummaryVn\": \"Rong đứng, nhánh dạng đai, xẻ chạc hai cách, mặt và mép có nhiều gai, đỉnh nhọn. Rong mọc trên đá và sỏi đá nhỏ, ở mực triều thấp đến vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 372006, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=372006\"}",
-    "en_common_name": "Dictyota Seaweed"
+    "en_common_name": "Dictyota Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-73/01.webp"
   },
   {
     "id": "thucvat-species-74",
@@ -3508,7 +3531,8 @@
     "tax_genus_latin": "Chnoospora",
     "tax_genus_vn": "Chi Chnoospora",
     "biology": "{\"fbName\": \"Chnoospora Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks in the lower intertidal to subtidal zone of shores that are moderately wave-exposed to calm\", \"habitatVn\": \"Rong mọc trên đá ở mực triều thấp đến vùng dưới triều, nơi sóng vừa đến yên\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"The branches of this plant are cylindrical, dichotomously divided with wide branching angles, and attenuate toward the apices. Plants form loose and large clumps because the branches are intricately intertwined. This seaweed is yellowish brown when alive, but dark brown when dried. This is found on rocks in the lower intertidal to subtidal zone of shores that are moderately wave-exposed to calm.\", \"biologySummaryVn\": \"Rong mọc thành bụi lớn, do các nhánh cài bện nhau, màu nâu vàng khi tươi và nâu đen khi khô. Nhánh của rong dạng trụ tròn, chia chạc hai, với góc nhánh rộng, nhỏ dần về phía đỉnh. Rong mọc trên đá ở mực triều thấp đến vùng dưới triều, nơi sóng vừa đến yên.\", \"algaebaseId\": 214333, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=214333\"}",
-    "en_common_name": "Chnoospora Seaweed"
+    "en_common_name": "Chnoospora Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-86/01.webp"
   },
   {
     "id": "thucvat-species-87",
@@ -3750,7 +3774,8 @@
     "tax_genus_latin": "Sargassum",
     "tax_genus_vn": "Chi Sargassum",
     "biology": "{\"fbName\": \"Sargassum Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks in the subtidal zone of shores with moderate wave action\", \"habitatVn\": \"mọc trên đá ở vùng dưới triều, nơi sóng vừa\", \"importance\": \"Alginate extraction, biofertilizer, and pharmaceutical potential\", \"importanceVn\": \"Nguồn chiết xuất alginate, phân bón sinh học và dược liệu\", \"biologySummary\": \"Plants have compressed main branches and lanceolate to elliptical leaves with numerous serrulations on their margins. The holdfast is discoid, and the vesicles are obovate to elliptic without spines. Plants are yellowish brown when alive. This seaweed grows up to 1m high and is found on rocks in the subtidal zone of shores with moderate wave action.\", \"biologySummaryVn\": \"Nhánh chính dẹp, lá hình mũi mác đến bầu dục có nhiều răng cưa nhỏ ở mép. Bàn bám dạng đĩa, túi khí hình trứng ngược đến bầu dục không gai. Rong dài đến 1m, màu nâu vàng khi tươi, mọc trên đá ở vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 495248, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=495248\"}",
-    "en_common_name": "Sargassum Seaweed"
+    "en_common_name": "Sargassum Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/ca-bien/thucvat-species-94/01.jpg"
   },
   {
     "id": "thucvat-species-95",
@@ -3779,7 +3804,8 @@
     "tax_family_vn": "Họ Rong Mơ",
     "tax_genus_latin": "Sargassum",
     "tax_genus_vn": "Chi Sargassum",
-    "biology": "{\"fbName\": \"Sargassum ilicifolium\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks in the subtidal zone of shores exposed to strong wave action\", \"habitatVn\": \"bám dạng phiến, túi khí hình cầu đến trứng ngược, có mũi nhỏ ở nửa trên của túi\", \"importance\": \"Alginate extraction, biofertilizer, and pharmaceutical potential\", \"importanceVn\": \"Nguồn chiết xuất alginate, phân bón sinh học và dược liệu\", \"biologySummary\": \"Plants have characteristic leaves that are oval to elliptical, thick, apically cup-shaped, and have numerous marginal serrations. The holdfast is scutellate and the vesicles are spherical to oblong with small projections arising on the upper half. Plants grow 70-100cm in height and are found on rocks in the subtidal zone of shores exposed to strong wave action.\", \"biologySummaryVn\": \"Rong dài 70-100cm. Lá hình trứng đến bầu dục, dày, đỉnh hình cốc, mép nhiều răng cưa. Bàn bám dạng phiến, túi khí hình cầu đến trứng ngược, có mũi nhỏ ở nửa trên của túi. Rong mọc trên đá ở vùng dưới triều, nơi sóng mạnh.\", \"algaebaseId\": 211982, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211982\"}"
+    "biology": "{\"fbName\": \"Sargassum ilicifolium\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks in the subtidal zone of shores exposed to strong wave action\", \"habitatVn\": \"bám dạng phiến, túi khí hình cầu đến trứng ngược, có mũi nhỏ ở nửa trên của túi\", \"importance\": \"Alginate extraction, biofertilizer, and pharmaceutical potential\", \"importanceVn\": \"Nguồn chiết xuất alginate, phân bón sinh học và dược liệu\", \"biologySummary\": \"Plants have characteristic leaves that are oval to elliptical, thick, apically cup-shaped, and have numerous marginal serrations. The holdfast is scutellate and the vesicles are spherical to oblong with small projections arising on the upper half. Plants grow 70-100cm in height and are found on rocks in the subtidal zone of shores exposed to strong wave action.\", \"biologySummaryVn\": \"Rong dài 70-100cm. Lá hình trứng đến bầu dục, dày, đỉnh hình cốc, mép nhiều răng cưa. Bàn bám dạng phiến, túi khí hình cầu đến trứng ngược, có mũi nhỏ ở nửa trên của túi. Rong mọc trên đá ở vùng dưới triều, nơi sóng mạnh.\", \"algaebaseId\": 211982, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211982\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-95/01.webp"
   },
   {
     "id": "thucvat-species-96",
@@ -3809,7 +3835,8 @@
     "tax_genus_latin": "Sargassum",
     "tax_genus_vn": "Chi Sargassum",
     "biology": "{\"fbName\": \"Sargassum Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"in the lower intertidal to subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc thành thảm lớn trên đá, ở mực triều thấp đến vùng dưới triều, nơi sóng vừa\", \"importance\": \"Alginate extraction, biofertilizer, and pharmaceutical potential\", \"importanceVn\": \"Nguồn chiết xuất alginate, phân bón sinh học và dược liệu\", \"biologySummary\": \"This is a species with phyllocysts having leaves with serrated margins and of variable shape: cuneiform at basally and obovate to elliptical from the middle to its tips. Plants are up to 2m tall. This seaweed forms large communities on rocks in the lower intertidal to subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong thuộc nhóm túi khí dạng lá, cao đến 2m. Lá, với răng cưa ở mép, có nhiều hình dạng: hình nêm ở gốc, hình trứng đến bầu dục ở phần giữa đến đỉnh. Rong mọc thành thảm lớn trên đá, ở mực triều thấp đến vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 495029, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=495029\"}",
-    "en_common_name": "Sargassum Seaweed"
+    "en_common_name": "Sargassum Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thucvat-species-96.jpg"
   },
   {
     "id": "thucvat-species-97",
@@ -3898,7 +3925,8 @@
     "tax_family_vn": "Họ Rong Mơ",
     "tax_genus_latin": "Sargassum",
     "tax_genus_vn": "Chi Sargassum",
-    "biology": "{\"fbName\": \"Sargassum polycystum\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"in the lower intertidal zone of relatively calm waters\", \"habitatVn\": \"mọc thành đám lớn trên đá ở mực triều thấp, nơi nước tương đối yên\", \"importance\": \"Alginate extraction, biofertilizer, and pharmaceutical potential\", \"importanceVn\": \"Nguồn chiết xuất alginate, phân bón sinh học và dược liệu\", \"biologySummary\": \"The erect branches have numerous spines, and the prostrate branches (found post-maturation period) have smooth edges and form alternate secondary branches with secondary holdfast on their terminal portions. Leaves are lanceolate to oblong with serrations, and the vesicles are spherical. Plants are 1-2m tall, and form large communities on rocks in the lower intertidal zone of relatively calm waters.\", \"biologySummaryVn\": \"Nhánh đứng có nhiều gai, nhánh bò (tồn tại sau khi rong đã trưởng thành) nhẵn, từ đó hình thành nhánh thứ cấp, trên đỉnh các nhánh này hình thành các bàn bám thứ cấp. Lá hình mũi mác đến trứng ngược, có răng cưa. Túi khí hình cầu. Rong dài 1-2m, mọc thành đám lớn trên đá ở mực triều thấp, nơi nước tương đối yên.\", \"algaebaseId\": 494865, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=494865\"}"
+    "biology": "{\"fbName\": \"Sargassum polycystum\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"in the lower intertidal zone of relatively calm waters\", \"habitatVn\": \"mọc thành đám lớn trên đá ở mực triều thấp, nơi nước tương đối yên\", \"importance\": \"Alginate extraction, biofertilizer, and pharmaceutical potential\", \"importanceVn\": \"Nguồn chiết xuất alginate, phân bón sinh học và dược liệu\", \"biologySummary\": \"The erect branches have numerous spines, and the prostrate branches (found post-maturation period) have smooth edges and form alternate secondary branches with secondary holdfast on their terminal portions. Leaves are lanceolate to oblong with serrations, and the vesicles are spherical. Plants are 1-2m tall, and form large communities on rocks in the lower intertidal zone of relatively calm waters.\", \"biologySummaryVn\": \"Nhánh đứng có nhiều gai, nhánh bò (tồn tại sau khi rong đã trưởng thành) nhẵn, từ đó hình thành nhánh thứ cấp, trên đỉnh các nhánh này hình thành các bàn bám thứ cấp. Lá hình mũi mác đến trứng ngược, có răng cưa. Túi khí hình cầu. Rong dài 1-2m, mọc thành đám lớn trên đá ở mực triều thấp, nơi nước tương đối yên.\", \"algaebaseId\": 494865, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=494865\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/ca-bien/thucvat-species-99/01.jpg"
   },
   {
     "id": "thucvat-species-100",
@@ -4044,7 +4072,8 @@
     "tax_family_vn": "Họ Anadyomenaceae",
     "tax_genus_latin": "Anadyomene",
     "tax_genus_vn": "Chi Anadyomene",
-    "biology": "{\"fbName\": \"Anadyomene wrightii\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on shaded rocks and ledges in the lower intertidal to subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc bò trên mép hoặc chỗ tối của phiến đá, ở mực triều thấp đến vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are thin, slightly stiff and similar to A. plicata. However, in this species the major veins are whitish and conspicuous, and branch dichotomously to produce several minor veins. This species is light green, decumbent, and found on shaded rocks and ledges in the lower intertidal to subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong dạng phiến lá mỏng, hơi cứng, gần giống như loài Rong Hải nga xếp (A. wrightii), nhưng gân lớn và rõ hơn, chia nhánh chạc hai với nhiều gân nhỏ. Rong mọc bò trên mép hoặc chỗ tối của phiến đá, ở mực triều thấp đến vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 211677, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211677\"}"
+    "biology": "{\"fbName\": \"Anadyomene wrightii\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on shaded rocks and ledges in the lower intertidal to subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc bò trên mép hoặc chỗ tối của phiến đá, ở mực triều thấp đến vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are thin, slightly stiff and similar to A. plicata. However, in this species the major veins are whitish and conspicuous, and branch dichotomously to produce several minor veins. This species is light green, decumbent, and found on shaded rocks and ledges in the lower intertidal to subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong dạng phiến lá mỏng, hơi cứng, gần giống như loài Rong Hải nga xếp (A. wrightii), nhưng gân lớn và rõ hơn, chia nhánh chạc hai với nhiều gân nhỏ. Rong mọc bò trên mép hoặc chỗ tối của phiến đá, ở mực triều thấp đến vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 211677, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211677\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-104/01.webp"
   },
   {
     "id": "thucvat-species-105",
@@ -4074,7 +4103,8 @@
     "tax_genus_latin": "Microdictyon",
     "tax_genus_vn": "Chi Microdictyon",
     "biology": "{\"fbName\": \"Microdictyon Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants grow on rocks in the subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"mọc trên đá ở vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are leaf-like, expanded into circular or elliptical blades and composed of branched filaments that form a fine mesh. This species is slightly stiff but fragile. Green when alive, the plant changes to blackish green when it dries out. Plants grow on rocks in the subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong dạng phiến mạng lưới, hình tròn hay bầu dục hơi cứng và dễ nát, do các nhánh dính kết vào nhau và lan tỏa thành. Rong màu lục khi tươi, chuyển thành màu lục đen khi khô, mọc trên đá ở vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 214372, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=214372\"}",
-    "en_common_name": "Microdictyon Seaweed"
+    "en_common_name": "Microdictyon Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-105/01.webp"
   },
   {
     "id": "thucvat-species-106",
@@ -4286,7 +4316,8 @@
     "tax_genus_latin": "Porphyra",
     "tax_genus_vn": "Chi Porphyra",
     "biology": "{\"fbName\": \"Porphyra Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks reached by wave spray\", \"habitatVn\": \"mọc trên đá ở vùng bọt sóng\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species is membranous, linear to linear lanceolate, crimson, and has numerous microscopic serrations on the thallus edges. Plants are highly seasonal, growing only during a period of surge and low temperature, and are found on rocks reached by wave spray.\", \"biologySummaryVn\": \"Rong dạng phiến, hình dải đến mũi mác, mép có răng cưa, màu đỏ thẫm. Rong chỉ xuất hiện trong mùa có nhiệt độ thấp và sóng mạnh, mọc trên đá ở vùng bọt sóng.\", \"algaebaseId\": 371121, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=371121\"}",
-    "en_common_name": "Porphyra Seaweed"
+    "en_common_name": "Porphyra Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-112/01.webp"
   },
   {
     "id": "thucvat-species-113",
@@ -4403,7 +4434,8 @@
     "tax_genus_latin": "Galaxaura",
     "tax_genus_vn": "Chi Galaxaura",
     "biology": "{\"fbName\": \"Galaxaura Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Intertidal to shallow subtidal coastal waters\", \"habitatVn\": \"mọc trên đá hay trên san hô chết, ở chỗ nước sâu, sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants have slightly calcified branches that are cylindrical, irregularly dichotomously divided, and covered with short filaments their whole length. This species is dark red to reddish brown. It grows on rocks and dead corals in deeper water of shores exposed to moderate wave action.\", \"biologySummaryVn\": \"Nhánh trụ tròn, hơi tẩm vôi, chia nhánh chạc hai không đều, có phủ nhiều sợi lông ngắn. Rong màu đỏ thẫm đến nâu đỏ, mọc trên đá hay trên san hô chết, ở chỗ nước sâu, sóng vừa.\", \"algaebaseId\": 239263, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=239263\"}",
-    "en_common_name": "Galaxaura Seaweed"
+    "en_common_name": "Galaxaura Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-116/01.webp"
   },
   {
     "id": "thucvat-species-117",
@@ -4492,7 +4524,8 @@
     "tax_genus_latin": "Ganonema",
     "tax_genus_vn": "Chi Ganonema",
     "biology": "{\"fbName\": \"Ganonema Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"This seaweed grows on rocks in the lower intertidal zone of calm to moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc trên đá ở mực triều thấp nơi sóng vừa đến êm\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are soft, slightly lubricous, slightly calcified, dark red, and ramiform. The branches are cylindrical, irregularly dichotomously divided, and with knot-shaped proliferations. The apices are characteristically bifurcate, curved downward, obtuse, and pinkish. This seaweed grows on rocks in the lower intertidal zone of calm to moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong mềm, trơn nhớt hơi tẩm vôi, màu đỏ đậm, chia nhánh. Nhánh trụ tròn, chia chạc hai không đều với những mấu, đỉnh xẻ chạc hai và cong xuống, tù đầu màu hồng. Rong mọc trên đá ở mực triều thấp nơi sóng vừa đến êm.\", \"algaebaseId\": 145749, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=145749\"}",
-    "en_common_name": "Ganonema Seaweed"
+    "en_common_name": "Ganonema Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-119/01.webp"
   },
   {
     "id": "thucvat-species-120",
@@ -4704,7 +4737,8 @@
     "tax_genus_latin": "Amphiroa",
     "tax_genus_vn": "Chi Amphiroa",
     "biology": "{\"fbName\": \"Amphiroa Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"subtidal zone of shores exposed to strong to moderate wave action\", \"habitatVn\": \"Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa đến mạnh\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are heavily calcified, pink to light red, with flat and irregularly dichotomous branches. The edge of the branches is uneven, and apices are obtuse. This species grows on rocks in the subtidal zone of shores exposed to strong to moderate wave action.\", \"biologySummaryVn\": \"Rong tẩm nhiều vôi, nhánh dẹp, chia nhánh chạc hai không đều, màu hồng đến hơi đỏ, bờ nhánh không phẳng, đỉnh tù. Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa đến mạnh.\", \"algaebaseId\": 211629, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211629\"}",
-    "en_common_name": "Amphiroa Seaweed"
+    "en_common_name": "Amphiroa Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-126/01.webp"
   },
   {
     "id": "thucvat-species-127",
@@ -4732,7 +4766,8 @@
     "tax_family_vn": "Họ Lithophyllaceae",
     "tax_genus_latin": "Amphiroa",
     "tax_genus_vn": "Chi Amphiroa",
-    "biology": "{\"fbName\": \"Amphiroa fragilissima\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants grow on rocks or gravel in the subtidal zone of calm shores\", \"habitatVn\": \"Rong mọc trên đá, sỏi đá nhỏ ở vùng dưới triều, nơi nước yên\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species is delicate, fragile, calcified and white. The branches are cylindrical, irregularly dichotomously divided, and with acute apices. Plants grow on rocks or gravel in the subtidal zone of calm shores.\", \"biologySummaryVn\": \"Rong mảnh, dễ nát, tẩm vôi, màu trắng. Nhánh trụ tròn, chia chạc hai không đều, đỉnh nhọn. Rong mọc trên đá, sỏi đá nhỏ ở vùng dưới triều, nơi nước yên.\", \"algaebaseId\": 145099, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=145099\"}"
+    "biology": "{\"fbName\": \"Amphiroa fragilissima\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants grow on rocks or gravel in the subtidal zone of calm shores\", \"habitatVn\": \"Rong mọc trên đá, sỏi đá nhỏ ở vùng dưới triều, nơi nước yên\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species is delicate, fragile, calcified and white. The branches are cylindrical, irregularly dichotomously divided, and with acute apices. Plants grow on rocks or gravel in the subtidal zone of calm shores.\", \"biologySummaryVn\": \"Rong mảnh, dễ nát, tẩm vôi, màu trắng. Nhánh trụ tròn, chia chạc hai không đều, đỉnh nhọn. Rong mọc trên đá, sỏi đá nhỏ ở vùng dưới triều, nơi nước yên.\", \"algaebaseId\": 145099, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=145099\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-127/01.webp"
   },
   {
     "id": "thucvat-species-128",
@@ -4760,7 +4795,8 @@
     "tax_family_vn": "Họ Lithophyllaceae",
     "tax_genus_latin": "Amphiroa",
     "tax_genus_vn": "Chi Amphiroa",
-    "biology": "{\"fbName\": \"Amphiroa fragilissima\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks in the subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are fragile, and have heavily calcified branches that are short, cylindrical, dichotomous, pink, and with obtuse apices. This seaweed is found on rocks in the subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Nhánh trụ tròn, tẩm nhiều vôi, chia chạc hai không đều, màu hồng, đỉnh tù. Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 145099, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=145099\"}"
+    "biology": "{\"fbName\": \"Amphiroa fragilissima\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks in the subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are fragile, and have heavily calcified branches that are short, cylindrical, dichotomous, pink, and with obtuse apices. This seaweed is found on rocks in the subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Nhánh trụ tròn, tẩm nhiều vôi, chia chạc hai không đều, màu hồng, đỉnh tù. Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 145099, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=145099\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-128/01.webp"
   },
   {
     "id": "thucvat-species-129",
@@ -4848,7 +4884,8 @@
     "tax_genus_latin": "Cheilosporum",
     "tax_genus_vn": "Chi Cheilosporum",
     "biology": "{\"fbName\": \"Cheilosporum Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"in the lower intertidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc trên đá hay san hô ở mực triều thấp, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are heavily calcified, pinkish to light purple, and form clumps. The branches have successive arrow-shaped segments that are small, 1.5-3mm in width, and with acute or slightly incised edges. This species grows on rocks or corals in the lower intertidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong mọc thành bụi, tẩm nhiều vôi, màu hồng đến tím nhạt. Nhánh gồm các đốt ngang hình mũi tên nhỏ, rộng 1.5-3mm, bờ nhọn hay hơi khía. Rong mọc trên đá hay san hô ở mực triều thấp, nơi sóng vừa.\", \"algaebaseId\": 213865, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=213865\"}",
-    "en_common_name": "Cheilosporum Seaweed"
+    "en_common_name": "Cheilosporum Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-131/01.webp"
   },
   {
     "id": "thucvat-species-132",
@@ -4876,7 +4913,8 @@
     "tax_family_vn": "Họ Corallinaceae",
     "tax_genus_latin": "Cheilosporum",
     "tax_genus_vn": "Chi Cheilosporum",
-    "biology": "{\"fbName\": \"Jania spectabilis\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants are found on shaded rocks in the subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc chỗ tối của phiến đá ở vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species is heavily calcified and pink to red. The branches are composed of successive arrow-shaped segments that have prominent midribs their entire length, and divide alternately, dichotomously or trifurcately. Plants are found on shaded rocks in the subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong tẩm nhiều vôi, màu hồng đến đỏ. Nhánh gồm những đốt ngang hình mũi tên, có gân rõ và chạy suốt chiều dài, chẻ đôi rộng, chạc hai hay chạc ba. Rong mọc chỗ tối của phiến đá ở vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 381140, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=381140\"}"
+    "biology": "{\"fbName\": \"Jania spectabilis\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants are found on shaded rocks in the subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc chỗ tối của phiến đá ở vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species is heavily calcified and pink to red. The branches are composed of successive arrow-shaped segments that have prominent midribs their entire length, and divide alternately, dichotomously or trifurcately. Plants are found on shaded rocks in the subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong tẩm nhiều vôi, màu hồng đến đỏ. Nhánh gồm những đốt ngang hình mũi tên, có gân rõ và chạy suốt chiều dài, chẻ đôi rộng, chạc hai hay chạc ba. Rong mọc chỗ tối của phiến đá ở vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 381140, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=381140\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-132/01.webp"
   },
   {
     "id": "thucvat-species-133",
@@ -4905,7 +4943,8 @@
     "tax_genus_latin": "Hydrolithon",
     "tax_genus_vn": "Chi Hydrolithon",
     "biology": "{\"fbName\": \"Hydrolithon Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"subtidal zone of shores exposed to strong to moderate wave action\", \"habitatVn\": \"ở vùng dưới triều, nơi sóng vừa đến mạnh\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are heavily calcified, stony, crustose, and variable in shape. The surface is slightly rough with mottled patterns. The plant is pink to red when seen underwater, but changes to whitish pink when dried. This species adheres tightly to rocks and dead corals, or overgrows on other coralline seaweeds, in the subtidal zone of shores exposed to strong to moderate wave action.\", \"biologySummaryVn\": \"Rong dạng đá, tẩm nhiều vôi, hình dạng bất định, mặt thô nháp có gờ, màu hồng đến đỏ khi ở dưới nước, chuyển thành màu hồng trắng khi khô. Rong dính chặt trên đá hay san hô chết, hoặc trên các rong san hô khác ở vùng dưới triều, nơi sóng vừa đến mạnh.\", \"algaebaseId\": 213881, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=213881\"}",
-    "en_common_name": "Hydrolithon Seaweed"
+    "en_common_name": "Hydrolithon Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-133/01.webp"
   },
   {
     "id": "thucvat-species-134",
@@ -5020,7 +5059,8 @@
     "tax_genus_latin": "Mesophyllum",
     "tax_genus_vn": "Chi Mesophyllum",
     "biology": "{\"fbName\": \"Mesophyllum Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are heavily calcified, stout, pinkish, and form ramiform coralline lumps. The branches are cylindrical to slightly compressed, irregularly dichotomous, and with bluntly round apices. Lower branches fuse onto adjacent ones. This species grows on rocks in the subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong mọc thành khối dạng san hô chia nhánh, tẩm nhiều vôi, màu hồng. Nhánh trụ tròn đến hơi dẹp, chia chạc hai không đều, đỉnh tròn bằng. Phần gốc hòa quyện vào các nhánh lân cận. Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 213904, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=213904\"}",
-    "en_common_name": "Mesophyllum Seaweed"
+    "en_common_name": "Mesophyllum Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-137/01.webp"
   },
   {
     "id": "thucvat-species-138",
@@ -5172,7 +5212,8 @@
     "tax_genus_latin": "Pterocladia",
     "tax_genus_vn": "Chi Pterocladia",
     "biology": "{\"fbName\": \"Pterocladia Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks in the subtidal zone of shores exposed to moderate wave action\", \"habitatVn\": \"mọc trên đá ở vùng dưới triều, nơi sóng vừa\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants have horizontal filiform stolons and erect linear flat branches with alternately arranged branchlets. The apices of the branchlets are obtuse, and basal parts are slightly constricted. This species is dark greenish red, and is found on rocks in the subtidal zone of shores exposed to moderate wave action.\", \"biologySummaryVn\": \"Rong gồm phần bò dạng sợi nằm ngang và nhánh dẹp phẳng, với các nhánh nhỏ mọc cách, có đỉnh tù, gốc hơi thắt lại. Rong màu đỏ lục thẫm, mọc trên đá ở vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 381736, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=381736\"}",
-    "en_common_name": "Pterocladia Seaweed"
+    "en_common_name": "Pterocladia Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-142/01.webp"
   },
   {
     "id": "thucvat-species-143",
@@ -5445,7 +5486,8 @@
     "tax_family_vn": "Họ Boodleaceae",
     "tax_genus_latin": "Struvea",
     "tax_genus_vn": "Chi Struvea",
-    "biology": "{\"fbName\": \"Phyllodictyon anastomosans\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"This species is found on shaded rocks and ledges in the lower intertidal to subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc ở chỗ tối hay mép đá, ở mực triều thấp đến vùng dưới triều, nơi sóng đập vừa phải\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"The plant is composed of a long stipe and a circular to oval blade that has a complex mesh pattern. The plant reaches up to 2-3cm tall and is green to dark green. This species is found on shaded rocks and ledges in the lower intertidal to subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong cao 2-3cm, bao gồm một cuống dài và lá, cấu tạo kiểu mạng lưới, hình tròn hoặc hình trứng, màu lục đến lục thẫm. Rong mọc ở chỗ tối hay mép đá, ở mực triều thấp đến vùng dưới triều, nơi sóng đập vừa phải.\", \"algaebaseId\": 146245, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=146245\"}"
+    "biology": "{\"fbName\": \"Phyllodictyon anastomosans\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"This species is found on shaded rocks and ledges in the lower intertidal to subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"Rong mọc ở chỗ tối hay mép đá, ở mực triều thấp đến vùng dưới triều, nơi sóng đập vừa phải\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"The plant is composed of a long stipe and a circular to oval blade that has a complex mesh pattern. The plant reaches up to 2-3cm tall and is green to dark green. This species is found on shaded rocks and ledges in the lower intertidal to subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Rong cao 2-3cm, bao gồm một cuống dài và lá, cấu tạo kiểu mạng lưới, hình tròn hoặc hình trứng, màu lục đến lục thẫm. Rong mọc ở chỗ tối hay mép đá, ở mực triều thấp đến vùng dưới triều, nơi sóng đập vừa phải.\", \"algaebaseId\": 146245, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=146245\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-151/01.webp"
   },
   {
     "id": "thucvat-species-152",
@@ -6032,7 +6074,8 @@
     "tax_family_vn": "Họ Rong Sụn",
     "tax_genus_latin": "Betaphycus",
     "tax_genus_vn": "Chi Betaphycus",
-    "biology": "{\"fbName\": \"Betaphycus gelatinus\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"It is found on rocks in the subtidal zone of shores exposed to strong wave action\", \"habitatVn\": \"mọc trên đá ở vùng dưới triều, nơi sóng mạnh\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are decumbent and form strongly cartilaginous clumps. The branches are compressed cylindrical, and bear acute spines on their margins and the upper surfaces (but not on the under surfaces). This species is cream to pale red on the upper surfaces, and dark red below. It is found on rocks in the subtidal zone of shores exposed to strong wave action.\", \"biologySummaryVn\": \"Rong mọc bò thành bụi, chất rong sụn cứng. Nhánh trụ dẹp, mép và mặt lưng có gai nhọn, mặt bụng không có gai. Rong màu kem đến đỏ nhạt ở mặt lưng và màu đỏ thẫm ở mặt bụng, mọc trên đá ở vùng dưới triều, nơi sóng mạnh.\", \"algaebaseId\": 494820, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=494820\"}"
+    "biology": "{\"fbName\": \"Betaphycus gelatinus\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"It is found on rocks in the subtidal zone of shores exposed to strong wave action\", \"habitatVn\": \"mọc trên đá ở vùng dưới triều, nơi sóng mạnh\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants are decumbent and form strongly cartilaginous clumps. The branches are compressed cylindrical, and bear acute spines on their margins and the upper surfaces (but not on the under surfaces). This species is cream to pale red on the upper surfaces, and dark red below. It is found on rocks in the subtidal zone of shores exposed to strong wave action.\", \"biologySummaryVn\": \"Rong mọc bò thành bụi, chất rong sụn cứng. Nhánh trụ dẹp, mép và mặt lưng có gai nhọn, mặt bụng không có gai. Rong màu kem đến đỏ nhạt ở mặt lưng và màu đỏ thẫm ở mặt bụng, mọc trên đá ở vùng dưới triều, nơi sóng mạnh.\", \"algaebaseId\": 494820, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=494820\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-171/01.webp"
   },
   {
     "id": "thucvat-species-172",
@@ -6360,7 +6403,8 @@
     "tax_genus_latin": "Caulerpa",
     "tax_genus_vn": "Chi Caulerpa",
     "biology": "{\"fbName\": \"Caulerpa Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants are found on sandy rocks and gravel in the mid to lower intertidal zone of calm shores, such as on inner reef flats\", \"habitatVn\": \"Rong mọc bò trên đá hoặc trên sỏi đá nhỏ, ở mực triều giữa đến triều thấp, nơi nước yên, như ở các bãi ngang kín\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"This species has filamentous and cylindrical branches that divide dichotomously or alternately. The runners creep along the substrate. Plants are found on sandy rocks and gravel in the mid to lower intertidal zone of calm shores, such as on inner reef flats.\", \"biologySummaryVn\": \"Nhánh dạng sợi trụ tròn, chia chạc hai hay mọc cách. Rong mọc bò trên đá hoặc trên sỏi đá nhỏ, ở mực triều giữa đến triều thấp, nơi nước yên, như ở các bãi ngang kín.\", \"algaebaseId\": 211471, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211471\"}",
-    "en_common_name": "Caulerpa Seaweed"
+    "en_common_name": "Caulerpa Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/ca-bien/thucvat-species-182/01.jpg"
   },
   {
     "id": "thucvat-species-183",
@@ -6421,7 +6465,8 @@
     "tax_genus_latin": "Caulerpa",
     "tax_genus_vn": "Chi Caulerpa",
     "biology": "{\"fbName\": \"Caulerpa Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"in the mid intertidal to subtidal zone of shores with moderate to calm wave action, and in tidal pools\", \"habitatVn\": \"mọc trên đá ở mực triều giữa đến vùng dưới triều, nơi sóng vừa đến yên sóng hay trong các vũng ở vùng triều\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"Plants are 3-5cm in height, and have spherical pinnules that are 3-5mm in diameter. This seaweed forms clumps on rocks in the mid intertidal to subtidal zone of shores with moderate to calm wave action, and in tidal pools.\", \"biologySummaryVn\": \"Rong cao 3-5cm, nhánh nhỏ hình cầu, đường kính 3-5mm. Rong thành bụi mọc trên đá ở mực triều giữa đến vùng dưới triều, nơi sóng vừa đến yên sóng hay trong các vũng ở vùng triều.\", \"algaebaseId\": 144472, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144472\"}",
-    "en_common_name": "Caulerpa Seaweed"
+    "en_common_name": "Caulerpa Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/ca-bien/thucvat-species-184/01.jpg"
   },
   {
     "id": "thucvat-species-185",
@@ -6451,7 +6496,8 @@
     "tax_genus_latin": "Caulerpa",
     "tax_genus_vn": "Chi Caulerpa",
     "biology": "{\"fbName\": \"Caulerpa Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"in the lower intertidal to subtidal zone of shores with moderate to calm wave action\", \"habitatVn\": \"Rong mọc trên đá chỗ tối, ở mực triều thấp đến dưới triều, nơi sóng vừa đến yên sóng\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"Plants are 3-10cm in height, and have cylindrical to pestle-shaped pinnules. This seaweed is bright green when alive. It grows on well-lit rocks in the lower intertidal to subtidal zone of shores with moderate to calm wave action.\", \"biologySummaryVn\": \"Rong cao 3-10cm, nhánh nhỏ dạng trụ tròn đến dạng cái chày, màu lục nhạt khi tươi. Rong mọc trên đá chỗ tối, ở mực triều thấp đến dưới triều, nơi sóng vừa đến yên sóng.\", \"algaebaseId\": 144472, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144472\"}",
-    "en_common_name": "Caulerpa Seaweed"
+    "en_common_name": "Caulerpa Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-185/01.webp"
   },
   {
     "id": "thucvat-species-186",
@@ -6480,7 +6526,8 @@
     "tax_family_vn": "Họ Rong Nho",
     "tax_genus_latin": "Caulerpa",
     "tax_genus_vn": "Chi Caulerpa",
-    "biology": "{\"fbName\": \"Caulerpa racemosa\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks and gravel in the lower intertidal to subtidal zone of shores exposed to a regular, gentle current\", \"habitatVn\": \"Rong mọc bò trên đá, sỏi đá nhỏ ở mực triều thấp đến dưới triều, nơi dòng chảy êm\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"The erect branches of this plant are 4-6cm long, irregularly dichotomously divided 1-3 times (giving them a 'zigzag' appearance), and have few or no pinnules. The runners creep along the substrate. This seaweed is bright green to green, and is found on rocks and gravel in the lower intertidal to subtidal zone of shores exposed to a regular, gentle current.\", \"biologySummaryVn\": \"Nhánh đứng dài 4-6cm, hơi uốn éo, chia nhánh chạc hai không đều 1-3 lần, ít hoặc không có nhánh nhỏ. Màu lục nhạt đến lục. Rong mọc bò trên đá, sỏi đá nhỏ ở mực triều thấp đến dưới triều, nơi dòng chảy êm.\", \"algaebaseId\": 144472, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144472\"}"
+    "biology": "{\"fbName\": \"Caulerpa racemosa\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks and gravel in the lower intertidal to subtidal zone of shores exposed to a regular, gentle current\", \"habitatVn\": \"Rong mọc bò trên đá, sỏi đá nhỏ ở mực triều thấp đến dưới triều, nơi dòng chảy êm\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"The erect branches of this plant are 4-6cm long, irregularly dichotomously divided 1-3 times (giving them a 'zigzag' appearance), and have few or no pinnules. The runners creep along the substrate. This seaweed is bright green to green, and is found on rocks and gravel in the lower intertidal to subtidal zone of shores exposed to a regular, gentle current.\", \"biologySummaryVn\": \"Nhánh đứng dài 4-6cm, hơi uốn éo, chia nhánh chạc hai không đều 1-3 lần, ít hoặc không có nhánh nhỏ. Màu lục nhạt đến lục. Rong mọc bò trên đá, sỏi đá nhỏ ở mực triều thấp đến dưới triều, nơi dòng chảy êm.\", \"algaebaseId\": 144472, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144472\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-186/01.webp"
   },
   {
     "id": "thucvat-species-187",
@@ -6510,7 +6557,8 @@
     "tax_genus_latin": "Caulerpa",
     "tax_genus_vn": "Chi Caulerpa",
     "biology": "{\"fbName\": \"Caulerpa Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on shaded rocks and dead corals in the subtidal zone of moderately wave-exposed shores\", \"habitatVn\": \"mọc ở chỗ tối trên đá hoặc trên san hô chết ở vùng dưới triều, nơi sóng vừa\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"This variety has characteristic short, erect branches that terminate in a disk. The runners creep along the substrate. Plants are green to dark green and are found on shaded rocks and dead corals in the subtidal zone of moderately wave-exposed shores.\", \"biologySummaryVn\": \"Nhánh ngắn, đỉnh loe thành đĩa, mọc từ phần thân bò. Rong màu lục đến lục đậm, mọc ở chỗ tối trên đá hoặc trên san hô chết ở vùng dưới triều, nơi sóng vừa.\", \"algaebaseId\": 144472, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144472\"}",
-    "en_common_name": "Caulerpa Seaweed"
+    "en_common_name": "Caulerpa Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-187/01.webp"
   },
   {
     "id": "thucvat-species-188",
@@ -6540,7 +6588,8 @@
     "tax_genus_latin": "Caulerpa",
     "tax_genus_vn": "Chi Caulerpa",
     "biology": "{\"fbName\": \"Caulerpa Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"subtidal zone of shores exposed to a regular, gentle current\", \"habitatVn\": \"Rong mọc ở chỗ tối của phiến đá, trên sỏi đá nhỏ và trên san hô chết ở vùng dưới triều, nơi nước chảy êm\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"The erect branches are dichotomously divided (regularly or irregularly), linear, serrated on their edges, and flat at the upper portions. This seaweed is dull green, and grows on shaded rocks, gravel, and dead corals in the subtidal zone of shores exposed to a regular, gentle current.\", \"biologySummaryVn\": \"Nhánh đứng chia nhánh chạc hai hay chạc hai không qui luật, dạng dãi, mép có răng cưa và dẹp ở phần trên, màu lục thẫm. Rong mọc ở chỗ tối của phiến đá, trên sỏi đá nhỏ và trên san hô chết ở vùng dưới triều, nơi nước chảy êm.\", \"algaebaseId\": 211485, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211485\"}",
-    "en_common_name": "Caulerpa Seaweed"
+    "en_common_name": "Caulerpa Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-188/01.webp"
   },
   {
     "id": "thucvat-species-189",
@@ -6570,7 +6619,8 @@
     "tax_genus_latin": "Caulerpa",
     "tax_genus_vn": "Chi Caulerpa",
     "biology": "{\"fbName\": \"Caulerpa Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"subtidal zone of wave-sheltered shores\", \"habitatVn\": \"Rong mọc trên đáy bùn, cát hay đá có phủ cát mỏng ở vùng dưới triều, nơi khuất sóng\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"This plant is similar to C. serrulata var. boryana; however, the branches of this seaweed spiral-upwards. Plants tend to grow on muddy or sandy substrates or on rocks that are covered with a thin layer of sand, in the subtidal zone of wave-sheltered shores.\", \"biologySummaryVn\": \"Gần giống như C. serrulata var. boryana, nhưng các nhánh xoắn vặn ở phía trên. Rong mọc trên đáy bùn, cát hay đá có phủ cát mỏng ở vùng dưới triều, nơi khuất sóng.\", \"algaebaseId\": 211485, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211485\"}",
-    "en_common_name": "Caulerpa Seaweed"
+    "en_common_name": "Caulerpa Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-189/01.webp"
   },
   {
     "id": "thucvat-species-190",
@@ -6599,7 +6649,8 @@
     "tax_family_vn": "Họ Rong Nho",
     "tax_genus_latin": "Caulerpa",
     "tax_genus_vn": "Chi Caulerpa",
-    "biology": "{\"fbName\": \"Caulerpa sertularioides\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants are found on rocks, gravel, and sandy substrates in the subtidal zone of shores with slightly moderate to calm wave action, such as inner reef flats\", \"habitatVn\": \"Rong mọc trên đá, sỏi đá nhỏ và trên đáy cát ở vùng dưới triều, nơi nước chảy vừa đến yếu, như trên các bãi ngang kín\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"This species has feather-like, erect branches and pinnules that are cylindrical, upwardly curved, and with acuminate tips. The basal portions of the pinnules are not constricted. Plants are found on rocks, gravel, and sandy substrates in the subtidal zone of shores with slightly moderate to calm wave action, such as inner reef flats.\", \"biologySummaryVn\": \"Nhánh đứng dạng lông chim, nhánh nhỏ trụ tròn, cong lên, đỉnh nhọn, gốc không thắt. Rong mọc trên đá, sỏi đá nhỏ và trên đáy cát ở vùng dưới triều, nơi nước chảy vừa đến yếu, như trên các bãi ngang kín.\", \"algaebaseId\": 144474, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144474\"}"
+    "biology": "{\"fbName\": \"Caulerpa sertularioides\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"Plants are found on rocks, gravel, and sandy substrates in the subtidal zone of shores with slightly moderate to calm wave action, such as inner reef flats\", \"habitatVn\": \"Rong mọc trên đá, sỏi đá nhỏ và trên đáy cát ở vùng dưới triều, nơi nước chảy vừa đến yếu, như trên các bãi ngang kín\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"This species has feather-like, erect branches and pinnules that are cylindrical, upwardly curved, and with acuminate tips. The basal portions of the pinnules are not constricted. Plants are found on rocks, gravel, and sandy substrates in the subtidal zone of shores with slightly moderate to calm wave action, such as inner reef flats.\", \"biologySummaryVn\": \"Nhánh đứng dạng lông chim, nhánh nhỏ trụ tròn, cong lên, đỉnh nhọn, gốc không thắt. Rong mọc trên đá, sỏi đá nhỏ và trên đáy cát ở vùng dưới triều, nơi nước chảy vừa đến yếu, như trên các bãi ngang kín.\", \"algaebaseId\": 144474, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144474\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-190/01.webp"
   },
   {
     "id": "thucvat-species-191",
@@ -6659,7 +6710,8 @@
     "tax_genus_latin": "Caulerpa",
     "tax_genus_vn": "Chi Caulerpa",
     "biology": "{\"fbName\": \"Caulerpa Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"subtidal zone of calm shores\", \"habitatVn\": \"mọc trên đá, sỏi đá nhỏ, trên đáy cát cứng và trên san hô chết ở vùng dưới triều, nơi nước yên\", \"importance\": \"Edible green seaweed, aquaculture feed, and bioindicator\", \"importanceVn\": \"Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái\", \"biologySummary\": \"The erect branches of this plant are dichotomously or alternately divergent, and have several clumps of dichotomous, whorled pinnules 2-3mm long. Plants are bright green to dark green, and grow on rocks, gravel, hard sandy substrates, and dead corals in the subtidal zone of calm shores.\", \"biologySummaryVn\": \"Nhánh đứng chia nhánh chạc hai hay mọc cách, nhánh nhỏ chia chạc hai, dài 2-3mm, mọc thành từng vòng. Rong màu lục nhạt đến đậm, mọc trên đá, sỏi đá nhỏ, trên đáy cát cứng và trên san hô chết ở vùng dưới triều, nơi nước yên.\", \"algaebaseId\": 211483, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=211483\"}",
-    "en_common_name": "Caulerpa Seaweed"
+    "en_common_name": "Caulerpa Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-192/01.webp"
   },
   {
     "id": "thucvat-species-193",
@@ -6746,7 +6798,8 @@
     "tax_family_vn": "Họ Dichotomosiphonaceae",
     "tax_genus_latin": "Avrainvillea",
     "tax_genus_vn": "Chi Avrainvillea",
-    "biology": "{\"fbName\": \"Avrainvillea obscura\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on sandy substrates in the lower intertidal to subtidal zone of calm shores and in tidal pools\", \"habitatVn\": \"Rong mọc trên đáy cát ở mực triều thấp đến vùng dưới triều, nơi nước yên và trong các vũng ở vùng triều\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species has a flat and cuneiform or flabellate blade. The blade margin is entire and finely fibrous to slightly erose. The holdfast is small (less than 2cm in length). This seaweed is found on sandy substrates in the lower intertidal to subtidal zone of calm shores and in tidal pools.\", \"biologySummaryVn\": \"Phiến phẳng hình nêm hoặc quạt, mép nguyên, có sọc mịn đến hơi nham nhở. Bàn bám nhỏ, dài dưới 2cm. Rong mọc trên đáy cát ở mực triều thấp đến vùng dưới triều, nơi nước yên và trong các vũng ở vùng triều.\", \"algaebaseId\": 221174, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=221174\"}"
+    "biology": "{\"fbName\": \"Avrainvillea obscura\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on sandy substrates in the lower intertidal to subtidal zone of calm shores and in tidal pools\", \"habitatVn\": \"Rong mọc trên đáy cát ở mực triều thấp đến vùng dưới triều, nơi nước yên và trong các vũng ở vùng triều\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species has a flat and cuneiform or flabellate blade. The blade margin is entire and finely fibrous to slightly erose. The holdfast is small (less than 2cm in length). This seaweed is found on sandy substrates in the lower intertidal to subtidal zone of calm shores and in tidal pools.\", \"biologySummaryVn\": \"Phiến phẳng hình nêm hoặc quạt, mép nguyên, có sọc mịn đến hơi nham nhở. Bàn bám nhỏ, dài dưới 2cm. Rong mọc trên đáy cát ở mực triều thấp đến vùng dưới triều, nơi nước yên và trong các vũng ở vùng triều.\", \"algaebaseId\": 221174, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=221174\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-195/01.webp"
   },
   {
     "id": "thucvat-species-196",
@@ -6775,7 +6828,8 @@
     "tax_genus_latin": "Avrainvillea",
     "tax_genus_vn": "Chi Avrainvillea",
     "biology": "{\"fbName\": \"Avrainvillea Seaweed\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"This species is found on coarse sand substrates in the lower intertidal to subtidal zone of shores exposed to a regular, gentle current\", \"habitatVn\": \"Rong mọc trên đáy cát thô ở mực triều thấp đến vùng dưới triều, nơi nước chảy êm\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This plant has a spherical to ellipsoid-spherical blade approximately 2cm in diameter. The blade surface is somewhat fibrous. The holdfast is 3-5cm in length. This species is found on coarse sand substrates in the lower intertidal to subtidal zone of shores exposed to a regular, gentle current.\", \"biologySummaryVn\": \"Rong dạng phiến hình cầu đến cầu bầu dục, đường kính 2cm, mặt phiến hơi sọc. Bàn bám dài 3-5cm. Rong mọc trên đáy cát thô ở mực triều thấp đến vùng dưới triều, nơi nước chảy êm.\", \"algaebaseId\": 221174, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=221174\"}",
-    "en_common_name": "Avrainvillea Seaweed"
+    "en_common_name": "Avrainvillea Seaweed",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-196/01.webp"
   },
   {
     "id": "thucvat-species-197",
@@ -6833,7 +6887,8 @@
     "tax_family_vn": "Họ Rong Halimeda",
     "tax_genus_latin": "Halimeda",
     "tax_genus_vn": "Chi Halimeda",
-    "biology": "{\"fbName\": \"Halimeda discoidea\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks in the subtidal zone of wave-exposed to calm shores\", \"habitatVn\": \"mọc trên đá ở vùng dưới triều, nơi sóng đập đến nước yên\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants have flat and moderately calcified branch segments that are flabellate, wedge-shaped, or reniform, with undulate or irregularly lobed upper margins. The holdfast is small. This species is green to dark green, and is found on rocks in the subtidal zone of wave-exposed to calm shores.\", \"biologySummaryVn\": \"Đốt dẹp, tẩm vôi vừa phải, hình quạt, nêm hay hình qủa thận, mép phía trên gợn sóng hay chia thùy không đều, bàn bám nhỏ. Rong màu lục đến lục đậm, mọc trên đá ở vùng dưới triều, nơi sóng đập đến nước yên.\", \"algaebaseId\": 144481, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144481\"}"
+    "biology": "{\"fbName\": \"Halimeda discoidea\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks in the subtidal zone of wave-exposed to calm shores\", \"habitatVn\": \"mọc trên đá ở vùng dưới triều, nơi sóng đập đến nước yên\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"Plants have flat and moderately calcified branch segments that are flabellate, wedge-shaped, or reniform, with undulate or irregularly lobed upper margins. The holdfast is small. This species is green to dark green, and is found on rocks in the subtidal zone of wave-exposed to calm shores.\", \"biologySummaryVn\": \"Đốt dẹp, tẩm vôi vừa phải, hình quạt, nêm hay hình qủa thận, mép phía trên gợn sóng hay chia thùy không đều, bàn bám nhỏ. Rong màu lục đến lục đậm, mọc trên đá ở vùng dưới triều, nơi sóng đập đến nước yên.\", \"algaebaseId\": 144481, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144481\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-198/01.webp"
   },
   {
     "id": "thucvat-species-199",
@@ -6861,7 +6916,8 @@
     "tax_family_vn": "Họ Rong Halimeda",
     "tax_genus_latin": "Halimeda",
     "tax_genus_vn": "Chi Halimeda",
-    "biology": "{\"fbName\": \"Halimeda discoidea\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks covered with fine sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action\", \"habitatVn\": \"mọc trên đá có phủ cát mịn, ở mực triều thấp đến dưới triều, nơi sóng vừa đến yên sóng\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species has moderately calcified branch segments that are reniform, flabellate, or cylindrical. The upper portions of the branch segments tend to be cylindrical. The holdfast is small. Plants are green, and are found on rocks covered with fine sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action.\", \"biologySummaryVn\": \"Rong có các đốt trắng hơi tẩm vôi, dạng quả thận, quạt hoặc trụ tròn. Phần trên các đốt thường trụ tròn. Bàn bám nhỏ. Rong màu lục, mọc trên đá có phủ cát mịn, ở mực triều thấp đến dưới triều, nơi sóng vừa đến yên sóng.\", \"algaebaseId\": 144481, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144481\"}"
+    "biology": "{\"fbName\": \"Halimeda discoidea\", \"depth\": \"0 - 5 m\", \"depthVn\": \"0 - 5 m\", \"habitat\": \"found on rocks covered with fine sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action\", \"habitatVn\": \"mọc trên đá có phủ cát mịn, ở mực triều thấp đến dưới triều, nơi sóng vừa đến yên sóng\", \"importance\": \"Ecological role in marine reef and seaweed bed communities\", \"importanceVn\": \"Giá trị sinh thái cấu thành bãi rong biển và rạn san hô\", \"biologySummary\": \"This species has moderately calcified branch segments that are reniform, flabellate, or cylindrical. The upper portions of the branch segments tend to be cylindrical. The holdfast is small. Plants are green, and are found on rocks covered with fine sand in the lower intertidal to subtidal zone of shores exposed to moderate to calm wave action.\", \"biologySummaryVn\": \"Rong có các đốt trắng hơi tẩm vôi, dạng quả thận, quạt hoặc trụ tròn. Phần trên các đốt thường trụ tròn. Bàn bám nhỏ. Rong màu lục, mọc trên đá có phủ cát mịn, ở mực triều thấp đến dưới triều, nơi sóng vừa đến yên sóng.\", \"algaebaseId\": 144481, \"algaebaseUrl\": \"https://www.marinespecies.org/aphia.php?p=taxdetails&id=144481\"}",
+    "photo_url": "https://cjxqogvtzrvnlsssnfob.supabase.co/storage/v1/object/public/species-photos/thuc-vat-bien/thucvat-species-199/01.webp"
   },
   {
     "id": "thucvat-species-200",
