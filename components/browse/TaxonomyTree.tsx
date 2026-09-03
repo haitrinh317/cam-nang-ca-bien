@@ -57,10 +57,10 @@ export default function TaxonomyTree({ collection }: Props) {
 
   useEffect(() => {
     async function load() {
-      // ponytail: Supabase max-rows = 1000. Fetch 2 pages for ~1200 rows.
+      // ponytail: Supabase max-rows = 1000. Fetch 2 pages for collection.
       const [r1, r2] = await Promise.all([
-        db.from('species').select(COLS).range(0, 999),
-        db.from('species').select(COLS).range(1000, 1999),
+        db.from('species').select(COLS).eq('collection_id', collection).is('deleted_at', null).range(0, 999),
+        db.from('species').select(COLS).eq('collection_id', collection).is('deleted_at', null).range(1000, 1999),
       ])
       if (r1.error) { setStatus('error'); return }
 
