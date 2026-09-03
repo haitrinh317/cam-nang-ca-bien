@@ -34,6 +34,13 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        // Edge Cache cho trang chi tiết loài và cây phân loại (24h)
+        source: '/:collection(ca-bien|thuc-vat-bien)/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=86400' },
+        ],
+      },
+      {
         // Cache static assets aggressively
         source: '/_next/static/(.*)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],

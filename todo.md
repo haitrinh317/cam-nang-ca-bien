@@ -1,8 +1,8 @@
 # TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-03 06:35 (Session End)
+> Cập nhật: 2026-09-03 14:15
 > **Next Session Starting Point**: (1) Bổ sung CSV Import và Inline edit cho Admin Panel. (2) Bổ sung tên VN ~17 loài rong biển còn thiếu. (3) Mở rộng bộ sưu tập mới (San hô, Thân mềm) khi có tài liệu OCR tiếp theo.
-> **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology) + 201 thực vật biển = 1,965 loài. Toàn bộ 6 tập cá biển đã đạt 100% WoRMS Sync và 100% Biology. Đã dọn sạch phantom row loài 78 Tập IV.
+> **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Toàn bộ CSDL cá biển đạt 100% bản dịch sinh học tiếng Việt chuẩn khoa học.
 
 ## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
 
@@ -203,3 +203,13 @@
 - [ ] Phân quyền editor: chỉ sửa loài mình phụ trách
 - [ ] Admin toàn quyền
 - [ ] Invite system cho collaborators
+
+### Tối ưu Hiệu năng & Core Web Vitals (2026-09-03)
+- [x] Audit kích thước ảnh: 100% WebP, TB 23.5 KB/ảnh, 0% > 150 KB.
+- [x] Giai đoạn 1: Bật ISR 24h & React cache() dedup query cho trang Chi tiết loài.
+- [x] Giai đoạn 1: Bỏ JOIN species_photos thừa trong SpeciesGrid (tiết kiệm 41.8% payload JSON).
+- [x] Giai đoạn 1: Thêm decoding="async" & width/height cho ảnh thẻ loài.
+- [x] Giai đoạn 2: Prefetch cây phân loại trên Server Component kết hợp ISR 24h (loại bỏ client fetch 2,000 dòng).
+- [x] Giai đoạn 2: Tối ưu LCP PhotoGallery với fetchPriority="high" & decoding="async".
+- [x] Giai đoạn 2: Bổ sung vn_alternate_names và lọc deleted_at trong GlobalSearch.
+- [x] Giai đoạn 2: Tối ưu đếm số Họ từ taxonomy_tree trên trang chủ.

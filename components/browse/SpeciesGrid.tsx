@@ -51,7 +51,8 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
         scientific_name, 
         tax_order_vn, 
         tax_family_vn, 
-        photo_url
+        photo_url,
+        species_photos ( storage_path )
       `)
       .eq('collection_id', collection)
       .eq('volume', vol)
@@ -61,8 +62,19 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
 
     if (error || !data) { setStatus('error'); return }
     
-    setSpecies(data as Species[])
-    setFiltered(data as Species[])
+    const transformed = data.map((sp: any) => {
+      let coverPhoto = sp.photo_url
+      if (!coverPhoto && sp.species_photos && sp.species_photos.length > 0) {
+        coverPhoto = db.storage.from('species-photos').getPublicUrl(sp.species_photos[0].storage_path).data.publicUrl
+      }
+      return {
+        ...sp,
+        photo_url: coverPhoto
+      }
+    })
+    
+    setSpecies(transformed)
+    setFiltered(transformed)
     setStatus('ok')
   }, [collection])
 
