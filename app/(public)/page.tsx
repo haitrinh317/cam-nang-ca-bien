@@ -23,12 +23,13 @@ export default async function HomePage() {
     .select('*', { count: 'exact', head: true })
 
   const { data: familyRows } = await db
-    .from('species')
+    .from('taxonomy_tree')
     .select('tax_family_latin')
     .not('tax_family_latin', 'is', null)
+    .not('tax_family_latin', 'eq', '')
 
   const familyCount = familyRows
-    ? new Set(familyRows.map(r => r.tax_family_latin)).size
+    ? new Set(familyRows.map(r => r.tax_family_latin).filter(Boolean)).size
     : '—'
 
   return (

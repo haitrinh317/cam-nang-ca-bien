@@ -3,8 +3,8 @@ import { notFound } from 'next/navigation'
 import TaxonomyTree from '@/components/browse/TaxonomyTree'
 import type { Metadata } from 'next'
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+// ponytail: ISR cache 24h (86400s) — Cây phân loại chỉ cập nhật khi có xuất bản hoặc OCR batch mới
+export const revalidate = 86400
 
 interface Props {
   params: Promise<{ collection: string }>

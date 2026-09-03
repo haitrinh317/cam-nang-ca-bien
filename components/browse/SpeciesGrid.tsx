@@ -51,33 +51,18 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
         scientific_name, 
         tax_order_vn, 
         tax_family_vn, 
-        photo_url,
-        species_photos ( storage_path )
+        photo_url
       `)
       .eq('collection_id', collection)
       .eq('volume', vol)
+      .is('deleted_at', null)
       .order('species_index')
       .limit(700)
 
     if (error || !data) { setStatus('error'); return }
     
-    // Transform to get the first photo URL if available
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://lkhivkrvlyujsbqxptnr.supabase.co'
-    
-    const transformed = data.map((sp: any) => {
-      let coverPhoto = sp.photo_url
-      if (!coverPhoto && sp.species_photos && sp.species_photos.length > 0) {
-        // Use the first photo from the join
-        coverPhoto = `${supabaseUrl}/storage/v1/object/public/species-photos/${sp.species_photos[0].storage_path}`
-      }
-      return {
-        ...sp,
-        photo_url: coverPhoto
-      }
-    })
-    
-    setSpecies(transformed)
-    setFiltered(transformed)
+    setSpecies(data as Species[])
+    setFiltered(data as Species[])
     setStatus('ok')
   }, [collection])
 
@@ -159,7 +144,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
           <Link key={sp.id} href={`/${collection}/${sp.id}`} className="species-card-mini">
             <div className="scm-thumb">
               {sp.photo_url ? (
-                <img src={sp.photo_url} alt="" loading="lazy" />
+                <img src={sp.photo_url} alt="" loading="lazy" decoding="async" width={120} height={90} />
               ) : (
                 <div className="scm-thumb-placeholder" />
               )}
