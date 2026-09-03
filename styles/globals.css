@@ -318,6 +318,7 @@ a:focus-visible {
   border-radius: var(--radius-xl);
   padding: var(--space-4xl) var(--space-4xl) var(--space-3xl);
   position: relative;
+  z-index: 50;
   overflow: visible;
   margin-bottom: var(--space-5xl);
   box-shadow: var(--shadow-lg);
@@ -342,7 +343,7 @@ a:focus-visible {
   opacity: 0.5;
 }
 
-.hero__content { position: relative; z-index: 1; }
+.hero__content { position: relative; z-index: 50; }
 
 .hero h1 {
   font-size: var(--text-display);
@@ -405,7 +406,12 @@ a:focus-visible {
 .search-wrapper {
   max-width: 600px;
   position: relative;
-  z-index: 50;
+  z-index: 100;
+}
+
+.search-wrapper:focus-within,
+.search-wrapper.is-open {
+  z-index: 1000;
 }
 
 .search-input-container {
@@ -461,8 +467,8 @@ a:focus-visible {
   background: var(--color-paper-2);
   border: 1.5px solid var(--color-navy-raw);
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-lg);
-  z-index: 99;
+  box-shadow: 0 16px 40px rgba(12, 20, 42, 0.22), 0 6px 12px rgba(12, 20, 42, 0.12);
+  z-index: 9999;
   max-height: 420px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -533,6 +539,8 @@ a:focus-visible {
    SECTION BROWSE — Volume cards (index.html)
    ═══════════════════════════════════════════ */
 .section-browse {
+  position: relative;
+  z-index: 1;
   max-width: var(--max-width);
   margin: 0 auto var(--space-5xl);
   padding: 0 var(--space-xl);
