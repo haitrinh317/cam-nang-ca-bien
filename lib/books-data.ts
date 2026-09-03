@@ -130,6 +130,27 @@ export const BOOKS_BY_COLLECTION: Record<string, BookMetadata[]> = {
         },
       ],
     },
+    {
+      id: 'rong-bien-pham-hoang-ho',
+      title: 'Rong biển Việt Nam',
+      badge: 'Tập II (~500 loài)',
+      author: 'GS. Phạm Hoàng Hộ',
+      publisher: 'Bộ Giáo-dục và Thanh-niên — Trung-tâm Học-liệu Xuất-bản',
+      yearRange: '1969',
+      totalSpecies: 497,
+      description: 'Công trình định loại cơ bản và giải phẫu thực vật toàn diện đầu tiên về các loài rong biển Việt Nam (Marine Algae of South Vietnam).',
+      volumes: [
+        {
+          volume: 2,
+          roman: 'II',
+          year: '1969',
+          title: 'Rong biển Việt Nam (Marine Algae of South Vietnam)',
+          subTitle: 'Thanh-tảo, Lục-tảo, Hoàng-tảo, Hồng-tảo bờ biển Việt Nam',
+          author: 'GS. Phạm Hoàng Hộ',
+          speciesCount: 497,
+        },
+      ],
+    },
   ],
 }
 

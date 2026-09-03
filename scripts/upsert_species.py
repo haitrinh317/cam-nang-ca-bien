@@ -76,7 +76,19 @@ def normalize_flat(sp: dict) -> dict:
     if cs not in ("common", "uncommon", "rare", "unknown"):
         cs = "unknown"
 
-    row = dict(sp)  # copy
+    VALID_COLS = {
+        "authorship", "biology", "collection_id", "conservation_status",
+        "ecology_en", "ecology_vn", "economic_value_en", "economic_value_vn",
+        "en_common_name", "en_distribution", "en_literature", "en_size", "en_specimen", "en_status",
+        "id", "morphology_en", "morphology_vn", "photo_date", "photo_depth", "photo_place", "photo_url",
+        "scientific_name", "species_index", "synonyms", "tax_class_latin", "tax_class_vn",
+        "tax_family_latin", "tax_family_vn", "tax_genus_latin", "tax_genus_vn",
+        "tax_order_latin", "tax_order_vn", "vn_alternate_names", "vn_distribution",
+        "vn_literature", "vn_name", "vn_size", "vn_specimen", "vn_status", "volume",
+        "worms_accepted_name", "worms_id", "worms_status", "worms_synced_at"
+    }
+
+    row = {k: v for k, v in sp.items() if k in VALID_COLS}
     row["synonyms"] = json.dumps(syns, ensure_ascii=False)
     row["conservation_status"] = cs
     row.setdefault("collection_id", "ca-bien")

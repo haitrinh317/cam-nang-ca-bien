@@ -356,7 +356,9 @@ export default function SpecimenCard({ sp }: { sp: Species }) {
         <div className="specimen__meta">
           <span className="specimen__index">#{sp.species_index || ''}</span>
           <span className="specimen__vol">
-            {sp.collection_id === 'thuc-vat-bien' ? 'Sách Thực vật' : `Tập ${sp.volume || ''}`}
+            {sp.collection_id === 'thuc-vat-bien' 
+              ? (sp.volume === 2 ? 'Tập II · Rong biển VN (1969)' : 'Tập I · Thực vật phía Nam') 
+              : `Tập ${sp.volume || ''}`}
           </span>
         </div>
         <h1 className="specimen__name">{sp.vn_name}</h1>

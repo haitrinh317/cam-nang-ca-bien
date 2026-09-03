@@ -85,15 +85,11 @@ export default async function CollectionPage({ params, searchParams }: Props) {
               <span className="hero__stat-num">{books.length}</span>
               <span className="hero__stat-label">Đầu sách</span>
             </div>
-            {col.id !== 'thuc-vat-bien' && (
-              <>
-                <div className="hero__stat-divider" />
-                <div className="hero__stat">
-                  <span className="hero__stat-num">{col.volumeCount}</span>
-                  <span className="hero__stat-label">Tập tài liệu</span>
-                </div>
-              </>
-            )}
+            <div className="hero__stat-divider" />
+            <div className="hero__stat">
+              <span className="hero__stat-num">{col.volumeCount}</span>
+              <span className="hero__stat-label">Tập tài liệu</span>
+            </div>
           </div>
         </div>
       </section>

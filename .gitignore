@@ -44,6 +44,9 @@ scratch_images/
 *.webp
 *.pdf
 
+# Allow public images for site illustrations
+!public/images/**
+
 # Backup files
 .backups/
 v1_backup/
