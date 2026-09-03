@@ -106,9 +106,9 @@ export default function LiteratureSection() {
           <BookOpen size={15} color="var(--color-cyan-raw)" />
           <span className="lit-badge-text">TÀI LIỆU KHOA HỌC GỐC TRA CỨU</span>
         </div>
-        <h2 className="lit-title">Công Trình Khảo Sát & Phân Loại Học Gốc</h2>
+        <h2 className="lit-title">Nguồn tài liệu tham khảo</h2>
         <p className="lit-subtitle">
-          Cơ sở dữ liệu được số hóa chuẩn hóa trực tiếp từ các ấn phẩm phân loại kinh điển của Viện Hải dương học Nha Trang và các nhà ngư loại học tiền bối.
+          Cơ sở dữ liệu được tham khảo chính từ các nguồn tài liệu sau:
         </p>
       </div>
 
