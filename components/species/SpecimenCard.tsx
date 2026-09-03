@@ -58,7 +58,9 @@ interface Biology {
   maxWeight?: string
   longevity?: string
   depth?: string
+  depthVn?: string
   habitat?: string
+  habitatVn?: string
   iucnStatus?: string
   dangerous?: string
   feedingType?: string
@@ -68,6 +70,7 @@ interface Biology {
   spawnAggregation?: boolean
   parentalCare?: string
   importance?: string
+  importanceVn?: string
   aquaculture?: string
   biologySummary?: string
   biologySummaryVn?: string
@@ -210,20 +213,20 @@ function tvn(val: string): string {
   return VALUE_VN[val.toLowerCase().trim()] || VALUE_VN[val.trim()] || ''
 }
 
-function BioRow({ label, val }: { label: string; val?: string | number | null }) {
-  if (!val && val !== 0) return null
+function BioRow({ label, val, valVn }: { label: string; val?: string | number | null; valVn?: string | null }) {
+  if (!val && val !== 0 && !valVn) return null
   const labelVn = LABEL_VN[label] || label
-  const valStr = String(val)
-  const valVn = typeof val === 'string' ? tvn(val) : ''
+  const enStr = val != null ? String(val) : ''
+  const vnStr = valVn || (typeof val === 'string' ? tvn(val) : '') || enStr
   return (
     <div className="kv-row">
       <div className="kv-cell">
         <div className="kv-label">{labelVn}</div>
-        <div className="kv-value">{valVn || valStr}</div>
+        <div className="kv-value">{vnStr}</div>
       </div>
       <div className="kv-cell">
         <div className="kv-label kv-label-en">{label}</div>
-        <div className="kv-value kv-value-en">{valStr}</div>
+        <div className="kv-value kv-value-en">{enStr || '—'}</div>
       </div>
     </div>
   )
@@ -242,8 +245,8 @@ function BiologyPanel({ bio, speciesId, collectionId }: { bio: Biology; speciesI
         <BioRow label="Max length" val={bio.maxLength} />
         <BioRow label="Max weight" val={bio.maxWeight} />
         <BioRow label="Longevity" val={bio.longevity} />
-        <BioRow label="Depth range" val={bio.depth} />
-        <BioRow label="Habitat" val={bio.habitat} />
+        <BioRow label="Depth range" val={bio.depth} valVn={bio.depthVn} />
+        <BioRow label="Habitat" val={bio.habitat} valVn={bio.habitatVn} />
         {iucn && (
           <div className="kv-row">
             <div className="kv-cell">
@@ -269,7 +272,7 @@ function BiologyPanel({ bio, speciesId, collectionId }: { bio: Biology; speciesI
         <BioRow label="Spawning" val={bio.spawning} />
         {bio.spawnAggregation && <BioRow label="Spawn aggregation" val="Yes — forms spawning aggregations" />}
         <BioRow label="Parental care" val={bio.parentalCare} />
-        <BioRow label="Importance" val={bio.importance} />
+        <BioRow label="Importance" val={bio.importance} valVn={bio.importanceVn} />
         <BioRow label="Aquaculture" val={bio.aquaculture} />
       </section>
 
@@ -343,6 +346,9 @@ export default function SpecimenCard({ sp }: { sp: Species }) {
     sp.tax_genus_vn  ? { rank: sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống', vn: sp.tax_genus_vn,  lat: sp.tax_genus_latin }  : null,
   ].filter(Boolean) as { rank: string; vn: string; lat: string | null }[]
 
+  const isSeaweed = sp.collection_id === 'thuc-vat-bien' || sp.id.startsWith('thucvat-')
+  const enSourceTag = isSeaweed ? 'EN · AlgaeBase' : 'EN · FishBase/GBIF'
+
   return (
     <div className={`specimen vol-${sp.volume}`}>
       {/* Hero */}
@@ -397,6 +403,8 @@ function TabStrip({ sp, bio, syns, speciesId }: {
   speciesId: string
 }) {
   const [active, setActive] = useState<TabId>('thongso')
+  const isSeaweed = sp.collection_id === 'thuc-vat-bien' || sp.id.startsWith('thucvat-')
+  const enSourceTag = isSeaweed ? 'EN · AlgaeBase' : 'EN · FishBase/GBIF'
 
   const TABS: { id: TabId; label: string }[] = [
     { id: 'thongso',  label: 'Thông số' },
@@ -448,7 +456,7 @@ function TabStrip({ sp, bio, syns, speciesId }: {
                   : sp.morphology_en && (
                     <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>
                       {sp.morphology_en}
-                      <span className="source-tag">EN · FishBase/GBIF</span>
+                      <span className="source-tag">{enSourceTag}</span>
                     </div>
                   )
                 }
@@ -468,7 +476,7 @@ function TabStrip({ sp, bio, syns, speciesId }: {
                   : sp.ecology_en && (
                     <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>
                       {sp.ecology_en}
-                      <span className="source-tag">EN · FishBase/GBIF</span>
+                      <span className="source-tag">{enSourceTag}</span>
                     </div>
                   )
                 }
@@ -488,7 +496,7 @@ function TabStrip({ sp, bio, syns, speciesId }: {
                   : sp.en_distribution && (
                     <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>
                       {sp.en_distribution}
-                      <span className="source-tag">EN · FishBase/GBIF</span>
+                      <span className="source-tag">{enSourceTag}</span>
                     </div>
                   )
                 }
@@ -508,7 +516,7 @@ function TabStrip({ sp, bio, syns, speciesId }: {
                   : sp.economic_value_en && (
                     <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>
                       {sp.economic_value_en}
-                      <span className="source-tag">EN · FishBase/GBIF</span>
+                      <span className="source-tag">{enSourceTag}</span>
                     </div>
                   )
                 }
