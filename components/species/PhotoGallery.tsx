@@ -68,7 +68,7 @@ export default function PhotoGallery({ speciesId, fallbackUrl }: Props) {
     if (!fallbackUrl) return null
     return (
       <figure className="specimen__photo">
-        <img src={fallbackUrl} alt="" loading="lazy" />
+        <img src={fallbackUrl} alt="" decoding="async" fetchPriority="high" />
       </figure>
     )
   }
@@ -81,7 +81,7 @@ export default function PhotoGallery({ speciesId, fallbackUrl }: Props) {
   return (
     <>
       <div className="specimen__gallery">
-        {/* Main photo */}
+        {/* Main photo — LCP critical image */}
         <figure
           className="specimen__photo specimen__photo--main"
           onClick={() => setLightbox(true)}
@@ -90,7 +90,7 @@ export default function PhotoGallery({ speciesId, fallbackUrl }: Props) {
           aria-label="Phóng to ảnh"
           onKeyDown={e => e.key === 'Enter' && setLightbox(true)}
         >
-          <img src={mainUrl} alt="" loading="lazy" style={{ opacity: fading ? 0 : 1, transition: 'opacity 0.15s ease' }} />
+          <img src={mainUrl} alt="" decoding="async" fetchPriority="high" style={{ opacity: fading ? 0 : 1, transition: 'opacity 0.15s ease' }} />
         </figure>
 
         {/* Thumbnails (Desktop) */}
@@ -104,7 +104,7 @@ export default function PhotoGallery({ speciesId, fallbackUrl }: Props) {
                 type="button"
                 aria-label={`Ảnh ${i + 1}`}
               >
-                <img src={publicUrl(p.storage_path)} alt="" loading="lazy" />
+                <img src={publicUrl(p.storage_path)} alt="" loading="lazy" decoding="async" width={72} height={54} />
               </button>
             ))}
           </div>

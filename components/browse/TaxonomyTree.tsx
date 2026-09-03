@@ -19,7 +19,10 @@ interface SpeciesRow {
   species_index: number | null
 }
 
-interface Props { collection: string }
+interface Props { 
+  collection: string 
+  initialSpecies?: SpeciesRow[]
+}
 
 const COLS = 'id, vn_name, scientific_name, tax_class_vn, tax_class_latin, tax_order_vn, tax_order_latin, tax_family_vn, tax_family_latin, tax_genus_vn, tax_genus_latin, species_index'
 
@@ -48,14 +51,17 @@ function TreeNode({ title, rankClass, rankName, children }: {
   )
 }
 
-export default function TaxonomyTree({ collection }: Props) {
-  const [allSpecies, setAllSpecies] = useState<SpeciesRow[]>([])
+export default function TaxonomyTree({ collection, initialSpecies }: Props) {
+  const [allSpecies, setAllSpecies] = useState<SpeciesRow[]>(initialSpecies || [])
   const [filtered, setFiltered] = useState<SpeciesRow[] | null>(null)
-  const [status, setStatus] = useState<'loading' | 'error' | 'ok'>('loading')
+  const [status, setStatus] = useState<'loading' | 'error' | 'ok'>(initialSpecies && initialSpecies.length > 0 ? 'ok' : 'loading')
   const [query, setQuery] = useState('')
   const [showTree, setShowTree] = useState(true)
 
   useEffect(() => {
+    // Nếu đã có dữ liệu khởi tạo từ Server (ISR), không cần query client nữa
+    if (initialSpecies && initialSpecies.length > 0) return
+
     async function load() {
       // ponytail: Supabase max-rows = 1000. Fetch 2 pages for collection.
       const [r1, r2] = await Promise.all([
@@ -79,7 +85,7 @@ export default function TaxonomyTree({ collection }: Props) {
       setStatus('ok')
     }
     load()
-  }, [])
+  }, [collection, initialSpecies])
 
   const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
     const q = e.target.value

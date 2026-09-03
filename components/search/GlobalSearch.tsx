@@ -25,7 +25,8 @@ export default function GlobalSearch() {
     const { data, error } = await db
       .from('species')
       .select('id, volume, vn_name, scientific_name, authorship, collection_id')
-      .or(`vn_name.ilike.%${q}%,scientific_name.ilike.%${q}%,en_common_name.ilike.%${q}%`)
+      .is('deleted_at', null)
+      .or(`vn_name.ilike.%${q}%,scientific_name.ilike.%${q}%,en_common_name.ilike.%${q}%,vn_alternate_names.ilike.%${q}%`)
       .order('volume')
       .limit(12)
 
