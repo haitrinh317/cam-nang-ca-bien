@@ -111,21 +111,21 @@ export const BOOKS_BY_COLLECTION: Record<string, BookMetadata[]> = {
   'thuc-vat-bien': [
     {
       id: 'rong-bien',
-      title: 'Rong biển thường gặp ở Việt Nam',
+      title: 'Thực Vật Biển Thường Thấy ở Phía Nam Việt Nam',
       badge: '1 tập (201 loài)',
-      author: 'Nhóm nghiên cứu Thực vật biển',
-      publisher: 'Viện Hải dương học',
+      author: 'TSUTSUI Isao, HUỲNH Quang Năng, NGUYỄN Hữu Dinh, ARAI Shogo and YOSHIDA Tadao',
+      publisher: 'Japan Seaweed Association',
       yearRange: 'Chuyên khảo',
       totalSpecies: 201,
-      description: 'Danh mục định loại và đặc điểm sinh thái, kinh tế của các loài rong biển ven bờ Việt Nam.',
+      description: 'Danh mục định loại và đặc điểm sinh thái, kinh tế của các loài rong và thực vật biển ven bờ phía Nam Việt Nam (The Common Marine Plants of Southern Vietnam).',
       volumes: [
         {
           volume: 1,
           roman: 'I',
           year: '',
-          title: 'Rong biển thường gặp ở Việt Nam',
-          subTitle: 'Rong đỏ, Rong nâu, Rong lục, Rong lam',
-          author: 'Viện Hải dương học',
+          title: 'Thực Vật Biển Thường Thấy ở Phía Nam Việt Nam',
+          subTitle: 'The Common Marine Plants of Southern Vietnam',
+          author: 'TSUTSUI Isao, HUỲNH Quang Năng, NGUYỄN Hữu Dinh, ARAI Shogo and YOSHIDA Tadao',
           speciesCount: 201,
         },
       ],

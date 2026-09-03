@@ -49,7 +49,7 @@ const VOLUMES = [
   { vol: 'Tập IV', year: '2004', name: 'Cá Bướm, Cá Thiên nga, Cá Tai tượng', author: 'TS. Nguyễn Nhật Thi' },
   { vol: 'Tập V', year: '2007', name: 'Cá Bống, Cá Bơn, Cá Nóc, Cá Cóc biển', author: 'TS. Nguyễn Nhật Thi' },
   { vol: 'Tập VI', year: '2020s', name: 'Atlas Cá rạn san hô Việt Nam', author: 'TS. Đỗ Thị Cát Tường' },
-  { vol: 'Thực vật biển', year: 'Chuyên khảo', name: 'Rong biển thường gặp ở Việt Nam', author: 'Nhóm nghiên cứu Thực vật biển' },
+  { vol: 'Thực vật biển', year: 'Chuyên khảo', name: 'Thực Vật Biển Thường Thấy ở Phía Nam Việt Nam', author: 'TSUTSUI Isao, HUỲNH Quang Năng, NGUYỄN Hữu Dinh, ARAI Shogo and YOSHIDA Tadao' },
 ]
 
 export default function AboutPage() {

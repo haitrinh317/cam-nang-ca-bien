@@ -62,7 +62,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
         <div className="hero__bg" aria-hidden="true" />
         <div className="hero__content">
           <h1>
-            Tra cứu Danh mục <span className="hero__accent">{col.nameVn}</span>
+            Tra cứu Danh mục <span className="hero__accent">{col.id === 'thuc-vat-bien' ? 'Thực Vật Biển Việt Nam' : col.nameVn}</span>
           </h1>
           <p>
             Cơ sở dữ liệu số hóa phục vụ nghiên cứu khoa học — Viện Hải dương học, Nha Trang.
@@ -85,11 +85,15 @@ export default async function CollectionPage({ params, searchParams }: Props) {
               <span className="hero__stat-num">{books.length}</span>
               <span className="hero__stat-label">Đầu sách</span>
             </div>
-            <div className="hero__stat-divider" />
-            <div className="hero__stat">
-              <span className="hero__stat-num">{col.volumeCount}</span>
-              <span className="hero__stat-label">Tập tài liệu</span>
-            </div>
+            {col.id !== 'thuc-vat-bien' && (
+              <>
+                <div className="hero__stat-divider" />
+                <div className="hero__stat">
+                  <span className="hero__stat-num">{col.volumeCount}</span>
+                  <span className="hero__stat-label">Tập tài liệu</span>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>

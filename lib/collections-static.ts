@@ -24,7 +24,7 @@ export const STATIC_COLLECTIONS: Collection[] = [
   },
   {
     id: 'thuc-vat-bien', slug: 'thuc-vat-bien',
-    nameVn: 'Rong biển thường gặp ở Việt Nam', nameEn: 'Common Seaweeds of Vietnam',
+    nameVn: 'Thực vật biển', nameEn: 'The Common Marine Plants of Southern Vietnam',
     icon: '🌿', accentColor: '#a7f3d0', volumeCount: 1,
     status: 'active', sortOrder: 2,
   },

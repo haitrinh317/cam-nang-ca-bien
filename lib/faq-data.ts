@@ -45,11 +45,11 @@ export const FAQ_DATA: FaqItem[] = [
     categoryLabel: 'Nguồn tài liệu',
     question: 'Dữ liệu các loài cá và sinh vật biển trên website được trích xuất từ các công trình khoa học nào?',
     questionEn: 'What primary scientific literature is this database sourced from?',
-    answer: 'Nguồn tài liệu xương sống của dự án là các công trình khảo sát, định loại chính quy của các chuyên gia hàng đầu Viện Hải dương học qua nhiều thập kỷ, bao gồm:\n\n• Bộ sách "Danh mục Cá biển Việt Nam" (Tập I đến Tập V, NXB Nông nghiệp, 1992–2007) do GS. Nguyễn Khắc Hường, TS. Nguyễn Nhật Thi và các cộng sự biên soạn.\n• Sách "Atlas cá rạn san hô Việt Nam" (Tập VI, NXB Khoa học Tự nhiên & Công nghệ) của TS. Đỗ Thị Cát Tường.\n• Sách "Rong biển thường gặp ở Việt Nam" cùng các tài liệu chuyên khảo chuyên ngành về thực vật và động vật biển ven bờ.',
+    answer: 'Nguồn tài liệu xương sống của dự án là các công trình khảo sát, định loại chính quy của các chuyên gia hàng đầu Viện Hải dương học qua nhiều thập kỷ, bao gồm:\n\n• Bộ sách "Danh mục Cá biển Việt Nam" (Tập I đến Tập V, NXB Nông nghiệp, 1992–2007) do GS. Nguyễn Khắc Hường, TS. Nguyễn Nhật Thi và các cộng sự biên soạn.\n• Sách "Atlas cá rạn san hô Việt Nam" (Tập VI, NXB Khoa học Tự nhiên & Công nghệ) của TS. Đỗ Thị Cát Tường.\n• Sách "Thực Vật Biển Thường Thấy ở Phía Nam Việt Nam" (The Common Marine Plants of Southern Vietnam) của TSUTSUI Isao, HUỲNH Quang Năng, NGUYỄN Hữu Dinh, ARAI Shogo and YOSHIDA Tadao.',
     highlights: [
       'Danh mục Cá biển Việt Nam: Tập I, II, III, IV, V (1992–2007)',
       'Atlas Cá rạn san hô Việt Nam: Tập VI',
-      'Rong biển thường gặp ở Việt Nam & các tài liệu phân loại mẫu vật lưu trữ'
+      'Thực Vật Biển Thường Thấy ở Phía Nam Việt Nam (The Common Marine Plants of Southern Vietnam)'
     ]
   },
   {
