@@ -22,6 +22,8 @@ import requests
 from PIL import Image
 from dotenv import load_dotenv
 
+sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
+
 # ── Config ──────────────────────────────────────────────────────────
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
@@ -63,6 +65,15 @@ def supa_post(endpoint, data):
     resp = requests.post(url, headers=headers, json=data, timeout=30)
     resp.raise_for_status()
     return resp.json()
+
+
+def supa_patch(endpoint, data):
+    """PATCH to Supabase REST API."""
+    url = f"{SUPABASE_URL}/rest/v1/{endpoint}"
+    headers = {**HEADERS_SUPA, "Prefer": "return=minimal"}
+    resp = requests.patch(url, headers=headers, json=data, timeout=30)
+    resp.raise_for_status()
+    return resp
 
 
 def supa_upload(path, file_bytes, content_type="image/webp"):
@@ -179,19 +190,22 @@ def download_and_convert_webp(url):
 
 # ── Main logic ──────────────────────────────────────────────────────
 
-def get_all_species():
+def get_all_species(volume=None):
     """Fetch all ca-bien species from Supabase."""
     all_species = []
     offset = 0
     batch = 500
     while True:
-        rows = supa_get("species", {
-            "select": "id,scientific_name,worms_accepted_name",
+        params = {
+            "select": "id,scientific_name,worms_accepted_name,photo_url",
             "collection_id": f"eq.{COLLECTION}",
             "order": "volume,species_index",
             "offset": offset,
             "limit": batch,
-        })
+        }
+        if volume:
+            params["volume"] = f"eq.{volume}"
+        rows = supa_get("species", params)
         all_species.extend(rows)
         if len(rows) < batch:
             break
@@ -282,6 +296,12 @@ def process_species(sp, idx, total, dry_run=False):
                 "is_primary": (i == 0),
                 "sort_order": i,
             })
+            if i == 0 and not sp.get("photo_url"):
+                public_url = supa_public_url(storage_path)
+                try:
+                    supa_patch(f"species?id=eq.{species_id}", {"photo_url": public_url})
+                except Exception:
+                    pass
             uploaded += 1
         except Exception as e:
             print(f"    ⚠️  Photo {i+1} failed: {e}")
@@ -293,6 +313,7 @@ def process_species(sp, idx, total, dry_run=False):
 
 def main():
     parser = argparse.ArgumentParser(description="Fetch iNaturalist photos for ca-bien species")
+    parser.add_argument("--volume", type=int, default=None, help="Process only specific volume (e.g. 6)")
     parser.add_argument("--limit", type=int, default=0, help="Process only N species (0 = all)")
     parser.add_argument("--offset", type=int, default=0, help="Skip first N species")
     parser.add_argument("--dry-run", action="store_true", help="Preview only, don't download/upload")
@@ -300,11 +321,13 @@ def main():
 
     print("=" * 60)
     print("🐟 iNaturalist Photo Fetcher — Cẩm Nang Cá Biển VN")
+    if args.volume:
+        print(f"   Chỉ áp dụng cho: Tập {args.volume}")
     print("=" * 60)
 
     # Get all species
     print("\n📋 Loading species from Supabase...")
-    all_species = get_all_species()
+    all_species = get_all_species(volume=args.volume)
     print(f"   Total ca-bien species: {len(all_species)}")
 
     # Get existing photos (for incremental)

@@ -95,8 +95,9 @@ YÊU CẦU DỊCH THUẬT:
 5. Chỉ trả về một JSON duy nhất với các trường tương ứng đã dịch, KHÔNG kèm giải thích hay markdown code blocks ngoài JSON.
 """
 
-# Ưu tiên các model flash-lite có quota cao nhất (1500 RPD mỗi model)
+# Ưu tiên các model flash có quota hoạt động
 MODELS = [
+    "gemini-flash-latest",
     "gemini-3.1-flash-lite",
     "gemini-3.5-flash-lite",
     "gemini-flash-lite-latest",
