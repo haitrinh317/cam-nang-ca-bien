@@ -2,7 +2,14 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import { db } from '@/lib/supabase-browser'
-import { BookOpen, Plus, Pencil, Trash2, Eye, EyeOff, GripVertical } from 'lucide-react'
+import { BookOpen, Plus, Pencil, Trash2, Eye, EyeOff } from 'lucide-react'
+import { STATIC_COLLECTIONS } from '@/lib/collections-static'
+
+interface LinkOption {
+  label: string
+  href: string
+  statsCount: string
+}
 
 interface LitSource {
   id: string
@@ -37,6 +44,7 @@ export default function AdminLiteraturePage() {
   const [form, setForm] = useState(EMPTY_FORM)
   const [saving, setSaving] = useState(false)
   const [chipsText, setChipsText] = useState('')
+  const [linkOptions, setLinkOptions] = useState<LinkOption[]>([])
 
   const loadData = useCallback(async () => {
     setLoading(true)
@@ -48,7 +56,69 @@ export default function AdminLiteraturePage() {
     setLoading(false)
   }, [])
 
-  useEffect(() => { loadData() }, [loadData])
+  // Fetch collection/volume stats for smart dropdowns
+  const loadLinkOptions = useCallback(async () => {
+    const { data } = await db
+      .from('species')
+      .select('collection_id, volume')
+      .is('deleted_at', null)
+
+    if (!data) return
+
+    // Group by collection and volume
+    const collMap = new Map<string, number>()
+    const volMap = new Map<string, number>()
+    for (const row of data) {
+      const cKey = row.collection_id
+      const vKey = `${row.collection_id}|${row.volume}`
+      collMap.set(cKey, (collMap.get(cKey) || 0) + 1)
+      volMap.set(vKey, (volMap.get(vKey) || 0) + 1)
+    }
+
+    const nameMap: Record<string, string> = {}
+    STATIC_COLLECTIONS.forEach(c => { nameMap[c.id] = c.nameVn })
+
+    const options: LinkOption[] = []
+
+    // Collection-level options
+    for (const [cid, count] of collMap) {
+      const name = nameMap[cid] || cid
+      options.push({
+        label: `${name} (toàn bộ — ${count.toLocaleString()} loài)`,
+        href: `/${cid}`,
+        statsCount: `${count.toLocaleString()} loài`,
+      })
+    }
+
+    // Volume-level options
+    for (const [vKey, count] of volMap) {
+      const [cid, vol] = vKey.split('|')
+      const name = nameMap[cid] || cid
+      options.push({
+        label: `${name} — Tập ${vol} (${count.toLocaleString()} loài)`,
+        href: `/${cid}?vol=${vol}`,
+        statsCount: `${count.toLocaleString()} loài`,
+      })
+    }
+
+    // Sort: collection-level first, then by href
+    options.sort((a, b) => {
+      const aIsCol = !a.href.includes('?')
+      const bIsCol = !b.href.includes('?')
+      if (aIsCol !== bIsCol) return aIsCol ? -1 : 1
+      return a.href.localeCompare(b.href)
+    })
+
+    setLinkOptions(options)
+  }, [])
+
+  useEffect(() => { loadData(); loadLinkOptions() }, [loadData, loadLinkOptions])
+
+  const handleLinkSelect = (href: string) => {
+    setField('href', href)
+    const match = linkOptions.find(o => o.href === href)
+    if (match) setField('stats_count', match.statsCount)
+  }
 
   const openCreate = () => {
     setEditing(null)
@@ -232,16 +302,21 @@ export default function AdminLiteraturePage() {
                   <input className="form-input" value={form.year || ''} onChange={e => setField('year', e.target.value)} placeholder="1992 – 2007" />
                 </div>
                 <div className="form-field">
+                  <label className="form-label">Link tra cứu *</label>
+                  <select className="form-input" value={form.href} onChange={e => handleLinkSelect(e.target.value)}>
+                    <option value="">— Chọn bộ sưu tập —</option>
+                    {linkOptions.map(opt => (
+                      <option key={opt.href} value={opt.href}>{opt.label}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="form-field">
                   <label className="form-label">Số loài (hiển thị)</label>
-                  <input className="form-input" value={form.stats_count || ''} onChange={e => setField('stats_count', e.target.value)} placeholder="1,501 loài cá biển" />
+                  <input className="form-input" value={form.stats_count || ''} onChange={e => setField('stats_count', e.target.value)} placeholder="Tự điền khi chọn link — hoặc nhập tay" />
                 </div>
                 <div className="form-field">
                   <label className="form-label">Badge pill</label>
                   <input className="form-input" value={form.pill_text || ''} onChange={e => setField('pill_text', e.target.value)} placeholder="5 Tập Chuyên Khảo" />
-                </div>
-                <div className="form-field">
-                  <label className="form-label">Link tra cứu *</label>
-                  <input className="form-input" value={form.href} onChange={e => setField('href', e.target.value)} placeholder="/ca-bien?vol=1" />
                 </div>
                 <div className="form-field">
                   <label className="form-label">Icon</label>
