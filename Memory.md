@@ -161,6 +161,7 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 | 2026-09-04 | `literature_sources` DB table — quản lý sách từ admin |
 | 2026-09-04 | Deploy: `vercel --prod` bắt buộc (GitHub chỉ preview) |
 | 2026-09-04 | SEO & Social Thumbnail: `favicon.ico`, `og-default.png` (1200x630), dynamic species OG photo từ Supabase Storage, Schema.org Taxon/WebSite |
+| 2026-09-04 | PWA: tên app `SVBVN` (`site.webmanifest`), `PwaInstallPrompt` modal hướng dẫn cài app iOS/Android cho khách mới |
 
 ---
 
