@@ -1,7 +1,7 @@
 # TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-03 21:30 (Session End)
-> **Next Session Starting Point**: (1) Chạy /deploy đẩy phiên bản tra cứu theo đầu sách mới lên Vercel Production. (2) Bổ sung CSV Import và Inline edit cho Admin Panel. (3) Bổ sung tên VN ~17 loài rong biển còn thiếu. (4) Mở rộng bộ sưu tập mới (San hô, Thân mềm) khi có tài liệu OCR tiếp theo.
+> Cập nhật: 2026-09-04 16:41 (Session End)
+> **Next Session Starting Point**: (1) Bổ sung CSV Import và Inline edit cho Admin Panel. (2) Bổ sung tên VN ~17 loài rong biển còn thiếu. (3) Mở rộng bộ sưu tập mới (San hô, Thân mềm) khi có tài liệu OCR tiếp theo.
 > **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Trang tra cứu /ca-bien đã được thiết kế lại tối ưu: GlobalSearch cross-tập + Phân chia 2 đầu sách chính quy + Compact List View text-only cắt giảm 99% data transfer.
 
 ## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
@@ -219,4 +219,16 @@
 - [x] Phân nhóm theo 2 đầu sách chính quy: Danh mục Cá biển VN (5 tập) & Atlas Cá rạn san hô VN (Tập VI).
 - [x] Chuyển đổi toàn bộ sang Compact List View (STT - Tên VN - Tên khoa học), giảm 99% data transfer, load <100ms.
 - [x] Fix khoảng thở padding-top cho layout container tránh dính navbar cố định; đồng bộ 100% màu sắc và layout Card Hero trang cá biển.
+
+### Session 2026-09-04
+- [x] Scroll position restoration — quay lại đúng vị trí loài sau khi xem chi tiết
+- [x] Ẩn section "Các tập" khi sách chỉ có 1 tập (Atlas, Rong biển Tsutsui, PHH)
+- [x] Quản lý tài liệu gốc từ Admin — bảng `literature_sources` + CRUD page + smart dropdown
+- [x] Fix logo bị mất production — `.gitignore` thiếu exception `!public/logo.png`
+- [x] Fix RLS infinite recursion — migration `008b_fix_literature_rls.sql`
+- [x] Insert 4/4 bộ sách tham khảo vào DB `literature_sources`
+- [x] Triển khai SEO toàn diện, Favicon (`favicon.ico`) đa kích thước & OpenGraph Default Thumbnail (`public/og-default.png`) 1200x630
+- [x] Tích hợp Dynamic OpenGraph Thumbnail cho từng loài sinh vật biển khi share link (Zalo, Facebook, Twitter, iMessage)
+- [x] Tích hợp Schema.org Structured Data: WebSite & Organization (trang chủ) + Taxon (chi tiết loài)
+- [x] Nâng cấp Dynamic Sitemap cho toàn bộ collections, trang tĩnh và 2.436+ loài
 

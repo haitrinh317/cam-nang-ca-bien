@@ -14,9 +14,36 @@ interface Props {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { collection } = await params
   const col = getCollectionBySlug(collection)
+  const name = col?.nameVn || collection
+  const pageUrl = `https://cam-nang-ca-bien.vercel.app/${collection}/taxonomy`
+  const desc = `Cây phân loại học sinh học biển từ Lớp, Bộ, Họ, Giống đến từng Loài — ${name}.`
   return {
-    title: `Cây Phân Loại — ${col?.nameVn || collection}`,
-    description: `Cây phân loại học sinh học biển từ Lớp, Bộ, Họ, Giống đến từng Loài — ${col?.nameVn || ''}.`,
+    title: `Cây Phân Loại — ${name}`,
+    description: desc,
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'vi_VN',
+      url: pageUrl,
+      title: `Cây Phân Loại Sinh Học — ${name}`,
+      description: desc,
+      images: [
+        {
+          url: '/og-default.png',
+          width: 1200,
+          height: 630,
+          alt: `Cây phân loại ${name}`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Cây Phân Loại — ${name}`,
+      description: desc,
+      images: ['/og-default.png'],
+    },
   }
 }
 

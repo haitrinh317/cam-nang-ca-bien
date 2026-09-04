@@ -47,6 +47,9 @@ scratch_images/
 # Allow public images for site illustrations
 !public/images/**
 !public/logo.png
+!public/favicon.ico
+!public/og-default.png
+!public/icons/**
 
 # Backup files
 .backups/

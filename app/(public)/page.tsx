@@ -8,8 +8,32 @@ import type { Metadata } from 'next'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Bảo tàng Hải dương học — Tra cứu Sinh vật biển Việt Nam',
-  description: 'Cơ sở dữ liệu số hóa sinh vật biển Việt Nam — Viện Hải dương học, Nha Trang.',
+  title: 'Cẩm Nang Sinh Vật Biển Việt Nam — Bảo tàng Hải dương học',
+  description: 'Cơ sở dữ liệu số hóa 2.436+ loài cá biển và rong biển Việt Nam từ các công trình phân loại học nguyên bản — Viện Hải dương học Nha Trang.',
+  alternates: {
+    canonical: 'https://cam-nang-ca-bien.vercel.app',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'vi_VN',
+    url: 'https://cam-nang-ca-bien.vercel.app',
+    title: 'Cẩm Nang Sinh Vật Biển Việt Nam — Bảo tàng Hải dương học',
+    description: 'Cơ sở dữ liệu số hóa 2.436+ loài cá biển và rong biển Việt Nam từ các công trình phân loại học nguyên bản — Viện Hải dương học Nha Trang.',
+    images: [
+      {
+        url: '/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Cẩm Nang Sinh Vật Biển Việt Nam',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cẩm Nang Sinh Vật Biển Việt Nam — Bảo tàng Hải dương học',
+    description: 'Cơ sở dữ liệu số hóa 2.436+ loài sinh vật biển Việt Nam.',
+    images: ['/og-default.png'],
+  },
 }
 
 export default async function HomePage() {

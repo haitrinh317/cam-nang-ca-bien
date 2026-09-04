@@ -5,10 +5,22 @@ import { ArrowLeft, BookOpen, ShieldCheck, Sparkles, Globe, HeartHandshake, Comp
 export const metadata: Metadata = {
   title: 'Giới thiệu — Cẩm nang Sinh vật biển Việt Nam',
   description: 'Dự án số hóa di sản và dữ liệu sinh vật biển phi lợi nhuận của Viện Hải dương học (Viện Hàn lâm Khoa học và Công nghệ Việt Nam).',
+  alternates: {
+    canonical: 'https://cam-nang-ca-bien.vercel.app/about',
+  },
   openGraph: {
+    type: 'website',
+    locale: 'vi_VN',
+    url: 'https://cam-nang-ca-bien.vercel.app/about',
     title: 'Giới thiệu — Cẩm nang Sinh vật biển Việt Nam',
     description: 'Sứ mệnh bảo tồn tri thức phân loại học biển, ứng dụng AI/OCR và kết nối CSDL sinh vật biển toàn cầu.',
-    type: 'website',
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Giới thiệu Bảo tàng Hải dương học' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Giới thiệu — Cẩm nang Sinh vật biển Việt Nam',
+    description: 'Sứ mệnh bảo tồn tri thức phân loại học biển và kết nối CSDL sinh vật biển toàn cầu.',
+    images: ['/og-default.png'],
   },
 }
 
