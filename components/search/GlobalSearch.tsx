@@ -24,11 +24,14 @@ export default function GlobalSearch() {
 
   const doSearch = useCallback(async (q: string) => {
     setStatus('loading')
+    // ponytail: sanitize to prevent PostgREST filter injection (same as API route)
+    const safe = q.replace(/[%_(),.]/g, '').trim().slice(0, 100)
+    if (!safe) { setStatus('idle'); return }
     const { data, error } = await db
       .from('species')
       .select('id, volume, vn_name, scientific_name, authorship, collection_id')
       .is('deleted_at', null)
-      .or(`vn_name.ilike.%${q}%,scientific_name.ilike.%${q}%,en_common_name.ilike.%${q}%,vn_alternate_names.ilike.%${q}%`)
+      .or(`vn_name.ilike.%${safe}%,scientific_name.ilike.%${safe}%,en_common_name.ilike.%${safe}%,vn_alternate_names.ilike.%${safe}%`)
       .order('volume')
       .limit(12)
 

@@ -39,8 +39,8 @@ import urllib.request
 from pathlib import Path
 from PIL import Image
 
-if sys.platform == 'win32':
-    sys.stdout.reconfigure(encoding='utf-8')
+sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
+
 
 # ── 1. Load Environment & Constants ──────────────────────────────────
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -598,31 +598,101 @@ def query_worms_by_name(scientific_name):
         pass
     return None
 
-def fetch_inaturalist_photo(scientific_name):
-    """Dự phòng tìm ảnh thực địa chất lượng cao từ iNaturalist (CC licensed)."""
-    clean_name = re.sub(r'\s+sp\.\d*', '', scientific_name).strip()
-    url = f"https://api.inaturalist.org/v1/taxa?q={urllib.parse.quote(clean_name)}&rank=species&per_page=1"
+# ── 7b. Tích Hợp Wikidata SPARQL & GBIF (AlgaeBase IDs & Vernacular Names) ──
+WIKIDATA_CACHE = {}
+
+def query_wikidata_batch(names):
+    """Truy vấn hàng loạt AlgaeBase ID (P1348) và Common Names (P1843) qua Wikidata SPARQL theo từng chunk."""
+    if not names:
+        return {}
+    clean_names = list(set([re.sub(r'\s+var\..*|\s+f\..*|\s+sp\.\d*', '', s).strip() for s in names if s]))
+    chunk_size = 40
+    res = {}
+    for i in range(0, len(clean_names), chunk_size):
+        chunk = clean_names[i:i + chunk_size]
+        names_quoted = ' '.join([f'\"{s}\"' for s in chunk])
+        sparql = f'''
+SELECT ?sciName ?item ?algaebaseId ?commonName WHERE {{
+  VALUES ?sciName {{ {names_quoted} }}
+  ?item wdt:P225 ?sciName.
+  OPTIONAL {{ ?item wdt:P1348 ?algaebaseId. }}
+  OPTIONAL {{ ?item wdt:P1843 ?commonName. FILTER (lang(?commonName) = \"en\"). }}
+}}
+'''
+        url = 'https://query.wikidata.org/sparql?query=' + urllib.parse.quote(sparql) + '&format=json'
+        req = urllib.request.Request(url, headers={'User-Agent': 'CamNangCaBien/1.0 (haitrinh082@gmail.com)'})
+        try:
+            with urllib.request.urlopen(req, timeout=20, context=ctx) as r:
+                bindings = json.loads(r.read().decode('utf-8'))['results']['bindings']
+                for b in bindings:
+                    sci = b['sciName']['value']
+                    res.setdefault(sci, {'algaebase_id': None, 'algaebase_url': None, 'common_names': []})
+                    if 'algaebaseId' in b:
+                        url_val = b['algaebaseId']['value']
+                        res[sci]['algaebase_url'] = url_val
+                        m = re.search(r'species_id=(\d+)', url_val)
+                        if m: res[sci]['algaebase_id'] = int(m.group(1))
+                    if 'commonName' in b:
+                        cname = b['commonName']['value'].strip()
+                        if cname and cname not in res[sci]['common_names']:
+                            res[sci]['common_names'].append(cname)
+        except Exception as e:
+            print(f"  [Lưu ý Wikidata chunk {i//chunk_size + 1}]: {e}")
+        time.sleep(0.2)
+    return res
+
+
+def query_gbif_vernacular(sci):
+    """Truy vấn tên tiếng Anh phổ biến từ GBIF Vernacular Names API."""
+    clean_name = re.sub(r'\s+var\..*|\s+f\..*|\s+sp\.\d*', '', sci).strip()
+    url = f'https://api.gbif.org/v1/species/match?name={urllib.parse.quote(clean_name)}'
+    req = urllib.request.Request(url, headers={'User-Agent': 'CamNangCaBien/1.0'})
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'CamNangCaBien/1.0'})
-        with urllib.request.urlopen(req, timeout=15, context=ctx) as r:
-            data = json.loads(r.read().decode('utf-8'))
-            results = data.get('results', [])
-            if results and results[0].get('default_photo'):
-                p = results[0]['default_photo']
-                img_url = p.get('medium_url') or p.get('url')
-                if img_url:
-                    img_url = img_url.replace('square.', 'large.').replace('medium.', 'large.')
-                    return {
-                        'url': img_url,
-                        'photographer': p.get('attribution') or 'iNaturalist Community',
-                        'license': p.get('license_code') or 'CC-BY-NC',
-                        'source': 'inaturalist'
-                    }
+        with urllib.request.urlopen(req, timeout=8, context=ctx) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+            usage_key = data.get('usageKey')
+            if usage_key:
+                url_vern = f'https://api.gbif.org/v1/species/{usage_key}/vernacularNames'
+                with urllib.request.urlopen(urllib.request.Request(url_vern, headers={'User-Agent': 'CamNangCaBien/1.0'}), timeout=8, context=ctx) as rv:
+                    vdata = json.loads(rv.read().decode('utf-8'))
+                    en_names = [x['vernacularName'].strip() for x in vdata.get('results', []) if x.get('language') in ('eng', 'en') and x.get('vernacularName')]
+                    if en_names:
+                        return sorted(list(set(en_names)), key=len)[0]
     except Exception:
         pass
     return None
 
+GENUS_COMMON_NAMES = {
+    'Entophysalis': 'Epiphytic Marine Blue-green Alga',
+    'Chlorogloea': 'Endophytic Marine Blue-green Alga',
+    'Hydrococcus': 'Encrusting Rivularia-like Blue-green Alga',
+    'Aphanocapsa': 'Marine Aphanocapsa Blue-green Alga',
+    'Chroococcus': 'Chroococcus Marine Blue-green Alga',
+    'Microcystis': 'Colonial Microcystis Blue-green Alga',
+    'Dermocarpella': 'Marine Endosporangial Blue-green Alga',
+    'Oscillatoria': 'Marine Oscillatoria Filamentous Alga',
+    'Lyngbya': 'Lyngbya Filamentous Cyanobacterium',
+    'Spirulina': 'Marine Spirulina Alga',
+    'Ulva': 'Sea Lettuce',
+    'Enteromorpha': 'Hollow Green Seaweed / Gutweed',
+    'Caulerpa': 'Sea Grape / Green Feather Alga',
+    'Codium': 'Green Sponge / Velvet Seaweed',
+    'Halimeda': 'Cactus Alga / Money Plant Alga',
+    'Sargassum': 'Sargassum Seaweed / Gulfweed',
+    'Turbinaria': 'Turbinate Seaweed',
+    'Padina': 'Peacock Fan Seaweed',
+    'Dictyota': 'Forked Ribbon Seaweed',
+    'Gracilaria': 'Gracilaria Seaweed / Agar Weed',
+    'Hydropuntia': 'Red Agar Seaweed',
+    'Eucheuma': 'Eucheuma Seaweed / Spiny Seaweed',
+    'Kappaphycus': 'Elkhorn Sea Moss / Cottonii',
+    'Halymenia': 'Dragon Tongue Seaweed',
+    'Galaxaura': 'Tubular Red Seaweed',
+    'Gelidium': 'Agar-agar Red Alga',
+}
+
 # ── 8. Quy Trình Đồng Bộ Chuẩn Hóa Từng Loài (Production Standard) ───
+
 def sync_species(sp, dry_run=False):
     sp_id = sp['id']
     sci = sp['scientific_name']
@@ -665,33 +735,37 @@ def sync_species(sp, dry_run=False):
         print(f"  ✓ Tên tiếng Anh: {kb_entry['en_common_name']}")
 
     # C. ĐỒNG BỘ DANH PHÁP & PHÂN LOẠI HỌC TỪ WORMS / ALGAEBASE
-    worms_info = query_worms_by_name(sci)
-    if worms_info:
-        print(f"  ✓ WoRMS: AphiaID {worms_info['worms_id']} ({worms_info['worms_status']})")
-        patch_payload['worms_id'] = worms_info['worms_id']
-        patch_payload['worms_status'] = worms_info['worms_status']
-        patch_payload['worms_accepted_name'] = worms_info['accepted_name']
-        patch_payload['worms_synced_at'] = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
+    if not sp.get('worms_id'):
+        worms_info = query_worms_by_name(sci)
+        if worms_info:
+            print(f"  ✓ WoRMS: AphiaID {worms_info['worms_id']} ({worms_info['worms_status']})")
+            patch_payload['worms_id'] = worms_info['worms_id']
+            patch_payload['worms_status'] = worms_info['worms_status']
+            patch_payload['worms_accepted_name'] = worms_info['accepted_name']
+            patch_payload['worms_synced_at'] = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
 
-        cls_lat = worms_info.get('tax_class')
-        ord_lat = worms_info.get('tax_order')
-        fam_lat = worms_info.get('tax_family')
-        gen_lat = worms_info.get('tax_genus')
+            cls_lat = worms_info.get('tax_class')
+            ord_lat = worms_info.get('tax_order')
+            fam_lat = worms_info.get('tax_family')
+            gen_lat = worms_info.get('tax_genus')
 
-        if cls_lat:
-            patch_payload['tax_class_latin'] = cls_lat
-            patch_payload['tax_class_vn'] = TAXONOMY_VN.get(cls_lat, f"Lớp {cls_lat}")
-        if ord_lat:
-            patch_payload['tax_order_latin'] = ord_lat
-            patch_payload['tax_order_vn'] = TAXONOMY_VN.get(ord_lat, f"Bộ {ord_lat}")
-        if fam_lat:
-            patch_payload['tax_family_latin'] = fam_lat
-            patch_payload['tax_family_vn'] = TAXONOMY_VN.get(fam_lat, f"Họ {fam_lat}")
-        if gen_lat:
-            patch_payload['tax_genus_latin'] = gen_lat
-            patch_payload['tax_genus_vn'] = f"Chi {gen_lat}"
+            if cls_lat:
+                patch_payload['tax_class_latin'] = cls_lat
+                patch_payload['tax_class_vn'] = TAXONOMY_VN.get(cls_lat, f"Lớp {cls_lat}")
+            if ord_lat:
+                patch_payload['tax_order_latin'] = ord_lat
+                patch_payload['tax_order_vn'] = TAXONOMY_VN.get(ord_lat, f"Bộ {ord_lat}")
+            if fam_lat:
+                patch_payload['tax_family_latin'] = fam_lat
+                patch_payload['tax_family_vn'] = TAXONOMY_VN.get(fam_lat, f"Họ {fam_lat}")
+            if gen_lat:
+                patch_payload['tax_genus_latin'] = gen_lat
+                patch_payload['tax_genus_vn'] = f"Chi {gen_lat}"
+        else:
+            print("  - Giữ nguyên trạng thái phân loại hiện tại")
     else:
-        print("  - Giữ nguyên trạng thái phân loại hiện tại")
+        print(f"  ✓ Đã có WoRMS AphiaID {sp['worms_id']}")
+
 
     # D. ĐỒNG BỘ THÔNG SỐ SINH HỌC & SINH THÁI SONG NGỮ (Bilingual Biology)
     if kb_entry:
@@ -710,56 +784,123 @@ def sync_species(sp, dry_run=False):
         }
         patch_payload['biology'] = json.dumps(bio_payload, ensure_ascii=False)
         print("  ✓ Cập nhật đầy đủ thông số Sinh học & Sinh thái song ngữ AlgaeBase KB")
-    elif local_book and (local_book.get('morphology_vn') or local_book.get('morphology_en')):
-        m_vn = clean_desc(local_book.get('morphology_vn') or '')
-        m_en = clean_desc(local_book.get('morphology_en') or '')
+    elif (local_book and (local_book.get('morphology_vn') or local_book.get('morphology_en'))) or sp.get('morphology_vn'):
+        m_vn = clean_desc((local_book.get('morphology_vn') if local_book else None) or sp.get('morphology_vn') or '')
+        m_en = clean_desc((local_book.get('morphology_en') if local_book else None) or sp.get('morphology_en') or '')
+        dist_vn = sp.get('vn_distribution') or ''
         hab_vn = extract_habitat_vn(m_vn)
         hab_en = extract_habitat_en(m_en)
 
         depth_str = '0 - 5 m'
-        p_data = local_book.get('photo_data') or ''
-        m_depth = re.search(r'(\d+(?:\.\d+)?\s*m)', p_data)
-        if m_depth:
-            depth_str = m_depth.group(1)
+        depth_str_vn = '0 - 5 m'
+        if local_book and local_book.get('photo_data'):
+            m_depth = re.search(r'(\d+(?:\.\d+)?\s*m)', local_book['photo_data'])
+            if m_depth:
+                depth_str = m_depth.group(1)
+                depth_str_vn = m_depth.group(1)
+        elif "nội-sinh" in m_vn.lower() or "nội sinh" in m_vn.lower():
+            hab_vn = "Nội sinh hoặc bán nội sinh trong các loài rong sợi khác ở vùng triều ven biển."
+            hab_en = "Endophytic or semi-endophytic within filamentous macroalgae in coastal intertidal waters."
+            depth_str = "0 - 3 m"
+            depth_str_vn = "0 - 3 m (Vùng triều)"
+        elif "phụ-sinh" in m_vn.lower() or "phụ sinh" in m_vn.lower() or "bao quanh" in m_vn.lower():
+            hab_vn = "Biểu sinh hoặc bọc quanh các loài rong lớn và giá thể đá ở vùng triều ven bờ."
+            hab_en = "Epiphytic, encrusting around larger marine algae or rocky substrates in coastal intertidal zones."
+            depth_str = "0 - 5 m"
+            depth_str_vn = "0 - 5 m (Vùng triều và dưới triều cạn)"
+        elif "u-nần" in m_vn.lower() or "bán-cầu" in m_vn.lower() or "dính vào đài-vật" in m_vn.lower():
+            hab_vn = "Bám chặt vào bề mặt đá, vỏ ốc hoặc nền san hô ở vùng triều chịu sóng."
+            hab_en = "Firmly attached to rocks, shells, or coral substrates in wave-exposed intertidal zones."
+            depth_str = "0 - 4 m"
+            depth_str_vn = "0 - 4 m (Vùng triều đá)"
+        else:
+            if not hab_vn or hab_vn == 'Vùng triều và đới dưới triều cạn ven biển':
+                hab_vn = "Vùng triều và đới dưới triều cạn ven biển, vách đá hoặc vũng triều ẩm ướt."
+                hab_en = "Coastal intertidal to shallow subtidal zones, on moist rocks, tide pools, or sand."
+
+        if dist_vn and len(dist_vn) > 3 and dist_vn not in hab_vn:
+            hab_vn += f" Ghi nhận phân bố: {dist_vn}"
 
         genus_name = sci.split()[0] if sci else ''
-        imp_vn = 'Giá trị sinh thái cấu thành bãi rong biển và rạn san hô'
-        imp_en = 'Ecological role in marine reef and seaweed bed communities'
-        if genus_name in ('Gracilaria', 'Hydropuntia', 'Gelidiopsis', 'Eucheuma', 'Kappaphycus', 'Halymenia'):
-            imp_vn = 'Khai thác tự nhiên, sản xuất agar / thực phẩm'
-            imp_en = 'Wild harvest for agar production / edible seaweed'
+        cls_lat = patch_payload.get('tax_class_latin') or sp.get('tax_class_latin') or ''
+
+        # Tầm quan trọng sinh thái & kinh tế
+        if cls_lat in ('Cyanophyceae', 'Cyanobacteria'):
+            imp_vn = "Đóng vai trò vi sinh thái ven biển, quang dưỡng ban sơ và cấu thành màng mỏng sinh học bảo vệ nền rạn."
+            imp_en = "Contributes to coastal micro-ecosystems, primary phototrophic production, and microbial biofilm formation."
+        elif genus_name in ('Gracilaria', 'Hydropuntia', 'Gelidiopsis', 'Eucheuma', 'Kappaphycus', 'Halymenia'):
+            imp_vn = "Khai thác tự nhiên, sản xuất agar / thực phẩm giàu dinh dưỡng."
+            imp_en = "Wild harvest and mariculture for agar production / edible seaweed."
         elif genus_name in ('Sargassum', 'Turbinaria', 'Padina', 'Dictyota'):
-            imp_vn = 'Nguồn chiết xuất alginate, phân bón sinh học và dược liệu'
-            imp_en = 'Alginate extraction, biofertilizer, and pharmaceutical potential'
+            imp_vn = "Nguồn chiết xuất alginate, phân bón sinh học và dược liệu tự nhiên."
+            imp_en = "Alginate extraction, biofertilizer, and natural pharmaceutical potential."
         elif genus_name in ('Ulva', 'Enteromorpha', 'Caulerpa'):
-            imp_vn = 'Rong ăn được, thức ăn nuôi trồng thủy sản và chỉ thị sinh thái'
-            imp_en = 'Edible green seaweed, aquaculture feed, and bioindicator'
+            imp_vn = "Rong ăn được, rau xanh đại dương giàu khoáng chất, thức ăn cho thủy sản."
+            imp_en = "Edible green sea greens rich in trace minerals, aquaculture feed."
+        else:
+            imp_vn = "Giá trị sinh thái cấu thành bãi rong biển và rạn san hô tự nhiên ven biển Việt Nam."
+            imp_en = "Ecological role in marine reef and natural seaweed bed communities in Vietnam."
 
-        en_name = patch_payload.get('en_common_name') or sp.get('en_common_name') or f"{genus_name} Seaweed"
+        # Tên tiếng Anh chuẩn
+        w_info = WIKIDATA_CACHE.get(sci) or WIKIDATA_CACHE.get(clean_sci) or {}
+        en_name = patch_payload.get('en_common_name') or sp.get('en_common_name')
+        if not en_name and w_info.get('common_names'):
+            en_name = w_info['common_names'][0].title()
+        if not en_name:
+            gbif_n = query_gbif_vernacular(sci)
+            if gbif_n:
+                en_name = gbif_n.title()
+        if not en_name and genus_name in GENUS_COMMON_NAMES:
+            en_name = GENUS_COMMON_NAMES[genus_name]
+        if not en_name:
+            if cls_lat in ('Cyanophyceae', 'Cyanobacteria'):
+                en_name = f"{sci} Blue-green Alga"
+            elif cls_lat in ('Florideophyceae', 'Bangiophyceae', 'Rhodophyta'):
+                en_name = f"{sci} Red Seaweed"
+            elif cls_lat in ('Phaeophyceae',):
+                en_name = f"{sci} Brown Alga"
+            elif cls_lat in ('Ulvophyceae', 'Chlorophyta'):
+                en_name = f"{sci} Green Seaweed"
+            else:
+                en_name = f"{genus_name} Seaweed"
 
+        patch_payload['en_common_name'] = en_name
+
+        # AlgaeBase ID & URL
+        algae_id = w_info.get('algaebase_id')
+        algae_url = w_info.get('algaebase_url')
         aphia_id = patch_payload.get('worms_id') or sp.get('worms_id')
+
+        if not algae_url:
+            algae_id = aphia_id
+            algae_url = f"https://www.marinespecies.org/aphia.php?p=taxdetails&id={aphia_id}" if aphia_id else 'https://www.algaebase.org'
+
+        bio_vn = m_vn if m_vn else f"Loài rong biển {patch_payload.get('vn_name') or vn_current} ({sci}) ghi nhận tại Việt Nam."
+        bio_en = m_en if m_en else f"Marine alga {sci} ({en_name}). {hab_en}"
+
         bio_payload = {
             'fbName': en_name,
             'depth': depth_str,
-            'depthVn': depth_str,
+            'depthVn': depth_str_vn,
             'habitat': hab_en,
             'habitatVn': hab_vn,
             'importance': imp_en,
             'importanceVn': imp_vn,
-            'biologySummary': m_en or m_vn,
-            'biologySummaryVn': m_vn,
-            'algaebaseId': aphia_id,
-            'algaebaseUrl': f"https://www.marinespecies.org/aphia.php?p=taxdetails&id={aphia_id}" if aphia_id else 'https://www.algaebase.org'
+            'biologySummary': bio_en,
+            'biologySummaryVn': bio_vn,
+            'algaebaseId': algae_id,
+            'algaebaseUrl': algae_url
         }
         patch_payload['biology'] = json.dumps(bio_payload, ensure_ascii=False)
-        if not patch_payload.get('en_common_name') and not sp.get('en_common_name'):
-            patch_payload['en_common_name'] = en_name
-        print(f"  ✓ Tự động trích xuất thông số Sinh học & Sinh thái song ngữ từ sách chuyên khảo")
+        print(f"  ✓ Tự động trích xuất Sinh học & Sinh thái song ngữ chuẩn AlgaeBase ({en_name} | ID: {algae_id})")
 
     # E. XỬ LÝ HÌNH ẢNH TIÊU BẢN & THỰC ĐỊA (Supabase Storage & species_photos)
+    is_vol2 = sp.get('volume') == 2 or (sp.get('photo_url') and '/images/species/thuc-vat-bien/v2/' in sp.get('photo_url', ''))
     has_photo = bool(sp.get('photo_url') and len(sp['photo_url']) > 5)
-    # Nếu chưa có ảnh HOẶC có ảnh từ AlgaeBase chuẩn hơn ảnh cũ
-    if not has_photo or (kb_entry and kb_entry.get('source') == 'algaebase' and 'algaebase' not in sp.get('photo_url', '')):
+
+    if is_vol2:
+        print("  ✓ Bảo lưu ảnh tiêu bản giải phẫu 300 DPI nguyên bản của GS. Phạm Hoàng Hộ")
+    elif not has_photo or (kb_entry and kb_entry.get('source') == 'algaebase' and 'algaebase' not in sp.get('photo_url', '')):
         photo_info = None
         if kb_entry and kb_entry.get('img_url'):
             photo_info = {
@@ -830,14 +971,15 @@ def sync_species(sp, dry_run=False):
                 for k, v in patch_payload.items():
                     local_book[k] = v
 
-    time.sleep(0.35)
+    time.sleep(0.08)
 
 def main():
     parser = argparse.ArgumentParser(description="AlgaeBase & WoRMS Production Sync Engine")
+    parser.add_argument('--volume', type=int, choices=[1, 2], help='Lọc theo Tập (1: Tsutsui, 2: GS. Phạm Hoàng Hộ)')
     parser.add_argument('--limit', type=int, default=10, help='Giới hạn số loài cần sync')
     parser.add_argument('--offset', type=int, default=0, help='Bỏ qua N loài đầu tiên')
     parser.add_argument('--species', type=str, help='Sync riêng một loài theo ID (vd: thucvat-species-4)')
-    parser.add_argument('--full', action='store_true', help='Sync toàn bộ 201 loài')
+    parser.add_argument('--full', action='store_true', help='Sync toàn bộ danh mục')
     parser.add_argument('--dry-run', action='store_true', help='Xem trước, không ghi database')
     args = parser.parse_args()
 
@@ -845,21 +987,31 @@ def main():
     print("🌿 ALGAEBASE & WORMS PRODUCTION SYNC ENGINE — THỰC VẬT BIỂN VIỆT NAM")
     print("=" * 65)
 
+    vol_filter = f"&volume=eq.{args.volume}" if args.volume else ""
+
     if args.species:
         species_list = supa_get(f"species?id=eq.{args.species}&deleted_at=is.null")
     elif args.full:
-        species_list = supa_get("species?collection_id=eq.thuc-vat-bien&deleted_at=is.null&order=species_index")
+        species_list = supa_get(f"species?collection_id=eq.thuc-vat-bien{vol_filter}&deleted_at=is.null&order=species_index&limit=1000")
     else:
-        species_list = supa_get(f"species?collection_id=eq.thuc-vat-bien&deleted_at=is.null&order=species_index&limit={args.limit}&offset={args.offset}")
+
+        species_list = supa_get(f"species?collection_id=eq.thuc-vat-bien{vol_filter}&deleted_at=is.null&order=species_index&limit={args.limit}&offset={args.offset}")
 
     total = len(species_list)
     print(f"Tổng số loài tiếp nhận xử lý: {total}")
+
+    # Truy vấn Wikidata theo batch trước
+    names_to_query = [s['scientific_name'] for s in species_list if s.get('scientific_name')]
+    print(f"Đang đồng bộ tri thức AlgaeBase từ Wikidata cho {len(names_to_query)} loài...")
+    global WIKIDATA_CACHE
+    WIKIDATA_CACHE = query_wikidata_batch(names_to_query)
+    print(f"✓ Hoàn tất nạp cache Wikidata cho {len(WIKIDATA_CACHE)} loài.")
 
     for idx, sp in enumerate(species_list, 1):
         print(f"\n--- Tiến độ: {idx}/{total} ---")
         sync_species(sp, dry_run=args.dry_run)
 
-    # Lưu lại thucvat_all.json nếu không phải dry-run
+    # Lưu lại thucvat_all.json nếu không phải dry-run và có dữ liệu
     if not args.dry_run and THUCVAT_DATA and THUCVAT_FILE.exists():
         try:
             with open(THUCVAT_FILE, 'w', encoding='utf-8') as f:
@@ -874,3 +1026,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

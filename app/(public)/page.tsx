@@ -1,6 +1,7 @@
 import { createServerClient } from '@/lib/supabase-server'
 import GlobalSearch from '@/components/search/GlobalSearch'
 import LiteratureSection from '@/components/home/LiteratureSection'
+import type { LiteratureSourceRow } from '@/components/home/LiteratureSection'
 import type { Metadata } from 'next'
 
 // ponytail: ISR 1h — stats data changes rarely, no need for force-dynamic
@@ -14,21 +15,30 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   const db = createServerClient()
 
-  // Realtime stats
-  const { count: totalSpecies } = await db
-    .from('species')
-    .select('*', { count: 'exact', head: true })
-    .is('deleted_at', null)
-
-  const { data: familyRows } = await db
-    .from('taxonomy_tree')
-    .select('tax_family_latin')
-    .not('tax_family_latin', 'is', null)
-    .not('tax_family_latin', 'eq', '')
+  // Parallel fetch: species stats + literature sources
+  const [
+    { count: totalSpecies },
+    { data: familyRows },
+    { data: litSources, count: litCount },
+  ] = await Promise.all([
+    db.from('species')
+      .select('*', { count: 'exact', head: true })
+      .is('deleted_at', null),
+    db.from('taxonomy_tree')
+      .select('tax_family_latin')
+      .not('tax_family_latin', 'is', null)
+      .not('tax_family_latin', 'eq', ''),
+    db.from('literature_sources')
+      .select('*', { count: 'exact' })
+      .eq('is_visible', true)
+      .order('sort_order'),
+  ])
 
   const familyCount = familyRows
     ? new Set(familyRows.map(r => r.tax_family_latin).filter(Boolean)).size
     : 210
+
+  const sources = (litSources || []) as LiteratureSourceRow[]
 
   return (
     <>
@@ -52,20 +62,15 @@ export default async function HomePage() {
             </div>
             <div className="hero__stat-divider" />
             <div className="hero__stat">
-              <span className="hero__stat-num">3</span>
+              <span className="hero__stat-num">{litCount || sources.length}</span>
               <span className="hero__stat-label">Tài liệu gốc</span>
-            </div>
-            <div className="hero__stat-divider" />
-            <div className="hero__stat">
-              <span className="hero__stat-num">7</span>
-              <span className="hero__stat-label">Tập sách</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Danh sách các tài liệu gốc dùng để tra cứu — Thiết kế chuẩn Hallmark & UI-UX-PRO-MAX */}
-      <LiteratureSection />
+      {/* Danh sách các tài liệu gốc dùng để tra cứu — data từ Supabase */}
+      <LiteratureSection sources={sources} />
     </>
   )
 }

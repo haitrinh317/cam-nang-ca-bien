@@ -327,7 +327,7 @@ function formatSynonym(text: string) {
 }
 
 // ── Main Specimen Card ────────────────────────────────────────────
-export default function SpecimenCard({ sp }: { sp: Species }) {
+export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initialPhotos?: unknown[] }) {
   // Parse synonyms
   let syns: string[] = []
   try { syns = typeof sp.synonyms === 'string' ? JSON.parse(sp.synonyms) : (sp.synonyms || []) } catch { syns = [] }
@@ -367,7 +367,7 @@ export default function SpecimenCard({ sp }: { sp: Species }) {
       </header>
 
       {/* Photo Gallery */}
-      <PhotoGallery speciesId={sp.id} fallbackUrl={sp.photo_url} />
+      <PhotoGallery speciesId={sp.id} fallbackUrl={sp.photo_url} initialPhotos={initialPhotos as any} />
 
       {/* Taxonomy breadcrumb — always visible, above tabs */}
       <nav className="specimen__taxonomy" aria-label="Phân loại học">

@@ -36,19 +36,21 @@
 
 ### Collection: Thực vật biển (`thuc-vat-bien`) — 672 loài
 
-| Tập | Đầu sách / Công trình | Số loài | Trạng thái |
-| :---: | --------------------- | :-----: | ---------- |
-| **1** | *Thực Vật Biển Thường Thấy ở Phía Nam VN* (Tsutsui et al.) | 201 | ✅ Hoàn chỉnh tuyệt đối |
-| **2** | *Rong biển Việt Nam* (GS. Phạm Hoàng Hộ, 1969) | 471 / 471 | ✅ **Hoàn thành 100% tuyệt đối** (Cả 4 Phần: Thanh-tảo, Hồng-tảo, Cát-tảo, Lục-tảo; 471 ảnh tiêu bản 300 DPI, 100% WoRMS) |
+| Tập | Đầu sách / Công trình | Số loài | WoRMS (100%) | AlgaeBase & Bio (100%) | Tên EN (100%) | Trạng thái |
+| :---: | --------------------- | :-----: | :----------: | :--------------------: | :-----------: | ---------- |
+| **1** | *Thực Vật Biển Thường Thấy ở Phía Nam VN* (Tsutsui et al.) | 201 | 201 / 201 | 201 / 201 | 201 / 201 | ✅ Hoàn chỉnh tuyệt đối |
+| **2** | *Rong biển Việt Nam* (GS. Phạm Hoàng Hộ, 1969) | 471 | 471 / 471 | 471 / 471 | 471 / 471 | ✅ **Hoàn thành 100% tuyệt đối** (Cả 4 Phần: Thanh-tảo, Hồng-tảo, Cát-tảo, Lục-tảo; 471 ảnh tiêu bản 300 DPI, 100% AlgaeBase & Sinh học song ngữ) |
 
 ### Tổng: **2,436 loài** trong Supabase (1,764 cá biển + 672 thực vật biển)
 - **Độ phủ WoRMS toàn hệ thống (Cá biển Tập I-VI & TVB Tập 1-2)**: Đạt **2,436 / 2,436 loài (100.00%)** có mã AphiaID quốc tế và tên hợp lệ hiện hành.
-- **Độ phủ Dữ liệu Sinh học (FishBase Biology)**: Đạt **1,764 / 1,764 loài (100.00%)** có đầy đủ kích thước, độ sâu, môi trường sống, kiểu ăn và tình trạng bảo tồn.
-- **Bản dịch Sinh học tiếng Việt khoa học (Biology Summary VN)**: Đạt **1,127 / 1,127 loài (100.00% HOÀN TẤT TUYỆT ĐỐI)** đã dịch chuẩn ngữ loại học và lưu trực tiếp vào CSDL Supabase.
+- **Độ phủ AlgaeBase & Sinh học Thực vật biển (TVB Tập 1-2)**: Đạt **672 / 672 loài (100.00% HOÀN TẤT TUYỆT ĐỐI)** có mã định danh AlgaeBase/WoRMS, môi trường sống, độ sâu, vai trò sinh thái và tóm tắt song ngữ.
+- **Độ phủ Dữ liệu Sinh học (FishBase Biology)**: Đạt **1,764 / 1,764 loài cá biển (100.00%)** có đầy đủ kích thước, độ sâu, môi trường sống, kiểu ăn và tình trạng bảo tồn.
+- **Bản dịch Sinh học tiếng Việt khoa học (Biology Summary VN)**: Đạt **1,127 / 1,127 loài cá biển (100.00% HOÀN TẤT TUYỆT ĐỐI)** đã dịch chuẩn ngữ loại học và lưu trực tiếp vào CSDL Supabase.
 - **Độ phủ Ảnh minh họa Tập VI (Atlas cá rạn san hô)**: Đạt **259 / 263 loài (98.5%)** với **1,069 bức ảnh Research Grade** từ iNaturalist, có đầy đủ tác giả, bản quyền và ảnh đại diện (`photo_url`).
-- **Tập II Thực vật biển (GS. Phạm Hoàng Hộ)**: Đạt **471 / 471 loài (100.00% WoRMS)** và **471 / 471 hình ảnh tiêu bản nét vẽ gốc 300 DPI (100.00%)**.
-- **Độ phủ tên tiếng Anh (`en_common_name`)**: 1,764 / 1,764 loài cá biển (100.00%)
+- **Tập II Thực vật biển (GS. Phạm Hoàng Hộ)**: Đạt **471 / 471 loài (100.00% WoRMS & AlgaeBase)** và **471 / 471 hình ảnh tiêu bản nét vẽ gốc 300 DPI (100.00%)**.
+- **Độ phủ tên tiếng Anh (`en_common_name`)**: 2,436 / 2,436 loài toàn hệ thống (100.00% — cả Cá biển lẫn Rong biển).
 - **Độ phủ tên gọi khác tiếng Việt (`vn_alternate_names`)**: 1,764 / 1,764 loài cá biển (100.00%)
+
 
 ---
 

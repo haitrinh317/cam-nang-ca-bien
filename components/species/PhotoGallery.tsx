@@ -19,12 +19,23 @@ interface Photo {
 interface Props {
   speciesId: string
   fallbackUrl?: string | null  // legacy photo_url from species table
+  initialPhotos?: Photo[]      // server-fetched photos — eliminates client waterfall
 }
 
-export default function PhotoGallery({ speciesId, fallbackUrl }: Props) {
-  const [photos, setPhotos] = useState<Photo[]>([])
+function sortPhotos(data: Photo[]): Photo[] {
+  return [...data].sort((a, b) => {
+    if (a.source === 'manual' && b.source !== 'manual') return -1
+    if (a.source !== 'manual' && b.source === 'manual') return 1
+    if (a.is_primary && !b.is_primary) return -1
+    if (!a.is_primary && b.is_primary) return 1
+    return a.sort_order - b.sort_order
+  })
+}
+
+export default function PhotoGallery({ speciesId, fallbackUrl, initialPhotos }: Props) {
+  const [photos, setPhotos] = useState<Photo[]>(initialPhotos ? sortPhotos(initialPhotos) : [])
   const [mainIdx, setMainIdx] = useState(0)
-  const [loaded, setLoaded] = useState(false)
+  const [loaded, setLoaded] = useState(!!initialPhotos)
   const [lightbox, setLightbox] = useState(false)
   const [fading, setFading] = useState(false)
 
@@ -33,7 +44,9 @@ export default function PhotoGallery({ speciesId, fallbackUrl }: Props) {
     setTimeout(() => { setMainIdx(idx); setFading(false) }, 150)
   }
 
+  // ponytail: only client-fetch if server didn't provide initialPhotos
   useEffect(() => {
+    if (initialPhotos) return // already have data from server
     let cancelled = false
     db.from('species_photos')
       .select('*')
@@ -42,20 +55,12 @@ export default function PhotoGallery({ speciesId, fallbackUrl }: Props) {
       .order('sort_order')
       .then(({ data }) => {
         if (!cancelled && data) {
-          // Manual uploads first, then iNaturalist
-          const sorted = data.sort((a, b) => {
-            if (a.source === 'manual' && b.source !== 'manual') return -1
-            if (a.source !== 'manual' && b.source === 'manual') return 1
-            if (a.is_primary && !b.is_primary) return -1
-            if (!a.is_primary && b.is_primary) return 1
-            return a.sort_order - b.sort_order
-          })
-          setPhotos(sorted)
+          setPhotos(sortPhotos(data))
           setLoaded(true)
         }
       })
     return () => { cancelled = true }
-  }, [speciesId])
+  }, [speciesId, initialPhotos])
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 

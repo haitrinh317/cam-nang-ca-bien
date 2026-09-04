@@ -4,13 +4,14 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import AuthStatus from '@/components/layout/AuthStatus'
 
-import { BarChart3, Fish, Leaf } from 'lucide-react'
+import { BarChart3, Fish, Leaf, BookOpen } from 'lucide-react'
 
 interface NavItem { href: string; icon: React.ReactNode; label: string; exact?: boolean }
 
 const NAV_ITEMS: { section: string; items: NavItem[] }[] = [
   { section: 'Tổng quan', items: [
     { href: '/admin', icon: <BarChart3 size={18} />, label: 'Thống kê', exact: true },
+    { href: '/admin/literature', icon: <BookOpen size={18} />, label: 'Tài liệu gốc' },
   ]},
   { section: 'Bộ sưu tập', items: [
     { href: '/admin/ca-bien', icon: <Fish size={18} />, label: 'Cá biển' },

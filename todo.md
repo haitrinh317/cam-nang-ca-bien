@@ -33,8 +33,9 @@
 - [x] Tập III: 518 loài (OCR + parse hoàn tất, `scratch/tap3_parsed_details.json`)
 - [x] Tập IV loài 1-100: OCR + chuẩn hóa thủ công hoàn tất
 - [x] Tập V: 199 loài (OCR thô, `scratch/tap5_parsed_details.json`)
-- [x] Thực vật biển (Tập I — Thực Vật Biển Thường Thấy ở Phía Nam VN, Tsutsui et al.): 201 loài hoàn tất.
-- [x] Thực vật biển (Tập II — Rong biển Việt Nam, GS. Phạm Hoàng Hộ, 1969): 471/471 loài (100.00% HOÀN TẤT TUYỆT ĐỐI CẢ 4 PHẦN kèm 471 ảnh tiêu bản minh họa 300 DPI, 100% WoRMS AphiaID và đã upsert toàn bộ lên Supabase).
+- [x] Thực vật biển (Tập I — Thực Vật Biển Thường Thấy ở Phía Nam VN, Tsutsui et al.): 201 loài hoàn tất (100% AlgaeBase & Biology song ngữ).
+- [x] Thực vật biển (Tập II — Rong biển Việt Nam, GS. Phạm Hoàng Hộ, 1969): 471/471 loài (100.00% HOÀN TẤT TUYỆT ĐỐI CẢ 4 PHẦN kèm 471 ảnh tiêu bản minh họa 300 DPI, 100% WoRMS AphiaID, 100% AlgaeBase ID & Sinh học song ngữ và tên tiếng Anh chuẩn).
+
 
 ### Tính năng Web App
 - [x] Tìm kiếm Fuse.js trên trang chủ (đọc từ `species.json`)

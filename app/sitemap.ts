@@ -11,13 +11,12 @@ const BASE = 'https://cam-nang-ca-bien.vercel.app'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const db = createServerClient()
 
-  // Fetch all species IDs for dynamic routes
-  const [r1, r2] = await Promise.all([
-    db.from('species').select('id, collection_id').range(0, 999),
-    db.from('species').select('id, collection_id').range(1000, 1999),
-  ])
+  // Fetch all species IDs for dynamic routes (2,436+ rows — 3 pages of 1000)
+  const q = (from: number, to: number) =>
+    db.from('species').select('id, collection_id').is('deleted_at', null).range(from, to)
+  const [r1, r2, r3] = await Promise.all([q(0, 999), q(1000, 1999), q(2000, 2999)])
 
-  const species = [...(r1.data || []), ...(r2.data || [])]
+  const species = [...(r1.data || []), ...(r2.data || []), ...(r3.data || [])]
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },

@@ -6,8 +6,8 @@ import { createServerClient } from '@/lib/supabase-server'
 import { getBooksForCollection } from '@/lib/books-data'
 import type { Metadata } from 'next'
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+// ponytail: ISR 1h — species data rarely changes, consistent with landing page
+export const revalidate = 3600
 
 interface Props {
   params: Promise<{ collection: string }>

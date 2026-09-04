@@ -1,11 +1,14 @@
 'use client'
 
-import { useEffect, useState, useCallback, useMemo } from 'react'
+import { useEffect, useRef, useState, useCallback, useMemo } from 'react'
 import Link from 'next/link'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { db } from '@/lib/supabase-browser'
 import { getBooksForCollection, BookMetadata, VolumeMetadata } from '@/lib/books-data'
 import { BookOpen, Layers, Search, ArrowRight, CheckCircle2 } from 'lucide-react'
+
+// ponytail: sessionStorage key for scroll restoration when returning from species detail
+const SCROLL_KEY = 'speciesGrid_scrollY'
 
 interface SpeciesItem {
   id: string
@@ -41,6 +44,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
   const [speciesList, setSpeciesList] = useState<SpeciesItem[]>([])
   const [status, setStatus] = useState<'loading' | 'error' | 'ok'>('loading')
   const [localFilter, setLocalFilter] = useState<string>('')
+  const hasRestoredScroll = useRef(false)
 
   // Active book object
   const activeBook = useMemo(() => {
@@ -72,6 +76,17 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
 
     setSpeciesList(data as SpeciesItem[])
     setStatus('ok')
+
+    // Restore scroll position after data loads (only once, on initial mount)
+    if (!hasRestoredScroll.current) {
+      hasRestoredScroll.current = true
+      const saved = sessionStorage.getItem(SCROLL_KEY)
+      if (saved) {
+        sessionStorage.removeItem(SCROLL_KEY)
+        // RAF ensures DOM has painted the list before scrolling
+        requestAnimationFrame(() => window.scrollTo(0, parseInt(saved)))
+      }
+    }
   }, [collection])
 
   // When volume changes, load data
@@ -166,7 +181,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
       </section>
 
       {/* ─── 2. DANH SÁCH TẬP CỦA ĐẦU SÁCH ĐÃ CHỌN ─── */}
-      {activeBook && (
+      {activeBook && activeBook.volumes.length > 1 && (
         <section className="volume-selector-section" aria-label="Chọn tập trong đầu sách">
           <div className="section-label">
             <Layers size={18} />
@@ -274,7 +289,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
                     <tr
                       key={sp.id}
                       className="species-row"
-                      onClick={() => router.push(`/${collection}/${sp.id}`)}
+                      onClick={() => { sessionStorage.setItem(SCROLL_KEY, String(window.scrollY)); router.push(`/${collection}/${sp.id}`) }}
                     >
                       <td className="td-stt">
                         <span className="stt-badge">#{sp.species_index}</span>
@@ -283,7 +298,7 @@ export default function SpeciesGrid({ collection, initialVol = 1 }: Props) {
                         <Link
                           href={`/${collection}/${sp.id}`}
                           className="species-vn-link"
-                          onClick={e => e.stopPropagation()}
+                          onClick={e => { e.stopPropagation(); sessionStorage.setItem(SCROLL_KEY, String(window.scrollY)) }}
                         >
                           {sp.vn_name}
                         </Link>

@@ -39,6 +39,15 @@ export default async function SpeciesDetailPage({ params }: Props) {
 
   if (!data) notFound()
 
+  // ponytail: server-fetch photos to eliminate client waterfall (LCP fix)
+  const db = createServerClient()
+  const { data: photos } = await db
+    .from('species_photos')
+    .select('id, storage_path, source, photographer, license, source_url, is_primary, sort_order')
+    .eq('species_id', speciesId)
+    .order('is_primary', { ascending: false })
+    .order('sort_order')
+
   return (
     <div className="main-container">
       <Link href={`/${collection}?vol=${data.volume}`} className="back-link" aria-label="Quay lại danh sách">
@@ -48,7 +57,8 @@ export default async function SpeciesDetailPage({ params }: Props) {
         </svg>
         <span>Quay lại danh sách</span>
       </Link>
-      <SpecimenCard sp={data} />
+      <SpecimenCard sp={data} initialPhotos={photos || []} />
     </div>
   )
 }
+
