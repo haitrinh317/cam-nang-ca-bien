@@ -1,9 +1,33 @@
 import type { Metadata } from 'next'
+import { Lora, Be_Vietnam_Pro, JetBrains_Mono } from 'next/font/google'
 import '@/styles/tokens.css'
 import '@/styles/globals.css'
 import { ThemeScript } from '@/components/layout/ThemeScript'
 import { BottomNav } from '@/components/layout/BottomNav'
 import { PwaInstallPrompt } from '@/components/layout/PwaInstallPrompt'
+
+const lora = Lora({
+  subsets: ['vietnamese', 'latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-lora',
+  display: 'swap',
+})
+
+const beVietnamPro = Be_Vietnam_Pro({
+  subsets: ['vietnamese', 'latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-be-vietnam',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-jetbrains-mono',
+  display: 'swap',
+})
 
 const SITE_URL = 'https://cam-nang-ca-bien.vercel.app'
 
@@ -91,7 +115,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="vi" suppressHydrationWarning>
+    <html
+      lang="vi"
+      className={`${lora.variable} ${beVietnamPro.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <meta name="theme-color" content="#0c142a" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

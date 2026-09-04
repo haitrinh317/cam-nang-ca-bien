@@ -12,8 +12,6 @@
    Theme: Fluorescent Cyan · Custom Tuned
    ═══════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;600;700&subset=vietnamese&display=swap');
-
 :root {
   /* ─── Brand Anchors ─── */
   --color-cyan-raw:        #00d4b8;
@@ -85,10 +83,10 @@
   --color-rank-genus-text: #92400e;
   --color-rank-genus-bd:   #fde68a;
 
-  /* ─── Typography (Option 1: Lora + Be Vietnam Pro + JetBrains Mono) ─── */
-  --font-display:          'Lora', Georgia, 'Times New Roman', serif;
-  --font-body:             'Be Vietnam Pro', ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-outlier:          'JetBrains Mono', ui-monospace, monospace;
+  /* ─── Typography: Self-hosted via next/font/google (fallback: Be Vietnam Pro, Segoe UI, system fonts) ─── */
+  --font-display:          var(--font-lora), var(--font-be-vietnam), 'Be Vietnam Pro', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  --font-body:             var(--font-be-vietnam), 'Be Vietnam Pro', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  --font-outlier:          var(--font-jetbrains-mono), 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* ─── Type scale (Tối ưu tra cứu to rõ cho khoa học, iPad & Mobile) ─── */
   --text-xs:               0.85rem;   /* ~13.6px - Nhãn dữ liệu, STT, badge */

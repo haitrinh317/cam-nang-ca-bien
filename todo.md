@@ -233,4 +233,5 @@
 - [x] Nâng cấp Dynamic Sitemap cho toàn bộ collections, trang tĩnh và 2.436+ loài
 - [x] Cập nhật tên PWA thành SVBVN (`site.webmanifest`, `apple-mobile-web-app-title`, `application-name`)
 - [x] Xây dựng Popup / Modal hướng dẫn cài đặt app lên điện thoại (`PwaInstallPrompt.tsx`) cho người dùng mới
+- [x] Sửa triệt để lỗi hiển thị font Tiếng Việt: chuyển sang self-hosted `next/font/google` (Lora, Be Vietnam Pro), loại bỏ @import CDN và chuẩn hóa fallback font stack an toàn
 
