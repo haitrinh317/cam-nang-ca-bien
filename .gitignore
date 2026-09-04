@@ -46,6 +46,7 @@ scratch_images/
 
 # Allow public images for site illustrations
 !public/images/**
+!public/logo.png
 
 # Backup files
 .backups/
