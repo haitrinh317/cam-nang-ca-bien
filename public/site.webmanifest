@@ -1,7 +1,7 @@
 {
-  "name": "Bảo tàng Hải dương học — Sinh vật biển Việt Nam",
-  "short_name": "Cá biển VN",
-  "description": "Cơ sở dữ liệu số hóa sinh vật biển Việt Nam — Viện Hải dương học, Nha Trang",
+  "name": "SVBVN — Cẩm Nang Sinh Vật Biển Việt Nam",
+  "short_name": "SVBVN",
+  "description": "Cơ sở dữ liệu số hóa 2.436+ loài sinh vật biển Việt Nam — Viện Hải dương học, Nha Trang",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

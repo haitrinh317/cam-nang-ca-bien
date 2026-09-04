@@ -231,4 +231,6 @@
 - [x] Tích hợp Dynamic OpenGraph Thumbnail cho từng loài sinh vật biển khi share link (Zalo, Facebook, Twitter, iMessage)
 - [x] Tích hợp Schema.org Structured Data: WebSite & Organization (trang chủ) + Taxon (chi tiết loài)
 - [x] Nâng cấp Dynamic Sitemap cho toàn bộ collections, trang tĩnh và 2.436+ loài
+- [x] Cập nhật tên PWA thành SVBVN (`site.webmanifest`, `apple-mobile-web-app-title`, `application-name`)
+- [x] Xây dựng Popup / Modal hướng dẫn cài đặt app lên điện thoại (`PwaInstallPrompt.tsx`) cho người dùng mới
 

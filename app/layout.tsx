@@ -3,6 +3,7 @@ import '@/styles/tokens.css'
 import '@/styles/globals.css'
 import { ThemeScript } from '@/components/layout/ThemeScript'
 import { BottomNav } from '@/components/layout/BottomNav'
+import { PwaInstallPrompt } from '@/components/layout/PwaInstallPrompt'
 
 const SITE_URL = 'https://cam-nang-ca-bien.vercel.app'
 
@@ -95,7 +96,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#0c142a" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Cá biển VN" />
+        <meta name="apple-mobile-web-app-title" content="SVBVN" />
+        <meta name="application-name" content="SVBVN" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
         <script
@@ -107,6 +109,7 @@ export default function RootLayout({
       <body>
         {children}
         <BottomNav />
+        <PwaInstallPrompt />
       </body>
     </html>
   )
