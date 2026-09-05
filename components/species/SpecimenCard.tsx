@@ -678,13 +678,13 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                     display: 'flex',
                     alignItems: 'center',
                     flexWrap: 'wrap',
-                    gap: '8px 10px',
+                    gap: '4px 8px',
                     marginLeft: `calc(${idx} * var(--tax-indent, 24px))`
                   }}
                 >
                   {idx > 0 && (
                     <span className="tax-tree-branch" aria-hidden="true" style={{ display: 'inline-flex', alignItems: 'center' }}>
-                      <CornerDownRight size={15} />
+                      <CornerDownRight size={14} />
                     </span>
                   )}
                   <span
@@ -692,9 +692,9 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                     style={{
                       flexShrink: 0,
                       fontSize: 'var(--text-xs, 0.82rem)',
-                      padding: '2px 8px',
+                      padding: '2px 7px',
                       borderRadius: '4px',
-                      letterSpacing: '0.05em'
+                      letterSpacing: '0.04em'
                     }}
                   >
                     {c.rank}
@@ -702,8 +702,8 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                   <span
                     className="tax-tree-vn"
                     style={{
-                      fontSize: 'var(--text-base, 1.05rem)',
-                      fontWeight: 700
+                      fontSize: '0.95rem',
+                      fontWeight: 600
                     }}
                   >
                     {c.vn}
@@ -712,7 +712,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                     <em
                       className="tax-tree-lat"
                       style={{
-                        fontSize: 'var(--text-sm, 0.95rem)',
+                        fontSize: '0.88rem',
                         fontStyle: 'italic'
                       }}
                     >
@@ -730,7 +730,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                   display: 'flex',
                   alignItems: 'center',
                   flexWrap: 'wrap',
-                  gap: '8px 10px',
+                  gap: '4px 8px',
                   marginLeft: `calc(${crumbs.length} * var(--tax-indent, 24px))`
                 }}
               >
@@ -752,8 +752,8 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                 <span
                   className="tax-tree-vn tax-tree-vn--current"
                   style={{
-                    fontSize: 'var(--text-lg, 1.2rem)',
-                    fontWeight: 800
+                    fontSize: '0.98rem',
+                    fontWeight: 600
                   }}
                 >
                   {sp.vn_name}
@@ -761,7 +761,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                 <em
                   className="tax-tree-lat tax-tree-lat--current"
                   style={{
-                    fontSize: '1.1rem',
+                    fontSize: '0.92rem',
                     fontStyle: 'italic',
                     fontWeight: 600
                   }}
@@ -772,7 +772,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                   <span
                     className="tax-tree-author"
                     style={{
-                      fontSize: 'var(--text-sm, 0.95rem)'
+                      fontSize: '0.82rem'
                     }}
                   >
                     {' '}{cleanAuthor}
@@ -799,78 +799,18 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                     </span>
                   </div>
                 </div>
-                {sp.worms_id && (
-                  <a
-                    href={`https://www.marinespecies.org/aphia.php?p=taxdetails&id=${sp.worms_id}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="specimen-worms-link-btn"
-                    title="Mở hồ sơ trên CSDL World Register of Marine Species"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      padding: '6px 12px',
-                      borderRadius: '6px',
-                      background: 'var(--color-paper-2, #f8fafc)',
-                      border: '1px solid var(--color-rule, rgba(11, 19, 41, 0.12))',
-                      fontSize: 'var(--text-xs, 0.85rem)',
-                      fontWeight: 600,
-                      color: 'var(--color-ink-2, #334155)',
-                      textDecoration: 'none'
-                    }}
-                  >
-                    <span>Mở CSDL WoRMS</span>
-                    <ExternalLink size={12} />
-                  </a>
-                )}
               </div>
 
-              <div
-                className="worms-dossier-grid"
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-                  gap: '12px',
-                  marginTop: '6px'
-                }}
-              >
+              <div className="worms-dossier-grid" style={{ marginTop: '6px' }}>
                 {/* Tile 1: Trạng thái danh pháp */}
-                <div
-                  className="worms-tile"
-                  style={{
-                    background: 'var(--color-paper-2, #f8fafc)',
-                    border: '1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06))',
-                    borderRadius: '8px',
-                    padding: '12px 16px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '6px'
-                  }}
-                >
-                  <span
-                    className="worms-tile__label"
-                    style={{
-                      fontSize: '0.8rem',
-                      fontWeight: 700,
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.05em',
-                      color: 'var(--color-ink-3, #64748b)'
-                    }}
-                  >
+                <div className="worms-tile">
+                  <span className="worms-tile__label">
                     Trạng thái danh pháp
                   </span>
                   <div style={{ display: 'flex', alignItems: 'center', minHeight: '26px' }}>
                     <WormsBadge sp={sp} />
                   </div>
-                  <span
-                    className="worms-tile__sub"
-                    style={{
-                      fontSize: 'var(--text-xs, 0.85rem)',
-                      color: 'var(--color-ink-3, #94a3b8)',
-                      lineHeight: 1.4
-                    }}
-                  >
+                  <span className="worms-tile__sub">
                     {(sp.worms_status?.toLowerCase() === 'accepted' || sp.worms_status?.toLowerCase() === 'valid')
                       ? 'Tên hợp lệ được công nhận toàn cầu trong CSDL sinh vật biển'
                       : (sp.worms_status?.toLowerCase().includes('synonym')
@@ -881,28 +821,8 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
 
                 {/* Tile 2: Mã số AphiaID */}
                 {sp.worms_id && (
-                  <div
-                    className="worms-tile"
-                    style={{
-                      background: 'var(--color-paper-2, #f8fafc)',
-                      border: '1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06))',
-                      borderRadius: '8px',
-                      padding: '12px 16px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '6px'
-                    }}
-                  >
-                    <span
-                      className="worms-tile__label"
-                      style={{
-                        fontSize: '0.8rem',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.05em',
-                        color: 'var(--color-ink-3, #64748b)'
-                      }}
-                    >
+                  <div className="worms-tile">
+                    <span className="worms-tile__label">
                       Mã định danh Quốc tế (AphiaID)
                     </span>
                     <div style={{ display: 'flex', alignItems: 'center', minHeight: '26px' }}>
@@ -920,42 +840,15 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                         #{sp.worms_id}
                       </code>
                     </div>
-                    <span
-                      className="worms-tile__sub"
-                      style={{
-                        fontSize: 'var(--text-xs, 0.85rem)',
-                        color: 'var(--color-ink-3, #94a3b8)',
-                        lineHeight: 1.4
-                      }}
-                    >
+                    <span className="worms-tile__sub">
                       Mã số tra cứu định danh duy nhất trong CSDL WoRMS
                     </span>
                   </div>
                 )}
 
                 {/* Tile 3: Danh pháp khoa học hiện hành */}
-                <div
-                  className="worms-tile worms-tile--full"
-                  style={{
-                    background: 'var(--color-paper-2, #f8fafc)',
-                    border: '1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06))',
-                    borderRadius: '8px',
-                    padding: '12px 16px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: '6px'
-                  }}
-                >
-                  <span
-                    className="worms-tile__label"
-                    style={{
-                      fontSize: '0.8rem',
-                      fontWeight: 700,
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.05em',
-                      color: 'var(--color-ink-3, #64748b)'
-                    }}
-                  >
+                <div className="worms-tile worms-tile--full">
+                  <span className="worms-tile__label">
                     Danh pháp khoa học hiện hành được WoRMS công nhận
                   </span>
                   <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px', minHeight: '26px' }}>
@@ -963,7 +856,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                       style={{
                         fontStyle: 'italic',
                         fontWeight: 700,
-                        fontSize: 'var(--text-lg, 1.15rem)',
+                        fontSize: '1.05rem',
                         color: 'var(--color-accent, #00d4b8)'
                       }}
                     >
@@ -975,14 +868,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                       </span>
                     )}
                   </div>
-                  <span
-                    className="worms-tile__sub"
-                    style={{
-                      fontSize: 'var(--text-xs, 0.85rem)',
-                      color: 'var(--color-ink-3, #94a3b8)',
-                      lineHeight: 1.4
-                    }}
-                  >
+                  <span className="worms-tile__sub">
                     {sp.worms_accepted_name
                       ? (sp.worms_status?.toLowerCase().includes('synonym')
                         ? 'Tên khoa học chính thức hiện nay (thay thế cho danh pháp cũ)'
@@ -993,28 +879,8 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
 
                 {/* Tile 4: Thời điểm đồng bộ xác thực */}
                 {sp.worms_synced_at && (
-                  <div
-                    className="worms-tile"
-                    style={{
-                      background: 'var(--color-paper-2, #f8fafc)',
-                      border: '1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06))',
-                      borderRadius: '8px',
-                      padding: '12px 16px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: '6px'
-                    }}
-                  >
-                    <span
-                      className="worms-tile__label"
-                      style={{
-                        fontSize: '0.8rem',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.05em',
-                        color: 'var(--color-ink-3, #64748b)'
-                      }}
-                    >
+                  <div className="worms-tile">
+                    <span className="worms-tile__label">
                       Thời điểm đồng bộ xác thực
                     </span>
                     <div style={{ display: 'flex', alignItems: 'center', minHeight: '26px' }}>
@@ -1022,14 +888,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                         {sp.worms_synced_at.substring(0, 10)}
                       </span>
                     </div>
-                    <span
-                      className="worms-tile__sub"
-                      style={{
-                        fontSize: 'var(--text-xs, 0.85rem)',
-                        color: 'var(--color-ink-3, #94a3b8)',
-                        lineHeight: 1.4
-                      }}
-                    >
+                    <span className="worms-tile__sub">
                       Tự động cập nhật qua WoRMS REST API
                     </span>
                   </div>

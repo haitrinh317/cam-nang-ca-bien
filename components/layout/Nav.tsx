@@ -19,9 +19,9 @@ export default function Nav() {
     <>
       <header className="site-header" role="banner">
         <Link href="/" className="logo">
-          <img src="/logo.png" alt="Logo Bảo tàng Hải dương học" />
-          <span className="logo-full">Bảo tàng Hải dương học</span>
-          <span className="logo-short">BTHD</span>
+          <img src="/logo.png" alt="Logo Tra cứu sinh vật biển" />
+          <span className="logo-full">Tra cứu sinh vật biển</span>
+          <span className="logo-short">TCSB</span>
         </Link>
         <nav className={`nav-links${menuOpen ? ' open' : ''}`} id="navLinks" aria-label="Điều hướng chính">
           <Link
