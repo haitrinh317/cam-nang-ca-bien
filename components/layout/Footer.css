@@ -1,0 +1,276 @@
+/* ═══════════════════════════════════════════════════════════════
+   COMPACT HERITAGE FOOTER (Hallmark Ft1 + UI/UX Pro Max)
+   Bảo tàng Hải dương học — Viện Hải dương học Nha Trang
+   ═══════════════════════════════════════════════════════════════ */
+
+.site-footer {
+  position: relative;
+  background: #060c1b;
+  background-image: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(0, 212, 184, 0.05), transparent);
+  color: #94a3b8;
+  border-top: 1px solid rgba(0, 212, 184, 0.22);
+  margin-top: var(--space-2xl);
+  padding: var(--space-2xl) var(--space-xl) var(--space-xl);
+  font-family: var(--font-body);
+  overflow: hidden;
+}
+
+/* Subtle top glow bar */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 212, 184, 0.6) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.site-footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* ─── Tầng 1: Nhận diện Viện & Slogan trạng thái ─── */
+.site-footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.footer-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px;
+  border: 1px solid rgba(0, 212, 184, 0.3);
+  flex-shrink: 0;
+}
+
+.footer-brand__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.footer-org__title {
+  color: #f1f5f9;
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.footer-org__title strong {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.footer-org__title:hover {
+  color: var(--color-cyan-raw);
+}
+
+.footer-org__sub {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.footer-sep {
+  opacity: 0.4;
+  font-size: 0.65rem;
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.footer-statement-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #00d4b8;
+  font-weight: 500;
+  background: rgba(0, 212, 184, 0.08);
+  border: 1px solid rgba(0, 212, 184, 0.22);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  letter-spacing: 0.01em;
+}
+
+.statement-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00d4b8;
+  box-shadow: 0 0 8px #00d4b8;
+  flex-shrink: 0;
+}
+
+.footer-version-badge {
+  font-family: var(--font-jetbrains-mono, monospace);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 9px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+
+/* ─── Đường chia Hairline ─── */
+.footer-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  width: 100%;
+}
+
+/* ─── Tầng 2: Thanh liên kết & Bản quyền ─── */
+.site-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  font-size: 0.82rem;
+}
+
+.footer-nav-cluster {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
+.footer-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.footer-nav-dot {
+  color: #475569;
+  font-size: 0.7rem;
+}
+
+.footer-external-links {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-ext-label {
+  color: #64748b;
+  font-size: 0.78rem;
+  margin-right: 2px;
+}
+
+.footer-link {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease-out);
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  touch-action: manipulation;
+}
+
+.footer-link:hover {
+  color: var(--color-cyan-raw);
+}
+
+.footer-link--ext {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.78rem;
+}
+
+.footer-link--ext:hover {
+  background: rgba(0, 212, 184, 0.08);
+  border-color: rgba(0, 212, 184, 0.25);
+  color: #00d4b8;
+}
+
+.footer-link--ext svg {
+  opacity: 0.6;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.footer-link--ext:hover svg {
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
+.footer-copyright {
+  color: #64748b;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE FOOTER (Discipline 5)
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: var(--space-xl) var(--space-md) calc(76px + var(--safe-bottom, 0px) + 24px);
+    margin-top: var(--space-xl);
+  }
+
+  .site-footer__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .footer-status {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .footer-nav-cluster {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    width: 100%;
+  }
+
+  .footer-external-links {
+    width: 100%;
+  }
+
+  .footer-link {
+    padding: 2px 0;
+  }
+}
