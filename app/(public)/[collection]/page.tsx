@@ -1,17 +1,19 @@
 import { getCollectionBySlug } from '@/lib/collections'
 import { notFound } from 'next/navigation'
 import SpeciesGrid from '@/components/browse/SpeciesGrid'
-import GlobalSearch from '@/components/search/GlobalSearch'
+import CatalogHeader from '@/components/browse/CatalogHeader'
+import { getSpecialGroup } from '@/lib/special-groups'
 import { createServerClient } from '@/lib/supabase-server'
 import { getBooksForCollection } from '@/lib/books-data'
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 
 // ponytail: ISR 1h — species data rarely changes, consistent with landing page
 export const revalidate = 3600
 
 interface Props {
   params: Promise<{ collection: string }>
-  searchParams: Promise<{ vol?: string }>
+  searchParams: Promise<{ vol?: string; group?: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -52,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CollectionPage({ params, searchParams }: Props) {
   const { collection } = await params
-  const { vol } = await searchParams
+  const { vol, group } = await searchParams
   const col = getCollectionBySlug(collection)
   if (!col) notFound()
 
@@ -78,45 +80,21 @@ export default async function CollectionPage({ params, searchParams }: Props) {
     ? new Set(familyRows.map(r => r.tax_family_latin).filter(Boolean)).size
     : 210
 
+  const activeGroup = group ? getSpecialGroup(group) : null
+
   return (
     <>
-      <section className="hero" aria-label="Tra cứu toàn bộ">
-        <div className="hero__bg" aria-hidden="true" />
-        <div className="hero__content">
-          <h1>
-            Tra cứu Danh mục <span className="hero__accent">{col.id === 'thuc-vat-bien' ? 'Thực Vật Biển Việt Nam' : col.nameVn}</span>
-          </h1>
-          <p>
-            Cơ sở dữ liệu số hóa phục vụ nghiên cứu khoa học — Viện Hải dương học, Nha Trang.
-          </p>
-          <GlobalSearch />
+      <CatalogHeader
+        collection={col}
+        totalSpecies={totalSpecies || 0}
+        familyCount={familyCount}
+        booksCount={books.length}
+        activeGroup={activeGroup}
+      />
 
-          {/* Live stats đồng bộ hoàn toàn với trang chủ */}
-          <div className="hero__stats">
-            <div className="hero__stat">
-              <span className="hero__stat-num">{totalSpecies?.toLocaleString() || '1,764'}</span>
-              <span className="hero__stat-label">Loài</span>
-            </div>
-            <div className="hero__stat-divider" />
-            <div className="hero__stat">
-              <span className="hero__stat-num">{familyCount}</span>
-              <span className="hero__stat-label">Họ</span>
-            </div>
-            <div className="hero__stat-divider" />
-            <div className="hero__stat">
-              <span className="hero__stat-num">{books.length}</span>
-              <span className="hero__stat-label">Đầu sách</span>
-            </div>
-            <div className="hero__stat-divider" />
-            <div className="hero__stat">
-              <span className="hero__stat-num">{col.volumeCount}</span>
-              <span className="hero__stat-label">Tập tài liệu</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <SpeciesGrid collection={collection} initialVol={initialVol} />
+      <Suspense fallback={<div className="list-status-message"><div className="spinner" /><span>Đang tải danh sách...</span></div>}>
+        <SpeciesGrid collection={collection} initialVol={initialVol} initialGroup={group} />
+      </Suspense>
     </>
   )
 }

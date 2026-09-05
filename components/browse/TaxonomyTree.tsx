@@ -3,28 +3,12 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { db } from '@/lib/supabase-browser'
-
-interface SpeciesRow {
-  id: string
-  vn_name: string
-  scientific_name: string
-  tax_class_vn: string | null
-  tax_class_latin: string | null
-  tax_order_vn: string | null
-  tax_order_latin: string | null
-  tax_family_vn: string | null
-  tax_family_latin: string | null
-  tax_genus_vn: string | null
-  tax_genus_latin: string | null
-  species_index: number | null
-}
+import { TAXONOMY_COLS, SpeciesRow, sortTaxonomyRows, buildTaxonomyTree } from '@/lib/taxonomy'
 
 interface Props { 
   collection: string 
   initialSpecies?: SpeciesRow[]
 }
-
-const COLS = 'id, vn_name, scientific_name, tax_class_vn, tax_class_latin, tax_order_vn, tax_order_latin, tax_family_vn, tax_family_latin, tax_genus_vn, tax_genus_latin, species_index'
 
 // Accordion node
 function TreeNode({ title, rankClass, rankName, children }: {
@@ -65,23 +49,12 @@ export default function TaxonomyTree({ collection, initialSpecies }: Props) {
     async function load() {
       // ponytail: Supabase max-rows = 1000. Fetch 2 pages for collection.
       const [r1, r2] = await Promise.all([
-        db.from('species').select(COLS).eq('collection_id', collection).is('deleted_at', null).range(0, 999),
-        db.from('species').select(COLS).eq('collection_id', collection).is('deleted_at', null).range(1000, 1999),
+        db.from('species').select(TAXONOMY_COLS).eq('collection_id', collection).is('deleted_at', null).range(0, 999),
+        db.from('species').select(TAXONOMY_COLS).eq('collection_id', collection).is('deleted_at', null).range(1000, 1999),
       ])
       if (r1.error) { setStatus('error'); return }
 
-      const data = [...(r1.data || []), ...(r2.data || [])] as SpeciesRow[]
-      data.sort((a, b) => {
-        const cl = (a.tax_class_latin || '').localeCompare(b.tax_class_latin || '')
-        if (cl !== 0) return cl
-        const or = (a.tax_order_latin || '').localeCompare(b.tax_order_latin || '')
-        if (or !== 0) return or
-        const fa = (a.tax_family_latin || '').localeCompare(b.tax_family_latin || '')
-        if (fa !== 0) return fa
-        return (a.species_index || 0) - (b.species_index || 0)
-      })
-
-      setAllSpecies(data)
+      setAllSpecies(sortTaxonomyRows([...(r1.data || []), ...(r2.data || [])] as SpeciesRow[]))
       setStatus('ok')
     }
     load()
@@ -102,33 +75,6 @@ export default function TaxonomyTree({ collection, initialSpecies }: Props) {
     setShowTree(false)
   }
 
-  // Build tree from flat rows
-  type GenusNode = { vn: string; species: SpeciesRow[] }
-  type FamilyNode = { vn: string; genera: Record<string, GenusNode> }
-  type OrderNode = { vn: string; families: Record<string, FamilyNode> }
-  type ClassNode = { vn: string; orders: Record<string, OrderNode> }
-  type Tree = Record<string, ClassNode>
-
-  function buildTree(rows: SpeciesRow[]) {
-    const tree: Tree = {}
-    rows.forEach(sp => {
-      const cl  = sp.tax_class_latin  || 'Unknown'
-      const clv = sp.tax_class_vn     || cl
-      const or  = sp.tax_order_latin  || 'Unknown'
-      const orv = sp.tax_order_vn     || or
-      const fa  = sp.tax_family_latin || 'Unknown'
-      const fav = sp.tax_family_vn    || fa
-      const ge  = sp.tax_genus_latin  || 'Unknown'
-      const gev = sp.tax_genus_vn     || ge
-
-      if (!tree[cl]) tree[cl] = { vn: clv, orders: {} }
-      if (!tree[cl].orders[or]) tree[cl].orders[or] = { vn: orv, families: {} }
-      if (!tree[cl].orders[or].families[fa]) tree[cl].orders[or].families[fa] = { vn: fav, genera: {} }
-      if (!tree[cl].orders[or].families[fa].genera[ge]) tree[cl].orders[or].families[fa].genera[ge] = { vn: gev, species: [] }
-      tree[cl].orders[or].families[fa].genera[ge].species.push(sp)
-    })
-    return tree
-  }
 
   const ArrowRight = () => (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--brand-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -188,7 +134,7 @@ export default function TaxonomyTree({ collection, initialSpecies }: Props) {
             Lỗi tải dữ liệu phân loại học.
           </div>
         )}
-        {status === 'ok' && Object.entries(buildTree(allSpecies)).map(([clLatin, clData]) => (
+        {status === 'ok' && Object.entries(buildTaxonomyTree(allSpecies)).map(([clLatin, clData]) => (
           <TreeNode key={clLatin} title={label(clLatin, clData.vn)} rankClass="rank-class" rankName="Lớp">
             {Object.entries(clData.orders).map(([orLatin, orData]) => (
               <TreeNode key={orLatin} title={label(orLatin, orData.vn)} rankClass="rank-order" rankName="Bộ">

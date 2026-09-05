@@ -1,7 +1,7 @@
 # TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-04 16:41 (Session End)
-> **Next Session Starting Point**: (1) Bổ sung CSV Import và Inline edit cho Admin Panel. (2) Bổ sung tên VN ~17 loài rong biển còn thiếu. (3) Mở rộng bộ sưu tập mới (San hô, Thân mềm) khi có tài liệu OCR tiếp theo.
+> Cập nhật: 2026-09-05 11:05 (Session End Sáng)
+> **Next Session Starting Point**: (1) Thảo luận duyệt giao diện v4.2 và chạy /deploy lên Vercel Production. (2) Bổ sung CSV Import và Inline edit cho Admin Panel. (3) Bổ sung tên VN ~17 loài rong biển còn thiếu.
 > **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Trang tra cứu /ca-bien đã được thiết kế lại tối ưu: GlobalSearch cross-tập + Phân chia 2 đầu sách chính quy + Compact List View text-only cắt giảm 99% data transfer.
 
 ## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
@@ -234,4 +234,13 @@
 - [x] Cập nhật tên PWA thành SVBVN (`site.webmanifest`, `apple-mobile-web-app-title`, `application-name`)
 - [x] Xây dựng Popup / Modal hướng dẫn cài đặt app lên điện thoại (`PwaInstallPrompt.tsx`) cho người dùng mới
 - [x] Sửa triệt để lỗi hiển thị font Tiếng Việt: chuyển sang self-hosted `next/font/google` (Lora, Be Vietnam Pro), loại bỏ @import CDN và chuẩn hóa fallback font stack an toàn
+
+### Session 2026-09-05 (Sáng)
+- [x] Tích hợp 37 AI Skills Toàn Cục (Engineering, TDD, Productivity) từ Matt Pocock
+- [x] Refactor module sâu (Deepening): `lib/taxonomy.ts` (xóa 42 dòng trùng lặp), `lib/species-query.ts`, `lib/species-photos.ts`, gộp `collections-static.ts`
+- [x] Triển khai Khám phá 4 Chuyên đề Sinh thái & Bảo tồn trên trang chủ (`SpecialGroupsSection.tsx`) kết nối dữ liệu Supabase thật: Rạn san hô (195 loài), Nguy cấp IUCN (120 loài), Cá sụn (52 loài), Thực vật biển (672 loài)
+- [x] Tích hợp Banner Chuyên đề (`SpecialGroupBanner`) trong `SpeciesGrid.tsx` với chế độ xem chuyên đề, ẩn bộ chọn sách và nút quay lại sách gốc
+- [x] Chuẩn hóa toàn bộ IUCN Badge trên toàn hệ thống theo code phần Sinh học (`IucnBadge.tsx` SSOT): badge chữ nhật bo góc, màu chuẩn quốc tế, không icon unicode dính chữ
+- [x] Sửa lỗi hiển thị nút "Quay lại theo sách gốc" trên banner chuyên đề (`SpecialGroupBanner.css` + inline fallback + icon ArrowLeft)
+- [x] Nâng cấp Thước đo kích thước tương quan (`SpecimenVisualWidgets.tsx`): tự động nhận diện `mm` (tự chia 10 ra `cm`), `cm`, `m`, từ khóa "lớn nhất/tối đa" và thang đo thích ứng 0-40cm, 0-1m, 0-5m+
 

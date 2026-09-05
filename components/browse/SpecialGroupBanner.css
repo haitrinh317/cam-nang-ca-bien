@@ -1,0 +1,166 @@
+/* SpecialGroupBanner.css — Banner chuyên đề sinh thái & bảo tồn */
+
+.special-group-banner {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(14, 165, 233, 0.02) 100%);
+  border: 1.5px solid var(--color-cyan-border, rgba(0, 212, 184, 0.3));
+  border-radius: var(--radius-xl, 16px);
+  padding: var(--space-xl, 24px) var(--space-xl, 24px) var(--space-lg, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm, 12px);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  margin-bottom: var(--space-md, 16px);
+  position: relative;
+  overflow: hidden;
+}
+
+.special-group-banner--rose {
+  background: linear-gradient(135deg, rgba(225, 29, 72, 0.07) 0%, rgba(244, 63, 94, 0.02) 100%);
+  border-color: rgba(225, 29, 72, 0.25);
+}
+
+.special-group-banner--cyan {
+  background: linear-gradient(135deg, rgba(0, 212, 184, 0.08) 0%, rgba(14, 165, 233, 0.02) 100%);
+  border-color: rgba(0, 212, 184, 0.3);
+}
+
+.special-group-banner--amber {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.08) 0%, rgba(245, 158, 11, 0.02) 100%);
+  border-color: rgba(217, 119, 6, 0.25);
+}
+
+.special-group-banner--emerald {
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.08) 0%, rgba(16, 185, 129, 0.02) 100%);
+  border-color: rgba(5, 150, 105, 0.25);
+}
+
+.sgb-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+
+.sgb-badge-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.sgb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sgb-badge--cyan {
+  background: rgba(0, 212, 184, 0.12);
+  color: #008f7a;
+  border: 1px solid rgba(0, 212, 184, 0.3);
+}
+
+.sgb-badge--rose {
+  background: rgba(225, 29, 72, 0.1);
+  color: #be123c;
+  border: 1px solid rgba(225, 29, 72, 0.25);
+}
+
+.sgb-badge--amber {
+  background: rgba(217, 119, 6, 0.1);
+  color: #b45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.sgb-badge--emerald {
+  background: rgba(5, 150, 105, 0.1);
+  color: #047857;
+  border: 1px solid rgba(5, 150, 105, 0.25);
+}
+
+[data-theme="dark"] .sgb-badge--cyan { color: #00f0d0; }
+[data-theme="dark"] .sgb-badge--rose { color: #fb7185; }
+[data-theme="dark"] .sgb-badge--amber { color: #fbbf24; }
+[data-theme="dark"] .sgb-badge--emerald { color: #34d399; }
+
+/* Nút quay lại xem theo sách gốc */
+.sgb-clear-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-paper-2, #ffffff);
+  border: 1px solid var(--color-rule, #e2e8f0);
+  color: var(--color-ink-2, #475569);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: all 0.15s ease-out;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sgb-clear-btn:hover {
+  background: var(--color-paper-3, #f1f5f9);
+  border-color: var(--color-ink-3, #94a3b8);
+  color: var(--color-ink, #0f172a);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.sgb-title {
+  font-family: var(--font-display, serif);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--color-navy-raw, #03045e);
+  line-height: 1.25;
+  margin: 4px 0 0;
+}
+
+.sgb-desc {
+  font-size: 0.95rem;
+  color: var(--color-ink-3, #64748b);
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 0;
+}
+
+/* ─── DANH SÁCH CÁC TẬP TRONG BỘ SÁCH: LƯỚI 2 CỘT (CẢ DESKTOP & MOBILE) ─── */
+.volume-full-tabs {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px 10px !important;
+}
+
+@media (max-width: 640px) {
+  .volume-full-tab {
+    padding: 8px 10px !important;
+    gap: 6px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .vft-roman {
+    font-size: 0.7rem !important;
+    padding: 2px 6px !important;
+  }
+  .vft-title {
+    font-size: 0.82rem !important;
+    line-height: 1.25 !important;
+  }
+  .vft-sub {
+    font-size: 0.72rem !important;
+  }
+  .vft-count {
+    font-size: 0.7rem !important;
+    padding: 2px 6px !important;
+  }
+}

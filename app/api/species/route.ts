@@ -7,15 +7,9 @@
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient, createSSRClient } from '@/lib/supabase-server'
+import { sanitizeSearch, SPECIES_PAGE_SIZE, applySpeciesFilters } from '@/lib/species-query'
 
 export const dynamic = 'force-dynamic'
-
-const PAGE_SIZE = 20
-
-/** Sanitize search input — strip chars that could break PostgREST filters */
-function sanitizeSearch(raw: string): string {
-  return raw.replace(/[%_(),.]/g, '').trim().slice(0, 100)
-}
 
 /** Check if current user has admin role. Returns user email or null. */
 async function requireAdmin(db: Awaited<ReturnType<typeof createSSRClient>>): Promise<{ email: string } | null> {
@@ -53,30 +47,27 @@ export async function GET(req: NextRequest) {
   // GET is public, doesn't need cookies
   const db = createServerClient()
   const { searchParams } = req.nextUrl
-  const collection = searchParams.get('collection') || 'ca-bien'
-  const vol        = searchParams.get('vol')
-  const rawSearch  = searchParams.get('search') || ''
-  const search     = sanitizeSearch(rawSearch)
+  const collection      = searchParams.get('collection') || 'ca-bien'
+  const vol             = searchParams.get('vol')
+  const search          = sanitizeSearch(searchParams.get('search') || '')
   const page            = parseInt(searchParams.get('page') || '1')
   const includeDeleted  = searchParams.get('include_deleted') === 'true'
 
-  let query = db
-    .from('species')
-    .select('id, volume, species_index, vn_name, scientific_name, tax_family_latin, collection_id', { count: 'exact' })
-    .eq('collection_id', collection)
-
-  // Soft-delete filter: exclude deleted records by default
-  if (!includeDeleted) query = query.is('deleted_at', null)
+  let query = applySpeciesFilters(
+    db.from('species').select('id, volume, species_index, vn_name, scientific_name, tax_family_latin, collection_id', { count: 'exact' }),
+    collection,
+    includeDeleted
+  )
 
   if (vol) query = query.eq('volume', parseInt(vol))
   if (search) query = query.or(`vn_name.ilike.%${search}%,scientific_name.ilike.%${search}%`)
 
-  const from = (page - 1) * PAGE_SIZE
-  query = query.range(from, from + PAGE_SIZE - 1).order('volume').order('species_index')
+  const from = (page - 1) * SPECIES_PAGE_SIZE
+  query = query.range(from, from + SPECIES_PAGE_SIZE - 1).order('volume').order('species_index')
 
   const { data, error, count } = await query
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-  return NextResponse.json({ data, total: count, page, pageSize: PAGE_SIZE })
+  return NextResponse.json({ data, total: count, page, pageSize: SPECIES_PAGE_SIZE })
 }
 
 export async function POST(req: NextRequest) {

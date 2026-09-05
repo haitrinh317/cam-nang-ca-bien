@@ -1,8 +1,10 @@
 'use client'
+
 import React, { useState } from 'react'
-import BilingualNoteBlock from './BilingualNoteBlock'
 import PhotoGallery from './PhotoGallery'
+import SpecimenVisualWidgets from './SpecimenVisualWidgets'
 import { ExternalLink, CheckCircle, AlertTriangle } from 'lucide-react'
+import BiologyDashboard, { BiologyData } from './BiologyDashboard'
 
 interface Species {
 
@@ -37,7 +39,7 @@ interface Species {
   en_status: string | null
   en_literature: string | null
   synonyms: string | string[] | null
-  biology: Biology | null
+  biology: BiologyData | null
   // Morphology + Ecology + Economic Value — from Atlas (Vol 6) format
   morphology_vn: string | null
   morphology_en: string | null
@@ -52,35 +54,7 @@ interface Species {
   collection_id: string | null
 }
 
-interface Biology {
-  fbName?: string
-  maxLength?: string
-  maxWeight?: string
-  longevity?: string
-  depth?: string
-  depthVn?: string
-  habitat?: string
-  habitatVn?: string
-  iucnStatus?: string
-  dangerous?: string
-  feedingType?: string
-  trophicLevel?: number
-  reproduction?: string
-  spawning?: string
-  spawnAggregation?: boolean
-  parentalCare?: string
-  importance?: string
-  importanceVn?: string
-  aquaculture?: string
-  biologySummary?: string
-  biologySummaryVn?: string
-  ecologyNotes?: string
-  ecologyNotesVn?: string
-  reproductionNotes?: string
-  reproductionNotesVn?: string
-  morphDescription?: string
-  morphDescriptionVn?: string
-}
+type Biology = BiologyData
 
 // ── WoRMS Badge ───────────────────────────────────────────────────
 function WormsBadge({ sp }: { sp: Species }) {
@@ -136,178 +110,7 @@ function WormsBadge({ sp }: { sp: Species }) {
   )
 }
 
-// ── Biology Panel ────────────────────────────────────────────────
-const IUCN_COLOR: Record<string, string> = {
-  LC: '#22c55e', NT: '#84cc16', VU: '#f59e0b',
-  EN: '#f97316', CR: '#ef4444', EX: '#7c3aed', DD: '#94a3b8',
-}
-
-// Static label translations (EN → VN)
-const LABEL_VN: Record<string, string> = {
-  'English name (FishBase)': 'Tên tiếng Anh (FishBase)',
-  'English name (AlgaeBase)': 'Tên tiếng Anh (AlgaeBase)',
-  'Max length': 'Chiều dài tối đa',
-  'Max weight': 'Trọng lượng tối đa',
-  'Longevity': 'Tuổi thọ',
-  'Depth range': 'Độ sâu phân bố',
-  'Habitat': 'Môi trường sống',
-  'IUCN Red List': 'Sách Đỏ IUCN',
-  'Danger to humans': 'Nguy hiểm cho người',
-  'Feeding type': 'Kiểu ăn',
-  'Trophic level': 'Bậc dinh dưỡng',
-  'Reproduction': 'Hình thức sinh sản',
-  'Spawning': 'Mùa sinh sản',
-  'Spawn aggregation': 'Tập hợp sinh sản',
-  'Parental care': 'Chăm sóc con',
-  'Importance': 'Giá trị thương mại',
-  'Aquaculture': 'Nuôi trồng thủy sản',
-}
-
-// Common FishBase enum value translations
-const VALUE_VN: Record<string, string> = {
-  'hunting macrofauna (predator)': 'Săn mồi lớn (ăn thịt)',
-  'browsing on substrate': 'Kiếm ăn trên nền đáy',
-  'grazing on substrate': 'Gặm cỏ trên nền đáy',
-  'filter feeding': 'Lọc thức ăn',
-  'herbivores': 'Ăn thực vật',
-  'omnivores': 'Ăn tạp',
-  'carnivores': 'Ăn thịt',
-  'planktivores': 'Ăn sinh vật phù du',
-  'corallivores': 'Ăn san hô',
-  'detritivores': 'Ăn mùn bã hữu cơ',
-  'dioecism, internal (oviduct) fertilization': 'Phân giới tính, thụ tinh trong (ống dẫn trứng)',
-  'dioecism, external fertilization': 'Phân giới tính, thụ tinh ngoài',
-  'hermaphroditic': 'Lưỡng tính',
-  'oviparous': 'Đẻ trứng',
-  'viviparous': 'Đẻ con',
-  'ovoviviparous': 'Noãn thai sinh',
-  'neritic': 'Vùng ven bờ (neritic)',
-  'neritic, coral reefs': 'Vùng ven bờ, rạn san hô',
-  'coral reefs': 'Rạn san hô',
-  'demersal': 'Tầng đáy',
-  'pelagic': 'Tầng nổi',
-  'benthopelagic': 'Tầng trung – đáy',
-  'bathydemersal': 'Đáy sâu',
-  'reef-associated': 'Gần rạn san hô',
-  'minor commercial': 'Thương mại nhỏ',
-  'commercial': 'Thương mại',
-  'of no interest': 'Không có giá trị',
-  'no interest': 'Không có giá trị',
-  'highly commercial': 'Thương mại lớn',
-  'subsistence fisheries': 'Khai thác tự cung tự cấp',
-  'gamefish': 'Cá thể thao câu cá',
-  'never/rarely': 'Không/hiếm khi',
-  'experimental': 'Thử nghiệm',
-  'one clear seasonal peak per year': 'Một đỉnh sinh sản rõ ràng mỗi năm',
-  'multiple spawning per year': 'Nhiều lần trong năm',
-  'traumatogenic': 'Gây thương tích cơ học',
-  'venomous': 'Có nọc độc',
-  'poisonous to eat': 'Độc khi ăn',
-  'harmless': 'Vô hại',
-  'potential pest': 'Gây hại tiềm tàng',
-  'yes — forms spawning aggregations': 'Có — tập hợp sinh sản theo đàn',
-  'other': 'Khác',
-}
-
-function tvn(val: string): string {
-  return VALUE_VN[val.toLowerCase().trim()] || VALUE_VN[val.trim()] || ''
-}
-
-function BioRow({ label, val, valVn }: { label: string; val?: string | number | null; valVn?: string | null }) {
-  if (!val && val !== 0 && !valVn) return null
-  const labelVn = LABEL_VN[label] || label
-  const enStr = val != null ? String(val) : ''
-  const vnStr = valVn || (typeof val === 'string' ? tvn(val) : '') || enStr
-  return (
-    <div className="kv-row">
-      <div className="kv-cell">
-        <div className="kv-label">{labelVn}</div>
-        <div className="kv-value">{vnStr}</div>
-      </div>
-      <div className="kv-cell">
-        <div className="kv-label kv-label-en">{label}</div>
-        <div className="kv-value kv-value-en">{enStr || '—'}</div>
-      </div>
-    </div>
-  )
-}
-
-function BiologyPanel({ bio, speciesId, collectionId }: { bio: Biology; speciesId: string; collectionId?: string | null }) {
-  const isSeaweed = collectionId === 'thuc-vat-bien' || speciesId.startsWith('thucvat-')
-  const srcName = isSeaweed ? 'AlgaeBase' : 'FishBase'
-  const iucn = bio.iucnStatus
-  const iucnColor = iucn ? (IUCN_COLOR[iucn] || '#94a3b8') : ''
-  return (
-    <>
-      <section className="specimen__section">
-        <h2 className="specimen__section-title">Sinh học — Sinh thái <span className="panel-badge">BIO</span></h2>
-        <BioRow label={`English name (${srcName})`} val={bio.fbName} />
-        <BioRow label="Max length" val={bio.maxLength} />
-        <BioRow label="Max weight" val={bio.maxWeight} />
-        <BioRow label="Longevity" val={bio.longevity} />
-        <BioRow label="Depth range" val={bio.depth} valVn={bio.depthVn} />
-        <BioRow label="Habitat" val={bio.habitat} valVn={bio.habitatVn} />
-        {iucn && (
-          <div className="kv-row">
-            <div className="kv-cell">
-              <div className="kv-label">Sách Đỏ IUCN</div>
-              <div className="kv-value">
-                <span style={{
-                  display: 'inline-block', padding: '0.15rem 0.5rem', borderRadius: '4px',
-                  background: `${iucnColor}22`, border: `1px solid ${iucnColor}55`,
-                  color: iucnColor, fontWeight: 700, fontSize: '0.82rem', letterSpacing: '.05em',
-                }}>{iucn}</span>
-              </div>
-            </div>
-            <div className="kv-cell">
-              <div className="kv-label kv-label-en">IUCN Red List</div>
-              <div className="kv-value kv-value-en">{iucn}</div>
-            </div>
-          </div>
-        )}
-        <BioRow label="Danger to humans" val={bio.dangerous} />
-        <BioRow label="Feeding type" val={bio.feedingType} />
-        {bio.trophicLevel != null && <BioRow label="Trophic level" val={bio.trophicLevel.toFixed(2)} />}
-        <BioRow label="Reproduction" val={bio.reproduction} />
-        <BioRow label="Spawning" val={bio.spawning} />
-        {bio.spawnAggregation && <BioRow label="Spawn aggregation" val="Yes — forms spawning aggregations" />}
-        <BioRow label="Parental care" val={bio.parentalCare} />
-        <BioRow label="Importance" val={bio.importance} valVn={bio.importanceVn} />
-        <BioRow label="Aquaculture" val={bio.aquaculture} />
-      </section>
-
-      {(bio.biologySummary || bio.ecologyNotes || bio.reproductionNotes || bio.morphDescription) && (
-        <section className="specimen__section">
-          <h2 className="specimen__section-title">Ghi chú chi tiết</h2>
-          {bio.biologySummary && (
-            <BilingualNoteBlock
-              labelEn={`Biology summary (${srcName})`} labelVn={`Tóm tắt sinh học (${srcName})`}
-              text={bio.biologySummary} textVn={bio.biologySummaryVn} cacheKey={`bio_summary_${speciesId}`}
-            />
-          )}
-          {bio.ecologyNotes && (
-            <BilingualNoteBlock
-              labelEn="Ecology notes" labelVn="Ghi chú sinh thái"
-              text={bio.ecologyNotes} textVn={bio.ecologyNotesVn} cacheKey={`ecology_${speciesId}`}
-            />
-          )}
-          {bio.reproductionNotes && (
-            <BilingualNoteBlock
-              labelEn="Reproduction notes" labelVn="Ghi chú sinh sản"
-              text={bio.reproductionNotes} textVn={bio.reproductionNotesVn} cacheKey={`repro_${speciesId}`}
-            />
-          )}
-          {bio.morphDescription && (
-            <BilingualNoteBlock
-              labelEn="Morphological description (GBIF)" labelVn="Mô tả hình thái (GBIF)"
-              text={bio.morphDescription} textVn={bio.morphDescriptionVn} cacheKey={`morph_${speciesId}`}
-            />
-          )}
-        </section>
-      )}
-    </>
-  )
-}
+// BiologyPanel has been upgraded to BiologyDashboard (see BiologyDashboard.tsx)
 
 // ── KV row helpers ────────────────────────────────────────────────
 function KvRow({ labelVn, valVn, labelEn, valEn }: { labelVn: string; valVn?: string | null; labelEn?: string; valEn?: string | null }) {
@@ -440,11 +243,20 @@ function TabStrip({ sp, bio, syns, speciesId }: {
         aria-labelledby="tab-thongso"
         className={`detail-tab-panel${active === 'thongso' ? ' active' : ''}`}
       >
-        {/* 1–3: Tên + Kích thước */}
+        {/* 1–3: Tên + Kích thước & Trực quan hóa dữ liệu sinh học */}
         <section className="specimen__section">
           <h2 className="specimen__section-title">Thông tin chính</h2>
-          <KvRow labelVn="Tên gọi khác" valVn={sp.vn_alternate_names} labelEn="Common Name (EN)" valEn={sp.en_common_name} />
-          <KvRow labelVn="Kích thước" valVn={sp.vn_size} labelEn="Size" valEn={sp.en_size} />
+          <KvRow labelVn="Tên gọi khác" valVn={sp.vn_alternate_names} labelEn="Common Name" valEn={sp.en_common_name} />
+
+          {/* Trực quan hóa dữ liệu sinh học (Thước đo kích thước song ngữ VN/EN, Độ sâu sinh thái, Vùng biển Việt Nam & Thế giới) */}
+          <SpecimenVisualWidgets
+            vnSizeStr={sp.vn_size}
+            enSizeStr={sp.en_size}
+            maxLengthStr={bio?.maxLength}
+            depthStr={bio?.depth}
+            depthVnStr={bio?.depthVn}
+            distributionStr={sp.vn_distribution || sp.en_distribution}
+          />
         </section>
 
         {/* 4: Mô tả hình thái */}
@@ -487,25 +299,6 @@ function TabStrip({ sp, bio, syns, speciesId }: {
           </section>
         )}
 
-        {/* 7: Phân bố */}
-        {(sp.vn_distribution || sp.en_distribution) && (
-          <section className="specimen__section">
-            <h2 className="specimen__section-title">Phân bố</h2>
-            <div className="kv-row">
-              <div className="kv-cell kv-full">
-                {sp.vn_distribution
-                  ? <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>{sp.vn_distribution}</div>
-                  : sp.en_distribution && (
-                    <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>
-                      {sp.en_distribution}
-                      <span className="source-tag">{enSourceTag}</span>
-                    </div>
-                  )
-                }
-              </div>
-            </div>
-          </section>
-        )}
 
         {/* 8: Giá trị kinh tế */}
         {(sp.economic_value_vn || sp.economic_value_en) && (
@@ -554,7 +347,7 @@ function TabStrip({ sp, bio, syns, speciesId }: {
         className={`detail-tab-panel${active === 'sinhhoc' ? ' active' : ''}`}
       >
         {bio
-          ? <BiologyPanel bio={bio} speciesId={speciesId} collectionId={sp.collection_id} />
+          ? <BiologyDashboard bio={bio} speciesId={speciesId} collectionId={sp.collection_id} />
           : <p className="specimen__empty">Chưa có dữ liệu sinh học cho loài này.</p>
         }
       </div>

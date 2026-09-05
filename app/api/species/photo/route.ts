@@ -6,8 +6,8 @@
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient, createSSRClient } from '@/lib/supabase-server'
+import { SPECIES_PHOTOS_BUCKET as BUCKET } from '@/lib/species-photos'
 
-const BUCKET = 'species-photos'
 const MAX_SIZE = 5 * 1024 * 1024 // 5MB
 
 async function requireAdmin(db: Awaited<ReturnType<typeof createSSRClient>>): Promise<{ email: string } | null> {

@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { t } from '@/lib/i18n'
-import { getActiveCollections } from '@/lib/collections-static'
+import { getActiveCollections } from '@/lib/collections'
 import HeaderControls from './HeaderControls'
 import { Fish, Leaf } from 'lucide-react'
 

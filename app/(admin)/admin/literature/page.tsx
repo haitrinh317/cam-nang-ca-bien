@@ -3,7 +3,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import { db } from '@/lib/supabase-browser'
 import { BookOpen, Plus, Pencil, Trash2, Eye, EyeOff } from 'lucide-react'
-import { STATIC_COLLECTIONS } from '@/lib/collections-static'
+import { STATIC_COLLECTIONS } from '@/lib/collections'
 
 interface LinkOption {
   label: string

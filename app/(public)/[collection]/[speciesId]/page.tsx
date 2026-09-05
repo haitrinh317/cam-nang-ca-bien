@@ -1,5 +1,6 @@
 import { cache } from 'react'
 import { createServerClient } from '@/lib/supabase-server'
+import { resolvePhotoUrl } from '@/lib/species-photos'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import SpecimenCard from '@/components/species/SpecimenCard'
@@ -44,9 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
   const primaryPhoto = photos?.[0]
-  const photoUrl = primaryPhoto?.storage_path
-    ? `${supabaseUrl}/storage/v1/object/public/species-photos/${primaryPhoto.storage_path}`
-    : primaryPhoto?.source_url || 'https://cam-nang-ca-bien.vercel.app/og-default.png'
+  const photoUrl = resolvePhotoUrl(primaryPhoto)
 
   const title = `${data.vn_name} (${data.scientific_name})`
   const rawDesc = data.biology_summary_vn || data.ecology || data.morphology || ''
@@ -96,11 +95,8 @@ export default async function SpeciesDetailPage({ params }: Props) {
 
   if (!data) notFound()
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
   const primaryPhoto = photos?.[0]
-  const photoUrl = primaryPhoto?.storage_path
-    ? `${supabaseUrl}/storage/v1/object/public/species-photos/${primaryPhoto.storage_path}`
-    : primaryPhoto?.source_url || undefined
+  const photoUrl = resolvePhotoUrl(primaryPhoto, undefined)
 
   // Schema.org Taxon (BiologicalEntity) Structured Data
   const taxonSchema = {

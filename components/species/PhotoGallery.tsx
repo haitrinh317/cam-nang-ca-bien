@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { db } from '@/lib/supabase-browser'
+import { getSpeciesPhotoUrl } from '@/lib/species-photos'
 import { Camera, X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface Photo {
@@ -62,10 +63,8 @@ export default function PhotoGallery({ speciesId, fallbackUrl, initialPhotos }: 
     return () => { cancelled = true }
   }, [speciesId, initialPhotos])
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-
   function publicUrl(path: string) {
-    return `${supabaseUrl}/storage/v1/object/public/species-photos/${path}`
+    return getSpeciesPhotoUrl(path)
   }
 
   // Fallback: use legacy photo_url if no photos in species_photos

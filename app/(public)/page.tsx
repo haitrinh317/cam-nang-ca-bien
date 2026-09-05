@@ -1,5 +1,6 @@
 import { createServerClient } from '@/lib/supabase-server'
 import GlobalSearch from '@/components/search/GlobalSearch'
+import SpecialGroupsSection from '@/components/home/SpecialGroupsSection'
 import LiteratureSection from '@/components/home/LiteratureSection'
 import type { LiteratureSourceRow } from '@/components/home/LiteratureSection'
 import type { Metadata } from 'next'
@@ -92,6 +93,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Khám phá 4 nhóm chuyên đề sinh thái & bảo tồn */}
+      <SpecialGroupsSection />
 
       {/* Danh sách các tài liệu gốc dùng để tra cứu — data từ Supabase */}
       <LiteratureSection sources={sources} />

@@ -1,6 +1,6 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-04 16:47 (Tối ưu Memory)
+> **Cập nhật lần cuối:** 2026-09-05 11:05 (Session End Sáng — Refactor & UI Chuyên Đề & Visual Widgets)
 > **Production URL:** https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
@@ -163,6 +163,9 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 | 2026-09-04 | SEO & Social Thumbnail: `favicon.ico`, `og-default.png` (1200x630), dynamic species OG photo từ Supabase Storage, Schema.org Taxon/WebSite |
 | 2026-09-04 | PWA: tên app `SVBVN` (`site.webmanifest`), `PwaInstallPrompt` modal hướng dẫn cài app iOS/Android cho khách mới |
 | 2026-09-04 | Typography: Self-hosted `next/font/google` (Lora, Be Vietnam Pro, JetBrains Mono), xóa @import CDN, fallback Segoe UI / Be Vietnam Pro tránh vỡ dấu tiếng Việt |
+| 2026-09-05 | **4 Chuyên đề Sinh thái & Bảo tồn** (San hô, Nguy cấp IUCN, Cá sụn, Thực vật biển) kết nối dữ liệu Supabase thật; IUCN Badge SSOT (`IucnBadge.tsx`) |
+| 2026-09-05 | **Infographics Sinh học Thích ứng** (`SpecimenVisualWidgets.tsx`): Thước đo chiều dài tự nhận diện mm/cm/m, thang đo co giãn 0-40cm/0-1m/0-5m+ so sánh Bàn tay |
+| 2026-09-05 | **Refactor Module Sâu**: `lib/taxonomy.ts` (xóa 42 dòng trùng lặp), `lib/species-query.ts`, `lib/species-photos.ts`, gộp `collections-static.ts` |
 
 ---
 

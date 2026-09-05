@@ -4,7 +4,7 @@
  */
 import { MetadataRoute } from 'next'
 import { createServerClient } from '@/lib/supabase-server'
-import { getCollections } from '@/lib/collections'
+import { getCollections } from '@/lib/collections-server'
 
 const BASE = 'https://cam-nang-ca-bien.vercel.app'
 

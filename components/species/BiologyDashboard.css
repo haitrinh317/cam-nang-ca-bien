@@ -1,0 +1,310 @@
+/* ═══════════════════════════════════════════════════════════════
+   BIOLOGY DASHBOARD (ui-ux-pro-max)
+   Biological Intelligence Dashboard for Species Detail Page
+   ═══════════════════════════════════════════════════════════════ */
+
+.bio-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl, 24px);
+  padding: var(--space-xl, 24px);
+  background: var(--color-paper, #ffffff);
+  border-radius: var(--radius-xl, 16px);
+}
+
+/* Header with Badge */
+.bio-dashboard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-sm, 8px);
+  padding-bottom: var(--space-sm, 8px);
+  border-bottom: 1.5px solid var(--color-rule, #e2e8f0);
+}
+
+.bio-dashboard__title {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm, 8px);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-navy-raw, #03045e);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.bio-dashboard__source-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(0, 212, 184, 0.1);
+  color: #008f7a;
+  border: 1px solid rgba(0, 212, 184, 0.25);
+  font-family: var(--font-mono, monospace);
+}
+
+/* ─── TẦNG 1: HERO METRIC CARDS ─── */
+.bio-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-md, 16px);
+}
+
+@media (max-width: 900px) {
+  .bio-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.bio-stat-card {
+  background: var(--color-paper-2, #f8fafc);
+  border: 1.5px solid var(--color-rule, #e2e8f0);
+  border-radius: var(--radius-lg, 12px);
+  padding: var(--space-md, 16px) var(--space-lg, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bio-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-accent, #00d4b8);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.bio-stat-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-ink-3, #64748b);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.bio-stat-card__icon {
+  color: var(--color-accent, #00d4b8);
+  display: flex;
+  align-items: center;
+}
+
+.bio-stat-card__val {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-navy-raw, #03045e);
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  margin-top: 2px;
+}
+
+.bio-stat-card__sub {
+  font-size: 0.78rem;
+  color: var(--color-ink-3, #64748b);
+  line-height: 1.35;
+}
+
+/* ─── TẦNG 2: THEMATIC GROUP CARDS ─── */
+.bio-thematic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg, 20px);
+}
+
+.bio-group-card {
+  background: var(--color-paper-2, #f8fafc);
+  border: 1.5px solid var(--color-rule, #e2e8f0);
+  border-radius: var(--radius-lg, 12px);
+  padding: var(--space-lg, 20px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md, 16px);
+}
+
+.bio-group-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-navy-raw, #03045e);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-rule, #e2e8f0);
+}
+
+.bio-group-card__icon {
+  color: var(--color-accent, #00d4b8);
+  display: flex;
+  align-items: center;
+}
+
+.bio-group-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bio-item-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bio-item-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-3, #64748b);
+}
+
+.bio-item-val {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-ink-1, #0f172a);
+  line-height: 1.4;
+}
+
+/* Chip tags for Habitat */
+.bio-tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.bio-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--color-paper-3, #f1f5f9);
+  color: var(--color-ink-1, #0f172a);
+  border: 1px solid var(--color-rule, #e2e8f0);
+}
+
+.bio-tag--primary {
+  background: rgba(0, 212, 184, 0.1);
+  color: #008f7a;
+  border-color: rgba(0, 212, 184, 0.25);
+}
+
+/* ─── CẢNH BÁO AN TOÀN & ĐỘC TỐ (CIGUATERA ALERT) ─── */
+.bio-alert-box {
+  border-radius: var(--radius-md, 8px);
+  padding: var(--space-md, 14px) var(--space-lg, 16px);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.bio-alert-box--warning {
+  background: rgba(245, 158, 11, 0.08);
+  border: 1.5px solid rgba(245, 158, 11, 0.35);
+  color: #b45309;
+}
+
+.bio-alert-box--danger {
+  background: rgba(225, 29, 72, 0.08);
+  border: 1.5px solid rgba(225, 29, 72, 0.35);
+  color: #be123c;
+}
+
+.bio-alert-box--safe {
+  background: rgba(16, 185, 129, 0.08);
+  border: 1.5px solid rgba(16, 185, 129, 0.3);
+  color: #047857;
+}
+
+.bio-alert-box__icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.bio-alert-box__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bio-alert-box__title {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.bio-alert-box__desc {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--color-ink-2, #334155);
+  margin: 0;
+}
+
+/* ─── VULNERABILITY PROGRESS BAR ─── */
+.bio-vulnerability {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.bio-vulnerability__bar {
+  width: 100%;
+  height: 6px;
+  background: var(--color-paper-3, #e2e8f0);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.bio-vulnerability__fill {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.5s ease-out;
+}
+
+/* ─── TẦNG 3: LONG NOTES ACCORDION ─── */
+.bio-notes-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md, 16px);
+  margin-top: var(--space-md, 12px);
+  padding-top: var(--space-lg, 20px);
+  border-top: 1.5px solid var(--color-rule, #e2e8f0);
+}
+
+.bio-notes-section__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-navy-raw, #03045e);
+  margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .bio-dashboard {
+    padding: var(--space-md, 16px);
+    gap: var(--space-lg, 16px);
+  }
+
+  .bio-stat-card {
+    padding: 12px;
+  }
+
+  .bio-stat-card__val {
+    font-size: 1.2rem;
+  }
+
+  .bio-group-card {
+    padding: 14px;
+  }
+}

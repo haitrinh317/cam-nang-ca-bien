@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import { db } from '@/lib/supabase-browser'
+import { SPECIES_PHOTOS_BUCKET, getSpeciesPhotoUrl } from '@/lib/species-photos'
 import { Camera, Upload, Star, Trash2, Loader2, User } from 'lucide-react'
 
 interface Photo {
@@ -21,16 +22,12 @@ interface Props {
   onUpdated: (url: string) => void
 }
 
-const BUCKET = 'species-photos'
-
 export default function PhotoManager({ speciesId, currentUrl, onUpdated }: Props) {
   const [photos, setPhotos] = useState<Photo[]>([])
   const [uploading, setUploading] = useState(false)
   const [photographer, setPhotographer] = useState('')
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 
-  const publicUrl = (path: string) =>
-    `${supabaseUrl}/storage/v1/object/public/${BUCKET}/${path}`
+  const publicUrl = (path: string) => getSpeciesPhotoUrl(path)
 
   const loadPhotos = useCallback(async () => {
     const { data } = await db
