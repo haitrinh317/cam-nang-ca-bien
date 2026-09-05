@@ -387,202 +387,40 @@ export default function SpecimenVisualWidgets({
 
       {/* ── Khối 2: Dải độ sâu sinh thái đại dương ── */}
       {maxDepth != null && (
-        <div
-          className="visual-widget-card visual-widget-card--depth"
-          style={{
-            background: 'linear-gradient(135deg, rgba(2, 132, 199, 0.05) 0%, rgba(30, 58, 138, 0.02) 100%)',
-            border: '1px solid rgba(2, 132, 199, 0.2)',
-            borderRadius: '12px',
-            padding: '16px 20px',
-            boxShadow: '0 1px 3px rgba(0, 0, 0, 0.02)',
-          }}
-        >
-          <div
-            className="vwc-header"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginBottom: '12px',
-            }}
-          >
+        <div className="visual-widget-card visual-widget-card--depth">
+          <div className="vwc-header">
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Waves size={16} className="vwc-icon vwc-icon--blue" style={{ color: '#0369a1' }} />
-              <span
-                className="vwc-title"
-                style={{
-                  fontFamily: "var(--font-body, 'Be Vietnam Pro', sans-serif)",
-                  fontSize: '0.8rem',
-                  fontWeight: 700,
-                  letterSpacing: '0.03em',
-                  textTransform: 'uppercase',
-                  color: 'var(--color-ink-2, #1e293b)',
-                }}
-              >
+              <Waves size={16} className="vwc-icon vwc-icon--blue" />
+              <span className="vwc-title">
                 Dải độ sâu sinh thái
               </span>
             </div>
-            <span
-              className="vwc-badge vwc-badge--blue"
-              style={{
-                fontFamily: "var(--font-body, 'Be Vietnam Pro', sans-serif)",
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                padding: '3px 11px',
-                borderRadius: '9999px',
-                color: '#0369a1',
-                background: 'rgba(2, 132, 199, 0.12)',
-                border: '1px solid rgba(2, 132, 199, 0.28)',
-                fontFeatureSettings: '"tnum" 1',
-              }}
-            >
+            <span className="vwc-badge vwc-badge--blue">
               {minDepth}m – {maxDepth}m
             </span>
           </div>
 
-          <div
-            className="depth-zones-container"
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '8px',
-              marginTop: '4px',
-            }}
-          >
+          <div className="depth-zones-container">
             {/* Tầng 1: Tầng chiếu sáng */}
-            <div
-              className={`depth-zone-item ${isEpipelagic ? 'is-active' : ''}`}
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                padding: '8px 12px',
-                borderRadius: '8px',
-                background: isEpipelagic ? 'rgba(2, 132, 199, 0.12)' : 'var(--color-paper-3, #f1f5f9)',
-                border: isEpipelagic ? '1.5px solid rgba(2, 132, 199, 0.45)' : '1px solid var(--color-rule, #e2e8f0)',
-                opacity: isEpipelagic ? 1 : 0.45,
-                transition: 'all 0.15s ease-out',
-              }}
-            >
-              <span
-                className="dzi-depth"
-                style={{
-                  fontFamily: "var(--font-body, 'Be Vietnam Pro', sans-serif)",
-                  fontSize: '0.86rem',
-                  fontWeight: 700,
-                  color: isEpipelagic ? '#0369a1' : 'var(--color-ink, #0f172a)',
-                  fontFeatureSettings: '"tnum" 1',
-                }}
-              >
-                0 – 200m
-              </span>
-              <span
-                className="dzi-label"
-                style={{
-                  fontFamily: "var(--font-body, 'Be Vietnam Pro', sans-serif)",
-                  fontSize: '0.74rem',
-                  fontWeight: 500,
-                  color: 'var(--color-ink-3, #64748b)',
-                  marginTop: '2px',
-                  lineHeight: 1.3,
-                }}
-              >
-                Tầng chiếu sáng (Epipelagic)
-              </span>
+            <div className={`depth-zone-item ${isEpipelagic ? 'is-active' : ''}`}>
+              <span className="dzi-depth">0 – 200m</span>
+              <span className="dzi-label">Tầng chiếu sáng (Epipelagic)</span>
             </div>
 
             {/* Tầng 2: Tầng chạng vạng */}
-            <div
-              className={`depth-zone-item ${isMesopelagic ? 'is-active' : ''}`}
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                padding: '8px 12px',
-                borderRadius: '8px',
-                background: isMesopelagic ? 'rgba(2, 132, 199, 0.12)' : 'var(--color-paper-3, #f1f5f9)',
-                border: isMesopelagic ? '1.5px solid rgba(2, 132, 199, 0.45)' : '1px solid var(--color-rule, #e2e8f0)',
-                opacity: isMesopelagic ? 1 : 0.45,
-                transition: 'all 0.15s ease-out',
-              }}
-            >
-              <span
-                className="dzi-depth"
-                style={{
-                  fontFamily: "var(--font-body, 'Be Vietnam Pro', sans-serif)",
-                  fontSize: '0.86rem',
-                  fontWeight: 700,
-                  color: isMesopelagic ? '#0369a1' : 'var(--color-ink, #0f172a)',
-                  fontFeatureSettings: '"tnum" 1',
-                }}
-              >
-                200 – 1.000m
-              </span>
-              <span
-                className="dzi-label"
-                style={{
-                  fontFamily: "var(--font-body, 'Be Vietnam Pro', sans-serif)",
-                  fontSize: '0.74rem',
-                  fontWeight: 500,
-                  color: 'var(--color-ink-3, #64748b)',
-                  marginTop: '2px',
-                  lineHeight: 1.3,
-                }}
-              >
-                Tầng chạng vạng (Mesopelagic)
-              </span>
+            <div className={`depth-zone-item ${isMesopelagic ? 'is-active' : ''}`}>
+              <span className="dzi-depth">200 – 1.000m</span>
+              <span className="dzi-label">Tầng chạng vạng (Mesopelagic)</span>
             </div>
 
             {/* Tầng 3: Tầng biển sâu */}
-            <div
-              className={`depth-zone-item ${isBathypelagic ? 'is-active' : ''}`}
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                padding: '8px 12px',
-                borderRadius: '8px',
-                background: isBathypelagic ? 'rgba(2, 132, 199, 0.12)' : 'var(--color-paper-3, #f1f5f9)',
-                border: isBathypelagic ? '1.5px solid rgba(2, 132, 199, 0.45)' : '1px solid var(--color-rule, #e2e8f0)',
-                opacity: isBathypelagic ? 1 : 0.45,
-                transition: 'all 0.15s ease-out',
-              }}
-            >
-              <span
-                className="dzi-depth"
-                style={{
-                  fontFamily: "var(--font-body, 'Be Vietnam Pro', sans-serif)",
-                  fontSize: '0.86rem',
-                  fontWeight: 700,
-                  color: isBathypelagic ? '#0369a1' : 'var(--color-ink, #0f172a)',
-                  fontFeatureSettings: '"tnum" 1',
-                }}
-              >
-                &gt; 1.000m
-              </span>
-              <span
-                className="dzi-label"
-                style={{
-                  fontFamily: "var(--font-body, 'Be Vietnam Pro', sans-serif)",
-                  fontSize: '0.74rem',
-                  fontWeight: 500,
-                  color: 'var(--color-ink-3, #64748b)',
-                  marginTop: '2px',
-                  lineHeight: 1.3,
-                }}
-              >
-                Tầng biển sâu (Bathypelagic)
-              </span>
+            <div className={`depth-zone-item ${isBathypelagic ? 'is-active' : ''}`}>
+              <span className="dzi-depth">&gt; 1.000m</span>
+              <span className="dzi-label">Tầng biển sâu (Bathypelagic)</span>
             </div>
           </div>
-          <p
-            className="vwc-note"
-            style={{
-              fontFamily: "var(--font-body, 'Be Vietnam Pro', sans-serif)",
-              fontSize: '0.85rem',
-              color: 'var(--color-ink-3, #475569)',
-              margin: '8px 0 0 0',
-              lineHeight: 1.5,
-            }}
-          >
-            Độ sâu ghi nhận: <strong style={{ color: 'var(--color-ink, #0f172a)' }}>{rawDepth}</strong>
+          <p className="vwc-note">
+            Độ sâu ghi nhận: <strong>{rawDepth}</strong>
           </p>
         </div>
       )}

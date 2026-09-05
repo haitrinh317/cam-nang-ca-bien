@@ -156,29 +156,28 @@
   .scale-ref { display: inline; }
 }
 
-/* ── Depth Zones ── */
+/* ── Depth Zones (Hallmark Gate 50 & Discipline 5) ── */
 .depth-zones-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
   gap: 8px;
   margin-top: 4px;
-}
-
-@media (max-width: 540px) {
-  .depth-zones-container {
-    grid-template-columns: 1fr;
-  }
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .depth-zone-item {
   display: flex;
   flex-direction: column;
-  padding: 8px 12px;
+  padding: 8px 10px;
   border-radius: var(--radius-md, 8px);
   background: var(--color-paper-3, #f1f5f9);
   border: 1px solid var(--color-rule, #e2e8f0);
   opacity: 0.45;
   transition: all 0.15s ease-out;
+  min-width: 0 !important;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .depth-zone-item.is-active {
@@ -194,6 +193,7 @@
   font-weight: 700;
   color: var(--color-ink, #0f172a);
   font-feature-settings: "tnum" 1;
+  white-space: nowrap;
 }
 
 .depth-zone-item.is-active .dzi-depth {
@@ -210,4 +210,26 @@
   color: var(--color-ink-3, #64748b);
   margin-top: 2px;
   line-height: 1.3;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+@media (max-width: 480px) {
+  .visual-widget-card {
+    padding: 12px 10px !important;
+  }
+  .depth-zones-container {
+    gap: 5px !important;
+  }
+  .depth-zone-item {
+    padding: 6px 5px !important;
+  }
+  .dzi-depth {
+    font-size: 0.76rem !important;
+  }
+  .dzi-label {
+    font-size: 0.65rem !important;
+    line-height: 1.22;
+  }
 }
