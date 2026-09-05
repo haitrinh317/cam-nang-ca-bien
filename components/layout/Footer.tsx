@@ -19,17 +19,18 @@ export default function Footer() {
               height={36}
             />
             <div className="footer-brand__text">
-              <a
-                href="http://vnio.org.vn"
-                target="_blank"
-                rel="noopener"
-                className="footer-org__title"
-              >
-                <strong>{t('footer.org')}</strong>
-              </a>
+              <div className="footer-org__title">
+                <a
+                  href="http://vnio.org.vn/"
+                  target="_blank"
+                  rel="noopener"
+                  className="footer-org__link"
+                >
+                  <strong>{t('footer.org')}</strong>
+                </a>
+                <span className="footer-org__parent">, {t('footer.orgParent')}</span>
+              </div>
               <div className="footer-org__sub">
-                <span>{t('footer.dept')}</span>
-                <span className="footer-sep">•</span>
                 <span>{t('footer.mission')}</span>
               </div>
             </div>
@@ -105,7 +106,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-copyright">
-            © {new Date().getFullYear()} Bảo tàng Hải dương học — Viện Hải dương học
+            {t('footer.developedBy')}
           </div>
         </div>
       </div>

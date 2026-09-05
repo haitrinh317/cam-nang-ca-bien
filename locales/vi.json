@@ -56,9 +56,10 @@
   },
   "footer": {
     "statement": "Bảo tàng Hải dương học - Lăng kính đại dương",
-    "org": "Viện Hải dương học, Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
-    "dept": "Phòng Thông tin – Truyền thông",
-    "mission": "Chuyển đổi số phục vụ nghiên cứu khoa học"
+    "org": "Viện Hải dương học",
+    "orgParent": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
+    "mission": "Chuyển đổi số phục vụ nghiên cứu khoa học",
+    "developedBy": "Phát triển bởi Hải Trình © 2026"
   },
   "ui": {
     "toggleDark": "Chế độ tối",

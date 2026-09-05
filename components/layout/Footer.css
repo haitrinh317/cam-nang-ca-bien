@@ -68,20 +68,31 @@
 }
 
 .footer-org__title {
-  color: #f1f5f9;
-  text-decoration: none;
+  color: #94a3b8;
   font-size: 0.95rem;
   line-height: 1.35;
-  transition: color var(--dur-fast) var(--ease-out);
 }
 
-.footer-org__title strong {
+.footer-org__link {
+  color: #f1f5f9;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 212, 184, 0.4);
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast) var(--ease-out), text-decoration-color var(--dur-fast) var(--ease-out);
+}
+
+.footer-org__link strong {
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 
-.footer-org__title:hover {
+.footer-org__link:hover {
   color: var(--color-cyan-raw);
+  text-decoration-color: var(--color-cyan-raw);
+}
+
+.footer-org__parent {
+  color: #94a3b8;
 }
 
 .footer-org__sub {

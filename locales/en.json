@@ -56,9 +56,10 @@
   },
   "footer": {
     "statement": "Museum of Oceanography — Window to the Ocean",
-    "org": "Institute of Oceanography, Vietnam Academy of Science and Technology",
-    "dept": "Information & Communication Division",
-    "mission": "Digital transformation for scientific research"
+    "org": "Institute of Oceanography",
+    "orgParent": "Vietnam Academy of Science and Technology",
+    "mission": "Digital transformation for scientific research",
+    "developedBy": "Developed by Hai Trinh © 2026"
   },
   "ui": {
     "toggleDark": "Dark mode",
