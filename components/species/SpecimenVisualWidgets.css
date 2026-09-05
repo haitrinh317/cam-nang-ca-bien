@@ -105,12 +105,20 @@
   border-color: rgba(2, 132, 199, 0.4);
 }
 
-.vwc-note {
+.vwc-size-notes {
+  width: 100%;
+}
+
+.vwc-size-notes p,
+.vwc-note,
+.vwc-note-en {
   font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
   font-size: 0.85rem;
   color: var(--color-ink-3, #475569);
   margin: var(--space-xs, 8px) 0 0 0;
   line-height: 1.5;
+  max-width: none !important;
+  width: 100%;
 }
 
 /* ── Size Scale ── */

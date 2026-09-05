@@ -19,16 +19,16 @@ export default function Footer() {
               height={36}
             />
             <div className="footer-brand__text">
-              <div className="footer-org__title">
-                <a
-                  href="http://vnio.org.vn/"
-                  target="_blank"
-                  rel="noopener"
-                  className="footer-org__link"
-                >
-                  <strong>{t('footer.org')}</strong>
-                </a>
-                <span className="footer-org__parent">, {t('footer.orgParent')}</span>
+              <a
+                href="http://vnio.org.vn/"
+                target="_blank"
+                rel="noopener"
+                className="footer-org__link"
+              >
+                <strong>{t('footer.org')}</strong>
+              </a>
+              <div className="footer-org__parent">
+                {t('footer.orgParent')}
               </div>
               <div className="footer-org__sub">
                 <span>{t('footer.mission')}</span>

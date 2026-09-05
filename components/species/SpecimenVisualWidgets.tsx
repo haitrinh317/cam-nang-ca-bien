@@ -345,6 +345,8 @@ export default function SpecimenVisualWidgets({
                   color: 'var(--color-ink-2, #334155)',
                   margin: 0,
                   lineHeight: 1.45,
+                  maxWidth: 'none',
+                  width: '100%',
                 }}
               >
                 Ghi nhận mẫu vật: <strong style={{ color: 'var(--color-ink, #0f172a)' }}>{effectiveVnSize}</strong>
@@ -361,6 +363,8 @@ export default function SpecimenVisualWidgets({
                   margin: 0,
                   lineHeight: 1.4,
                   fontStyle: 'italic',
+                  maxWidth: 'none',
+                  width: '100%',
                 }}
               >
                 Size: {effectiveEnSize}

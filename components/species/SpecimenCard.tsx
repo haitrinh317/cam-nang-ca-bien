@@ -3,8 +3,53 @@
 import React, { useState } from 'react'
 import PhotoGallery from './PhotoGallery'
 import SpecimenVisualWidgets from './SpecimenVisualWidgets'
-import { ExternalLink, CheckCircle, AlertTriangle } from 'lucide-react'
+import { 
+  ExternalLink, 
+  CheckCircle, 
+  AlertTriangle,
+  Tag,
+  Globe,
+  Fish,
+  Compass,
+  Sparkles,
+  Archive,
+  Building2,
+  CheckCircle2,
+  MapPin,
+  Calendar,
+  BookOpen,
+  Waves
+} from 'lucide-react'
 import BiologyDashboard, { BiologyData } from './BiologyDashboard'
+import {
+  getResolvedMorphologyVn,
+  getResolvedEcologyVn,
+  getResolvedEconomicValueVn
+} from '@/lib/species-text'
+import './SpecimenCard.css'
+
+function parseLiterature(lit?: string | null): string[] {
+  if (!lit) return []
+  const trimmed = lit.trim()
+  const numSplit = trimmed.split(/(?=\b\d+\.\s+)/)
+  if (numSplit.length > 1) {
+    return numSplit.map(s => s.replace(/^\d+\.\s*/, '').trim()).filter(Boolean)
+  }
+  const lineSplit = trimmed.split(/\r?\n/).map(s => s.trim()).filter(Boolean)
+  if (lineSplit.length > 1) return lineSplit
+  const semiSplit = trimmed.split(/;\s*/).map(s => s.trim()).filter(Boolean)
+  if (semiSplit.length > 1) return semiSplit
+  return [trimmed]
+}
+
+function parseLocations(str?: string | null): string[] {
+  if (!str) return []
+  const clean = str.trim().replace(/\.$/, '')
+  const parts = clean.split(/[,;]\s+/).map(s => s.trim()).filter(Boolean)
+  return parts.length > 0 ? parts : [clean]
+}
+
+
 
 interface Species {
 
@@ -56,7 +101,7 @@ interface Species {
 
 type Biology = BiologyData
 
-// ── WoRMS Badge ───────────────────────────────────────────────────
+// ── WoRMS Curatorial Badge (Phương án 1 - Chuẩn /hallmark) ────────
 function WormsBadge({ sp }: { sp: Species }) {
   if (!sp.worms_status && !sp.worms_id) return null
 
@@ -67,45 +112,96 @@ function WormsBadge({ sp }: { sp: Species }) {
                     statusRaw.includes('superseded')
   const isUncertain = statusRaw === 'uncertain' || statusRaw === 'doubtful' || statusRaw === 'nomen dubium'
 
-  let s = {
-    cls: 'fb-valid',
-    icon: <CheckCircle size={14} />,
-    label: 'Tên hợp lệ trên WoRMS'
+  let badgeType: 'valid' | 'synonym' | 'uncertain' | 'unknown' = 'unknown'
+  let label = 'Chưa có trên WoRMS'
+  let tooltip = 'Chưa tìm thấy bản ghi tương ứng trong CSDL WoRMS'
+  let icon = <AlertTriangle size={12} aria-hidden="true" style={{ flexShrink: 0 }} />
+  let inlineTheme = {
+    bg: 'rgba(148, 163, 184, 0.12)',
+    color: '#64748b',
+    border: '1px solid rgba(148, 163, 184, 0.28)'
   }
-  let detail = ''
 
   if (isValid || (sp.worms_id && !isSynonym && !isUncertain && statusRaw !== 'not_found' && statusRaw !== 'parse_error')) {
-    s = { cls: 'fb-valid', icon: <CheckCircle size={14} />, label: 'Tên hợp lệ trên WoRMS' }
-    detail = `Tên được xác nhận${sp.worms_synced_at ? ` · cập nhật WoRMS: ${sp.worms_synced_at.substring(0, 10)}` : ''}`
+    badgeType = 'valid'
+    label = 'WoRMS: Tên hợp lệ'
+    tooltip = `Tên được xác nhận trên WoRMS (AphiaID: ${sp.worms_id || '—'})${sp.worms_synced_at ? ` · Cập nhật: ${sp.worms_synced_at.substring(0, 10)}` : ''}`
+    icon = <CheckCircle size={12} aria-hidden="true" style={{ flexShrink: 0 }} />
+    inlineTheme = {
+      bg: 'rgba(16, 185, 129, 0.08)',
+      color: '#047857',
+      border: '1px solid rgba(16, 185, 129, 0.3)'
+    }
   } else if (isSynonym) {
-    s = { cls: 'fb-synonym', icon: <AlertTriangle size={14} />, label: 'Tên cũ — đã được cập nhật' }
-    detail = `Tên hiện hành: <span class="fb-accepted">${sp.worms_accepted_name || '?'}</span>`
+    badgeType = 'synonym'
+    label = 'WoRMS: Danh pháp cũ'
+    tooltip = `Danh pháp đồng nghĩa (Synonym). Tên hiện hành: ${sp.worms_accepted_name || '?'}`
+    icon = <AlertTriangle size={12} aria-hidden="true" style={{ flexShrink: 0 }} />
+    inlineTheme = {
+      bg: 'rgba(245, 158, 11, 0.08)',
+      color: '#b45309',
+      border: '1px solid rgba(245, 158, 11, 0.35)'
+    }
   } else if (isUncertain) {
-    s = { cls: 'fb-synonym', icon: <AlertTriangle size={14} />, label: 'Trạng thái phân loại chưa rõ' }
-    detail = sp.worms_accepted_name ? `Ghi nhận: ${sp.worms_accepted_name}` : 'Cần thêm tư liệu khảo sát thực địa'
+    badgeType = 'uncertain'
+    label = 'WoRMS: Chưa rõ phân loại'
+    tooltip = sp.worms_accepted_name ? `Ghi nhận: ${sp.worms_accepted_name}` : 'Trạng thái phân loại học chưa được xác định chắc chắn'
+    icon = <AlertTriangle size={12} aria-hidden="true" style={{ flexShrink: 0 }} />
   } else if (statusRaw === 'parse_error') {
-    s = { cls: 'fb-unknown', icon: <AlertTriangle size={14} />, label: 'Không phân tích được tên khoa học' }
-    detail = 'Lỗi cú pháp định dạng danh pháp'
-  } else {
-    s = { cls: 'fb-not-found', icon: <AlertTriangle size={14} />, label: 'Chưa xác minh được trên WoRMS' }
-    detail = 'Chưa tìm thấy bản ghi tương ứng trong CSDL WoRMS'
+    badgeType = 'unknown'
+    label = 'WoRMS: Lỗi cú pháp'
+    tooltip = 'Lỗi cú pháp định dạng danh pháp khoa học'
+    icon = <AlertTriangle size={12} aria-hidden="true" style={{ flexShrink: 0 }} />
   }
 
   const wormsUrl = sp.worms_id
     ? `https://www.marinespecies.org/aphia.php?p=taxdetails&id=${sp.worms_id}` : null
 
+  const pillStyle: React.CSSProperties = {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '6px',
+    height: '24px',
+    padding: '0 10px',
+    borderRadius: '9999px',
+    fontSize: '0.72rem',
+    fontWeight: 600,
+    lineHeight: 1,
+    textDecoration: 'none',
+    whiteSpace: 'nowrap',
+    backgroundColor: inlineTheme.bg,
+    color: inlineTheme.color,
+    border: inlineTheme.border,
+    boxSizing: 'border-box'
+  }
+
   return (
-    <div className={`fishbase-bar ${s.cls}`}>
-      <span className="fb-icon">{s.icon}</span>
-      <div className="fb-body">
-        <div className="fb-label">WoRMS — {s.label}</div>
-        <div className="fb-detail" dangerouslySetInnerHTML={{ __html: detail }} />
-        {wormsUrl && (
-          <a href={wormsUrl} className="fb-link" target="_blank" rel="noopener">
-            <ExternalLink size={12} /> Xem trên WoRMS (marinespecies.org)
-          </a>
-        )}
-      </div>
+    <div className="worms-badge-wrap" style={{ display: 'inline-flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+      {wormsUrl ? (
+        <a
+          href={wormsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`worms-pill worms-pill--${badgeType}`}
+          style={pillStyle}
+          title={`${tooltip} — Bấm để mở hồ sơ CSDL WoRMS`}
+        >
+          <span className="worms-pill__icon" style={{ display: 'inline-flex', alignItems: 'center', marginRight: '2px' }}>{icon}</span>
+          <span className="worms-pill__label">{label}</span>
+          <ExternalLink size={11} className="worms-pill__ext" style={{ marginLeft: '4px', opacity: 0.7 }} aria-hidden="true" />
+        </a>
+      ) : (
+        <span className={`worms-pill worms-pill--${badgeType}`} style={pillStyle} title={tooltip}>
+          <span className="worms-pill__icon" style={{ display: 'inline-flex', alignItems: 'center', marginRight: '2px' }}>{icon}</span>
+          <span className="worms-pill__label">{label}</span>
+        </span>
+      )}
+
+      {isSynonym && sp.worms_accepted_name && (
+        <span className="worms-pill__synonym-note" style={{ fontSize: '0.76rem', color: 'var(--color-ink-3, #64748b)', marginLeft: '4px' }}>
+          Tên hiện hành: <em className="worms-pill__accepted-name" style={{ fontStyle: 'italic', fontWeight: 600 }}>{sp.worms_accepted_name}</em>
+        </span>
+      )}
     </div>
   )
 }
@@ -205,7 +301,6 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
   })
 
   const isSeaweed = sp.collection_id === 'thuc-vat-bien' || sp.id.startsWith('thucvat-')
-  const enSourceTag = isSeaweed ? 'EN · AlgaeBase' : 'EN · FishBase/GBIF'
 
   return (
     <div className={`specimen vol-${sp.volume}`}>
@@ -220,8 +315,13 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
           </span>
         </div>
         <h1 className="specimen__name">{sp.vn_name}</h1>
-        <p className="specimen__sci">{sp.scientific_name} <span className="specimen__author">{cleanAuthor}</span></p>
-        <WormsBadge sp={sp} />
+        <div className="specimen__sci-row" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px 16px', marginTop: '4px', marginBottom: '8px' }}>
+          <p className="specimen__sci" style={{ margin: 0, lineHeight: 1.35 }}>
+            <em className="specimen__sci-name" style={{ fontStyle: 'italic' }}>{sp.scientific_name}</em>
+            {cleanAuthor && <span className="specimen__author" style={{ fontStyle: 'normal', color: 'var(--color-ink-3, #64748b)', marginLeft: '4px' }}> {cleanAuthor}</span>}
+          </p>
+          <WormsBadge sp={sp} />
+        </div>
       </header>
 
       {/* Photo Gallery */}
@@ -273,7 +373,6 @@ function TabStrip({ sp, bio, syns, speciesId }: {
 }) {
   const [active, setActive] = useState<TabId>('thongso')
   const isSeaweed = sp.collection_id === 'thuc-vat-bien' || sp.id.startsWith('thucvat-')
-  const enSourceTag = isSeaweed ? 'EN · AlgaeBase' : 'EN · FishBase/GBIF'
 
   const TABS: { id: TabId; label: string }[] = [
     { id: 'thongso',  label: 'Thông số' },
@@ -300,19 +399,39 @@ function TabStrip({ sp, bio, syns, speciesId }: {
         ))}
       </div>
 
-      {/* Panel 1: Thông số — 9 trường tra cứu chuẩn theo format Atlas */}
+      {/* Panel 1: Thông số — Cấu trúc Bento Archive đồng bộ toàn diện */}
       <div
         id="tab-panel-thongso"
         role="tabpanel"
         aria-labelledby="tab-thongso"
         className={`detail-tab-panel${active === 'thongso' ? ' active' : ''}`}
       >
-        {/* 1–3: Tên + Kích thước & Trực quan hóa dữ liệu sinh học */}
-        <section className="specimen__section">
-          <h2 className="specimen__section-title">Thông tin chính</h2>
-          <KvRow labelVn="Tên gọi khác" valVn={sp.vn_alternate_names} labelEn="Common Name" valEn={sp.en_common_name} />
+        <div className="specimen-thongso-container">
+          {/* 1. Thẻ Định Danh Tên Gọi (Identifier Card) */}
+          {(sp.vn_alternate_names || sp.en_common_name) && (
+            <div className="specimen-identity-card">
+              {sp.vn_alternate_names && (
+                <div className="specimen-identity-col">
+                  <span className="specimen-identity-label">
+                    <Tag size={13} />
+                    <span>Tên gọi khác:</span>
+                  </span>
+                  <span className="specimen-identity-val">{sp.vn_alternate_names}</span>
+                </div>
+              )}
+              {sp.en_common_name && (
+                <div className="specimen-identity-col">
+                  <span className="specimen-identity-label">
+                    <Globe size={13} />
+                    <span>Common Name:</span>
+                  </span>
+                  <span className="specimen-identity-val specimen-identity-val--en">{sp.en_common_name}</span>
+                </div>
+              )}
+            </div>
+          )}
 
-          {/* Trực quan hóa dữ liệu sinh học (Thước đo kích thước song ngữ VN/EN, Độ sâu sinh thái, Vùng biển Việt Nam & Thế giới) */}
+          {/* 2. Trực quan hóa dữ liệu sinh trắc học (Kích thước, Độ sâu sinh thái, Vùng biển phân bố) */}
           <SpecimenVisualWidgets
             vnSizeStr={sp.vn_size}
             enSizeStr={sp.en_size}
@@ -321,86 +440,205 @@ function TabStrip({ sp, bio, syns, speciesId }: {
             depthVnStr={bio?.depthVn}
             distributionStr={sp.vn_distribution || sp.en_distribution}
           />
-        </section>
 
-        {/* 4: Mô tả hình thái */}
-        {(sp.morphology_vn || sp.morphology_en) && (
-          <section className="specimen__section">
-            <h2 className="specimen__section-title">Mô tả hình thái</h2>
-            <div className="kv-row">
-              <div className="kv-cell kv-full">
-                {sp.morphology_vn
-                  ? <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>{sp.morphology_vn}</div>
-                  : sp.morphology_en && (
-                    <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>
-                      {sp.morphology_en}
-                      <span className="source-tag">{enSourceTag}</span>
+          {/* 3. Lưới Bento 2 cột (Hình thái học & Sinh thái dinh dưỡng từ sách gốc OCR) */}
+          {(() => {
+            const displayMorph = getResolvedMorphologyVn(sp, bio)
+            const displayEcology = getResolvedEcologyVn(sp)
+            if (!displayMorph && !displayEcology) return null
+
+            return (
+              <div className="specimen-bento-grid">
+                {displayMorph && (
+                  <div className="specimen-bento-card">
+                    <div className="specimen-bento-card__header">
+                      <div className="specimen-bento-card__title-group">
+                        <span className="specimen-bento-card__icon">
+                          <Fish size={16} />
+                        </span>
+                        <h3 className="specimen-bento-card__title">Đặc điểm hình thái</h3>
+                      </div>
+                      <span className="specimen-bento-card__badge">Hình thái học</span>
                     </div>
-                  )
-                }
-              </div>
-            </div>
-          </section>
-        )}
+                    <p
+                      className="specimen-bento-card__content"
+                      style={{
+                        maxWidth: 'none',
+                        width: '100%',
+                        textWrap: 'pretty',
+                      }}
+                    >
+                      {displayMorph}
+                    </p>
+                  </div>
+                )}
 
-        {/* 5+6: Sinh thái & dinh dưỡng */}
-        {(sp.ecology_vn || sp.ecology_en) && (
-          <section className="specimen__section">
-            <h2 className="specimen__section-title">Sinh thái &amp; Dinh dưỡng</h2>
-            <div className="kv-row">
-              <div className="kv-cell kv-full">
-                {sp.ecology_vn
-                  ? <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>{sp.ecology_vn}</div>
-                  : sp.ecology_en && (
-                    <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>
-                      {sp.ecology_en}
-                      <span className="source-tag">{enSourceTag}</span>
+                {displayEcology && (
+                  <div className="specimen-bento-card">
+                    <div className="specimen-bento-card__header">
+                      <div className="specimen-bento-card__title-group">
+                        <span className="specimen-bento-card__icon specimen-bento-card__icon--blue">
+                          <Compass size={16} />
+                        </span>
+                        <h3 className="specimen-bento-card__title">Sinh thái &amp; Dinh dưỡng</h3>
+                      </div>
+                      <span className="specimen-bento-card__badge">Tập tính sinh thái</span>
                     </div>
-                  )
-                }
+                    <p
+                      className="specimen-bento-card__content"
+                      style={{
+                        maxWidth: 'none',
+                        width: '100%',
+                        textWrap: 'pretty',
+                      }}
+                    >
+                      {displayEcology}
+                    </p>
+                  </div>
+                )}
               </div>
-            </div>
-          </section>
-        )}
+            )
+          })()}
 
+          {/* 4. Giá trị kinh tế & Sử dụng (Từ sách gốc OCR) */}
+          {(() => {
+            const displayEconomic = getResolvedEconomicValueVn(sp)
+            if (!displayEconomic) return null
 
-        {/* 8: Giá trị kinh tế */}
-        {(sp.economic_value_vn || sp.economic_value_en) && (
-          <section className="specimen__section">
-            <h2 className="specimen__section-title">Giá trị kinh tế</h2>
-            <div className="kv-row">
-              <div className="kv-cell kv-full">
-                {sp.economic_value_vn
-                  ? <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>{sp.economic_value_vn}</div>
-                  : sp.economic_value_en && (
-                    <div className="kv-value" style={{ whiteSpace: 'pre-line' }}>
-                      {sp.economic_value_en}
-                      <span className="source-tag">{enSourceTag}</span>
-                    </div>
-                  )
-                }
+            const lower = displayEconomic.toLowerCase()
+            const isAquarium = lower.includes('cá cảnh') || lower.includes('làm cảnh') || lower.includes('thủy sinh')
+            const isFood = lower.includes('thực phẩm') || lower.includes('thương phẩm') || lower.includes('hải sản') || lower.includes('tươi sống') || lower.includes('ăn thịt')
+
+            return (
+              <div className="specimen-value-card">
+                <div className="specimen-bento-card__header">
+                  <div className="specimen-bento-card__title-group">
+                    <span className="specimen-bento-card__icon specimen-bento-card__icon--amber">
+                      <Sparkles size={16} />
+                    </span>
+                    <h3 className="specimen-bento-card__title">Giá trị sử dụng &amp; Kinh tế</h3>
+                  </div>
+                  <div className="specimen-value-tags">
+                    {isAquarium && <span className="specimen-value-tag specimen-value-tag--aquarium">Cá cảnh</span>}
+                    {isFood && <span className="specimen-value-tag specimen-value-tag--food">Thực phẩm</span>}
+                  </div>
+                </div>
+                <p
+                  className="specimen-bento-card__content"
+                  style={{
+                    maxWidth: 'none',
+                    width: '100%',
+                    textWrap: 'pretty',
+                  }}
+                >
+                  {displayEconomic}
+                </p>
               </div>
-            </div>
-          </section>
-        )}
+            )
+          })()}
 
-        {/* 9: Mẫu vật & Tình trạng */}
-        <section className="specimen__section">
-          <h2 className="specimen__section-title">Mẫu vật &amp; Tài liệu</h2>
-          <KvRow labelVn="Nơi lưu trữ mẫu" valVn={sp.vn_specimen} labelEn="Specimen" valEn={sp.en_specimen} />
-          <KvRow labelVn="Tình trạng" valVn={sp.vn_status} labelEn="Status" valEn={sp.en_status} />
-          <KvRow labelVn="Tài liệu dẫn" valVn={sp.vn_literature} labelEn="Literature" valEn={sp.en_literature} />
-        </section>
+          {/* 5. Hồ sơ Mẫu vật & Tài liệu dẫn (Specimen Archive Vault) */}
+          {(() => {
+            const spec = sp.vn_specimen || sp.en_specimen
+            const stat = sp.vn_status || sp.en_status
+            const lit = sp.vn_literature || sp.en_literature
+            const hasField = sp.photo_place || sp.photo_depth || sp.photo_date
+            if (!spec && !stat && !lit && !hasField) return null
 
-        {/* Thu mẫu (nếu có) */}
-        {(sp.photo_place || sp.photo_depth || sp.photo_date) && (
-          <section className="specimen__section">
-            <h2 className="specimen__section-title">Thông tin thu mẫu</h2>
-            {sp.photo_place && <KvRow labelVn="Địa điểm" valVn={sp.photo_place} />}
-            {sp.photo_depth && <KvRow labelVn="Độ sâu" valVn={sp.photo_depth} />}
-            {sp.photo_date && <KvRow labelVn="Ngày thu mẫu" valVn={sp.photo_date} />}
-          </section>
-        )}
+            const specList = spec ? parseLocations(spec) : []
+            const litList = lit ? parseLiterature(lit) : []
+
+            return (
+              <div className="specimen-vault-card">
+                <div className="specimen-bento-card__header">
+                  <div className="specimen-bento-card__title-group">
+                    <span className="specimen-bento-card__icon specimen-bento-card__icon--purple">
+                      <Archive size={16} />
+                    </span>
+                    <h3 className="specimen-bento-card__title">Hồ sơ Mẫu vật &amp; Tài liệu dẫn</h3>
+                  </div>
+                  {litList.length > 0 && (
+                    <span className="specimen-bento-card__badge">
+                      <BookOpen size={12} style={{ marginRight: 3 }} />
+                      {litList.length} tài liệu dẫn
+                    </span>
+                  )}
+                </div>
+
+                {(specList.length > 0 || stat) && (
+                  <div className="specimen-vault-grid">
+                    {specList.length > 0 && (
+                      <div className="specimen-vault-item">
+                        <span className="specimen-vault-item__label">
+                          <Building2 size={13} />
+                          <span>Nơi lưu trữ mẫu vật</span>
+                        </span>
+                        {specList.length === 1 ? (
+                          <span className="specimen-vault-item__val">{specList[0]}</span>
+                        ) : (
+                          <div className="specimen-vault-locations">
+                            {specList.map((loc, i) => (
+                              <div key={i} className="specimen-vault-location-row">
+                                <span className="specimen-vault-dot" />
+                                <span>{loc}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {stat && (
+                      <div className="specimen-vault-item">
+                        <span className="specimen-vault-item__label">
+                          <CheckCircle2 size={13} />
+                          <span>Tình trạng mẫu / ghi nhận</span>
+                        </span>
+                        <span className="specimen-vault-item__val">{stat}</span>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Thông tin thu mẫu thực địa nếu có */}
+                {hasField && (
+                  <div className="specimen-vault-meta">
+                    {sp.photo_place && (
+                      <span className="specimen-meta-pill">
+                        <MapPin size={12} />
+                        <span>{sp.photo_place}</span>
+                      </span>
+                    )}
+                    {sp.photo_depth && (
+                      <span className="specimen-meta-pill">
+                        <Waves size={12} />
+                        <span>Độ sâu: {sp.photo_depth}</span>
+                      </span>
+                    )}
+                    {sp.photo_date && (
+                      <span className="specimen-meta-pill">
+                        <Calendar size={12} />
+                        <span>Ngày thu mẫu: {sp.photo_date}</span>
+                      </span>
+                    )}
+                  </div>
+                )}
+
+                {/* Danh mục tài liệu tham khảo */}
+                {litList.length > 0 && (
+                  <div className="specimen-literature-box">
+                    {litList.map((item, idx) => (
+                      <div key={idx} className="specimen-lit-item">
+                        <span className="specimen-lit-idx">[{idx + 1}]</span>
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )
+          })()}
+        </div>
       </div>
 
       {/* Panel 2: Sinh học */}

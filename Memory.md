@@ -1,6 +1,6 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-05 11:05 (Session End Sáng — Refactor & UI Chuyên Đề & Visual Widgets)
+> **Cập nhật lần cuối:** 2026-09-05 23:40 (Chuẩn hóa Bento Tab Thông số & WoRMS Pill Badge /hallmark)
 > **Production URL:** https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
@@ -166,6 +166,7 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 | 2026-09-05 | **4 Chuyên đề Sinh thái & Bảo tồn** (San hô, Nguy cấp IUCN, Cá sụn, Thực vật biển) kết nối dữ liệu Supabase thật; IUCN Badge SSOT (`IucnBadge.tsx`) |
 | 2026-09-05 | **Infographics Sinh học Thích ứng** (`SpecimenVisualWidgets.tsx`): Thước đo chiều dài tự nhận diện mm/cm/m, thang đo co giãn 0-40cm/0-1m/0-5m+ so sánh Bàn tay |
 | 2026-09-05 | **Refactor Module Sâu**: `lib/taxonomy.ts` (xóa 42 dòng trùng lặp), `lib/species-query.ts`, `lib/species-photos.ts`, gộp `collections-static.ts` |
+| 2026-09-05 | **Chuẩn hóa Bento Tab Thông số & /hallmark Header**: Tên Chi + Loài bắt buộc in nghiêng (*Italics*), tác giả đứng thẳng (ICZN/ICN); WoRMS badge dạng Pill 24px thanh mảnh (`.worms-pill`); Ưu tiên 100% dữ liệu gốc OCR, loại bỏ tiếng Anh/dịch thô khỏi tab Thông số. |
 
 ---
 

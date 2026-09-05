@@ -1,8 +1,15 @@
 # TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-05 11:05 (Session End Sáng)
-> **Next Session Starting Point**: (1) Thảo luận duyệt giao diện v4.2 và chạy /deploy lên Vercel Production. (2) Bổ sung CSV Import và Inline edit cho Admin Panel. (3) Bổ sung tên VN ~17 loài rong biển còn thiếu.
+> Cập nhật: 2026-09-05 23:40 (Hoàn thành Bento Tab Thông số & WoRMS Pill Badge chuẩn /hallmark)
+> **Next Session Starting Point**: Trao đổi cùng chú Chình về việc chạy `/deploy` đưa bản cập nhật hoàn chỉnh lên Vercel Production hoặc tiếp tục mở rộng tính năng Admin CSV Import / Inline Edit.
 > **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Trang tra cứu /ca-bien đã được thiết kế lại tối ưu: GlobalSearch cross-tập + Phân chia 2 đầu sách chính quy + Compact List View text-only cắt giảm 99% data transfer.
+
+## ✅ Hoàn thành mới nhất (2026-09-05)
+- [x] **Chuẩn hóa Bento Tab Thông số**: Bố cục 2 cột song song (Phương án A), chuẩn hóa typography `Lora` + `Be Vietnam Pro` + `JetBrains Mono` theo `tokens.css`.
+- [x] **Bảo tồn dữ liệu thực địa sách gốc OCR**: Ràng buộc trích xuất 100% từ dữ liệu gốc Viện Hải dương học Nha Trang, loại bỏ triệt để tiếng Anh và dữ liệu dịch thuật của FishBase/GBIF khỏi tab Thông số.
+- [x] **Khắc phục lỗi ngắt dòng sớm / từ mồ côi**: Triệt tiêu `--measure: 68ch` trên `<p>`, áp dụng `max-width: none` và `text-wrap: pretty` chuẩn `/hallmark`.
+- [x] **Chuẩn hóa danh pháp sinh học quốc tế (ICZN/ICN)**: Bắt buộc Tên Chi + Loài in nghiêng (*Italics*), Tên tác giả + Năm công bố đứng thẳng (*Roman/Upright*).
+- [x] **Tái thiết kế Khối WoRMS (.worms-pill)**: Chuyển đổi khối alert banner cồng kềnh thành Huy hiệu vi kiểm định dạng viên thuốc (Pill) thanh mảnh 24px đặt cùng hàng với tên khoa học (`.specimen__sci-row`), chống lỗi dính icon và bảo vệ màu sắc kép (inline + `globals.css`).
 
 ## ✅ Migration Next.js — HOÀN THÀNH (2026-08-19)
 
@@ -243,4 +250,13 @@
 - [x] Chuẩn hóa toàn bộ IUCN Badge trên toàn hệ thống theo code phần Sinh học (`IucnBadge.tsx` SSOT): badge chữ nhật bo góc, màu chuẩn quốc tế, không icon unicode dính chữ
 - [x] Sửa lỗi hiển thị nút "Quay lại theo sách gốc" trên banner chuyên đề (`SpecialGroupBanner.css` + inline fallback + icon ArrowLeft)
 - [x] Nâng cấp Thước đo kích thước tương quan (`SpecimenVisualWidgets.tsx`): tự động nhận diện `mm` (tự chia 10 ra `cm`), `cm`, `m`, từ khóa "lớn nhất/tối đa" và thang đo thích ứng 0-40cm, 0-1m, 0-5m+
+
+### Session 2026-09-05 (Tối)
+- [x] Sao lưu an toàn các component loài vào thư mục `.backups/`.
+- [x] Khôi phục nguyên bản `SpecimenCard.tsx`, `SpecimenVisualWidgets.tsx`, `SpecimenVisualWidgets.css` về commit `59c4dc5` (bản ổn định chuẩn đẹp).
+- [x] Đánh giá toàn diện trang `SpecimenCard` theo `/hallmark` & `/ui-ux-pro-max`, đề xuất Phương án A (Lưới Bento 2 cột).
+- [x] Tạo `SpecimenCard.css` chuẩn Design System Typography (`Be Vietnam Pro` body 1.6 line-height, `Lora` display heading, `JetBrains Mono` code/citations, dark mode).
+- [x] Triển khai cấu trúc Bento Archive trong `SpecimenCard.tsx`: Thẻ định danh tên gọi, Lưới 2 cột Hình thái & Sinh thái, Thẻ Giá trị kinh tế, Thẻ Hồ sơ Mẫu vật & Danh mục tài liệu dẫn.
+- [x] Kiểm tra biên dịch TypeScript (`npx tsc --noEmit`) đạt 100% exit code 0.
+
 

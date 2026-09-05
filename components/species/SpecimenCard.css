@@ -1,0 +1,586 @@
+/* ═══════════════════════════════════════════════════════════════
+   SPECIMEN CARD — BENTO ARCHIVE STYLES
+   Đồng bộ giao diện Tab Thông số theo chuẩn Bento & Typography Tokens
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Khung tab thông số ─── */
+.specimen-thongso-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md, 16px);
+  padding: var(--space-md, 16px) var(--space-xl, 24px);
+}
+
+.specimen-thongso-container p {
+  max-width: none;
+}
+
+@media (max-width: 640px) {
+  .specimen-thongso-container {
+    padding: var(--space-sm, 12px) var(--space-md, 16px);
+  }
+}
+
+/* ─── 1. Thẻ Định Danh Tên Gọi (Identity Banner Card) ─── */
+.specimen-identity-card {
+  background: var(--color-paper-2, #ffffff);
+  border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.12));
+  border-radius: var(--radius-md, 12px);
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  box-shadow: var(--shadow-xs, 0 1px 3px rgba(12, 20, 42, 0.04));
+}
+
+.specimen-identity-col {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.specimen-identity-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-ink-3, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.specimen-identity-label svg {
+  color: var(--color-accent, #00d4b8);
+}
+
+.specimen-identity-val {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--color-ink-2, #334155);
+  line-height: 1.4;
+  overflow-wrap: break-word;
+}
+
+.specimen-identity-val--en {
+  font-style: italic;
+  color: var(--color-neutral, #64748b);
+  font-weight: 400;
+  font-size: 0.78rem;
+}
+
+/* ─── 2. Lưới Bento 2 cột (Hình thái & Sinh thái) ─── */
+.specimen-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-md, 16px);
+}
+
+@media (max-width: 768px) {
+  .specimen-bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Thẻ Bento Chung (Base Card) ─── */
+.specimen-bento-card {
+  background: var(--color-paper-2, #ffffff);
+  border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.12));
+  border-radius: var(--radius-md, 12px);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-xs, 0 1px 3px rgba(12, 20, 42, 0.04));
+  transition: border-color var(--dur-fast, 150ms) ease, box-shadow var(--dur-fast, 150ms) ease;
+}
+
+.specimen-bento-card:hover {
+  border-color: rgba(0, 212, 184, 0.35);
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(12, 20, 42, 0.06));
+}
+
+.specimen-bento-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06));
+}
+
+.specimen-bento-card__title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.specimen-bento-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm, 6px);
+  background: var(--color-paper-3, #f1f5f9);
+  color: var(--color-accent, #00d4b8);
+  flex-shrink: 0;
+}
+
+.specimen-bento-card__icon--blue {
+  background: rgba(14, 165, 233, 0.1);
+  color: #0284c7;
+}
+
+.specimen-bento-card__icon--amber {
+  background: rgba(245, 158, 11, 0.1);
+  color: #d97706;
+}
+
+.specimen-bento-card__icon--purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: #7c3aed;
+}
+
+.specimen-bento-card__title {
+  font-family: var(--font-display, var(--font-body, 'Be Vietnam Pro', sans-serif));
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-ink, #0b1329);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.specimen-bento-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill, 9999px);
+  background: var(--color-paper-3, #f1f5f9);
+  color: var(--color-ink-3, #475569);
+  border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.08));
+}
+
+.specimen-bento-card__content {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: var(--text-sm, 0.95rem);
+  color: var(--color-ink-2, #1e293b);
+  line-height: var(--lh-normal, 1.6);
+  white-space: normal;
+  max-width: 100% !important;
+  width: 100%;
+  margin: 0;
+}
+
+/* ─── 3. Thẻ Giá Trị Kinh Tế (Value Card) ─── */
+.specimen-value-card {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.03) 0%, rgba(0, 212, 184, 0.03) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: var(--radius-md, 12px);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.specimen-value-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.specimen-value-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill, 9999px);
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: rgba(245, 158, 11, 0.1);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.specimen-value-tag--aquarium {
+  background: rgba(14, 165, 233, 0.1);
+  color: #0369a1;
+  border-color: rgba(14, 165, 233, 0.25);
+}
+
+.specimen-value-tag--food {
+  background: rgba(16, 185, 129, 0.1);
+  color: #047857;
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
+/* ─── 4. Thẻ Hồ Sơ Bảo Tàng & Mẫu Vật (Specimen Vault Card) ─── */
+.specimen-vault-card {
+  background: var(--color-paper-2, #ffffff);
+  border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.12));
+  border-radius: var(--radius-md, 12px);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--shadow-xs, 0 1px 3px rgba(12, 20, 42, 0.04));
+}
+
+.specimen-vault-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .specimen-vault-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.specimen-vault-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.specimen-vault-item__label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-ink-3, #64748b);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.specimen-vault-item__label svg {
+  color: var(--color-accent, #00d4b8);
+}
+
+.specimen-vault-item__val {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.84rem;
+  font-weight: 450;
+  color: var(--color-ink-2, #334155);
+  line-height: 1.5;
+}
+
+.specimen-vault-locations {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.specimen-vault-location-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.84rem;
+  font-weight: 450;
+  color: var(--color-ink-2, #334155);
+  line-height: 1.5;
+}
+
+.specimen-vault-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent, #00d4b8);
+  flex-shrink: 0;
+}
+
+/* Thu mẫu thực địa meta pills */
+.specimen-vault-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--color-rule-2, rgba(11, 19, 41, 0.08));
+}
+
+.specimen-meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: var(--color-ink-2, #334155);
+  background: var(--color-paper-3, #f1f5f9);
+  padding: 3px 10px;
+  border-radius: var(--radius-sm, 6px);
+  border: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06));
+}
+
+.specimen-meta-pill svg {
+  color: var(--color-accent, #00d4b8);
+}
+
+/* Tài liệu dẫn dạng trích dẫn khoa học */
+.specimen-literature-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--color-rule-2, rgba(11, 19, 41, 0.08));
+}
+
+.specimen-lit-item {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.88rem;
+  color: var(--color-ink-2, #334155);
+  line-height: 1.55;
+}
+
+.specimen-lit-idx {
+  font-family: var(--font-outlier, 'JetBrains Mono', monospace);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-neutral, #64748b);
+  background: var(--color-paper-3, #f1f5f9);
+  padding: 1px 5px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* ─── DARK MODE SUPPORT ─── */
+[data-theme="dark"] .specimen-identity-card,
+[data-theme="dark"] .specimen-bento-card,
+[data-theme="dark"] .specimen-vault-card {
+  background: var(--color-paper-2, #0c142a);
+  border-color: var(--color-rule, rgba(255, 255, 255, 0.1));
+}
+
+[data-theme="dark"] .specimen-value-card {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(0, 212, 184, 0.05) 100%);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="dark"] .specimen-bento-card__icon {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .specimen-value-tag {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fcd34d;
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+[data-theme="dark"] .specimen-value-tag--aquarium {
+  background: rgba(14, 165, 233, 0.18);
+  color: #7dd3fc;
+  border-color: rgba(14, 165, 233, 0.35);
+}
+
+[data-theme="dark"] .specimen-value-tag--food {
+  background: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
+  border-color: rgba(16, 185, 129, 0.35);
+}
+
+[data-theme="dark"] .specimen-meta-pill,
+[data-theme="dark"] .specimen-lit-idx {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-ink-2, #e2e8f0);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO: SCIENTIFIC NAME & WORMS CURATORIAL PILL (/hallmark)
+   ═══════════════════════════════════════════════════════════════ */
+.specimen__sci-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 4px;
+  margin-bottom: var(--space-xs, 8px);
+}
+
+.specimen__sci {
+  margin: 0;
+  line-height: 1.35;
+}
+
+.specimen__sci-name {
+  font-style: italic !important;
+  font-family: var(--font-display, 'Lora', Georgia, serif);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.specimen__author {
+  font-style: normal !important;
+  font-family: var(--font-display, 'Lora', Georgia, serif);
+  color: var(--color-ink-3, #64748b);
+  font-size: 0.88em;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.worms-badge-wrap {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.worms-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 9999px;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none !important;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 150ms ease,
+              border-color 150ms ease,
+              color 150ms ease,
+              box-shadow 150ms ease;
+}
+
+.worms-pill__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.worms-pill__label {
+  letter-spacing: 0.01em;
+}
+
+.worms-pill__ext {
+  opacity: 0.65;
+  flex-shrink: 0;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.worms-pill:hover .worms-pill__ext {
+  opacity: 1;
+  transform: translate(1px, -1px);
+}
+
+/* 1. Trạng thái Hợp lệ (Valid / Accepted) */
+.worms-pill--valid {
+  background: rgba(16, 185, 129, 0.08);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.28);
+}
+
+.worms-pill--valid:hover {
+  background: rgba(16, 185, 129, 0.16);
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #065f46;
+  box-shadow: 0 1px 4px rgba(16, 185, 129, 0.15);
+}
+
+/* 2. Trạng thái Danh pháp cũ (Synonym) */
+.worms-pill--synonym {
+  background: rgba(245, 158, 11, 0.08);
+  color: #b45309;
+  border: 1px solid rgba(245, 158, 11, 0.32);
+}
+
+.worms-pill--synonym:hover {
+  background: rgba(245, 158, 11, 0.16);
+  border-color: rgba(245, 158, 11, 0.55);
+  color: #92400e;
+  box-shadow: 0 1px 4px rgba(245, 158, 11, 0.15);
+}
+
+/* 3. Trạng thái Chưa rõ / Lỗi (Uncertain / Unknown / Not Found) */
+.worms-pill--uncertain,
+.worms-pill--unknown,
+.worms-pill--not-found {
+  background: var(--color-paper-2, rgba(148, 163, 184, 0.12));
+  color: var(--color-ink-3, #64748b);
+  border: 1px solid var(--color-rule, rgba(148, 163, 184, 0.28));
+}
+
+.worms-pill--uncertain:hover,
+.worms-pill--unknown:hover,
+.worms-pill--not-found:hover {
+  background: var(--color-paper-3, rgba(148, 163, 184, 0.2));
+  color: var(--color-ink-2, #334155);
+}
+
+/* Chú thích Tên hiện hành cho loài đồng nghĩa */
+.worms-pill__synonym-note {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.76rem;
+  color: var(--color-ink-3, #64748b);
+  margin-left: 2px;
+}
+
+.worms-pill__accepted-name {
+  font-style: italic !important;
+  font-weight: 600;
+  color: var(--color-ink, #0f172a);
+}
+
+/* ─── Dark Mode cho WoRMS Pill ─── */
+[data-theme="dark"] .worms-pill--valid {
+  background: rgba(16, 185, 129, 0.16);
+  color: #34d399;
+  border-color: rgba(16, 185, 129, 0.36);
+}
+
+[data-theme="dark"] .worms-pill--valid:hover {
+  background: rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.6);
+  color: #6ee7b7;
+  box-shadow: 0 1px 6px rgba(16, 185, 129, 0.3);
+}
+
+[data-theme="dark"] .worms-pill--synonym {
+  background: rgba(245, 158, 11, 0.16);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+[data-theme="dark"] .worms-pill--synonym:hover {
+  background: rgba(245, 158, 11, 0.25);
+  border-color: rgba(245, 158, 11, 0.65);
+  color: #fde68a;
+  box-shadow: 0 1px 6px rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="dark"] .worms-pill--uncertain,
+[data-theme="dark"] .worms-pill--unknown,
+[data-theme="dark"] .worms-pill--not-found {
+  background: rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+[data-theme="dark"] .worms-pill__accepted-name {
+  color: #00f0d0;
+}
+
