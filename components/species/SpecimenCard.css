@@ -584,3 +584,398 @@
   color: #00f0d0;
 }
 
+/* ─── Quick Family Indicator in Hero ─── */
+.specimen__family-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.74rem;
+  color: var(--color-ink-3, #64748b);
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--color-paper-2, #f8fafc);
+  border: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.08));
+}
+
+[data-theme="dark"] .specimen__family-pill {
+  background: var(--color-paper-2);
+  border-color: var(--color-rule-2);
+  color: var(--color-ink-3);
+}
+
+/* ─── Tab Phân Loại (Taxonomic Dossier & Lineage Architecture) ─── */
+.specimen-phanloai-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.specimen-tax-lineage-card,
+.specimen-worms-dossier-card,
+.specimen-synonyms-card {
+  background: var(--color-paper-1, #ffffff);
+  border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.08));
+  border-radius: var(--radius-lg, 12px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow-xs, 0 1px 3px rgba(12, 20, 42, 0.04));
+  transition: border-color var(--dur-fast, 150ms) ease, box-shadow var(--dur-fast, 150ms) ease;
+}
+
+.specimen-tax-lineage-card:hover,
+.specimen-worms-dossier-card:hover,
+.specimen-synonyms-card:hover {
+  border-color: rgba(0, 212, 184, 0.35);
+  box-shadow: var(--shadow-sm, 0 2px 8px rgba(12, 20, 42, 0.06));
+}
+
+.specimen-bento-card__icon--emerald {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+/* 1. Taxonomic Stepped Tree */
+:root {
+  --tax-indent: 24px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --tax-indent: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --tax-indent: 8px;
+  }
+  .worms-dossier-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.tax-tree-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+.tax-tree-node {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 10px 14px;
+  background: var(--color-paper-2, #f8fafc);
+  border: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06));
+  border-radius: var(--radius-sm, 6px);
+  transition: all var(--dur-fast, 150ms) ease;
+}
+
+.tax-tree-node:hover {
+  background: var(--color-paper-3, #f1f5f9);
+  border-color: var(--color-rule, rgba(11, 19, 41, 0.12));
+}
+
+.tax-tree-branch {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-ink-3, #94a3b8);
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.tax-tree-branch--current {
+  color: var(--color-accent, #00d4b8);
+  opacity: 1;
+}
+
+.tax-tree-vn {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ink, #0b1329);
+  line-height: 1.35;
+}
+
+.tax-tree-lat {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.92rem;
+  font-style: italic !important;
+  color: var(--color-ink-3, #64748b);
+  line-height: 1.35;
+}
+
+.tax-tree-node--current {
+  background: rgba(0, 212, 184, 0.06) !important;
+  border: 1.5px solid rgba(0, 212, 184, 0.35) !important;
+  box-shadow: 0 2px 8px rgba(0, 212, 184, 0.08);
+}
+
+.tax-tree-current-badge {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(0, 212, 184, 0.15);
+  color: #0d9488;
+  border: 1px solid rgba(0, 212, 184, 0.3);
+  flex-shrink: 0;
+}
+
+.tax-tree-vn--current {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--color-ink, #0b1329);
+}
+
+.tax-tree-lat--current {
+  font-size: 1.05rem;
+  font-style: italic !important;
+  font-weight: 600;
+  color: var(--color-accent, #00d4b8);
+}
+
+.tax-tree-author {
+  font-size: 0.88rem;
+  color: var(--color-ink-3, #64748b);
+  font-style: normal;
+}
+
+/* 2. WoRMS Dossier Card */
+.specimen-worms-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm, 6px);
+  background: var(--color-paper-2, #f8fafc);
+  border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.1));
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--color-ink-2, #334155);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all var(--dur-fast, 150ms) ease;
+}
+
+.specimen-worms-link-btn:hover {
+  background: var(--color-paper-3, #f1f5f9);
+  border-color: rgba(0, 212, 184, 0.4);
+  color: var(--color-accent, #00d4b8);
+}
+
+.worms-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.worms-dossier-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--color-paper-2, #f8fafc);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm, 6px);
+  border: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06));
+}
+
+.worms-dossier-item--full {
+  grid-column: 1 / -1;
+}
+
+.worms-dossier-label {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-ink-3, #64748b);
+}
+
+.worms-dossier-value {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-ink, #0b1329);
+  display: flex;
+  align-items: center;
+}
+
+.worms-dossier-aphia code {
+  font-family: var(--font-outlier, monospace);
+  font-size: 0.9rem;
+  background: rgba(11, 19, 41, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--color-ink, #0b1329);
+}
+
+.worms-accepted-highlight {
+  font-style: italic !important;
+  font-weight: 700;
+  color: var(--color-accent, #00d4b8);
+}
+
+/* 3. Synonyms List */
+.specimen-synonyms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.specimen-synonym-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--color-paper-2, #f8fafc);
+  border: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06));
+  border-left: 3px solid var(--color-accent, #00d4b8);
+  border-radius: var(--radius-sm, 6px);
+}
+
+.specimen-synonym-idx {
+  font-family: var(--font-outlier, monospace);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-accent, #00d4b8);
+  flex-shrink: 0;
+  line-height: 1.5;
+  user-select: none;
+}
+
+.specimen-synonym-text {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--color-ink, #0b1329);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.specimen-synonym-text i,
+.specimen-synonym-text em {
+  font-style: italic !important;
+  font-weight: 600;
+  color: var(--color-ink, #0b1329);
+}
+
+.specimen-tax-empty {
+  padding: 24px;
+  text-align: center;
+  background: var(--color-paper-2, #f8fafc);
+  border-radius: var(--radius-sm, 6px);
+  border: 1px dashed var(--color-rule, rgba(11, 19, 41, 0.12));
+}
+
+.specimen-tax-empty-text {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.9rem;
+  color: var(--color-ink-3, #64748b);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* WoRMS Dossier Tiles */
+.worms-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.worms-tile {
+  background: var(--color-paper-2, #f8fafc);
+  border: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06));
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color var(--dur-fast, 150ms) ease;
+}
+
+.worms-tile:hover {
+  border-color: rgba(0, 212, 184, 0.3);
+}
+
+.worms-tile--full {
+  grid-column: 1 / -1;
+}
+
+.worms-tile__label {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-3, #64748b);
+}
+
+.worms-tile__sub {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.75rem;
+  color: var(--color-ink-3, #94a3b8);
+  line-height: 1.35;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .specimen-tax-lineage-card,
+[data-theme="dark"] .specimen-worms-dossier-card,
+[data-theme="dark"] .specimen-synonyms-card {
+  background: var(--color-paper-1);
+}
+
+[data-theme="dark"] .tax-tree-node {
+  background: var(--color-paper-2);
+  border-color: var(--color-rule-2);
+}
+
+[data-theme="dark"] .tax-tree-node:hover {
+  background: var(--color-paper-3);
+}
+
+[data-theme="dark"] .tax-tree-node--current {
+  background: rgba(0, 212, 184, 0.1) !important;
+  border-color: rgba(0, 212, 184, 0.4) !important;
+}
+
+[data-theme="dark"] .tax-tree-vn--current {
+  color: var(--color-ink);
+}
+
+[data-theme="dark"] .tax-tree-lat--current {
+  color: #00f0d0;
+}
+
+[data-theme="dark"] .worms-tile {
+  background: var(--color-paper-2);
+  border-color: var(--color-rule-2);
+}
+
+[data-theme="dark"] .worms-tile:hover {
+  border-color: rgba(0, 212, 184, 0.4);
+}
+
+[data-theme="dark"] .specimen-synonym-item,
+[data-theme="dark"] .specimen-worms-link-btn,
+[data-theme="dark"] .specimen-tax-empty {
+  background: var(--color-paper-2);
+}
+
+[data-theme="dark"] .specimen-synonym-text i,
+[data-theme="dark"] .specimen-synonym-text em {
+  color: var(--color-ink);
+}
+

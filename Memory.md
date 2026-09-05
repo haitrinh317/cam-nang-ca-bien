@@ -1,6 +1,6 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-05 23:40 (Chuẩn hóa Bento Tab Thông số & WoRMS Pill Badge /hallmark)
+> **Cập nhật lần cuối:** 2026-09-06 00:06 (Tinh chỉnh Font Danh pháp đồng nghĩa & Đồng bộ Type Scale Design System)
 > **Production URL:** https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.

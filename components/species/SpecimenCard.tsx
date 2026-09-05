@@ -18,7 +18,10 @@ import {
   MapPin,
   Calendar,
   BookOpen,
-  Waves
+  Waves,
+  Network,
+  ShieldCheck,
+  CornerDownRight
 } from 'lucide-react'
 import BiologyDashboard, { BiologyData } from './BiologyDashboard'
 import {
@@ -300,6 +303,7 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
     }
   })
 
+  const familyCrumb = crumbs.find(c => c.rankKey === 'family')
   const isSeaweed = sp.collection_id === 'thuc-vat-bien' || sp.id.startsWith('thucvat-')
 
   return (
@@ -315,41 +319,23 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
           </span>
         </div>
         <h1 className="specimen__name">{sp.vn_name}</h1>
-        <div className="specimen__sci-row" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px 16px', marginTop: '4px', marginBottom: '8px' }}>
+        <div className="specimen__sci-row" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '8px 14px', marginTop: '4px', marginBottom: '8px' }}>
           <p className="specimen__sci" style={{ margin: 0, lineHeight: 1.35 }}>
             <em className="specimen__sci-name" style={{ fontStyle: 'italic' }}>{sp.scientific_name}</em>
             {cleanAuthor && <span className="specimen__author" style={{ fontStyle: 'normal', color: 'var(--color-ink-3, #64748b)', marginLeft: '4px' }}> {cleanAuthor}</span>}
           </p>
           <WormsBadge sp={sp} />
+          {familyCrumb && (
+            <span className="specimen__family-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.74rem', color: 'var(--color-ink-3, #64748b)', padding: '2px 8px', borderRadius: '4px', background: 'var(--color-paper-2, #f8fafc)', border: '1px solid var(--color-rule-2, rgba(0,0,0,0.06))' }}>
+              <span style={{ fontWeight: 600 }}>Họ {familyCrumb.vn}</span>
+              {familyCrumb.lat && <em style={{ fontStyle: 'italic', opacity: 0.85 }}>({familyCrumb.lat})</em>}
+            </span>
+          )}
         </div>
       </header>
 
       {/* Photo Gallery */}
       <PhotoGallery speciesId={sp.id} fallbackUrl={sp.photo_url} initialPhotos={initialPhotos as any} />
-
-      {/* Taxonomy breadcrumb — always visible, above tabs */}
-      {crumbs.length > 0 && (
-        <nav className="specimen__taxonomy" aria-label="Phân loại học">
-          {crumbs.map((c, i) => (
-            <React.Fragment key={c.rankKey}>
-              {i > 0 && <span className="specimen-taxon-sep" aria-hidden="true">›</span>}
-              <div className={`specimen-taxon-item taxon-item--${c.rankKey}`}>
-                <span className={`specimen-taxon-rank rank-badge rank-${c.rankKey}`}>
-                  {c.rank}
-                </span>
-                <span className="specimen-taxon-names">
-                  <span className="specimen-taxon-vn">{c.vn}</span>
-                  {c.lat && (
-                    <span className="specimen-taxon-lat">
-                      {' '}({c.lat})
-                    </span>
-                  )}
-                </span>
-              </div>
-            </React.Fragment>
-          ))}
-        </nav>
-      )}
 
       {/* ── Tab Strip ── */}
       <TabStrip
@@ -357,6 +343,8 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
         bio={bio}
         syns={syns}
         speciesId={sp.id}
+        crumbs={crumbs}
+        cleanAuthor={cleanAuthor}
       />
     </div>
   )
@@ -365,12 +353,16 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
 // ── Tab Strip sub-component (client state) ───────────────────────
 type TabId = 'thongso' | 'sinhhoc' | 'phanloai'
 
-function TabStrip({ sp, bio, syns, speciesId }: {
+interface TabStripProps {
   sp: Species
   bio: Biology | null
   syns: string[]
   speciesId: string
-}) {
+  crumbs: { rank: string; rankKey: 'class' | 'order' | 'family' | 'genus'; vn: string; lat: string | null }[]
+  cleanAuthor: string
+}
+
+function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripProps) {
   const [active, setActive] = useState<TabId>('thongso')
   const isSeaweed = sp.collection_id === 'thuc-vat-bien' || sp.id.startsWith('thucvat-')
 
@@ -661,22 +653,459 @@ function TabStrip({ sp, bio, syns, speciesId }: {
         aria-labelledby="tab-phanloai"
         className={`detail-tab-panel${active === 'phanloai' ? ' active' : ''}`}
       >
-        {syns.length > 0 ? (
-          <section className="specimen__section">
-            <h2 className="specimen__section-title">Danh pháp đồng nghĩa &amp; Phân loại gốc</h2>
-            {syns.map((syn, idx) => {
-              const html = formatSynonym(syn)
-              if (!html) return null
-              return (
-                <div key={idx} className="kv-row">
-                  <div className="kv-cell kv-full kv-value" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="specimen-phanloai-container">
+          {/* 1. Hệ thống Phân loại học (Taxonomic Stepped Tree) */}
+          <div className="specimen-bento-card specimen-tax-lineage-card">
+            <div className="specimen-bento-card__header">
+              <div className="specimen-bento-card__title-group">
+                <span className="specimen-bento-card__icon specimen-bento-card__icon--blue">
+                  <Network size={16} />
+                </span>
+                <h3 className="specimen-bento-card__title">Cây Phân loại học</h3>
+              </div>
+              <span className="specimen-bento-card__badge">
+                {crumbs.length + 1} bậc phân loại
+              </span>
+            </div>
+
+            <div className="tax-tree-container">
+              {crumbs.map((c, idx) => (
+                <div
+                  key={c.rankKey}
+                  className={`tax-tree-node tax-tree-node--${c.rankKey}`}
+                  data-level={idx}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    flexWrap: 'wrap',
+                    gap: '8px 10px',
+                    marginLeft: `calc(${idx} * var(--tax-indent, 24px))`
+                  }}
+                >
+                  {idx > 0 && (
+                    <span className="tax-tree-branch" aria-hidden="true" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                      <CornerDownRight size={15} />
+                    </span>
+                  )}
+                  <span
+                    className={`rank-badge rank-${c.rankKey}`}
+                    style={{
+                      flexShrink: 0,
+                      fontSize: 'var(--text-xs, 0.82rem)',
+                      padding: '2px 8px',
+                      borderRadius: '4px',
+                      letterSpacing: '0.05em'
+                    }}
+                  >
+                    {c.rank}
+                  </span>
+                  <span
+                    className="tax-tree-vn"
+                    style={{
+                      fontSize: 'var(--text-base, 1.05rem)',
+                      fontWeight: 700
+                    }}
+                  >
+                    {c.vn}
+                  </span>
+                  {c.lat && (
+                    <em
+                      className="tax-tree-lat"
+                      style={{
+                        fontSize: 'var(--text-sm, 0.95rem)',
+                        fontStyle: 'italic'
+                      }}
+                    >
+                      ({c.lat})
+                    </em>
+                  )}
                 </div>
-              )
-            })}
-          </section>
-        ) : (
-          <p className="specimen__empty">Chưa có danh pháp đồng nghĩa.</p>
-        )}
+              ))}
+
+              {/* Bậc Loài cuối cùng (Current Target Specimen) */}
+              <div
+                className="tax-tree-node tax-tree-node--species tax-tree-node--current"
+                data-level={crumbs.length}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  flexWrap: 'wrap',
+                  gap: '8px 10px',
+                  marginLeft: `calc(${crumbs.length} * var(--tax-indent, 24px))`
+                }}
+              >
+                <span className="tax-tree-branch tax-tree-branch--current" aria-hidden="true" style={{ display: 'inline-flex', alignItems: 'center' }}>
+                  <CornerDownRight size={16} />
+                </span>
+                <span
+                  className="rank-badge rank-species"
+                  style={{
+                    flexShrink: 0,
+                    fontSize: 'var(--text-xs, 0.82rem)',
+                    padding: '2px 8px',
+                    borderRadius: '4px',
+                    letterSpacing: '0.05em'
+                  }}
+                >
+                  Loài
+                </span>
+                <span
+                  className="tax-tree-vn tax-tree-vn--current"
+                  style={{
+                    fontSize: 'var(--text-lg, 1.2rem)',
+                    fontWeight: 800
+                  }}
+                >
+                  {sp.vn_name}
+                </span>
+                <em
+                  className="tax-tree-lat tax-tree-lat--current"
+                  style={{
+                    fontSize: '1.1rem',
+                    fontStyle: 'italic',
+                    fontWeight: 600
+                  }}
+                >
+                  {sp.scientific_name}
+                </em>
+                {cleanAuthor && (
+                  <span
+                    className="tax-tree-author"
+                    style={{
+                      fontSize: 'var(--text-sm, 0.95rem)'
+                    }}
+                  >
+                    {' '}{cleanAuthor}
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* 2. Thẩm Định Danh Pháp Quốc Tế (WoRMS Curatorial Dossier) */}
+          {(sp.worms_id || sp.worms_status) && (
+            <div className="specimen-bento-card specimen-worms-dossier-card">
+              <div className="specimen-bento-card__header">
+                <div className="specimen-bento-card__title-group">
+                  <span className="specimen-bento-card__icon specimen-bento-card__icon--emerald">
+                    <ShieldCheck size={16} />
+                  </span>
+                  <div>
+                    <h3 className="specimen-bento-card__title" style={{ fontSize: 'var(--text-lg, 1.15rem)' }}>
+                      Hồ sơ Thẩm định Danh pháp Quốc tế
+                    </h3>
+                    <span style={{ fontSize: 'var(--text-xs, 0.85rem)', color: 'var(--color-ink-3, #64748b)', fontWeight: 500, display: 'block', marginTop: '2px' }}>
+                      World Register of Marine Species (WoRMS)
+                    </span>
+                  </div>
+                </div>
+                {sp.worms_id && (
+                  <a
+                    href={`https://www.marinespecies.org/aphia.php?p=taxdetails&id=${sp.worms_id}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="specimen-worms-link-btn"
+                    title="Mở hồ sơ trên CSDL World Register of Marine Species"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      padding: '6px 12px',
+                      borderRadius: '6px',
+                      background: 'var(--color-paper-2, #f8fafc)',
+                      border: '1px solid var(--color-rule, rgba(11, 19, 41, 0.12))',
+                      fontSize: 'var(--text-xs, 0.85rem)',
+                      fontWeight: 600,
+                      color: 'var(--color-ink-2, #334155)',
+                      textDecoration: 'none'
+                    }}
+                  >
+                    <span>Mở CSDL WoRMS</span>
+                    <ExternalLink size={12} />
+                  </a>
+                )}
+              </div>
+
+              <div
+                className="worms-dossier-grid"
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                  gap: '12px',
+                  marginTop: '6px'
+                }}
+              >
+                {/* Tile 1: Trạng thái danh pháp */}
+                <div
+                  className="worms-tile"
+                  style={{
+                    background: 'var(--color-paper-2, #f8fafc)',
+                    border: '1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06))',
+                    borderRadius: '8px',
+                    padding: '12px 16px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '6px'
+                  }}
+                >
+                  <span
+                    className="worms-tile__label"
+                    style={{
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
+                      color: 'var(--color-ink-3, #64748b)'
+                    }}
+                  >
+                    Trạng thái danh pháp
+                  </span>
+                  <div style={{ display: 'flex', alignItems: 'center', minHeight: '26px' }}>
+                    <WormsBadge sp={sp} />
+                  </div>
+                  <span
+                    className="worms-tile__sub"
+                    style={{
+                      fontSize: 'var(--text-xs, 0.85rem)',
+                      color: 'var(--color-ink-3, #94a3b8)',
+                      lineHeight: 1.4
+                    }}
+                  >
+                    {(sp.worms_status?.toLowerCase() === 'accepted' || sp.worms_status?.toLowerCase() === 'valid')
+                      ? 'Tên hợp lệ được công nhận toàn cầu trong CSDL sinh vật biển'
+                      : (sp.worms_status?.toLowerCase().includes('synonym')
+                        ? 'Danh pháp đồng nghĩa (tên phân loại cũ trong lịch sử)'
+                        : 'Dữ liệu đối soát phân loại học')}
+                  </span>
+                </div>
+
+                {/* Tile 2: Mã số AphiaID */}
+                {sp.worms_id && (
+                  <div
+                    className="worms-tile"
+                    style={{
+                      background: 'var(--color-paper-2, #f8fafc)',
+                      border: '1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06))',
+                      borderRadius: '8px',
+                      padding: '12px 16px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '6px'
+                    }}
+                  >
+                    <span
+                      className="worms-tile__label"
+                      style={{
+                        fontSize: '0.8rem',
+                        fontWeight: 700,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        color: 'var(--color-ink-3, #64748b)'
+                      }}
+                    >
+                      Mã định danh Quốc tế (AphiaID)
+                    </span>
+                    <div style={{ display: 'flex', alignItems: 'center', minHeight: '26px' }}>
+                      <code
+                        style={{
+                          fontFamily: 'var(--font-outlier, monospace)',
+                          fontSize: 'var(--text-base, 1.05rem)',
+                          fontWeight: 700,
+                          color: 'var(--color-ink, #0b1329)',
+                          background: 'rgba(11, 19, 41, 0.05)',
+                          padding: '2px 8px',
+                          borderRadius: '4px'
+                        }}
+                      >
+                        #{sp.worms_id}
+                      </code>
+                    </div>
+                    <span
+                      className="worms-tile__sub"
+                      style={{
+                        fontSize: 'var(--text-xs, 0.85rem)',
+                        color: 'var(--color-ink-3, #94a3b8)',
+                        lineHeight: 1.4
+                      }}
+                    >
+                      Mã số tra cứu định danh duy nhất trong CSDL WoRMS
+                    </span>
+                  </div>
+                )}
+
+                {/* Tile 3: Danh pháp khoa học hiện hành */}
+                <div
+                  className="worms-tile worms-tile--full"
+                  style={{
+                    background: 'var(--color-paper-2, #f8fafc)',
+                    border: '1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06))',
+                    borderRadius: '8px',
+                    padding: '12px 16px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '6px'
+                  }}
+                >
+                  <span
+                    className="worms-tile__label"
+                    style={{
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
+                      color: 'var(--color-ink-3, #64748b)'
+                    }}
+                  >
+                    Danh pháp khoa học hiện hành được WoRMS công nhận
+                  </span>
+                  <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px', minHeight: '26px' }}>
+                    <em
+                      style={{
+                        fontStyle: 'italic',
+                        fontWeight: 700,
+                        fontSize: 'var(--text-lg, 1.15rem)',
+                        color: 'var(--color-accent, #00d4b8)'
+                      }}
+                    >
+                      {sp.worms_accepted_name || sp.scientific_name}
+                    </em>
+                    {cleanAuthor && (
+                      <span style={{ fontSize: 'var(--text-sm, 0.95rem)', color: 'var(--color-ink-3, #64748b)' }}>
+                        {cleanAuthor}
+                      </span>
+                    )}
+                  </div>
+                  <span
+                    className="worms-tile__sub"
+                    style={{
+                      fontSize: 'var(--text-xs, 0.85rem)',
+                      color: 'var(--color-ink-3, #94a3b8)',
+                      lineHeight: 1.4
+                    }}
+                  >
+                    {sp.worms_accepted_name
+                      ? (sp.worms_status?.toLowerCase().includes('synonym')
+                        ? 'Tên khoa học chính thức hiện nay (thay thế cho danh pháp cũ)'
+                        : 'Danh pháp mô tả ban đầu được bảo lưu hợp lệ')
+                      : 'Danh pháp hiện hành bảo toàn theo công bố phân loại'}
+                  </span>
+                </div>
+
+                {/* Tile 4: Thời điểm đồng bộ xác thực */}
+                {sp.worms_synced_at && (
+                  <div
+                    className="worms-tile"
+                    style={{
+                      background: 'var(--color-paper-2, #f8fafc)',
+                      border: '1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06))',
+                      borderRadius: '8px',
+                      padding: '12px 16px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '6px'
+                    }}
+                  >
+                    <span
+                      className="worms-tile__label"
+                      style={{
+                        fontSize: '0.8rem',
+                        fontWeight: 700,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        color: 'var(--color-ink-3, #64748b)'
+                      }}
+                    >
+                      Thời điểm đồng bộ xác thực
+                    </span>
+                    <div style={{ display: 'flex', alignItems: 'center', minHeight: '26px' }}>
+                      <span style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--color-ink, #0b1329)' }}>
+                        {sp.worms_synced_at.substring(0, 10)}
+                      </span>
+                    </div>
+                    <span
+                      className="worms-tile__sub"
+                      style={{
+                        fontSize: 'var(--text-xs, 0.85rem)',
+                        color: 'var(--color-ink-3, #94a3b8)',
+                        lineHeight: 1.4
+                      }}
+                    >
+                      Tự động cập nhật qua WoRMS REST API
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* 3. Danh pháp đồng nghĩa & Lịch sử mô tả gốc */}
+          <div className="specimen-bento-card specimen-synonyms-card">
+            <div className="specimen-bento-card__header">
+              <div className="specimen-bento-card__title-group">
+                <span className="specimen-bento-card__icon specimen-bento-card__icon--purple">
+                  <BookOpen size={16} />
+                </span>
+                <h3 className="specimen-bento-card__title" style={{ fontSize: 'var(--text-lg, 1.15rem)' }}>
+                  Danh pháp đồng nghĩa &amp; Phân loại gốc
+                </h3>
+              </div>
+              {syns.length > 0 && (
+                <span className="specimen-bento-card__badge" style={{ fontSize: 'var(--text-xs, 0.85rem)' }}>
+                  {syns.length} danh pháp ghi nhận
+                </span>
+              )}
+            </div>
+
+            {syns.length > 0 ? (
+              <div className="specimen-synonyms-list">
+                {syns.map((syn, idx) => {
+                  const html = formatSynonym(syn)
+                  if (!html) return null
+                  return (
+                    <div
+                      key={idx}
+                      className="specimen-synonym-item"
+                      style={{
+                        display: 'flex',
+                        alignItems: 'baseline',
+                        gap: '10px',
+                        padding: '8px 12px'
+                      }}
+                    >
+                      <span
+                        className="specimen-synonym-idx"
+                        style={{
+                          flexShrink: 0,
+                          fontSize: '0.78rem',
+                          fontFamily: 'var(--font-outlier, monospace)',
+                          fontWeight: 700
+                        }}
+                      >
+                        [{idx + 1}]
+                      </span>
+                      <div 
+                        className="specimen-synonym-text"
+                        style={{
+                          flex: 1,
+                          minWidth: 0,
+                          fontSize: '0.82rem',
+                          lineHeight: 1.5
+                        }}
+                        dangerouslySetInnerHTML={{ __html: html }} 
+                      />
+                    </div>
+                  )
+                })}
+              </div>
+            ) : (
+              <div className="specimen-tax-empty">
+                <p className="specimen-tax-empty-text" style={{ fontSize: 'var(--text-sm, 0.95rem)' }}>
+                  Chưa ghi nhận danh pháp đồng nghĩa. Danh pháp khoa học hiện hành được công nhận trực tiếp từ công bố mô tả gốc ban đầu.
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </>
   )
