@@ -49,10 +49,10 @@ export default async function HomePage() {
     db.from('species')
       .select('*', { count: 'exact', head: true })
       .is('deleted_at', null),
-    db.from('taxonomy_tree')
+    db.from('species')
       .select('tax_family_latin')
-      .not('tax_family_latin', 'is', null)
-      .not('tax_family_latin', 'eq', ''),
+      .is('deleted_at', null)
+      .not('tax_family_latin', 'is', null),
     db.from('literature_sources')
       .select('*', { count: 'exact' })
       .eq('is_visible', true)

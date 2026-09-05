@@ -392,11 +392,12 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
       </div>
 
       {/* Panel 1: Thông số — Cấu trúc Bento Archive đồng bộ toàn diện */}
+      {active === 'thongso' && (
       <div
         id="tab-panel-thongso"
         role="tabpanel"
         aria-labelledby="tab-thongso"
-        className={`detail-tab-panel${active === 'thongso' ? ' active' : ''}`}
+        className="detail-tab-panel active"
       >
         <div className="specimen-thongso-container">
           {/* 1. Thẻ Định Danh Tên Gọi (Identifier Card) */}
@@ -632,26 +633,30 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
           })()}
         </div>
       </div>
+      )}
 
       {/* Panel 2: Sinh học */}
+      {active === 'sinhhoc' && (
       <div
         id="tab-panel-sinhhoc"
         role="tabpanel"
         aria-labelledby="tab-sinhhoc"
-        className={`detail-tab-panel${active === 'sinhhoc' ? ' active' : ''}`}
+        className="detail-tab-panel active"
       >
         {bio
           ? <BiologyDashboard bio={bio} speciesId={speciesId} collectionId={sp.collection_id} />
           : <p className="specimen__empty">Chưa có dữ liệu sinh học cho loài này.</p>
         }
       </div>
+      )}
 
       {/* Panel 3: Phân loại */}
+      {active === 'phanloai' && (
       <div
         id="tab-panel-phanloai"
         role="tabpanel"
         aria-labelledby="tab-phanloai"
-        className={`detail-tab-panel${active === 'phanloai' ? ' active' : ''}`}
+        className="detail-tab-panel active"
       >
         <div className="specimen-phanloai-container">
           {/* 1. Hệ thống Phân loại học (Taxonomic Stepped Tree) */}
@@ -966,6 +971,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
           </div>
         </div>
       </div>
+      )}
     </>
   )
 }

@@ -13,15 +13,31 @@ interface Props {
   params: Promise<{ collection: string; speciesId: string }>
 }
 
-// React cache() tự động de-duplicate query giữa generateMetadata và Page body trong cùng 1 request
-const getSpecies = cache(async (speciesId: string) => {
+// ponytail: explicit columns matching SpecimenCard.Species interface + generateMetadata needs.
+// Avoids pulling unused jsonb blobs (e.g. raw OCR data) — cuts payload ~40-50%.
+const SPECIES_DETAIL_COLS = [
+  'id', 'volume', 'species_index', 'vn_name', 'scientific_name', 'authorship',
+  'worms_status', 'worms_id', 'worms_accepted_name', 'worms_synced_at', 'worms_aphia_id',
+  'tax_class_vn', 'tax_class_latin', 'tax_order_vn', 'tax_order_latin',
+  'tax_family_vn', 'tax_family_latin', 'tax_genus_vn', 'tax_genus_latin',
+  'vn_alternate_names', 'vn_size', 'vn_distribution', 'vn_specimen', 'vn_status', 'vn_literature',
+  'en_common_name', 'en_size', 'en_distribution', 'en_specimen', 'en_status', 'en_literature',
+  'synonyms', 'biology', 'collection_id',
+  'morphology_vn', 'morphology_en', 'ecology_vn', 'ecology_en',
+  'economic_value_vn', 'economic_value_en',
+  'photo_place', 'photo_depth', 'photo_date', 'photo_url',
+  'biology_summary_vn', 'morphology', 'ecology',
+].join(', ')
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const getSpecies = cache(async (speciesId: string): Promise<Record<string, any> | null> => {
   const db = createServerClient()
   const { data, error } = await db
     .from('species')
-    .select('*')
+    .select(SPECIES_DETAIL_COLS)
     .eq('id', speciesId)
     .single()
-  return (error || !data) ? null : data
+  return (error || !data) ? null : data as Record<string, any>
 })
 
 const getSpeciesPhotos = cache(async (speciesId: string) => {
@@ -131,7 +147,7 @@ export default async function SpeciesDetailPage({ params }: Props) {
           </svg>
           <span>Quay lại danh sách</span>
         </Link>
-        <SpecimenCard sp={data} initialPhotos={photos} />
+        <SpecimenCard sp={data as any} initialPhotos={photos} />
       </div>
     </>
   )

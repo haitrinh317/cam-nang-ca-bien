@@ -63,18 +63,17 @@ export default async function CollectionPage({ params, searchParams }: Props) {
   const books = getBooksForCollection(collection)
 
   const db = createServerClient()
-  const { count: totalSpecies } = await db
-    .from('species')
-    .select('*', { count: 'exact', head: true })
-    .eq('collection_id', collection)
-    .is('deleted_at', null)
-
-  const { data: familyRows } = await db
-    .from('species')
-    .select('tax_family_latin')
-    .eq('collection_id', collection)
-    .is('deleted_at', null)
-    .not('tax_family_latin', 'is', null)
+  const [{ count: totalSpecies }, { data: familyRows }] = await Promise.all([
+    db.from('species')
+      .select('*', { count: 'exact', head: true })
+      .eq('collection_id', collection)
+      .is('deleted_at', null),
+    db.from('species')
+      .select('tax_family_latin')
+      .eq('collection_id', collection)
+      .is('deleted_at', null)
+      .not('tax_family_latin', 'is', null),
+  ])
 
   const familyCount = familyRows
     ? new Set(familyRows.map(r => r.tax_family_latin).filter(Boolean)).size

@@ -217,6 +217,38 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
     )
   }, [speciesList, localFilter, activeGroup, iucnSubFilter, archipelagoSubFilter])
 
+  // ponytail: progressive rendering — render 50 rows at a time, load more on scroll.
+  // Zero dependencies, native IntersectionObserver. Ceiling: re-renders full visible slice
+  // on each batch bump; upgrade to react-window if list exceeds ~2000 rows.
+  const BATCH_SIZE = 50
+  const [visibleCount, setVisibleCount] = useState(BATCH_SIZE)
+  const sentinelRef = useRef<HTMLTableRowElement | null>(null)
+
+  // Reset visible count when filtered list changes
+  useEffect(() => {
+    setVisibleCount(BATCH_SIZE)
+  }, [filteredSpecies])
+
+  useEffect(() => {
+    const node = sentinelRef.current
+    if (!node) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisibleCount(prev => Math.min(prev + BATCH_SIZE, filteredSpecies.length))
+        }
+      },
+      { rootMargin: '200px' }
+    )
+    observer.observe(node)
+    return () => observer.disconnect()
+  }, [filteredSpecies.length, visibleCount])
+
+  const visibleSpecies = useMemo(
+    () => filteredSpecies.slice(0, visibleCount),
+    [filteredSpecies, visibleCount]
+  )
+
   return (
     <div className="book-browser-container">
       {/* ─── CHẾ ĐỘ 1: XEM THEO CHUYÊN ĐỀ SINH THÁI & BẢO TỒN ─── */}
@@ -645,7 +677,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                     </td>
                   </tr>
                 ) : (
-                  filteredSpecies.map(sp => (
+                  visibleSpecies.map(sp => (
                     <tr
                       key={sp.id}
                       className="species-row"
@@ -707,6 +739,10 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                       </td>
                     </tr>
                   ))
+                )}
+                {/* ponytail: sentinel row — IntersectionObserver triggers loading next batch */}
+                {visibleCount < filteredSpecies.length && (
+                  <tr ref={sentinelRef} style={{ height: 1 }} aria-hidden="true"><td colSpan={4} /></tr>
                 )}
               </tbody>
             </table>
