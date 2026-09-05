@@ -847,7 +847,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                 )}
 
                 {/* Tile 3: Danh pháp khoa học hiện hành */}
-                <div className="worms-tile worms-tile--full">
+                <div className="worms-tile">
                   <span className="worms-tile__label">
                     Danh pháp khoa học hiện hành được WoRMS công nhận
                   </span>
@@ -855,15 +855,15 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                     <em
                       style={{
                         fontStyle: 'italic',
-                        fontWeight: 700,
-                        fontSize: '1.05rem',
+                        fontWeight: 600,
+                        fontSize: '0.98rem',
                         color: 'var(--color-accent, #00d4b8)'
                       }}
                     >
                       {sp.worms_accepted_name || sp.scientific_name}
                     </em>
                     {cleanAuthor && (
-                      <span style={{ fontSize: 'var(--text-sm, 0.95rem)', color: 'var(--color-ink-3, #64748b)' }}>
+                      <span style={{ fontSize: '0.82rem', color: 'var(--color-ink-3, #64748b)' }}>
                         {cleanAuthor}
                       </span>
                     )}

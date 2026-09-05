@@ -1,6 +1,6 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-06 00:34 (Hotfix unclosed CSS brace & Khôi phục hoàn toàn CSS Desktop)
+> **Cập nhật lần cuối:** 2026-09-06 00:39 (Khôi phục layout 3 cột ngang hàng cho Hồ sơ WoRMS Dossier)
 > **Production URL:** https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.

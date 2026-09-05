@@ -5033,8 +5033,14 @@ details[open] .bio-notes-en-toggle::before { transform: rotate(90deg); }
 /* WoRMS Dossier Tiles */
 .worms-dossier-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 8px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 820px) {
+  .worms-dossier-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
 
 .worms-tile {
@@ -5050,10 +5056,6 @@ details[open] .bio-notes-en-toggle::before { transform: rotate(90deg); }
 
 .worms-tile:hover {
   border-color: rgba(0, 212, 184, 0.3);
-}
-
-.worms-tile--full {
-  grid-column: 1 / -1;
 }
 
 .worms-tile__label {
