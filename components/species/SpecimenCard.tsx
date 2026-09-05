@@ -129,6 +129,51 @@ function formatSynonym(text: string) {
   return text.replace(/^([A-Z][a-z\-]+(?: \([A-Z][a-z\-]+\))? [a-z\-]+)(.*)/, '<i>$1</i>$2')
 }
 
+// ── Helper chuẩn hóa tên phân loại học (Loại bỏ lặp Latin & rác OCR) ────────
+function cleanTaxonHierarchy(rank: string, vnRaw?: string | null, latRaw?: string | null) {
+  let vn = (vnRaw || '').trim()
+  let lat = (latRaw || '').trim()
+
+  // 1. Bỏ tiền tố rank: Lớp, Bộ, Họ, Giống, Chi
+  vn = vn.replace(new RegExp(`^(Lớp|Bộ|Họ|Giống|Chi)\\s*`, 'i'), '')
+  // Bỏ số thứ tự (ví dụ "11: ", "12. ")
+  vn = vn.replace(/^\d+[\s:\.\-]+/, '')
+
+  // 2. Làm sạch Latin: bỏ tiền tố "Family ", "Order ", "Class "
+  lat = lat.replace(/^(Class|Order|Family|Genus)\s+/i, '')
+
+  // 3. Chuẩn hóa Latin cho Chi/Giống: nếu quá dài hoặc chứa trích dẫn sách, chỉ lấy danh pháp chi chính
+  if (rank === 'Giống' || rank === 'Chi') {
+    const genusWord = lat.split(/\s+/)[0]
+    if (lat.length > 35 || lat.includes('Ann.') || lat.includes('Vol.') || lat.includes('pp.') || lat.includes('Type:')) {
+      lat = genusWord
+    }
+  }
+
+  // 4. Chuẩn hóa TitleCase cho Latin nếu bị ALL CAPS (CALLIONYMIDAE -> Callionymidae)
+  if (/^[A-Z]{4,}$/.test(lat)) {
+    lat = lat.charAt(0) + lat.slice(1).toLowerCase()
+  }
+
+  // 5. Tách tên Latin nếu bị dính đuôi vào tên tiếng Việt (ví dụ "Cá Nhám Râu Orectolobidae" -> "Cá Nhám Râu")
+  if (lat) {
+    const mainLatWord = lat.split(/\s+/)[0]
+    if (mainLatWord && mainLatWord.length > 2) {
+      const regex = new RegExp(`\\s*\\b${mainLatWord}\\b.*$`, 'i')
+      if (regex.test(vn)) {
+        const stripped = vn.replace(regex, '').trim()
+        if (stripped) vn = stripped
+      }
+    }
+  }
+
+  // 6. Bỏ ngoặc đơn thừa
+  vn = vn.replace(/^\((.*)\)$/, '$1').trim()
+  lat = lat.replace(/^\((.*)\)$/, '$1').trim()
+
+  return { vn: vn || lat, lat }
+}
+
 // ── Main Specimen Card ────────────────────────────────────────────
 export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initialPhotos?: unknown[] }) {
   // Parse synonyms
@@ -141,13 +186,23 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
 
   const cleanAuthor = (sp.authorship || '').replace(/"/g, '').trim()
 
-  // Taxonomy breadcrumb
-  const crumbs = [
-    sp.tax_class_vn  ? { rank: 'Lớp',   vn: sp.tax_class_vn,  lat: sp.tax_class_latin }  : null,
-    sp.tax_order_vn  ? { rank: 'Bộ',    vn: sp.tax_order_vn,  lat: sp.tax_order_latin }  : null,
-    sp.tax_family_vn ? { rank: 'Họ',    vn: sp.tax_family_vn, lat: sp.tax_family_latin } : null,
-    sp.tax_genus_vn  ? { rank: sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống', vn: sp.tax_genus_vn,  lat: sp.tax_genus_latin }  : null,
-  ].filter(Boolean) as { rank: string; vn: string; lat: string | null }[]
+  // Taxonomy breadcrumb — normalized
+  const rawCrumbs = [
+    sp.tax_class_vn  ? { rank: 'Lớp',   rankKey: 'class'  as const, vn: sp.tax_class_vn,  lat: sp.tax_class_latin }  : null,
+    sp.tax_order_vn  ? { rank: 'Bộ',    rankKey: 'order'  as const, vn: sp.tax_order_vn,  lat: sp.tax_order_latin }  : null,
+    sp.tax_family_vn ? { rank: 'Họ',    rankKey: 'family' as const, vn: sp.tax_family_vn, lat: sp.tax_family_latin } : null,
+    sp.tax_genus_vn  ? { rank: sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống', rankKey: 'genus' as const, vn: sp.tax_genus_vn,  lat: sp.tax_genus_latin }  : null,
+  ].filter(Boolean) as { rank: string; rankKey: 'class' | 'order' | 'family' | 'genus'; vn: string; lat: string | null }[]
+
+  const crumbs = rawCrumbs.map(c => {
+    const cleaned = cleanTaxonHierarchy(c.rank, c.vn, c.lat)
+    return {
+      rank: c.rank,
+      rankKey: c.rankKey,
+      vn: cleaned.vn,
+      lat: cleaned.lat,
+    }
+  })
 
   const isSeaweed = sp.collection_id === 'thuc-vat-bien' || sp.id.startsWith('thucvat-')
   const enSourceTag = isSeaweed ? 'EN · AlgaeBase' : 'EN · FishBase/GBIF'
@@ -173,19 +228,28 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
       <PhotoGallery speciesId={sp.id} fallbackUrl={sp.photo_url} initialPhotos={initialPhotos as any} />
 
       {/* Taxonomy breadcrumb — always visible, above tabs */}
-      <nav className="specimen__taxonomy" aria-label="Phân loại học">
-        {crumbs.map((c, i) => {
-          const cleanName = c.vn.replace(new RegExp(`^${c.rank}\\s+`, 'i'), '')
-          return (
-            <React.Fragment key={c.rank}>
-              {i > 0 && <span className="crumb-sep">›</span>}
-              <span className="crumb">
-                <span className="crumb-rank">{c.rank}</span> {cleanName} <em>({c.lat || ''})</em>
-              </span>
+      {crumbs.length > 0 && (
+        <nav className="specimen__taxonomy" aria-label="Phân loại học">
+          {crumbs.map((c, i) => (
+            <React.Fragment key={c.rankKey}>
+              {i > 0 && <span className="specimen-taxon-sep" aria-hidden="true">›</span>}
+              <div className={`specimen-taxon-item taxon-item--${c.rankKey}`}>
+                <span className={`specimen-taxon-rank rank-badge rank-${c.rankKey}`}>
+                  {c.rank}
+                </span>
+                <span className="specimen-taxon-names">
+                  <span className="specimen-taxon-vn">{c.vn}</span>
+                  {c.lat && (
+                    <span className="specimen-taxon-lat">
+                      {' '}({c.lat})
+                    </span>
+                  )}
+                </span>
+              </div>
             </React.Fragment>
-          )
-        })}
-      </nav>
+          ))}
+        </nav>
+      )}
 
       {/* ── Tab Strip ── */}
       <TabStrip

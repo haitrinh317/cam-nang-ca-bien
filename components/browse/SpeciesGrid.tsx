@@ -508,14 +508,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
               </div>
 
               {activeBook.volumes.length > 1 ? (
-                <div
-                  className="volume-full-tabs"
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-                    gap: '8px 12px',
-                  }}
-                >
+                <div className="volume-full-tabs">
                   {activeBook.volumes.map(v => {
                     const isActive = v.volume === currentVol
                     return (
@@ -525,12 +518,14 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                         className={`volume-full-tab ${isActive ? 'is-active' : ''}`}
                         onClick={() => handleSelectVolume(v.volume)}
                       >
-                        <div className="vft-roman">TẬP {v.roman}</div>
-                        <div className="vft-content">
-                          <div className="vft-title">{v.title}</div>
-                          <div className="vft-sub">{v.subTitle}</div>
+                        <div className="vft-header">
+                          <span className="vft-roman">TẬP {v.roman}</span>
+                          <span className="vft-count">{v.speciesCount} loài</span>
                         </div>
-                        <div className="vft-count">{v.speciesCount} loài</div>
+                        <div className="vft-body">
+                          <div className="vft-title">{v.title}</div>
+                          {v.subTitle && <div className="vft-sub">{v.subTitle}</div>}
+                        </div>
                       </button>
                     )
                   })}

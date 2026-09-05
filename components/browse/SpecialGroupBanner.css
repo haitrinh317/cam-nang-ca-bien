@@ -133,34 +133,3 @@
   max-width: 80ch;
   margin: 0;
 }
-
-/* ─── DANH SÁCH CÁC TẬP TRONG BỘ SÁCH: LƯỚI 2 CỘT (CẢ DESKTOP & MOBILE) ─── */
-.volume-full-tabs {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: 8px 10px !important;
-}
-
-@media (max-width: 640px) {
-  .volume-full-tab {
-    padding: 8px 10px !important;
-    gap: 6px !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-  .vft-roman {
-    font-size: 0.7rem !important;
-    padding: 2px 6px !important;
-  }
-  .vft-title {
-    font-size: 0.82rem !important;
-    line-height: 1.25 !important;
-  }
-  .vft-sub {
-    font-size: 0.72rem !important;
-  }
-  .vft-count {
-    font-size: 0.7rem !important;
-    padding: 2px 6px !important;
-  }
-}

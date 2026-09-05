@@ -1231,26 +1231,84 @@ a:focus-visible {
 .photo-lightbox__nav--prev { left: var(--space-lg); }
 .photo-lightbox__nav--next { right: var(--space-lg); }
 
-/* ─── Taxonomy breadcrumb ─── */
+/* ─── Taxonomy breadcrumb & Hierarchy Ladder ─── */
 .specimen__taxonomy {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-xs);
-  padding: var(--space-md) var(--space-xl);
-  background: var(--color-paper);
+  gap: var(--space-2xs) var(--space-xs);
+  padding: 12px var(--space-xl);
+  background: var(--color-paper-2);
   border-bottom: 1px solid var(--color-rule-2);
-  font-size: var(--text-sm);
-  color: var(--color-ink-2);
   line-height: var(--lh-normal);
 }
 
+.specimen-taxon-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-rule-2);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.specimen-taxon-item:hover {
+  border-color: var(--color-rule);
+}
+
+.specimen-taxon-rank {
+  font-family: var(--font-outlier);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1.2;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+.specimen-taxon-names {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.specimen-taxon-vn {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.3;
+}
+
+.specimen-taxon-lat {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-muted);
+  line-height: 1.3;
+  margin-left: 4px;
+}
+
+.specimen-taxon-sep {
+  color: var(--color-placeholder);
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin: 0 4px;
+  user-select: none;
+}
+
+/* Legacy .crumb compatibility */
 .crumb {
   display: inline-flex;
   align-items: baseline;
   gap: var(--space-2xs);
 }
-
 .crumb-rank {
   font-family: var(--font-outlier);
   font-size: 0.65rem;
@@ -1259,18 +1317,74 @@ a:focus-visible {
   letter-spacing: 0.08em;
   color: var(--color-muted);
 }
-
 .crumb em {
   font-style: italic;
-  color: var(--color-ink-3);
-  font-size: var(--text-xs);
+  color: var(--color-muted);
+  font-size: 0.78rem;
 }
-
 .crumb-sep {
   color: var(--color-placeholder);
   font-size: var(--text-lg);
   margin: 0 var(--space-2xs);
   font-weight: 300;
+}
+
+/* Mobile responsive — Adaptive Taxonomy Ladder */
+@media (max-width: 640px) {
+  .specimen__taxonomy {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 6px !important;
+    padding: 10px 14px !important;
+    background: var(--color-paper-2) !important;
+    border-bottom: 1px solid var(--color-rule-2) !important;
+  }
+
+  .specimen-taxon-sep {
+    display: none !important;
+  }
+
+  .specimen-taxon-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 6px 10px !important;
+    border-radius: 6px !important;
+    border: 1px solid var(--color-rule-2) !important;
+    background: var(--color-paper) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .specimen-taxon-rank {
+    min-width: 44px !important;
+    text-align: center !important;
+    font-size: 0.62rem !important;
+    padding: 2px 4px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .specimen-taxon-names {
+    display: flex !important;
+    align-items: baseline !important;
+    flex-wrap: wrap !important;
+    gap: 2px 6px !important;
+    min-width: 0 !important;
+    flex: 1 !important;
+  }
+
+  .specimen-taxon-vn {
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    color: var(--color-ink) !important;
+  }
+
+  .specimen-taxon-lat {
+    font-size: 0.72rem !important;
+    font-style: italic !important;
+    color: var(--color-muted) !important;
+  }
 }
 
 /* ─── Sections ─── */
@@ -1595,7 +1709,7 @@ details[open] summary.synonym-summary::after { transform: rotate(90deg); }
 .bio-notes-label-vn {
   font-weight: 700;
   font-size: var(--text-sm);
-  color: var(--color-ink-1);
+  color: var(--color-ink);
 }
 .bio-notes-label-en {
   font-size: var(--text-xs);
@@ -2364,7 +2478,6 @@ footer {
   .grid-species { grid-template-columns: 1fr; }
 
   .specimen__hero { padding: var(--space-xl) var(--space-md) var(--space-md); }
-  .specimen__taxonomy { padding: var(--space-sm) var(--space-md); font-size: var(--text-xs); }
   .specimen__section { padding: var(--space-lg) var(--space-md); }
   .specimen details.synonym-details { margin: 0 var(--space-md) var(--space-md); }
   .specimen .biology-panel { margin: 0 var(--space-md) var(--space-md); }
@@ -2786,11 +2899,6 @@ footer {
 
   .specimen__sci {
     font-size: 0.95rem;
-  }
-
-  .specimen__taxonomy {
-    padding: var(--space-xs) var(--space-sm);
-    font-size: 0.75rem;
   }
 
   .detail-tabs {
@@ -3430,7 +3538,7 @@ footer {
 .bc-title {
   font-size: 1.25rem;
   font-weight: 750;
-  color: var(--color-ink-1);
+  color: var(--color-ink);
   margin: 0 0 var(--space-xs) 0;
   line-height: 1.3;
 }
@@ -3463,91 +3571,88 @@ footer {
 
 .bc-species-total {
   font-weight: 800;
-  color: var(--color-ink-1);
+  color: var(--color-ink);
 }
 
-/* 2. Danh sách tập trong đầu sách (Volume Tabs with full name) — Lưới 2 cột gọn gàng */
+/* 2. Danh sách tập trong đầu sách (Volume Tabs with full name) — Lưới 2 cột chuẩn Hallmark */
 .volume-full-tabs {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-sm) var(--space-md);
+  gap: 10px 14px;
+  width: 100%;
 }
 
 .volume-full-tab {
   display: flex;
-  align-items: center;
-  gap: var(--space-md);
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
   background: var(--color-paper-2);
   border: 1.5px solid var(--color-rule);
   border-radius: var(--radius-md);
-  padding: var(--space-md) var(--space-lg);
+  padding: 12px 14px;
   text-align: left;
   cursor: pointer;
   transition: all var(--dur-fast) var(--ease-out);
   width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: var(--color-ink) !important;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+/* Thẻ lẻ cuối cùng trong danh mục (như Tập V khi có 5 tập): trải đều trọn vẹn cả 2 cột để cân đối */
+.volume-full-tab:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 
 .volume-full-tab:hover {
   border-color: var(--color-navy-raw);
   background: var(--color-paper-3);
-  transform: translateX(2px);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
 .volume-full-tab.is-active {
   background: var(--color-navy-raw);
   border-color: var(--color-navy-raw);
-  color: #ffffff;
-  box-shadow: var(--shadow-sm);
+  color: var(--color-ink-on-navy, #ffffff) !important;
+  box-shadow: 0 4px 14px -2px rgba(11, 19, 41, 0.25);
+}
+
+.vft-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
 }
 
 .vft-roman {
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 800;
-  padding: 4px 10px;
+  padding: 3px 8px;
   border-radius: 6px;
   background: var(--color-paper-3);
   color: var(--color-ink-2);
   white-space: nowrap;
   font-family: var(--font-outlier, inherit);
+  letter-spacing: 0.04em;
 }
 
 .volume-full-tab.is-active .vft-roman {
   background: var(--color-cyan-raw);
-  color: #0f172a;
-}
-
-.vft-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.vft-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--color-ink-1);
-  margin-bottom: 2px;
-}
-
-.volume-full-tab.is-active .vft-title {
-  color: #ffffff;
-}
-
-.vft-sub {
-  font-size: 0.825rem;
-  color: var(--color-ink-3);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.volume-full-tab.is-active .vft-sub {
-  color: rgba(255, 255, 255, 0.8);
+  color: #0b1329;
 }
 
 .vft-count {
-  font-size: 0.8rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  padding: 4px 10px;
+  padding: 2px 8px;
   border-radius: var(--radius-pill);
   background: var(--color-paper-3);
   color: var(--color-ink-3);
@@ -3555,8 +3660,50 @@ footer {
 }
 
 .volume-full-tab.is-active .vft-count {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   color: #ffffff;
+}
+
+.vft-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  min-width: 0;
+}
+
+.vft-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-ink) !important;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.volume-full-tab.is-active .vft-title {
+  color: #ffffff !important;
+}
+
+.vft-sub {
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--color-ink-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.volume-full-tab.is-active .vft-sub {
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
 .single-volume-banner {
@@ -3569,7 +3716,7 @@ footer {
 .svb-title {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--color-ink-1);
+  color: var(--color-ink);
   margin-bottom: 4px;
 }
 
@@ -3602,7 +3749,7 @@ footer {
 .slt-volume-title {
   font-size: 1.25rem;
   font-weight: 800;
-  color: var(--color-ink-1);
+  color: var(--color-ink);
   margin: 0;
 }
 
@@ -3633,7 +3780,7 @@ footer {
   border-radius: var(--radius-pill);
   padding: 0.55rem 2.25rem 0.55rem 2.4rem;
   font-size: 0.875rem;
-  color: var(--color-ink-1);
+  color: var(--color-ink);
   font-family: var(--font-body);
   transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
 }
@@ -3814,7 +3961,7 @@ footer {
   font-style: italic;
   font-weight: 600;
   font-size: 1.05rem;
-  color: var(--color-ink-1);
+  color: var(--color-ink);
   margin-right: var(--space-xs);
 }
 
@@ -3880,15 +4027,21 @@ footer {
     gap: var(--space-md);
   }
 
-  .volume-full-tab {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-xs);
-    padding: var(--space-md) var(--space-lg);
+  .volume-full-tabs {
+    gap: 8px 10px;
   }
 
-  .vft-count {
-    align-self: flex-start;
+  .volume-full-tab {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  .vft-title {
+    font-size: 0.82rem;
+  }
+
+  .vft-sub {
+    font-size: 0.7rem;
   }
 
   .species-list-toolbar {
