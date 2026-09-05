@@ -5,6 +5,7 @@
 > **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Trang tra cứu /ca-bien đã được thiết kế lại tối ưu: GlobalSearch cross-tập + Phân chia 2 đầu sách chính quy + Compact List View text-only cắt giảm 99% data transfer.
 
 ## ✅ Hoàn thành mới nhất (2026-09-06)
+- [x] **Khắc phục lỗi unclosed brace trong globals.css**: Đóng đúng dấu `}` cho selector `.specimen__photo-dots`, cân bằng hoàn hảo 100% toàn bộ 5,190 dòng CSS, khôi phục toàn diện giao diện desktop trên Vercel Production.
 - [x] **Cập nhật thương hiệu Top Nav**: Đổi nhãn logo từ "Bảo tàng Hải dương học" thành "Tra cứu sinh vật biển" (`components/layout/Nav.tsx`).
 - [x] **Cân đối Type Scale danh sách loài trang con**: Hạ font size & weight của tên loài tiếng Việt (`0.88rem`, weight 600) và tên Latinh (`0.84rem`, italic, weight 500) trong bảng danh mục loài (`SpeciesGrid`), Cây phân loại (`TaxonomyTree`) và Tìm kiếm (`GlobalSearch`), giảm đệm hàng còn `7px` giúp bảng thanh thoát, gọn gàng chuẩn monograph `/hallmark`.
 - [x] **Tinh gọn khoảng cách dọc Mobile Tab Phân loại**: Loại bỏ nút mở CSDL WoRMS trùng lặp ở header Card, gỡ bỏ padding inline cứng trên các ô WoRMS, co gọn khoảng cách node cây phân loại và đệm card giúp chiều cao cuộn trên mobile giảm gần 40%.

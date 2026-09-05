@@ -1,6 +1,6 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-06 00:26 (Cập nhật Top Nav: 'Tra cứu sinh vật biển' & Cân đối font size trang con)
+> **Cập nhật lần cuối:** 2026-09-06 00:34 (Hotfix unclosed CSS brace & Khôi phục hoàn toàn CSS Desktop)
 > **Production URL:** https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
