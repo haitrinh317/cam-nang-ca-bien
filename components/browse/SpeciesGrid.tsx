@@ -353,9 +353,11 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                       fontWeight: isSelected ? 700 : 500,
                       background: isSelected ? `${color}25` : 'var(--color-paper-2)',
                       color: isSelected ? color : 'var(--color-ink)',
-                      border: isSelected ? `2px solid ${color}` : '1px solid var(--color-rule)',
+                      border: `1.5px solid ${isSelected ? color : 'var(--color-rule)'}`,
                       cursor: 'pointer',
-                      transition: 'all 0.15s ease',
+                      transition: 'background 0.15s ease, border-color 0.15s ease',
+                      whiteSpace: 'nowrap',
+                      touchAction: 'manipulation',
                     }}
                     onClick={() => setIucnSubFilter(code)}
                   >
@@ -370,7 +372,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
           {/* Bộ lọc nhanh theo Hoàng Sa & Trường Sa */}
           {activeGroup.id === 'hoang-sa-truong-sa' && (
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginTop: '16px', paddingTop: '16px', borderTop: '1px dashed var(--color-rule)' }}>
-              <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-ink-3)', marginRight: '4px' }}>
+              <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-ink-3)', marginRight: '4px', whiteSpace: 'nowrap' }}>
                 Phạm vi biển đảo:
               </span>
               <button
@@ -385,9 +387,11 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                   fontWeight: archipelagoSubFilter === 'ALL' ? 700 : 500,
                   background: archipelagoSubFilter === 'ALL' ? 'var(--color-navy-raw)' : 'var(--color-paper-2)',
                   color: archipelagoSubFilter === 'ALL' ? '#ffffff' : 'var(--color-ink)',
-                  border: '1px solid var(--color-rule)',
+                  border: archipelagoSubFilter === 'ALL' ? '1.5px solid var(--color-navy-raw)' : '1.5px solid var(--color-rule)',
                   cursor: 'pointer',
-                  transition: 'all 0.15s ease',
+                  transition: 'background 0.15s ease, border-color 0.15s ease',
+                  whiteSpace: 'nowrap',
+                  touchAction: 'manipulation',
                 }}
                 onClick={() => setArchipelagoSubFilter('ALL')}
               >
@@ -405,9 +409,11 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                   fontWeight: archipelagoSubFilter === 'HS' ? 700 : 500,
                   background: archipelagoSubFilter === 'HS' ? '#b45309' : 'var(--color-paper-2)',
                   color: archipelagoSubFilter === 'HS' ? '#ffffff' : '#b45309',
-                  border: archipelagoSubFilter === 'HS' ? '1px solid #b45309' : '1px solid var(--color-rule)',
+                  border: archipelagoSubFilter === 'HS' ? '1.5px solid #b45309' : '1.5px solid var(--color-rule)',
                   cursor: 'pointer',
-                  transition: 'all 0.15s ease',
+                  transition: 'background 0.15s ease, border-color 0.15s ease',
+                  whiteSpace: 'nowrap',
+                  touchAction: 'manipulation',
                 }}
                 onClick={() => setArchipelagoSubFilter('HS')}
               >
@@ -425,9 +431,11 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                   fontWeight: archipelagoSubFilter === 'TS' ? 700 : 500,
                   background: archipelagoSubFilter === 'TS' ? '#0369a1' : 'var(--color-paper-2)',
                   color: archipelagoSubFilter === 'TS' ? '#ffffff' : '#0369a1',
-                  border: archipelagoSubFilter === 'TS' ? '1px solid #0369a1' : '1px solid var(--color-rule)',
+                  border: archipelagoSubFilter === 'TS' ? '1.5px solid #0369a1' : '1.5px solid var(--color-rule)',
                   cursor: 'pointer',
-                  transition: 'all 0.15s ease',
+                  transition: 'background 0.15s ease, border-color 0.15s ease',
+                  whiteSpace: 'nowrap',
+                  touchAction: 'manipulation',
                 }}
                 onClick={() => setArchipelagoSubFilter('TS')}
               >
@@ -445,9 +453,11 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                   fontWeight: archipelagoSubFilter === 'BOTH' ? 700 : 500,
                   background: archipelagoSubFilter === 'BOTH' ? '#047857' : 'var(--color-paper-2)',
                   color: archipelagoSubFilter === 'BOTH' ? '#ffffff' : '#047857',
-                  border: archipelagoSubFilter === 'BOTH' ? '1px solid #047857' : '1px solid var(--color-rule)',
+                  border: archipelagoSubFilter === 'BOTH' ? '1.5px solid #047857' : '1.5px solid var(--color-rule)',
                   cursor: 'pointer',
-                  transition: 'all 0.15s ease',
+                  transition: 'background 0.15s ease, border-color 0.15s ease',
+                  whiteSpace: 'nowrap',
+                  touchAction: 'manipulation',
                 }}
                 onClick={() => setArchipelagoSubFilter('BOTH')}
               >

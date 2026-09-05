@@ -79,6 +79,9 @@
   font-family: var(--font-display, inherit);
   font-weight: 700;
   letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  min-width: 0;
 }
 
 .catalog-header__title-accent {
@@ -91,6 +94,8 @@
   margin: 0;
   line-height: 1.45;
   max-width: 75ch;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Meta Pills Row */
@@ -113,6 +118,8 @@
   background: var(--color-paper-3);
   color: var(--color-ink-2);
   border: 1px solid var(--color-rule);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .catalog-header__pill--highlight {
@@ -172,16 +179,19 @@
   min-height: 48px;
 }
 
+.catalog-header:focus-within {
+  z-index: 400 !important;
+}
+
 .catalog-header__search .search-input-container:focus-within {
   background: var(--color-paper-2);
   border-color: var(--color-cyan-raw);
   box-shadow: 0 0 0 3px rgba(0, 212, 184, 0.22), 0 6px 18px rgba(11, 19, 41, 0.08);
-  transform: translateY(-1px);
 }
 
 .catalog-header__search .search-input {
-  font-size: 0.92rem;
-  padding: 0.3rem 0;
+  font-size: 16px;
+  padding: 0.35rem 0;
   color: var(--color-ink);
 }
 
@@ -205,6 +215,8 @@
   max-height: 420px;
   overflow-y: auto;
   overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Responsive on Mobile */
@@ -241,11 +253,11 @@
   }
 
   .catalog-header__search .search-input {
-    font-size: 0.86rem;
+    font-size: 16px;
   }
 
   .catalog-header__search .search-input::placeholder {
-    font-size: 0.82rem;
+    font-size: 0.85rem;
   }
 }
 

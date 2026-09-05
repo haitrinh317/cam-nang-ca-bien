@@ -1,10 +1,16 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Lora, Be_Vietnam_Pro, JetBrains_Mono } from 'next/font/google'
 import '@/styles/tokens.css'
 import '@/styles/globals.css'
 import { ThemeScript } from '@/components/layout/ThemeScript'
 import { BottomNav } from '@/components/layout/BottomNav'
 import { PwaInstallPrompt } from '@/components/layout/PwaInstallPrompt'
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+}
 
 const lora = Lora({
   subsets: ['vietnamese', 'latin'],

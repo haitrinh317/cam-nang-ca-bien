@@ -18,6 +18,7 @@ html {
   overflow-x: clip;
   overscroll-behavior: contain;
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
   background: var(--color-paper);
   color: var(--color-ink);
 }
@@ -33,7 +34,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-
+/* Chống auto-zoom iOS Safari: Trên WebKit mobile, bất kỳ form input nào < 16px sẽ tự động bị zoom in làm vỡ layout */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -436,7 +450,6 @@ a:focus-visible {
 
 .search-input-container:focus-within {
   box-shadow: var(--shadow-search-focus);
-  transform: translateY(-1px);
 }
 
 .search-input-container svg {
@@ -479,6 +492,8 @@ a:focus-visible {
   max-height: 420px;
   overflow-y: auto;
   overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px);
@@ -3496,12 +3511,15 @@ footer {
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow-xs);
+  touch-action: manipulation;
 }
 
-.book-card:hover {
-  border-color: var(--color-navy-raw);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+@media (hover: hover) and (pointer: fine) {
+  .book-card:hover {
+    border-color: var(--color-navy-raw);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 .book-card.is-selected {
@@ -3603,6 +3621,7 @@ footer {
   -webkit-appearance: none;
   appearance: none;
   position: relative;
+  touch-action: manipulation;
 }
 
 /* Thẻ lẻ cuối cùng trong danh mục (như Tập V khi có 5 tập): trải đều trọn vẹn cả 2 cột để cân đối */
@@ -3610,11 +3629,13 @@ footer {
   grid-column: 1 / -1;
 }
 
-.volume-full-tab:hover {
-  border-color: var(--color-navy-raw);
-  background: var(--color-paper-3);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-sm);
+@media (hover: hover) and (pointer: fine) {
+  .volume-full-tab:hover {
+    border-color: var(--color-navy-raw);
+    background: var(--color-paper-3);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
 }
 
 .volume-full-tab.is-active {
@@ -4084,6 +4105,13 @@ footer {
   .species-vn-link {
     font-size: 1.15rem;
     line-height: 1.35;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .species-mobile-sci {
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .species-mobile-sci .sci-name {

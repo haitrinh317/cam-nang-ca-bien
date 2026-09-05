@@ -107,14 +107,19 @@
   appearance: none;
   transition: all 0.15s ease-out;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
+  flex-shrink: 0;
+  touch-action: manipulation;
 }
 
-.sgb-clear-btn:hover {
-  background: var(--color-paper-3, #f1f5f9);
-  border-color: var(--color-ink-3, #94a3b8);
-  color: var(--color-ink, #0f172a);
-  transform: translateY(-1px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+@media (hover: hover) and (pointer: fine) {
+  .sgb-clear-btn:hover {
+    background: var(--color-paper-3, #f1f5f9);
+    border-color: var(--color-ink-3, #94a3b8);
+    color: var(--color-ink, #0f172a);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  }
 }
 
 .sgb-title {
@@ -124,6 +129,9 @@
   color: var(--color-navy-raw, #03045e);
   line-height: 1.25;
   margin: 4px 0 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  min-width: 0;
 }
 
 .sgb-desc {
@@ -132,4 +140,6 @@
   line-height: 1.6;
   max-width: 80ch;
   margin: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
