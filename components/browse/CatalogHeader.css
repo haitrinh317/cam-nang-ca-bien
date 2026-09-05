@@ -12,7 +12,8 @@
   margin-bottom: var(--space-xl);
   box-shadow: var(--shadow-xs);
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
+  z-index: 100;
 }
 
 /* Subtle corner accent */
@@ -21,9 +22,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 3px;
   background: linear-gradient(90deg, var(--color-accent) 0%, rgba(111, 255, 232, 0.4) 100%);
+  border-top-left-radius: calc(var(--radius-xl, 16px) - 1.5px);
+  border-top-right-radius: calc(var(--radius-xl, 16px) - 1.5px);
 }
 
 /* Breadcrumb Bar */
@@ -57,7 +60,7 @@
 }
 
 .catalog-breadcrumb-current {
-  color: var(--color-ink-1);
+  color: var(--color-ink);
   font-weight: 600;
 }
 
@@ -73,7 +76,7 @@
   line-height: 1.2;
   color: var(--color-navy-raw);
   margin: 0;
-  font-family: var(--font-serif, Georgia, serif);
+  font-family: var(--font-display, inherit);
   font-weight: 700;
   letter-spacing: -0.01em;
 }
@@ -140,6 +143,70 @@
   border-color: rgba(0, 212, 184, 0.25);
 }
 
+/* ─── Integrated Search Bar inside Catalog Header (Hallmark) ─── */
+.catalog-header__search {
+  margin-top: var(--space-md);
+  position: relative;
+  z-index: 90;
+  max-width: 680px;
+  width: 100%;
+}
+
+.catalog-header__search .search-wrapper {
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.catalog-header__search .search-wrapper.is-open {
+  z-index: 1000;
+}
+
+.catalog-header__search .search-input-container {
+  background: var(--color-paper);
+  border: 1.5px solid var(--color-navy-raw);
+  border-radius: var(--radius-pill);
+  padding: 0.5rem 1.25rem;
+  box-shadow: 0 2px 8px rgba(11, 19, 41, 0.05);
+  transition: all var(--dur-fast) var(--ease-out);
+  min-height: 48px;
+}
+
+.catalog-header__search .search-input-container:focus-within {
+  background: var(--color-paper-2);
+  border-color: var(--color-cyan-raw);
+  box-shadow: 0 0 0 3px rgba(0, 212, 184, 0.22), 0 6px 18px rgba(11, 19, 41, 0.08);
+  transform: translateY(-1px);
+}
+
+.catalog-header__search .search-input {
+  font-size: 0.92rem;
+  padding: 0.3rem 0;
+  color: var(--color-ink);
+}
+
+.catalog-header__search .search-input::placeholder {
+  color: var(--color-ink-3);
+  opacity: 0.85;
+  font-size: 0.88rem;
+}
+
+/* Đảm bảo dropdown kết quả hiển thị hoàn toàn rõ nét, nổi trên mọi layer, không bị cắt cụt */
+.catalog-header .search-results {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-navy-raw);
+  border-radius: var(--radius-lg, 12px);
+  box-shadow: 0 20px 48px rgba(11, 19, 41, 0.25), 0 8px 16px rgba(11, 19, 41, 0.12);
+  z-index: 99999 !important;
+  max-height: 420px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 /* Responsive on Mobile */
 @media (max-width: 640px) {
   .catalog-header {
@@ -163,4 +230,23 @@
     font-size: 0.72rem;
     padding: 0.18rem 0.5rem;
   }
+
+  .catalog-header__search {
+    margin-top: var(--space-sm);
+  }
+
+  .catalog-header__search .search-input-container {
+    padding: 0.4rem 0.95rem;
+    min-height: 44px;
+  }
+
+  .catalog-header__search .search-input {
+    font-size: 0.86rem;
+  }
+
+  .catalog-header__search .search-input::placeholder {
+    font-size: 0.82rem;
+  }
 }
+
+

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Home, BookOpen, Layers, Sparkles } from 'lucide-react'
 import type { SpecialGroupConfig } from '@/lib/special-groups'
+import GlobalSearch from '@/components/search/GlobalSearch'
 import './CatalogHeader.css'
 
 interface Props {
@@ -27,7 +28,11 @@ export default function CatalogHeader({
   const isSpecialGroup = Boolean(activeGroup)
 
   return (
-    <header className="catalog-header" aria-label="Đầu trang danh mục tra cứu">
+    <header
+      className="catalog-header"
+      aria-label="Đầu trang danh mục tra cứu"
+      style={{ overflow: 'visible', position: 'relative', zIndex: 100 }}
+    >
       {/* 1. Breadcrumb phân cấp chuẩn ui-ux-pro-max */}
       <nav className="catalog-breadcrumb" aria-label="Điều hướng phân cấp">
         <Link href="/">
@@ -50,7 +55,7 @@ export default function CatalogHeader({
       </nav>
 
       {/* 2. Tiêu đề & mô tả học thuật súc tích */}
-      <div className="catalog-header__body">
+      <div className="catalog-header__body" style={{ overflow: 'visible', position: 'relative' }}>
         <h1 className="catalog-header__title">
           {isSpecialGroup ? (
             activeGroup?.title
@@ -102,6 +107,24 @@ export default function CatalogHeader({
               </span>
             </>
           )}
+        </div>
+
+        {/* 4. Thanh Tìm Kiếm Khoanh Vùng Danh Mục Tích Hợp (Hallmark Integrated Search) */}
+        <div
+          className="catalog-header__search"
+          role="search"
+          aria-label={`Tìm kiếm trong ${collection.nameVn}`}
+          style={{ overflow: 'visible', position: 'relative', zIndex: 120 }}
+        >
+          <GlobalSearch
+            collectionId={collection.id}
+            collectionName={collection.id === 'thuc-vat-bien' ? 'Thực Vật Biển' : 'Cá Biển Việt Nam'}
+            placeholder={
+              collection.id === 'thuc-vat-bien'
+                ? 'Tìm trong 672+ loài Thực vật biển (Tên VN, Tên khoa học, Rong biển, Cỏ biển)...'
+                : `Tìm trong ${totalSpecies.toLocaleString() || '1.764'}+ loài Cá biển Việt Nam (Tên VN, Tên khoa học)...`
+            }
+          />
         </div>
       </div>
     </header>

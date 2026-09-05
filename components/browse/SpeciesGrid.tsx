@@ -557,7 +557,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
             <Search size={16} className="slt-filter-icon" />
             <input
               type="text"
-              placeholder={`Lọc nhanh trong tập này...`}
+              placeholder={activeGroup ? 'Lọc trong chuyên đề này (STT, tên loài)...' : 'Lọc trong tập đang chọn (STT, tên loài)...'}
               value={localFilter}
               onChange={e => setLocalFilter(e.target.value)}
               className="slt-filter-input"
