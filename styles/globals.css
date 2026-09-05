@@ -2995,6 +2995,8 @@ details[open] .bio-notes-en-toggle::before { transform: rotate(90deg); }
     justify-content: center;
     gap: var(--space-sm);
     margin-top: var(--space-md);
+  }
+
   /* ─── Main container: clean top flow on mobile without fixed header gap ─── */
   .main-container {
     padding-top: var(--space-sm) !important;
