@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { t } from '@/lib/i18n'
 import { ExternalLink } from 'lucide-react'
+import { ThemeToggleBtn } from './ThemeToggleBtn'
 import './Footer.css'
 
 export default function Footer() {
@@ -39,6 +40,7 @@ export default function Footer() {
               <span className="statement-dot" aria-hidden="true" />
               {t('footer.statement')}
             </span>
+            <ThemeToggleBtn />
             <span className="footer-version-badge">v1.0.0 (Thử nghiệm)</span>
           </div>
         </div>

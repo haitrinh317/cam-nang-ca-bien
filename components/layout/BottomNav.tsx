@@ -1,4 +1,5 @@
 'use client'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -42,12 +43,50 @@ const TABS = [
 
 export function BottomNav() {
   const pathname = usePathname()
+  const [isHidden, setIsHidden] = useState(false)
+  const lastScrollY = useRef(0)
+
+  useEffect(() => {
+    setIsHidden(false) // Always show on route change
+  }, [pathname])
+
+  useEffect(() => {
+    let ticking = false
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentY = window.scrollY || window.pageYOffset || 0
+          const diff = currentY - lastScrollY.current
+
+          // Thresholds to prevent jitter
+          if (currentY <= 40) {
+            // Near top: always visible
+            setIsHidden(false)
+          } else if (diff > 12 && currentY > 80) {
+            // Scrolling DOWN fast enough: hide
+            setIsHidden(true)
+          } else if (diff < -8) {
+            // Scrolling UP: reveal immediately
+            setIsHidden(false)
+          }
+
+          lastScrollY.current = Math.max(0, currentY)
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   // Don't show on admin pages
   if (pathname.startsWith('/admin') || pathname.startsWith('/login')) return null
 
   return (
-    <nav className="bottom-nav" aria-label="Menu chính">
+    <nav className={`bottom-nav${isHidden ? ' is-hidden' : ''}`} aria-label="Menu chính">
       {TABS.map(tab => {
         const isActive =
           tab.href === '/'

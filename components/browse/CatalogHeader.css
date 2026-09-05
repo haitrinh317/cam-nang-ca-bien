@@ -150,6 +150,30 @@
   border-color: rgba(0, 212, 184, 0.25);
 }
 
+[data-theme="dark"] .catalog-header__pill--highlight {
+  background: rgba(0, 212, 184, 0.15);
+  color: #00f0d0;
+  border-color: rgba(0, 212, 184, 0.35);
+}
+
+[data-theme="dark"] .catalog-header__pill--group-amber {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+[data-theme="dark"] .catalog-header__pill--group-rose {
+  background: rgba(244, 63, 94, 0.15);
+  color: #fb7185;
+  border-color: rgba(244, 63, 94, 0.35);
+}
+
+[data-theme="dark"] .catalog-header__pill--group-cyan {
+  background: rgba(0, 212, 184, 0.15);
+  color: #00f0d0;
+  border-color: rgba(0, 212, 184, 0.35);
+}
+
 /* ─── Integrated Search Bar inside Catalog Header (Hallmark) ─── */
 .catalog-header__search {
   margin-top: var(--space-md);
