@@ -70,6 +70,8 @@
   color: var(--color-ink-2, #334155);
   line-height: 1.4;
   overflow-wrap: break-word;
+  min-width: 0;
+  flex: 1;
 }
 
 .specimen-identity-val--en {
@@ -77,6 +79,25 @@
   color: var(--color-neutral, #64748b);
   font-weight: 400;
   font-size: 0.78rem;
+}
+
+@media (max-width: 640px) {
+  .specimen-identity-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px 14px;
+  }
+
+  .specimen-identity-col {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .specimen-identity-col + .specimen-identity-col {
+    padding-top: 8px;
+    border-top: 1px dashed var(--color-rule-2, rgba(11, 19, 41, 0.08));
+  }
 }
 
 /* ─── 2. Lưới Bento 2 cột (Hình thái & Sinh thái) ─── */
@@ -372,6 +393,10 @@
 [data-theme="dark"] .specimen-vault-card {
   background: var(--color-paper-2, #0c142a);
   border-color: var(--color-rule, rgba(255, 255, 255, 0.1));
+}
+
+[data-theme="dark"] .specimen-identity-col + .specimen-identity-col {
+  border-top-color: var(--color-rule, rgba(255, 255, 255, 0.08));
 }
 
 [data-theme="dark"] .specimen-value-card {
