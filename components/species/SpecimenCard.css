@@ -39,14 +39,12 @@
   display: flex;
   align-items: baseline;
   gap: 6px;
-  flex: 1 1 260px;
+  flex: 1 1 0;
   min-width: 0;
 }
 
 .specimen-identity-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
+  display: inline-block;
   font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
   font-size: 0.72rem;
   font-weight: 700;
@@ -55,9 +53,13 @@
   letter-spacing: 0.05em;
   white-space: nowrap;
   flex-shrink: 0;
+  line-height: 1.4;
 }
 
 .specimen-identity-label svg {
+  display: inline-block;
+  vertical-align: -1.5px;
+  margin-right: 4px;
   color: var(--color-accent, #00d4b8);
 }
 

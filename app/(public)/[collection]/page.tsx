@@ -1,3 +1,5 @@
+import '@/styles/catalogue.css'
+import '@/styles/book-browser.css'
 import { getCollectionBySlug } from '@/lib/collections'
 import { notFound } from 'next/navigation'
 import SpeciesGrid from '@/components/browse/SpeciesGrid'

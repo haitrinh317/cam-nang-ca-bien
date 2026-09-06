@@ -1,0 +1,221 @@
+/* ═══════════════════════════════════════════
+   FOOTER (Compact Heritage Bar)
+   Styles migrated to modular components/layout/Footer.css
+   ═══════════════════════════════════════════ */
+
+/* ═══════════════════════════════════════════
+   UTILITIES
+   ═══════════════════════════════════════════ */
+.hidden { display: none !important; }
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 768px
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .site-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(3, 7, 18, 0.4);
+    background: #060c1b;
+    background-image: linear-gradient(180deg, rgba(11, 19, 41, 0.96) 0%, rgba(6, 12, 27, 0.98) 100%);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: none;
+    border-bottom: 1px solid rgba(0, 212, 184, 0.28);
+    padding: calc(var(--safe-top, 0px) + 8px) var(--space-md) 8px;
+    margin: 0;
+    z-index: 50;
+  }
+
+  /* Hide raw controls on mobile (theme moved to footer, EN pending full translation) */
+  .site-header .nav-controls {
+    display: none !important;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    color: #f8fafc !important;
+    text-decoration: none;
+    flex: 1;
+  }
+
+  .logo img {
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 0 6px rgba(0, 212, 184, 0.5));
+  }
+
+  /* Hiện đầy đủ tên bảo tàng sắc nét, không dùng chữ BTHD mờ nhạt */
+  .logo-full {
+    display: inline !important;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #f8fafc !important;
+    letter-spacing: 0.01em;
+  }
+  .logo-short { display: none !important; }
+
+  .hamburger-btn { display: none !important; }
+
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100dvh;
+    background: var(--color-navy-raw);
+    border-left: 1px solid var(--color-cyan-border);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: calc(var(--nav-height) + var(--space-xl)) var(--space-xl) var(--space-xl);
+    gap: var(--space-2xs);
+    z-index: 190;
+    transition: right var(--dur-normal) var(--ease-out);
+  }
+
+  .nav-links.open { right: 0; }
+
+  .nav-link {
+    width: 100%;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-size: var(--text-base);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+  }
+
+  /* Mobile: nav-group is stacked, no dropdown */
+  .nav-group {
+    width: 100%;
+    border-top: 1px solid var(--color-cyan-border);
+    padding-top: var(--space-sm);
+    margin-top: var(--space-xs);
+  }
+
+  .nav-group-label {
+    display: block;
+    font-size: var(--text-xs);
+    color: var(--color-cyan-raw);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: var(--space-2xs) var(--space-md);
+    margin-bottom: var(--space-2xs);
+  }
+
+  .nav-group .nav-link {
+    display: flex !important;
+    position: static !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    min-width: unset !important;
+    padding-left: var(--space-lg) !important;
+  }
+
+  .main-container {
+    padding: calc(var(--nav-height) + var(--space-md)) var(--space-md) var(--space-lg);
+  }
+
+  .hero {
+    padding: var(--space-2xl) var(--space-xl);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-4xl);
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 9vw, var(--text-display));
+    max-width: none;
+  }
+
+  .vol-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .section-browse { padding: 0 var(--space-md); }
+
+  .bio-grid  { grid-template-columns: 1fr; gap: 0; }
+
+  /* Specimen card mobile */
+  .specimen__hero { padding: var(--space-md) var(--space-md) var(--space-sm); }
+  .specimen__name { font-size: clamp(1.5rem, 6.5vw, var(--text-display-s)); }
+  .specimen__taxonomy { padding: var(--space-sm) var(--space-md); }
+  .specimen__section { padding: var(--space-md) var(--space-md); }
+  /* kv-row collapses at 900px (covers iPad Air portrait) — see separate rule below */
+  .specimen details.synonym-details { margin: 0; }
+  .specimen .biology-panel { margin: 0; }
+}
+
+/* ─── kv-row: 1-column dưới 900px để cover cả iPad Air portrait ─── */
+@media (max-width: 900px) {
+  .kv-row { grid-template-columns: 1fr; gap: var(--space-sm); }
+}
+
+/* ═══════════════════════════════════════════
+   IPAD & TABLET (769px – 1024px)
+   ═══════════════════════════════════════════ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .site-header {
+    width: calc(100% - var(--space-lg));
+    padding: 8px var(--space-md);
+  }
+  .logo {
+    font-size: 0.85rem;
+    gap: var(--space-2xs);
+  }
+  .logo-full { display: none; }
+  .logo-short { display: inline; }
+  .nav-links {
+    gap: var(--space-2xs);
+  }
+  .nav-link {
+    font-size: 0.85rem;
+    padding: var(--space-2xs) var(--space-xs);
+  }
+  .main-container {
+    padding: calc(var(--nav-height) + var(--space-xl)) var(--space-md) var(--space-lg);
+  }
+  .specimen__hero {
+    padding: var(--space-lg) var(--space-lg) var(--space-md);
+  }
+  .specimen__section {
+    padding: var(--space-md) var(--space-lg);
+  }
+  .kv-row {
+    gap: var(--space-md);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 480px
+   ═══════════════════════════════════════════ */
+@media (max-width: 480px) {
+  .hero { padding: var(--space-xl) var(--space-md) var(--space-md); }
+  .hero__stats { margin-top: var(--space-lg); }
+  .section-browse { margin-bottom: var(--space-2xl); }
+  .section-browse-header { margin-bottom: var(--space-lg); }
+  .hero h1 { font-size: clamp(1.75rem, 10vw, 2.5rem); }
+
+  .vol-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-sm); }
+  .vol-card { padding: var(--space-lg) var(--space-md); }
+  .vol-card-num { font-size: var(--text-3xl); }
+
+  .grid-species { grid-template-columns: 1fr; }
+
+  .specimen__hero { padding: var(--space-xl) var(--space-md) var(--space-md); }
+  .specimen__section { padding: var(--space-lg) var(--space-md); }
+  .specimen details.synonym-details { margin: 0 var(--space-md) var(--space-md); }
+  .specimen .biology-panel { margin: 0 var(--space-md) var(--space-md); }
+}
+
+
+

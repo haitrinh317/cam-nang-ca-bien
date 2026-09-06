@@ -1,0 +1,1013 @@
+/* ═══════════════════════════════════════════
+   BOOK BROWSER & SPECIES LIST TABLE VIEW
+   Tối ưu hóa tải cực nhanh: không ảnh, chia theo đầu sách, list text-only
+   ═══════════════════════════════════════════ */
+
+/* Container chính của browser */
+.book-browser-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* Special Group Banner (khi lọc theo Chuyên đề) */
+.special-group-banner {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(14, 165, 233, 0.02) 100%);
+  border: 1.5px solid var(--color-cyan-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl) var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.sgb-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.sgb-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sgb-badge--cyan {
+  background: rgba(0, 212, 184, 0.12);
+  color: #008f7a;
+  border: 1px solid rgba(0, 212, 184, 0.3);
+}
+
+.sgb-badge--rose {
+  background: rgba(225, 29, 72, 0.1);
+  color: #be123c;
+  border: 1px solid rgba(225, 29, 72, 0.25);
+}
+
+.sgb-badge--amber {
+  background: rgba(217, 119, 6, 0.1);
+  color: #b45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.sgb-badge--emerald {
+  background: rgba(5, 150, 105, 0.1);
+  color: #047857;
+  border: 1px solid rgba(5, 150, 105, 0.25);
+}
+
+[data-theme="dark"] .sgb-badge--cyan { color: #00f0d0; }
+[data-theme="dark"] .sgb-badge--rose { color: #fb7185; }
+[data-theme="dark"] .sgb-badge--amber { color: #fbbf24; }
+[data-theme="dark"] .sgb-badge--emerald { color: #34d399; }
+
+.sgb-clear-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-rule);
+  color: var(--color-ink-2);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.sgb-clear-btn:hover {
+  background: var(--color-paper-3);
+  border-color: var(--color-ink-3);
+  color: var(--color-ink);
+}
+
+.sgb-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  font-weight: 700;
+  color: var(--color-navy-raw);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.sgb-desc {
+  font-size: 0.95rem;
+  color: var(--color-ink-3);
+  line-height: 1.6;
+  max-width: 80ch;
+  margin: 0;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-3);
+  margin-bottom: var(--space-md);
+}
+
+/* 1. Thẻ đầu sách (Book Cards Grid) */
+.book-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-lg);
+}
+
+.book-card {
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-out);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-xs);
+  touch-action: manipulation;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .book-card:hover {
+    border-color: var(--color-navy-raw);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.book-card.is-selected {
+  border-color: var(--color-cyan-raw);
+  background: linear-gradient(180deg, rgba(14, 165, 233, 0.08) 0%, var(--color-paper-2) 100%);
+  box-shadow: 0 6px 24px rgba(14, 165, 233, 0.15);
+}
+
+.bc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+.bc-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(14, 165, 233, 0.15);
+  color: var(--color-cyan-raw);
+  letter-spacing: 0.02em;
+}
+
+.bc-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.bc-title {
+  font-size: 1.25rem;
+  font-weight: 750;
+  color: var(--color-ink);
+  margin: 0 0 var(--space-xs) 0;
+  line-height: 1.3;
+}
+
+.bc-author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink-2);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.bc-desc {
+  font-size: 0.825rem;
+  color: var(--color-ink-3);
+  line-height: 1.5;
+  margin: 0 0 var(--space-md) 0;
+  flex: 1;
+}
+
+.bc-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color-ink-3);
+  border-top: 1px solid var(--color-rule);
+  padding-top: var(--space-sm);
+  margin-top: auto;
+}
+
+.bc-species-total {
+  font-weight: 800;
+  color: var(--color-ink);
+}
+
+/* 2. Danh sách tập trong đầu sách (Volume Tabs with full name) — Lưới 2 cột chuẩn Hallmark */
+.volume-full-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 14px;
+  width: 100%;
+}
+
+.volume-full-tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-out);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: var(--color-ink) !important;
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  touch-action: manipulation;
+}
+
+/* Thẻ lẻ cuối cùng trong danh mục (như Tập V khi có 5 tập): trải đều trọn vẹn cả 2 cột để cân đối */
+.volume-full-tab:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .volume-full-tab:hover {
+    border-color: var(--color-navy-raw);
+    background: var(--color-paper-3);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+  }
+}
+
+.volume-full-tab.is-active {
+  background: var(--color-navy-raw);
+  border-color: var(--color-navy-raw);
+  color: var(--color-ink-on-navy, #ffffff) !important;
+  box-shadow: 0 4px 14px -2px rgba(11, 19, 41, 0.25);
+}
+
+.vft-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+.vft-roman {
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--color-paper-3);
+  color: var(--color-ink-2);
+  white-space: nowrap;
+  font-family: var(--font-outlier, inherit);
+  letter-spacing: 0.04em;
+}
+
+.volume-full-tab.is-active .vft-roman {
+  background: var(--color-cyan-raw);
+  color: #0b1329;
+}
+
+.vft-count {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-paper-3);
+  color: var(--color-ink-3);
+  white-space: nowrap;
+}
+
+.volume-full-tab.is-active .vft-count {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+.vft-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  min-width: 0;
+}
+
+.vft-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-ink) !important;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.volume-full-tab.is-active .vft-title {
+  color: #ffffff !important;
+}
+
+.vft-sub {
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--color-ink-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.volume-full-tab.is-active .vft-sub {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.single-volume-banner {
+  padding: var(--space-md) var(--space-xl);
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-md);
+}
+
+.svb-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 4px;
+}
+
+.svb-sub {
+  font-size: 0.85rem;
+  color: var(--color-ink-3);
+}
+
+/* 3. Bảng danh sách loài dạng List (Compact Table) */
+.species-list-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.species-list-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.slt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.slt-volume-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.slt-counter {
+  font-size: 0.85rem;
+  color: var(--color-ink-3);
+}
+
+.slt-filter-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 340px;
+}
+
+.slt-filter-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--color-ink-3);
+  pointer-events: none;
+}
+
+.slt-filter-input {
+  width: 100%;
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-pill);
+  padding: 0.55rem 2.25rem 0.55rem 2.4rem;
+  font-size: 0.875rem;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  transition: border-color var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.slt-filter-input:focus {
+  outline: none;
+  border-color: var(--color-navy-raw);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.slt-filter-clear {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--color-ink-3);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.species-table-wrapper {
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  box-shadow: var(--shadow-xs);
+}
+
+.species-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.species-list-table th {
+  background: var(--color-paper-3);
+  padding: var(--space-md) var(--space-lg);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-3);
+  border-bottom: 1px solid var(--color-rule);
+  white-space: nowrap;
+}
+
+.species-list-table th.th-stt {
+  width: 80px;
+  text-align: center;
+}
+
+.species-list-table th.th-vn {
+  width: 40%;
+}
+
+.species-list-table th.th-action {
+  width: 50px;
+  text-align: right;
+}
+
+.species-row {
+  border-bottom: 1px solid var(--color-rule);
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease-out);
+}
+
+.species-row:last-child {
+  border-bottom: none;
+}
+
+.species-row:hover {
+  background: rgba(14, 165, 233, 0.06);
+}
+
+.species-row td {
+  padding: 7px var(--space-md);
+  vertical-align: middle;
+}
+
+/* ─── Table Skeleton Loading ─── */
+.skeleton-row td {
+  padding: 8px var(--space-md);
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0.1) 0%,
+    rgba(148, 163, 184, 0.22) 50%,
+    rgba(148, 163, 184, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeletonShimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm, 4px);
+  display: block;
+}
+
+@keyframes skeletonShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-shimmer--stt {
+  width: 32px;
+  height: 1.1rem;
+  margin: 0 auto;
+}
+
+.skeleton-shimmer--title {
+  width: 60%;
+  height: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.skeleton-shimmer--subtitle {
+  width: 40%;
+  height: 0.8rem;
+}
+
+.skeleton-shimmer--full {
+  width: 75%;
+  height: 0.95rem;
+}
+
+.skeleton-shimmer--btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+
+.td-stt {
+  text-align: center;
+  width: 60px;
+}
+
+.stt-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-ink-2);
+  font-family: var(--font-mono, monospace);
+  background: var(--color-paper-3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--color-rule);
+}
+
+.td-vn {
+  font-weight: 600;
+}
+
+.species-vn-link {
+  color: var(--color-navy-raw);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.35;
+  display: inline-block;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.species-row:hover .species-vn-link {
+  color: var(--color-cyan-raw);
+}
+
+.td-sci {
+  color: var(--color-ink-2);
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.sci-name {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.84rem;
+  color: var(--color-ink-2, #1e293b);
+  margin-right: var(--space-xs);
+}
+
+.sci-author {
+  font-size: 0.76rem;
+  color: var(--color-ink-3);
+  font-weight: 400;
+}
+
+.td-action {
+  text-align: right;
+  width: 50px;
+}
+
+.row-arrow {
+  color: var(--color-ink-4, #94a3b8);
+  transition: transform var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+
+.species-row:hover .row-arrow {
+  transform: translateX(4px);
+  color: var(--color-cyan-raw);
+}
+
+.td-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--color-ink-3);
+  font-size: var(--text-base);
+}
+
+.list-status-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: 4rem 1rem;
+  color: var(--color-ink-3);
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+}
+
+.list-status-message.is-error {
+  color: #ef4444;
+}
+
+.species-mobile-sci {
+  display: none;
+}
+
+.desktop-only {
+  display: table-cell;
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE TABLET & MOBILE (Tối ưu tra cứu to rõ)
+   ═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .book-cards-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .volume-full-tabs {
+    gap: 8px 10px;
+  }
+
+  .volume-full-tab {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  .vft-title {
+    font-size: 0.82rem;
+  }
+
+  .vft-sub {
+    font-size: 0.7rem;
+  }
+
+  .species-list-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .slt-filter-box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .slt-filter-input {
+    font-size: 1.05rem;
+    padding: var(--space-sm) var(--space-md) var(--space-sm) 2.6rem;
+  }
+
+  /* Chuyển cột khoa học gộp vào cột tên Việt Nam trên mobile */
+  .desktop-only {
+    display: none !important;
+  }
+
+  .species-mobile-sci {
+    display: block;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  .species-list-table th.th-vn {
+    width: auto;
+  }
+
+  .species-row td {
+    padding: 6px 10px;
+    vertical-align: middle;
+  }
+
+  .species-vn-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .species-mobile-sci {
+    margin-top: 2px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .species-mobile-sci .sci-name {
+    font-size: 0.80rem;
+    font-weight: 500;
+  }
+
+  .species-mobile-sci .sci-author {
+    font-size: 0.72rem;
+  }
+
+  .stt-badge {
+    font-size: 0.72rem;
+    padding: 2px 5px;
+  }
+
+  .td-stt {
+    width: 48px;
+  }
+
+  .stt-badge {
+    font-size: 0.74rem;
+    padding: 2px 5px;
+  }
+}
+
+/* ==========================================================================
+   PWA Install Prompt Modal (SVBVN App)
+   ========================================================================== */
+
+@keyframes pwaFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pwaPopUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.pwa-prompt-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(3, 7, 18, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: pwaFadeIn 0.25s ease-out;
+}
+
+.pwa-prompt-sheet {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96) 0%, rgba(10, 17, 34, 0.98) 100%);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 35px rgba(0, 180, 216, 0.12);
+  border-radius: 20px;
+  padding: 24px;
+  color: #e2e8f0;
+  animation: pwaPopUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.pwa-prompt-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pwa-prompt-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.pwa-prompt-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.pwa-prompt-app-icon {
+  flex-shrink: 0;
+  border-radius: 14px;
+  padding: 3px;
+  background: linear-gradient(135deg, rgba(0, 180, 216, 0.6) 0%, rgba(78, 205, 196, 0.4) 100%);
+  box-shadow: 0 8px 20px rgba(0, 180, 216, 0.25);
+}
+
+.pwa-prompt-header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.pwa-prompt-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6fffe8;
+  background: rgba(0, 180, 216, 0.15);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 12px;
+  padding: 2px 10px;
+  margin-bottom: 6px;
+}
+
+.pwa-prompt-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.pwa-prompt-subtitle {
+  font-size: 0.84rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.pwa-prompt-body {
+  background: rgba(2, 6, 23, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.pwa-prompt-guide-lead {
+  font-size: 0.86rem;
+  color: #cbd5e1;
+  margin: 0 0 12px 0;
+}
+
+.pwa-prompt-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pwa-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.pwa-step-number {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0, 180, 216, 0.2);
+  border: 1px solid rgba(0, 180, 216, 0.5);
+  color: #6fffe8;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.pwa-step-content {
+  flex: 1;
+}
+
+.pwa-icon-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 2px 5px;
+  margin: 0 2px;
+  color: #6fffe8;
+}
+
+.pwa-prompt-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.pwa-btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #94a3b8;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 9px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pwa-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+}
+
+.pwa-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 9px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 180, 216, 0.35);
+  transition: all 0.2s ease;
+}
+
+.pwa-btn-primary:hover {
+  background: linear-gradient(135deg, #48cae4 0%, #0096c7 100%);
+  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.5);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .pwa-prompt-backdrop {
+    padding: 12px;
+    align-items: flex-end;
+  }
+  .pwa-prompt-sheet {
+    border-radius: 20px;
+    padding: 20px 16px;
+    margin-bottom: 72px; /* Cách trên BottomNav */
+  }
+}
+

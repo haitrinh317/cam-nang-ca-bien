@@ -2,7 +2,10 @@ import type { Metadata, Viewport } from 'next'
 import { Lora, Be_Vietnam_Pro, JetBrains_Mono } from 'next/font/google'
 import '@/styles/tokens.css'
 import '@/styles/globals.css'
-import { ThemeScript } from '@/components/layout/ThemeScript'
+import '@/styles/responsive.css'
+import '@/styles/buttons.css'
+import '@/styles/mobile.css'
+import '@/styles/dark-mode.css'
 import { BottomNav } from '@/components/layout/BottomNav'
 import { PwaInstallPrompt } from '@/components/layout/PwaInstallPrompt'
 
@@ -138,7 +141,10 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
-        <ThemeScript />
+        {/* ponytail: inline theme script — React 19 warns when <script> is wrapped in a component */}
+        <script
+          dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('cabien-theme')||'light';document.documentElement.setAttribute('data-theme',t);})()` }}
+        />
       </head>
       <body>
         {children}

@@ -1,3 +1,5 @@
+import '@/styles/hero.css'
+import '@/styles/browse.css'
 import { createServerClient } from '@/lib/supabase-server'
 import GlobalSearch from '@/components/search/GlobalSearch'
 import SpecialGroupsSection from '@/components/home/SpecialGroupsSection'

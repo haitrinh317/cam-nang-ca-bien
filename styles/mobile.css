@@ -1,0 +1,381 @@
+/* ═══════════════════════════════════════════
+   MOBILE — v2 (Hallmark modern-minimal)
+   Safe areas · Bottom Nav · 2-col grid
+   Tab strip · Gallery responsive
+   ═══════════════════════════════════════════ */
+
+/* ─── Safe area tokens ─── */
+:root {
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --bottom-nav-h: 56px;
+}
+
+/* ─── Bottom Nav — base (hidden on desktop) ─── */
+.bottom-nav {
+  display: none;
+}
+
+/* ─── Tab Strip (species detail) — base ─── */
+.detail-tabs {
+  display: flex;
+  background: var(--color-paper-3);
+  border-bottom: 1.5px solid var(--color-rule);
+  padding: 8px 12px;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.detail-tabs::-webkit-scrollbar { display: none; }
+
+.detail-tab {
+  flex: 1;
+  min-width: max-content;
+  padding: 10px 20px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-ink-3);
+  background: transparent;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-md);
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-out);
+  white-space: nowrap;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail-tab:hover {
+  color: var(--color-ink);
+  background: rgba(255, 255, 255, 0.45);
+}
+.detail-tab.active {
+  color: var(--color-ink);
+  background: var(--color-paper-2);
+  border-color: var(--color-rule);
+  box-shadow: var(--shadow-sm);
+  font-weight: 700;
+}
+[data-theme="dark"] .detail-tabs {
+  background: var(--color-paper);
+}
+[data-theme="dark"] .detail-tab:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+[data-theme="dark"] .detail-tab.active {
+  color: #ffffff;
+  background: var(--color-paper-3);
+  border-color: rgba(0, 240, 208, 0.35);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 240, 208, 0.2);
+}
+.detail-tab:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: -2px;
+}
+
+.detail-tab-panel { display: none; }
+.detail-tab-panel.active { display: block; }
+
+/* Desktop: Tabs now function normally instead of showing all panels */
+@media (min-width: 769px) {
+  .detail-tabs { border-bottom: 1.5px solid var(--color-rule); margin-bottom: 0; }
+}
+
+.specimen__empty {
+  padding: var(--space-xl);
+  color: var(--color-muted);
+  font-size: var(--text-sm);
+  font-style: italic;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  /* ─── Body: make room for floating island dock ─── */
+  body {
+    padding-bottom: calc(76px + var(--safe-bottom, 0px));
+  }
+
+  /* ─── Floating Island Dock (ui-ux-pro-max mobile ergonomics) ─── */
+  .bottom-nav {
+    display: flex;
+    position: fixed;
+    bottom: calc(var(--safe-bottom, 0px) + 14px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 380px;
+    height: 60px;
+    padding: 0 6px;
+    background: rgba(6, 12, 27, 0.88);
+    backdrop-filter: blur(24px) saturate(1.8);
+    -webkit-backdrop-filter: blur(24px) saturate(1.8);
+    border: 1px solid rgba(0, 212, 184, 0.28);
+    border-radius: var(--radius-pill, 9999px);
+    box-shadow: 0 12px 32px rgba(3, 7, 18, 0.55), 0 2px 10px rgba(0, 212, 184, 0.15);
+    z-index: 300;
+    align-items: center;
+    justify-content: space-around;
+    touch-action: manipulation;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease;
+    will-change: transform, opacity;
+  }
+
+  /* Auto-hide on scroll down (Facebook mobile pattern) */
+  .bottom-nav.is-hidden {
+    transform: translate(-50%, calc(100% + 36px)) !important;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .bottom-nav__tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex: 1;
+    height: 48px;
+    border-radius: var(--radius-pill, 9999px);
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.55);
+    transition: all var(--dur-fast) var(--ease-out);
+    position: relative;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+
+  .bottom-nav__tab:hover {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .bottom-nav__tab:active {
+    transform: scale(0.94);
+  }
+
+  .bottom-nav__tab.active {
+    color: #00f0d0;
+    background: rgba(0, 212, 184, 0.12);
+  }
+
+  .bottom-nav__tab:focus-visible {
+    outline: 2px solid var(--color-cyan-raw);
+    outline-offset: -2px;
+  }
+
+  .bottom-nav__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    transition: transform var(--dur-fast) var(--ease-out);
+  }
+
+  .bottom-nav__tab.active .bottom-nav__icon {
+    transform: translateY(-1px);
+  }
+
+  .bottom-nav__label {
+    font-family: var(--font-body);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .bottom-nav__dot {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-cyan-raw);
+    box-shadow: 0 0 6px var(--color-cyan-raw);
+  }
+
+  /* ─── Hide hamburger when bottom nav is present ─── */
+  .hamburger-btn { display: none !important; }
+  .nav-links { display: none !important; }
+
+  /* ─── Back to top: avoid floating island dock ─── */
+  .back-to-top {
+    bottom: calc(76px + var(--safe-bottom, 0px) + var(--space-md));
+    right: var(--space-md);
+    z-index: 200;
+  }
+
+  /* ─── Species grid: 2 column on mobile ─── */
+  .grid-species {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-md);
+  }
+
+  .species-card-mini {
+    padding: 0;
+  }
+  .scm-content {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  /* Allow long names to wrap — no line-clamp */
+  .scm-name {
+    font-size: 0.875rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: var(--lh-snug);
+  }
+
+  .scm-sci {
+    font-size: 0.75rem;
+  }
+
+  .scm-id {
+    font-size: 0.65rem;
+  }
+
+  /* Thumbnail: full card width on mobile */
+  .scm-thumb {
+    height: 90px;
+  }
+
+  /* ─── Gallery: responsive height ─── */
+  .specimen__gallery {
+    margin: var(--space-md) 0; /* Tighter margins on mobile */
+  }
+  .specimen__photo {
+    height: min(56vw, 280px) !important;
+  }
+
+  /* Hide thumb strip on mobile, swipe dot-based preferred */
+  .specimen__photo-thumbs {
+    display: none;
+  }
+  .specimen__photo-dots {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+  }
+
+  /* ─── Main container: clean top flow on mobile without fixed header gap ─── */
+  .main-container {
+    padding-top: var(--space-sm) !important;
+  }
+
+  /* ─── Tab strip on detail: sticky at top of viewport ─── */
+  .specimen .detail-tabs {
+    position: sticky;
+    top: 0;
+    background: var(--color-paper-3);
+    z-index: 10;
+    border-radius: 0;
+    margin: 0 calc(-1 * var(--space-xl));
+    padding: 6px var(--space-xl);
+  }
+
+  /* ─── Biology Panel on mobile (match clean layout) ─── */
+  .biology-panel, .specimen .biology-panel {
+    background: transparent;
+    border: none;
+    padding: var(--space-lg) var(--space-md);
+    margin: 0;
+  }
+
+  /* ─── Synonyms Panel on mobile (match clean layout) ─── */
+  details.synonym-details, .specimen details.synonym-details {
+    background: transparent;
+    border: none;
+    margin: 0;
+  }
+  summary.synonym-summary {
+    padding: var(--space-lg) var(--space-md) var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-rule);
+    margin-bottom: var(--space-xl);
+  }
+  .synonym-content {
+    padding: 0 var(--space-md) var(--space-md);
+  }
+
+  /* ─── Touch targets ─── */
+  .vol-tab {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .detail-tab {
+    min-height: 44px;
+    font-size: 0.8125rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    width: 100%;
+    padding: calc(var(--safe-top, 0px) + 6px) var(--space-sm) 6px;
+  }
+
+  .main-container {
+    padding: var(--space-xs) 12px var(--space-md) !important;
+  }
+
+  .specimen {
+    border-radius: var(--radius-md);
+  }
+
+  .specimen__hero {
+    padding: var(--space-md) var(--space-sm) var(--space-xs);
+  }
+
+  .specimen__name {
+    font-size: clamp(1.35rem, 5.5vw, 1.65rem);
+  }
+
+  .specimen__sci {
+    font-size: 0.95rem;
+  }
+
+  .detail-tabs {
+    padding: 6px 8px;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .detail-tab {
+    font-size: 0.82rem;
+    padding: 8px 12px;
+    scroll-snap-align: start;
+  }
+
+  .specimen__section {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .specimen__section-title {
+    font-size: 1.1rem;
+  }
+
+  /* Tighter grid on very small phones */
+  .grid-species {
+    gap: var(--space-sm);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .scm-thumb {
+    height: 110px;
+  }
+
+  .scm-name { font-size: 0.8125rem; }
+}
+

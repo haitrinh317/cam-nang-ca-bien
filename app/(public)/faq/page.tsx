@@ -1,3 +1,4 @@
+import '@/styles/faq.css'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import FaqAccordion from '@/components/faq/FaqAccordion'

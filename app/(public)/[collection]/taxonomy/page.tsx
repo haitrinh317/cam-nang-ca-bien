@@ -1,3 +1,4 @@
+import '@/styles/catalogue.css'
 import { getCollectionBySlug } from '@/lib/collections'
 import { createServerClient } from '@/lib/supabase-server'
 import { TAXONOMY_COLS, sortTaxonomyRows } from '@/lib/taxonomy'

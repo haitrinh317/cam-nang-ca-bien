@@ -1,0 +1,650 @@
+/* ═══════════════════════════════════════════════════════════════
+   CATALOG HEADER DROPDOWN UNCLIP (Hallmark Guarantee)
+   Đảm bảo tuyệt đối dropdown kết quả tìm kiếm không bao giờ bị cắt cụt
+   ═══════════════════════════════════════════════════════════════ */
+.catalog-header {
+  position: relative !important;
+  overflow: visible !important;
+  z-index: 100 !important;
+}
+
+.catalog-header__body,
+.catalog-header__search {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.catalog-header .search-results {
+  position: absolute !important;
+  top: calc(100% + 6px) !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 99999 !important;
+  background: var(--color-paper-2) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   COMPREHENSIVE DARK MODE SUITE (UI/UX Pro Max & Hallmark)
+   Khắc phục triệt để 100% tình trạng chữ/tiêu đề tối thui trên nền tối
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── 1. Hero Banner: Deep Oceanic Midnight Theme ─── */
+[data-theme="dark"] .hero {
+  background: radial-gradient(ellipse 90% 70% at 20% -10%, rgba(0, 212, 184, 0.18), transparent 70%),
+              linear-gradient(160deg, #0c1836 0%, #060c1b 100%) !important;
+  border: 1px solid rgba(0, 212, 184, 0.28) !important;
+  box-shadow: 0 20px 48px rgba(3, 7, 18, 0.7), 0 0 24px rgba(0, 212, 184, 0.1) !important;
+}
+
+[data-theme="dark"] .hero h1 {
+  color: #f8fafc !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="dark"] .hero__accent {
+  color: #00f0d0 !important;
+  text-decoration-color: #00d4b8 !important;
+}
+
+[data-theme="dark"] .hero p {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .hero__stat-num {
+  color: #00f0d0 !important;
+  text-shadow: 0 0 16px rgba(0, 240, 208, 0.35);
+}
+
+[data-theme="dark"] .hero__stat-label {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .hero__stat-divider {
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* ─── 2. Search Box in Dark Mode ─── */
+[data-theme="dark"] .search-input-container {
+  background: #070d1d !important;
+  border-color: rgba(0, 212, 184, 0.3) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .search-input {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .search-input::placeholder {
+  color: #64748b !important;
+}
+
+[data-theme="dark"] .search-results {
+  background: #0c152d !important;
+  border-color: rgba(0, 212, 184, 0.3) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-theme="dark"] .search-item-vn {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .search-item-sci {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .search-item:hover {
+  background: rgba(0, 212, 184, 0.1) !important;
+}
+
+/* ─── 3. Section Titles & Subtitles ─── */
+[data-theme="dark"] .sgs-title,
+[data-theme="dark"] .lit-title,
+[data-theme="dark"] .section-title {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .sgs-subtitle,
+[data-theme="dark"] .lit-subtitle,
+[data-theme="dark"] .section-subtitle {
+  color: #94a3b8 !important;
+}
+
+/* ─── 4. Special Groups Cards ─── */
+[data-theme="dark"] .sgs-card {
+  background: #0c152d !important;
+  border-color: rgba(0, 212, 184, 0.22) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme="dark"] .sgs-card__title {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .sgs-card:hover .sgs-card__title {
+  color: #00f0d0 !important;
+}
+
+[data-theme="dark"] .sgs-card__desc {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .sgs-card__count-num {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .sgs-card__count-unit {
+  color: #64748b !important;
+}
+
+[data-theme="dark"] .sgs-card__footer {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ─── 5. Literature Cards ─── */
+[data-theme="dark"] .lit-card {
+  background: #0c152d !important;
+  border-color: rgba(0, 212, 184, 0.22) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45) !important;
+}
+
+[data-theme="dark"] .lit-card__title {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .lit-card:hover .lit-card__title {
+  color: #00f0d0 !important;
+}
+
+[data-theme="dark"] .lit-card__author {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .lit-card__publisher,
+[data-theme="dark"] .lit-card__meta-item {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .lit-card__count-num {
+  color: #00f0d0 !important;
+}
+
+[data-theme="dark"] .lit-card__footer {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ─── 6. Catalog Header & Volume Tabs (/ca-bien, /thuc-vat-bien) ─── */
+[data-theme="dark"] .catalog-header {
+  background: #0c152d !important;
+  border-color: rgba(0, 212, 184, 0.22) !important;
+}
+
+[data-theme="dark"] .catalog-header__title {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .catalog-header__desc {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .catalog-breadcrumb a {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .catalog-breadcrumb-current {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .catalog-header__pill {
+  background: #131e3d !important;
+  color: #e2e8f0 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-theme="dark"] .volume-full-tab {
+  background: #0c152d !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .volume-full-tab:hover {
+  background: #131e3d !important;
+  border-color: rgba(0, 212, 184, 0.3) !important;
+}
+
+[data-theme="dark"] .volume-full-tab.active {
+  background: #131e3d !important;
+  border-color: #00d4b8 !important;
+  box-shadow: 0 0 16px rgba(0, 212, 184, 0.2) !important;
+}
+
+[data-theme="dark"] .vft-title {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .vft-count,
+[data-theme="dark"] .vft-desc {
+  color: #94a3b8 !important;
+}
+
+/* ─── 7. Species Table & Mini Cards ─── */
+[data-theme="dark"] .species-table th {
+  background: #0c142a !important;
+  color: #94a3b8 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+[data-theme="dark"] .species-table td {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-theme="dark"] .species-vn-link {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .species-vn-link:hover {
+  color: #00f0d0 !important;
+}
+
+[data-theme="dark"] .species-sci-cell {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .species-order-header td {
+  background: #0e1935 !important;
+  color: #00f0d0 !important;
+}
+
+[data-theme="dark"] .species-card-mini {
+  background: #0c152d !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .scm-name {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .scm-sci {
+  color: #94a3b8 !important;
+}
+
+/* ─── 8. Specimen Detail View ─── */
+[data-theme="dark"] .specimen {
+  background: #070d1d !important;
+}
+
+[data-theme="dark"] .specimen__hero {
+  background: #0c152d !important;
+  border-color: rgba(0, 212, 184, 0.2) !important;
+}
+
+[data-theme="dark"] .specimen__title,
+[data-theme="dark"] .specimen__name {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .specimen__sci-name {
+  color: #00f0d0 !important;
+}
+
+[data-theme="dark"] .specimen__author {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .specimen__section-title {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .specimen-table th {
+  color: #94a3b8 !important;
+  background: #0c142a !important;
+}
+
+[data-theme="dark"] .specimen-table td {
+  color: #f1f5f9 !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ─── Tab Phân Loại (Stepped Tree & Synonyms) ─── */
+:root {
+  --tax-indent: 24px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --tax-indent: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --tax-indent: 8px;
+  }
+  .worms-dossier-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.specimen-phanloai-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.tax-tree-container {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 2px 0;
+}
+
+.tax-tree-node {
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 5px 8px !important;
+  padding: 7px 12px;
+  background: var(--color-paper-2, #f8fafc);
+  border: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06));
+  border-radius: var(--radius-sm, 6px);
+  transition: all var(--dur-fast, 150ms) ease;
+}
+
+.tax-tree-node:hover {
+  background: var(--color-paper-3, #f1f5f9);
+  border-color: var(--color-rule, rgba(11, 19, 41, 0.12));
+}
+
+.tax-tree-branch {
+  display: inline-flex !important;
+  align-items: center !important;
+  color: var(--color-ink-3, #94a3b8);
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.tax-tree-branch--current {
+  color: var(--color-accent, #00d4b8) !important;
+  opacity: 1;
+}
+
+.tax-tree-vn {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ink, #0b1329);
+  line-height: 1.35;
+}
+
+.tax-tree-lat {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.92rem;
+  font-style: italic !important;
+  color: var(--color-ink-3, #64748b);
+  line-height: 1.35;
+}
+
+.tax-tree-node--current {
+  background: rgba(0, 212, 184, 0.06) !important;
+  border: 1.5px solid rgba(0, 212, 184, 0.35) !important;
+  box-shadow: 0 2px 8px rgba(0, 212, 184, 0.08);
+}
+
+.tax-tree-current-badge {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(0, 212, 184, 0.15);
+  color: #0d9488;
+  border: 1px solid rgba(0, 212, 184, 0.3);
+  flex-shrink: 0;
+}
+
+.tax-tree-vn--current {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-ink, #0b1329);
+}
+
+.tax-tree-lat--current {
+  font-size: 0.98rem;
+  font-style: italic !important;
+  font-weight: 600;
+  color: var(--color-accent, #00d4b8);
+}
+
+.tax-tree-author {
+  font-size: 0.88rem;
+  color: var(--color-ink-3, #64748b);
+  font-style: normal;
+}
+
+/* Synonyms layout */
+.specimen-synonyms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.specimen-synonym-item {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 10px !important;
+  padding: 8px 12px;
+  background: var(--color-paper-2, #f8fafc);
+  border: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06));
+  border-left: 3px solid var(--color-accent, #00d4b8);
+  border-radius: var(--radius-sm, 6px);
+}
+
+.specimen-synonym-idx {
+  font-family: var(--font-outlier, monospace);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-accent, #00d4b8);
+  flex-shrink: 0;
+  line-height: 1.5;
+  user-select: none;
+}
+
+.specimen-synonym-text {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--color-ink, #0b1329);
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.specimen-synonym-text i,
+.specimen-synonym-text em {
+  font-style: italic !important;
+  font-weight: 600;
+  color: var(--color-ink, #0b1329);
+}
+
+.specimen-worms-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm, 6px);
+  background: var(--color-paper-2, #f8fafc);
+  border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.1));
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--color-ink-2, #334155);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all var(--dur-fast, 150ms) ease;
+}
+
+.specimen-worms-link-btn:hover {
+  background: var(--color-paper-3, #f1f5f9);
+  border-color: rgba(0, 212, 184, 0.4);
+  color: var(--color-accent, #00d4b8);
+}
+
+/* WoRMS Dossier Tiles */
+.worms-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 820px) {
+  .worms-dossier-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+.worms-tile {
+  background: var(--color-paper-2, #f8fafc);
+  border: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06));
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: border-color var(--dur-fast, 150ms) ease;
+}
+
+.worms-tile:hover {
+  border-color: rgba(0, 212, 184, 0.3);
+}
+
+.worms-tile__label {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-3, #64748b);
+}
+
+.worms-tile__sub {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.75rem;
+  color: var(--color-ink-3, #94a3b8);
+  line-height: 1.35;
+}
+
+/* Tối ưu hóa đặc biệt cho màn hình nhỏ (Mobile & iPad hẹp) */
+@media (max-width: 640px) {
+  .specimen-phanloai-container {
+    gap: 10px !important;
+  }
+  .specimen-bento-card {
+    padding: 10px 12px !important;
+    gap: 8px !important;
+    border-radius: 8px !important;
+  }
+  .specimen-bento-card__header {
+    padding-bottom: 6px !important;
+    gap: 6px !important;
+  }
+  .specimen-bento-card__title {
+    font-size: 1.02rem !important;
+  }
+  .tax-tree-container {
+    gap: 5px !important;
+  }
+  .tax-tree-node {
+    padding: 5px 8px !important;
+    gap: 3px 6px !important;
+    border-radius: 5px !important;
+  }
+  .tax-tree-vn {
+    font-size: 0.92rem !important;
+    line-height: 1.25 !important;
+  }
+  .tax-tree-lat {
+    font-size: 0.85rem !important;
+    line-height: 1.25 !important;
+  }
+  .tax-tree-vn--current {
+    font-size: 0.98rem !important;
+    line-height: 1.25 !important;
+  }
+  .tax-tree-lat--current {
+    font-size: 0.9rem !important;
+    line-height: 1.25 !important;
+  }
+  .tax-tree-author {
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+  }
+  .worms-dossier-grid {
+    grid-template-columns: 1fr !important;
+    gap: 6px !important;
+  }
+  .worms-tile {
+    padding: 7px 10px !important;
+    gap: 2px !important;
+    border-radius: 6px !important;
+  }
+  .worms-tile__label {
+    font-size: 0.68rem !important;
+  }
+  .worms-tile__sub {
+    font-size: 0.73rem !important;
+    line-height: 1.3 !important;
+  }
+  .specimen-synonyms-list {
+    gap: 6px !important;
+  }
+  .specimen-synonym-item {
+    padding: 6px 10px !important;
+    gap: 8px !important;
+  }
+  .specimen-synonym-text {
+    font-size: 0.78rem !important;
+    line-height: 1.45 !important;
+  }
+}
+
+/* Dark mode */
+[data-theme="dark"] .tax-tree-node {
+  background: var(--color-paper-2);
+  border-color: var(--color-rule-2);
+}
+
+[data-theme="dark"] .tax-tree-node:hover {
+  background: var(--color-paper-3);
+}
+
+[data-theme="dark"] .tax-tree-node--current {
+  background: rgba(0, 212, 184, 0.1) !important;
+  border-color: rgba(0, 212, 184, 0.4) !important;
+}
+
+[data-theme="dark"] .tax-tree-vn--current {
+  color: var(--color-ink);
+}
+
+[data-theme="dark"] .tax-tree-lat--current {
+  color: #00f0d0;
+}
+
+[data-theme="dark"] .worms-tile {
+  background: var(--color-paper-2);
+  border-color: var(--color-rule-2);
+}
+
+[data-theme="dark"] .worms-tile:hover {
+  border-color: rgba(0, 212, 184, 0.4);
+}
+
+[data-theme="dark"] .specimen-synonym-item {
+  background: var(--color-paper-2);
+}
+
+[data-theme="dark"] .specimen-synonym-text i,
+[data-theme="dark"] .specimen-synonym-text em {
+  color: var(--color-ink);
+}
+

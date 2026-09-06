@@ -1,0 +1,289 @@
+/* ═══════════════════════════════════════════
+   SECTION BROWSE — Volume cards (index.html)
+   ═══════════════════════════════════════════ */
+.section-browse {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto var(--space-5xl);
+  padding: 0 var(--space-xl);
+}
+
+.section-browse-header { margin-bottom: var(--space-2xl); }
+
+.section-browse-label {
+  font-family: var(--font-outlier);
+  font-size: var(--text-xs);
+  color: var(--color-navy-raw);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.section-browse-title {
+  font-size: var(--text-2xl);
+  color: var(--color-navy-raw);
+  line-height: var(--lh-snug);
+}
+
+/* ─── Vol grid on index ─── */
+.vol-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+.vol-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  text-decoration: none;
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), outline-color var(--dur-fast) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.vol-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-navy-raw);
+  outline-color: var(--color-cyan-raw);
+}
+
+.vol-card:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.vol-card-num {
+  font-size: var(--text-4xl);
+  font-weight: 900;
+  font-family: var(--font-body);
+  line-height: 1;
+  opacity: 0.85;
+  letter-spacing: -0.04em;
+}
+
+.vol-card-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-navy-raw);
+  margin-top: var(--space-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.vol-card-count {
+  font-family: var(--font-outlier);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-top: var(--space-2xs);
+}
+
+.vol-card-status {
+  font-family: var(--font-outlier);
+  font-size: var(--text-xs);
+  margin-top: var(--space-xs);
+  font-weight: 600;
+  color: var(--color-warning);
+}
+
+/* ═══════════════════════════════════════════
+   PAGE HEADER (browse.html, tap.html)
+   ═══════════════════════════════════════════ */
+.page-header {
+  margin-bottom: var(--space-3xl);
+}
+
+.page-header h1 { margin-bottom: var(--space-sm); }
+
+.page-header p {
+  color: var(--color-ink-3);
+  font-size: var(--text-lg);
+}
+
+/* ═══════════════════════════════════════════
+   CATALOGUE — Volume Tabs + Species Cards (tap.html)
+   Macrostructure: Catalogue
+   ═══════════════════════════════════════════ */
+.vol-tabs {
+  display: flex;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.vol-tab {
+  padding: var(--space-xs) var(--space-lg);
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-pill);
+  color: var(--color-ink-3);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  font-family: var(--font-outlier);
+  transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+  cursor: pointer;
+  letter-spacing: 0.04em;
+}
+
+.vol-tab:hover {
+  border-color: var(--color-navy-raw);
+  color: var(--color-navy-raw);
+  transform: translateY(-1px);
+}
+
+.vol-tab.active {
+  background: var(--color-navy-raw);
+  border-color: var(--color-navy-raw);
+  color: var(--color-cyan-raw);
+  box-shadow: var(--shadow-md);
+}
+
+.vol-tab:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.vol-tab:active { transform: translateY(0); transition-duration: var(--dur-instant); }
+
+/* ─── Species mini cards ─── */
+.grid-species {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-lg);
+}
+
+.species-card-mini {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), outline-color var(--dur-fast) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.scm-thumb {
+  width: 100%;
+  height: 180px;
+  background: var(--color-paper);
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.scm-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-normal) var(--ease-out);
+}
+
+.species-card-mini:hover .scm-thumb img {
+  transform: scale(1.05);
+}
+
+.scm-thumb-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--color-paper-3);
+}
+
+.scm-content {
+  padding: var(--space-lg) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.species-card-mini::after {
+  content: '→';
+  position: absolute;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  color: var(--color-navy-raw);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+
+.species-card-mini:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-navy-raw);
+  box-shadow: var(--shadow-md);
+  outline-color: var(--color-cyan-raw);
+}
+
+.species-card-mini:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.species-card-mini:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.species-card-mini:active { transform: translateY(0); transition-duration: var(--dur-instant); }
+
+.scm-id {
+  font-family: var(--font-outlier);
+  font-weight: 800;
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.scm-name {
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--color-navy-raw);
+  line-height: var(--lh-snug);
+  margin-bottom: var(--space-2xs);
+  overflow-wrap: anywhere;
+}
+
+.scm-sci {
+  color: var(--color-ink-3);
+  font-style: italic;
+  font-size: var(--text-sm);
+  line-height: var(--lh-snug);
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+  overflow-wrap: anywhere;
+}
+
+.scm-tax {
+
+  font-family: var(--font-outlier);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-rule-2);
+  padding-top: var(--space-sm);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.scm-thumb {
+  width: calc(100% + 2 * var(--space-lg));
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  margin: calc(-1 * var(--space-lg)) calc(-1 * var(--space-lg)) var(--space-md);
+}
+
