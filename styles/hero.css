@@ -62,11 +62,13 @@
   font-weight: 400;
 }
 
-/* Hero live stats */
+/* Hero live stats — Hallmark 3-column symmetrical grid */
 .hero__stats {
-  display: flex;
-  align-items: flex-start;   /* numbers always top-align, labels can vary */
-  gap: var(--space-xl);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  width: 100%;
+  max-width: 440px;
   margin-top: var(--space-2xl);
   animation: fadeUp 0.6s var(--ease-out) 0.3s both;
 }
@@ -76,28 +78,34 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-.hero__stat { text-align: center; }
+.hero__stat {
+  text-align: center;
+  min-width: 0;
+}
 .hero__stat-num {
   display: block;
-  font-size: 2rem;
+  font-size: clamp(1.6rem, 5vw, 2rem);
   font-weight: 800;
   color: var(--color-navy-raw);
-  line-height: 1;
+  line-height: 1.1;
   font-variant-numeric: tabular-nums;  /* all digits same width — no shifting */
 }
 .hero__stat-label {
-  font-size: 0.85rem;
+  display: block;
+  font-size: clamp(0.76rem, 2.4vw, 0.85rem);
   color: var(--color-ink-a70);
-  margin-top: 0.25rem;
+  margin-top: 0.35rem;
   white-space: nowrap;                  /* prevent multi-line label */
+  letter-spacing: 0.01em;
 }
 .hero__stat-divider {
   width: 1px;
-  height: 2rem;
+  height: 28px;
   background: var(--color-ink-a70);
   opacity: 0.25;
   flex-shrink: 0;
-  margin-top: 0.2rem;   /* align with number baseline */
+  margin: 0 var(--space-xs);
+  align-self: center;
 }
 
 /* ─── Search Box ─── */

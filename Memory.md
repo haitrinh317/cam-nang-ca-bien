@@ -1,6 +1,6 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-06 10:02 (Tách 11 CSS modules, fix 404 species detail, khóa thẳng hàng baseline & responsive mobile Thẻ Định Danh)
+> **Cập nhật lần cuối:** 2026-09-06 10:42 (/understand full rebuild — 405 nodes, 455 edges, 8 layers, 12 tour steps, .ua/knowledge-graph.json 298KB)
 > **Production URL:** https://cam-nang-ca-bien.vercel.app / https://www.tracuusinhvatbien.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
@@ -177,3 +177,19 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 - Tailwind **KHÔNG DÙNG** (Vanilla CSS only)
 - Deploy: `git push` + `vercel --prod --yes`
 - Scripts Python: credentials từ `.env` / `os.environ`
+
+---
+
+## 🗺️ Knowledge Graph (`.ua/`)
+
+| Chỉ số | Giá trị |
+|---|---|
+| Nodes | 405 |
+| Edges | 455 |
+| Layers | 8 (DB, Lib, API, Components, Pages, Scripts, Styles, Config) |
+| Tour steps | 12 bước (tiếng Việt) |
+| Analyzed at | 2026-09-06 10:36 |
+| Commit | `99115b9959ec8c2cd707b4be1ce75cad44359ef0` |
+| Dashboard | `npm run dev --prefix .understand-anything-plugin/packages/dashboard` → port 4242 |
+
+**Ghi chú incremental update:** Lần sau chạy `/understand` sẽ detect tự động files thay đổi kể từ commit `99115b9` và chỉ re-analyze những files đó (nhanh hơn nhiều).

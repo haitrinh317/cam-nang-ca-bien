@@ -1,0 +1,3 @@
+# 1. Supabase PostgreSQL làm Single Source of Truth (SSOT)
+
+Dự án ban đầu lưu trữ dữ liệu rải rác trên các file JSON cục bộ (`data/species.json`, file OCR batch), dẫn đến nguy cơ lệch pha dữ liệu, khó quản lý phân quyền và không hỗ trợ đồng bộ thời gian thực. Chúng tôi quyết định chuyển đổi 100% CSDL của toàn bộ 2,436 loài sang Supabase PostgreSQL (bảng `species`, `species_photos`, `collections`, `user_roles`) có bảo vệ bởi Row Level Security (RLS) và REST API. Quyết định này giúp tập trung hóa việc tra cứu, kiểm định WoRMS và quản trị CRUD an toàn, biến các file JSON local thành bản lưu trữ tĩnh (cold backup) không còn quyền can thiệp vào luồng chạy ứng dụng.

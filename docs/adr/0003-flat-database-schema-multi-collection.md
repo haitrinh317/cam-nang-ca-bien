@@ -1,0 +1,3 @@
+# 3. Flat Database Schema Cho Bảng Species Đa Bộ Sưu Tập
+
+Khi mở rộng hệ thống từ 1,764 loài cá biển sang 672 loài thực vật biển và các bộ sưu tập tương lai, chúng tôi cân nhắc giữa việc tách bảng riêng cho từng bộ sưu tập, dùng mô hình EAV (Entity-Attribute-Value), hoặc giữ Flat Schema. Chúng tôi quyết định duy trì cấu trúc bảng phẳng `species` thống nhất với khóa ngoại `collection_id`, lưu trữ các thuộc tính phân loại, thực địa và sinh học trong các cột chuyên biệt và JSONB nhẹ (`biology`). Giải pháp này giúp loại bỏ hoàn toàn các câu lệnh JOIN đa tầng nặng nề, tối ưu hóa tốc độ truy vấn đơn giản (Ponytail pattern), dễ dàng lập chỉ mục tìm kiếm văn bản toàn diện (trigram / full-text search) và đồng bộ trơn tru qua Supabase client.

@@ -199,8 +199,15 @@
    RESPONSIVE — 480px
    ═══════════════════════════════════════════ */
 @media (max-width: 480px) {
-  .hero { padding: var(--space-xl) var(--space-md) var(--space-md); }
-  .hero__stats { margin-top: var(--space-lg); }
+  .hero { padding: var(--space-xl) var(--space-sm) var(--space-md); }
+  .hero__stats {
+    margin-top: var(--space-lg);
+    max-width: 100%;
+  }
+  .hero__stat-divider {
+    margin: 0 var(--space-2xs);
+    height: 24px;
+  }
   .section-browse { margin-bottom: var(--space-2xl); }
   .section-browse-header { margin-bottom: var(--space-lg); }
   .hero h1 { font-size: clamp(1.75rem, 10vw, 2.5rem); }
@@ -215,6 +222,16 @@
   .specimen__section { padding: var(--space-lg) var(--space-md); }
   .specimen details.synonym-details { margin: 0 var(--space-md) var(--space-md); }
   .specimen .biology-panel { margin: 0 var(--space-md) var(--space-md); }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVE — 360px (Ultra-compact mobile)
+   ═══════════════════════════════════════════ */
+@media (max-width: 360px) {
+  .hero { padding: var(--space-lg) var(--space-xs) var(--space-sm); }
+  .hero__stat-num { font-size: 1.45rem; }
+  .hero__stat-label { font-size: 0.72rem; }
+  .hero__stat-divider { margin: 0 2px; }
 }
 
 

@@ -5,6 +5,7 @@
 > **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Trang tra cứu /ca-bien đã được thiết kế lại tối ưu: GlobalSearch cross-tập + Phân chia 2 đầu sách chính quy + Compact List View text-only cắt giảm 99% data transfer.
 
 ## ✅ Hoàn thành mới nhất (2026-09-06)
+- [x] **Khắc phục lệch text & tràn viền Hero Stats trên Mobile theo /hallmark**: Chuyển đổi `.hero__stats` sang CSS Grid 3 cột đối xứng 100% (`minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr)`), căn giữa hoàn hảo cột Họ (`168 Họ`) tại trung tâm card, co giãn Type Scale clamp cho số liệu và nhãn chữ `Tài liệu gốc`, triệt tiêu dứt điểm lỗi tràn viền và lệch trục trên mọi kích thước màn hình điện thoại (320px - 414px).
 - [x] **Responsive Mobile Thẻ Định Danh Tên Gọi (.specimen-identity-card)**: Chuyển sang bố cục dọc 2 hàng độc lập trên mobile (<= 640px) kèm đường kẻ chấm hairline tinh tế chuẩn `/hallmark`, khắc phục triệt để lỗi rớt từng chữ xuống dòng và tràn mép màn hình.
 - [x] **Khóa thẳng hàng đường chân chữ (Baseline) Thẻ Định Danh Tên Gọi**: Đổi `.specimen-identity-label` thành `display: inline-block`, icon SVG dùng `vertical-align: -1.5px`, `.specimen-identity-col` dùng `align-items: baseline; gap: 6px;` giúp nhãn in hoa và giá trị chữ thường bám phẳng tắp trên cùng một đường chân chữ.
 - [x] **Tách `globals.css` (124KB) thành 11 CSS modules**: Tách CSS monolith thành 11 modules (`hero.css`, `browse.css`, `catalogue.css`, `specimen.css`, `responsive.css`, `about.css`, `buttons.css`, `mobile.css`, `faq.css`, `book-browser.css`, `dark-mode.css`) tối ưu hóa dung lượng tải theo từng trang.
@@ -270,3 +271,7 @@
 - [x] Kiểm tra biên dịch TypeScript (`npx tsc --noEmit`) đạt 100% exit code 0.
 
 
+
+### Session 2026-09-06 (Sáng)
+- [x] Build Knowledge Graph toàn bộ codebase bằng /understand — 183 files, 405 nodes, 455 edges, 8 layers, 12 tour steps (2026-09-06)
+- [x] Dashboard tại http://127.0.0.1:4242 (chạy manually: cd ~/.understand-anything-plugin/packages/dashboard && npm run dev)
