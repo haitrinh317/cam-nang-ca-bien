@@ -1,6 +1,6 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-06 09:43 (Tách 11 CSS modules, fix 404 species detail, khóa thẳng hàng baseline Thẻ Định Danh)
+> **Cập nhật lần cuối:** 2026-09-06 10:02 (Tách 11 CSS modules, fix 404 species detail, khóa thẳng hàng baseline & responsive mobile Thẻ Định Danh)
 > **Production URL:** https://cam-nang-ca-bien.vercel.app / https://www.tracuusinhvatbien.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
