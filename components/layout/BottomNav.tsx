@@ -2,42 +2,28 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { Home, Fish, Leaf, Shrimp } from 'lucide-react'
 
 const TABS = [
   {
     href: '/',
     label: 'Trang chủ',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-        <polyline points="9 22 9 12 15 12 15 22"/>
-      </svg>
-    ),
+    icon: <Home size={20} strokeWidth={2} aria-hidden="true" />,
   },
   {
     href: '/ca-bien',
     label: 'Cá biển',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M6.5 12c0-3.5 2.5-7 8.5-9-1 3-1 6 0 9s1 6 0 9c-6-2-8.5-5.5-8.5-9z"/>
-        <path d="M15 12h4"/>
-        <path d="M19 9l2 3-2 3"/>
-        <circle cx="8" cy="11" r="1" fill="currentColor" stroke="none"/>
-      </svg>
-    ),
+    icon: <Fish size={20} strokeWidth={2} aria-hidden="true" />,
   },
   {
     href: '/thuc-vat-bien',
     label: 'Rong biển',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M12 22V12"/>
-        <path d="M12 12C12 8 9 5 5 5c0 4 3 7 7 7z"/>
-        <path d="M12 12c0-4 3-7 7-7-1 4-4 7-7 7z"/>
-        <path d="M12 17c0-3 2-5 5-5-1 3-3 5-5 5z"/>
-        <path d="M12 17c0-3-2-5-5-5 1 3 3 5 5 5z"/>
-      </svg>
-    ),
+    icon: <Leaf size={20} strokeWidth={2} aria-hidden="true" />,
+  },
+  {
+    href: '/giap-xac',
+    label: 'Giáp xác',
+    icon: <Shrimp size={20} strokeWidth={2} aria-hidden="true" />,
   },
 ]
 
@@ -60,8 +46,17 @@ export function BottomNav() {
           const diff = currentY - lastScrollY.current
 
           // Thresholds to prevent jitter
-          if (currentY <= 40) {
-            // Near top: always visible
+          const docHeight = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.offsetHeight
+          )
+          const windowHeight = window.innerHeight || document.documentElement.clientHeight || 0
+          const isNearBottom = currentY + windowHeight >= docHeight - 70
+
+          if (currentY <= 40 || isNearBottom) {
+            // Near top or near bottom: always visible
             setIsHidden(false)
           } else if (diff > 12 && currentY > 80) {
             // Scrolling DOWN fast enough: hide

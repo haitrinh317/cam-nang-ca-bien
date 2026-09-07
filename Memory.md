@@ -1,17 +1,17 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-06 10:42 (/understand full rebuild — 405 nodes, 455 edges, 8 layers, 12 tour steps, .ua/knowledge-graph.json 298KB)
+> **Cập nhật lần cuối:** 2026-09-08 (Hoàn thành 100% Giáp xác biển 132 loài: OCR + WoRMS + 40.2% ảnh iNaturalist + Cập nhật Frontend)
 > **Production URL:** https://cam-nang-ca-bien.vercel.app / https://www.tracuusinhvatbien.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
 
 ---
 
-## 📊 Kiểm Kê Dữ Liệu (Supabase — 2026-09-04)
+## 📊 Kiểm Kê Dữ Liệu (Supabase — 2026-09-08)
 
-### Tổng: 2,436 loài (1,764 cá biển + 672 thực vật biển)
+### Tổng: 2,568 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác biển)
 
-| Collection | Tập | Loài | WoRMS | Biology | Trạng thái |
+| Collection | Tập | Loài | WoRMS | Biology / Morphology | Trạng thái |
 |---|:---:|:---:|:---:|:---:|---|
 | `ca-bien` | I | 100 | 100% | 100% | ✅ Hoàn chỉnh |
 | `ca-bien` | II | 266 | 100% | 100% | ✅ Hoàn chỉnh |
@@ -21,6 +21,7 @@
 | `ca-bien` | VI (Atlas) | 263 | 100% | 100% | ✅ 98.5% ảnh iNaturalist |
 | `thuc-vat-bien` | 1 (Tsutsui) | 201 | 100% | 100% | ✅ Hoàn chỉnh |
 | `thuc-vat-bien` | 2 (PHH 1969) | 471 | 100% | 100% | ✅ 471 ảnh tiêu bản 300 DPI |
+| `giap-xac` | 1 (ĐVC: Tôm biển) | 132 | 100% | 100% | ✅ 100% OCR + WoRMS + 40.2% ảnh iNat |
 
 ---
 
@@ -51,9 +52,9 @@ Deploy: git push origin master + vercel --prod --yes
 
 | Table | Mô tả |
 |---|---|
-| `species` | 2,436 loài, `collection_id` FK, flat schema |
+| `species` | 2,568 loài, `collection_id` FK, flat schema |
 | `species_photos` | Ảnh loài (Supabase Storage bucket `species-photos`) |
-| `collections` | Registry: `ca-bien`, `thuc-vat-bien` |
+| `collections` | Registry: `ca-bien`, `thuc-vat-bien`, `giap-xac` |
 | `literature_sources` | Sách tham khảo hiển thị trên homepage (CRUD từ admin) |
 | `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
 | `audit_log` | Nhật ký thay đổi (jsonb old/new) |

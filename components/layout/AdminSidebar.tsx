@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import AuthStatus from '@/components/layout/AuthStatus'
-import { BarChart3, Fish, Leaf, BookOpen, ExternalLink } from 'lucide-react'
+import { BarChart3, Fish, Leaf, Shrimp, BookOpen, ExternalLink } from 'lucide-react'
 
 interface NavItem {
   href: string
@@ -26,7 +26,7 @@ const NAV_GROUPS: { section: string; items: NavItem[] }[] = [
     items: [
       { href: '/admin/ca-bien', icon: <Fish size={18} />, label: 'Cá biển Việt Nam', badge: '1.764' },
       { href: '/admin/thuc-vat-bien', icon: <Leaf size={18} />, label: 'Thực vật biển', badge: '201' },
-      { href: '/admin/giap-xac', icon: <span style={{ fontSize: '18px', lineHeight: 1 }}>🦐</span>, label: 'Giáp xác biển', badge: '132' },
+      { href: '/admin/giap-xac', icon: <Shrimp size={18} />, label: 'Giáp xác biển', badge: '132' },
     ],
   },
 ]

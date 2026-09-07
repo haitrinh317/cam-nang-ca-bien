@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import { t } from '@/lib/i18n'
 import { getActiveCollections } from '@/lib/collections'
 import HeaderControls from './HeaderControls'
-import { Fish, Leaf } from 'lucide-react'
+import { Fish, Leaf, Shrimp } from 'lucide-react'
 
 export default function Nav() {
   const pathname = usePathname()
@@ -41,7 +41,15 @@ export default function Nav() {
               onClick={() => setMenuOpen(false)}
             >
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                {col.slug === 'ca-bien' ? <Fish size={16} /> : col.slug === 'thuc-vat-bien' ? <Leaf size={16} /> : col.icon}
+                {col.slug === 'ca-bien' ? (
+                  <Fish size={16} />
+                ) : col.slug === 'thuc-vat-bien' ? (
+                  <Leaf size={16} />
+                ) : col.slug === 'giap-xac' ? (
+                  <Shrimp size={16} />
+                ) : (
+                  col.icon
+                )}
                 {col.nameVn}
               </span>
             </Link>

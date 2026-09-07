@@ -25,10 +25,11 @@ from dotenv import load_dotenv
 sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
 
 # ── Config ──────────────────────────────────────────────────────────
+load_dotenv(Path(__file__).resolve().parent.parent / ".env.local")
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
-SUPABASE_URL = os.environ.get("SUPABASE_URL") or os.environ["NEXT_PUBLIC_SUPABASE_URL"]
-SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_KEY") or os.environ["SUPABASE_SERVICE_ROLE_KEY"]
+SUPABASE_URL = os.environ.get("SUPABASE_URL") or os.environ.get("NEXT_PUBLIC_SUPABASE_URL")
+SUPABASE_KEY = os.environ.get("SUPABASE_SERVICE_KEY") or os.environ.get("SUPABASE_SERVICE_ROLE_KEY") or os.environ.get("NEXT_PUBLIC_SUPABASE_ANON_KEY")
 BUCKET = "species-photos"
 COLLECTION = "ca-bien"
 INAT_API = "https://api.inaturalist.org/v1"
@@ -312,15 +313,19 @@ def process_species(sp, idx, total, dry_run=False):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Fetch iNaturalist photos for ca-bien species")
-    parser.add_argument("--volume", type=int, default=None, help="Process only specific volume (e.g. 6)")
+    parser = argparse.ArgumentParser(description="Fetch iNaturalist photos for marine species")
+    parser.add_argument("--collection", default="ca-bien", help="Collection ID (e.g. ca-bien, giap-xac, thuc-vat-bien)")
+    parser.add_argument("--volume", type=int, default=None, help="Process only specific volume (e.g. 1)")
     parser.add_argument("--limit", type=int, default=0, help="Process only N species (0 = all)")
     parser.add_argument("--offset", type=int, default=0, help="Skip first N species")
     parser.add_argument("--dry-run", action="store_true", help="Preview only, don't download/upload")
     args = parser.parse_args()
 
+    global COLLECTION
+    COLLECTION = args.collection
+
     print("=" * 60)
-    print("🐟 iNaturalist Photo Fetcher — Cẩm Nang Cá Biển VN")
+    print(f"📸 iNaturalist Photo Fetcher — Collection: {COLLECTION}")
     if args.volume:
         print(f"   Chỉ áp dụng cho: Tập {args.volume}")
     print("=" * 60)
@@ -328,7 +333,7 @@ def main():
     # Get all species
     print("\n📋 Loading species from Supabase...")
     all_species = get_all_species(volume=args.volume)
-    print(f"   Total ca-bien species: {len(all_species)}")
+    print(f"   Total {COLLECTION} species: {len(all_species)}")
 
     # Get existing photos (for incremental)
     existing = get_existing_photo_species()

@@ -678,7 +678,21 @@
     ],
     "biology": {
       "gbifKey": 2418524,
-      "iucnStatus": "EN"
+      "iucnStatus": "EN",
+      "fbSpecCode": 816,
+      "source": "FishBase v25.04",
+      "fbName": "Blackspotted catshark",
+      "maxLength": "49.0 cm TL",
+      "depth": "80 - 100 m",
+      "vulnerability": 39.0,
+      "importance": "of no interest",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Found on the continental shelf; sublittoral zone above 100 m (Ref. 11230).  Oviparous, but with several egg-capsules retained in the oviduct until the embryos reach an advanced stage before they are laid which might be regarded as being intermediate between oviparity and ovoviviparity. Diet unknown, but presumably dominated by small invertebrates and fishes. Caught irregularly by demersal longline fisheries operating offshore. Utilized for its meat but of limited value due to its small size (Ref.58048).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Oviparous, females depositing between 6-12 oval-shaped egg cases (Ref.58048). Eggs are kept in the oviduct until ready to be hatched. Reproductive strategy lies midway between oviparity and ovoviviparity. Species however, is classified as oviparous.",
+      "biologySummaryVn": "Phân bố ở khu vực thềm lục địa; vùng dưới triều ở độ sâu nông hơn 100 m (Ref. 11230). Sinh sản theo hình thức đẻ trứng, tuy nhiên một số bao trứng được giữ lại trong ống dẫn trứng cho đến khi phôi phát triển đến giai đoạn muộn trước khi được đẻ ra ngoài; đặc điểm này có thể được coi là dạng trung gian giữa đẻ trứng và noãn thai sinh. Thành phần thức ăn chưa được nghiên cứu đầy đủ, nhưng nhiều khả năng thức ăn chủ yếu gồm các loài động vật không xương sống nhỏ và cá. Thỉnh thoảng bị mắc lưới trong các hoạt động đánh bắt bằng nghề câu đáy ngoài khơi. Được sử dụng để lấy thịt nhưng giá trị thương mại hạn chế do kích thước cơ thể nhỏ (Ref. 58048).",
+      "reproductionNotesVn": "Thuộc nhóm loài đẻ trứng, cá cái đẻ khoảng 6–12 bao trứng có hình bầu dục (Ref. 58048). Trứng được lưu giữ trong ống dẫn trứng cho đến khi sẵn sàng nở. Chiến lược sinh sản nằm ở khoảng trung gian giữa đẻ trứng và noãn thai sinh. Mặc dù vậy, loài này vẫn được phân loại chính thức thuộc nhóm đẻ trứng."
     }
   },
   {
@@ -811,7 +825,27 @@
       "Stegostoma (Scyllium) fasciatum Guichenot, Mem. Soc. Sci. Cherbourg, ser. 2, Vol. 2, p. 148, 1866: Madagascar."
     ],
     "biology": {
-      "gbifKey": 2417450
+      "gbifKey": 2417450,
+      "fbSpecCode": 5374,
+      "source": "FishBase v25.04",
+      "fbName": "Zebra shark",
+      "maxLength": "354.0 cm TL",
+      "depth": "0 - 90 m",
+      "vulnerability": 90.0,
+      "importance": "minor commercial",
+      "priceCategory": "unknown",
+      "aquaculture": "never/rarely",
+      "dangerous": "traumatogenic",
+      "biologySummary": "A tropical inshore shark found on sand, rubble, or coral bottoms of the continental and insular shelves (Ref. 247).  Recorded to have entered freshwater (Ref. 4735).  Rather sluggish at least during the day (Ref. 247).  Probably nocturnal, feeds mainly on mollusks, but also small bony fishes (Ref. 9993).  Also known to eat crustaceans (crabs and shrimps) and sea snakes (Ref. 43278).  Oviparous (Ref. 43278, 50449).  Slow-swimming and able to squirm into narrow cracks, crevices and channel in reefs while searching for food (Ref. 247).  Readily kept in captivity (Ref. 247).  May bite when provoked (Ref. 247).  Utilized fresh and dried-salted for human consumption and also for fishmeal; livers processed for vitamins; fins dried for the oriental sharkfin trade; offal utilized for fishmeal (Ref. 247).  Possibly reaching 354 cm TL (Ref. 9993, 47613).  Caught in drift net intended for sharks (Ref. 47736).  Reported from freshwater in the Philippines but needs to be confirmed (Ref. 43278).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 3.1,
+      "habitat": "Neritic, Coral reefs, Benthic, Soft bottom, Rocky, Rubble",
+      "ecologyNotes": "Inhabits rocky and coral reefs (Ref. 9137).  A tropical inshore shark found on sand, rubble, or coral bottoms of the continental and insular shelves (Refs. 247, 9773, 129713).  Recorded to have entered freshwater (Ref. 4735).  Rather sluggish at least during the day (Ref. 247).   Nocturnal, feeds mainly on mollusks, bivalves, small bony fishes and crabs (Refs. 9993, 129713). Slow-swimming and able to squirm into narrow cracks, crevices and channel in reefs while searching for food (Ref. 247).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Oviparous (Ref. 247). Egg cases are large, dark brown or purplish black, with longitudinal striations (Ref. 6871). Size at birth 20-26 cm TL (Ref. 9993).",
+      "biologySummaryVn": "Là loài cá nhám ven bờ vùng nhiệt đới, được tìm thấy trên nền đáy cát, vụn san hô hoặc rạn san hô thuộc thềm lục địa và thềm quanh đảo (Ref. 247). Đã có ghi nhận loài này đi vào vùng nước ngọt (Ref. 4735). Khá chậm chạp, ít nhất là vào ban ngày (Ref. 247). Thường hoạt động về đêm, thức ăn chủ yếu gồm các loài thân mềm, ngoài ra còn có các loài cá xương nhỏ (Ref. 9993). Chúng cũng được biết đến là ăn giáp xác (cua và tôm) và rắn biển (Ref. 43278). Loài đẻ trứng (Ref. 43278, 50449). Bơi chậm và có khả năng lách vào các khe hẹp, kẽ đá và rãnh trong rạn san hô khi kiếm ăn (Ref. 247). Dễ thích nghi khi nuôi trong môi trường nhân tạo (Ref. 247). Có thể cắn khi bị kích động (Ref. 247). Được sử dụng ở dạng tươi sống và phơi khô muối để làm thực phẩm cho con người, cũng như làm bột cá; gan được chế biến để lấy vitamin; vây được phơi khô phục vụ cho việc buôn bán vây cá mập phương Đông; phế phẩm được tận dụng làm bột cá (Ref. 247). Chiều dài tổng số (TL) có thể đạt tới 354 cm (Ref. 9993, 47613). Bị đánh bắt bằng lưới trôi chuyên dụng đánh bắt cá mập (Ref. 47736). Được báo cáo xuất hiện ở vùng nước ngọt tại Philippines nhưng cần được xác nhận thêm (Ref. 43278).",
+      "ecologyNotesVn": "Sống ở các rạn đá và rạn san hô (Ref. 9137). Là loài cá nhám ven bờ vùng nhiệt đới, được tìm thấy trên nền đáy cát, vụn san hô hoặc rạn san hô thuộc thềm lục địa và thềm quanh đảo (Refs. 247, 9773, 129713). Đã có ghi nhận loài này đi vào vùng nước ngọt (Ref. 4735). Khá chậm chạp, ít nhất là vào ban ngày (Ref. 247). Hoạt động về đêm, thức ăn chủ yếu gồm các loài thân mềm, động vật hai mảnh vỏ, cá xương nhỏ và cua (Refs. 9993, 129713). Bơi chậm và có khả năng lách vào các khe hẹp, kẽ đá và rãnh trong rạn san hô khi kiếm ăn (Ref. 247).",
+      "reproductionNotesVn": "Đẻ trứng (Ref. 247). Bao trứng lớn, có màu nâu sẫm hoặc đen ánh tím, với các sọc dọc (Ref. 6871). Kích thước khi mới nở đạt 20-26 cm TL (Ref. 9993)."
     }
   },
   {
@@ -1145,7 +1179,25 @@
     ],
     "biology": {
       "gbifKey": 2418836,
-      "iucnStatus": "VU"
+      "iucnStatus": "VU",
+      "fbSpecCode": 5922,
+      "source": "FishBase v25.04",
+      "fbName": "Graceful catshark",
+      "maxLength": "57.0 cm TL",
+      "depth": "50 - 100 m",
+      "vulnerability": 46.0,
+      "importance": "subsistence fisheries",
+      "priceCategory": "unknown",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "A little-known, uncommon bottom-dwelling shark found on the shelves of continental and insular waters (Ref. 244).  Dwell on the sublittoral zone, 50-320 m (Ref. 11230).  Food habits little known; probably feeding on bony fishes, crustaceans and cephalopods (Ref. 244).  Oviparous (Ref. 50449), with 1 to 2 pups in a litter (Ref. 244).",
+      "feedingType": "hunting macrofauna (predator)",
+      "ecologyNotes": "A little-known, uncommon bottom-dwellingshark found on the shelves of continental and insular waters. Food habits little known; probably feeding on bony fishes, crustaceans and cephalopod.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Oviparous, with a single egg deposited per uterus (Ref. 244).  Embryos feed solely on yolk (Ref. 50449).",
+      "biologySummaryVn": "Một loài cá mập tầng đáy ít được biết đến và hiếm gặp, phân bố ở vùng thềm lục địa và thềm quanh đảo (Ref. 244). Sống ở vùng dưới triều, độ sâu từ 50–320 m (Ref. 11230). Tập tính dinh dưỡng chưa được nghiên cứu nhiều; thức ăn có thể bao gồm cá xương, giáp xác và thân mềm chân đầu (Ref. 244). Đẻ trứng (Ref. 50449), mỗi lứa sinh từ 1 đến 2 con non (Ref. 244).",
+      "ecologyNotesVn": "Một loài cá mập tầng đáy ít được biết đến và hiếm gặp, tìm thấy trên thềm lục địa và thềm quanh đảo. Tập tính dinh dưỡng ít được biết đến; thức ăn chủ yếu có thể gồm cá xương, giáp xác và thân mềm chân đầu.",
+      "reproductionNotesVn": "Hình thức sinh sản đẻ trứng, mỗi tử cung tiết ra một trứng duy nhất (Ref. 244). Phôi phát triển hoàn toàn nhờ nguồn dinh dưỡng từ noãn hoàng (Ref. 50449)."
     }
   },
   {
@@ -1402,7 +1454,27 @@
     ],
     "biology": {
       "gbifKey": 2418332,
-      "iucnStatus": "EN"
+      "iucnStatus": "EN",
+      "fbSpecCode": 5931,
+      "source": "FishBase v25.04",
+      "fbName": "Spotless smooth-hound",
+      "maxLength": "87.0 cm TL",
+      "longevity": "9.0 năm",
+      "depth": "5 - 300 m",
+      "vulnerability": 59.01,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "An inshore bottom-dwelling shark found down to at least 51 m (Ref. 244); also dwells in semi-enclosed sea areas with sand bottom (Ref. 11230).  Probably feeds on benthic invertebrates, especially crustaceans (Ref. 13563).  Viviparous, with a yolk-sac placenta (Ref. 244).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 3.5,
+      "ecologyNotes": "An inshore bottom-dwelling shark found down to at least 51 m. Probably feeds on benthic invertebrates, especially crustaceans (Ref. 244). Also in Ref. 9137. A carnivore (Ref. 9137).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Viviparous with a yolk-sac placenta. Produces 5 to 16 young per litter, with larger adults having larger litters of young. Gestation period is 10 months, birth occurring in April and May. Size at birth about 28 cm (Ref. 244).",
+      "biologySummaryVn": "Là loài cá mập ven bờ sống tầng đáy, phân bố đến độ sâu ít nhất 51 m (Ref. 244); loài này cũng cư trú tại các vùng biển bán khép kín có đáy cát (Ref. 11230). Thức ăn chủ yếu có thể gồm các động vật không xương sống tầng đáy, đặc biệt là loài giáp xác (Ref. 13563). Đẻ con (thai sinh), có nhau thai túi noãn hoàng (Ref. 244).",
+      "ecologyNotesVn": "Là loài cá mập ven bờ sống tầng đáy, được tìm thấy ở độ sâu ít nhất 51 m. Thức ăn chủ yếu có thể là các loài động vật không xương sống tầng đáy, đặc biệt là giáp xác (Ref. 244, Ref. 9137). Thuộc nhóm động vật ăn thịt (Ref. 9137).",
+      "reproductionNotesVn": "Đẻ con (thai sinh) với nhau thai túi noãn hoàng. Mỗi lứa sinh từ 5 đến 16 con non, cá thể trưởng thành kích thước lớn hơn sẽ cho lứa con đông hơn. Thời gian mang thai kéo dài 10 tháng, cá đẻ con vào tháng 4 và tháng 5. Kích thước cá con khi sinh khoảng 28 cm (Ref. 244)."
     }
   },
   {
@@ -1521,7 +1593,20 @@
       "Triakis venustum Chen, Quar. Jour. Taiwan Mus., Vol. 1, No. 2, p. 32, 1948."
     ],
     "biology": {
-      "gbifKey": 2418838
+      "gbifKey": 2418838,
+      "fbSpecCode": 58720,
+      "source": "FishBase v25.04",
+      "maxLength": "60.0 cm TL",
+      "depth": "50 - 100 m",
+      "vulnerability": 44.0,
+      "priceCategory": "unknown",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Oviparous (Ref. 50449).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Oviparous, paired eggs are laid.  Embryos feed solely on yolk (Ref. 50449).",
+      "biologySummaryVn": "Loài đẻ trứng (Ref. 50449).",
+      "reproductionNotesVn": "Hình thức sinh sản đẻ trứng, trứng được đẻ theo từng cặp. Phôi thai phát triển hoàn toàn nhờ nguồn dinh dưỡng từ túi noãn hoàng (Ref. 50449)."
     }
   },
   {
@@ -1570,7 +1655,21 @@
       "Negogaleus longicaudatus Bessednov, 1966, New species sharks from Gulf of Tonkin, Jour. Zool., p. 45."
     ],
     "biology": {
-      "gbifKey": 2418767
+      "gbifKey": 2418767,
+      "fbSpecCode": 57442,
+      "source": "FishBase v25.04",
+      "fbName": "Slender weasel shark",
+      "maxLength": "48.3 cm OT",
+      "depth": "1 - 18 m",
+      "vulnerability": 64.8,
+      "priceCategory": "unknown",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Viviparous (Ref. 50449). Lives in shallow water to 18m depth on the continental shelf (Ref. 93009).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Viviparous, placental (Ref. 50449).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Đẻ con (thai sinh) (Ref. 50449). Sống ở vùng nước nông đến độ sâu 18 m trên thềm lục địa (Ref. 93009).",
+      "reproductionNotesVn": "Đẻ con (thai sinh), có nhau thai (Ref. 50449). Có hành vi bắt cặp rõ ràng và ôm ghì nhau khi giao phối (Ref. 205)."
     }
   },
   {
@@ -1618,7 +1717,25 @@
     ],
     "biology": {
       "gbifKey": 2418755,
-      "iucnStatus": "VU"
+      "iucnStatus": "VU",
+      "fbSpecCode": 5897,
+      "source": "FishBase v25.04",
+      "fbName": "Sicklefin weasel shark",
+      "maxLength": "135.0 cm TL",
+      "maxWeight": "14,000 g",
+      "vulnerability": 81.0,
+      "importance": "minor commercial",
+      "priceCategory": "unknown",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "A small, relatively common inshore and offshore shark of tropical continental seas (Ref. 13567).  Feeds mainly on cephalopods, particularly octopi (Ref. 13567) but also takes crustaceans and cephalopods (Ref. 244).  Viviparous (Ref. 50449).  Taken regularly in inshore artisanal fisheries (Ref.244), commonly caught by inshore gillnet, bottom trawl and, to a lesser extent, longline fisheries. Utilized for human consumption (Ref. 244). Offal used for fishmeal (Ref. 244).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 4.16,
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "parentalCare": "maternal",
+      "reproductionNotes": "Viviparous, with a yolk-sac placenta; 4 to 14 fetuses in a litter (Ref. 13567); 2-4 pups after a gestation period of about 6 months; born at about 45-47 cm TL (Ref. 58048). Size of full-term fetuses (detached umbilical cords and placentae) ranges from 23.7 to 25.6 cm (Ref. 244). Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Một loài cá mập kích thước nhỏ, tương đối phổ biến ở các vùng biển lục địa nhiệt đới ven bờ và ngoài khơi (Ref. 13567). Thức ăn chủ yếu gồm các loài chân đầu, đặc biệt là bạch tuộc (Ref. 13567), nhưng cũng ăn cả giáp xác và các nhóm chân đầu khác (Ref. 244). Hình thức sinh sản là đẻ con (Ref. 50449). Loài này thường xuyên được khai thác trong các hoạt động nghề cá thủ công ven bờ (Ref. 244), phổ biến nhất bằng lưới rê ven bờ, lưới kéo đáy và ở mức độ ít hơn bằng nghề câu longline. Được sử dụng làm thực phẩm cho con người (Ref. 244). Phụ phẩm đánh bắt được dùng làm bột cá (Ref. 244).",
+      "reproductionNotesVn": "Đẻ con (thai sinh), có nhau thai túi noãn hoàng; mỗi lứa đẻ có từ 4 đến 14 thai nhi (Ref. 13567); sinh 2-4 con non sau thời gian mang thai khoảng 6 tháng; cá con sinh ra đạt chiều dài tổng thể (TL) khoảng 45-47 cm (Ref. 58048). Kích thước của thai nhi đủ tháng (đã rụng dây rốn và nhau thai) dao động từ 23,7 đến 25,6 cm (Ref. 244). Có hành vi ghép đôi rõ rệt kèm sự ôm siết khi giao phối (Ref. 205)."
     }
   },
   {
@@ -1666,7 +1783,25 @@
     ],
     "biology": {
       "gbifKey": 2418755,
-      "iucnStatus": "VU"
+      "iucnStatus": "VU",
+      "fbSpecCode": 5897,
+      "source": "FishBase v25.04",
+      "fbName": "Sicklefin weasel shark",
+      "maxLength": "135.0 cm TL",
+      "maxWeight": "14,000 g",
+      "vulnerability": 81.0,
+      "importance": "minor commercial",
+      "priceCategory": "unknown",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "A small, relatively common inshore and offshore shark of tropical continental seas (Ref. 13567).  Feeds mainly on cephalopods, particularly octopi (Ref. 13567) but also takes crustaceans and cephalopods (Ref. 244).  Viviparous (Ref. 50449).  Taken regularly in inshore artisanal fisheries (Ref.244), commonly caught by inshore gillnet, bottom trawl and, to a lesser extent, longline fisheries. Utilized for human consumption (Ref. 244). Offal used for fishmeal (Ref. 244).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 4.16,
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "parentalCare": "maternal",
+      "reproductionNotes": "Viviparous, with a yolk-sac placenta; 4 to 14 fetuses in a litter (Ref. 13567); 2-4 pups after a gestation period of about 6 months; born at about 45-47 cm TL (Ref. 58048). Size of full-term fetuses (detached umbilical cords and placentae) ranges from 23.7 to 25.6 cm (Ref. 244). Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Là một loài cá mập nhỏ, tương đối phổ biến ở vùng biển ven bờ và ngoài khơi thuộc các vùng biển lục địa nhiệt đới (Ref. 13567). Thức ăn chủ yếu gồm các loài động vật chân đầu, đặc biệt là bạch tuộc (Ref. 13567), ngoài ra chúng cũng ăn các loài giáp xác và động vật chân đầu khác (Ref. 244). Đẻ con (thai sinh) (Ref. 50449). Thường xuyên bị khai thác bởi các hoạt động nghề cá thủ công ven bờ (Ref. 244), thường bị đánh bắt bằng lưới rê ven bờ, lưới kéo đáy và ở mức độ ít hơn là nghề câu giăng. Được sử dụng làm thực phẩm cho con người (Ref. 244). Phế phẩm được dùng để chế biến bột cá (Ref. 244).",
+      "reproductionNotesVn": "Đẻ con (thai sinh), có nhau thai túi noãn hoàng; mỗi lứa đẻ có từ 4 đến 14 phôi thai (Ref. 13567); sinh ra từ 2 đến 4 con non sau thời gian mang thai khoảng 6 tháng; chiều dài khi sinh đạt khoảng 45-47 cm TL (chiều dài tổng) (Ref. 58048). Kích thước của phôi thai đủ tháng (đã rụng dây rốn và nhau thai) dao động từ 23,7 đến 25,6 cm (Ref. 244). Có hành vi giao phối ghép đôi rõ rệt kèm theo sự ôm giữ (Ref. 205)."
     }
   },
   {
@@ -1714,7 +1849,26 @@
     ],
     "biology": {
       "gbifKey": 2418756,
-      "iucnStatus": "VU"
+      "iucnStatus": "VU",
+      "fbSpecCode": 5896,
+      "source": "FishBase v25.04",
+      "fbName": "Hooktooth shark",
+      "maxLength": "100.0 cm TL",
+      "depth": "đến 59 m",
+      "vulnerability": 60.0,
+      "importance": "minor commercial",
+      "priceCategory": "unknown",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "A common inshore and offshore shark found on the continental and insular shelves (Ref. 13567).  Probably feeds on small fishes, cephalopods, and crustaceans (Ref. 244).  Viviparous (Ref. 50449).  Caught irregularly by inshore gillnet fisheries and occasionally by small-scale longlining (Ref.58048). Probably taken by artisanal fisheries wherever it occurs (Ref. 13567).  Utilized fresh for human consumption and by-products processed into fishmeal (Ref. 244).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Neritic",
+      "ecologyNotes": "A common inshore and offshore shark found on the continental and insular shelves.Probably feeds on small fishes, cephalopods, and crustaceans.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Viviparous (with a yolk-sac placenta), with 4 young in a litter (Ref. 244). Size at birth at least 20 cm (Ref. 244).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Là loài cá mập phổ biến ở vùng biển ven bờ và ngoài khơi, phân bố trên các thềm lục địa và thềm quanh đảo (Ref. 13567). Thức ăn chủ yếu có thể bao gồm các loài cá nhỏ, động vật chân đầu và giáp xác (Ref. 244). Sinh sản theo hình thức đẻ con (Ref. 50449). Loài này thỉnh thoảng bị bắt bởi các hoạt động đánh bắt bằng lưới rê ven bờ và đôi khi bằng nghề câu dây quy mô nhỏ (Ref. 58048). Có thể bị khai thác bởi nghề cá thủ công ở hầu hết các khu vực phân bố của chúng (Ref. 13567). Được sử dụng ở dạng tươi làm thực phẩm cho con người và phụ phẩm được chế biến thành bột cá (Ref. 244).",
+      "ecologyNotesVn": "Là loài cá mập phổ biến ở vùng biển ven bờ và ngoài khơi, phân bố trên các thềm lục địa và thềm quanh đảo. Thức ăn chủ yếu có thể bao gồm các loài cá nhỏ, động vật chân đầu và giáp xác.",
+      "reproductionNotesVn": "Đẻ con (với nhau thai túi noãn hoàng), mỗi lứa đẻ gồm 4 cá con (Ref. 244). Kích thước cá con khi sinh đạt ít nhất 20 cm (Ref. 244). Có hành vi ghép đôi rõ rệt và ôm quấn khi giao phối (Ref. 205)."
     }
   },
   {
@@ -1762,7 +1916,26 @@
     ],
     "biology": {
       "gbifKey": 2418756,
-      "iucnStatus": "VU"
+      "iucnStatus": "VU",
+      "fbSpecCode": 5896,
+      "source": "FishBase v25.04",
+      "fbName": "Hooktooth shark",
+      "maxLength": "100.0 cm TL",
+      "depth": "đến 59 m",
+      "vulnerability": 60.0,
+      "importance": "minor commercial",
+      "priceCategory": "unknown",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "A common inshore and offshore shark found on the continental and insular shelves (Ref. 13567).  Probably feeds on small fishes, cephalopods, and crustaceans (Ref. 244).  Viviparous (Ref. 50449).  Caught irregularly by inshore gillnet fisheries and occasionally by small-scale longlining (Ref.58048). Probably taken by artisanal fisheries wherever it occurs (Ref. 13567).  Utilized fresh for human consumption and by-products processed into fishmeal (Ref. 244).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Neritic",
+      "ecologyNotes": "A common inshore and offshore shark found on the continental and insular shelves.Probably feeds on small fishes, cephalopods, and crustaceans.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Viviparous (with a yolk-sac placenta), with 4 young in a litter (Ref. 244). Size at birth at least 20 cm (Ref. 244).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Là loài cá mập phổ biến ở vùng ven bờ và ngoài khơi, sinh sống trên thềm lục địa và thềm quanh đảo (Trích dẫn 13567). Thức ăn chủ yếu có thể gồm cá nhỏ, các loài chân đầu và giáp xác (Trích dẫn 244). Hình thức sinh sản: đẻ con (thai sinh) (Trích dẫn 50449). Cá bị đánh bắt không thường xuyên bởi nghề lưới rê ven bờ và thỉnh thoảng bằng nghề câu dây quy mô nhỏ (Trích dẫn 58048). Nhiều khả năng loài này bị khai thác bởi các hoạt động đánh bắt thủ công ở khắp những nơi chúng xuất hiện (Trích dẫn 13567). Được sử dụng ở dạng tươi làm thực phẩm và phụ phẩm được chế biến thành bột cá (Trích dẫn 244).",
+      "ecologyNotesVn": "Là loài cá mập phổ biến ở vùng ven bờ và ngoài khơi, sinh sống trên thềm lục địa và thềm quanh đảo. Thức ăn chủ yếu có thể gồm cá nhỏ, các loài chân đầu và giáp xác.",
+      "reproductionNotesVn": "Đẻ con (thai sinh với nhau thai túi noãn hoàng), mỗi lứa sinh 4 con non (Trích dẫn 244). Kích thước con non khi sinh đạt ít nhất 20 cm (Trích dẫn 244). Có tập tính ghép đôi giao phối ôm giữ rõ ràng (Trích dẫn 205)."
     }
   },
   {
@@ -1812,7 +1985,27 @@
     "biology": {
       "gbifKey": 5215649,
       "iucnStatus": "EN",
-      "morphDescription": "(Figs. 4 D, 15 A – D) One specimen (SL- 78) of Hemipristis elongata was collected from the deep-sea longline fishery in Mutur, Trincomalee Harbor in the Eastern Province. That specimen was morphologically consistent with H. elongata. It clustered most closely with our reference specimen (KA- 22; JQ 519069) of this species collected from Indonesian, Borneo in the tree resulting from the Neighbor-Joining analysis, and differed from the latter specimen by only a single bp. This specimen has been deposited in the BRT Ichthyology Collection (BRT-I 0018). This is the name currently applied to this species in Sri Lanka (e. g., De Silva 1984 – 1985, 2006, 2015; De Bruin et al. 1995; Morón et al. 1998; Joseph 1999)."
+      "morphDescription": "(Figs. 4 D, 15 A – D) One specimen (SL- 78) of Hemipristis elongata was collected from the deep-sea longline fishery in Mutur, Trincomalee Harbor in the Eastern Province. That specimen was morphologically consistent with H. elongata. It clustered most closely with our reference specimen (KA- 22; JQ 519069) of this species collected from Indonesian, Borneo in the tree resulting from the Neighbor-Joining analysis, and differed from the latter specimen by only a single bp. This specimen has been deposited in the BRT Ichthyology Collection (BRT-I 0018). This is the name currently applied to this species in Sri Lanka (e. g., De Silva 1984 – 1985, 2006, 2015; De Bruin et al. 1995; Morón et al. 1998; Joseph 1999).",
+      "fbSpecCode": 5898,
+      "source": "FishBase v25.04",
+      "fbName": "Snaggletooth shark",
+      "maxLength": "259.0 cm TL",
+      "maxWeight": "63,000 g",
+      "depth": "1 - 130 m",
+      "vulnerability": 90.0,
+      "importance": "commercial",
+      "priceCategory": "unknown",
+      "aquaculture": "never/rarely",
+      "dangerous": "traumatogenic",
+      "biologySummary": "A coastal species, found inshore and offshore on the continental and insular shelves (Ref. 244).  Feeds on sharks, rays and bony fishes (Ref. 244); also cephalopods (Ref. 13567).  Viviparous (Ref. 50449).  Thought to be potentially dangerous because of its large, fearsome teeth and shallow-water habitat, but has not been recorded in an attack on people (Ref. 244).  Caught regularly by inshore gillnet, bottom trawl (occasionally) and longline fisheries (Ref.58048). Regularly taken in artisanal fisheries (Ref. 13567).  Utilized fresh for human consumption, liver processed for vitamins, fins used in the oriental shark fin trade, and by-products processed into fishmeal (Ref. 244).  Most adults below 200 cm (Ref. 30573).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 4.31,
+      "ecologyNotes": "Occurs on the continental shelf (Ref. 75154).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Viviparous, with 2 to 11 young in a litter (Ref. 6871) after a gestation period of 7-8 months; possibly reproduces in alternate years (Ref.58048).  Size at birth about 45-52 cm TL (Ref. 13567, Ref.58048).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Là một loài cá ven bờ, được tìm thấy ở cả vùng nước ven bờ và ngoài khơi trên các thềm lục địa và thềm quanh đảo (Ref. 244). Thức ăn chủ yếu gồm các loài cá mập, cá đuối và cá xương (Ref. 244); ngoài ra còn có các loài chân đầu (Ref. 13567). Là loài đẻ con (thai sinh) (Ref. 50449). Được cho là có khả năng gây nguy hiểm do sở hữu hàm răng lớn, đáng sợ và sống ở vùng nước nông, nhưng chưa có ghi nhận nào về việc loài này tấn công con người (Ref. 244). Thường xuyên bị đánh bắt bằng lưới rê ven bờ, lưới kéo đáy (thỉnh thoảng) và nghề câu giăng (Ref. 58048). Thường xuyên bị khai thác trong các hoạt động nghề cá thủ công (Ref. 13567). Được sử dụng ở dạng tươi sống làm thực phẩm cho con người, gan được chế biến để chiết xuất vitamin, vây được sử dụng trong thương mại vi cá mập phương Đông, và các phụ phẩm được chế biến thành bột cá (Ref. 244). Hầu hết cá trưởng thành có chiều dài dưới 200 cm (Ref. 30573).",
+      "ecologyNotesVn": "Xuất hiện trên thềm lục địa (Ref. 75154).",
+      "reproductionNotesVn": "Là loài đẻ con (thai sinh), mỗi lứa đẻ từ 2 đến 11 con non (Ref. 6871) sau thời gian mang thai kéo dài 7-8 tháng; có thể sinh sản theo chu kỳ cách năm (Ref. 58048). Kích thước khi sinh khoảng 45-52 cm TL (Ref. 13567, Ref. 58048). Có sự ghép đôi rõ rệt kèm hành vi ôm giữ khi giao phối (Ref. 205)."
     }
   },
   {
@@ -1949,7 +2142,29 @@
     "biology": {
       "gbifKey": 2417866,
       "iucnStatus": "VU",
-      "morphDescription": "(Figs. 4 B, 14 I – J) The existence of undescribed diversity in the Rhizoprionodon acutus species complex complicates identification of the single specimen (SL- 21) of this complex we encountered in the Erinchamman Kovilady market in Point Pedro in the Northern Province. Based on the molecular and morphological data presented by Caira & Jensen (2015), the specimen from Sri Lanka is most similar to R. acutus from the Gulf of Oman, rather than to any of the numbered designations (i. e., Rhizoprionodon cf. acutus 1, Rhizoprionodon cf. acutus 2, and Rhizoprionodon cf. acutus 3) for the three undescribed members of this species complex recognized by Naylor et al. (2012 a). In the tree resulting from our Neighbor-Joining analysis, which included all seven described members of the genus and all three undescribed member of the R. acutus complex, the specimen from Sri Lanka grouped most closely with the reference specimen of R. acutus (MM- 4; JQ 518653) from the Gulf of Oman, differing from this specimen by only 1 bp. In contrast, it differed from our reference specimen of R. cf. acutus 1 from Senegal (SE- 219; JQ 518652) by 10 bp, from our reference specimen of R. cf. acutus 2 from Australia (AU- 120; JQ 518649) by 13 bp, and from our reference specimen of R. cf. acutus 3 from Malaysian Borneo (HBO- 30; JQ 519100) by 18 bp. This name is in current use for this species in Sri Lanka (e. g., De Silva 1984 – 1985, 2006, 2015; De Bruin et al. 1995; Joseph 1999)."
+      "morphDescription": "(Figs. 4 B, 14 I – J) The existence of undescribed diversity in the Rhizoprionodon acutus species complex complicates identification of the single specimen (SL- 21) of this complex we encountered in the Erinchamman Kovilady market in Point Pedro in the Northern Province. Based on the molecular and morphological data presented by Caira & Jensen (2015), the specimen from Sri Lanka is most similar to R. acutus from the Gulf of Oman, rather than to any of the numbered designations (i. e., Rhizoprionodon cf. acutus 1, Rhizoprionodon cf. acutus 2, and Rhizoprionodon cf. acutus 3) for the three undescribed members of this species complex recognized by Naylor et al. (2012 a). In the tree resulting from our Neighbor-Joining analysis, which included all seven described members of the genus and all three undescribed member of the R. acutus complex, the specimen from Sri Lanka grouped most closely with the reference specimen of R. acutus (MM- 4; JQ 518653) from the Gulf of Oman, differing from this specimen by only 1 bp. In contrast, it differed from our reference specimen of R. cf. acutus 1 from Senegal (SE- 219; JQ 518652) by 10 bp, from our reference specimen of R. cf. acutus 2 from Australia (AU- 120; JQ 518649) by 13 bp, and from our reference specimen of R. cf. acutus 3 from Malaysian Borneo (HBO- 30; JQ 519100) by 18 bp. This name is in current use for this species in Sri Lanka (e. g., De Silva 1984 – 1985, 2006, 2015; De Bruin et al. 1995; Joseph 1999).",
+      "fbSpecCode": 899,
+      "source": "FishBase v25.04",
+      "fbName": "Milk shark",
+      "maxLength": "175.0 cm TL",
+      "maxWeight": "5,040 g",
+      "longevity": "8.0 năm",
+      "depth": "1 - 200 m",
+      "vulnerability": 60.97,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Found on continental shelves, often on sandy beaches and rarely in estuaries (Ref. 244).  Reported to enter freshwater and recorded several times from Cambodia as far upstream as the Great Lake (Ref. 12693).  Occurs near the surface in shallow waters (Ref. 12693).  Feeds mainly on small pelagic and benthic bony fishes, also cephalopods and other invertebrates (Ref. 244).  Viviparous (Ref. 50449).  Utilized fresh and possibly dried salted for human consumption and for fishmeal (Ref. 9997).  The 178 cm specimen recorded off Africa is possibly based on some other species (Ref. 9997).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 4.25,
+      "habitat": "Estuaries",
+      "ecologyNotes": "Occurs on the continental shelf (Ref. 75154).  Feeds on a wide range of fish and invertebrates (Ref. 127989).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Distinct pairing with embrace (Ref. 205).  Viviparous, with a yolk-sac placenta; 2 to 8 in a litter (Ref. 9997), usually 2 to 5 after a gestation period of ~ 12 months; no seasonality in the reproductive cycle (Ref.58048).  Size at birth between 25 and 39 cm.",
+      "biologySummaryVn": "Được tìm thấy trên các thềm lục địa, thường xuất hiện ở các bãi cát ven biển và hiếm khi gặp ở vùng cửa sông (Ref. 244). Có báo cáo ghi nhận loài này đi vào vùng nước ngọt và được ghi nhận nhiều lần tại Campuchia, ngược dòng lên phía thượng nguồn đến tận vùng Biển Hồ (Ref. 12693). Thường xuất hiện gần bề mặt ở các vùng nước nông (Ref. 12693). Thức ăn chủ yếu gồm các loài cá xương nhỏ thuộc tầng nổi và tầng đáy, ngoài ra còn có động vật chân đầu và các loài động vật không xương sống khác (Ref. 244). Là loài đẻ con (thai sinh) (Ref. 50449). Được sử dụng ở dạng tươi sống hoặc có thể làm khô muối để làm thực phẩm cho con người, hoặc chế biến thành bột cá (Ref. 9997). Mẫu vật dài 178 cm được ghi nhận ngoài khơi châu Phi có khả năng là của một loài khác (Ref. 9997).",
+      "ecologyNotesVn": "Xuất hiện trên thềm lục địa (Ref. 75154). Thức ăn chủ yếu gồm nhiều loại cá và động vật không xương sống khác nhau (Ref. 127989).",
+      "reproductionNotesVn": "Có hành vi ghép đôi rõ rệt kèm theo sự ôm giữ khi giao phối (Ref. 205). Là loài đẻ con (thai sinh), có nhau thai túi noãn hoàng; mỗi lứa đẻ từ 2 đến 8 con non (Ref. 9997), thường là 2 đến 5 con sau thời gian mang thai khoảng 12 tháng; chu kỳ sinh sản không mang tính mùa vụ (Ref. 58048). Kích thước con non khi sinh đạt từ 25 đến 39 cm."
     }
   },
   {
@@ -2002,7 +2217,29 @@
     "biology": {
       "gbifKey": 2417866,
       "iucnStatus": "VU",
-      "morphDescription": "(Figs. 4 B, 14 I – J) The existence of undescribed diversity in the Rhizoprionodon acutus species complex complicates identification of the single specimen (SL- 21) of this complex we encountered in the Erinchamman Kovilady market in Point Pedro in the Northern Province. Based on the molecular and morphological data presented by Caira & Jensen (2015), the specimen from Sri Lanka is most similar to R. acutus from the Gulf of Oman, rather than to any of the numbered designations (i. e., Rhizoprionodon cf. acutus 1, Rhizoprionodon cf. acutus 2, and Rhizoprionodon cf. acutus 3) for the three undescribed members of this species complex recognized by Naylor et al. (2012 a). In the tree resulting from our Neighbor-Joining analysis, which included all seven described members of the genus and all three undescribed member of the R. acutus complex, the specimen from Sri Lanka grouped most closely with the reference specimen of R. acutus (MM- 4; JQ 518653) from the Gulf of Oman, differing from this specimen by only 1 bp. In contrast, it differed from our reference specimen of R. cf. acutus 1 from Senegal (SE- 219; JQ 518652) by 10 bp, from our reference specimen of R. cf. acutus 2 from Australia (AU- 120; JQ 518649) by 13 bp, and from our reference specimen of R. cf. acutus 3 from Malaysian Borneo (HBO- 30; JQ 519100) by 18 bp. This name is in current use for this species in Sri Lanka (e. g., De Silva 1984 – 1985, 2006, 2015; De Bruin et al. 1995; Joseph 1999)."
+      "morphDescription": "(Figs. 4 B, 14 I – J) The existence of undescribed diversity in the Rhizoprionodon acutus species complex complicates identification of the single specimen (SL- 21) of this complex we encountered in the Erinchamman Kovilady market in Point Pedro in the Northern Province. Based on the molecular and morphological data presented by Caira & Jensen (2015), the specimen from Sri Lanka is most similar to R. acutus from the Gulf of Oman, rather than to any of the numbered designations (i. e., Rhizoprionodon cf. acutus 1, Rhizoprionodon cf. acutus 2, and Rhizoprionodon cf. acutus 3) for the three undescribed members of this species complex recognized by Naylor et al. (2012 a). In the tree resulting from our Neighbor-Joining analysis, which included all seven described members of the genus and all three undescribed member of the R. acutus complex, the specimen from Sri Lanka grouped most closely with the reference specimen of R. acutus (MM- 4; JQ 518653) from the Gulf of Oman, differing from this specimen by only 1 bp. In contrast, it differed from our reference specimen of R. cf. acutus 1 from Senegal (SE- 219; JQ 518652) by 10 bp, from our reference specimen of R. cf. acutus 2 from Australia (AU- 120; JQ 518649) by 13 bp, and from our reference specimen of R. cf. acutus 3 from Malaysian Borneo (HBO- 30; JQ 519100) by 18 bp. This name is in current use for this species in Sri Lanka (e. g., De Silva 1984 – 1985, 2006, 2015; De Bruin et al. 1995; Joseph 1999).",
+      "fbSpecCode": 899,
+      "source": "FishBase v25.04",
+      "fbName": "Milk shark",
+      "maxLength": "175.0 cm TL",
+      "maxWeight": "5,040 g",
+      "longevity": "8.0 năm",
+      "depth": "1 - 200 m",
+      "vulnerability": 60.97,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Found on continental shelves, often on sandy beaches and rarely in estuaries (Ref. 244).  Reported to enter freshwater and recorded several times from Cambodia as far upstream as the Great Lake (Ref. 12693).  Occurs near the surface in shallow waters (Ref. 12693).  Feeds mainly on small pelagic and benthic bony fishes, also cephalopods and other invertebrates (Ref. 244).  Viviparous (Ref. 50449).  Utilized fresh and possibly dried salted for human consumption and for fishmeal (Ref. 9997).  The 178 cm specimen recorded off Africa is possibly based on some other species (Ref. 9997).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 4.25,
+      "habitat": "Estuaries",
+      "ecologyNotes": "Occurs on the continental shelf (Ref. 75154).  Feeds on a wide range of fish and invertebrates (Ref. 127989).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Distinct pairing with embrace (Ref. 205).  Viviparous, with a yolk-sac placenta; 2 to 8 in a litter (Ref. 9997), usually 2 to 5 after a gestation period of ~ 12 months; no seasonality in the reproductive cycle (Ref.58048).  Size at birth between 25 and 39 cm.",
+      "biologySummaryVn": "Được tìm thấy trên thềm lục địa, thường xuất hiện ở các bãi biển cát và hiếm khi gặp ở cửa sông (Ref. 244). Có ghi nhận loài này đi vào vùng nước ngọt và từng được ghi nhận nhiều lần ở Campuchia, ngược dòng lên tận Biển Hồ (Ref. 12693). Sống ở tầng mặt thuộc các vùng nước nông (Ref. 12693). Thức ăn chủ yếu gồm các loài cá xương nhỏ thuộc tầng nổi và tầng đáy, cũng như chân đầu và các động vật không xương sống khác (Ref. 244). Hình thức sinh sản đẻ con (Ref. 50449). Được khai thác làm thực phẩm ở dạng tươi hoặc có thể làm khô muối, ngoài ra còn dùng sản xuất bột cá (Ref. 9997). Mẫu vật dài 178 cm ghi nhận ngoài khơi châu Phi có thể dựa trên sự nhầm lẫn với một loài khác (Ref. 9997).",
+      "ecologyNotesVn": "Phân bố trên thềm lục địa (Ref. 75154). Thức ăn đa dạng, bao gồm nhiều loài cá và động vật không xương sống (Ref. 127989).",
+      "reproductionNotesVn": "Có hành vi ghép đôi rõ rệt đi kèm sự ôm phối hợp (Ref. 205). Hình thức sinh sản đẻ con (thai sinh), có nhau thai túi noãn hoàng; mỗi lứa đẻ từ 2 đến 8 con non (Ref. 9997), thông thường là 2 đến 5 con sau thời gian mang thai khoảng 12 tháng; chu kỳ sinh sản không mang tính mùa vụ (Ref. 58048). Kích thước con non khi sinh đạt từ 25 đến 39 cm."
     }
   },
   {
@@ -2053,7 +2290,26 @@
     ],
     "biology": {
       "gbifKey": 2417865,
-      "iucnStatus": "NT"
+      "iucnStatus": "NT",
+      "fbSpecCode": 906,
+      "source": "FishBase v25.04",
+      "fbName": "Spadenose shark",
+      "maxLength": "100.0 cm TL",
+      "longevity": "6.0 năm",
+      "depth": "10 - 13 m",
+      "vulnerability": 45.51,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Found on rocky substrates of coastal waters and lower reaches of tropical rivers (Ref. 244).  It is uncertain, however, if this species can live in perfectly fresh water for extended periods (Ref. 244).  Forms large schools (Ref. 244).  Adults feed on small bony fishes, shrimps and cuttlefish (Ref. 244).  Viviparous (Ref. 50449).  Common by-catch of the inshore demersal gillnet fisheries, particularly those operating off Kalimantan (Ref.58048). Utilized fresh for human consumption; processed into fishmeal and used as bait for other sharks and bony fishes (Ref. 244).  Maximum sizes up to 120 cm unconfirmed (Ref. 244).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 3.8,
+      "habitat": "Neritic, Soft bottom, Rocky",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Viviparous, with an unusual columnar placenta (Ref. 244).  Maternal and foetal placenta comprises the entire placenta (Ref. 39556).  Transplacental nutrient transfer may be hemotrophic (Ref. 39556).  Litter size varies from 1 (Ref. 58048) to 14 (Ref. 9997).  Size at birth about 13 to 15 cm TL (Ref. 9997).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Được tìm thấy trên các nền đáy đá ở vùng nước ven bờ và vùng hạ lưu của các con sông nhiệt đới (Ref. 244). Tuy nhiên, vẫn chưa chắc chắn liệu loài này có thể sống trong môi trường nước ngọt hoàn toàn trong thời gian dài hay không (Ref. 244). Loài này thường tập hợp thành các đàn lớn (Ref. 244). Cá trưởng thành có thức ăn chủ yếu gồm các loài cá xương nhỏ, tôm và mực nang (Ref. 244). Là loài đẻ con (thai sinh) (Ref. 50449). Đây là đối tượng đánh bắt phụ phổ biến của nghề khai thác lưới rê tầng đáy ven bờ, đặc biệt là các tàu hoạt động ngoài khơi Kalimantan (Ref. 58048). Được sử dụng ăn tươi làm thực phẩm cho con người; chế biến thành bột cá và làm mồi câu các loài cá mập cũng như cá xương khác (Ref. 244). Kích thước tối đa lên tới 120 cm chưa được xác nhận (Ref. 244).",
+      "reproductionNotesVn": "Đẻ con (thai sinh), với cấu trúc nhau thai dạng cột bất thường (Ref. 244). Nhau thai phía mẹ và phía phôi cấu thành nên toàn bộ nhau thai (Ref. 39556). Sự chuyển giao chất dinh dưỡng qua nhau thai có thể theo phương thức huyết dưỡng (hemotrophic) (Ref. 39556). Số lượng con non mỗi lứa dao động từ 1 (Ref. 58048) đến 14 con (Ref. 9997). Kích thước khi sinh khoảng 13 đến 15 cm chiều dài tổng (TL) (Ref. 9997). Có hành vi ghép đôi rõ rệt kèm theo sự ôm giữ khi giao phối (Ref. 205)."
     }
   },
   {
@@ -2103,7 +2359,27 @@
     ],
     "biology": {
       "gbifKey": 5215568,
-      "iucnStatus": "NT"
+      "iucnStatus": "NT",
+      "fbSpecCode": 894,
+      "source": "FishBase v25.04",
+      "fbName": "Sliteye shark",
+      "maxLength": "98.0 cm TL",
+      "depth": "7 - 100 m",
+      "vulnerability": 46.09,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Found on continental and insular shelves; mainly near the bottom (Ref. 6871).  Feeds on small bony fishes, shrimps and cuttlefish (Ref. 244).  Viviparous (Ref. 50449); gives birth annually to litters of 2-4 pups (Ref. 58048).  Caught in artisanal and small scale commercial fisheries (Ref. 9997).  Utilized fresh for human consumption (Ref. 244); meat and fins, but of limited value due to its small size (Ref. 58048).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 3.95,
+      "habitat": "Neritic",
+      "ecologyNotes": "Occurs on the continental shelf (Ref. 75154).  Feeds on fish, squids and shrimps (Ref. 5578).  Inhabits shallow, clear waters occuring inshore of the continental and insular shelves.  Occurs at depths 7-80m both near the surface and at the bottom (Ref. 9773).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Viviparous, with a yolk-sac placenta; 2-4 pups per litter.  Size at birth 40-43 cm; 54-55 cm TL (Ref.58048).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Được tìm thấy trên các thềm lục địa và thềm quanh đảo; chủ yếu sống gần tầng đáy (Ref. 6871). Thức ăn chủ yếu gồm các loài cá xương nhỏ, tôm và mực nang (Ref. 244). Là loài đẻ con (thai sinh) (Ref. 50449); sinh sản hàng năm với mỗi lứa đẻ từ 2-4 con non (Ref. 58048). Thường bị đánh bắt trong các hoạt động nghề cá thủ công và thương mại quy mô nhỏ (Ref. 9997). Được sử dụng ở dạng tươi sống làm thực phẩm cho con người (Ref. 244); chủ yếu lấy thịt và vây, nhưng có giá trị thương mại hạn chế do kích thước cơ thể nhỏ (Ref. 58048).",
+      "ecologyNotesVn": "Xuất hiện ở vùng thềm lục địa (Ref. 75154). Thức ăn chủ yếu gồm cá, mực ống và tôm (Ref. 5578). Sống ở các vùng nước nông, trong vắt thuộc khu vực ven bờ của thềm lục địa và thềm quanh đảo. Phân bố ở độ sâu từ 7-80m, xuất hiện cả ở gần tầng mặt lẫn tầng đáy (Ref. 9773).",
+      "reproductionNotesVn": "Là loài đẻ con (thai sinh), có nhau thai túi noãn hoàng; mỗi lứa đẻ từ 2-4 con non. Kích thước con non khi sinh đạt 40-43 cm; chiều dài tổng (TL) đạt 54-55 cm (Ref. 58048). Có tập tính ghép đôi rõ rệt kèm theo hành vi ôm giữ khi giao phối (Ref. 205)."
     }
   },
   {
@@ -2152,7 +2428,25 @@
       "Hypoprion atripinnis Chu, Trung Quốc nhuyễn cốt ngư loại chí, p.8, figs. 75-76, 1960."
     ],
     "biology": {
-      "gbifKey": 2418111
+      "gbifKey": 2418111,
+      "fbSpecCode": 871,
+      "source": "FishBase v25.04",
+      "fbName": "Pondicherry shark",
+      "maxLength": "200.0 cm TL",
+      "depth": "10 - 150 m",
+      "vulnerability": 90.0,
+      "importance": "subsistence fisheries",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "A little-known shark found on the continental and insular shelves (Ref. 244).  Reports from river mouths and rivers are based on old records that need verification (Ref. 9997).  Probably feeds on small fishes, cephalopods, and crustaceans (Ref. 9997).  Viviparous (Ref. 50449).  Utilized fresh for human consumption (Ref. 9997).",
+      "feedingType": "hunting macrofauna (predator)",
+      "ecologyNotes": "A little-known shark found on the continental and insular shelves. Reports from river mouths and rivers are based on old records that need verification. Probably feeds on small fishes, cephalopods, and crustaceans.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Distinct pairing with embrace (Ref. 205). Viviparous, placental (Ref. 50449).",
+      "biologySummaryVn": "Là một loài cá nhám ít được biết đến, phân bố ở vùng thềm lục địa và thềm quanh đảo (Ref. 244). Các ghi nhận về sự xuất hiện của loài này tại các cửa sông và sông ngòi đều dựa trên các tài liệu cũ và cần được xác minh lại (Ref. 9997). Thức ăn của chúng có thể chủ yếu gồm các loài cá nhỏ, động vật chân đầu và động vật giáp xác (Ref. 9997). Là loài đẻ con (thai sinh) (Ref. 50449). Được khai thác sử dụng ở dạng tươi sống làm thực phẩm cho con người (Ref. 9997).",
+      "ecologyNotesVn": "Là một loài cá nhám ít được biết đến, phân bố ở vùng thềm lục địa và thềm quanh đảo. Các ghi nhận về sự xuất hiện của loài này tại các cửa sông và sông ngòi đều dựa trên các tài liệu cũ và cần được xác minh lại. Thức ăn của chúng có thể chủ yếu gồm các loài cá nhỏ, động vật chân đầu và động vật giáp xác.",
+      "reproductionNotesVn": "Có tập tính ghép đôi rõ rệt kèm theo hành vi ôm giữ khi giao phối (Ref. 205). Là loài đẻ con (thai sinh), có nhau thai (Ref. 50449)."
     }
   },
   {
@@ -2200,7 +2494,27 @@
     ],
     "biology": {
       "gbifKey": 2417864,
-      "iucnStatus": "NT"
+      "iucnStatus": "NT",
+      "fbSpecCode": 876,
+      "source": "FishBase v25.04",
+      "fbName": "Hardnose shark",
+      "maxLength": "110.0 cm TL",
+      "depth": "đến 170 m",
+      "vulnerability": 66.0,
+      "importance": "minor commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Found in inshore and offshore waters of continental and insular shelves (Ref. 9997).  Feeds mainly on fishes, also cephalopods and crustaceans (Ref. 6871).  Viviparous (Ref. 50449).  Of limited interest to fisheries due to its small size (Ref. 9997).  Utilized fresh and probably dried-salted for human consumption (Ref. 244).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 4.22,
+      "habitat": "Neritic",
+      "ecologyNotes": "Found in inshore and offshore waters of continental and insular shelves (Refs. 9997, 9773).  Feeds mainly on fishes, also cephalopods and crustaceans (Ref. 6871).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Viviparous, placental (Ref. 50449).  1 or 2 (usually 2) in a litter (Ref. 244). Size at birth 45 to 50 cm TL (Ref. 9997).  Distinct pairing with embrace (Ref. 205). 12 months gestation period (Ref.58048).",
+      "biologySummaryVn": "Được tìm thấy ở các vùng nước ven bờ và ngoài khơi thuộc thềm lục địa và thềm quanh đảo (Ref. 9997). Thức ăn chủ yếu gồm các loài cá, ngoài ra còn có chân đầu và giáp xác (Ref. 6871). Đẻ con (thai sinh) (Ref. 50449). Ít có giá trị thương mại đối với ngành khai thác thủy sản do kích thước cơ thể nhỏ (Ref. 9997). Được sử dụng ở dạng tươi sống và có thể làm khô muối để làm thực phẩm cho con người (Ref. 244).",
+      "ecologyNotesVn": "Được tìm thấy ở các vùng nước ven bờ và ngoài khơi thuộc thềm lục địa và thềm quanh đảo (Refs. 9997, 9773). Thức ăn chủ yếu gồm các loài cá, ngoài ra còn có chân đầu và giáp xác (Ref. 6871).",
+      "reproductionNotesVn": "Đẻ con (thai sinh), có nhau thai (Ref. 50449). Mỗi lứa đẻ từ 1 đến 2 con (thường là 2) (Ref. 244). Kích thước khi sinh đạt từ 45 đến 50 cm chiều dài tổng (TL) (Ref. 9997). Có tập tính ghép đôi và ôm giữ rõ rệt khi giao phối (Ref. 205). Thời gian mang thai kéo dài 12 tháng (Ref. 58048)."
     }
   },
   {
@@ -2263,7 +2577,21 @@
     ],
     "biology": {
       "gbifKey": 5215563,
-      "iucnStatus": "CR"
+      "iucnStatus": "CR",
+      "fbSpecCode": 887,
+      "source": "FishBase v25.04",
+      "fbName": "Ganges shark",
+      "maxLength": "204.0 cm TL",
+      "vulnerability": 90.0,
+      "importance": "subsistence fisheries",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "traumatogenic",
+      "biologySummary": "Biology poorly known.  But its minute eyes suggest that it may be adapted to turbid water with poor visibility, as in large tropical rivers and muddy estuaries.  Newborn specimens are from 56 to 61 cm long.  Viviparous (Ref. 50449).  Its notoriety may have stemmed from its widespread confusion with <i>C. leucas</i>.  But this species is potentially dangerous as well because of its size and large teeth, though its reputation as a man-eater is still unproven.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Viviparous, placental (Ref. 50449).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Đặc điểm sinh học của loài này còn ít được biết đến. Tuy nhiên, đôi mắt rất nhỏ của chúng cho thấy loài này có thể thích nghi với môi trường nước đục có tầm nhìn kém, như ở các con sông lớn vùng nhiệt đới và vùng cửa sông nhiều bùn. Các mẫu vật mới sinh có chiều dài từ 56 đến 61 cm. Đây là loài đẻ con (thai sinh) (Ref. 50449). Sự khét tiếng của loài này có thể bắt nguồn từ việc bị nhầm lẫn rộng rãi với loài <i>C. leucas</i>. Tuy nhiên, loài này cũng tiềm ẩn nguy hiểm do kích thước lớn và hàm răng to, mặc dù danh tiếng là loài ăn thịt người của chúng vẫn chưa được chứng minh.",
+      "reproductionNotesVn": "Đẻ con (thai sinh), có nhau thai (Ref. 50449). Có hành vi ghép đôi rõ rệt kèm theo sự ôm giữ khi giao phối (Ref. 205)."
     }
   },
   {
@@ -2469,7 +2797,31 @@
     "biology": {
       "gbifKey": 2418095,
       "iucnStatus": "VU",
-      "morphDescription": "Silky Shark. To about 3.5 m (11.5 ft) TL (Weigmann 2016). Circumglobal; western Pacific Ocean at least as far northward as Ryukyu Islands (Yoshino and Aonuma in Nakabo 2002); Lagunas Ojo de Liebre-Guerrero Negro, central Baja California (Galván-Magaña et al. 2000) to northern Chile (Grove and Lavenberg 1997), including Gulf of California (Compagno et al. in Fischer et al. 1995), and Islas Galápagos (Grove and Lavenberg 1997). Depth: surface to 500 m (1,640 ft) or more (min.: Ebert et al. 2013; max.: Compagno 1984)."
+      "morphDescription": "Silky Shark. To about 3.5 m (11.5 ft) TL (Weigmann 2016). Circumglobal; western Pacific Ocean at least as far northward as Ryukyu Islands (Yoshino and Aonuma in Nakabo 2002); Lagunas Ojo de Liebre-Guerrero Negro, central Baja California (Galván-Magaña et al. 2000) to northern Chile (Grove and Lavenberg 1997), including Gulf of California (Compagno et al. in Fischer et al. 1995), and Islas Galápagos (Grove and Lavenberg 1997). Depth: surface to 500 m (1,640 ft) or more (min.: Ebert et al. 2013; max.: Compagno 1984).",
+      "fbSpecCode": 868,
+      "source": "FishBase v25.04",
+      "fbName": "Silky shark",
+      "maxLength": "350.0 cm TL",
+      "maxWeight": "346,000 g",
+      "longevity": "25.0 năm",
+      "depth": "0 - 4000 m",
+      "vulnerability": 82.14,
+      "importance": "highly commercial",
+      "priceCategory": "high",
+      "aquaculture": "never/rarely",
+      "dangerous": "traumatogenic",
+      "biologySummary": "Found abundantly near the edge of continental and insular shelves, but also in the open sea and occasionally inshore (Ref. 244).  Often found in deepwater reefs and near insular slopes (Ref. 244).  Littoral and epipelagic, in the open sea or near the bottom at 18-500 m (Ref. 58302).  It is quick-moving and aggressive (Ref. 244).  Solitary (Ref. 26340); often associated with schools of tuna (Ref. 244).  Feeds mainly on fishes, but also squid, paper nautiluses, and pelagic crabs (Ref. 244; 37816).  Viviparous (Ref. 50449).  Regarded as dangerous to humans (Ref. 9997).  Flesh utilized fresh and dried-salted for human consumption; its hide for leather; its fin for shark-fin soup; its liver for oil (Ref. 244).  2 to 14 young, 73 to 87 cm, are born per litter (Ref. 1602).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 4.51,
+      "habitat": "Neritic",
+      "ecologyNotes": "Viviparous.  Fish is main food source but occasionally eats cephalopods and pelagic crustaceans (Ref. 127989).  Often found over deepwater reefs and near insular slopes. When approached by divers, individuals have been seen to perform a 'hunch display', with back arched, head raised and caudal fin lowered, possibly as a defensive threat display. Associated with schools of tuna, causing damage to nets and catches. Referred to as the `net-eater shark' in the tropical eastern Pacific. Also in Ref. 9137.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "spawning": "no obvious seasonal peak",
+      "parentalCare": "maternal",
+      "reproductionNotes": "Viviparous, placental (Ref. 50449).  2-15 pups (Ref. 6871, 37816) born at 57-87 cm TL (Ref. 9997); 1-16 pups born at 55-72 cm TL. Females appear to breed every year, but there appears to be no reproductive seasonality (Ref. 58048).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Được tìm thấy với số lượng phong phú gần rìa thềm lục địa và thềm quanh đảo, nhưng cũng xuất hiện ở vùng biển khơi và đôi khi ở vùng ven bờ (TLTK 244). Thường gặp tại các rạn san hô vùng nước sâu và gần các sườn dốc quanh đảo (TLTK 244). Loài này sống ở vùng ven bờ và tầng khơi mặt (epipelagic), ngoài biển khơi hoặc gần đáy ở độ sâu từ 18 đến 500 m (TLTK 58302). Đây là loài di chuyển nhanh và hung dữ (TLTK 244). Sống đơn độc (TLTK 26340); thường đi kèm với các đàn cá ngừ (TLTK 244). Thức ăn chủ yếu gồm các loài cá, ngoài ra còn có mực ống, ốc anh vũ giấy và cua tầng nổi (TLTK 244; 37816). Đẻ con (thai sinh) (TLTK 50449). Được coi là loài nguy hiểm đối với con người (TLTK 9997). Thịt cá được sử dụng ở dạng tươi sống hoặc phơi khô muối để làm thực phẩm cho con người; da được dùng làm đồ da; vây dùng để nấu súp vây cá mập; gan dùng để chiết xuất dầu gan cá (TLTK 244). Mỗi lứa đẻ từ 2 đến 14 con non, với chiều dài lúc sinh đạt từ 73 đến 87 cm (TLTK 1602).",
+      "ecologyNotesVn": "Đẻ con (thai sinh). Cá là nguồn thức ăn chính, nhưng đôi khi chúng cũng ăn các loài chân đầu và giáp xác tầng nổi (TLTK 127989). Thường được tìm thấy phía trên các rạn san hô vùng nước sâu và gần các sườn dốc quanh đảo. Khi có thợ lặn tiếp cận, các cá thể được quan sát thấy thực hiện hành vi \"gù lưng đe dọa\" (hunch display) với phần lưng gù lên, đầu ngẩng cao và vây đuôi hạ thấp, có thể là một biểu hiện đe dọa mang tính phòng thủ. Thường đi theo các đàn cá ngừ, gây hư hại cho lưới và sản lượng đánh bắt. Loài này được gọi là \"cá mập phá lưới\" ở vùng biển nhiệt đới phía đông Thái Bình Dương. Cũng được ghi nhận trong TLTK 9137.",
+      "reproductionNotesVn": "Đẻ con (thai sinh), có nhau thai (TLTK 50449). Mỗi lứa đẻ từ 2 đến 15 con non (TLTK 6871, 37816) với chiều dài tổng thể (TL) khi sinh đạt 57–87 cm (TLTK 9997); hoặc từ 1 đến 16 con non với chiều dài tổng thể khi sinh đạt 55–72 cm. Cá cái dường như sinh sản hàng năm, nhưng không thể hiện tính mùa vụ trong sinh sản (TLTK 58048). Có hành vi ghép đôi rõ rệt kèm theo sự ôm giữ khi giao phối (TLTK 205)."
     }
   },
   {
@@ -2738,7 +3090,29 @@
     "biology": {
       "gbifKey": 2417988,
       "iucnStatus": "VU",
-      "morphDescription": "(Figs. 4 A, 14 A – D) One specimen morphologically consistent with Carcharhinus amblyrhynchoides (SL- 18) was examined near the main Erinchamman Kovilady market in Point Pedro in the Northern Province. It differed in NADH 2 sequence from our reference specimen of this species from Malaysian Borneo (HBO- 34; JQ 519102) by 8 bp. This name is in current use for this species in Sri Lanka (see De Silva 1984 – 1985, 2006, 2015; De Bruin et al. 1995; Morón et al. 1998)."
+      "morphDescription": "(Figs. 4 A, 14 A – D) One specimen morphologically consistent with Carcharhinus amblyrhynchoides (SL- 18) was examined near the main Erinchamman Kovilady market in Point Pedro in the Northern Province. It differed in NADH 2 sequence from our reference specimen of this species from Malaysian Borneo (HBO- 34; JQ 519102) by 8 bp. This name is in current use for this species in Sri Lanka (see De Silva 1984 – 1985, 2006, 2015; De Bruin et al. 1995; Morón et al. 1998).",
+      "fbSpecCode": 874,
+      "source": "FishBase v25.04",
+      "fbName": "Blacktip shark",
+      "maxLength": "286.0 cm TL",
+      "maxWeight": "122,750 g",
+      "longevity": "12.0 năm",
+      "depth": "0 - 140 m",
+      "vulnerability": 55.45,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "traumatogenic",
+      "biologySummary": "An inshore and offshore shark found on or adjacent to continental and insular shelves (Ref. 244).  Often off river mouths and estuaries, muddy bays, mangrove swamps, lagoons, and coral reef drop-offs (Ref. 244).  Bottom associated or pelagic (Ref. 58302).   Young common along beaches (Ref. 9710).  Active hunter in midwater (Ref. 5485).  Feeds mainly on pelagic and benthic fishes, also small sharks and rays, cephalopods and crustaceans (Ref. 5578; 37816).  Viviparous (Ref. 50449).  Produces litters of one to 10 young  (Ref. 26938, 1602).  Incriminated in very few attacks but dangerous when provoked (Ref. 244).  Often taken by shore anglers (Ref. 5485).  Used fresh for human consumption, hides for leather, liver for oil (Ref. 244).  Parthenogenesis has been observed in a captive female (Ref. 80664).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 4.37,
+      "habitat": "Neritic, Estuaries, Mangroves",
+      "ecologyNotes": "Occurs on the continental shelf (Ref. 75154).  Feeds on benthic invertebrates and fish (Ref. 11889).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Distinct pairing with embrace (Ref. 205).  Viviparous, with a yolk-sac placenta, 1 to 10 young per litter.  Gestation period is 10 to 12 months. Nursery and pupping grounds are located inshore where pregnant females go to drop their young.  Females are thought to spawn only every two years. Size at birth 38-72 cm (Ref. 244); 55-66 cm TL (Ref.58048).",
+      "biologySummaryVn": "Là loài cá mập ven bờ và ngoài khơi, phân bố trên hoặc cận kề thềm lục địa và thềm quanh đảo (TLTK 244). Chúng thường xuất hiện tại khu vực cửa sông, vùng nước lợ cửa sông, vịnh đáy bùn, rừng ngập mặn, đầm phá và các sườn dốc rạn san hô (TLTK 244). Loài này sống liên kết tầng đáy hoặc thuộc tầng nổi (TLTK 58302). Cá con thường phổ biến dọc theo các bãi biển (TLTK 9710). Đây là loài săn mồi tích cực ở tầng nước giữa (TLTK 5485), với thức ăn chủ yếu gồm các loài cá tầng nổi và cá tầng đáy, cũng như cá mập và cá đuối nhỏ, động vật chân đầu và động vật giáp xác (TLTK 5578; 37816). Chúng thuộc nhóm đẻ con (thai sinh) (TLTK 50449), mỗi lứa đẻ từ 1 đến 10 con non (TLTK 26938, 1602). Loài cá mập này rất ít khi liên quan đến các vụ tấn công con người nhưng có thể gây nguy hiểm khi bị kích động (TLTK 244). Chúng thường bị đánh bắt bởi ngư dân câu cá ven bờ (TLTK 5485). Thịt cá được sử dụng tươi làm thực phẩm cho con người, da được dùng làm đồ da và gan dùng để lấy dầu (TLTK 244). Hiện tượng trinh sản đã được quan sát thấy ở một cá thể cái trong môi trường nuôi nhốt (TLTK 80664).",
+      "ecologyNotesVn": "Xuất hiện trên thềm lục địa (TLTK 75154). Thức ăn chủ yếu gồm các loài động vật không xương sống tầng đáy và cá (TLTK 11889).",
+      "reproductionNotesVn": "Có hành vi ghép đôi rõ rệt kèm theo sự ôm giữ khi giao phối (TLTK 205). Đẻ con (thai sinh), có nhau thai túi noãn hoàng, mỗi lứa đẻ từ 1 đến 10 con non. Thời gian mang thai kéo dài từ 10 đến 12 tháng. Các bãi ương dưỡng và bãi sinh sản nằm ở vùng ven bờ, nơi các con cái mang thai di chuyển vào để đẻ con. Cá cái được cho là chỉ sinh sản hai năm một lần. Kích thước khi sinh đạt 38-72 cm (TLTK 244); hoặc chiều dài tổng thể (TL) đạt 55-66 cm (TLTK 58048)."
     }
   },
   {
@@ -2787,7 +3161,26 @@
     "biology": {
       "gbifKey": 5215572,
       "iucnStatus": "EN",
-      "morphDescription": "Diagnosis. A medium-sized carcharhinid shark with moderately stout body; moderately long and bluntly pointed snout, preorbital length 7.8 – 9.8 % TL. Dorsal fins almost of similar size, not falcate; interdorsal space 18.2 – 19.4 % TL. First dorsal fin slightly larger, length 13.4 – 15.1 % TL, height 5.8 – 8.3 % TL, subtriangular (with a narrowly rounded apex in juveniles), posterior margins nearly straight to shallowly concave and its free rear tip reaching just anterior to pelvic-fin origin. Second dorsal fin almost as high as first, subtriangular, length 11.2 – 12.1 % TL, height 5.2 – 7.1 % TL, 82 – 92 % of first dorsal-fin height. Pectoral fin moderately long, 12.5 – 15.5 % TL and not falcate, anterior margins weakly convex; pelvic fin moderately long 9.8 – 11.5 % TL; anal-fin height 3.8 – 6.0 % TL. No dermal ridge between dorsal fins, and no keels on caudal peduncle. Upper anterior teeth subtriangular (almost cordiform), evenly serrated. Lower anterior teeth long, narrow, erect, with entirely smooth cutting edge; tooth row counts 40 – 44 / 40 – 44. Fins without any prominent markings in adults."
+      "morphDescription": "Diagnosis. A medium-sized carcharhinid shark with moderately stout body; moderately long and bluntly pointed snout, preorbital length 7.8 – 9.8 % TL. Dorsal fins almost of similar size, not falcate; interdorsal space 18.2 – 19.4 % TL. First dorsal fin slightly larger, length 13.4 – 15.1 % TL, height 5.8 – 8.3 % TL, subtriangular (with a narrowly rounded apex in juveniles), posterior margins nearly straight to shallowly concave and its free rear tip reaching just anterior to pelvic-fin origin. Second dorsal fin almost as high as first, subtriangular, length 11.2 – 12.1 % TL, height 5.2 – 7.1 % TL, 82 – 92 % of first dorsal-fin height. Pectoral fin moderately long, 12.5 – 15.5 % TL and not falcate, anterior margins weakly convex; pelvic fin moderately long 9.8 – 11.5 % TL; anal-fin height 3.8 – 6.0 % TL. No dermal ridge between dorsal fins, and no keels on caudal peduncle. Upper anterior teeth subtriangular (almost cordiform), evenly serrated. Lower anterior teeth long, narrow, erect, with entirely smooth cutting edge; tooth row counts 40 – 44 / 40 – 44. Fins without any prominent markings in adults.",
+      "fbSpecCode": 892,
+      "source": "FishBase v25.04",
+      "fbName": "Broadfin shark",
+      "maxLength": "160.0 cm TL",
+      "maxWeight": "52,400 g",
+      "depth": "đến 50 m",
+      "vulnerability": 90.0,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "A little-known shark found in coastal, inshore waters (Ref. 244).  Probably feeds on small fishes and invertebrates (Ref. 9997).  Viviparous (Ref. 50449).  Not known to be dangerous to people (Ref. 244).  Meat utilized fresh and dried salted for human consumption, liver for oil  (Ref.244). Caught irregularly by inshore gillnet fisheries, particularly those operating off Borneo (Ref.58048).",
+      "feedingType": "hunting macrofauna (predator)",
+      "ecologyNotes": "A little-known shark found in coastal, inshore waters. Probably feeds on small fishes and invertebrates.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Viviparous, placental (Ref. 50449), with 4 to 8 young per litter (Ref. 244). Gestation period of ~ 8 months (Ref.58048). Size at birth between 40 and 60 cm (Ref. 244).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Một loài cá mập ít được nghiên cứu, phân bố ở các vùng nước ven bờ và sát bờ (Ref. 244). Thức ăn chủ yếu có thể gồm các loài cá nhỏ và động vật không xương sống (Ref. 9997). Đẻ con (thai sinh) (Ref. 50449). Chưa có ghi nhận gây nguy hiểm cho con người (Ref. 244). Thịt được sử dụng ở dạng tươi hoặc phơi khô muối làm thực phẩm cho con người, gan được dùng để chiết xuất dầu (Ref. 244). Loài này thỉnh thoảng bị đánh bắt bởi nghề lưới rê ven bờ, đặc biệt là các tàu hoạt động ngoài khơi đảo Borneo (Ref. 58048).",
+      "ecologyNotesVn": "Một loài cá mập ít được nghiên cứu, phân bố ở các vùng nước ven bờ và sát bờ. Thức ăn chủ yếu có thể gồm các loài cá nhỏ và động vật không xương sống.",
+      "reproductionNotesVn": "Đẻ con (thai sinh), có nhau thai (Ref. 50449), mỗi lứa đẻ từ 4 đến 8 con non (Ref. 244). Thời gian mang thai khoảng 8 tháng (Ref. 58048). Kích cỡ con non khi sinh đạt từ 40 đến 60 cm (Ref. 244). Có tập tính giao phối ghép đôi rõ rệt và ôm giữ (Ref. 205)."
     }
   },
   {
@@ -3150,7 +3543,27 @@
     ],
     "biology": {
       "gbifKey": 2418825,
-      "iucnStatus": "CR"
+      "iucnStatus": "CR",
+      "fbSpecCode": 908,
+      "source": "FishBase v25.04",
+      "fbName": "Winghead shark",
+      "maxLength": "186.0 cm TL",
+      "vulnerability": 90.0,
+      "importance": "commercial",
+      "priceCategory": "high",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Found in shallow water on continental and insular shelves (Ref. 244).  Enters estuaries (Ref. 4832).  Feeds mainly on small teleost fishes but also takes crustaceans and cephalopods (Ref. 13562).  Viviparous (Ref. 50449), with 6 to 25 pups in a litter (Ref. 6871).  Has a remarkable wing-shaped head which is nearly or quite half of its body length, the function of which is uncertain, maybe for maneuvering or for increasing the surface area of some of the sense organs (Ref. 244).  Probably harmless to people (Ref. 13562).  Caught commonly, but in low numbers, by inshore gillnet fisheries. Particularly common in catches off Kalimantan (Ref.58048). Probably a common fisheries species where it occurs (Ref. 13562).  Meat utilized for human consumption; liver is a source of vitamin oil (Ref. 244).  Offal probably utilized for fishmeal (Ref. 13562).  Reported to reach 300 cm TL (Ref. 58784).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 4.15,
+      "habitat": "Estuaries",
+      "ecologyNotes": "Occurs on the continental shelf (Ref. 75154).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "parentalCare": "maternal",
+      "reproductionNotes": "Viviparous, placental (Ref. 50449),  with 6 to 25 in a litter after a gestation period of 8 (Ref.58048) -11 months (Ref. 6871).  Size at birth between 32 and 45 cm TL (Ref. 13562).",
+      "biologySummaryVn": "Được tìm thấy ở vùng nước nông trên thềm lục địa và thềm quanh đảo (TLTK 244). Loài này cũng đi vào các vùng cửa sông (TLTK 4832). Thức ăn chủ yếu gồm các loài cá xương nhỏ, nhưng cũng ăn cả giáp xác và chân đầu (TLTK 13562). Là loài đẻ con (thai sinh) (TLTK 50449), với mỗi lứa đẻ từ 6 đến 25 con non (TLTK 6871). Chúng sở hữu một chiếc đầu hình cánh rất đặc trưng với chiều rộng gần bằng hoặc bằng một nửa chiều dài cơ thể, chức năng của cấu trúc này hiện chưa được xác định rõ ràng, có thể giúp tăng khả năng điều hướng hoặc tăng diện tích bề mặt của một số cơ quan cảm giác (TLTK 244). Loài này hầu như vô hại đối với con người (TLTK 13562). Thường bị đánh bắt bằng nghề lưới rê ven bờ nhưng với sản lượng thấp. Đặc biệt phổ biến trong sản lượng khai thác ngoài khơi Kalimantan (TLTK 58048). Có thể là một loài khai thác thương mại phổ biến tại những khu vực chúng xuất hiện (TLTK 13562). Thịt được sử dụng làm thực phẩm cho con người; gan là nguồn cung cấp dầu giàu vitamin (TLTK 244). Phế phẩm từ cá có thể được dùng để sản xuất bột cá (TLTK 13562). Chiều dài tổng thể (TL) tối đa được ghi nhận đạt tới 300 cm (TLTK 58784).",
+      "ecologyNotesVn": "Xuất hiện ở vùng thềm lục địa (TLTK 75154).",
+      "reproductionNotesVn": "Là loài đẻ con (thai sinh), có nhau thai (TLTK 50449), với mỗi lứa đẻ từ 6 đến 25 con non sau thời kỳ mang thai kéo dài từ 8 (TLTK 58048) đến 11 tháng (TLTK 6871). Kích thước con non khi sinh đạt chiều dài tổng thể (TL) từ 32 đến 45 cm (TLTK 13562)."
     }
   },
   {
@@ -3206,7 +3619,30 @@
     "biology": {
       "gbifKey": 2417522,
       "iucnStatus": "EN",
-      "morphDescription": "Whale Shark. Reliable to at least 17.0 m (55.8 ft) (Weigman 2016), probable to 20.0 m (65.6 ft) TL (Chen et al. 1997). Circumglobal; western Pacific Ocean at least as far northward as just north of Hokkaido Island, Japan (Tomita et al. 2014); Patrick’s Point (41 ° 10 ’ N, 124 ° 15 ’ W), northern California to northern Chile and Islas Galápagos (Ebert 2003). Pelagic; depth: descends to in excess of 1,928 m (6,324 ft) (Tyminski et al. 2015)."
+      "morphDescription": "Whale Shark. Reliable to at least 17.0 m (55.8 ft) (Weigman 2016), probable to 20.0 m (65.6 ft) TL (Chen et al. 1997). Circumglobal; western Pacific Ocean at least as far northward as just north of Hokkaido Island, Japan (Tomita et al. 2014); Patrick’s Point (41 ° 10 ’ N, 124 ° 15 ’ W), northern California to northern Chile and Islas Galápagos (Ebert 2003). Pelagic; depth: descends to in excess of 1,928 m (6,324 ft) (Tyminski et al. 2015).",
+      "fbSpecCode": 2081,
+      "source": "FishBase v25.04",
+      "fbName": "Whale shark",
+      "maxLength": "1700.0 cm TL",
+      "maxWeight": "34,000,000 g",
+      "longevity": "80.4000015258789 năm",
+      "depth": "0 - 1928 m",
+      "vulnerability": 86.63,
+      "importance": "commercial",
+      "priceCategory": "unknown",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "World's largest fish, but is harmless to humans (Ref. 6871). Grows up to 20m (Ref. 48722).  Often seen offshore but coming close inshore, sometimes entering lagoons or coral atolls (Ref. 247).  Sometimes seen cruising near outer wall (Ref. 26938).  Reported to frequent shallow water areas near estuaries and river mouths, sometimes during seasonal shrimp blooms (Ref. 48696).  Found singly, or in aggregations of over 100 individuals (Ref. 5578).  Often associated with groups of pelagic fishes, especially scombrids (Ref. 247).  Highly migratory between ocean basins and national jurisdictions, but returns to the same sites annually (Ref. 48672).  Feed on planktonic and nektonic prey, such as small fishes (sardines, anchovies, mackerel, juvenile tunas and albacore), small crustaceans and squids (Ref. 247).  Often seen in a vertical position with the head at or near the surface when feeding (Ref. 13571).  When actively feeding on zooplankton the sharks turn their heads from side to side, with part of the head lifted out of the water, and the mouth opened and closed 7-28 times per minute; these suction gulps were synchronized with the opening and closing of the gill slits (Ref. 35680).  Ovoviviparous, with litter size of over 300 pups (Ref. 37816, 43278).  Females of 438 to 562 cm are immature (FIGIS 09/2003).  Utilized fresh, frozen, dried and salted for human consumption, liver processed for oil, fins used for shark-fin soup, offal probably for fishmeal (Ref. 13571), cartilage for health supplements and skin for leather products (Ref. 48723).  Used in Chinese medicine (Ref. 12166).  Highly valued commodity in ecotourism operations.  Populations have been depleted in several countries by harpoon fisheries (Ref. 48696). Estimated longevity of 80.4 yrs is much larger than reported maximum age 38 yrs based on vertebral bands for a female of 11.9 m TL. Maximum length of up to 21 m and weight of up to 42 tons have been reported (Ref. 116781), but  probably the most reliably measured size so far is 12 m TL (Ref. 26319).",
+      "feedingType": "filtering plankton",
+      "trophicLevel": 3.55,
+      "habitat": "Neritic, Coral reefs",
+      "ecologyNotes": "Found on the continental shelf (Ref. 75154); Dives to depths well into the mesopelagic and bathypelagic zones (1,286 maximum depth) (Ref. 80381).  Prefers surface water temperatures between 21-25°C and salinities of 34-35 ppt.  Relies on a versatile suction filter-feeding method, which enables it to draw water into the mouth at higher velocities, thereby allowing it to capture larger, more active nektonic prey as well as zooplankton aggregations.  Has been observed to feed passively by cruising with mouth agape.  It feeds actively at dusk or after dark by opening their mouths and sucking in prey-rich water (Ref. 26319).  A carnivore (Ref. 9137).  Planktivorous (Ref. 129713).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "parentalCare": "maternal",
+      "reproductionNotes": "Distinct pairing with embrace (Ref. 205). Ovoviviparous (Ref. 35465). Embryos feed solely on yolk (Ref. 50449). Late term embryos shed their egg case within the uterus at a size of 58 to 64 cm TL (ovovivipary). The smallest free-living species are from 55-56 cm long, the smallest of which had an umbilical scar. A pregnant female has recently been found with 300 embryos, the largest of which were 58-64 cm (Refs. 26346, 35678).",
+      "biologySummaryVn": "Là loài cá lớn nhất thế giới nhưng vô hại đối với con người (Ref. 6871). Chiều dài cơ thể đạt tới 20 m (Ref. 48722). Thường được bắt gặp ở ngoài khơi nhưng cũng thường xuyên tiếp cận vùng ven bờ, đôi khi đi vào các đầm phá hoặc rạn san hô vòng (Ref. 247). Thỉnh thoảng quan sát thấy chúng bơi chậm rãi gần sườn dốc rạn phía ngoài (Ref. 26938). Được ghi nhận là thường xuyên xuất hiện tại các vùng nước nông gần cửa sông, đôi khi trùng với mùa tôm bùng phát theo mùa (Ref. 48696). Sống đơn độc hoặc tập hợp thành đàn trên 100 cá thể (Ref. 5578). Thường đi cùng với các nhóm cá tầng nổi, đặc biệt là các loài thuộc họ Cá thu ngừ (Scombridae) (Ref. 247). Đây là loài di cư mạnh giữa các đại dương và vùng tài phán quốc gia, nhưng thường quay trở lại cùng một địa điểm hàng năm (Ref. 48672). Thức ăn chủ yếu gồm các sinh vật phù du và sinh vật bơi lội (nekton) như cá nhỏ (cá trích, cá cơm, cá thu, cá ngừ con và cá ngừ vây dài), các loài giáp xác nhỏ và mực (Ref. 247). Khi kiếm ăn, chúng thường ở tư thế thẳng đứng với phần đầu nằm sát hoặc ngay trên mặt nước (Ref. 13571). Khi chủ động ăn động vật phù du, cá nhám xoay đầu từ bên này sang bên kia, một phần đầu nhô lên khỏi mặt nước, miệng đóng mở từ 7-28 lần mỗi phút; các nhịp hút này đồng bộ với sự đóng mở của các khe mang (Ref. 35680). Là loài noãn thai sinh, với cỡ lứa đẻ trên 300 con non (Ref. 37816, 43278). Cá cái có chiều dài từ 438 đến 562 cm vẫn chưa trưởng thành sinh dục (FIGIS 09/2003). Được sử dụng ở dạng tươi sống, đông lạnh, phơi khô và muối để làm thực phẩm cho con người; gan được chế biến lấy dầu, vây dùng làm súp vây cá mập, phế phẩm có thể dùng làm bột cá (Ref. 13571), sụn làm thực phẩm chức năng và da làm các sản phẩm đồ da (Ref. 48723). Được sử dụng trong Y học cổ truyền Trung Hoa (Ref. 12166). Là đối tượng có giá trị kinh tế cao trong các hoạt động du lịch sinh thái. Quần thể của loài này đã bị suy giảm nghiêm trọng ở nhiều quốc gia do hoạt động khai thác bằng lao móc (Ref. 48696). Tuổi thọ ước tính đạt 80,4 năm, lớn hơn nhiều so với tuổi tối đa được ghi nhận là 38 năm dựa trên các vòng tăng trưởng trên đốt sống của một cá thể cái dài 11,9 m TL. Chiều dài tối đa lên tới 21 m và trọng lượng lên tới 42 tấn đã được ghi nhận (Ref. 116781), nhưng kích thước được đo đạc đáng tin cậy nhất cho đến nay là 12 m TL (Ref. 26319).",
+      "ecologyNotesVn": "Phân bố trên thềm lục địa (Ref. 75154); có khả năng lặn sâu xuống các tầng trung hải (mesopelagic) và tầng thâm hải (bathypelagic) (độ sâu tối đa ghi nhận là 1.286 m) (Ref. 80381). Ưa thích nhiệt độ nước mặt từ 21-25°C và độ mặn từ 34-35 ppt. Loài này áp dụng phương thức ăn lọc bằng cơ chế hút linh hoạt, cho phép hút nước vào miệng với tốc độ cao, nhờ đó có thể bắt được các con mồi bơi lội (nekton) lớn hơn, hoạt động nhanh hơn cũng như các đàn động vật phù du tập trung. Đã có quan sát cho thấy chúng kiếm ăn thụ động bằng cách bơi chậm với miệng há rộng. Chúng chủ động kiếm ăn vào lúc hoàng hôn hoặc sau khi trời tối bằng cách mở miệng và hút dòng nước giàu con mồi (Ref. 26319). Là loài ăn thịt (Ref. 9137) và ăn sinh vật phù du (Ref. 129713).",
+      "reproductionNotesVn": "Có tập tính ghép đôi rõ rệt kèm theo hành vi ôm giữ (Ref. 205). Là loài noãn thai sinh (Ref. 35465). Phôi chỉ phát triển nhờ nguồn dinh dưỡng từ noãn hoàng (Ref. 50449). Phôi ở giai đoạn cuối của thai kỳ sẽ thoát khỏi vỏ trứng ngay trong tử cung khi đạt kích thước từ 58 đến 64 cm TL (hình thức noãn thai sinh). Các cá thể sống tự do nhỏ nhất được ghi nhận có chiều dài từ 55-56 cm, trong đó cá thể nhỏ nhất có vết sẹo rốn. Một cá thể cái mang thai được phát hiện gần đây mang 300 phôi, trong đó những phôi lớn nhất đạt kích thước 58-64 cm (Refs. 26346, 35678)."
     }
   },
   {
@@ -3530,7 +3966,26 @@
     ],
     "biology": {
       "gbifKey": 2420848,
-      "iucnStatus": "CR"
+      "iucnStatus": "CR",
+      "fbSpecCode": 8211,
+      "source": "FishBase v25.04",
+      "fbName": "Pointed sawfish",
+      "maxLength": "470.0 cm TL",
+      "depth": "0 - 40 m",
+      "vulnerability": 90.0,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Found inshore, often in river deltas and estuaries; penetration well up rivers needs confirmation (Ref. 9859).  Common in sheltered bays with sandy bottoms.  More active swimmer than other sawfishes (Ref. 114953). Feeds on small fish, cuttlefish (Ref. 9859) and small benthic invertebrates such as prawns (Ref. 114953).  Ovoviviparous (Ref. 50449).  Most fecund sawfish, reported to reach sexual maturity at 2-3 years (Ref. 114953). Females have litters of  approximately 12 pups (Ref. 114953).  Generally harmless but its saw-like snout may cause serious injury when caught:  it is known thrash violently and vigorously (Ref. 9859).  Caught for its flesh and liver (which is rich in oil) in some parts of Asia (Ref. 6871).  Maximum lengths of up to 610 cm TL are based on unconfirmed reports (Ref. 9859).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Estuaries",
+      "ecologyNotes": "Inhabits coastal waters and estuaries; probably ascends rivers but its occurrence in freshwater needs to be verified (Ref. 9859). Common in sheltered bays with sandy bottoms. Feeds on small fish and cuttlefish.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Ovoviviparous. Litter size from 6 to 23,  young born in the spring (Ref. 9859).",
+      "biologySummaryVn": "Gặp ở vùng ven bờ, thường xuất hiện tại các cửa sông và vùng châu thổ sông; việc loài này di chuyển sâu vào trong sông cần được xác minh thêm (TLTK 9859). Thường gặp ở các vịnh kín gió có đáy cát. Khả năng bơi lội linh hoạt hơn các loài cá đao khác (TLTK 114953). Thức ăn chủ yếu gồm cá nhỏ, mực nang (TLTK 9859) và các loài động vật không xương sống nhỏ ở tầng đáy như tôm (TLTK 114953). Là loài noãn thai sinh (TLTK 50449). Đây là loài cá đao có sức sinh sản cao nhất, được ghi nhận đạt độ tuổi thành thục sinh dục từ 2–3 năm (TLTK 114953). Cá cái sinh mỗi lứa khoảng 12 con non (TLTK 114953). Nhìn chung loài này không gây hại, nhưng mõm dạng răng cưa của chúng có thể gây thương tích nghiêm trọng khi bị đánh bắt do chúng có tập tính quẫy đạp cực kỳ dữ dội và mạnh mẽ (TLTK 9859). Được khai thác để lấy thịt và gan (chứa nhiều dầu gan) ở một số khu vực thuộc châu Á (TLTK 6871). Chiều dài tổng tối đa (TL) lên tới 610 cm dựa trên các báo cáo chưa được xác thực (TLTK 9859).",
+      "ecologyNotesVn": "Sinh sống ở vùng nước ven bờ và cửa sông; có khả năng ngược dòng vào sông nhưng sự hiện diện của chúng ở vùng nước ngọt cần được xác minh thêm (TLTK 9859). Thường gặp ở các vịnh kín gió có đáy cát. Thức ăn chủ yếu gồm cá nhỏ và mực nang.",
+      "reproductionNotesVn": "Là loài noãn thai sinh. Số lượng con non mỗi lứa từ 6 đến 23 con, cá con thường được sinh ra vào mùa xuân (TLTK 9859)."
     }
   },
   {
@@ -3585,7 +4040,27 @@
     "biology": {
       "gbifKey": 5963013,
       "iucnStatus": "CR",
-      "morphDescription": "Fig. 4 oh ẚna ancylos ṫomus Bloch & Schneider, 1801: 352; lectotype: ZMB 4621, specimen lost; type locality: Coromandel Coast, south-eastern India."
+      "morphDescription": "Fig. 4 oh ẚna ancylos ṫomus Bloch & Schneider, 1801: 352; lectotype: ZMB 4621, specimen lost; type locality: Coromandel Coast, south-eastern India.",
+      "fbSpecCode": 8729,
+      "source": "FishBase v25.04",
+      "fbName": "Bowmouth guitarfish",
+      "maxLength": "300.0 cm TL",
+      "maxWeight": "135,000 g",
+      "depth": "3 - 90 m",
+      "vulnerability": 90.0,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "other",
+      "biologySummary": "Inhabits coastal areas and offshore coral reefs, close inshore (Ref. 9915).  Found on sand and mud bottoms (Ref. 12951). Sometimes found in the water column (Ref. 12951). Feeds on demersal bony fishes (e.g. croakers), crustaceans (crabs, prawns), bivalves, and cephalopods (Ref. 9915, 114953).  Ovoviviparous (Ref. 50449).  Produces litters of 2-11 pups (Ref. 114953). A row of large spines present above the eye, on the center of the nape, and on the shoulder have a defensive function (can be used for butting).  Caught commonly by demersal tangle net, and occasionally trawl and longline fisheries (Ref.58048). Considered as to be a problem in trawls because it is very rough and spiky, difficult to handle and can be hazardous, thus they create a nuisance to trawl fishers as they are difficult to remove and their roughness can damage smaller species in the catch (Ref. 9915, 93660).  Utilized fresh and dried-salted; the pectoral fins are the only part which is eaten (Ref. 9987).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Benthic, Soft bottom",
+      "ecologyNotes": "Found on sand and mud bottoms near reefs and wrecks (Ref. 12951), usually in shallow water. Sometimes found in the water column (Ref. 12951).  Rare species found on offshore reefs (Ref. 129713).  Feeds mainly on bottom crustaceans and mollusks.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  With 4 in a litter (Ref. 12951).  Size at birth 45 cm (Ref. 12951).",
+      "biologySummaryVn": "Phân bố ở các vùng ven bờ và các rạn san hô ngoài khơi, rất gần bờ (TLTK 9915). Thường gặp trên nền đáy cát và bùn (TLTK 12951). Đôi khi xuất hiện trong tầng nước (TLTK 12951). Thức ăn chủ yếu gồm các loài cá xương tầng đáy (ví dụ: cá đù), động vật giáp xác (cua, tôm), động vật hai mảnh vỏ và động vật chân đầu (TLTK 9915, 114953). Là loài noãn thai sinh (TLTK 50449). Mỗi lứa đẻ từ 2 đến 11 con non (TLTK 114953). Một hàng gai lớn phía trên mắt, ở giữa gáy và trên vai có chức năng tự vệ (có thể dùng để húc). Thường bị đánh bắt bằng lưới bén tầng đáy, và đôi khi bằng lưới kéo hoặc nghề câu kiều (TLTK 58048). Loài này được coi là một trở ngại trong nghề lưới kéo vì lớp da rất thô ráp và nhiều gai nhọn, khó xử lý và có thể gây nguy hiểm; do đó, chúng gây phiền toái cho ngư dân lưới kéo vì khó gỡ ra và sự thô ráp của chúng có thể làm hư hại các loài cá nhỏ hơn trong mẻ lưới (TLTK 9915, 93660). Được sử dụng ở dạng tươi sống hoặc phơi khô muối; vây ngực là bộ phận duy nhất được dùng làm thức ăn (TLTK 9987).",
+      "ecologyNotesVn": "Tìm thấy trên nền đáy cát và bùn gần các rạn san hô và xác tàu đắm (TLTK 12951), thường ở vùng nước nông. Đôi khi xuất hiện trong tầng nước (TLTK 12951). Là loài hiếm gặp tại các rạn san hô ngoài khơi (TLTK 129713). Thức ăn chủ yếu gồm các loài giáp xác và thân mềm tầng đáy.",
+      "reproductionNotesVn": "Hình thức sinh sản là noãn thai sinh (đẻ con không nhau thai), trong đó phôi ban đầu hấp thu dinh dưỡng từ noãn hoàng, sau đó nhận thêm chất dinh dưỡng từ cơ thể mẹ thông qua việc hấp thụ gián tiếp dịch tử cung (giàu chất nhầy, chất béo hoặc protein) qua các cấu trúc chuyên biệt (TLTK 50449). Mỗi lứa đẻ khoảng 4 con non (TLTK 12951). Kích thước khi sinh khoảng 45 cm (TLTK 12951)."
     }
   },
   {
@@ -3644,7 +4119,26 @@
     ],
     "biology": {
       "gbifKey": 2418995,
-      "iucnStatus": "CR"
+      "iucnStatus": "CR",
+      "fbSpecCode": 7969,
+      "source": "FishBase v25.04",
+      "fbName": "Brown guitarfish",
+      "maxLength": "100.0 cm TL",
+      "depth": "đến 200 m",
+      "vulnerability": 60.0,
+      "importance": "commercial",
+      "priceCategory": "low",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Found near shore on sandy-mud bottoms (Ref. 11230, 30573).  Reported to occur offshore (Ref. 58784). Feeds on small benthic animals.  Ovoviviparous (Ref. 50449). Males mature at ca. 55 cm TL. Produces litters of 1-14 pups (Ref. 114953).  The best edible fish in the family, served in raw slices or hard boiled with seasonings (Ref. 637).  Dried fins used for shark-fin soup (Ref. 30573).",
+      "feedingType": "hunting macrofauna (predator)",
+      "ecologyNotes": "Found on sandy-mud bottoms. Feeds on small benthic animals. Also in Ref. 9137.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "parentalCare": "maternal",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).",
+      "biologySummaryVn": "Được tìm thấy ở vùng ven bờ trên các nền đáy bùn cát (Ref. 11230, 30573). Cũng được ghi nhận xuất hiện ở vùng ngoài khơi (Ref. 58784). Thức ăn chủ yếu gồm các động vật đáy cỡ nhỏ. Là loài noãn thai sinh (Ref. 50449). Cá đực đạt đến độ trưởng thành sinh dục ở chiều dài tổng thể (TL) khoảng 55 cm. Mỗi lứa đẻ từ 1 đến 14 con non (Ref. 114953). Đây là loài cá có chất lượng thịt ngon nhất trong họ, thường được chế biến thành các lát thịt ăn sống hoặc luộc chín với gia vị (Ref. 637). Vây cá phơi khô được dùng để làm súp vây cá (Ref. 30573).",
+      "ecologyNotesVn": "Được tìm thấy trên các nền đáy bùn cát. Thức ăn chủ yếu gồm các động vật đáy cỡ nhỏ. Cũng được ghi nhận trong Ref. 9137.",
+      "reproductionNotesVn": "Thể hiện hình thức sinh sản noãn thai sinh (thai sinh không nhau thai), trong đó phôi ban đầu phát triển nhờ nguồn dinh dưỡng từ noãn hoàng, sau đó nhận thêm dưỡng chất từ cơ thể mẹ thông qua việc hấp thụ gián tiếp dịch tử cung giàu chất nhầy, chất béo hoặc protein qua các cấu trúc chuyên biệt (Ref. 50449)."
     }
   },
   {
@@ -3766,7 +4260,24 @@
     ],
     "biology": {
       "gbifKey": 2418915,
-      "iucnStatus": "CR"
+      "iucnStatus": "CR",
+      "fbSpecCode": 8731,
+      "source": "FishBase v25.04",
+      "fbName": "Granulated guitarfish",
+      "maxLength": "280.0 cm SL",
+      "depth": "0 - 119 m",
+      "vulnerability": 90.0,
+      "importance": "commercial",
+      "priceCategory": "low",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Occurs from the intertidal (coastal, inshore) to offshore continental shelves down to 119 m (Ref. 9909, 127960).  A carnivorous fish that feeds on large shellfishes (Ref. 58784). Ovoviviparous (Ref. 50449). Produces 6-10 pups a litter (Ref.114953).  Biology little known (Ref. 9909).  Utilized where it occurs but details lacking (Ref. 9909).",
+      "ecologyNotes": "Ranges from the intertidal to offshore continental shelves down to 119 m (Ref. 9909).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).",
+      "biologySummaryVn": "Phân bố từ vùng gian triều (ven bờ, sát bờ) đến thềm lục địa ngoài khơi ở độ sâu lên đến 119 m (Ref. 9909, 127960). Đây là loài cá ăn thịt với thức ăn chủ yếu gồm các loài động vật có vỏ cỡ lớn (Ref. 58784). Hình thức sinh sản là noãn thai sinh (Ref. 50449), mỗi lứa đẻ từ 6–10 con non (Ref. 114953). Đặc điểm sinh học của loài còn ít được biết đến (Ref. 9909). Được khai thác tại các vùng phân bố tự nhiên nhưng hiện vẫn thiếu các số liệu chi tiết (Ref. 9909).",
+      "ecologyNotesVn": "Phân bố từ vùng gian triều đến thềm lục địa ngoài khơi ở độ sâu xuống đến 119 m (Ref. 9909).",
+      "reproductionNotesVn": "Thể hiện hình thức noãn thai sinh (đẻ con không nhau thai), trong đó phôi ban đầu phát triển nhờ nguồn dinh dưỡng từ noãn hoàng, sau đó nhận thêm dưỡng chất từ cơ thể mẹ thông qua việc hấp thụ gián tiếp dịch tử cung (giàu chất nhầy, chất béo hoặc protein) qua các cấu trúc chuyên biệt (Ref. 50449)."
     }
   },
   {
@@ -3965,7 +4476,25 @@
     "biology": {
       "gbifKey": 8645521,
       "iucnStatus": "EN",
-      "morphDescription": "Diagnosis. Distinguished from congeners in having the following combination of characters: two rows of thorns (strongly hooked and gradually becoming somewhat embedded toward first dorsal fin origin) on mid-dorsum of tail; thorns absent from anterior part of scapular region (Fig. 1 B); thorns on the orbital, nape and scapular regions not encircled by light yellow or white pigment (Fig. 1 B); dorsal surface covered with minute dermal denticles of uniform size and shape, no obvious larger dermal denticles (smooth to touch)."
+      "morphDescription": "Diagnosis. Distinguished from congeners in having the following combination of characters: two rows of thorns (strongly hooked and gradually becoming somewhat embedded toward first dorsal fin origin) on mid-dorsum of tail; thorns absent from anterior part of scapular region (Fig. 1 B); thorns on the orbital, nape and scapular regions not encircled by light yellow or white pigment (Fig. 1 B); dorsal surface covered with minute dermal denticles of uniform size and shape, no obvious larger dermal denticles (smooth to touch).",
+      "fbSpecCode": 9211,
+      "source": "FishBase v25.04",
+      "fbName": "Chinese fanray",
+      "maxLength": "86.3 cm TL",
+      "vulnerability": 54.52,
+      "importance": "bycatch",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Found inshore (Ref. 9903), above 60 m on rock or rocky sand bottoms (Ref. 11230).  Ovoviviparous (Ref. 50449).  Biology little known (Ref. 9903).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Coral reefs, Soft bottom, Rocky",
+      "ecologyNotes": "Southern Japanese and East China Seas (Ref. 9137). Inhabits sandy areas in rocky regions (Ref. 9137) in coastal waters.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).",
+      "biologySummaryVn": "Được tìm thấy ở vùng ven bờ (Tài liệu 9903), ở độ sâu nông hơn 60 m trên nền đáy đá hoặc đáy cát lẫn đá (Tài liệu 11230). Hình thức sinh sản là noãn thai sinh (Tài liệu 50449). Đặc tính sinh học chưa được nghiên cứu nhiều (Tài liệu 9903).",
+      "ecologyNotesVn": "Phân bố tại vùng biển phía nam Nhật Bản và biển Hoa Đông (Tài liệu 9137). Cư trú tại các khu vực đáy cát thuộc vùng nhiều đá ở vùng nước ven bờ (Tài liệu 9137).",
+      "reproductionNotesVn": "Thể hiện hình thức noãn thai sinh (sinh con không có nhau thai), trong đó phôi ban đầu hấp thụ dưỡng chất từ túi noãn hoàng, sau đó nhận thêm dinh dưỡng từ mẹ thông qua việc hấp thụ gián tiếp dịch tử cung giàu chất nhầy, chất béo hoặc protein qua các cấu trúc chuyên hóa (Tài liệu 50449)."
     }
   },
   {
@@ -4029,7 +4558,28 @@
     ],
     "biology": {
       "gbifKey": 2420109,
-      "iucnStatus": "VU"
+      "iucnStatus": "VU",
+      "fbSpecCode": 15418,
+      "source": "FishBase v25.04",
+      "fbName": "Ocellate spot skate",
+      "maxLength": "57.0 cm TL",
+      "maxWeight": "816 g",
+      "depth": "20 - 230 m",
+      "vulnerability": 42.8,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "other",
+      "biologySummary": "Bottom-dweller that feeds on invertebrates and bony fish.  Oviparous.  Distinct pairing with embrace.  Young may tend to follow large objects, such as their mother (Ref. 205).  Eggs are oblong capsules with stiff pointed horns at the corners deposited in sandy or muddy flats (Ref. 205).  Egg capsules are 4.8-6.6 cm long and 2.9-3.7 cm wide (Ref. 41249, 41253, 41298).  Depth range given by H. Ishihara (pers.comm. 07/07).",
+      "feedingType": "hunting macrofauna (predator)",
+      "trophicLevel": 3.38,
+      "ecologyNotes": "Bottom-dweller that feeds on invertebrates and bony fish.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "spawning": "throughout the year, but peaking once",
+      "reproductionNotes": "Oviparous, paired eggs are laid mainly at night (Ref. 44760).  Batches of eggs are laid in three to six-day interval on sand bottom. Embryos feed solely on yolk (Ref. 50449).  Distinct pairing with embrace.  Young may tend to follow large objects, such as their mother (Ref. 205).",
+      "biologySummaryVn": "Loài sống ở tầng đáy, thức ăn chủ yếu gồm các loài động vật không xương sống và cá xương. Đẻ trứng. Có tập tính ghép đôi giao phối rõ rệt. Con non có xu hướng bơi theo các vật thể lớn, chẳng hạn như cá mẹ (Tài liệu tham khảo 205). Trứng có dạng bao vỏ hình thuôn dài với các sừng nhọn, cứng ở các góc, được đẻ ở các bãi cát hoặc bãi bùn (Tài liệu tham khảo 205). Bao trứng có chiều dài 4,8–6,6 cm và chiều rộng 2,9–3,7 cm (Tài liệu tham khảo 41249, 41253, 41298). Khoảng độ sâu phân bố được cung cấp bởi H. Ishihara (trao đổi cá nhân, 07/07).",
+      "ecologyNotesVn": "Loài sống ở tầng đáy, thức ăn chủ yếu gồm các loài động vật không xương sống và cá xương.",
+      "reproductionNotesVn": "Đẻ trứng, các cặp trứng chủ yếu được đẻ vào ban đêm (Tài liệu tham khảo 44760). Các mẻ trứng được đẻ cách nhau từ ba đến sáu ngày trên nền đáy cát. Phôi phát triển hoàn toàn nhờ vào nguồn noãn hoàng (Tài liệu tham khảo 50449). Có tập tính ghép đôi giao phối rõ rệt. Con non có xu hướng bơi theo các vật thể lớn, chẳng hạn như cá mẹ (Tài liệu tham khảo 205)."
     }
   },
   {
@@ -4077,7 +4627,25 @@
     ],
     "biology": {
       "gbifKey": 2420104,
-      "iucnStatus": "VU"
+      "iucnStatus": "VU",
+      "fbSpecCode": 4585,
+      "source": "FishBase v25.04",
+      "fbName": "Yellow-spotted skate",
+      "maxLength": "45.0 cm TL",
+      "depth": "67 - 87 m",
+      "vulnerability": 26.64,
+      "importance": "bycatch",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "other",
+      "biologySummary": "Bottom-dwellers that feed on invertebrates and bony fish (Ref. 9908).  Depth range given by H. Ishihara (pers.comm. 07/07).  Oviparous.  Distinct pairing with embrace.  Young may tend to follow large objects, such as their mother (Ref. 205).  Eggs are oblong capsules with stiff pointed horns at the corners deposited in sandy or muddy flats (Ref. 205).  Egg capsules are 5.3-6.7 cm long and 2.7-3.9 cm wide (Ref. 41253, 41298).",
+      "feedingType": "hunting macrofauna (predator)",
+      "ecologyNotes": "Bottom-dweller that feeds on invertebrates and bony fish.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Oviparous (Ref. 9908).  Paired eggs are laid.  Embryos feed solely on yolk (Ref. 50449).  Distinct pairing with embrace.  Young may tend to follow large objects, such as their mother (Ref. 205).",
+      "biologySummaryVn": "Là loài sống ở tầng đáy, thức ăn chủ yếu gồm các loài động vật không xương sống và cá xương (Ref. 9908). Giới hạn độ sâu phân bố do H. Ishihara cung cấp (trao đổi cá nhân, 07/07). Đẻ trứng. Có tập tính ghép đôi rõ rệt với hành vi ôm bám khi giao phối. Con non có xu hướng bơi theo các vật thể lớn, chẳng hạn như cá mẹ (Ref. 205). Trứng là các bao kén hình thuôn dài với các góc có sừng nhọn và cứng, được đẻ ở các bãi cát hoặc bãi bùn phẳng (Ref. 205). Bao trứng có chiều dài 5,3-6,7 cm và chiều rộng 2,7-3,9 cm (Ref. 41253, 41298).",
+      "ecologyNotesVn": "Là loài sống ở tầng đáy, thức ăn chủ yếu gồm các loài động vật không xương sống và cá xương.",
+      "reproductionNotesVn": "Đẻ trứng (Ref. 9908). Trứng được đẻ ra theo từng cặp. Phôi phát triển hoàn toàn nhờ vào nguồn dinh dưỡng từ noãn hoàng (Ref. 50449). Có tập tính ghép đôi rõ rệt với hành vi ôm bám khi giao phối. Con non có xu hướng bơi theo các vật thể lớn, chẳng hạn như cá mẹ (Ref. 205)."
     }
   },
   {
@@ -4129,7 +4697,27 @@
     "biology": {
       "gbifKey": 7193839,
       "iucnStatus": "VU",
-      "morphDescription": "Fig. 7 Taen ẚura meyen ẚ Müller & Henle, 1841: 172; syntypes: MNHN 0000 - 2428 and ZMB 4660; type locality: Mauritius."
+      "morphDescription": "Fig. 7 Taen ẚura meyen ẚ Müller & Henle, 1841: 172; syntypes: MNHN 0000 - 2428 and ZMB 4660; type locality: Mauritius.",
+      "fbSpecCode": 6482,
+      "source": "FishBase v25.04",
+      "fbName": "Round ribbontail ray",
+      "maxLength": "330.0 cm TL",
+      "maxWeight": "150,000 g",
+      "depth": "1 - 500 m",
+      "vulnerability": 90.0,
+      "importance": "commercial",
+      "priceCategory": "low",
+      "aquaculture": "never/rarely",
+      "dangerous": "venomous",
+      "biologySummary": "Occurs in a wide range of habitats, from shallow lagoons to outer reef slopes (Ref. 1602).  Feeds on bottom fish, bivalves, crabs and shrimp (Ref. 5578).  Ovoviviparous (Ref. 50449).  Smallest free-swimming specimen recorded was 33 cm WD. Caught commonly by demersal tangle net fisheries, and occasionally by longline and bottom trawl fisheries. Utilized for its meat and cartilage (Ref.58048). Found singly or in aggregates and usually with jacks and cobia swimming near them (Ref. 12951).  Not normally aggressive, but it has been responsible for at least one human fatality.  Sought by surf and ski boat anglers in southern Africa, but usually released unharmed (Ref. 5578).  Longevity record for a specimen in an aquarium is 81 days (Ref. 12951).  May reach disc width in excess of 3 m (Ref. 28023).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Coral reefs, Benthic, Soft bottom",
+      "ecologyNotes": "Inhabits sandy areas in coral reefs (Refs. 9137, 129713).  A carnivore (Ref. 9137).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  Distinct pairing with embrace (Ref. 205).  With up to 7 in a litter (Ref. 6871, 12951).",
+      "biologySummaryVn": "Xuất hiện trong nhiều loại môi trường sống, từ các vụng san hô nông đến sườn rạn bên ngoài (Ref. 1602). Thức ăn chủ yếu gồm cá tầng đáy, động vật hai mảnh vỏ, cua và tôm (Ref. 5578). Là loài noãn thai sinh (Ref. 50449). Mẫu vật nhỏ nhất được ghi nhận khi bơi tự do có chiều rộng đĩa thân (WD) là 33 cm. Thường bị đánh bắt bằng nghề lưới bén tầng đáy, đôi khi bằng nghề câu dây dài và lưới kéo đáy. Được sử dụng để lấy thịt và sụn (Ref. 58048). Thường gặp sống đơn độc hoặc tập hợp thành đàn và thường có cá khế, cá bớp bơi gần kề (Ref. 12951). Thông thường không hung dữ, nhưng loài này đã gây ra ít nhất một trường hợp tử vong ở người. Là đối tượng săn tìm của các cần thủ câu cá từ bờ biển và thuyền nhỏ ở khu vực miền nam châu Phi, nhưng thường được thả về tự nhiên mà không bị tổn hại (Ref. 5578). Kỷ lục về tuổi thọ của một mẫu vật nuôi trong bể cá là 81 ngày (Ref. 12951). Chiều rộng đĩa thân có thể đạt vượt quá 3 m (Ref. 28023).",
+      "ecologyNotesVn": "Cư trú tại các vùng đáy cát trong rạn san hô (Refs. 9137, 129713). Là loài ăn thịt (Ref. 9137).",
+      "reproductionNotesVn": "Hình thức sinh sản là noãn thai sinh (đẻ con không nhau thai); phôi ban đầu hấp thụ chất dinh dưỡng từ túi noãn hoàng, sau đó nhận thêm dưỡng chất từ mẹ thông qua việc hấp thụ gián tiếp dịch tử cung giàu chất nhầy, chất béo hoặc protein qua các cấu trúc chuyên hóa (Ref. 50449). Có hành vi ghép đôi rõ ràng kèm theo sự ôm bám (Ref. 205). Mỗi lứa đẻ có tối đa 7 con non (Ref. 6871, 12951)."
     }
   },
   {
@@ -4273,7 +4861,26 @@
     ],
     "biology": {
       "gbifKey": 9495838,
-      "iucnStatus": "VU"
+      "iucnStatus": "VU",
+      "fbSpecCode": 15387,
+      "source": "FishBase v25.04",
+      "fbName": "Bennett's stingray",
+      "maxLength": "35.2 cm WD",
+      "depth": "1 - 40 m",
+      "vulnerability": 90.0,
+      "importance": "minor commercial",
+      "priceCategory": "low",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "This demersal species is found inshore and on continental shelf to at least 50 m depth.  It feeds on small bony fishes and crustaceans (Ref. 11889, 114953).  Max size may reach up to 85 cm WD (Ref. 47613).  Ovoviviparous (Ref. 50449).  Litters of only 1 pup (Ref. 114953).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Mangroves",
+      "ecologyNotes": "Feeds on fish (Ref. 11889).  Max size may reach up to 85 cm WD (Ref. 47613).  Found in freshwater, brackish and marine waters (Ref. 86942).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Loài cá tầng đáy này được tìm thấy ở vùng ven bờ và trên thềm lục địa đến độ sâu ít nhất là 50 m. Thức ăn chủ yếu của chúng gồm các loài cá xương nhỏ và động vật giáp xác (Ref. 11889, 114953). Kích thước tối đa có thể đạt tới 85 cm chiều rộng đĩa (WD) (Ref. 47613). Đây là loài noãn thai sinh (Ref. 50449), với mỗi lứa đẻ chỉ gồm 1 con non (Ref. 114953).",
+      "ecologyNotesVn": "Thức ăn chủ yếu là cá (Ref. 11889). Kích thước tối đa có thể đạt tới 85 cm chiều rộng đĩa (WD) (Ref. 47613). Loài này được tìm thấy ở cả môi trường nước ngọt, nước lợ và nước mặn (Ref. 86942).",
+      "reproductionNotesVn": "Chúng thể hiện hình thức noãn thai sinh (đẻ con không nhau thai), trong đó phôi ban đầu phát triển nhờ nguồn noãn hoàng, sau đó nhận thêm chất dinh dưỡng bổ sung từ cơ thể mẹ thông qua việc hấp thụ gián tiếp dịch tử cung (được làm giàu bằng chất nhầy, chất béo hoặc protein) qua các cấu trúc chuyên biệt (Ref. 50449). Có tập tính ghép đôi rõ rệt với hành vi ôm quấn khi giao phối (Ref. 205)."
     }
   },
   {
@@ -4322,7 +4929,19 @@
       "Dasyatis sinensis Fowler, Bull. 100 U. S. Nat. Mus., Vol. 13, p. 421, 1941."
     ],
     "biology": {
-      "gbifKey": 9345206
+      "gbifKey": 9345206,
+      "fbSpecCode": 54627,
+      "source": "FishBase v25.04",
+      "fbName": "Chinese stingray",
+      "vulnerability": 90.0,
+      "priceCategory": "low",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Ovoviviparous (Ref. 50449).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Noãn thai sinh (Ref. 50449).",
+      "reproductionNotesVn": "Hình thức sinh sản là noãn thai sinh (thai sinh không nhau thai); phôi giai đoạn đầu dinh dưỡng bằng noãn hoàng, sau đó nhận thêm dưỡng chất từ cá mẹ qua việc hấp thụ gián tiếp dịch tử cung giàu chất nhầy, lipid hoặc protein thông qua các cấu trúc chuyên hóa (Ref. 50449). Cá có tập tính ghép đôi rõ rệt với hành vi ôm giữ khi giao phối (Ref. 205)."
     }
   },
   {
@@ -4379,8 +4998,29 @@
       "Dasybatus kuhli Suvatti, Index Fishes Siam, p. 6, 1937."
     ],
     "biology": {
+      "depth": "0 - 170 m",
+      "fbName": "Blue-spotted stingray",
+      "source": "FishBase v25.04",
       "gbifKey": 2419592,
-      "morphDescription": "Diagnosis. A medium-sized Neotrygon of the kuhlii - complex (reaching at least 30 cm DW) with the following combination of characters: disc broader than long, width ~ 1.2 times length; pectoral apices narrowly rounded; snout rather fleshy, broadly angular, angle ~ 107 °, length 1.7 – 2.1 times interorbital width; maximum width relatively well back on disc, length from snout tip to pectoral-fin insertion 1.8 – 1.9 times and disc width 2.5 – 2.6 times horizontal distance from snout tip to maximum disc width; preoral length 2.4 – 2.8 times mouth width; internasal distance 1.5 – 1.8 in prenasal length; interspiracular distance 13 – 15 % DW; nostril length 2.8 – 4.1 % DW; nasal curtain width 8 – 8.3 % DW; small mouth, width 6.4 – 6.8 % DW; horizontal distance from cloaca to caudal sting base ~ 55 % of disc length; thornlets present in nuchal region, absent from tail in all sizes; dermal denticles absent; pectoral-fin radials 113 (based on new specimen); total vertebral centra (including synarcual) 133, trunk centra (including synarcual) 39; blue spots very small and sparse, largest spot on disc 0.3 – 0.5 times eye width; 0 – 6 (mean 3.0) blue spots on medial belt, largest ~ 2.1 % DW; mask-like marking pronounced, not covered with dark peppery spots; ventral surface of disc and pelvic fins with broad dark greyish submarginal bands; ventral tail fold and adjacent tail bluish grey when fresh."
+      "habitat": "Estuaries, Coral reefs, Benthic, Soft bottom, Rocky",
+      "spawning": "one clear seasonal peak per year",
+      "dangerous": "venomous",
+      "maxLength": "70.0 cm TL",
+      "fbSpecCode": 4508,
+      "importance": "commercial",
+      "aquaculture": "never/rarely",
+      "feedingType": "hunting macrofauna (predator)",
+      "ecologyNotes": "Inhabits sandy areas among coral reefs. A solitary species found on sandy bottoms near rocky or coral reefs (Ref. 12951).  Usually found in deeper water but moves onto the reef flat and into shallow lagoons at high tide (Ref. 12951).  Occasionally covers itself with sand, leaving only its eyes and tail visible (Ref. 37816).  Feeds on crabs and shrimps (Ref. 5578).   A carnivore (Ref. 9137).  Also Ref. 58534.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "trophicLevel": 3.26,
+      "priceCategory": "low",
+      "vulnerability": 52.49,
+      "biologySummary": "A solitary species found on sandy bottoms near rocky or coral reefs (Ref. 12951).  Usually found in deeper water but moves onto the reef flat and into shallow lagoons at high tide (Ref. 12951).  Occasionally covers itself with sand, leaving only its eyes and tail visible (Ref.  37816).  Feeds on crabs and shrimps (Ref. 5578).  Ovoviviparous (Ref. 50449). The venomous spine can inflict a painful wound (Ref.4690). Caught in very large quantities in the bottom trawl, trammel and fish trap fisheries. Utilized for its meat but of limited value due to its small size (Ref. 58048). It is parasitised by the monogenean <i>Dendromonocotyle kuhlii</i> on the dorsal skin surface (Ref. 124051).",
+      "morphDescription": "Diagnosis. A medium-sized Neotrygon of the kuhlii - complex (reaching at least 30 cm DW) with the following combination of characters: disc broader than long, width ~ 1.2 times length; pectoral apices narrowly rounded; snout rather fleshy, broadly angular, angle ~ 107 °, length 1.7 – 2.1 times interorbital width; maximum width relatively well back on disc, length from snout tip to pectoral-fin insertion 1.8 – 1.9 times and disc width 2.5 – 2.6 times horizontal distance from snout tip to maximum disc width; preoral length 2.4 – 2.8 times mouth width; internasal distance 1.5 – 1.8 in prenasal length; interspiracular distance 13 – 15 % DW; nostril length 2.8 – 4.1 % DW; nasal curtain width 8 – 8.3 % DW; small mouth, width 6.4 – 6.8 % DW; horizontal distance from cloaca to caudal sting base ~ 55 % of disc length; thornlets present in nuchal region, absent from tail in all sizes; dermal denticles absent; pectoral-fin radials 113 (based on new specimen); total vertebral centra (including synarcual) 133, trunk centra (including synarcual) 39; blue spots very small and sparse, largest spot on disc 0.3 – 0.5 times eye width; 0 – 6 (mean 3.0) blue spots on medial belt, largest ~ 2.1 % DW; mask-like marking pronounced, not covered with dark peppery spots; ventral surface of disc and pelvic fins with broad dark greyish submarginal bands; ventral tail fold and adjacent tail bluish grey when fresh.",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  Distinct pairing with embrace (Ref. 205).  Litters size at birth 16 cm (Ref. 37816); Java form born at 11-16 cm WD, Bali form born at ~17 cm WD. Gives birth to litters of 1-2 pups; no reproductive synchronicity (Ref. 58048).",
+      "biologySummaryVn": "Là loài sống đơn độc trên nền đáy cát gần các rạn đá hoặc rạn san hô (Ref. 12951). Thường được tìm thấy ở vùng nước sâu hơn nhưng di chuyển lên bãi triều và vào các đầm phá nông khi thủy triều lên (Ref. 12951). Thỉnh thoảng vùi mình vào cát, chỉ để lộ mắt và đuôi (Ref. 37816). Thức ăn gồm cua và tôm (Ref. 5578). Noãn thai sinh (Ref. 50449). Gai có độc có thể gây ra vết thương đau đớn (Ref. 4690). Bị đánh bắt với số lượng rất lớn bằng nghề lưới kéo đáy, lưới rê và đóm bẫy cá. Được sử dụng làm thực phẩm nhưng có giá trị hạn chế do kích thước nhỏ (Ref. 58048). Loài này bị ký sinh bởi sán đơn chủ <i>Dendromonocotyle kuhlii</i> bám trên bề mặt da lưng (Ref. 124051).",
+      "ecologyNotesVn": "Sinh sống ở các vùng cát nằm giữa các rạn san hô. Là loài sống đơn độc trên nền đáy cát gần các rạn đá hoặc rạn san hô (Ref. 12951). Thường được tìm thấy ở vùng nước sâu hơn nhưng di chuyển lên bãi triều và vào các đầm phá nông khi thủy triều lên (Ref. 12951). Thỉnh thoảng vùi mình vào cát, chỉ để lộ mắt và đuôi (Ref. 37816). Thức ăn gồm cua và tôm (Ref. 5578). Là loài ăn thịt (Ref. 9137). Xem thêm Ref. 58534.",
+      "reproductionNotesVn": "Thể hiện tính noãn thai sinh (thai sinh không có nhau thai), phôi ban đầu hấp thụ chất dinh dưỡng từ noãn hoàng, sau đó nhận thêm dưỡng chất từ cá mẹ thông qua sự hấp thu gián tiếp dịch tử cung được làm giàu bởi chất nhầy, chất béo hoặc protein qua các cấu trúc chuyên hóa (Ref. 50449). Có hành vi ghép đôi rõ ràng với tư thế ôm nhau (Ref. 205). Kích thước con non khi sinh đạt 16 cm (Ref. 37816); dạng phân bố ở Java sinh ra có chiều rộng đĩa (WD) từ 11-16 cm, dạng ở Bali sinh ra có WD khoảng 17 cm. Mỗi lứa đẻ 1-2 con non; không có tính đồng bộ trong sinh sản (Ref. 58048)."
     }
   },
   {
@@ -4428,7 +5068,13 @@
     ],
     "biology": {
       "gbifKey": 11116115,
-      "iucnStatus": "LC"
+      "iucnStatus": "LC",
+      "fbSpecCode": 69732,
+      "source": "FishBase v25.04",
+      "maxLength": "35.6 cm TL",
+      "vulnerability": 25.56,
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless"
     }
   },
   {
@@ -4477,8 +5123,29 @@
       "Dasybatus akajei Garman, Mem. Mus. Comp. Zool., Vol. 36, p. 394, 1913."
     ],
     "biology": {
+      "depth": "10 - 50 m",
+      "fbName": "Whip stingray",
+      "source": "FishBase v25.04",
       "gbifKey": 9541869,
-      "iucnStatus": "NT"
+      "habitat": "Estuaries, Coral reefs",
+      "dangerous": "venomous",
+      "maxLength": "200.0 cm TL",
+      "maxWeight": "10,650 g",
+      "fbSpecCode": 940,
+      "importance": "commercial",
+      "iucnStatus": "NT",
+      "aquaculture": "never/rarely",
+      "feedingType": "hunting macrofauna (predator)",
+      "ecologyNotes": "Inhabits sandy areas in coastal waters (Ref. 9137); also coral reefs (Ref. 58534).",
+      "parentalCare": "maternal",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "priceCategory": "medium",
+      "vulnerability": 90.0,
+      "biologySummary": "Found in coral reefs and estuarine areas, on sand and mud bottoms (Ref. 12951, 11230).  Feeds on  small fishes and crustaceans (Ref. 9840).  Ovoviviparous with litters of only 1 pup (Ref. 114953) while earlier estimates indicated production of  up to 10 in a litter (Ref. 12951).  Caught occasionally by bottom trawl fisheries operating inshore. Utilized for its meat but of limited value due to its small size (Ref.58048). Served in 'miso' soup, hard boiled with seasonings, or for 'kamaboko' material (Ref. 637).",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Phân bố ở các rạn san hô và vùng cửa sông, trên nền đáy cát và bùn (Ref. 12951, 11230). Thức ăn chủ yếu gồm cá nhỏ và động vật giáp xác (Ref. 9840). Loài noãn thai sinh, mỗi lứa đẻ chỉ có 1 con non (Ref. 114953), trong khi các ước tính trước đây cho thấy số lượng con non trong một lứa có thể lên tới 10 con (Ref. 12951). Đôi khi bị bắt bởi nghề khai thác bằng lưới kéo đáy hoạt động ở vùng ven bờ. Được sử dụng làm thực phẩm lấy thịt nhưng có giá trị hạn chế do kích thước nhỏ (Ref. 58048). Được chế biến trong súp 'miso', luộc kỹ với gia vị, hoặc làm nguyên liệu cho món 'kamaboko' (Ref. 637).",
+      "ecologyNotesVn": "Sinh sống ở các khu vực đáy cát trong vùng nước ven bờ (Ref. 9137); cũng được tìm thấy ở các rạn san hô (Ref. 58534).",
+      "reproductionNotesVn": "Thể hiện tính noãn thai sinh (thai sinh không có nhau thai), phôi ban đầu hấp thụ dinh dưỡng từ noãn hoàng, sau đó nhận thêm chất dinh dưỡng từ cá mẹ thông qua việc hấp thụ gián tiếp dịch tử cung giàu chất nhầy, chất béo hoặc protein qua các cấu trúc chuyên hóa (Ref. 50449). Có hành vi ghép đôi rõ ràng với sự ôm giữ (Ref. 205)."
     }
   },
   {
@@ -4531,7 +5198,25 @@
     ],
     "biology": {
       "gbifKey": 9601413,
-      "iucnStatus": "EN"
+      "iucnStatus": "EN",
+      "fbSpecCode": 8205,
+      "source": "FishBase v25.04",
+      "fbName": "Pale-edged stingray",
+      "maxLength": "29.0 cm WD",
+      "vulnerability": 90.0,
+      "importance": "minor commercial",
+      "priceCategory": "low",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Feed on bottom-dwelling organisms (Ref.50449); primarily small crustaceans, but also  small fishes (Ref.58048).  Ovoviviparous (Ref. 50449).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Neritic, Estuaries",
+      "ecologyNotes": "Inhabits coral reefs (Ref. 58534).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialized structures (Ref. 50449). Distinct pairing with embrace (Ref. 205). Gives birth to litters of 1-4 pups; born at 7-10 cm WD. No reproductive synchronicity (Ref.58048).",
+      "biologySummaryVn": "Thức ăn của loài này là các sinh vật sống ở đáy (Ref.50449), chủ yếu là các loài giáp xác nhỏ và cả các loài cá nhỏ (Ref.58048). Đây là loài noãn thai sinh (Ref. 50449).",
+      "ecologyNotesVn": "Sinh sống tại các rạn san hô (Ref. 58534).",
+      "reproductionNotesVn": "Loài này thể hiện hình thức noãn thai sinh (đẻ con không nhau thai), trong đó phôi ban đầu phát triển nhờ nguồn noãn hoàng, sau đó nhận thêm nguồn dinh dưỡng bổ sung từ mẹ thông qua việc hấp thụ gián tiếp dịch tử cung giàu chất nhầy, chất béo hoặc protein qua các cấu trúc chuyên biệt (Ref. 50449). Có tập tính ghép đôi và ôm nhau rõ rệt khi giao phối (Ref. 205). Mỗi lứa đẻ từ 1-4 con non; kích thước con non khi sinh đạt 7-10 cm chiều rộng đĩa (WD). Không có sự đồng bộ về chu kỳ sinh sản (Ref.58048)."
     }
   },
   {
@@ -4581,8 +5266,24 @@
       "Dasyatis bleekeri Fowler, Bull. 100 U. S. Nat. Mus., Vol. 13, p. 410, 1941. Herre, 1947."
     ],
     "biology": {
+      "depth": "đến 30 m",
+      "fbName": "Bleeker's whipray",
+      "source": "FishBase v25.04",
       "gbifKey": 9321767,
-      "iucnStatus": "EN"
+      "dangerous": "venomous",
+      "maxLength": "84.0 cm WD",
+      "maxWeight": "21,100 g",
+      "fbSpecCode": 13148,
+      "importance": "commercial",
+      "iucnStatus": "EN",
+      "aquaculture": "never/rarely",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "priceCategory": "low",
+      "vulnerability": 90.0,
+      "biologySummary": "Enters estuaries (Ref. 4832).  Found mainly on muddy bottoms to at least 40 m depth.  Most likely to feed on small crustaceans (Ref. 114953).  Ovoviviparous (Ref. 50449). Feeds on bottom-living invertebrates (Ref. 68964).",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Loài này có tập tính tiến vào vùng cửa sông (Ref. 4832). Thường phân bố chủ yếu trên nền đáy bùn đến độ sâu tối thiểu khoảng 40 m. Thức ăn có khả năng cao là các loài giáp xác nhỏ (Ref. 114953). Hình thức sinh sản là noãn thai sinh (Ref. 50449). Thức ăn chủ yếu gồm các loài động vật không xương sống tầng đáy (Ref. 68964).",
+      "reproductionNotesVn": "Thuộc nhóm noãn thai sinh (sinh con không có nhau thai); trong giai đoạn đầu, phôi dinh dưỡng hoàn toàn bằng noãn hoàng, sau đó được cung cấp thêm dưỡng chất từ cá mẹ qua cơ chế hấp thụ gián tiếp dịch tử cung giàu chất nhầy, lipid hoặc protein thông qua các cấu trúc chuyên biệt (trophonemata) (Ref. 50449). Có tập tính bắt cặp rõ rệt với hành vi ôm giữ khi giao phối (Ref. 205)."
     }
   },
   {
@@ -4652,7 +5353,27 @@
     "biology": {
       "gbifKey": 9295191,
       "iucnStatus": "VU",
-      "morphDescription": "Therefore, all materials in our collection were morphologically re-examined. The results revealed that specimens collected from the Persian Gulf and the Gulf of Oman have up to 12 enlarged thorns on the base of the tail, 2 (n = 60) to 3 (n = 29) stinging spines, and the denticle band does not cover the trunk area, which is consistent with all diagnostic characteristics of B. walga. So, the current morphological and molecular (e. g. branch support and genetic distance) evidence support the idea that there is a monophyletic clade and B. walga is the only representative of the genus in the region. Recently, Fernando et al. (2019) reported an unknown taxon that clustered closely to well outside the species. This finding shows that there may be more cryptic species in the genus and more detailed examination should be conducted."
+      "morphDescription": "Therefore, all materials in our collection were morphologically re-examined. The results revealed that specimens collected from the Persian Gulf and the Gulf of Oman have up to 12 enlarged thorns on the base of the tail, 2 (n = 60) to 3 (n = 29) stinging spines, and the denticle band does not cover the trunk area, which is consistent with all diagnostic characteristics of B. walga. So, the current morphological and molecular (e. g. branch support and genetic distance) evidence support the idea that there is a monophyletic clade and B. walga is the only representative of the genus in the region. Recently, Fernando et al. (2019) reported an unknown taxon that clustered closely to well outside the species. This finding shows that there may be more cryptic species in the genus and more detailed examination should be conducted.",
+      "fbSpecCode": 13150,
+      "source": "FishBase v25.04",
+      "fbName": "Coromandel whipray",
+      "maxLength": "25.5 cm WD",
+      "maxWeight": "590 g",
+      "depth": "1 - 45 m",
+      "vulnerability": 41.58,
+      "importance": "minor commercial",
+      "priceCategory": "low",
+      "aquaculture": "never/rarely",
+      "dangerous": "venomous",
+      "biologySummary": "Found in inshore coastal waters (Ref. 30573).  Typically found in estuarine habitats, but also reported from the Great Lake.  The single record from the Great Lake may in fact refer to <i>Dasyatis laosensis</i>.  Young and adults feed on benthic invertebrates (Ref. 12693).  Ovoviviparous (Ref. 124). Feeds on bottom-living invertebrates (Ref. 68964). May grow to a maximum of 140 cm disc length in the sea (Ref. 43081).  Juveniles may be present in mangroves (Ref. 43081). Examined adult males 17.1 cm DW (32.0 cm TL) - 20.5 cm DW (39.8 cm TL); females 13.8 cm DW (25.6 cm TL) - 20.4 cm DW (39.6 cm TL); early juveniles (USNM 222564, immature male 12.0 cm DW and female 8.8 cm DW) have lost umbilical scars. Reported maximum disc width 30.0 cm (Ref. 11312) was found excessive (Ref. 130662).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Estuaries, Mangroves, Benthic, Soft bottom",
+      "ecologyNotes": "Found in inshore coastal waters (Ref. 30573).  Juveniles may be present in mangroves (Ref. 43081).  Lays half-buried under sandy substrates (Ref. 129713).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Loài này được tìm thấy ở các vùng nước ven bờ (Ref. 30573). Thường xuất hiện tại sinh cảnh vùng cửa sông, nhưng cũng được ghi nhận tại Biển Hồ (Tonle Sap); tuy nhiên, ghi nhận duy nhất tại Biển Hồ trên thực tế có thể là của loài <i>Dasyatis laosensis</i>. Cả cá non và cá trưởng thành đều ăn các loài động vật không xương sống đáy (Ref. 12693, 68964). Sinh sản theo hình thức noãn thai sinh (Ref. 124). Kích thước tối đa ngoài biển có thể đạt chiều dài đĩa thân 140 cm (Ref. 43081). Cá con có thể phân bố trong rừng ngập mặn (Ref. 43081). Các mẫu cá đực trưởng thành được kiểm tra có chiều rộng đĩa thân (DW) từ 17,1 cm (chiều dài tổng số TL 32,0 cm) đến 20,5 cm DW (TL 39,8 cm); cá cái từ 13,8 cm DW (TL 25,6 cm) đến 20,4 cm DW (TL 39,6 cm); cá non giai đoạn sớm (mẫu USNM 222564, gồm cá đực chưa thành thục 12,0 cm DW và cá cái 8,8 cm DW) đã tiêu biến vết sẹo cuống noãn hoàng. Ghi nhận về chiều rộng đĩa thân tối đa đạt 30,0 cm (Ref. 11312) được xác định là quá mức thực tế (Ref. 130662).",
+      "ecologyNotesVn": "Phân bố ở vùng nước ven bờ (Ref. 30573). Cá con có thể hiện diện trong các khu vực rừng ngập mặn (Ref. 43081). Thường nằm vùi một phần cơ thể dưới nền đáy cát (Ref. 129713).",
+      "reproductionNotesVn": "Sinh sản theo hình thức noãn thai sinh (thai sinh không nhau thai); phôi ban đầu dinh dưỡng bằng noãn hoàng, sau đó nhận thêm nguồn dưỡng chất bổ sung từ cá mẹ thông qua việc hấp thụ gián tiếp dịch tử cung giàu chất nhầy, chất béo hoặc protein qua các cấu trúc chuyên biệt (Ref. 50449). Có tập tính bắt cặp rõ rệt với hành vi quấn ôm nhau khi giao phối (Ref. 205)."
     }
   },
   {
@@ -4718,7 +5439,26 @@
     "biology": {
       "gbifKey": 2419714,
       "iucnStatus": "NT",
-      "morphDescription": "Fig. 10 oaja sephen Fabricius in Niebuhr (ex Forsskål), 1775: 17; no types known; type locality: Jeddah, Saudi Arabia and Al-Luhayya, Yemen, Red Sea."
+      "morphDescription": "Fig. 10 oaja sephen Fabricius in Niebuhr (ex Forsskål), 1775: 17; no types known; type locality: Jeddah, Saudi Arabia and Al-Luhayya, Yemen, Red Sea.",
+      "fbSpecCode": 8203,
+      "source": "FishBase v25.04",
+      "fbName": "Cowtail stingray",
+      "maxLength": "183.0 cm WD",
+      "depth": "0 - 60 m",
+      "vulnerability": 90.0,
+      "importance": "minor commercial",
+      "priceCategory": "low",
+      "aquaculture": "never/rarely",
+      "dangerous": "venomous",
+      "biologySummary": "Found in lagoons, reef flats, and reef faces (Ref. 12951).  Also in rivers far from the sea (Ref. 5578).  Feeds on bony fishes, worms, shrimp, and crabs (Ref. 12951).  Ovoviviparous (Ref. 50449).  Adults are sometimes accompanied by remoras or members of the trevally family (Ref. 6871).  Size at birth about 18 cm WD or larger (Ref. 6871).  Flesh utilized as food and skin used for polishing wood (Ref. 4832).  Possibly caught by sports anglers (Ref. 5578).  Recently there is a targeted fishery on this species for its skin, which is used as 'shagreen' in fashion accessories, from wallets to fancy pens; as a result, the species is in danger of disappearance (IHT 26.11.2005, p.5).  Maximum length about 300 cm TL (Ref. 30573).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Estuaries, Coral reefs, Benthic, Soft bottom",
+      "ecologyNotes": "Observed swimming above sandy substrates (Ref. 129713).  Found in freshwater, brackish and marine waters (Ref. 86942).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449). Distinct pairing with embrace (Ref. 205).  Size at birth ~ 18 cm WD (Ref.58048).",
+      "biologySummaryVn": "Được tìm thấy ở các đầm phá, mặt rạn và sườn rạn san hô (Ref. 12951). Loài này cũng xuất hiện ở các con sông nằm sâu trong đất liền cách xa biển (Ref. 5578). Thức ăn chủ yếu gồm cá xương, giun, tôm và cua (Ref. 12951). Là loài noãn thai sinh (Ref. 50449). Cá trưởng thành đôi khi đi kèm với cá ép hoặc các thành viên thuộc họ Cá khế (Ref. 6871). Kích thước khi sinh đạt khoảng 18 cm chiều rộng đĩa (WD) hoặc lớn hơn (Ref. 6871). Thịt cá được sử dụng làm thực phẩm và da được dùng để đánh bóng gỗ (Ref. 4832). Loài này cũng có thể bị đánh bắt bởi những người câu cá thể thao (Ref. 5578). Gần đây, xuất hiện hoạt động khai thác tập trung loài này để lấy da làm 'da nhám' (shagreen) ứng dụng trong các phụ kiện thời trang từ ví da cho đến bút máy cao cấp; hệ quả là loài này đang đứng trước nguy cơ biến mất (IHT 26.11.2005, tr.5). Chiều dài tổng số (TL) tối đa đạt khoảng 300 cm (Ref. 30573).",
+      "ecologyNotesVn": "Được quan sát thấy đang bơi phía trên các nền đáy cát (Ref. 129713). Phân bố trong cả môi trường nước ngọt, nước lợ và nước mặn (Ref. 86942).",
+      "reproductionNotesVn": "Thể hiện hình thức noãn thai sinh (đẻ con không nhau thai), trong đó phôi ban đầu phát triển nhờ nguồn noãn hoàng, sau đó nhận thêm chất dinh dưỡng bổ sung từ cá mẹ thông qua việc hấp thụ gián tiếp dịch tử cung (giàu chất nhầy, chất béo hoặc protein) qua các cấu trúc chuyên biệt (Ref. 50449). Có hành vi ghép đôi rõ rệt đi kèm sự ôm bám khi giao phối (Ref. 205). Kích thước khi sinh đạt khoảng 18 cm chiều rộng đĩa (WD) (Ref. 58048)."
     }
   },
   {
@@ -4865,7 +5605,25 @@
     "biology": {
       "gbifKey": 9590829,
       "iucnStatus": "EN",
-      "morphDescription": "(Figs. 2 D, 8 A, B) Four specimens morphologically consistent with Maculabatis gerrardi were examined. These came from landing sites in Pukulam (SL- 9) and Puttalam (SL- 15) in the North Western Province and fish markets in Munai (SL- 40) and Kotaddi (SL- 58) at Point Pedro in the Northern Province. Two (SL- 9 and SL- 58) were immatures and two (SL- 40 and SL- 15) were mature. The latter mature specimen had already been processed for sale and consisted solely of the right side of the disc. Both immature specimens were morphologically consistent with the immature specimen from Malaysian Borneo used as the reference specimen for M. gerrardi (BO- 163; JQ 519087) in our analysis; both specimens possessed a few white spots on the dorsal surface of the base of the tail grading into alternating black and white bands throughout the length of the tail. Both of the mature specimens exhibited sparse, small white spots restricted to the posterior margin of the disc and pelvic fins, typical of adults of M. gerrardi. All four specimens from Sri Lanka grouped in a tight cluster with the reference specimen of M. gerrardi. They differed from one another by 0 – 3 bp and from the reference specimen by 5 – 6 bp. This species has previously been referred to as Himantura gerrardi (Gray) (e. g., De Bruin et al. 1995; Morón et al. 1998; De Silva 2006). That name has been updated here to reflect current nomenclature (Last et al. 2016)."
+      "morphDescription": "(Figs. 2 D, 8 A, B) Four specimens morphologically consistent with Maculabatis gerrardi were examined. These came from landing sites in Pukulam (SL- 9) and Puttalam (SL- 15) in the North Western Province and fish markets in Munai (SL- 40) and Kotaddi (SL- 58) at Point Pedro in the Northern Province. Two (SL- 9 and SL- 58) were immatures and two (SL- 40 and SL- 15) were mature. The latter mature specimen had already been processed for sale and consisted solely of the right side of the disc. Both immature specimens were morphologically consistent with the immature specimen from Malaysian Borneo used as the reference specimen for M. gerrardi (BO- 163; JQ 519087) in our analysis; both specimens possessed a few white spots on the dorsal surface of the base of the tail grading into alternating black and white bands throughout the length of the tail. Both of the mature specimens exhibited sparse, small white spots restricted to the posterior margin of the disc and pelvic fins, typical of adults of M. gerrardi. All four specimens from Sri Lanka grouped in a tight cluster with the reference specimen of M. gerrardi. They differed from one another by 0 – 3 bp and from the reference specimen by 5 – 6 bp. This species has previously been referred to as Himantura gerrardi (Gray) (e. g., De Bruin et al. 1995; Morón et al. 1998; De Silva 2006). That name has been updated here to reflect current nomenclature (Last et al. 2016).",
+      "fbSpecCode": 15483,
+      "source": "FishBase v25.04",
+      "fbName": "Sharpnose stingray",
+      "maxLength": "200.0 cm TL",
+      "depth": "đến 50 m",
+      "vulnerability": 90.0,
+      "importance": "commercial",
+      "priceCategory": "low",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "Likely confined to the inner continental shelf (Ref. 9840), over sandy and mud bottoms (Ref. 30573).  Recorded from coastal waters and river mouths (Ref. 45255).  Feeds on bottom crustaceans including shrimp, crabs and small lobsters (Ref. 5578).  Ovoviviparous (Ref. 50449).  Important food fish, the skin and flesh are dried or used to produce leather for purses and bags (Ref. 9840). Caught in very large quantities in the demersal tangle net, bottom trawl and trammel net fisheries. Utilized for its meat, skin (high value) and cartilage (Ref. 58048). It is parasitised on the dorsal skin surface by the monogeneans <i>Dendromonocotyle citrosa, D. colorni, D. ukuthena</i> (Ref. 124058) and <i>D. lotteri</i> (Ref. 124051).",
+      "feedingType": "hunting macrofauna (predator)",
+      "ecologyNotes": "Likely confined to the inner continental shelf (Ref. 9840), over sandy and mud bottoms (Ref. 30573).  Inhabits coral reefs (Ref. 58534).  Feeds on bottom crustaceans including shrimp, crabs and small lobsters.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  Distinct pairing with embrace (Ref. 205).  Bears 2 young in summer (Ref. 5578). Gives birth to litters of 1-4 pups; born at 18-21 cm WD (Ref.58048).",
+      "biologySummaryVn": "Nhiều khả năng chỉ giới hạn ở vùng thềm lục địa trong (Ref. 9840), trên các nền đáy cát và bùn (Ref. 30573). Được ghi nhận ở các vùng nước ven bờ và cửa sông (Ref. 45255). Thức ăn chủ yếu gồm các loài giáp xác tầng đáy bao gồm tôm, cua và tôm hùm nhỏ (Ref. 5578). Là loài noãn thai sinh (Ref. 50449). Đây là loài cá thực phẩm quan trọng, da và thịt được phơi khô hoặc sử dụng để sản xuất da thuộc làm ví và túi xách (Ref. 9840). Được đánh bắt với số lượng rất lớn bằng các nghề lưới rê tầng đáy, lưới kéo đáy và lưới ba lớp. Được khai thác để lấy thịt, da (có giá trị cao) và sụn (Ref. 58048). Loài này bị ký sinh trên bề mặt da lưng bởi các loài sán lá đơn chủ <i>Dendromonocotyle citrosa, D. colorni, D. ukuthena</i> (Ref. 124058) và <i>D. lotteri</i> (Ref. 124051).",
+      "ecologyNotesVn": "Nhiều khả năng chỉ giới hạn ở vùng thềm lục địa trong (Ref. 9840), trên các nền đáy cát và bùn (Ref. 30573). Sống quanh các rạn san hô (Ref. 58534). Thức ăn chủ yếu gồm các loài giáp xác tầng đáy bao gồm tôm, cua và tôm hùm nhỏ.",
+      "reproductionNotesVn": "Thể hiện hình thức noãn thai sinh (đẻ con không nhau thai), trong đó phôi ban đầu ăn noãn hoàng, sau đó nhận thêm chất dinh dưỡng từ mẹ thông qua việc hấp thụ gián tiếp dịch tử cung giàu chất nhầy, chất béo hoặc protein qua các cấu trúc chuyên biệt (Ref. 50449). Có hành vi bắt cặp rõ rệt kèm theo sự ôm bám (Ref. 205). Sinh 2 con non vào mùa hè (Ref. 5578). Mỗi lứa đẻ từ 1 đến 4 con non; kích thước khi sinh đạt chiều rộng đĩa (WD) từ 18–21 cm (Ref. 58048)."
     }
   },
   {
@@ -4923,7 +5681,26 @@
     ],
     "biology": {
       "gbifKey": 2419580,
-      "iucnStatus": "EN"
+      "iucnStatus": "EN",
+      "fbSpecCode": 5400,
+      "source": "FishBase v25.04",
+      "fbName": "Porcupine whipray",
+      "maxLength": "147.0 cm WD",
+      "depth": "15 - 217 m",
+      "vulnerability": 90.0,
+      "importance": "commercial",
+      "priceCategory": "low",
+      "aquaculture": "never/rarely",
+      "dangerous": "traumatogenic",
+      "biologySummary": "Inhabits the continental shelf area (Ref. 2334), but capable of entering coastal lagoons (Ref. 81259). Found on sand and coral rubble areas near reefs (Ref. 9840), often in caves. Ovoviviparous (Ref. 50449). Due to its difficult handling, it is probably of limited commercial value (Ref. 9840). Its thorn can inflict a painful injury; caught commonly by demersal tangle net fisheries; utilized for its meat, skin (very high value) and cartilage (Ref.58048).",
+      "feedingType": "hunting macrofauna (predator)",
+      "habitat": "Neritic, Estuaries, Benthic, Soft bottom, Rubble",
+      "ecologyNotes": "Inhabits the continental shelf area (Ref. 2334), but capable of entering coastal lagoons (Ref. 81259). Found on sand and coral rubble areas near reefs (Ref. 9840), often in caves.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449). Distinct pairing with embrace (Ref. 205).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Loài này cư trú ở khu vực thềm lục địa (Ref. 2334), nhưng có khả năng tiến vào các đầm phá ven bờ (Ref. 81259). Thường được tìm thấy trên nền đáy cát và khu vực vụn san hô gần rạn (Ref. 9840), phổ biến trong các hang hốc. Thuộc nhóm noãn thai sinh (Ref. 50449). Do khó xử lý và sơ chế, loài này có thể có giá trị thương mại hạn chế (Ref. 9840). Các gai cứng của chúng có thể gây ra vết thương đau đớn dữ dội; thường bị đánh bắt bởi nghề lưới vướng tầng đáy; được sử dụng để lấy thịt, da (có giá trị rất cao) và sụn (Ref. 58048).",
+      "ecologyNotesVn": "Cư trú ở khu vực thềm lục địa (Ref. 2334), nhưng có khả năng tiến vào các đầm phá ven bờ (Ref. 81259). Thường gặp trên nền đáy cát và vùng vụn san hô gần rạn (Ref. 9840), thường trú ngụ trong các hang hốc.",
+      "reproductionNotesVn": "Hình thức sinh sản là noãn thai sinh (thai sinh không có nhau thai); phôi thoạt đầu hấp thụ dinh dưỡng từ túi noãn hoàng, sau đó nhận thêm chất dinh dưỡng từ cơ thể mẹ thông qua việc hấp thu gián tiếp dịch tử cung giàu chất nhầy, chất béo hoặc protein qua các cấu trúc chuyên hóa (Ref. 50449). Có tập tính bắt cặp rõ rệt đi kèm hành vi ôm giữ khi giao phối (Ref. 205)."
     }
   },
   {
@@ -5174,7 +5951,22 @@
     ],
     "biology": {
       "gbifKey": 5216236,
-      "iucnStatus": "EN"
+      "iucnStatus": "EN",
+      "fbSpecCode": 12593,
+      "source": "FishBase v25.04",
+      "fbName": "Zonetail butterfly ray",
+      "maxLength": "106.0 cm WD",
+      "depth": "28 - 37 m",
+      "vulnerability": 43.22,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "venomous",
+      "biologySummary": "Demersal inshore, in shallow depths to at least 37 m (Ref.58048). Also found offshore (Ref. 9918).  Ovoviviparous (Ref. 50449). Smallest individual was 27 cm WD. Caught often by demersal trawl, trammel and gillnet fisheries, and occasionally using tangle nets. Utilized for its meat, but of limited value due to its typically small size (Ref.58048).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  Distinct pairing with embrace (Ref. 205).",
+      "biologySummaryVn": "Là loài sống tầng đáy ven bờ, phân bố ở các vùng nước nông đến độ sâu ít nhất 37 m (Ref. 58048). Loài này cũng được bắt gặp ở vùng ngoài khơi (Ref. 9918). Sinh sản theo hình thức noãn thai sinh (Ref. 50449). Cá thể nhỏ nhất từng ghi nhận có chiều rộng đĩa thân (WD) đạt 27 cm. Thường bị khai thác bởi nghề lưới kéo đáy, lưới ba màn và lưới bén, đôi khi mắc phải lưới rê rối. Được sử dụng để lấy thịt nhưng giá trị kinh tế hạn chế do kích thước cơ thể thường nhỏ (Ref. 58048).",
+      "reproductionNotesVn": "Sinh sản theo hình thức noãn thai sinh (thai sinh không nhau thai); phôi thai giai đoạn đầu phát triển nhờ noãn hoàng, sau đó tiếp tục nhận dinh dưỡng bổ sung từ cá mẹ thông qua việc hấp thụ gián tiếp dịch tử cung giàu chất nhầy, lipid hoặc protein qua các cấu trúc chuyên biệt (Ref. 50449). Có tập tính bắt cặp rõ rệt đi kèm hành vi ôm giữ khi giao phối (Ref. 205)."
     }
   },
   {
@@ -5771,7 +6563,26 @@
       "Mobula japonica Fowler, Bishop. Mus, Bull., Vol. 38, p. 3, fig. A - C, 1927. Matsubara, 1955. Chu, 1960."
     ],
     "biology": {
-      "gbifKey": 2419184
+      "depth": "0 - 700 m",
+      "fbName": "Spinetail devil ray",
+      "source": "FishBase v25.04",
+      "gbifKey": 2419184,
+      "dangerous": "harmless",
+      "maxLength": "520.0 cm WD",
+      "maxWeight": "1,500,000 g",
+      "fbSpecCode": 7618,
+      "importance": "commercial",
+      "aquaculture": "never/rarely",
+      "feedingType": "hunting macrofauna (predator)",
+      "ecologyNotes": "Shoaling species.  Filter-feeder (Ref. 9773).  An epipelagic species (Ref. 6808) found over continental shelves and near oceanic islands. Feeds on small pelagic fishes and crustaceans.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "priceCategory": "medium",
+      "vulnerability": 57.92,
+      "biologySummary": "An epipelagic species (Ref. 6808, 58302) found over continental shelves and near oceanic islands (Ref. 6679).  Occurs singly or in groups (Ref. 9911).  Feeds mainly on euphausiids (mainly <i>Nictiphanes simplex</i>), and to a lesser extent on copepods and crustacean larvae; also on small pelagic fishes and crustaceans (Ref. 6679, 6871), by funnelling using their cephalic fins and then trapping or filtering the food through their specialised gill plates (Ref. 115943).  Acoustic tracks record the species to spend time above the thermocline at night to feed on krill (H. Dewar, pers.comm. 05/2000). Max length of female from Ref. 50641. Ovoviviparous (Ref. 50449). Bycatch mortalities have been reported from Mediterranean fisheries - large-scale driftnets, purse seines and trawls, bottom set nets, trammel nets, longlines and even fixed traps for tuna. Very common by-catch of the gillnet fisheries targeting skipjack tuna (<i>Katsuwonus pelamis</i>). It is utilized for its meat as protein source (except the head), its gill filter plates (of very high value and as an ingredient in Chinese medicine, Ref. 115943), its cartilage and skin (Ref. 58048).",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 6679, 50449). With one in a litter (Ref. 12951). Size at birth 85-92 cm WD (Ref. 12951, Ref. 58048).",
+      "biologySummaryVn": "Là loài sống ở tầng nổi biển khơi (Ref. 6808, 58302), phân bố trên thềm lục địa và gần các đảo đại dương (Ref. 6679). Sống đơn độc hoặc theo đàn (Ref. 9911). Thức ăn chủ yếu là nhuyễn thể euphausiids (chủ yếu là loài <i>Nyctiphanes simplex</i>), ít hơn là động vật chân chèo và ấu trùng giáp xác; ngoài ra còn ăn các loài cá nổi nhỏ và giáp xác (Ref. 6679, 6871), thức ăn được dồn vào miệng bằng các vây đầu sau đó được giữ lại hoặc lọc qua các mang chuyên hóa (Ref. 115943). Các dữ liệu ghi nhận bằng thiết bị âm học cho thấy loài này dành thời gian bơi ở tầng trên đường nhiệt chuyển dịch vào ban đêm để ăn krill (H. Dewar, thông tin cá nhân, 05/2000). Chiều dài tối đa của con cái theo Ref. 50641. Noãn thai sinh (Ref. 50449). Tỷ lệ tử vong do đánh bắt phụ (bycatch) đã được ghi nhận tại các nghề cá ở Địa Trung Hải - sử dụng lưới rê quy mô lớn, lưới vây, lưới kéo, lưới bén đáy, lưới ba lớp, nghề câu vươn dài và thậm chí cả ngư cụ cố định bắt cá ngừ. Là loài đánh bắt phụ rất phổ biến trong nghề khai thác lưới rê nhắm vào cá ngừ vằn (<i>Katsuwonus pelamis</i>). Loài này được tận dụng lấy thịt làm nguồn cung cấp protein (trừ phần đầu), các phiến lọc mang (có giá trị rất cao và được dùng làm vị thuốc trong y học cổ truyền Trung Quốc, Ref. 115943), sụn và da (Ref. 58048).",
+      "ecologyNotesVn": "Là loài sống thành đàn. Loài ăn lọc (Ref. 9773). Là loài ở tầng nổi biển khơi (Ref. 6808) phân bố ở thềm lục địa và gần các đảo đại dương. Thức ăn gồm cá nổi nhỏ và giáp xác.",
+      "reproductionNotesVn": "Thể hiện hình thức noãn thai sinh (thai sinh không có nhau thai), phôi ban đầu hấp thụ dưỡng chất từ noãn hoàng, sau đó nhận thêm dưỡng chất từ mẹ thông qua quá trình hấp thụ gián tiếp dịch tử cung giàu chất nhầy, chất béo hoặc protein nhờ các cấu trúc chuyên hóa (Ref. 6679, 50449). Mỗi lứa đẻ 1 con (Ref. 12951). Kích thước khi mới sinh từ 85-92 cm chiều rộng đĩa (WD) (Ref. 12951, Ref. 58048)."
     }
   },
   {
@@ -5830,7 +6641,26 @@
     "biology": {
       "gbifKey": 2419188,
       "iucnStatus": "CR",
-      "morphDescription": "Giant Devilray or Spinetail Devil Ray. Notarbartolo di Sciara et al. (2020) note that recent taxonomic changes among the Mobulidae have made the name Giant Devilray obsolete and suggest that Spinetail Devil Ray is more accurate. To at least 5.2 m (17.1 ft) DW (Last et al. 2016). Circumglobal; western Pacific Ocean north to Korea and northern Japan (as Mobula japonica, Aonuma and Yoshino in Nakabo 2002); central California to Peru (Ebert 2003), including Gulf of California (Galván-Magaña et al. 1996). Depth: surface to at 700 m (2,296 ft) (min.: Ebert 2003; max.: Weigmann 2016). The Mobula thurstoni reported by MacGinitie (1947) from Laguna Beach, southern California is likely M. mobular (Notarbartolo di Sciara 1987). We follow Poortvliet et al. (2015) and Last et al. (2016) in synonymizing Mobula japanica (Müller & Henle, 1841) with this species."
+      "morphDescription": "Giant Devilray or Spinetail Devil Ray. Notarbartolo di Sciara et al. (2020) note that recent taxonomic changes among the Mobulidae have made the name Giant Devilray obsolete and suggest that Spinetail Devil Ray is more accurate. To at least 5.2 m (17.1 ft) DW (Last et al. 2016). Circumglobal; western Pacific Ocean north to Korea and northern Japan (as Mobula japonica, Aonuma and Yoshino in Nakabo 2002); central California to Peru (Ebert 2003), including Gulf of California (Galván-Magaña et al. 1996). Depth: surface to at 700 m (2,296 ft) (min.: Ebert 2003; max.: Weigmann 2016). The Mobula thurstoni reported by MacGinitie (1947) from Laguna Beach, southern California is likely M. mobular (Notarbartolo di Sciara 1987). We follow Poortvliet et al. (2015) and Last et al. (2016) in synonymizing Mobula japanica (Müller & Henle, 1841) with this species.",
+      "fbSpecCode": 7618,
+      "source": "FishBase v25.04",
+      "fbName": "Spinetail devil ray",
+      "maxLength": "520.0 cm WD",
+      "maxWeight": "1,500,000 g",
+      "depth": "0 - 700 m",
+      "vulnerability": 57.92,
+      "importance": "commercial",
+      "priceCategory": "medium",
+      "aquaculture": "never/rarely",
+      "dangerous": "harmless",
+      "biologySummary": "An epipelagic species (Ref. 6808, 58302) found over continental shelves and near oceanic islands (Ref. 6679).  Occurs singly or in groups (Ref. 9911).  Feeds mainly on euphausiids (mainly <i>Nictiphanes simplex</i>), and to a lesser extent on copepods and crustacean larvae; also on small pelagic fishes and crustaceans (Ref. 6679, 6871), by funnelling using their cephalic fins and then trapping or filtering the food through their specialised gill plates (Ref. 115943).  Acoustic tracks record the species to spend time above the thermocline at night to feed on krill (H. Dewar, pers.comm. 05/2000). Max length of female from Ref. 50641. Ovoviviparous (Ref. 50449). Bycatch mortalities have been reported from Mediterranean fisheries - large-scale driftnets, purse seines and trawls, bottom set nets, trammel nets, longlines and even fixed traps for tuna. Very common by-catch of the gillnet fisheries targeting skipjack tuna (<i>Katsuwonus pelamis</i>). It is utilized for its meat as protein source (except the head), its gill filter plates (of very high value and as an ingredient in Chinese medicine, Ref. 115943), its cartilage and skin (Ref. 58048).",
+      "feedingType": "hunting macrofauna (predator)",
+      "ecologyNotes": "Shoaling species.  Filter-feeder (Ref. 9773).  An epipelagic species (Ref. 6808) found over continental shelves and near oceanic islands. Feeds on small pelagic fishes and crustaceans.",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 6679, 50449). With one in a litter (Ref. 12951). Size at birth 85-92 cm WD (Ref. 12951, Ref. 58048).",
+      "biologySummaryVn": "Là loài cá biển khơi tầng mặt (Ref. 6808, 58302), phân bố trên các thềm lục địa và vùng nước quanh các đảo đại dương (Ref. 6679). Thường xuất hiện đơn độc hoặc theo nhóm (Ref. 9911). Thức ăn chủ yếu gồm các loài giáp xác dạng tôm thuộc bộ Euphausiacea (chủ yếu là <i>Nictiphanes simplex</i>), cùng một lượng nhỏ giáp xác chân chèo và ấu trùng giáp xác; chúng cũng ăn các loài cá nổi nhỏ và giáp xác (Ref. 6679, 6871) bằng cách dùng thùy vây đầu gom hướng dòng thức ăn, sau đó giữ lại hoặc lọc thức ăn thông qua các phiến mang chuyên hóa (Ref. 115943). Dữ liệu theo dõi âm học ghi nhận loài này bơi phía trên tầng nhảy nhiệt vào ban đêm để ăn nhuyễn thể krill (H. Dewar, pers.comm. 05/2000). Chiều dài tối đa của cá cái được trích từ Ref. 50641. Thuộc nhóm noãn thai sinh (Ref. 50449). Tỷ lệ tử vong do đánh bắt phụ đã được ghi nhận trong các nghề cá ở Địa Trung Hải — bao gồm lưới rê trôi quy mô lớn, lưới vây, lưới kéo, lưới giăng đáy, lưới ba màng, câu kiều và cả bẫy cố định cá ngừ. Đây là đối tượng đánh bắt không chủ ý rất phổ biến của nghề lưới rê khai thác cá ngừ vằn (<i>Katsuwonus pelamis</i>). Loài này được tận dụng thịt để làm nguồn protein thực phẩm (ngoại trừ phần đầu), phiến mang lọc (có giá trị kinh tế rất cao, dùng làm dược liệu trong y học cổ truyền Trung Hoa, Ref. 115943), sụn và da (Ref. 58048).",
+      "ecologyNotesVn": "Loài có tập tính tập hợp thành đàn. Thuộc nhóm động vật ăn lọc (Ref. 9773). Là loài biển khơi tầng mặt (Ref. 6808) được tìm thấy trên các thềm lục địa và quanh các đảo đại dương. Thức ăn chủ yếu gồm các loài cá nổi nhỏ và giáp xác.",
+      "reproductionNotesVn": "Hình thức sinh sản là noãn thai sinh (đẻ con không có nhau thai); phôi ban đầu sử dụng dinh dưỡng từ noãn hoàng, sau đó hấp thụ thêm chất dinh dưỡng từ cơ thể mẹ thông qua việc hấp thu gián tiếp dịch tử cung giàu dịch nhầy, lipid hoặc protein qua các cấu trúc chuyên hóa (Ref. 6679, 50449). Mỗi lứa đẻ sinh 1 con non (Ref. 12951). Kích thước chiều rộng đĩa thân khi sinh đạt khoảng 85–92 cm WD (Ref. 12951, Ref. 58048)."
     }
   },
   {
@@ -5878,9 +6708,31 @@
       "Manta birostris Chu, Trung Quốc nhuyễn cốt ngư loại chí, p. 205, figs. 190 - 191, 1960."
     ],
     "biology": {
+      "depth": "0 - 1000 m",
+      "fbName": "Oceanic manta ray",
+      "source": "FishBase v25.04",
       "gbifKey": 9548142,
+      "habitat": "Neritic, Coral reefs, Rocky",
+      "spawning": "one clear seasonal peak per year",
+      "dangerous": "harmless",
+      "longevity": "20.0 năm",
+      "maxLength": "910.0 cm WD",
+      "maxWeight": "3,000,000 g",
+      "fbSpecCode": 2061,
+      "importance": "minor commercial",
       "iucnStatus": "EN",
-      "morphDescription": "Giant Manta or Manta. To at least 7 m (23 ft) DW (Weigman 2016), and unconfirmed to 9.1 m (29.8 ft) DW (Last and Stevens 2009). Circumglobal in warm waters mainly between 40 ° N and 40 ° S (Last et al. 2016); western Pacific Ocean north to Okinawa (Aonuma and Yoshino in Nakabo 2002); Santa Barbara, southern California (Ebert 2003) to Peru (12 ° S) (Moreno and Gonzalez-Pestana 2017), including Gulf of California (McEachran and Notarbartolo di Sciara in Fischer et al. 1995), and Islas Galápagos (Grove and Lavenberg 1997); sighting (unverifiable) reported from Prince Willam Sound, Alaska (Karinen et al. 1985). Pelagic; depth: surface to at least 1,000 m (3,280 ft) (Weigman 2016)."
+      "aquaculture": "never/rarely",
+      "feedingType": "filtering plankton",
+      "ecologyNotes": "Common on coastal waters (Ref. 9137). One of the best areas to view them is around Sangalaki Island, off the northeastern coast of Kalimantan (Indonesian Borneo), (Ref. 54301).  Mainly in near-shore waters, near coral and rocky reefs; sometimes found over deep water (Ref. 12951).  Penetrates shallow muddy bays and the intertidal and occurs off river mouths (Ref. 9911).  Pelagic (Ref. 58302).  Occurs singly or in loose aggregations (Ref. 12951).  Mainly plankton feeders, but may feed on small and moderate-sized fishes as well (Ref. 9911).  A carnivore (Ref. 9137).  Leaps out the water mainly in spring and autumn, possibly as part of mating behavior (Ref. 31742).  Easily approached (Ref. 9911).",
+      "reproduction": "dioecism, internal (oviduct) fertilization",
+      "priceCategory": "medium",
+      "vulnerability": 63.36,
+      "biologySummary": "Mainly in near-shore waters, near coral and rocky reefs; sometimes found over deep water (Ref. 12951).  Reported along productive coastlines with regular upwelling, oceanic island groups and offshore pinnacles and seamounts (Ref. 82755).  Penetrates shallow muddy bays and the intertidal and occurs off river mouths (Ref. 9911).  Pelagic (Ref. 58302).  Occurs singly or in loose aggregations (Ref. 12951).  Mainly plankton feeders, but may feed on small and moderate-sized fishes as well (Ref. 9911).  Leaps out the water mainly in spring and autumn, possibly as part of mating behavior (Ref. 31742).  Easily approached (Ref. 9911).  Ovoviviparous (Ref. 6902).  Commonly caught by tuna gillnet and harpoon fisheries. Utilized for its gill filter plates (very high value), meat, cartilage and skin (Ref.58048). Liver yields oil and skin used as abrasive (Ref. 6902).  World's largest ray (Ref. 37816).",
+      "morphDescription": "Giant Manta or Manta. To at least 7 m (23 ft) DW (Weigman 2016), and unconfirmed to 9.1 m (29.8 ft) DW (Last and Stevens 2009). Circumglobal in warm waters mainly between 40 ° N and 40 ° S (Last et al. 2016); western Pacific Ocean north to Okinawa (Aonuma and Yoshino in Nakabo 2002); Santa Barbara, southern California (Ebert 2003) to Peru (12 ° S) (Moreno and Gonzalez-Pestana 2017), including Gulf of California (McEachran and Notarbartolo di Sciara in Fischer et al. 1995), and Islas Galápagos (Grove and Lavenberg 1997); sighting (unverifiable) reported from Prince Willam Sound, Alaska (Karinen et al. 1985). Pelagic; depth: surface to at least 1,000 m (3,280 ft) (Weigman 2016).",
+      "reproductionNotes": "Exhibit ovoviparity (aplacental viviparity), with embryos feeding initially on yolk, then receiving additional nourishment from the mother by indirect absorption of uterine fluid enriched with mucus, fat or protein through specialised structures (Ref. 50449).  Bears up to 2 young (Ref. 5578); born at 122-127 cm WD (Ref.58048). A female of 550 cm width and weighing 1050 kg was collected in the Galapagos in June and was carrying a well-developed embryo of 12.7 kg (Ref. 28023). Size at partuition might be from 1.1 to 1.3 m and from 9.1 to 1.14 kg (Ref. 31742).\r\nYano et al (1999) (Ref. 35892) describe the mating behavior of manta rays based on observations off Ogasawara Islands, Japan, in the following sequence:\r\n1) 'chasing', the male rapidly follows behind the tail of the female and attacks her several times;\r\n2) 'nipping', the male nips the tip of the pectoral fin of the female and then moves to the ventral surface of the female;\r\n3) 'copulating', the male inserts a clasper into the cloacaof the female and copulates abdomen-to-abdomen, up to 123 seconds;\r\n4) 'post-copulating';\r\n5) 'separating'. (Ref. 49562).",
+      "biologySummaryVn": "Chủ yếu sống ở vùng nước ven bờ, gần các rạn san hô và rạn đá; đôi khi được tìm thấy ở vùng nước sâu (Ref. 12951). Được ghi nhận dọc theo các bờ biển có năng suất sinh học cao với hiện tượng nước trồi thường xuyên, các nhóm đảo đại dương và các đỉnh ngầm, núi ngầm ngoài khơi (Ref. 82755). Xâm nhập vào các vịnh bùn nông, vùng gian triều và xuất hiện ở cửa các con sông (Ref. 9911). Sống ở tầng nổi (Ref. 58302). Sống đơn độc hoặc theo các đàn lỏng lẻo (Ref. 12951). Chủ yếu ăn sinh vật phù du, nhưng cũng có thể ăn các loài cá nhỏ và cỡ trung bình (Ref. 9911). Thường nhảy lên khỏi mặt nước vào mùa xuân và mùa thu, có thể là một phần trong tập tính giao phối (Ref. 31742). Dễ tiếp cận (Ref. 9911). Noãn thai sinh (Ref. 6902). Thường bị đánh bắt bằng lưới rê cá ngừ và nghề đánh bắt lao xăm. Được sử dụng lấy các tấm lọc mang (giá trị rất cao), thịt, sụn và da (Ref. 58048). Gan cho dầu và da được dùng làm chất mài mòn (Ref. 6902). Là loài cá đuối lớn nhất thế giới (Ref. 37816).",
+      "ecologyNotesVn": "Phổ biến ở vùng nước ven bờ (Ref. 9137). Một trong những khu vực tốt nhất để quan sát chúng là xung quanh đảo Sangalaki, ngoài khơi bờ biển phía đông bắc Kalimantan (Borneo thuộc Indonesia) (Ref. 54301). Chủ yếu ở vùng nước ven bờ, gần các rạn san hô và rạn đá; đôi khi được tìm thấy ở vùng nước sâu (Ref. 12951). Xâm nhập vào các vịnh bùn nông, vùng gian triều và xuất hiện ở cửa các con sông (Ref. 9911). Sống ở tầng nổi (Ref. 58302). Sống đơn độc hoặc theo các đàn lỏng lẻo (Ref. 12951). Chủ yếu ăn sinh vật phù du, nhưng cũng có thể ăn cả các loài cá nhỏ và cỡ trung bình (Ref. 9911). Là loài ăn thịt (Ref. 9137). Nhảy lên khỏi mặt nước chủ yếu vào mùa xuân và mùa thu, có thể là một phần trong tập tính giao phối (Ref. 31742). Dễ tiếp cận (Ref. 9911).",
+      "reproductionNotesVn": "Thể hiện tính noãn thai sinh (thai sinh không có nhau thai), phôi ban đầu hấp thụ noãn hoàng, sau đó nhận thêm chất dinh dưỡng từ cá mẹ thông qua sự hấp thụ gián tiếp dịch tử cung giàu chất nhầy, chất béo hoặc protein qua các cấu trúc chuyên hóa (Ref. 50449). Đẻ mỗi lứa tối đa 2 con non (Ref. 5578); cá con sinh ra có chiều rộng đĩa (WD) từ 122-127 cm (Ref. 58048). Một cá thể cái có chiều rộng 550 cm và nặng 1050 kg được thu thập ở Quần đảo Galapagos vào tháng 6 đang mang một phôi thai phát triển đầy đủ nặng 12,7 kg (Ref. 28023). Kích thước khi sinh có thể từ 1,1 đến 1,3 m và từ 9,1 đến 1,14 kg (Ref. 31742).\nYano và cộng sự (1999) (Ref. 35892) mô tả tập tính giao phối của cá nạng hải dựa trên quan sát ngoài khơi Quần đảo Ogasawara, Nhật Bản theo trình tự sau:\n1) 'rượt đuổi' (chasing), cá đực bám sát phía sau đuôi cá cái và tấn công cá cái nhiều lần;\n2) 'cắn kẹp' (nipping), cá đực cắn phần chóp vây ngực của cá cái rồi chuyển xuống bề mặt bụng của cá cái;\n3) 'giao phối' (copulating), cá đực đưa cơ quan giao cấu vào lỗ huyệt của cá cái và giao phối ở tư thế bụng đối bụng, kéo dài tới 123 giây;\n4) 'sau giao phối' (post-copulating);\n5) 'tách rời' (separating). (Ref. 49562)."
     }
   },
   {
@@ -5931,9 +6783,23 @@
       "Narcine tonkinensis Nguyên sp. nov., Nội san Nghiên Cứu Biển, pp. 29 - 31, 1971."
     ],
     "biology": {
+      "fbName": "Spotted numbfish",
+      "source": "FishBase v25.04",
       "gbifKey": 8405394,
+      "habitat": "Coral reefs",
+      "dangerous": "other",
+      "maxLength": "38.0 cm TL",
+      "fbSpecCode": 8206,
+      "importance": "commercial",
       "iucnStatus": "NT",
-      "morphDescription": "(Figs. 3 D, 13 A, B) Two specimens of a species of Narcine Henle, one each from Point Pedro's Munai (SL- 29) and Kottadi (SL- 57) markets in the Northern Province, were examined. Both have been deposited in the BRT Ichthyology Collection (SL- 29, BRT-I 0010; SL- 57, BRT-I 0015). Both specimens were conspicuous in their possession of a dorsal surface bearing numerous, large (i. e., larger than eye-size) brown, mostly circular to oval spots on a paler brown background. Only two (i. e., Narcine baliensis Carvalho & White and Narcine lingula Richardson) of the 15 species of Narcine recognized by Last et al. (2016 b) exhibit a dorsal surface with similar large brown spots. However, the specimens from Sri Lanka appear to differ morphologically from both species. They differ from N. lingula in bearing a disc that is heart-shaped and widest at a point posterior to, rather than at, the mid-disc, and a caudal fin with a dark, rather than plain, posterior margin. They most closely resemble N. baliensis, known only from eastern Indonesia. However, the disc is heart-shaped rather than broadly oval and, rather than plain, the lower caudal lobe bears brown pigmentation. As a consequence, it seems likely that these specimens represent an undescribed member of the genus, which we have referred to as Narcine sp. 1. The specimens from Sri Lanka differed from one another by 11 bp. The results of the Neighbor-Joining analysis contribute little to help inform the identity of these species because it included data for only three other species of Narcine. Nonetheless, the Sri Lankan specimens differ from their three congeners by 266 – 302 bp. Previous reports of elasmobranchs from Sri Lanka include only Narcine timlei (Bloch & Schneider) (e. g., De Bruin et al. 1994; Morón et al. 1998; De Silva 2006), which bears a dorsal surface without elaborate markings, and Narcine brunnea Annandale (e. g., De Bruin et al. 1994; De Silva 2006), which is now considered a junior synonym of the former spe"
+      "aquaculture": "never/rarely",
+      "ecologyNotes": "Found in continental waters, both inshore and offshore (Ref. 9912).  Also inhabits coral reefs (Ref. 58534).",
+      "priceCategory": "unknown",
+      "vulnerability": 28.0,
+      "biologySummary": "Found in continental waters, both inshore and offshore (Ref. 9912).  Occurs over soft bottoms; feeds on bottom-living organisms; possesses electric organs (Ref. 68964). Biology little known (Ref. 9912). Gravid females produces 2-3 pups during each gestation. Males mature at ca. 14 cm TL; born at ca. 6 cm TL (Ref. 114953).",
+      "morphDescription": "(Figs. 3 D, 13 A, B) Two specimens of a species of Narcine Henle, one each from Point Pedro's Munai (SL- 29) and Kottadi (SL- 57) markets in the Northern Province, were examined. Both have been deposited in the BRT Ichthyology Collection (SL- 29, BRT-I 0010; SL- 57, BRT-I 0015). Both specimens were conspicuous in their possession of a dorsal surface bearing numerous, large (i. e., larger than eye-size) brown, mostly circular to oval spots on a paler brown background. Only two (i. e., Narcine baliensis Carvalho & White and Narcine lingula Richardson) of the 15 species of Narcine recognized by Last et al. (2016 b) exhibit a dorsal surface with similar large brown spots. However, the specimens from Sri Lanka appear to differ morphologically from both species. They differ from N. lingula in bearing a disc that is heart-shaped and widest at a point posterior to, rather than at, the mid-disc, and a caudal fin with a dark, rather than plain, posterior margin. They most closely resemble N. baliensis, known only from eastern Indonesia. However, the disc is heart-shaped rather than broadly oval and, rather than plain, the lower caudal lobe bears brown pigmentation. As a consequence, it seems likely that these specimens represent an undescribed member of the genus, which we have referred to as Narcine sp. 1. The specimens from Sri Lanka differed from one another by 11 bp. The results of the Neighbor-Joining analysis contribute little to help inform the identity of these species because it included data for only three other species of Narcine. Nonetheless, the Sri Lankan specimens differ from their three congeners by 266 – 302 bp. Previous reports of elasmobranchs from Sri Lanka include only Narcine timlei (Bloch & Schneider) (e. g., De Bruin et al. 1994; Morón et al. 1998; De Silva 2006), which bears a dorsal surface without elaborate markings, and Narcine brunnea Annandale (e. g., De Bruin et al. 1994; De Silva 2006), which is now considered a junior synonym of the former spe",
+      "biologySummaryVn": "Phân bố ở vùng nước lục địa, cả ven bờ lẫn ngoài khơi. Sống ở vùng đáy mềm; thức ăn gồm các sinh vật sống ở đáy; có cơ quan phát điện. Sinh học chưa được biết nhiều. Con cái mang thai đẻ từ 2-3 con non trong mỗi chu kỳ. Con đực trưởng thành ở kích thước khoảng 14 cm chiều dài tổng thể; cá con sinh ra có kích thước khoảng 6 cm chiều dài tổng thể.",
+      "ecologyNotesVn": "Phân bố ở vùng nước lục địa, cả ven bờ lẫn ngoài khơi. Loài này cũng sinh sống ở các rạn san hô."
     }
   },
   {

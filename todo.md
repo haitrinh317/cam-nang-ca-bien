@@ -4,7 +4,21 @@
 > **Next Session Starting Point**: Trao đổi cùng chú Chình về việc chạy `/deploy` đưa bản cập nhật hoàn chỉnh lên Vercel Production hoặc tiếp tục mở rộng tính năng Admin CSV Import / Inline Edit.
 > **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Trang tra cứu /ca-bien đã được thiết kế lại tối ưu: GlobalSearch cross-tập + Phân chia 2 đầu sách chính quy + Compact List View text-only cắt giảm 99% data transfer.
 
-## ✅ Hoàn thành mới nhất (2026-09-07)
+## ✅ Hoàn thành mới nhất (2026-09-08)
+- [x] **Khởi tạo & Hoàn thành 100% Pipeline Nhóm Giáp Xác Biển (`giap-xac`) — 132 loài**:
+  - Bóc tách toàn diện từ sách scan *"Động vật chí Việt Nam - Tập 1: Tôm biển"* (GS. Nguyễn Văn Chung, Đặng Ngọc Thanh, Phạm Thị Dự - 2000).
+  - Hoàn thành đầy đủ 87 loài thuộc Bộ Mười Chân (*Decapoda*: Tôm biển, Tôm hùm gai, Tôm mũ ni) và 45 loài thuộc Bộ Chân Miệng (*Stomatopoda*: Tôm tít).
+  - Đối soát chuẩn danh pháp quốc tế WoRMS cho 100% 132 loài (96 accepted, 24 superseded combination, 7 unaccepted, 5 junior subjective synonym; 0 not_found).
+  - Đã nạp thành công 132/132 loài (100.0%) vào CSDL Supabase theo flat schema trực tiếp.
+  - Tích hợp giao diện Frontend: Đăng ký collection, cấu hình đầu sách, cập nhật thanh điều hướng Top Nav, Bottom Nav mobile và Next.js 16 build passing 100%.
+  - **iNaturalist Sync (Bước ④)**: Nạp thành công 148 ảnh minh họa WebP 640px cho 53 loài (40.2%) lên Supabase Storage `species-photos/giap-xac/...`.
+  - **Enrich Tên Gọi (Bước ⑤)**: 132/132 loài (100.0%) đã có tên tiếng Anh chuẩn.
+  - **Audit Sinh Vật (Bước ⑥)**: 100% loài có đầy đủ hình thái, kích thước, phân bố, mẫu vật, sinh thái học, giá trị kinh tế, tài liệu dẫn và đồng danh.
+- [x] **Enrich 100% dữ liệu sinh học FishBase cho Danh mục Cá biển Tập 1 (Lớp Cá sụn Chondrichthyes)**: Khắc phục triệt để lỗi lệch danh pháp nhờ thuật toán đối chiếu 3 tầng (Tên thủ công $\rightarrow$ Tên gốc $\rightarrow$ Danh pháp hợp lệ WoRMS). Khớp thành công 47 loài cá mập, cá nhám, cá đuối, cá đao; dịch thuật học thuật 100% các đoạn mô tả sinh học sang tiếng Việt hàn lâm bằng Gemini AI (`gemini-3.6-flash`); cập nhật trực tiếp lên Supabase (SSOT) và đồng bộ file backup `data/species.json`.
+- [x] **Đóng gói AI Skill chuyên biệt `/fishbase-sync`**: Tạo mới `.agents/skills/fishbase-sync/SKILL.md`, chuẩn hóa toàn bộ quy trình tra cứu FishBase v25.04 Parquet, dịch thuật ngữ loại học và cập nhật Supabase.
+- [x] **Chuẩn hóa SEO sharing metadata**: Cập nhật toàn diện title và OpenGraph/Twitter Cards sang "Tra cứu sinh vật biển Việt Nam" trên toàn bộ trang.
+
+## ✅ Hoàn thành (2026-09-07)
 - [x] **Vá 2 lỗ hổng bảo mật nghiêm trọng (Migration 009)**: Khắc phục đệ quy vô hạn trên bảng `user_roles` bằng hàm `is_admin()` `SECURITY DEFINER`; kích hoạt RLS toàn diện trên bảng `audit_log`, chuyển `AuditLog.tsx` sang API route server-side an toàn (`/api/audit-log`).
 - [x] **Hardening bảo mật hạ tầng**: Bổ sung `Strict-Transport-Security` (HSTS 1 năm, preload) và `Permissions-Policy` vào `next.config.ts`; chuẩn hóa domain canonical trong `app/robots.ts` và `app/sitemap.ts` sang `www.tracuusinhvatbien.app`.
 - [x] **Xác thực dữ liệu đầu vào bằng Zod (`lib/schemas.ts`)**: Áp dụng Zod schema validation chặt chẽ cho toàn bộ API routes (`POST /api/species`, `PATCH /api/species`, `POST /api/species/import`), loại bỏ hoàn toàn nguy cơ chèn trường độc hại (mass assignment).
