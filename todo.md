@@ -4,7 +4,14 @@
 > **Next Session Starting Point**: Trao đổi cùng chú Chình về việc chạy `/deploy` đưa bản cập nhật hoàn chỉnh lên Vercel Production hoặc tiếp tục mở rộng tính năng Admin CSV Import / Inline Edit.
 > **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Trang tra cứu /ca-bien đã được thiết kế lại tối ưu: GlobalSearch cross-tập + Phân chia 2 đầu sách chính quy + Compact List View text-only cắt giảm 99% data transfer.
 
-## ✅ Hoàn thành mới nhất (2026-09-06)
+## ✅ Hoàn thành mới nhất (2026-09-07)
+- [x] **Vá 2 lỗ hổng bảo mật nghiêm trọng (Migration 009)**: Khắc phục đệ quy vô hạn trên bảng `user_roles` bằng hàm `is_admin()` `SECURITY DEFINER`; kích hoạt RLS toàn diện trên bảng `audit_log`, chuyển `AuditLog.tsx` sang API route server-side an toàn (`/api/audit-log`).
+- [x] **Hardening bảo mật hạ tầng**: Bổ sung `Strict-Transport-Security` (HSTS 1 năm, preload) và `Permissions-Policy` vào `next.config.ts`; chuẩn hóa domain canonical trong `app/robots.ts` và `app/sitemap.ts` sang `www.tracuusinhvatbien.app`.
+- [x] **Xác thực dữ liệu đầu vào bằng Zod (`lib/schemas.ts`)**: Áp dụng Zod schema validation chặt chẽ cho toàn bộ API routes (`POST /api/species`, `PATCH /api/species`, `POST /api/species/import`), loại bỏ hoàn toàn nguy cơ chèn trường độc hại (mass assignment).
+- [x] **Tái thiết kế trang đăng nhập Admin (`/login`) chuẩn `/hallmark` & `/ui-ux-pro-max`**: Triển khai Phương án 2 (Centered Vault Card) với nền biển sâu Oxford Navy, font Lora upright + Be Vietnam Pro, toggle ẩn/hiện mật khẩu SVG, loading spinner và thông báo lỗi rõ ràng; tạo file CSS độc lập `styles/auth.css` khắc phục dứt điểm lỗi mất style trang login.
+- [x] **Deploy Production Vercel**: Đã commit và deploy production thành công lên `https://www.tracuusinhvatbien.app` (`cam-nang-ca-bien.vercel.app`).
+
+## ✅ Hoàn thành (2026-09-06)
 - [x] **Khắc phục lệch text & tràn viền Hero Stats trên Mobile theo /hallmark**: Chuyển đổi `.hero__stats` sang CSS Grid 3 cột đối xứng 100% (`minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr)`), căn giữa hoàn hảo cột Họ (`168 Họ`) tại trung tâm card, co giãn Type Scale clamp cho số liệu và nhãn chữ `Tài liệu gốc`, triệt tiêu dứt điểm lỗi tràn viền và lệch trục trên mọi kích thước màn hình điện thoại (320px - 414px).
 - [x] **Responsive Mobile Thẻ Định Danh Tên Gọi (.specimen-identity-card)**: Chuyển sang bố cục dọc 2 hàng độc lập trên mobile (<= 640px) kèm đường kẻ chấm hairline tinh tế chuẩn `/hallmark`, khắc phục triệt để lỗi rớt từng chữ xuống dòng và tràn mép màn hình.
 - [x] **Khóa thẳng hàng đường chân chữ (Baseline) Thẻ Định Danh Tên Gọi**: Đổi `.specimen-identity-label` thành `display: inline-block`, icon SVG dùng `vertical-align: -1.5px`, `.specimen-identity-col` dùng `align-items: baseline; gap: 6px;` giúp nhãn in hoa và giá trị chữ thường bám phẳng tắp trên cùng một đường chân chữ.
