@@ -16,7 +16,7 @@
   - Nâng cấp `AdminDashboard`: Bento KPI grid 4 thẻ, Volume bar chart đa sắc theo chuẩn tập sách (`--color-vol-1` đến `--color-vol-5`), bảng Audit Log format chi tiết thông minh thay cho chuỗi JSON thô.
   - Nâng cấp `SpeciesTable`: Toolbar phân tách mạch lạc, ô tìm kiếm có nút xóa nhanh, phân trang đầy đủ.
 - [x] **Cải tiến thao tác sửa loài trong `SpeciesTable`**: Click trực tiếp vào Tên tiếng Việt hoặc Tên khoa học sẽ mở ngay Form/Modal chỉnh sửa toàn diện của loài (kèm hiệu ứng hover bút chì cyan và trạng thái tải dữ liệu chi tiết).
-- [x] **Deploy Production Vercel**: Đã commit (`fb40951`) và deploy production thành công lên `https://www.tracuusinhvatbien.app` (`cam-nang-ca-bien.vercel.app`).
+- [x] **Deploy Production Vercel**: Đã commit (`b197d3d`) và deploy production thành công lên `https://www.tracuusinhvatbien.app` (`cam-nang-ca-bien.vercel.app`). Chuẩn hóa toàn bộ SEO sharing title sang "Tra cứu sinh vật biển Việt Nam".
 
 ## ✅ Hoàn thành (2026-09-06)
 - [x] **Khắc phục lệch text & tràn viền Hero Stats trên Mobile theo /hallmark**: Chuyển đổi `.hero__stats` sang CSS Grid 3 cột đối xứng 100% (`minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr)`), căn giữa hoàn hảo cột Họ (`168 Họ`) tại trung tâm card, co giãn Type Scale clamp cho số liệu và nhãn chữ `Tài liệu gốc`, triệt tiêu dứt điểm lỗi tràn viền và lệch trục trên mọi kích thước màn hình điện thoại (320px - 414px).
