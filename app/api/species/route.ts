@@ -8,6 +8,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient, createSSRClient } from '@/lib/supabase-server'
 import { sanitizeSearch, SPECIES_PAGE_SIZE, applySpeciesFilters } from '@/lib/species-query'
+import { speciesCreateSchema, speciesUpdateSchema } from '@/lib/schemas'
 
 export const dynamic = 'force-dynamic'
 
@@ -77,7 +78,12 @@ export async function POST(req: NextRequest) {
   const admin = await requireAdmin(db)
   if (!admin) return NextResponse.json({ error: 'Forbidden: admin role required' }, { status: 403 })
 
-  const body = await req.json()
+  const raw = await req.json()
+  const parsed = speciesCreateSchema.safeParse(raw)
+  if (!parsed.success) {
+    return NextResponse.json({ error: 'Dữ liệu không hợp lệ', details: parsed.error.flatten().fieldErrors }, { status: 400 })
+  }
+  const body = parsed.data
   const { data, error } = await db.from('species').insert(body).select().single()
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
 
@@ -101,7 +107,12 @@ export async function PATCH(req: NextRequest) {
 
   const { data: old } = await db.from('species').select('*').eq('id', id).single()
 
-  const body = await req.json()
+  const raw = await req.json()
+  const parsed = speciesUpdateSchema.safeParse(raw)
+  if (!parsed.success) {
+    return NextResponse.json({ error: 'Dữ liệu không hợp lệ', details: parsed.error.flatten().fieldErrors }, { status: 400 })
+  }
+  const body = parsed.data
   const { data, error } = await db.from('species').update(body).eq('id', id).select().single()
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
 
