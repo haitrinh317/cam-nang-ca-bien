@@ -1,8 +1,8 @@
 # TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-05 23:40 (Hoàn thành Bento Tab Thông số & WoRMS Pill Badge chuẩn /hallmark)
-> **Next Session Starting Point**: Trao đổi cùng chú Chình về việc chạy `/deploy` đưa bản cập nhật hoàn chỉnh lên Vercel Production hoặc tiếp tục mở rộng tính năng Admin CSV Import / Inline Edit.
-> **Supabase (SSOT):** 1,764 loài cá biển (100.00% WoRMS + 100.00% FishBase Biology + 100.00% Biology Summary VN) + 201 thực vật biển = 1,965 loài. Tập VI đã đạt 98.5% độ phủ ảnh minh họa iNaturalist (1,069 ảnh). Trang tra cứu /ca-bien đã được thiết kế lại tối ưu: GlobalSearch cross-tập + Phân chia 2 đầu sách chính quy + Compact List View text-only cắt giảm 99% data transfer.
+> Cập nhật: 2026-09-08 06:30 (Hoàn thành 100% Pipeline Nhóm Giáp Xác Biển 132 loài + Đồng bộ Icon Lucide Shrimp & Tối ưu BottomNav Dock + Deploy Vercel Production)
+> **Next Session Starting Point**: Tiếp tục mở rộng các nhóm sinh vật biển mới (San hô, Thân mềm) theo các tập sách Động vật chí Việt Nam tiếp theo hoặc phát triển Admin Phase 2 (Inline Edit / CSV Bulk Import).
+> **Supabase (SSOT):** 2,568 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác biển). 100% WoRMS cho toàn bộ 2,568 loài. Đã deploy production thành công lên https://www.tracuusinhvatbien.app.
 
 ## ✅ Hoàn thành mới nhất (2026-09-08)
 - [x] **Khởi tạo & Hoàn thành 100% Pipeline Nhóm Giáp Xác Biển (`giap-xac`) — 132 loài**:
@@ -14,6 +14,12 @@
   - **iNaturalist Sync (Bước ④)**: Nạp thành công 148 ảnh minh họa WebP 640px cho 53 loài (40.2%) lên Supabase Storage `species-photos/giap-xac/...`.
   - **Enrich Tên Gọi (Bước ⑤)**: 132/132 loài (100.0%) đã có tên tiếng Anh chuẩn.
   - **Audit Sinh Vật (Bước ⑥)**: 100% loài có đầy đủ hình thái, kích thước, phân bố, mẫu vật, sinh thái học, giá trị kinh tế, tài liệu dẫn và đồng danh.
+- [x] **Tối ưu Thanh Menu Mobile (BottomNav Dock) & Đồng bộ Vector SVG (`lucide-react`)**:
+  - Thay thế hoàn toàn emoji `🦐` bằng icon vector chuẩn `<Shrimp size={20} />` đồng bộ phong cách với `<Home>`, `<Fish>`, `<Leaf>`.
+  - Đồng bộ icon `Shrimp` trên cả 3 vị trí điều hướng: BottomNav mobile, Top Nav desktop và AdminSidebar.
+  - Tối ưu dock 400px x 62px, chống ngắt chữ (`white-space: nowrap`), căn chỉnh active dot 3.5px và bổ sung cơ chế tự hiện lại khi cuộn chạm đáy trang (`isNearBottom`).
+- [x] **Deploy Production Vercel**:
+  - Đã commit (`4b39cbe`), push GitHub master và deploy production thành công lên `https://www.tracuusinhvatbien.app` / `https://cam-nang-ca-bien.vercel.app`.
 - [x] **Enrich 100% dữ liệu sinh học FishBase cho Danh mục Cá biển Tập 1 (Lớp Cá sụn Chondrichthyes)**: Khắc phục triệt để lỗi lệch danh pháp nhờ thuật toán đối chiếu 3 tầng (Tên thủ công $\rightarrow$ Tên gốc $\rightarrow$ Danh pháp hợp lệ WoRMS). Khớp thành công 47 loài cá mập, cá nhám, cá đuối, cá đao; dịch thuật học thuật 100% các đoạn mô tả sinh học sang tiếng Việt hàn lâm bằng Gemini AI (`gemini-3.6-flash`); cập nhật trực tiếp lên Supabase (SSOT) và đồng bộ file backup `data/species.json`.
 - [x] **Đóng gói AI Skill chuyên biệt `/fishbase-sync`**: Tạo mới `.agents/skills/fishbase-sync/SKILL.md`, chuẩn hóa toàn bộ quy trình tra cứu FishBase v25.04 Parquet, dịch thuật ngữ loại học và cập nhật Supabase.
 - [x] **Chuẩn hóa SEO sharing metadata**: Cập nhật toàn diện title và OpenGraph/Twitter Cards sang "Tra cứu sinh vật biển Việt Nam" trên toàn bộ trang.
