@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/admin', '/admin/*', '/api/*'],
       },
     ],
-    sitemap: 'https://cam-nang-ca-bien.vercel.app/sitemap.xml',
-    host: 'https://cam-nang-ca-bien.vercel.app',
+    sitemap: 'https://www.tracuusinhvatbien.app/sitemap.xml',
+    host: 'https://www.tracuusinhvatbien.app',
   }
 }
