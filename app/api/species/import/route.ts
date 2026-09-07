@@ -4,7 +4,7 @@
  * Body: { species: [...], collection_id: string }
  */
 import { NextRequest, NextResponse } from 'next/server'
-import { createSSRClient } from '@/lib/supabase-server'
+import { createServerClient, createSSRClient } from '@/lib/supabase-server'
 
 const MAX_BATCH = 200
 
@@ -41,8 +41,8 @@ export async function POST(req: NextRequest) {
 
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
 
-  // Audit log
-  await db.from('audit_log').insert({
+  // ponytail: must use service_role — RLS on audit_log only allows service_role INSERT
+  await createServerClient().from('audit_log').insert({
     user_email: user.email,
     action: 'bulk_import',
     collection_id,

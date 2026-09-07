@@ -28,11 +28,13 @@ async function requireAdmin(db: Awaited<ReturnType<typeof createSSRClient>>): Pr
   return { email: user.email }
 }
 
-async function auditLog(db: Awaited<ReturnType<typeof createSSRClient>>, action: string, userEmail: string, opts: {
+async function auditLog(action: string, userEmail: string, opts: {
   collection_id?: string; species_id?: string; details?: string
   old_data?: unknown; new_data?: unknown
 }) {
-  await db.from('audit_log').insert({
+  // ponytail: must use service_role — RLS on audit_log only allows service_role INSERT
+  const svc = createServerClient()
+  await svc.from('audit_log').insert({
     user_email: userEmail,
     action,
     collection_id: opts.collection_id || null,
@@ -79,7 +81,7 @@ export async function POST(req: NextRequest) {
   const { data, error } = await db.from('species').insert(body).select().single()
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
 
-  await auditLog(db, 'create', admin.email, {
+  await auditLog('create', admin.email, {
     collection_id: body.collection_id,
     species_id: data.id,
     details: `Thêm loài: ${data.vn_name} (${data.scientific_name})`,
@@ -103,7 +105,7 @@ export async function PATCH(req: NextRequest) {
   const { data, error } = await db.from('species').update(body).eq('id', id).select().single()
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
 
-  await auditLog(db, 'update', admin.email, {
+  await auditLog('update', admin.email, {
     collection_id: data.collection_id,
     species_id: id,
     details: `Cập nhật: ${data.vn_name} (${data.scientific_name})`,
@@ -143,7 +145,7 @@ export async function DELETE(req: NextRequest) {
 
   if (error) return NextResponse.json({ error: (error as Error).message }, { status: 400 })
 
-  await auditLog(db, hard ? 'hard_delete' : 'soft_delete', admin.email, {
+  await auditLog(hard ? 'hard_delete' : 'soft_delete', admin.email, {
     collection_id: old?.collection_id,
     species_id: id,
     details: `${hard ? 'Xóa vĩnh viễn' : 'Xóa mềm'}: ${old?.vn_name || id} (${old?.scientific_name || ''})`,

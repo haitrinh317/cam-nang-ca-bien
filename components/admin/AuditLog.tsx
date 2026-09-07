@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
-import { db } from '@/lib/supabase-browser'
 import { Edit2, Trash2, ClipboardList, PlusCircle, Database, Settings } from 'lucide-react'
 
 interface LogEntry {
@@ -30,16 +29,15 @@ export default function AuditLog({ collection }: Props) {
 
   const load = useCallback(async () => {
     setLoading(true)
-    let query = db
-      .from('audit_log')
-      .select('id, created_at, user_email, action, collection_id, species_id, details')
-      .order('created_at', { ascending: false })
-      .limit(50)
-
-    if (collection) query = query.eq('collection_id', collection)
-
-    const { data } = await query
-    setLogs(data || [])
+    const params = new URLSearchParams()
+    if (collection) params.set('collection', collection)
+    const res = await fetch(`/api/audit-log?${params}`)
+    if (res.ok) {
+      const { data } = await res.json()
+      setLogs(data || [])
+    } else {
+      setLogs([])
+    }
     setLoading(false)
   }, [collection])
 

@@ -60,7 +60,7 @@ Deploy: git push origin master + vercel --prod --yes
 
 ### Migrations đã chạy
 
-001 (collections) → 002 (collection_id) → 003 (user_roles) → 004 (profiles) → 005 (search indexes) → 006 (species_photos) → 007 (trigram) → 008 (literature_sources) → 008b (fix RLS recursion)
+001 (collections) → 002 (collection_id) → 003 (user_roles) → 004 (profiles) → 005 (search indexes) → 006 (species_photos) → 007 (trigram) → 008 (literature_sources) → 008b (fix RLS recursion) → 009 (fix security: is_admin() DEFINER + audit_log RLS)
 
 ---
 
@@ -119,7 +119,9 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 ## 🔐 Bảo mật
 
 - RLS: write locked cho `service_role` + authenticated admin
-- API routes: POST/PATCH/DELETE verify `user_roles.role = 'admin'`
+- `is_admin()`: SECURITY DEFINER function — bypass RLS trên `user_roles`, dùng trong mọi policy cần check admin
+- `audit_log`: RLS bật, chỉ `service_role` INSERT, chỉ admin SELECT (qua `/api/audit-log`)
+- API routes: POST/PATCH/DELETE verify `user_roles.role = 'admin'` (qua `service_role` client)
 - Middleware: `/admin/*` → redirect `/login`
 - `.env` + `.env.local`: credentials (gitignored)
 
