@@ -4,22 +4,23 @@ import Link from 'next/link'
 import { ArrowLeft, BookOpen, ShieldCheck, Sparkles, Globe, HeartHandshake, Compass, Library, CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Giới thiệu — Cẩm nang Sinh vật biển Việt Nam',
+  title: 'Giới thiệu',
   description: 'Dự án số hóa di sản và dữ liệu sinh vật biển phi lợi nhuận của Viện Hải dương học (Viện Hàn lâm Khoa học và Công nghệ Việt Nam).',
   alternates: {
-    canonical: 'https://cam-nang-ca-bien.vercel.app/about',
+    canonical: 'https://www.tracuusinhvatbien.app/about',
   },
   openGraph: {
     type: 'website',
     locale: 'vi_VN',
-    url: 'https://cam-nang-ca-bien.vercel.app/about',
-    title: 'Giới thiệu — Cẩm nang Sinh vật biển Việt Nam',
+    url: 'https://www.tracuusinhvatbien.app/about',
+    siteName: 'Tra cứu sinh vật biển Việt Nam',
+    title: 'Giới thiệu — Tra cứu sinh vật biển Việt Nam',
     description: 'Sứ mệnh bảo tồn tri thức phân loại học biển, ứng dụng AI/OCR và kết nối CSDL sinh vật biển toàn cầu.',
-    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Giới thiệu Bảo tàng Hải dương học' }],
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Giới thiệu Tra cứu sinh vật biển Việt Nam' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Giới thiệu — Cẩm nang Sinh vật biển Việt Nam',
+    title: 'Giới thiệu — Tra cứu sinh vật biển Việt Nam',
     description: 'Sứ mệnh bảo tồn tri thức phân loại học biển và kết nối CSDL sinh vật biển toàn cầu.',
     images: ['/og-default.png'],
   },

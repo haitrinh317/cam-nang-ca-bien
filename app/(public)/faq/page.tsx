@@ -6,22 +6,23 @@ import { FAQ_DATA } from '@/lib/faq-data'
 import { ArrowLeft, HelpCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Câu hỏi thường gặp (FAQ) — Cẩm nang Sinh vật biển Việt Nam',
-  description: 'Giải đáp thắc mắc về nguồn dữ liệu khoa học, lý do số hóa di sản, công nghệ OCR AI, quy chuẩn danh pháp WoRMS và điều khoản bản quyền của Cẩm nang Sinh vật biển Việt Nam.',
+  title: 'Câu hỏi thường gặp (FAQ)',
+  description: 'Giải đáp thắc mắc về nguồn dữ liệu khoa học, lý do số hóa di sản, công nghệ OCR AI, quy chuẩn danh pháp WoRMS và điều khoản bản quyền của Tra cứu sinh vật biển Việt Nam.',
   alternates: {
-    canonical: 'https://cam-nang-ca-bien.vercel.app/faq',
+    canonical: 'https://www.tracuusinhvatbien.app/faq',
   },
   openGraph: {
     type: 'website',
     locale: 'vi_VN',
-    url: 'https://cam-nang-ca-bien.vercel.app/faq',
-    title: 'Câu hỏi thường gặp (FAQ) — Cẩm nang Sinh vật biển Việt Nam',
-    description: 'Nguồn gốc tài liệu, công nghệ OCR số hóa và tính xác thực khoa học của Cẩm nang Sinh vật biển Việt Nam.',
+    url: 'https://www.tracuusinhvatbien.app/faq',
+    siteName: 'Tra cứu sinh vật biển Việt Nam',
+    title: 'Câu hỏi thường gặp (FAQ) — Tra cứu sinh vật biển Việt Nam',
+    description: 'Nguồn gốc tài liệu, công nghệ OCR số hóa và tính xác thực khoa học của Tra cứu sinh vật biển Việt Nam.',
     images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Câu hỏi thường gặp FAQ' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Câu hỏi thường gặp (FAQ) — Cẩm nang Sinh vật biển Việt Nam',
+    title: 'Câu hỏi thường gặp (FAQ) — Tra cứu sinh vật biển Việt Nam',
     description: 'Giải đáp thắc mắc về nguồn dữ liệu khoa học và công nghệ số hóa sinh vật biển.',
     images: ['/og-default.png'],
   },

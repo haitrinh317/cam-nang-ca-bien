@@ -38,31 +38,31 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 })
 
-const SITE_URL = 'https://cam-nang-ca-bien.vercel.app'
+const SITE_URL = 'https://www.tracuusinhvatbien.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Bảo tàng Hải dương học — Tra cứu Sinh vật biển Việt Nam',
-    template: '%s — Bảo tàng Hải dương học',
+    default: 'Tra cứu sinh vật biển Việt Nam',
+    template: '%s — Tra cứu sinh vật biển Việt Nam',
   },
   description: 'Cơ sở dữ liệu số hóa sinh vật biển Việt Nam phục vụ nghiên cứu khoa học — Viện Hải dương học, Nha Trang.',
   keywords: ['cá biển', 'sinh vật biển', 'hải dương học', 'Việt Nam', 'danh mục', 'phân loại học', 'marine fish', 'Vietnam'],
   authors: [{ name: 'Viện Hải dương học, Nha Trang' }],
-  creator: 'Bảo tàng Hải dương học',
+  creator: 'Tra cứu sinh vật biển Việt Nam',
   openGraph: {
     type: 'website',
     locale: 'vi_VN',
     alternateLocale: 'en_US',
     url: SITE_URL,
-    siteName: 'Cẩm Nang Sinh Vật Biển Việt Nam',
-    title: 'Cẩm Nang Sinh Vật Biển Việt Nam — Tra cứu & Phân loại học',
+    siteName: 'Tra cứu sinh vật biển Việt Nam',
+    title: 'Tra cứu sinh vật biển Việt Nam',
     description: 'Cơ sở dữ liệu số hóa 2.436+ loài sinh vật biển Việt Nam — Hệ thống tra cứu danh pháp, hình thái học & sinh học biển.',
-    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Cẩm Nang Sinh Vật Biển Việt Nam' }],
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Tra cứu sinh vật biển Việt Nam' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cẩm Nang Sinh Vật Biển Việt Nam — Tra cứu & Phân loại học',
+    title: 'Tra cứu sinh vật biển Việt Nam',
     description: 'Cơ sở dữ liệu số hóa 2.436+ loài sinh vật biển Việt Nam.',
     images: ['/og-default.png'],
   },

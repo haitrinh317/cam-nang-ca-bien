@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? `${data.vn_name} — ${rawDesc.slice(0, 155).trim()}...`
     : `Thông tin phân loại học và sinh thái của ${data.vn_name} (${data.scientific_name}) — Viện Hải dương học Nha Trang.`
 
-  const pageUrl = `https://cam-nang-ca-bien.vercel.app/${collection}/${speciesId}`
+  const pageUrl = `https://www.tracuusinhvatbien.app/${collection}/${speciesId}`
 
   return {
     title,
@@ -66,9 +66,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       locale: 'vi_VN',
       url: pageUrl,
-      title: `${title} — Cẩm nang Sinh vật biển VN`,
+      siteName: 'Tra cứu sinh vật biển Việt Nam',
+      title: `${title} — Tra cứu sinh vật biển Việt Nam`,
       description,
-      siteName: 'Bảo tàng Hải dương học',
       images: [
         {
           url: photoUrl,
@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} — Cẩm nang Sinh vật biển VN`,
+      title: `${title} — Tra cứu sinh vật biển Việt Nam`,
       description,
       images: [photoUrl],
     },

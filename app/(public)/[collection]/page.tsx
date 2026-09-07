@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { collection } = await params
   const col = getCollectionBySlug(collection)
   if (!col) return { title: 'Không tìm thấy' }
-  const pageUrl = `https://cam-nang-ca-bien.vercel.app/${collection}`
+  const pageUrl = `https://www.tracuusinhvatbien.app/${collection}`
   const desc = `Cơ sở dữ liệu số hóa ${col.nameVn} trích xuất từ các công trình khoa học nguyên bản của Viện Hải dương học Nha Trang.`
   return {
     title: `Tra cứu Danh mục — ${col.nameVn}`,
@@ -34,7 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       locale: 'vi_VN',
       url: pageUrl,
-      title: `Tra cứu Danh mục — ${col.nameVn} — Bảo tàng Hải dương học`,
+      siteName: 'Tra cứu sinh vật biển Việt Nam',
+      title: `Tra cứu Danh mục — ${col.nameVn} — Tra cứu sinh vật biển Việt Nam`,
       description: `${col.volumeCount} tập tài liệu khoa học nguyên bản, định danh và chuẩn hóa danh pháp sinh vật biển Việt Nam.`,
       images: [
         {
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Tra cứu Danh mục — ${col.nameVn}`,
+      title: `Tra cứu Danh mục — ${col.nameVn} — Tra cứu sinh vật biển Việt Nam`,
       description: desc,
       images: ['/og-default.png'],
     },
