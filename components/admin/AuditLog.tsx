@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
-import { Edit2, Trash2, ClipboardList, PlusCircle, Database, Settings } from 'lucide-react'
+import { Edit2, Trash2, ClipboardList, PlusCircle, Database, Settings, RotateCw } from 'lucide-react'
 
 interface LogEntry {
   id: number
@@ -49,11 +49,31 @@ export default function AuditLog({ collection }: Props) {
   }
 
   return (
-    <div className="audit-log-section">
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 'var(--space-lg)' }}>
-        <h3 style={{ margin: 0, display: 'inline-flex', alignItems: 'center', gap: '8px' }}><ClipboardList size={18} /> Nhật ký thay đổi</h3>
-        <button className="btn btn-outline" onClick={load} type="button" style={{ fontSize: '0.8rem', padding: '0.3rem 0.8rem' }}>
-          Làm mới
+    <section className="admin-audit-card" aria-labelledby="audit-log-heading">
+      <div className="admin-audit-card__header">
+        <div className="admin-audit-card__brand">
+          <div className="admin-audit-card__icon-wrap" aria-hidden="true">
+            <ClipboardList size={18} />
+          </div>
+          <div>
+            <h3 id="audit-log-heading" className="admin-audit-card__title">
+              Nhật ký thay đổi
+            </h3>
+            <p className="admin-audit-card__subtitle">
+              Lịch sử ghi nhận thao tác dữ liệu tự động (Audit Trail)
+            </p>
+          </div>
+        </div>
+
+        <button
+          className="admin-refresh-btn"
+          onClick={load}
+          disabled={loading}
+          type="button"
+          title="Tải lại nhật ký kiểm toán mới nhất"
+        >
+          <RotateCw size={14} className={loading ? 'admin-spin' : ''} aria-hidden="true" />
+          <span>{loading ? 'Đang tải...' : 'Làm mới'}</span>
         </button>
       </div>
 
@@ -101,6 +121,6 @@ export default function AuditLog({ collection }: Props) {
           </table>
         </div>
       )}
-    </div>
+    </section>
   )
 }

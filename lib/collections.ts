@@ -30,6 +30,12 @@ export const STATIC_COLLECTIONS: Collection[] = [
     icon: '🌿', accentColor: '#a7f3d0', volumeCount: 2,
     status: 'active', sortOrder: 2,
   },
+  {
+    id: 'giap-xac', slug: 'giap-xac',
+    nameVn: 'Giáp xác biển', nameEn: 'Marine Crustaceans of Vietnam',
+    icon: '🦐', accentColor: '#fca5a5', volumeCount: 1,
+    status: 'active', sortOrder: 3,
+  },
 ]
 
 export function getCollectionBySlug(slug: string): Collection | undefined {

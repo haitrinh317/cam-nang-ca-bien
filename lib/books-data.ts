@@ -152,6 +152,29 @@ export const BOOKS_BY_COLLECTION: Record<string, BookMetadata[]> = {
       ],
     },
   ],
+  'giap-xac': [
+    {
+      id: 'dong-vat-chi-tom-bien',
+      title: 'Động vật chí Việt Nam: Tôm biển',
+      badge: 'Tập 1 (132 loài)',
+      author: 'Nguyễn Văn Chung, Đặng Ngọc Thanh, Phạm Thị Dự',
+      publisher: 'NXB Khoa học và Kỹ thuật',
+      yearRange: '2000',
+      totalSpecies: 132,
+      description: 'Công trình định loại học cơ bản và giải phẫu toàn diện về khu hệ Tôm biển và Tôm tít Việt Nam thuộc bộ Mười Chân (Decapoda) và bộ Chân Miệng (Stomatopoda).',
+      volumes: [
+        {
+          volume: 1,
+          roman: '1',
+          year: '2000',
+          title: 'Động vật chí Việt Nam — Tập 1: Tôm biển',
+          subTitle: 'Penaeoidea, Nephropoidea, Palinuroidea, Gonodactyloidea, Lysiosquilloidea, Squilloidea',
+          author: 'Nguyễn Văn Chung, Đặng Ngọc Thanh, Phạm Thị Dự',
+          speciesCount: 132,
+        },
+      ],
+    },
+  ],
 }
 
 export function getBooksForCollection(collectionSlug: string): BookMetadata[] {

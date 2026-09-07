@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { db } from '@/lib/supabase-browser'
+import { LogOut, ShieldCheck } from 'lucide-react'
 
 export default function AuthStatus() {
   const [email, setEmail] = useState<string | null>(null)
@@ -21,14 +22,34 @@ export default function AuthStatus() {
 
   if (!email) return null
 
+  const initial = email.charAt(0).toUpperCase()
+
   return (
     <div className="auth-status">
-      <div className="auth-status__email" title={email}>
-        <span className="auth-status__dot" />
-        {email.split('@')[0]}
+      <div className="auth-status__card">
+        <div className="auth-status__avatar" aria-hidden="true">
+          {initial}
+        </div>
+        <div className="auth-status__info">
+          <div className="auth-status__email" title={email}>
+            {email}
+          </div>
+          <div className="auth-status__role-badge">
+            <span className="auth-status__dot" aria-hidden="true" />
+            <ShieldCheck size={11} aria-hidden="true" />
+            <span>QUẢN TRỊ VIÊN</span>
+          </div>
+        </div>
       </div>
-      <button className="auth-status__logout" onClick={handleLogout} type="button">
-        Đăng xuất
+
+      <button
+        className="auth-status__logout"
+        onClick={handleLogout}
+        type="button"
+        title="Đăng xuất khỏi phiên làm việc"
+      >
+        <LogOut size={13} aria-hidden="true" />
+        <span>Đăng xuất</span>
       </button>
     </div>
   )

@@ -9,6 +9,13 @@
 - [x] **Hardening bảo mật hạ tầng**: Bổ sung `Strict-Transport-Security` (HSTS 1 năm, preload) và `Permissions-Policy` vào `next.config.ts`; chuẩn hóa domain canonical trong `app/robots.ts` và `app/sitemap.ts` sang `www.tracuusinhvatbien.app`.
 - [x] **Xác thực dữ liệu đầu vào bằng Zod (`lib/schemas.ts`)**: Áp dụng Zod schema validation chặt chẽ cho toàn bộ API routes (`POST /api/species`, `PATCH /api/species`, `POST /api/species/import`), loại bỏ hoàn toàn nguy cơ chèn trường độc hại (mass assignment).
 - [x] **Tái thiết kế trang đăng nhập Admin (`/login`) chuẩn `/hallmark` & `/ui-ux-pro-max`**: Triển khai Phương án 2 (Centered Vault Card) với nền biển sâu Oxford Navy, font Lora upright + Be Vietnam Pro, toggle ẩn/hiện mật khẩu SVG, loading spinner và thông báo lỗi rõ ràng; tạo file CSS độc lập `styles/auth.css` khắc phục dứt điểm lỗi mất style trang login.
+- [x] **Tái thiết kế toàn bộ phân hệ Admin (`/admin`) chuẩn `/hallmark` & `/ui-ux-pro-max`**:
+  - Dọn sạch 100% trùng lặp CSS giữa `admin.css` và `admin-dashboard.css`, gỡ bỏ class login cũ, đồng bộ sang tokens OKLCH.
+  - Nâng cấp `AdminSidebar`: thương hiệu uy nghiêm, nút "← Ra trang tra cứu", badge đếm số lượng thời gian thực.
+  - Nâng cấp `AuthStatus`: user card sang trọng với avatar chữ cái, role badge `QUẢN TRỊ VIÊN`, nút đăng xuất tinh tế.
+  - Nâng cấp `AdminDashboard`: Bento KPI grid 4 thẻ, Volume bar chart đa sắc theo chuẩn tập sách (`--color-vol-1` đến `--color-vol-5`), bảng Audit Log format chi tiết thông minh thay cho chuỗi JSON thô.
+  - Nâng cấp `SpeciesTable`: Toolbar phân tách mạch lạc, ô tìm kiếm có nút xóa nhanh, phân trang đầy đủ.
+- [x] **Cải tiến thao tác sửa loài trong `SpeciesTable`**: Click trực tiếp vào Tên tiếng Việt hoặc Tên khoa học sẽ mở ngay Form/Modal chỉnh sửa toàn diện của loài (kèm hiệu ứng hover bút chì cyan và trạng thái tải dữ liệu chi tiết).
 - [x] **Deploy Production Vercel**: Đã commit và deploy production thành công lên `https://www.tracuusinhvatbien.app` (`cam-nang-ca-bien.vercel.app`).
 
 ## ✅ Hoàn thành (2026-09-06)

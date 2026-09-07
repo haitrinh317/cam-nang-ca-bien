@@ -1,91 +1,359 @@
-/* ═══════════════════════════════════════════
-   ADMIN DASHBOARD KPI CARDS
-   ═══════════════════════════════════════════ */
+/* Hallmark · macrostructure: Bento Operations Hub · genre: atmospheric-scholarly
+ * theme: Oxford Navy + Fluorescent Cyan (Tuned)
+ * display: Lora · body: Be Vietnam Pro · outlier: JetBrains Mono
+ */
+
+/* ── KPI Grid ── */
 .admin-kpi-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--space-xl);
-  margin-bottom: var(--space-3xl);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
 }
+
 .admin-kpi-card {
-  background: var(--color-paper-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-2xl);
+  background: var(--color-paper-2, #ffffff);
+  border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.12));
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  transition: transform 0.2s, box-shadow 0.2s;
+  gap: 0.6rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 1px 3px rgba(11, 19, 41, 0.04);
 }
+
 .admin-kpi-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(0, 212, 184, 0.35);
+  box-shadow: 0 8px 24px rgba(11, 19, 41, 0.08);
 }
+
+.admin-kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--color-accent, #00d4b8);
+  opacity: 0.85;
+}
+
+.admin-kpi-card--thucvat::before {
+  background: #10b981;
+}
+
+.admin-kpi-card--lit::before {
+  background: #6366f1;
+}
+
+.admin-kpi-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .admin-kpi-card__title {
-  font-size: 0.875rem;
-  color: var(--color-muted);
+  font-size: 0.76rem;
+  color: var(--color-muted, #475569);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   margin: 0;
+  font-family: var(--font-body);
 }
+
+.admin-kpi-card__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--color-paper-3, #f1f5f9);
+  color: var(--color-ink-2);
+  display: grid;
+  place-items: center;
+}
+
 .admin-kpi-card__value {
-  font-size: 2.5rem;
-  font-family: var(--font-heading);
-  font-weight: 300;
+  font-size: 2.35rem;
+  font-family: var(--font-display, serif);
+  font-weight: 700;
+  color: var(--color-ink, #0b1329);
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.admin-kpi-card__sub {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin: 0;
+  font-family: var(--font-outlier);
+}
+
+/* ═══════════════════════════════════════════
+   VOLUME DISTRIBUTION — BENTO DOSSIER CARDS
+   (Replaces the ugly stretched progress bars)
+   ═══════════════════════════════════════════ */
+
+.admin-volumes-section {
+  background: var(--color-paper-2, #ffffff);
+  border: 1px solid var(--color-rule);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(11, 19, 41, 0.04);
+}
+
+.admin-volumes-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.admin-volumes-title {
+  font-family: var(--font-display, serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0 0 0.35rem 0;
+  letter-spacing: -0.015em;
+}
+
+.admin-volumes-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.admin-volumes-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(0, 212, 184, 0.08);
+  border: 1px solid rgba(0, 212, 184, 0.25);
+  border-radius: 9999px;
+  font-family: var(--font-outlier, monospace);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--color-accent-dark, #0b1329);
+}
+
+/* Spectrum Ribbon (Single unified bar showing proportional distribution) */
+.admin-spectrum-bar {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+  background: var(--color-paper-3, #f1f5f9);
+  border: 1px solid rgba(11, 19, 41, 0.06);
+}
+
+.admin-spectrum-segment {
+  height: 100%;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+  position: relative;
+}
+
+.admin-spectrum-segment:hover {
+  opacity: 0.85;
+}
+
+.admin-spectrum-segment--1 { background: var(--color-vol-1, #3730a3); }
+.admin-spectrum-segment--2 { background: var(--color-vol-2, #065f46); }
+.admin-spectrum-segment--3 { background: var(--color-vol-3, #991b1b); }
+.admin-spectrum-segment--4 { background: var(--color-vol-4, #92400e); }
+.admin-spectrum-segment--5 { background: var(--color-vol-5, #1e40af); }
+
+/* Bento Volume Cards Grid */
+.admin-vol-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.admin-vol-tile {
+  background: var(--color-paper, #f8fafc);
+  border: 1px solid var(--color-rule);
+  border-radius: 12px;
+  padding: 1.15rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-vol-tile:hover {
+  background: #ffffff;
+  border-color: rgba(0, 212, 184, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(11, 19, 41, 0.08);
+}
+
+.admin-vol-tile--1 { border-top: 3px solid var(--color-vol-1, #3730a3); }
+.admin-vol-tile--2 { border-top: 3px solid var(--color-vol-2, #065f46); }
+.admin-vol-tile--3 { border-top: 3px solid var(--color-vol-3, #991b1b); }
+.admin-vol-tile--4 { border-top: 3px solid var(--color-vol-4, #92400e); }
+.admin-vol-tile--5 { border-top: 3px solid var(--color-vol-5, #1e40af); }
+
+.admin-vol-tile__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.admin-vol-tile__badge {
+  font-family: var(--font-outlier, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+}
+
+.admin-vol-tile__badge--1 { background: var(--color-vol-1, #3730a3); }
+.admin-vol-tile__badge--2 { background: var(--color-vol-2, #065f46); }
+.admin-vol-tile__badge--3 { background: var(--color-vol-3, #991b1b); }
+.admin-vol-tile__badge--4 { background: var(--color-vol-4, #92400e); }
+.admin-vol-tile__badge--5 { background: var(--color-vol-5, #1e40af); }
+
+.admin-vol-tile__pct {
+  font-family: var(--font-outlier, monospace);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+
+.admin-vol-tile__title {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.35;
+  margin: 0 0 0.25rem 0;
+  min-height: 2.4rem;
+}
+
+.admin-vol-tile__latin {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.74rem;
+  color: var(--color-muted);
+  line-height: 1.3;
+  margin: 0 0 1rem 0;
+  display: block;
+  min-height: 1.2rem;
+}
+
+.admin-vol-tile__foot {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-rule-2);
+}
+
+.admin-vol-tile__count {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+}
+
+.admin-vol-tile__num {
+  font-family: var(--font-display, serif);
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--color-ink);
   line-height: 1;
+}
+
+.admin-vol-tile__unit {
+  font-size: 0.76rem;
+  color: var(--color-muted);
+}
+
+.admin-vol-tile__arrow {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.admin-vol-tile:hover .admin-vol-tile__arrow {
+  color: var(--color-accent-dark, #0b1329);
+  transform: translateX(3px);
+}
+
+/* ── Activity Table Polish ── */
+.admin-activity-card {
+  background: var(--color-paper-2, #ffffff);
+  border: 1px solid var(--color-rule);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 1px 3px rgba(11, 19, 41, 0.04);
+}
+
+.admin-activity-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.admin-activity-card__header h2 {
+  font-family: var(--font-display, serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-ink);
   margin: 0;
 }
 
-/* Volume Chart */
-.admin-chart-card {
-  background: var(--color-paper-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  padding: var(--space-2xl);
-  margin-bottom: var(--space-3xl);
-}
-.admin-chart-card h2 {
-  font-size: 1.25rem;
-  margin: 0 0 var(--space-xl) 0;
-  font-weight: 600;
-}
-.admin-vol-bar-row {
-  display: flex;
-  align-items: center;
-  gap: var(--space-md);
-  margin-bottom: var(--space-md);
-}
-.admin-vol-bar-label {
-  width: 80px;
-  font-weight: 600;
-  color: var(--color-muted);
-  font-size: 0.9rem;
-}
-.admin-vol-bar-track {
-  flex: 1;
-  background: var(--color-paper-3);
-  height: 24px;
-  border-radius: var(--radius-sm);
+.admin-details-pill {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  background: var(--color-paper-3, #f1f5f9);
+  border-radius: 6px;
+  font-family: var(--font-outlier, monospace);
+  font-size: 0.78rem;
+  color: var(--color-ink-3);
+  max-width: 440px;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 1px solid var(--color-rule-2);
 }
-.admin-vol-bar-fill {
-  height: 100%;
-  background: var(--brand-primary);
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 0.5rem;
-  color: var(--color-accent-dark);
-  font-weight: 700;
-  font-size: 0.8rem;
-  min-width: 24px;
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .admin-vol-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-.admin-vol-bar-value {
-  width: 50px;
-  text-align: right;
-  font-weight: 600;
-  color: var(--color-ink);
-  font-size: 0.9rem;
+
+@media (max-width: 680px) {
+  .admin-vol-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-volumes-section,
+  .admin-activity-card {
+    padding: 1.25rem;
+  }
 }
