@@ -1,7 +1,7 @@
 import { createServerClient } from '@/lib/supabase-server'
 import Link from 'next/link'
 import '@/styles/admin.css'
-import { Database, Fish, Leaf, BookOpen, Clock, ArrowRight, BookCheck } from 'lucide-react'
+import { Database, Fish, Leaf, Shrimp, BookOpen, Clock, ArrowRight, BookCheck } from 'lucide-react'
 
 const ACTION_MAP: Record<string, { label: string; cls: string }> = {
   create:      { label: 'Thêm mới',       cls: 'audit-badge--create' },
@@ -24,8 +24,8 @@ const MONOGRAPHS = [
   },
   {
     roman: 'III',
-    title: 'Cá đối, Cá suốt & Cá hàm',
-    latin: 'Mugiliformes, Beloniformes...',
+    title: 'Cá mú, Cá hồng & Cá đù',
+    latin: 'Perciformes (Lutjanidae, Serranidae)',
   },
   {
     roman: 'IV',
@@ -66,13 +66,19 @@ export default async function AdminDashboard() {
   const db = createServerClient()
 
   const [
+    { count: totalCount },
     { count: caBienCount },
     { count: thucVatCount },
+    { count: giapXacCount },
+    { count: ranBienCount },
     { count: litCount },
     { data: recentAudit },
   ] = await Promise.all([
+    db.from('species').select('*', { count: 'exact', head: true }).is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'ca-bien').is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'thuc-vat-bien').is('deleted_at', null),
+    db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'giap-xac').is('deleted_at', null),
+    db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'ran-bien').is('deleted_at', null),
     db.from('literature_sources').select('*', { count: 'exact', head: true }),
     db.from('audit_log')
       .select('id, created_at, user_email, action, details')
@@ -80,7 +86,7 @@ export default async function AdminDashboard() {
       .limit(8),
   ])
 
-  const total = (caBienCount || 0) + (thucVatCount || 0)
+  const total = totalCount || (caBienCount || 0) + (thucVatCount || 0) + (giapXacCount || 0) + (ranBienCount || 0)
 
   // Volume breakdown (Cá biển tập 1-5)
   const volPromises = [1, 2, 3, 4, 5].map((v) =>
@@ -101,7 +107,7 @@ export default async function AdminDashboard() {
         <div>
           <h1 className="admin-page__title">Tổng Quan Hệ Thống</h1>
           <p className="admin-page__subtitle">
-            Cơ sở dữ liệu Đa dạng Sinh học Biển Việt Nam — Viện Hải dương học Nha Trang
+            Cơ sở dữ liệu Đa dạng Sinh học Biển Việt Nam — Một dự án được phát triển bởi haitrinh
           </p>
         </div>
       </header>
@@ -135,6 +141,24 @@ export default async function AdminDashboard() {
           <p className="admin-kpi-card__sub">Rong biển &amp; cỏ biển</p>
         </div>
 
+        <div className="admin-kpi-card admin-kpi-card--giapxac">
+          <div className="admin-kpi-card__header">
+            <h3 className="admin-kpi-card__title">Giáp xác biển</h3>
+            <div className="admin-kpi-card__icon" aria-hidden="true"><Shrimp size={18} /></div>
+          </div>
+          <p className="admin-kpi-card__value">{(giapXacCount || 0).toLocaleString('vi-VN')}</p>
+          <p className="admin-kpi-card__sub">Tôm biển &amp; tôm tít</p>
+        </div>
+
+        <div className="admin-kpi-card admin-kpi-card--ranbien">
+          <div className="admin-kpi-card__header">
+            <h3 className="admin-kpi-card__title">Rắn biển</h3>
+            <div className="admin-kpi-card__icon" aria-hidden="true"><span style={{ fontSize: '16px', lineHeight: 1 }}>🐍</span></div>
+          </div>
+          <p className="admin-kpi-card__value">{(ranBienCount || 0).toLocaleString('vi-VN')}</p>
+          <p className="admin-kpi-card__sub">Rắn biển &amp; đẻn biển</p>
+        </div>
+
         <div className="admin-kpi-card admin-kpi-card--lit">
           <div className="admin-kpi-card__header">
             <h3 className="admin-kpi-card__title">Tài liệu gốc</h3>
@@ -153,7 +177,7 @@ export default async function AdminDashboard() {
               Cấu Trúc Bộ Danh Mục Cá Biển Việt Nam
             </h2>
             <p className="admin-volumes-subtitle">
-              Phân bố số lượng loài theo 5 tập chuyên khảo chính quy của Viện Hải dương học Nha Trang
+              Phân bố số lượng loài theo 5 tập chuyên khảo tài liệu phân loại học gốc
             </p>
           </div>
           <div className="admin-volumes-badge">

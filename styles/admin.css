@@ -939,6 +939,14 @@
   background: #10b981;
 }
 
+.admin-kpi-card--giapxac::before {
+  background: #fca5a5;
+}
+
+.admin-kpi-card--ranbien::before {
+  background: #f59e0b;
+}
+
 .admin-kpi-card--lit::before {
   background: #6366f1;
 }

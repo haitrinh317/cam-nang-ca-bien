@@ -12,9 +12,9 @@ export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: {
-    absolute: 'Tra cứu sinh vật biển Việt Nam',
+    absolute: 'Tra cứu thông tin Sinh Vật Biển Việt Nam',
   },
-  description: 'Cơ sở dữ liệu số hóa 2.436+ loài cá biển và rong biển Việt Nam từ các công trình phân loại học nguyên bản — Viện Hải dương học Nha Trang.',
+  description: 'Cơ sở dữ liệu số hóa 2.436+ loài sinh vật biển Việt Nam từ các công trình phân loại học nguyên bản — Một dự án được phát triển bởi haitrinh.',
   alternates: {
     canonical: 'https://www.tracuusinhvatbien.app',
   },
@@ -22,22 +22,22 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'vi_VN',
     url: 'https://www.tracuusinhvatbien.app',
-    siteName: 'Tra cứu sinh vật biển Việt Nam',
-    title: 'Tra cứu sinh vật biển Việt Nam',
-    description: 'Cơ sở dữ liệu số hóa 2.436+ loài cá biển và rong biển Việt Nam từ các công trình phân loại học nguyên bản — Viện Hải dương học Nha Trang.',
+    siteName: 'Tra cứu thông tin Sinh Vật Biển Việt Nam',
+    title: 'Tra cứu thông tin Sinh Vật Biển Việt Nam — haitrinh',
+    description: 'Cơ sở dữ liệu số hóa 2.436+ loài sinh vật biển Việt Nam từ các công trình phân loại học nguyên bản — Một dự án được phát triển bởi haitrinh.',
     images: [
       {
         url: '/og-default.png',
         width: 1200,
         height: 630,
-        alt: 'Tra cứu sinh vật biển Việt Nam',
+        alt: 'Tra cứu thông tin Sinh Vật Biển Việt Nam',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tra cứu sinh vật biển Việt Nam',
-    description: 'Cơ sở dữ liệu số hóa 2.436+ loài sinh vật biển Việt Nam.',
+    title: 'Tra cứu thông tin Sinh Vật Biển Việt Nam — haitrinh',
+    description: 'Cơ sở dữ liệu số hóa 2.436+ loài sinh vật biển Việt Nam — Một dự án được phát triển bởi haitrinh.',
     images: ['/og-default.png'],
   },
 }
@@ -76,7 +76,7 @@ export default async function HomePage() {
         <div className="hero__bg" aria-hidden="true" />
         <div className="hero__content">
           <h1>Danh mục Sinh vật biển <span className="hero__accent">Việt Nam</span></h1>
-          <p>Cơ sở dữ liệu số hóa phục vụ nghiên cứu khoa học — Viện Hải dương học, Nha Trang.</p>
+          <p>Cơ sở dữ liệu số hóa phục vụ nghiên cứu khoa học — Một dự án được phát triển bởi haitrinh.</p>
           <GlobalSearch />
 
           {/* Live stats */}

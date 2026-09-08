@@ -33,27 +33,42 @@ export default function Nav() {
           </Link>
 
           {/* One flat link per collection */}
-          {collections.map(col => (
-            <Link
-              key={col.slug}
-              href={`/${col.slug}`}
-              className={`nav-link${pathname.startsWith(`/${col.slug}`) ? ' active' : ''}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                {col.slug === 'ca-bien' ? (
-                  <Fish size={16} />
-                ) : col.slug === 'thuc-vat-bien' ? (
-                  <Leaf size={16} />
-                ) : col.slug === 'giap-xac' ? (
-                  <Shrimp size={16} />
-                ) : (
-                  col.icon
-                )}
-                {col.nameVn}
-              </span>
-            </Link>
-          ))}
+          {collections.map(col => {
+            const shortName =
+              col.slug === 'ca-bien'
+                ? 'Cá biển'
+                : col.slug === 'thuc-vat-bien'
+                ? 'Rong biển'
+                : col.slug === 'giap-xac'
+                ? 'Giáp xác'
+                : col.slug === 'ran-bien'
+                ? 'Rắn biển'
+                : col.nameVn
+
+            return (
+              <Link
+                key={col.slug}
+                href={`/${col.slug}`}
+                className={`nav-link${pathname.startsWith(`/${col.slug}`) ? ' active' : ''}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+                  {col.slug === 'ca-bien' ? (
+                    <Fish size={15} />
+                  ) : col.slug === 'thuc-vat-bien' ? (
+                    <Leaf size={15} />
+                  ) : col.slug === 'giap-xac' ? (
+                    <Shrimp size={15} />
+                  ) : col.slug === 'ran-bien' ? (
+                    <span style={{ fontSize: '14px', lineHeight: 1 }}>🐍</span>
+                  ) : (
+                    col.icon
+                  )}
+                  {shortName}
+                </span>
+              </Link>
+            )
+          })}
         </nav>
         <HeaderControls />
         <button

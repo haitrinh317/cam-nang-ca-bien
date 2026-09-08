@@ -16,18 +16,6 @@
   z-index: 100;
 }
 
-/* Subtle corner accent */
-.catalog-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-accent) 0%, rgba(111, 255, 232, 0.4) 100%);
-  border-top-left-radius: calc(var(--radius-xl, 16px) - 1.5px);
-  border-top-right-radius: calc(var(--radius-xl, 16px) - 1.5px);
-}
 
 /* Breadcrumb Bar */
 .catalog-breadcrumb {

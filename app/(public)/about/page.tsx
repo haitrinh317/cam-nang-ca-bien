@@ -5,7 +5,7 @@ import { ArrowLeft, BookOpen, ShieldCheck, Sparkles, Globe, HeartHandshake, Comp
 
 export const metadata: Metadata = {
   title: 'Giới thiệu',
-  description: 'Dự án số hóa di sản và dữ liệu sinh vật biển phi lợi nhuận của Viện Hải dương học (Viện Hàn lâm Khoa học và Công nghệ Việt Nam).',
+  description: 'Dự án số hóa di sản và dữ liệu sinh vật biển phi lợi nhuận phục vụ học tập, nghiên cứu và cộng đồng — Một dự án được phát triển bởi haitrinh.',
   alternates: {
     canonical: 'https://www.tracuusinhvatbien.app/about',
   },
@@ -13,15 +13,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'vi_VN',
     url: 'https://www.tracuusinhvatbien.app/about',
-    siteName: 'Tra cứu sinh vật biển Việt Nam',
-    title: 'Giới thiệu — Tra cứu sinh vật biển Việt Nam',
-    description: 'Sứ mệnh bảo tồn tri thức phân loại học biển, ứng dụng AI/OCR và kết nối CSDL sinh vật biển toàn cầu.',
-    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Giới thiệu Tra cứu sinh vật biển Việt Nam' }],
+    siteName: 'Tra cứu thông tin Sinh Vật Biển Việt Nam',
+    title: 'Giới thiệu — Tra cứu thông tin Sinh Vật Biển Việt Nam',
+    description: 'Sứ mệnh bảo tồn tri thức phân loại học biển, ứng dụng AI/OCR và kết nối CSDL sinh vật biển toàn cầu — Một dự án được phát triển bởi haitrinh.',
+    images: [{ url: '/og-default.png', width: 1200, height: 630, alt: 'Giới thiệu Tra cứu thông tin Sinh Vật Biển Việt Nam' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Giới thiệu — Tra cứu sinh vật biển Việt Nam',
-    description: 'Sứ mệnh bảo tồn tri thức phân loại học biển và kết nối CSDL sinh vật biển toàn cầu.',
+    title: 'Giới thiệu — Tra cứu thông tin Sinh Vật Biển Việt Nam',
+    description: 'Sứ mệnh bảo tồn tri thức phân loại học biển và kết nối CSDL sinh vật biển toàn cầu — Một dự án được phát triển bởi haitrinh.',
     images: ['/og-default.png'],
   },
 }
@@ -30,7 +30,7 @@ const STATS = [
   { value: '1.765+', label: 'Loài cá biển', sub: 'Đã số hóa cấu trúc' },
   { value: '6 Tập', label: 'Ấn phẩm kinh điển', sub: '1992 – nay' },
   { value: '100%', label: 'Xác thực WoRMS', sub: 'Mã AphiaID quốc tế' },
-  { value: '1922', label: 'Năm thành lập', sub: 'Viện Hải dương học' },
+  { value: '2026', label: 'Khởi xướng', sub: 'Phát triển bởi haitrinh' },
 ]
 
 const PILLARS = [
@@ -52,7 +52,7 @@ const PILLARS = [
   {
     icon: <HeartHandshake size={24} />,
     title: 'Khoa học Mở vì Cộng đồng',
-    desc: 'Nền tảng mở phi thương mại, phục vụ trực tiếp công tác chuyên môn tại Bảo tàng Hải dương học, hỗ trợ nghiên cứu sinh học biển, giáo dục học đường và nâng cao nhận thức bảo tồn đại dương.',
+    desc: 'Nền tảng mở phi thương mại, phục vụ trực tiếp công tác học tập, nghiên cứu sinh học biển, giáo dục học đường và nâng cao nhận thức bảo tồn đại dương.',
   },
 ]
 
@@ -87,21 +87,21 @@ export default function AboutPage() {
             <span className="about-hero__title-accent">Bảo tồn Tri thức Biển Việt Nam.</span>
           </h1>
           <p className="about-hero__lead">
-            Cẩm nang Sinh vật biển Việt Nam là công trình chuyển đổi số toàn diện, kết nối kho tàng nghiên cứu ngư loại học đồ sộ của Viện Hải dương học từ thế kỷ 20 với công nghệ trí tuệ nhân tạo và chuẩn mực phân loại học toàn cầu.
+            Tra cứu thông tin Sinh Vật Biển Việt Nam là công trình chuyển đổi số toàn diện, kết nối kho tàng nghiên cứu ngư loại học đồ sộ của các nhà khoa học Việt Nam từ thế kỷ 20 với công nghệ trí tuệ nhân tạo và chuẩn mực phân loại học toàn cầu.
           </p>
 
           <div className="about-hero__meta-card">
             <div className="about-meta-col">
-              <span className="about-meta-label">Đơn vị phát triển</span>
-              <span className="about-meta-value">Phòng Thông tin – Truyền thông, Viện Hải dương học</span>
+              <span className="about-meta-label">Dự án</span>
+              <span className="about-meta-value">Tra cứu thông tin Sinh Vật Biển Việt Nam</span>
             </div>
             <div className="about-meta-col">
-              <span className="about-meta-label">Cơ quan chủ quản</span>
-              <span className="about-meta-value">Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)</span>
+              <span className="about-meta-label">Nhà phát triển</span>
+              <span className="about-meta-value">Một dự án được phát triển bởi haitrinh</span>
             </div>
             <div className="about-meta-col">
               <span className="about-meta-label">Định hướng</span>
-              <span className="about-meta-value">Phi lợi nhuận • Tri thức mở • Bảo tồn</span>
+              <span className="about-meta-value">Số hóa tri thức di sản phân loại học & bảo tồn đại dương</span>
             </div>
           </div>
         </header>
@@ -126,7 +126,7 @@ export default function AboutPage() {
 
           <div className="about-story-content">
             <p>
-              Viện Hải dương học tại Nha Trang — được thành lập từ năm 1922 — là trung tâm nghiên cứu hải dương học lâu đời bậc nhất khu vực Đông Nam Á. Trong suốt hơn một thế kỷ qua, các thế hệ nhà khoa học đã thực hiện hàng trăm chuyến hải trình thám hiểm, đo vẽ và định loại hàng nghìn loài sinh vật biển tại vùng biển từ Vịnh Bắc Bộ, dải bờ miền Trung, quần đảo Hoàng Sa – Trường Sa cho đến Vịnh Thái Lan.
+              Việt Nam sở hữu bờ biển dài hơn 3.260 km với hệ sinh thái biển vô cùng phong phú và đa dạng. Trong suốt hơn một thế kỷ qua, nhiều thế hệ nhà khoa học sinh vật biển đã thực hiện hàng trăm chuyến hải trình thám hiểm, khảo sát, đo vẽ và định loại hàng nghìn loài sinh vật biển tại vùng biển từ Vịnh Bắc Bộ, dải bờ miền Trung, quần đảo Hoàng Sa – Trường Sa cho đến Vịnh Thái Lan.
             </p>
             <p>
               Thành quả của những thập kỷ lao động kiên trì đó đã kết tinh trong các bộ sách kinh điển, đặc biệt là bộ <strong>&ldquo;Danh mục Cá biển Việt Nam&rdquo;</strong> (Tập I đến Tập V do GS. Nguyễn Khắc Hường và TS. Nguyễn Nhật Thi chủ biên) cùng <strong>&ldquo;Atlas cá rạn san hô Việt Nam&rdquo;</strong> (Tập VI của TS. Đỗ Thị Cát Tường). Tuy nhiên, sau nhiều thập kỷ, các bản in giấy đang dần bị lão hóa, phai mờ và ngày càng khó tìm.
@@ -135,7 +135,7 @@ export default function AboutPage() {
               &ldquo;Một di sản khoa học chỉ thực sự sống mãi khi nó được lan tỏa, tiếp cận dễ dàng và trở thành nguồn cảm hứng cho thế hệ tiếp nối bảo vệ biển mẹ.&rdquo;
             </blockquote>
             <p>
-              Chính vì lý do đó, dự án <strong>Cẩm nang Sinh vật biển Việt Nam</strong> được triển khai như một cầu nối số hóa: kết hợp công nghệ xử lý ảnh số, trí tuệ nhân tạo (Vision OCR) và cơ sở dữ liệu hiện đại để số hóa từng trang tư liệu, hiệu đính danh pháp theo chuẩn quốc tế và trả lại cho công chúng một kho tri thức biển sống động, minh bạch và hoàn toàn miễn phí.
+              Chính vì lý do đó, dự án <strong>Tra cứu thông tin Sinh Vật Biển Việt Nam</strong> được tác giả <strong>haitrinh</strong> khởi xướng và triển khai như một cầu nối số hóa độc lập: kết hợp công nghệ xử lý ảnh số, trí tuệ nhân tạo (Vision OCR) và cơ sở dữ liệu hiện đại để số hóa từng trang tư liệu, hiệu đính danh pháp theo chuẩn quốc tế và trao tặng cho cộng đồng một kho tri thức biển sống động, minh bạch và hoàn toàn miễn phí.
             </p>
           </div>
         </section>

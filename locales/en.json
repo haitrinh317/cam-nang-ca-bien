@@ -8,7 +8,7 @@
   },
   "home": {
     "heroTitle": "Vietnamese Marine Fish Catalog",
-    "heroSubtitle": "Digitized species database for scientific research — Institute of Oceanography, Nha Trang.",
+    "heroSubtitle": "Digitized species database for scientific research — A personal project developed by haitrinh.",
     "searchPlaceholder": "Search fish name...",
     "searchAriaLabel": "Search species",
     "statsSpecies": "species",
@@ -55,11 +55,12 @@
     "labelLitEn": "Literature"
   },
   "footer": {
-    "statement": "Museum of Oceanography — Window to the Ocean",
-    "org": "Institute of Oceanography",
-    "orgParent": "Vietnam Academy of Science and Technology",
-    "mission": "Digital transformation for scientific research",
-    "developedBy": "Developed by Hai Trinh © 2026"
+    "statement": "Independent Non-profit Project",
+    "title": "Vietnam Marine Species Information Search",
+    "org": "Vietnam Marine Species Information Search",
+    "orgParent": "A personal project developed by haitrinh",
+    "mission": "Digitizing taxonomy heritage & ocean conservation",
+    "developedBy": "A project developed by haitrinh © 2026"
   },
   "ui": {
     "toggleDark": "Dark mode",

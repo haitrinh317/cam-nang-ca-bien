@@ -8,7 +8,7 @@
   },
   "home": {
     "heroTitle": "Danh mục Cá biển Việt Nam",
-    "heroSubtitle": "Cơ sở dữ liệu số hóa phục vụ công tác nghiên cứu khoa học — Viện Hải dương học, Nha Trang.",
+    "heroSubtitle": "Cơ sở dữ liệu số hóa phục vụ công tác nghiên cứu khoa học — Một dự án được phát triển bởi haitrinh.",
     "searchPlaceholder": "Tìm kiếm tên cá...",
     "searchAriaLabel": "Tìm kiếm loài cá",
     "statsSpecies": "loài",
@@ -55,11 +55,12 @@
     "labelLitEn": "Literature"
   },
   "footer": {
-    "statement": "Bảo tàng Hải dương học - Lăng kính đại dương",
-    "org": "Viện Hải dương học",
-    "orgParent": "Viện Hàn lâm Khoa học và Công nghệ Việt Nam",
-    "mission": "Chuyển đổi số phục vụ nghiên cứu khoa học",
-    "developedBy": "Phát triển bởi Hải Trình © 2026"
+    "statement": "Dự án cá nhân phi lợi nhuận",
+    "title": "Tra cứu thông tin Sinh Vật Biển Việt Nam",
+    "org": "Tra cứu thông tin Sinh Vật Biển Việt Nam",
+    "orgParent": "Một dự án được phát triển bởi haitrinh",
+    "mission": "Số hóa tri thức di sản phân loại học & bảo tồn đại dương",
+    "developedBy": "Một dự án được phát triển bởi haitrinh © 2026"
   },
   "ui": {
     "toggleDark": "Chế độ tối",

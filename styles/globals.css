@@ -110,8 +110,8 @@ a:focus-visible {
   left: 50%;
   transform: translateX(-50%);
   z-index: 200;
-  width: min(calc(100% - var(--space-2xl)), var(--max-width));
-  padding: 10px var(--space-lg);
+  width: min(calc(100% - var(--space-xl)), 1260px);
+  padding: 8px var(--space-md);
   background: var(--color-navy-glass);
   backdrop-filter: blur(24px) saturate(1.8);
   -webkit-backdrop-filter: blur(24px) saturate(1.8);
@@ -120,8 +120,9 @@ a:focus-visible {
   box-shadow: var(--shadow-nav);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 0;
+  gap: var(--space-sm);
 }
 
 .logo {
@@ -131,7 +132,7 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  flex: 1;                 /* 1/3 of the pill */
+  flex: 0 0 auto;
   color: var(--color-ink-on-navy);
   text-decoration: none;
   letter-spacing: 0.02em;
@@ -150,18 +151,19 @@ a:focus-visible {
 .logo-short { display: none; }
 
 .nav-links {
-  flex: 2;                 /* 2/3 of the pill */
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
+  justify-content: center;
+  gap: 4px;
   min-width: 0;
 }
 
 .nav-link {
   color: var(--color-ink-on-navy-70);
   font-weight: 500;
-  font-size: var(--text-sm);
-  padding: var(--space-xs) var(--space-md);
+  font-size: 0.84rem;
+  padding: 6px 12px;
   border-radius: var(--radius-pill);
   transition: background var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
   white-space: nowrap;

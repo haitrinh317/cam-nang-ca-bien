@@ -15,9 +15,9 @@ export const FAQ_DATA: FaqItem[] = [
     id: 'about-1',
     category: 'about',
     categoryLabel: 'Về dự án',
-    question: 'Cẩm nang Sinh vật biển Việt Nam là gì và vì sao dự án này được thực hiện?',
-    questionEn: 'What is the Vietnam Marine Species Compendium and why was it created?',
-    answer: 'Cẩm nang Sinh vật biển Việt Nam là dự án phi lợi nhuận hướng tới việc số hóa, hiện đại hóa và bảo tồn kho tàng tri thức phân loại học sinh vật biển Việt Nam. Nhiều ấn phẩm nghiên cứu kinh điển — tiêu biểu là bộ sách đồ sộ "Danh mục Cá biển Việt Nam" xuất bản từ thập niên 1990 — hiện nay chỉ còn lưu giữ dưới dạng sách in giấy cũ, giấy ố vàng, hư hại và cực kỳ khó tiếp cận đối với công chúng cũng như thế hệ nghiên cứu trẻ. Dự án ra đời nhằm chuyển hóa toàn bộ di sản khoa học quý giá này thành Cơ sở dữ liệu số Mở (Open Data), trực quan và dễ dàng tra cứu trên mọi thiết bị.',
+    question: 'Tra cứu thông tin Sinh Vật Biển Việt Nam là gì và vì sao dự án này được thực hiện?',
+    questionEn: 'What is this project and why was it created?',
+    answer: 'Tra cứu thông tin Sinh Vật Biển Việt Nam là dự án phi lợi nhuận hướng tới việc số hóa, hiện đại hóa và bảo tồn kho tàng tri thức phân loại học sinh vật biển Việt Nam. Nhiều ấn phẩm nghiên cứu kinh điển — tiêu biểu là bộ sách đồ sộ "Danh mục Cá biển Việt Nam" xuất bản từ thập niên 1990 — hiện nay chỉ còn lưu giữ dưới dạng sách in giấy cũ, giấy ố vàng, hư hại và cực kỳ khó tiếp cận đối với công chúng cũng như thế hệ nghiên cứu trẻ. Dự án ra đời nhằm chuyển hóa toàn bộ di sản khoa học quý giá này thành Cơ sở dữ liệu số Mở (Open Data), trực quan và dễ dàng tra cứu trên mọi thiết bị.',
     highlights: [
       'Bảo tồn di sản nghiên cứu sinh học biển quý báu của các thế hệ nhà khoa học tiền bối',
       'Chuyển đổi số toàn diện: Từ sách giấy in cũ sang cơ sở dữ liệu số hóa có cấu trúc',
@@ -28,13 +28,13 @@ export const FAQ_DATA: FaqItem[] = [
     id: 'about-2',
     category: 'about',
     categoryLabel: 'Về dự án',
-    question: 'Dự án do đơn vị nào khởi xướng và phát triển?',
+    question: 'Dự án do ai khởi xướng và phát triển?',
     questionEn: 'Who developed and manages this project?',
-    answer: 'Dự án được khởi xướng và phát triển bởi Phòng Thông tin – Truyền thông, Viện Hải dương học (thuộc Viện Hàn lâm Khoa học và Công nghệ Việt Nam). Nền tảng được xây dựng nhằm tạo ra một công cụ hỗ trợ trực quan, nhanh chóng cho công tác chuyên môn tại Bảo tàng Hải dương học, đồng thời mở rộng cánh cửa tiếp cận đại dương cho toàn thể cộng đồng.',
+    answer: 'Dự án được khởi xướng, thiết kế và phát triển độc lập bởi tác giả haitrinh. Nền tảng được xây dựng nhằm tạo ra một công cụ tra cứu trực quan, chuẩn xác và nhanh chóng phục vụ học tập, nghiên cứu và cộng đồng yêu sinh vật biển, đồng thời mở rộng cánh cửa tiếp cận tri thức đại dương cho toàn thể mọi người.',
     highlights: [
-      'Đơn vị phát triển: Phòng Thông tin – Truyền thông, Viện Hải dương học',
-      'Cơ quan chủ quản: Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)',
-      'Địa điểm lưu trữ mẫu vật thực tế: Bảo tàng Hải dương học (Nha Trang, Khánh Hòa)'
+      'Tên dự án: Tra cứu thông tin Sinh Vật Biển Việt Nam',
+      'Dòng định danh: Một dự án được phát triển bởi haitrinh',
+      'Định hướng: Số hóa tri thức di sản phân loại học & bảo tồn đại dương'
     ]
   },
 
@@ -128,9 +128,9 @@ export const FAQ_DATA: FaqItem[] = [
     categoryLabel: 'Bản quyền & Sử dụng',
     question: 'Làm thế nào để phản hồi góp ý hoặc đóng góp hình ảnh mẫu vật thực tế?',
     questionEn: 'How can users submit feedback or contribute field specimen photographs?',
-    answer: 'Chúng tôi rất trân trọng mọi đóng góp chuyên môn từ các nhà khoa học, chuyên gia sinh học, ngư dân, cũng như những thợ lặn chụp ảnh sinh vật biển dưới nước. Nếu phát hiện sai sót về định loại, lỗi gõ chữ hoặc muốn đóng góp tư liệu ảnh thực tế sống động của loài tại vùng biển Việt Nam, quý độc giả có thể liên hệ trực tiếp qua kênh phản hồi của Viện Hải dương học.',
+    answer: 'Chúng tôi rất trân trọng mọi đóng góp chuyên môn từ các nhà khoa học, chuyên gia sinh học, ngư dân, cũng như những thợ lặn chụp ảnh sinh vật biển dưới nước. Nếu phát hiện sai sót về định loại, lỗi gõ chữ hoặc muốn đóng góp tư liệu ảnh thực tế sống động của loài tại vùng biển Việt Nam, quý độc giả có thể liên hệ trực tiếp qua kênh phản hồi của dự án.',
     highlights: [
-      'Tiếp nhận ý kiến phản hồi chuyên môn qua hòm thư điện tử của Viện Hải dương học',
+      'Tiếp nhận ý kiến phản hồi chuyên môn qua kênh thông tin của dự án',
       'Khuyến khích cộng đồng lặn biển và nhiếp ảnh gia đại dương đóng góp ảnh chụp loài ngoài tự nhiên'
     ]
   }

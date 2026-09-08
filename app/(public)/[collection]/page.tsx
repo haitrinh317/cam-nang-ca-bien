@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const col = getCollectionBySlug(collection)
   if (!col) return { title: 'Không tìm thấy' }
   const pageUrl = `https://www.tracuusinhvatbien.app/${collection}`
-  const desc = `Cơ sở dữ liệu số hóa ${col.nameVn} trích xuất từ các công trình khoa học nguyên bản của Viện Hải dương học Nha Trang.`
+  const desc = `Cơ sở dữ liệu số hóa ${col.nameVn} trích xuất từ các công trình khoa học nguyên bản — Một dự án được phát triển bởi haitrinh.`
   return {
     title: `Tra cứu Danh mục — ${col.nameVn}`,
     description: desc,
@@ -34,9 +34,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       locale: 'vi_VN',
       url: pageUrl,
-      siteName: 'Tra cứu sinh vật biển Việt Nam',
-      title: `Tra cứu Danh mục — ${col.nameVn} — Tra cứu sinh vật biển Việt Nam`,
-      description: `${col.volumeCount} tập tài liệu khoa học nguyên bản, định danh và chuẩn hóa danh pháp sinh vật biển Việt Nam.`,
+      siteName: 'Tra cứu thông tin Sinh Vật Biển Việt Nam',
+      title: `Tra cứu Danh mục — ${col.nameVn} — haitrinh`,
+      description: `${col.volumeCount} tập tài liệu khoa học nguyên bản, định danh và chuẩn hóa danh pháp sinh vật biển Việt Nam. Một dự án được phát triển bởi haitrinh.`,
       images: [
         {
           url: '/og-default.png',
@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Tra cứu Danh mục — ${col.nameVn} — Tra cứu sinh vật biển Việt Nam`,
+      title: `Tra cứu Danh mục — ${col.nameVn} — haitrinh`,
       description: desc,
       images: ['/og-default.png'],
     },

@@ -25,8 +25,9 @@ const NAV_GROUPS: { section: string; items: NavItem[] }[] = [
     section: 'Dữ Liệu Đa Dạng Sinh Học',
     items: [
       { href: '/admin/ca-bien', icon: <Fish size={18} />, label: 'Cá biển Việt Nam', badge: '1.764' },
-      { href: '/admin/thuc-vat-bien', icon: <Leaf size={18} />, label: 'Thực vật biển', badge: '201' },
+      { href: '/admin/thuc-vat-bien', icon: <Leaf size={18} />, label: 'Thực vật biển', badge: '672' },
       { href: '/admin/giap-xac', icon: <Shrimp size={18} />, label: 'Giáp xác biển', badge: '132' },
+      { href: '/admin/ran-bien', icon: <span style={{ fontSize: '15px', lineHeight: 1 }}>🐍</span>, label: 'Rắn biển Việt Nam', badge: '27' },
     ],
   },
 ]
@@ -45,7 +46,7 @@ export default function AdminSidebar() {
         </div>
         <div>
           <span className="brand-label">Cổng Quản Trị</span>
-          <span className="brand-sub">Viện Hải dương học Nha Trang</span>
+          <span className="brand-sub">Phát triển bởi haitrinh</span>
         </div>
       </div>
 

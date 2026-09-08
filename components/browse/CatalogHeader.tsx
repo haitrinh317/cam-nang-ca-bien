@@ -70,7 +70,7 @@ export default function CatalogHeader({
           {isSpecialGroup ? (
             activeGroup?.subTitle
           ) : (
-            'Cơ sở dữ liệu số hóa tiêu bản mẫu vật và phân loại học sinh vật biển nguyên bản — Viện Hải dương học Nha Trang.'
+            'Cơ sở dữ liệu số hóa tiêu bản mẫu vật và phân loại học sinh vật biển nguyên bản — Một dự án được phát triển bởi haitrinh.'
           )}
         </p>
 
@@ -86,7 +86,7 @@ export default function CatalogHeader({
                 <span>{activeGroup?.approxCount || totalSpecies} loài ghi nhận</span>
               </span>
               <span className="catalog-header__pill">
-                <span>Viện Hải dương học</span>
+                <span>Một dự án bởi haitrinh</span>
               </span>
             </>
           ) : (
@@ -118,10 +118,14 @@ export default function CatalogHeader({
         >
           <GlobalSearch
             collectionId={collection.id}
-            collectionName={collection.id === 'thuc-vat-bien' ? 'Thực Vật Biển' : 'Cá Biển Việt Nam'}
+            collectionName={collection.nameVn}
             placeholder={
               collection.id === 'thuc-vat-bien'
-                ? 'Tìm trong 672+ loài Thực vật biển (Tên VN, Tên khoa học, Rong biển, Cỏ biển)...'
+                ? `Tìm trong ${totalSpecies.toLocaleString()}+ loài Thực vật biển (Tên VN, Tên khoa học, Rong biển, Cỏ biển)...`
+                : collection.id === 'giap-xac'
+                ? `Tìm trong ${totalSpecies.toLocaleString()}+ loài Giáp xác biển (Tên VN, Tên khoa học, Tôm, Cua, Ghẹ)...`
+                : collection.id === 'ran-bien'
+                ? `Tìm trong ${totalSpecies.toLocaleString()}+ loài Rắn biển Việt Nam (Tên VN, Tên khoa học, Đẻn biển)...`
                 : `Tìm trong ${totalSpecies.toLocaleString() || '1.764'}+ loài Cá biển Việt Nam (Tên VN, Tên khoa học)...`
             }
           />

@@ -8,25 +8,20 @@ export default function Footer() {
   return (
     <footer className="site-footer" role="contentinfo">
       <div className="site-footer__inner">
-        {/* ─── Tầng 1: Nhận diện Viện & Slogan di sản ─── */}
+        {/* ─── Tầng 1: Nhận diện thương hiệu dự án ─── */}
         <div className="site-footer__top">
           <div className="footer-brand">
             <img
               src="/logo.png"
-              alt="Logo Bảo tàng Hải dương học"
+              alt="Logo Tra cứu thông tin Sinh Vật Biển Việt Nam"
               className="footer-logo"
               width={36}
               height={36}
             />
             <div className="footer-brand__text">
-              <a
-                href="http://vnio.org.vn/"
-                target="_blank"
-                rel="noopener"
-                className="footer-org__link"
-              >
-                <strong>{t('footer.org')}</strong>
-              </a>
+              <span className="footer-org__title">
+                <strong>{t('footer.title')}</strong>
+              </span>
               <div className="footer-org__parent">
                 {t('footer.orgParent')}
               </div>

@@ -15,6 +15,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react'
+import { getCollectionBySlug } from '@/lib/collections'
 
 interface SpeciesRow {
   [key: string]: unknown
@@ -32,9 +33,13 @@ interface Props {
   collection: string
 }
 
-const VOLS = ['Tất cả', '1', '2', '3', '4', '5', '6']
-
 export default function SpeciesTable({ collection }: Props) {
+  const colInfo = getCollectionBySlug(collection)
+  const maxVols = colInfo?.volumeCount || 1
+  const volOptions = maxVols > 1
+    ? ['Tất cả', ...Array.from({ length: maxVols }, (_, i) => String(i + 1))]
+    : []
+
   const [rows, setRows] = useState<SpeciesRow[]>([])
   const [total, setTotal] = useState(0)
   const [page, setPage] = useState(1)
@@ -217,23 +222,25 @@ export default function SpeciesTable({ collection }: Props) {
             )}
           </div>
 
-          <select
-            id="filterVol"
-            className="admin-select"
-            value={vol}
-            onChange={handleVolChange}
-            aria-label="Lọc theo tập"
-          >
-            {VOLS.map((v) => (
-              <option key={v} value={v === 'Tất cả' ? '' : v}>
-                {v === 'Tất cả'
-                  ? 'Tất cả các tập'
-                  : v === '6' && collection === 'ca-bien'
-                  ? 'Atlas cá rạn san hô'
-                  : `Tập ${v}`}
-              </option>
-            ))}
-          </select>
+          {volOptions.length > 0 && (
+            <select
+              id="filterVol"
+              className="admin-select"
+              value={vol}
+              onChange={handleVolChange}
+              aria-label="Lọc theo tập"
+            >
+              {volOptions.map((v) => (
+                <option key={v} value={v === 'Tất cả' ? '' : v}>
+                  {v === 'Tất cả'
+                    ? 'Tất cả các tập'
+                    : v === '6' && collection === 'ca-bien'
+                    ? 'Atlas cá rạn san hô'
+                    : `Tập ${v}`}
+                </option>
+              ))}
+            </select>
+          )}
         </div>
 
         <div className="admin-toolbar__actions">

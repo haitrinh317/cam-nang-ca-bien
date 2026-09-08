@@ -4,8 +4,8 @@ import LoginForm from './LoginForm'
 import '@/styles/auth.css'
 
 export const metadata: Metadata = {
-  title: 'Đăng nhập Quản trị — Cẩm Nang Sinh Vật Biển Việt Nam',
-  description: 'Cổng xác thực quản trị dữ liệu sinh vật biển Việt Nam — Bảo tàng Hải dương học, Viện Hải dương học Nha Trang.',
+  title: 'Đăng nhập Quản trị — Tra cứu thông tin Sinh Vật Biển Việt Nam',
+  description: 'Cổng xác thực quản trị dữ liệu sinh vật biển Việt Nam — Một dự án được phát triển bởi haitrinh.',
   robots: {
     index: false,
     follow: false,
@@ -47,7 +47,7 @@ export default async function LoginPage({ searchParams }: Props) {
           <div className="auth-seal-ring">
             <img
               src="/logo.png"
-              alt="Biểu trưng Bảo tàng Hải dương học Nha Trang"
+              alt="Biểu trưng Tra cứu thông tin Sinh Vật Biển Việt Nam"
               className="auth-seal-logo"
               width={44}
               height={44}
@@ -74,7 +74,7 @@ export default async function LoginPage({ searchParams }: Props) {
             Đăng nhập Quản trị
           </h1>
           <p className="auth-subtitle">
-            Bảo tàng Hải dương học — Viện Hải dương học Nha Trang
+            Một dự án được phát triển bởi haitrinh
           </p>
         </header>
 

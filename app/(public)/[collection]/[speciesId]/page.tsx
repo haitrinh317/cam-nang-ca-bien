@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const rawDesc = data.biology_summary_vn || data.ecology || data.morphology || ''
   const description = rawDesc
     ? `${data.vn_name} — ${rawDesc.slice(0, 155).trim()}...`
-    : `Thông tin phân loại học và sinh thái của ${data.vn_name} (${data.scientific_name}) — Viện Hải dương học Nha Trang.`
+    : `Thông tin phân loại học và sinh thái của ${data.vn_name} (${data.scientific_name}) — Một dự án được phát triển bởi haitrinh.`
 
   const pageUrl = `https://www.tracuusinhvatbien.app/${collection}/${speciesId}`
 
@@ -66,8 +66,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'article',
       locale: 'vi_VN',
       url: pageUrl,
-      siteName: 'Tra cứu sinh vật biển Việt Nam',
-      title: `${title} — Tra cứu sinh vật biển Việt Nam`,
+      siteName: 'Tra cứu thông tin Sinh Vật Biển Việt Nam',
+      title: `${title} — Tra cứu thông tin Sinh Vật Biển Việt Nam`,
       description,
       images: [
         {
@@ -80,7 +80,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${title} — Tra cứu sinh vật biển Việt Nam`,
+      title: `${title} — Tra cứu thông tin Sinh Vật Biển Việt Nam`,
       description,
       images: [photoUrl],
     },
