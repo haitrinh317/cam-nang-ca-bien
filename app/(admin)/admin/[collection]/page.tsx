@@ -1,9 +1,23 @@
+import type { Metadata } from 'next'
 import { getCollectionBySlug } from '@/lib/collections'
 import { notFound } from 'next/navigation'
 import SpeciesTable from '@/components/admin/SpeciesTable'
 
 interface Props {
   params: Promise<{ collection: string }>
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { collection } = await params
+  const col = getCollectionBySlug(collection)
+  return {
+    title: `Quản lý ${col?.nameVn || collection} — Admin haitrinh`,
+    description: `Quản lý dữ liệu phân loại học ${col?.nameVn} — Dự án cá nhân phát triển bởi haitrinh.`,
+    robots: {
+      index: false,
+      follow: false,
+    },
+  }
 }
 
 export default async function AdminCollectionPage({ params }: Props) {

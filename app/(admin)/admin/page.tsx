@@ -1,7 +1,13 @@
+import type { Metadata } from 'next'
 import { createServerClient } from '@/lib/supabase-server'
 import Link from 'next/link'
 import '@/styles/admin.css'
 import { Database, Fish, Leaf, Shrimp, BookOpen, Clock, ArrowRight, BookCheck } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Bảng Điều Khiển Quản Trị — haitrinh',
+  description: 'Tổng quan hệ thống số hóa đa dạng sinh học biển Việt Nam — Dự án cá nhân phát triển bởi haitrinh.',
+}
 
 const ACTION_MAP: Record<string, { label: string; cls: string }> = {
   create:      { label: 'Thêm mới',       cls: 'audit-badge--create' },
@@ -107,7 +113,7 @@ export default async function AdminDashboard() {
         <div>
           <h1 className="admin-page__title">Tổng Quan Hệ Thống</h1>
           <p className="admin-page__subtitle">
-            Cơ sở dữ liệu Đa dạng Sinh học Biển Việt Nam — Một dự án được phát triển bởi haitrinh
+            Cơ sở dữ liệu Đa dạng Sinh học Biển Việt Nam — Dự án cá nhân phát triển bởi haitrinh
           </p>
         </div>
       </header>

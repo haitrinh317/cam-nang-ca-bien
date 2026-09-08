@@ -4,11 +4,12 @@ import LoginForm from './LoginForm'
 import '@/styles/auth.css'
 
 export const metadata: Metadata = {
-  title: 'Đăng nhập Quản trị — Tra cứu thông tin Sinh Vật Biển Việt Nam',
-  description: 'Cổng xác thực quản trị dữ liệu sinh vật biển Việt Nam — Một dự án được phát triển bởi haitrinh.',
+  title: 'Đăng nhập Quản trị — CSDL Sinh Vật Biển · haitrinh',
+  description: 'Cổng xác thực quản trị dữ liệu sinh vật biển Việt Nam — Dự án cá nhân phát triển bởi haitrinh.',
   robots: {
     index: false,
     follow: false,
+    nocache: true,
   },
 }
 
@@ -74,7 +75,7 @@ export default async function LoginPage({ searchParams }: Props) {
             Đăng nhập Quản trị
           </h1>
           <p className="auth-subtitle">
-            Một dự án được phát triển bởi haitrinh
+            Dự án cá nhân phát triển bởi haitrinh
           </p>
         </header>
 
@@ -85,7 +86,7 @@ export default async function LoginPage({ searchParams }: Props) {
             Khu vực giới hạn. Mọi phiên đăng nhập và thao tác dữ liệu đều được ghi nhận tự động vào Nhật ký kiểm toán (Audit Log).
           </p>
           <div className="auth-system-stamp">
-            12°12&apos;04&quot;N 109°12&apos;58&quot;E · CSDL 2.436+ LOÀI SINH VẬT BIỂN
+            DỰ ÁN CÁ NHÂN HAITRINH · CSDL 2.595 LOÀI SINH VẬT BIỂN
           </div>
         </footer>
       </section>

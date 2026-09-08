@@ -11,8 +11,10 @@
   --bottom-nav-h: 56px;
 }
 
-/* ─── Bottom Nav — base (hidden on desktop) ─── */
-.bottom-nav {
+/* ─── Bottom Nav & Mobile Drawer — base (hidden on desktop) ─── */
+.bottom-nav,
+.bottom-sheet-backdrop,
+.bottom-sheet-container {
   display: none;
 }
 
