@@ -5,6 +5,11 @@
 > **Supabase (SSOT):** 2,595 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển). 100% WoRMS cho toàn bộ 2,595 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-08)
+- [x] **Chuẩn hóa hiển thị Thẻ Mẫu vật (`SpecimenCard`), Sửa lỗi ngắt dòng mồ côi & Tách rõ 2 dòng Tình trạng thực địa / Bảo tồn**:
+  - `components/species/SpecimenCard.tsx`: Tinh chỉnh `parseLocations` không split theo dấu phẩy ngữ pháp, giữ nguyên vẹn câu văn mô tả địa danh/năm thu mẫu, xóa bỏ hiện tượng rớt dòng mồ côi và chấm tròn vô nghĩa.
+  - Bổ sung `parseStatus` tự động nhận diện và bóc tách thành 2 mục rõ ràng: **Tình trạng thực địa** và **Hiện trạng bảo tồn** kèm styling riêng biệt (`.specimen-vault-status-*`).
+  - Thống nhất quy chuẩn và ghi nhận vào `.agents/memory/patterns.md` và skill `ocr-sinhvat-bien` v3.0 để tất cả các phiên làm việc và OCR sau này tuân thủ 100%.
+  - Deploy thành công lên Vercel Production (`7128351`) tại `https://www.tracuusinhvatbien.app` và `https://cam-nang-ca-bien.vercel.app`.
 - [x] **Khắc phục lỗi thiết kế rò rỉ Mobile Drawer dưới Footer Desktop & Chuẩn hóa SEO Login/Admin (`haitrinh`)**:
   - Sửa `styles/mobile.css`: Ẩn triệt để `.bottom-sheet-backdrop` và `.bottom-sheet-container` ở tầng desktop (`display: none`), chấm dứt rò rỉ mã HTML thô dưới chân trang footer.
   - Chuẩn hóa SEO Metadata cho phân hệ Login & Admin: Gỡ bỏ toạ độ GPS của Viện Hải dương học Nha Trang, cập nhật CSDL 2.595 loài sinh vật biển do `haitrinh` phát triển.

@@ -34,14 +34,30 @@ import './SpecimenCard.css'
 function parseLiterature(lit?: string | null): string[] {
   if (!lit) return []
   const trimmed = lit.trim()
-  const numSplit = trimmed.split(/(?=\b\d+\.\s+)/)
-  if (numSplit.length > 1) {
-    return numSplit.map(s => s.replace(/^\d+\.\s*/, '').trim()).filter(Boolean)
+
+  // 1. Phân tách theo dấu chấm phẩy (;): Chuẩn trích dẫn học thuật quốc tế (Rắn biển, Giáp xác, Rong biển)
+  // Gộp các ký tự ngắt dòng ngang (\n) do scan cột sách thành khoảng trắng trước khi split
+  if (trimmed.includes(';')) {
+    const singleLine = trimmed.replace(/\r?\n+/g, ' ').replace(/\s{2,}/g, ' ')
+    return singleLine.split(/;\s*/).map(s => s.trim().replace(/\.$/, '')).filter(Boolean)
   }
+
+  // 2. Phân tách theo số thứ tự (chỉ số thứ tự 1-2 chữ số "1. ... 2. ...", tránh nhầm năm 19xx.)
+  const numSplit = trimmed.split(/(?=^\s*\d{1,2}\.\s+|\s+\d{1,2}\.\s+)/)
+  if (numSplit.length > 1) {
+    return numSplit.map(s => s.replace(/^\s*\d{1,2}\.\s*/, '').trim()).filter(Boolean)
+  }
+
+  // 3. Nếu có ký tự xuống dòng rõ ràng (không chứa ;)
   const lineSplit = trimmed.split(/\r?\n/).map(s => s.trim()).filter(Boolean)
   if (lineSplit.length > 1) return lineSplit
-  const semiSplit = trimmed.split(/;\s*/).map(s => s.trim()).filter(Boolean)
-  if (semiSplit.length > 1) return semiSplit
+
+  // 4. Phân tách bằng dấu chấm sau năm 4 chữ số: "Tác giả A, 1962. Tác giả B, 1992." (Sách Cá biển cổ)
+  const yearDotSplit = trimmed.split(/(?<=\b(?:18|19|20)\d{2}[a-z]?)\s*\.\s*(?=[A-ZÀ-ỸĐ])/i)
+  if (yearDotSplit.length > 1) {
+    return yearDotSplit.map(s => s.trim().replace(/\.$/, '')).filter(Boolean)
+  }
+
   return [trimmed]
 }
 

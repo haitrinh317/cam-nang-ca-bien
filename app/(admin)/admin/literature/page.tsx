@@ -153,6 +153,9 @@ export default function AdminLiteraturePage() {
     setCreating(false)
   }
 
+  // ponytail: fire-and-forget — flush ISR cache trang chủ sau mỗi thay đổi literature
+  const flushHomeCache = () => fetch('/api/revalidate-home', { method: 'POST' }).catch(() => {})
+
   const handleSave = async () => {
     setSaving(true)
     const payload = {
@@ -167,6 +170,7 @@ export default function AdminLiteraturePage() {
       await db.from('literature_sources').update(payload).eq('id', editing.id)
     }
 
+    flushHomeCache()
     setSaving(false)
     closeModal()
     loadData()
@@ -175,6 +179,7 @@ export default function AdminLiteraturePage() {
   const handleDelete = async (id: string, title: string) => {
     if (!confirm(`Xác nhận xóa "${title}"?`)) return
     await db.from('literature_sources').delete().eq('id', id)
+    flushHomeCache()
     loadData()
   }
 
@@ -182,6 +187,7 @@ export default function AdminLiteraturePage() {
     await db.from('literature_sources')
       .update({ is_visible: !item.is_visible, updated_at: new Date().toISOString() })
       .eq('id', item.id)
+    flushHomeCache()
     loadData()
   }
 
