@@ -1,11 +1,34 @@
-# TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
+# TODO — Dự án Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-08 12:30 (Hoàn thành 100% Pipeline Nhóm Rắn Biển Việt Nam 27 loài: Bóc tách số, WoRMS, SeaLifeBase, Trích xuất ảnh gốc từ sách + iNaturalist, Đăng ký Collection & Tích hợp Frontend Next.js 16)
+> Cập nhật: 2026-09-08 17:00 (Hoàn thành Rebranding cá nhân haitrinh, SEO Schema Graph Person, Drawer BottomNav Mobile, Top Nav Desktop, Admin Rắn biển 27 loài & Deploy Production Vercel)
 > **Next Session Starting Point**: Tiếp tục mở rộng các nhóm sinh vật biển mới (San hô, Thân mềm) theo các tập sách Động vật chí Việt Nam tiếp theo hoặc phát triển Admin Phase 2 (Inline Edit / CSV Bulk Import).
 > **Supabase (SSOT):** 2,595 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển). 100% WoRMS cho toàn bộ 2,595 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-08)
+- [x] **Cập nhật SEO, Schema Graph & Chuyển đổi định vị thương hiệu cá nhân (`haitrinh`)**:
+  - Tên dự án: `Tra cứu thông tin Sinh Vật Biển Việt Nam`.
+  - Dòng định danh: `Một dự án được phát triển bởi haitrinh`.
+  - Định hướng: `Số hóa tri thức di sản phân loại học & bảo tồn đại dương`.
+  - Gỡ bỏ 100% liên kết và từ khóa liên quan đến *Viện Hải dương học*, *Bảo tàng Hải dương học*, *Viện Hàn lâm Khoa học và Công nghệ Việt Nam* ở Header, Footer, Hero, About, FAQ, Admin, Login.
+  - Chuyển đổi thực thể trong Schema Graph (`websiteSchema` trong `app/layout.tsx`) từ Organization sang `Person` (`haitrinh`, nhà phát triển độc lập), tối ưu hóa SEO và Rich Snippets trên Google.
+  - Đồng bộ thẻ OpenGraph, Twitter Cards, PWA Manifest (`public/site.webmanifest`), `CatalogHeader.tsx` và `locales/vi.json`, `locales/en.json`.
+- [x] **Tích hợp Nhóm Rắn Biển & Đồng bộ Toàn diện Khu vực Quản trị (`/admin`)**:
+  - `AdminSidebar.tsx`: Bổ sung nhóm `🐍 Rắn biển Việt Nam` (27 loài); cập nhật badge `Thực vật biển` thành `672`.
+  - `app/(admin)/admin/page.tsx`: Mở rộng Dashboard KPI đếm đủ cả 4 collection (`ca-bien`, `thuc-vat-bien`, `giap-xac`, `ran-bien`), hiển thị chính xác tổng số **2.595 loài** và 2 thẻ KPI mới (Giáp xác 132, Rắn biển 27).
+  - `SpeciesTable.tsx`: Tự động nhận diện số tập, ẩn dropdown lọc tập thừa cho các collection 1 tập (`ran-bien`, `giap-xac`).
+- [x] **Sửa Top Navbar Desktop, Ô Search Placeholder & Triệt tiêu lỗi Line xanh Border**:
+  - Rút gọn nhãn các tabs trên desktop thành `Cá biển` | `Rong biển` | `Giáp xác` | `Rắn biển`, căn chỉnh flexbox gọn gàng, loại bỏ hoàn toàn hiện tượng tràn viền hay đè lên cụm controls ngôn ngữ / dark mode.
+  - Sửa placeholder ô tìm kiếm thích ứng theo từng nhóm loài (132+ Giáp xác, 27+ Rắn biển, 672+ Thực vật, 1,764+ Cá biển).
+  - Gỡ bỏ pseudo-element `::before` dải màu cyan trong `CatalogHeader.css`, khôi phục viền bo tròn sắc nét cho card danh mục.
+- [x] **Tái thiết kế Floating Bottom Navbar trên Mobile (Phương án 1 — Bottom Sheet Drawer)**:
+  - Bố cục thanh dock 4 tabs chuẩn công thái học (`Trang chủ`, `Cá biển`, `Rong biển`, `Nhóm loài`).
+  - Tab 4 tự động đổi icon theo ngữ cảnh (`<Shrimp />` khi ở Giáp xác, `🐍` khi ở Rắn biển) kèm badge chấm cam phát sáng.
+  - Khi bấm tab 4, trượt lên Modal Drawer cao cấp (`backdrop-filter: blur(32px)`) với Grid 2 cột mở ra tất cả các nhóm sinh vật và lối tắt tới Cây phân loại.
+- [x] **Deploy Production Vercel Lần 2 (Commit `6eac29a`)**:
+  - Push GitHub `master` và deploy thành công lên Vercel Production (`vercel --prod --yes`).
+  - URLs: `https://www.tracuusinhvatbien.app` và `https://cam-nang-ca-bien.vercel.app`.
 - [x] **Khởi tạo & Hoàn thành 100% Pipeline Nhóm Rắn Biển Việt Nam (`ran-bien`) — 27 loài**:
+
   - Bóc tách kỹ thuật số 100% từ tài liệu chuyên khảo *"Rắn biển Việt Nam"* (Cao Văn Nguyễn, Arne Redsted Rasmussen, Nguyễn Văn Sáng, Phan Kim Hồng, Võ Văn Quang, John C. Murphy — Viện Hải dương học Nha Trang, WAR, IOC VN, 2016).
   - Trích xuất 27 loài với 15 trường dữ liệu chuyên sâu (đặc điểm nhận dạng vảy thân/cổ/bụng, răng hàm, màu sắc, phân bố VN & thế giới, mẫu vật bảo tàng, độc tố học, tình trạng bảo tồn CITES/NĐ160/IUCN/Sách đỏ VN).
   - Nạp thành công 27/27 loài (100.0%) vào CSDL Supabase theo flat schema trực tiếp.

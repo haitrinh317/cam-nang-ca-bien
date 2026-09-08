@@ -1,7 +1,7 @@
-# Memory — Cẩm Nang Sinh Vật Biển Việt Nam
+# Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-08 (Hoàn thành 100% Rắn biển Việt Nam 27 loài: Bóc tách số + WoRMS + 100% SeaLifeBase + 92.6% ảnh mẫu vật sách & iNat)
-> **Production URL:** https://cam-nang-ca-bien.vercel.app / https://www.tracuusinhvatbien.app
+> **Cập nhật lần cuối:** 2026-09-08 (Hoàn thành chuyển đổi nhận diện thương hiệu cá nhân haitrinh, SEO Schema Graph Person, Drawer BottomNav Mobile, Top Nav Desktop & Admin Rắn biển 27 loài — Deploy Production Vercel 2.595 loài)
+> **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
 
@@ -171,6 +171,11 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 | 2026-09-05 | **Infographics Sinh học Thích ứng** (`SpecimenVisualWidgets.tsx`): Thước đo chiều dài tự nhận diện mm/cm/m, thang đo co giãn 0-40cm/0-1m/0-5m+ so sánh Bàn tay |
 | 2026-09-05 | **Refactor Module Sâu**: `lib/taxonomy.ts` (xóa 42 dòng trùng lặp), `lib/species-query.ts`, `lib/species-photos.ts`, gộp `collections-static.ts` |
 | 2026-09-05 | **Chuẩn hóa Bento Tab Thông số & /hallmark Header**: Tên Chi + Loài bắt buộc in nghiêng (*Italics*), tác giả đứng thẳng (ICZN/ICN); WoRMS badge dạng Pill 24px thanh mảnh (`.worms-pill`); Ưu tiên 100% dữ liệu gốc OCR, loại bỏ tiếng Anh/dịch thô khỏi tab Thông số. |
+| 2026-09-08 | **Nhóm Giáp xác biển (`giap-xac`) — 132 loài**: Động vật chí VN Tập 1 (GS. Nguyễn Văn Chung et al., 2000), 100% WoRMS, 99.2% SeaLifeBase sinh học song ngữ, 148 ảnh iNaturalist Research Grade. |
+| 2026-09-08 | **Nhóm Rắn biển Việt Nam (`ran-bien`) — 27 loài**: Chuyên khảo Viện Hải dương học - WAR - IOC VN (2016), 100% WoRMS, 100% SeaLifeBase, 92.6% ảnh minh họa (22 ảnh mẫu vật sách gốc + iNaturalist). |
+| 2026-09-08 | **Tái cấu trúc Nhận diện Thương hiệu Cá nhân (`haitrinh`)**: Tên dự án: "Tra cứu thông tin Sinh Vật Biển Việt Nam", phát triển bởi `haitrinh`. Gỡ bỏ 100% thông tin cơ quan nhà nước; Schema Graph `websiteSchema` chuyển sang thực thể `Person` (`haitrinh`). |
+| 2026-09-08 | **BottomNav Mobile Drawer**: Giữ 4 tabs chuẩn công thái học, tích hợp Bottom Sheet Drawer (`backdrop-filter: blur(32px)`) cho tab thứ 4 mở rộng toàn bộ các nhóm sinh vật biển hiện có và tương lai. |
+| 2026-09-08 | **Quản trị đa Collection (Admin)**: Mở rộng AdminSidebar, Dashboard KPI đếm 4 collection tổng 2.595 loài; tự động ẩn bộ lọc tập cho các nhóm chỉ có 1 tập chuyên khảo. |
 
 ---
 
