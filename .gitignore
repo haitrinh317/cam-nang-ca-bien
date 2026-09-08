@@ -33,6 +33,7 @@ scripts/__pycache__/
 *.egg-info/
 .venv/
 data/fishbase_cache/
+data/sealifebase_cache/
 
 # Raw data & large files (gitignored — store locally only)
 data/raw/

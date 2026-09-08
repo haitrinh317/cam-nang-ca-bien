@@ -1,6 +1,6 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-08 (Hoàn thành 100% Giáp xác biển 132 loài: OCR + WoRMS + 40.2% ảnh iNaturalist + Cập nhật Frontend)
+> **Cập nhật lần cuối:** 2026-09-08 (Hoàn thành 100% Giáp xác biển 132 loài: OCR + WoRMS + 99.2% SeaLifeBase + 40.2% ảnh iNaturalist + Skill sealifebase-sync)
 > **Production URL:** https://cam-nang-ca-bien.vercel.app / https://www.tracuusinhvatbien.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
@@ -21,7 +21,7 @@
 | `ca-bien` | VI (Atlas) | 263 | 100% | 100% | ✅ 98.5% ảnh iNaturalist |
 | `thuc-vat-bien` | 1 (Tsutsui) | 201 | 100% | 100% | ✅ Hoàn chỉnh |
 | `thuc-vat-bien` | 2 (PHH 1969) | 471 | 100% | 100% | ✅ 471 ảnh tiêu bản 300 DPI |
-| `giap-xac` | 1 (ĐVC: Tôm biển) | 132 | 100% | 100% | ✅ 100% OCR + WoRMS + 40.2% ảnh iNat |
+| `giap-xac` | 1 (ĐVC: Tôm biển) | 132 | 100% | 99.2% | ✅ 100% OCR + WoRMS + 99.2% SeaLifeBase + 40.2% ảnh iNat |
 
 ---
 

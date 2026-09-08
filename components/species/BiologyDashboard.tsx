@@ -10,7 +10,8 @@ import {
   Sparkles,
   Egg,
   Fish,
-  Leaf
+  Leaf,
+  Shrimp
 } from 'lucide-react'
 import IucnBadge from './IucnBadge'
 import BilingualNoteBlock from './BilingualNoteBlock'
@@ -156,7 +157,8 @@ function translateBio(val?: string | null): string {
 
 export default function BiologyDashboard({ bio, speciesId, collectionId }: Props) {
   const isSeaweed = collectionId === 'thuc-vat-bien' || speciesId.startsWith('thucvat-')
-  const srcName = isSeaweed ? 'AlgaeBase' : (bio.source || 'FishBase')
+  const isCrustacean = collectionId === 'giap-xac' || speciesId.startsWith('giapxac-')
+  const srcName = isSeaweed ? 'AlgaeBase' : (bio.source || (isCrustacean ? 'SeaLifeBase' : 'FishBase'))
 
   // Formatted Quick Metrics
   const weightData = formatWeight(bio.maxWeight)
@@ -176,7 +178,13 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
       {/* ─── HEADER BAR ─── */}
       <div className="bio-dashboard__header">
         <h3 className="bio-dashboard__title">
-          {isSeaweed ? <Leaf size={20} className="text-emerald-500" /> : <Fish size={20} className="text-cyan-500" />}
+          {isSeaweed ? (
+            <Leaf size={20} className="text-emerald-500" />
+          ) : isCrustacean ? (
+            <Shrimp size={20} className="text-rose-400" />
+          ) : (
+            <Fish size={20} className="text-cyan-500" />
+          )}
           <span>Thông Số Sinh Học & Sinh Thái</span>
         </h3>
         <span className="bio-dashboard__source-pill">

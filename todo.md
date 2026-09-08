@@ -5,6 +5,13 @@
 > **Supabase (SSOT):** 2,568 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác biển). 100% WoRMS cho toàn bộ 2,568 loài. Đã deploy production thành công lên https://www.tracuusinhvatbien.app.
 
 ## ✅ Hoàn thành mới nhất (2026-09-08)
+- [x] **Đồng bộ Dữ liệu Sinh học SeaLifeBase v25.04 cho Nhóm Giáp Xác Biển (`giap-xac`) — 131/132 loài (99.2%)**:
+  - Nghiên cứu và kết nối hệ thống dữ liệu SeaLifeBase v25.04 Parquet (102,822 loài, 68,830 sinh thái, 66,392 sinh sản, 143,101 tên đồng danh).
+  - Xây dựng thuật toán đối chiếu 4 tầng (Override $\rightarrow$ Tên gốc lọc phân giống $\rightarrow$ WoRMS valid $\rightarrow$ Bảng đồng danh SeaLifeBase).
+  - Tích hợp Gemini AI dịch thuật học thuật Giáp xác học (Carcinology) sang tiếng Việt hàn lâm cho 3 khối mô tả: sinh học, sinh thái, sinh sản.
+  - Cập nhật trực tiếp Supabase PostgreSQL (SSOT): **131 / 132 loài (99.2%)** đã có đầy đủ trường `biology` (kích thước TL/CL, dải độ sâu, sinh cảnh, bậc dinh dưỡng, kiểu ăn, độ tổn thương sinh thái, độc tính, tên tiếng Anh).
+  - Nâng cấp giao diện `BiologyDashboard.tsx`: Hỗ trợ hiển thị nhãn `SeaLifeBase`, icon vector `<Shrimp size={20} />` màu hồng san hô cho nhóm Giáp xác.
+  - Đóng gói hoàn chỉnh AI Skill `.agents/skills/sealifebase-sync/` và cập nhật Bước ③ trong workflow pipeline `.agents/workflows/ocr-to-audit.md`.
 - [x] **Khởi tạo & Hoàn thành 100% Pipeline Nhóm Giáp Xác Biển (`giap-xac`) — 132 loài**:
   - Bóc tách toàn diện từ sách scan *"Động vật chí Việt Nam - Tập 1: Tôm biển"* (GS. Nguyễn Văn Chung, Đặng Ngọc Thanh, Phạm Thị Dự - 2000).
   - Hoàn thành đầy đủ 87 loài thuộc Bộ Mười Chân (*Decapoda*: Tôm biển, Tôm hùm gai, Tôm mũ ni) và 45 loài thuộc Bộ Chân Miệng (*Stomatopoda*: Tôm tít).
