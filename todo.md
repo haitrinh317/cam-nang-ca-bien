@@ -5,6 +5,12 @@
 > **Supabase (SSOT):** 2,595 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển). 100% WoRMS cho toàn bộ 2,595 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-08)
+- [x] **Khắc phục lỗi thiết kế rò rỉ Mobile Drawer dưới Footer Desktop & Chuẩn hóa SEO Login/Admin (`haitrinh`)**:
+  - Sửa `styles/mobile.css`: Ẩn triệt để `.bottom-sheet-backdrop` và `.bottom-sheet-container` ở tầng desktop (`display: none`), chấm dứt rò rỉ mã HTML thô dưới chân trang footer.
+  - Chuẩn hóa SEO Metadata cho phân hệ Login & Admin: Gỡ bỏ toạ độ GPS của Viện Hải dương học Nha Trang, cập nhật CSDL 2.595 loài sinh vật biển do `haitrinh` phát triển.
+  - Cập nhật `app/robots.ts` bổ sung `/login` vào danh sách `disallow`.
+  - Bổ sung dynamic metadata cho các trang con admin (`/[collection]`, `/literature`).
+  - Deploy thành công lên Vercel Production (`https://www.tracuusinhvatbien.app`).
 - [x] **Cập nhật SEO, Schema Graph & Chuyển đổi định vị thương hiệu cá nhân (`haitrinh`)**:
   - Tên dự án: `Tra cứu thông tin Sinh Vật Biển Việt Nam`.
   - Dòng định danh: `Một dự án được phát triển bởi haitrinh`.

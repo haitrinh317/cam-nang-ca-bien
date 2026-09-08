@@ -176,6 +176,7 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 | 2026-09-08 | **Tái cấu trúc Nhận diện Thương hiệu Cá nhân (`haitrinh`)**: Tên dự án: "Tra cứu thông tin Sinh Vật Biển Việt Nam", phát triển bởi `haitrinh`. Gỡ bỏ 100% thông tin cơ quan nhà nước; Schema Graph `websiteSchema` chuyển sang thực thể `Person` (`haitrinh`). |
 | 2026-09-08 | **BottomNav Mobile Drawer**: Giữ 4 tabs chuẩn công thái học, tích hợp Bottom Sheet Drawer (`backdrop-filter: blur(32px)`) cho tab thứ 4 mở rộng toàn bộ các nhóm sinh vật biển hiện có và tương lai. |
 | 2026-09-08 | **Quản trị đa Collection (Admin)**: Mở rộng AdminSidebar, Dashboard KPI đếm 4 collection tổng 2.595 loài; tự động ẩn bộ lọc tập cho các nhóm chỉ có 1 tập chuyên khảo. |
+| 2026-09-08 | **Fix Rò Rỉ Mobile Drawer & Chuẩn Hóa SEO Login/Admin (`haitrinh`)**: Ẩn triệt để drawer trên desktop (`display: none`); gỡ bỏ toạ độ GPS Viện Hải dương học ở login; cập nhật dynamic metadata SEO cho các trang con admin; cập nhật robots.ts disallow `/login`. |
 
 ---
 
