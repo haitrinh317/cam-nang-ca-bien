@@ -64,7 +64,15 @@ TABLES = [
 
 # Manual override mapping cho các loài phân loại lịch sử đặc biệt
 MANUAL_OVERRIDE = {
-    'Lysiosquillina tredecimdentata': 92615,  # SeaLifeBase xếp dưới giống cũ Lysiosquilla tredecimdentata
+    'Lysiosquillina tredecimdentata': 92615,  # Giáp xác: giống cũ Lysiosquilla
+    'Hydrophis annandalei': 83964,   # Rắn biển: Kolpophis annandalei
+    'Hydrophis anomalus': 83976,     # Rắn biển: Thalassophis anomalus
+    'Hydrophis jerdonii': 83963,     # Rắn biển: Kerilia jerdoni
+    'Hydrophis viperina': 83975,     # Rắn biển: Praescutata viperina / Hydrophis viperinus
+    'Hydrophis brookii': 83936,      # Rắn biển: Hydrophis brooki
+    'Hydrophis pachycercos': 153049, # Rắn biển: Hydrophis pachyceros
+    'Hydrophis platura': 67462,      # Rắn biển: Hydrophis platurus
+    'Microcephalophis gracilis': 83972, # Rắn biển: Hydrophis gracilis
 }
 
 _ssl_ctx = ssl.create_default_context()
@@ -86,7 +94,7 @@ GEMINI_MODELS = [
     "gemini-3.8-flash"
 ]
 
-SYSTEM_PROMPT = """Bạn là chuyên gia hàng đầu về Giáp xác học (Carcinology) và Sinh học biển tại Viện Hải dương học Nha Trang.
+SYSTEM_PROMPT_CRUSTACEA = """Bạn là chuyên gia hàng đầu về Giáp xác học (Carcinology) và Sinh học biển tại Viện Hải dương học Nha Trang.
 Nhiệm vụ của bạn là dịch các đoạn văn bản mô tả sinh học, sinh thái, sinh sản của các loài giáp xác biển (tôm, cua, ghẹ, tôm hùm, tôm tít, ốc mượn hồn) từ cơ sở dữ liệu SeaLifeBase sang tiếng Việt.
 
 YÊU CẦU DỊCH THUẬT:
@@ -110,6 +118,30 @@ YÊU CẦU DỊCH THUẬT:
    - 'ovigerous female': con cái mang trứng / ôm trứng
 3. Giữ nguyên tên khoa học (in nghiêng nếu có thể) và các trích dẫn tài liệu như (Ref. 1234).
 4. KHÔNG thêm bớt ý kiến cá nhân, chỉ dịch trung thực và mượt mà nội dung nguồn."""
+
+SYSTEM_PROMPT_HERPETOLOGY = """Bạn là chuyên gia hàng đầu về Bò sát học biển (Marine Herpetology) và Sinh học biển tại Viện Hải dương học Nha Trang.
+Nhiệm vụ của bạn là dịch các đoạn văn bản mô tả sinh học, sinh thái, sinh sản, độc tố học của các loài rắn biển từ cơ sở dữ liệu SeaLifeBase sang tiếng Việt.
+
+YÊU CẦU DỊCH THUẬT:
+1. Văn phong khoa học hàn lâm, chuẩn mực, gãy gọn, chính xác theo đúng tài liệu sinh học biển và cẩm nang Rắn biển Việt Nam.
+2. Dịch chuẩn xác các thuật ngữ bò sát & sinh thái biển:
+   - 'total length' (TL): chiều dài toàn thân
+   - 'snout-vent length' (SVL): chiều dài từ mõm đến hậu môn
+   - 'tail length': chiều dài đuôi
+   - 'paddle-shaped tail': đuôi dẹp như mái chèo
+   - 'benthopelagic': tầng sát đáy và tầng nổi
+   - 'pelagic': tầng mặt / khơi
+   - 'reef-associated': liên kết rạn san hô
+   - 'ovoviviparous' / 'viviparous': trứng thai / đẻ con
+   - 'oviparous': đẻ trứng
+   - 'venomous': có nọc độc
+   - 'neurotoxin': độc tố thần kinh
+   - 'lethal dose' (LD50): liều gây tử vong 50%
+3. Giữ nguyên tên khoa học và các trích dẫn tài liệu như (Ref. 1234).
+4. KHÔNG thêm bớt ý kiến cá nhân, chỉ dịch trung thực và mượt mà nội dung nguồn."""
+
+CURRENT_COLLECTION = "giap-xac"
+SYSTEM_PROMPT = SYSTEM_PROMPT_CRUSTACEA
 
 
 def download_tables_if_needed():
@@ -329,30 +361,42 @@ def enrich_species(sp: dict, bio_raw: dict, translate: bool = True):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Đồng bộ dữ liệu SeaLifeBase v25.04 cho Giáp xác biển")
+    global SYSTEM_PROMPT
+    parser = argparse.ArgumentParser(description="Đồng bộ dữ liệu SeaLifeBase v25.04 cho sinh vật biển (Giáp xác, Rắn biển...)")
+    parser.add_argument("--collection", type=str, default="giap-xac", help="Mã collection (mặc định: giap-xac, hỗ trợ ran-bien)")
     parser.add_argument("--dry-run", action="store_true", help="Xem trước kết quả, không ghi vào CSDL Supabase")
-    parser.add_argument("--id", type=str, help="Chạy cho một loài cụ thể theo id (vd: giapxac-species-1)")
+    parser.add_argument("--id", type=str, help="Chạy cho một loài cụ thể theo id (vd: ranbien-species-1)")
     parser.add_argument("--limit", type=int, help="Giới hạn số loài cần xử lý")
     parser.add_argument("--no-translate", action="store_true", help="Bỏ qua bước dịch AI Gemini")
     parser.add_argument("--force", action="store_true", help="Ghi đè cả loài đã có trường biology")
     args = parser.parse_args()
 
+    col = args.collection
+    if col == "ran-bien":
+        SYSTEM_PROMPT = SYSTEM_PROMPT_HERPETOLOGY
+        col_name = "RẮN BIỂN VIỆT NAM"
+        col_icon = "🐍"
+    else:
+        SYSTEM_PROMPT = SYSTEM_PROMPT_CRUSTACEA
+        col_name = "GIÁP XÁC BIỂN"
+        col_icon = "🦐"
+
     print("=" * 75)
-    print("🦐 SEALIFEBASE SYNC — CẨM NANG SINH VẬT BIỂN VIỆT NAM (GIÁP XÁC BIỂN)")
+    print(f"{col_icon} SEALIFEBASE SYNC — CẨM NANG SINH VẬT BIỂN VIỆT NAM ({col_name})")
     print("=" * 75)
 
     download_tables_if_needed()
     con = init_duckdb()
 
     # Lấy danh sách loài từ Supabase
-    url = f"{SUPABASE_URL}/rest/v1/species?collection_id=eq.giap-xac&order=id.asc"
+    url = f"{SUPABASE_URL}/rest/v1/species?collection_id=eq.{col}&order=species_index.asc"
     if args.id:
         url += f"&id=eq.{args.id}"
     resp = requests.get(url, headers={"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"}, timeout=30)
     resp.raise_for_status()
     species_list = resp.json()
 
-    print(f"✓ Đã nạp {len(species_list)} loài giáp xác biển từ CSDL Supabase.")
+    print(f"✓ Đã nạp {len(species_list)} loài từ CSDL Supabase ({col}).")
     if args.limit:
         species_list = species_list[:args.limit]
         print(f"  → Giới hạn xử lý: {len(species_list)} loài.")

@@ -175,6 +175,29 @@ export const BOOKS_BY_COLLECTION: Record<string, BookMetadata[]> = {
       ],
     },
   ],
+  'ran-bien': [
+    {
+      id: 'ran-bien-viet-nam',
+      title: 'Rắn biển Việt Nam',
+      badge: 'Chuyên khảo (27 loài)',
+      author: 'Cao Văn Nguyễn, Arne Redsted Rasmussen, Nguyễn Văn Sáng, Phan Kim Hồng, Võ Văn Quang, John C. Murphy',
+      publisher: 'Viện Hải dương học Nha Trang — WAR — IOC VN',
+      yearRange: '2016',
+      totalSpecies: 27,
+      description: 'Tài liệu hướng dẫn định loại cơ bản, phân bố địa lý, độc tố học và bảo tồn các loài Rắn biển (Hydrophiinae & Acrochordidae) tại các vùng biển Việt Nam.',
+      volumes: [
+        {
+          volume: 1,
+          roman: 'I',
+          year: '2016',
+          title: 'Rắn biển Việt Nam (Sea Snakes in Vietnam)',
+          subTitle: 'Phân loại, phân bố, tình trạng bảo tồn và độc tố rắn biển',
+          author: 'Cao Văn Nguyễn, Arne Redsted Rasmussen, Nguyễn Văn Sáng & CS',
+          speciesCount: 27,
+        },
+      ],
+    },
+  ],
 }
 
 export function getBooksForCollection(collectionSlug: string): BookMetadata[] {

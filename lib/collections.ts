@@ -36,6 +36,12 @@ export const STATIC_COLLECTIONS: Collection[] = [
     icon: '🦐', accentColor: '#fca5a5', volumeCount: 1,
     status: 'active', sortOrder: 3,
   },
+  {
+    id: 'ran-bien', slug: 'ran-bien',
+    nameVn: 'Rắn biển Việt Nam', nameEn: 'Sea Snakes of Vietnam',
+    icon: '🐍', accentColor: '#f59e0b', volumeCount: 1,
+    status: 'active', sortOrder: 4,
+  },
 ]
 
 export function getCollectionBySlug(slug: string): Collection | undefined {

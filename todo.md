@@ -1,10 +1,20 @@
 # TODO — Dự án Cẩm Nang Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-08 06:30 (Hoàn thành 100% Pipeline Nhóm Giáp Xác Biển 132 loài + Đồng bộ Icon Lucide Shrimp & Tối ưu BottomNav Dock + Deploy Vercel Production)
+> Cập nhật: 2026-09-08 12:30 (Hoàn thành 100% Pipeline Nhóm Rắn Biển Việt Nam 27 loài: Bóc tách số, WoRMS, SeaLifeBase, Trích xuất ảnh gốc từ sách + iNaturalist, Đăng ký Collection & Tích hợp Frontend Next.js 16)
 > **Next Session Starting Point**: Tiếp tục mở rộng các nhóm sinh vật biển mới (San hô, Thân mềm) theo các tập sách Động vật chí Việt Nam tiếp theo hoặc phát triển Admin Phase 2 (Inline Edit / CSV Bulk Import).
-> **Supabase (SSOT):** 2,568 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác biển). 100% WoRMS cho toàn bộ 2,568 loài. Đã deploy production thành công lên https://www.tracuusinhvatbien.app.
+> **Supabase (SSOT):** 2,595 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển). 100% WoRMS cho toàn bộ 2,595 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-08)
+- [x] **Khởi tạo & Hoàn thành 100% Pipeline Nhóm Rắn Biển Việt Nam (`ran-bien`) — 27 loài**:
+  - Bóc tách kỹ thuật số 100% từ tài liệu chuyên khảo *"Rắn biển Việt Nam"* (Cao Văn Nguyễn, Arne Redsted Rasmussen, Nguyễn Văn Sáng, Phan Kim Hồng, Võ Văn Quang, John C. Murphy — Viện Hải dương học Nha Trang, WAR, IOC VN, 2016).
+  - Trích xuất 27 loài với 15 trường dữ liệu chuyên sâu (đặc điểm nhận dạng vảy thân/cổ/bụng, răng hàm, màu sắc, phân bố VN & thế giới, mẫu vật bảo tàng, độc tố học, tình trạng bảo tồn CITES/NĐ160/IUCN/Sách đỏ VN).
+  - Nạp thành công 27/27 loài (100.0%) vào CSDL Supabase theo flat schema trực tiếp.
+  - **WoRMS Sync (Bước ②)**: Chuẩn hóa danh pháp và liên kết mã AphiaID quốc tế cho 100% 27 loài (25 accepted, 2 unaccepted đã liên kết accepted name).
+  - **SeaLifeBase Sync (Bước ③)**: Đồng bộ 100% 27 loài dữ liệu sinh học, độ sâu phân bố, tập tính thức ăn, độc tính và dịch thuật học thuật chuyên ngành Bò sát - Rắn biển sang tiếng Việt bằng Gemini AI.
+  - **Trích xuất ảnh gốc từ sách & iNaturalist Sync (Bước ④)**: Ứng dụng thuật toán Smart Crop render DPI 250, autocrop viền trắng, nén WebP 960px và tải lên Supabase Storage bucket `species-photos/ran-bien/{species_id}/01.webp` cho 22 loài có hình trong sách; kéo thêm ảnh Research Grade từ iNaturalist cho 3 loài hiếm (Loài 2, 22, 26). Đạt **25/27 loài (92.6%)** có ảnh minh họa.
+  - **Tài liệu gốc & Audit (Bước ⑤ & ⑥)**: Thêm bản ghi tài liệu chuyên khảo *Rắn biển Việt Nam* vào bảng `literature_sources` trong Supabase; audit dữ liệu 100% trường tiếng Việt và sinh học đạt chuẩn.
+  - **Tích hợp Frontend Next.js 16 (Bước ⑦)**: Đăng ký collection `ran-bien` vào `STATIC_COLLECTIONS`, bổ sung metadata sách trong `lib/books-data.ts`, thêm tab Rắn biển kèm biểu tượng 🐍 trong `BottomNav.tsx`. TypeScript và Next.js build passing 100%.
+
 - [x] **Đồng bộ Dữ liệu Sinh học SeaLifeBase v25.04 cho Nhóm Giáp Xác Biển (`giap-xac`) — 131/132 loài (99.2%)**:
   - Nghiên cứu và kết nối hệ thống dữ liệu SeaLifeBase v25.04 Parquet (102,822 loài, 68,830 sinh thái, 66,392 sinh sản, 143,101 tên đồng danh).
   - Xây dựng thuật toán đối chiếu 4 tầng (Override $\rightarrow$ Tên gốc lọc phân giống $\rightarrow$ WoRMS valid $\rightarrow$ Bảng đồng danh SeaLifeBase).

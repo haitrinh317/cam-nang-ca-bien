@@ -1,6 +1,6 @@
 # Memory — Cẩm Nang Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-08 (Hoàn thành 100% Giáp xác biển 132 loài: OCR + WoRMS + 99.2% SeaLifeBase + 40.2% ảnh iNaturalist + Skill sealifebase-sync)
+> **Cập nhật lần cuối:** 2026-09-08 (Hoàn thành 100% Rắn biển Việt Nam 27 loài: Bóc tách số + WoRMS + 100% SeaLifeBase + 92.6% ảnh mẫu vật sách & iNat)
 > **Production URL:** https://cam-nang-ca-bien.vercel.app / https://www.tracuusinhvatbien.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
@@ -9,7 +9,7 @@
 
 ## 📊 Kiểm Kê Dữ Liệu (Supabase — 2026-09-08)
 
-### Tổng: 2,568 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác biển)
+### Tổng: 2,595 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển)
 
 | Collection | Tập | Loài | WoRMS | Biology / Morphology | Trạng thái |
 |---|:---:|:---:|:---:|:---:|---|
@@ -22,6 +22,7 @@
 | `thuc-vat-bien` | 1 (Tsutsui) | 201 | 100% | 100% | ✅ Hoàn chỉnh |
 | `thuc-vat-bien` | 2 (PHH 1969) | 471 | 100% | 100% | ✅ 471 ảnh tiêu bản 300 DPI |
 | `giap-xac` | 1 (ĐVC: Tôm biển) | 132 | 100% | 99.2% | ✅ 100% OCR + WoRMS + 99.2% SeaLifeBase + 40.2% ảnh iNat |
+| `ran-bien` | 1 (Rắn biển VN) | 27 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% SeaLifeBase + 92.6% ảnh (22 sách + iNat) |
 
 ---
 
@@ -52,9 +53,9 @@ Deploy: git push origin master + vercel --prod --yes
 
 | Table | Mô tả |
 |---|---|
-| `species` | 2,568 loài, `collection_id` FK, flat schema |
+| `species` | 2,595 loài, `collection_id` FK, flat schema |
 | `species_photos` | Ảnh loài (Supabase Storage bucket `species-photos`) |
-| `collections` | Registry: `ca-bien`, `thuc-vat-bien`, `giap-xac` |
+| `collections` | Registry: `ca-bien`, `thuc-vat-bien`, `giap-xac`, `ran-bien` |
 | `literature_sources` | Sách tham khảo hiển thị trên homepage (CRUD từ admin) |
 | `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
 | `audit_log` | Nhật ký thay đổi (jsonb old/new) |
