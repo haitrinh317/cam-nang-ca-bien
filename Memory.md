@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-08 (Hoàn thành chuyển đổi nhận diện thương hiệu cá nhân haitrinh, SEO Schema Graph Person, Drawer BottomNav Mobile, Top Nav Desktop & Admin Rắn biển 27 loài — Deploy Production Vercel 2.595 loài)
+> **Cập nhật lần cuối:** 2026-09-08 14:42 (Fix ISR cache — Admin chỉnh sách phản ánh ngay trang chủ qua /api/revalidate-home. Fix parseLiterature ngắt dòng mồ côi. Deploy Commit 08e9746)
 > **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
@@ -48,6 +48,7 @@ Deploy: git push origin master + vercel --prod --yes
 | `/admin/literature` | CRUD tài liệu gốc |
 | `/login` | Supabase Auth |
 | `/api/species` | REST API (role-check) |
+| `/api/revalidate-home` | Flush ISR cache trang chủ khi Admin chỉnh `literature_sources` |
 
 ### Supabase DB Tables
 

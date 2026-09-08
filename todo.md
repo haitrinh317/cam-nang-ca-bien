@@ -1,10 +1,19 @@
 # TODO — Dự án Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-08 17:00 (Hoàn thành Rebranding cá nhân haitrinh, SEO Schema Graph Person, Drawer BottomNav Mobile, Top Nav Desktop, Admin Rắn biển 27 loài & Deploy Production Vercel)
-> **Next Session Starting Point**: Tiếp tục mở rộng các nhóm sinh vật biển mới (San hô, Thân mềm) theo các tập sách Động vật chí Việt Nam tiếp theo hoặc phát triển Admin Phase 2 (Inline Edit / CSV Bulk Import).
+> Cập nhật: 2026-09-08 14:42 (Fix parseLiterature ngắt dòng mồ côi + Fix ISR cache Admin literature — Deploy Commit 08e9746 Production Vercel)
+> **Next Session Starting Point**: (1) Mở rộng nhóm sinh vật mới (San hô, Thân mềm) theo Động vật chí VN tập tiếp theo. (2) Admin Phase 2: CSV Import + Inline Edit nhanh. (3) Tra bổ sung tên VN ~17 loài rong biển còn thiếu.
 > **Supabase (SSOT):** 2,595 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển). 100% WoRMS cho toàn bộ 2,595 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-08)
+- [x] **Fix ISR cache — Admin chỉnh sách phản ánh ngay trang chủ (Commit 08e9746)**:
+  - Phát hiện: `app/(admin)/admin/literature/page.tsx` là `'use client'`, không thể gọi `revalidatePath` — dù toggle `is_visible` xong, trang chủ vẫn giữ bản cache ISR cũ đến 1 tiếng.
+  - Tạo mới `app/api/revalidate-home/route.ts` (Server Route): xác thực admin, gọi `revalidatePath('/')` để flush cache ngay lập tức.
+  - Gắn `flushHomeCache()` fire-and-forget vào 3 handler Admin: `handleSave`, `handleDelete`, `toggleVisible`.
+  - Build + Deploy Production Vercel thành công (Commit `08e9746`).
+- [x] **Fix `parseLiterature` ngắt dòng mồ côi trong Tài liệu dẫn (rắn biển)**:
+  - Làm sạch 14 loài rắn biển trong Supabase: gộp ký tự `\n` scan trong `vn_literature` thành khoảng trắng đơn.
+  - Nâng cấp `parseLiterature` trong `SpecimenCard.tsx`: tách theo `;` ưu tiên, không bị lừa bởi `\n` vật lý.
+  - Chuẩn hóa format ghi vào `patterns.md` và `ocr-sinhvat-bien/SKILL.md` (mục 4.9) để các phiên OCR sau tuân thủ.
 - [x] **Chuẩn hóa hiển thị Thẻ Mẫu vật (`SpecimenCard`), Sửa lỗi ngắt dòng mồ côi & Tách rõ 2 dòng Tình trạng thực địa / Bảo tồn**:
   - `components/species/SpecimenCard.tsx`: Tinh chỉnh `parseLocations` không split theo dấu phẩy ngữ pháp, giữ nguyên vẹn câu văn mô tả địa danh/năm thu mẫu, xóa bỏ hiện tượng rớt dòng mồ côi và chấm tròn vô nghĩa.
   - Bổ sung `parseStatus` tự động nhận diện và bóc tách thành 2 mục rõ ràng: **Tình trạng thực địa** và **Hiện trạng bảo tồn** kèm styling riêng biệt (`.specimen-vault-status-*`).

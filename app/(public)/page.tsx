@@ -7,8 +7,9 @@ import LiteratureSection from '@/components/home/LiteratureSection'
 import type { LiteratureSourceRow } from '@/components/home/LiteratureSection'
 import type { Metadata } from 'next'
 
-// ponytail: ISR 1h — stats data changes rarely, no need for force-dynamic
-export const revalidate = 3600
+// ponytail: force-dynamic — Admin có thể edit literature_sources bất kỳ lúc nào,
+// trang chủ cần phản ánh ngay. 3 query nhẹ (count species/family + 6 lit rows) — không cần ISR.
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: {
