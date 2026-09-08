@@ -332,6 +332,38 @@
   flex-shrink: 0;
 }
 
+.specimen-vault-status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.specimen-vault-status-row {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--color-ink-2, #334155);
+}
+
+.specimen-vault-status-label {
+  font-weight: 600;
+  color: var(--color-ink, #0f172a);
+}
+
+.specimen-vault-status-text {
+  font-weight: 450;
+  color: var(--color-ink-2, #334155);
+}
+
+[data-theme="dark"] .specimen-vault-status-label {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .specimen-vault-status-text {
+  color: #cbd5e1;
+}
+
 /* Thu mẫu thực địa meta pills */
 .specimen-vault-meta {
   display: flex;

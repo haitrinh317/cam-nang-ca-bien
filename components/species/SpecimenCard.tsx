@@ -47,9 +47,58 @@ function parseLiterature(lit?: string | null): string[] {
 
 function parseLocations(str?: string | null): string[] {
   if (!str) return []
-  const clean = str.trim().replace(/\.$/, '')
-  const parts = clean.split(/[,;]\s+/).map(s => s.trim()).filter(Boolean)
-  return parts.length > 0 ? parts : [clean]
+  const clean = str.trim()
+  // Chỉ tách dòng nếu văn bản có ký tự xuống dòng rõ ràng
+  if (clean.includes('\n')) {
+    return clean.split(/\r?\n/).map(s => s.replace(/^[•\-\*]\s*/, '').trim()).filter(Boolean)
+  }
+  // Hoặc tách nếu dùng chấm phẩy ngăn cách danh sách các viện (không phải câu văn có dấu chấm kết thúc)
+  if (clean.includes(';') && !clean.includes('. ') && clean.length < 120) {
+    return clean.split(/;\s*/).map(s => s.trim()).filter(Boolean)
+  }
+  return [clean]
+}
+
+interface StatusItem {
+  label?: string
+  text: string
+}
+
+function parseStatus(stat?: string | null): StatusItem[] {
+  if (!stat) return []
+  const clean = stat.trim()
+
+  // Bóc tách nếu có cả "Tình trạng thực địa:" và/hoặc "Hiện trạng bảo tồn:"
+  const fieldMatch = clean.match(/Tình trạng thực địa:\s*([^]*?)(?=\s*Hiện trạng bảo tồn:|$)/i)
+  const consMatch = clean.match(/Hiện trạng bảo tồn:\s*([^]*)$/i)
+
+  if (fieldMatch || consMatch) {
+    const items: StatusItem[] = []
+    if (fieldMatch && fieldMatch[1].trim()) {
+      items.push({
+        label: 'Tình trạng thực địa',
+        text: fieldMatch[1].trim(),
+      })
+    }
+    if (consMatch && consMatch[1].trim()) {
+      items.push({
+        label: 'Hiện trạng bảo tồn',
+        text: consMatch[1].trim(),
+      })
+    }
+    if (items.length > 0) return items
+  }
+
+  // Nếu dữ liệu có xuống dòng sẵn
+  if (clean.includes('\n')) {
+    return clean
+      .split(/\r?\n/)
+      .map(s => s.trim())
+      .filter(Boolean)
+      .map(s => ({ text: s }))
+  }
+
+  return [{ text: clean }]
 }
 
 
@@ -539,6 +588,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
             if (!spec && !stat && !lit && !hasField) return null
 
             const specList = spec ? parseLocations(spec) : []
+            const statusItems = stat ? parseStatus(stat) : []
             const litList = lit ? parseLiterature(lit) : []
 
             return (
@@ -558,7 +608,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                   )}
                 </div>
 
-                {(specList.length > 0 || stat) && (
+                {(specList.length > 0 || statusItems.length > 0) && (
                   <div className="specimen-vault-grid">
                     {specList.length > 0 && (
                       <div className="specimen-vault-item">
@@ -581,13 +631,30 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                       </div>
                     )}
 
-                    {stat && (
+                    {statusItems.length > 0 && (
                       <div className="specimen-vault-item">
                         <span className="specimen-vault-item__label">
                           <CheckCircle2 size={13} />
                           <span>Tình trạng mẫu / ghi nhận</span>
                         </span>
-                        <span className="specimen-vault-item__val">{stat}</span>
+                        {statusItems.length === 1 && !statusItems[0].label ? (
+                          <span className="specimen-vault-item__val">{statusItems[0].text}</span>
+                        ) : (
+                          <div className="specimen-vault-status-list">
+                            {statusItems.map((item, i) => (
+                              <div key={i} className="specimen-vault-status-row">
+                                {item.label ? (
+                                  <>
+                                    <span className="specimen-vault-status-label">{item.label}:</span>{' '}
+                                    <span className="specimen-vault-status-text">{item.text}</span>
+                                  </>
+                                ) : (
+                                  <span className="specimen-vault-status-text">{item.text}</span>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
