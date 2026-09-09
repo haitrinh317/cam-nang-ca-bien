@@ -5,6 +5,12 @@
 > **Supabase (SSOT):** 2,671 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển). 100% WoRMS cho toàn bộ 2,671 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-09)
+- [x] **Thiết kế & Tích hợp Logo Mới Phương Án 1 (Modern Ocean Wave & Whale Tail)**:
+  - Thay thế toàn diện logo Viện Hải dương học cũ bằng logo biểu trưng sóng biển và vây cá voi tuần hoàn hiện đại.
+  - Tách nền trong suốt (RGBA), khử viền răng cưa, căn giữa quang học 534×534 px.
+  - Xuất khẩu trọn bộ nhận diện: `public/logo.png` (512×512), `public/icons/icon-512x512.png`, `public/icons/icon-192x192.png`, `public/favicon.ico`.
+  - Sao lưu toàn bộ assets cũ vào `.backups/`.
+  - Đồng bộ hiển thị trên Header Navbar (`/logo.png` + cyan glow drop-shadow) và Footer.
 - [x] **Khắc phục lỗi 'Dữ liệu không hợp lệ' khi lưu chỉnh sửa loài ở Admin (`SpeciesForm.tsx`, `route.ts`, `schemas.ts`)**:
   - Đảo ngược logic sai ở `SpeciesForm.tsx` (`if (id) delete payload.id`), không gửi thừa `id` trong body khi gọi `PATCH /api/species`.
   - Bổ sung `deleted_at: z.string().nullable().optional()` vào `lib/schemas.ts`, hỗ trợ khôi phục loài từ thùng rác.
