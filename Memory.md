@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-09 22:57 (Deploy Vercel Production commit d5e7f0c — Cập nhật toàn diện Logo mới Phương án 1 Sóng biển & Vây cá tuần hoàn)
+> **Cập nhật lần cuối:** 2026-09-09 23:32 (Deploy Vercel Production commit 67d7c8f — Bộ soạn thảo phân bố địa lý trực quan Live Preview & Chuẩn hóa Zod schema)
 > **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.

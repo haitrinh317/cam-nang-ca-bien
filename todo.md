@@ -1,7 +1,7 @@
 # TODO — Dự án Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-09 21:00 (Deploy Vercel Production thành công — Tích hợp 76 loài Động vật độc biển, 100% WoRMS, 100% Ảnh, 100% Tiếng Việt chuẩn mực, Fix lỗi layout & Tên gọi khác)
-> **Next Session Starting Point**: Tiếp tục mở rộng các bộ sưu tập sinh vật biển mới (San hô, Thân mềm) hoặc nâng cấp tính năng tương tác.
+> Cập nhật: 2026-09-09 23:32 (Deploy Vercel Production thành công commit 67d7c8f — Bộ soạn thảo phân bố địa lý trực quan & Chuẩn hóa Zod schema)
+> **Next Session Starting Point**: Tiếp tục mở rộng các bộ sưu tập sinh vật biển mới (San hô, Thân mềm) hoặc nâng cấp Admin Phase 2 (CSV Import + Inline Edit).
 > **Supabase (SSOT):** 2,671 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển). 100% WoRMS cho toàn bộ 2,671 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-09)
