@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { ClipboardList, Leaf, Globe, BookOpen, Camera, X } from 'lucide-react'
 import PhotoManager from './PhotoManager'
+import DistributionEditor from './DistributionEditor'
+import { speciesUpdateSchema, speciesCreateSchema } from '@/lib/schemas'
 
 interface SpeciesRow {
   id?: string
@@ -69,6 +71,7 @@ function Field({ label, name, value, onChange, required, textarea }: {
 export default function SpeciesForm({ initial, collection, onSave, onClose }: Props) {
   const [tab, setTab] = useState<Tab>('basic')
   const [saving, setSaving] = useState(false)
+  const [errorMsg, setErrorMsg] = useState<string | null>(null)
   const genusLabel = collection === 'thuc-vat-bien' ? 'Chi' : 'Giống'
   const [form, setForm] = useState<Record<string, string>>({
     id:               initial?.id || '',
@@ -111,7 +114,9 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setErrorMsg(null)
     setSaving(true)
+
     // Cast numeric fields
     const payload: Record<string, unknown> = {
       ...form,
@@ -119,11 +124,25 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
       species_index: form.species_index ? parseInt(form.species_index) : null,
       collection_id: collection,
     }
+
     // Remove id from payload when updating (it's passed via query param in URL for PATCH)
     const id = initial?.id
     if (id) {
       delete payload.id
     }
+
+    // Client-side Zod Schema Verification
+    const validator = id ? speciesUpdateSchema : speciesCreateSchema
+    const check = validator.safeParse(payload)
+    if (!check.success) {
+      const fieldErrors = check.error.flatten().fieldErrors as Record<string, string[] | undefined>
+      const firstField = Object.keys(fieldErrors)[0]
+      const firstMsg = fieldErrors[firstField]?.[0] || 'Dữ liệu không hợp lệ theo Zod schema'
+      setErrorMsg(`Lỗi Zod schema [${firstField}]: ${firstMsg}`)
+      setSaving(false)
+      return
+    }
+
     const ok = await onSave(payload, id)
     if (!ok) setSaving(false)
   }
@@ -159,6 +178,13 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
         </div>
 
         <form onSubmit={handleSubmit}>
+          {errorMsg && (
+            <div style={{ margin: '0.5rem 1.5rem 0.5rem', padding: '0.75rem 1rem', borderRadius: '8px', background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)', color: '#dc2626', fontSize: '0.85rem', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span>⚠️</span>
+              <span>{errorMsg}</span>
+            </div>
+          )}
+
           <div className="admin-modal__body">
             {/* Tab: Cơ bản */}
             {tab === 'basic' && (
@@ -199,7 +225,12 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                 <Field label="Mô tả hình thái" name="morphology_vn" value={form.morphology_vn} onChange={onChange} textarea />
                 <Field label="Kích thước" name="vn_size" value={form.vn_size} onChange={onChange} textarea />
                 <Field label="Sinh thái &amp; Dinh dưỡng" name="ecology_vn" value={form.ecology_vn} onChange={onChange} textarea />
-                <Field label="Phân bố" name="vn_distribution" value={form.vn_distribution} onChange={onChange} textarea />
+                <DistributionEditor
+                  label="Phân bố địa lý (Việt Nam & Thế giới)"
+                  value={form.vn_distribution || ''}
+                  onChange={(val) => setForm(f => ({ ...f, vn_distribution: val }))}
+                  lang="vn"
+                />
                 <Field label="Giá trị kinh tế" name="economic_value_vn" value={form.economic_value_vn} onChange={onChange} textarea />
                 <Field label="Nơi lưu trữ mẫu" name="vn_specimen" value={form.vn_specimen} onChange={onChange} textarea />
                 <Field label="Tình trạng" name="vn_status" value={form.vn_status} onChange={onChange} textarea />

@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-09 22:40 (Deploy Vercel Production commit 60d04d5 — Triệt tiêu từ mồ côi thẻ đầu sách & Fix lỗi lưu chỉnh sửa loài Admin)
+> **Cập nhật lần cuối:** 2026-09-09 22:57 (Deploy Vercel Production commit d5e7f0c — Cập nhật toàn diện Logo mới Phương án 1 Sóng biển & Vây cá tuần hoàn)
 > **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
@@ -185,6 +185,7 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 | 2026-09-09 | **Triệt tiêu từ mồ côi & ngắt dòng sớm Thẻ đầu sách gốc**: Gỡ bỏ giới hạn `p { max-width: 68ch }` trên `.book-card p` trong `book-browser.css` và `globals.css`; bổ sung `max-width: none; text-wrap: pretty; line-height: 1.55;` cho `.bc-desc` và `text-wrap: balance` cho `.bc-title`, giúp đoạn mô tả sách giãn đều tự nhiên và không bao giờ rớt từ mồ côi. |
 | 2026-09-09 | **Fix lỗi 'Dữ liệu không hợp lệ' khi lưu sửa loài Admin**: Đảo ngược logic `if (id) delete payload.id` trong `SpeciesForm.tsx`; phòng thủ xóa `body.id` trong route `PATCH`; bổ sung `deleted_at` và cho phép trường `id` tùy chọn trong `speciesUpdateSchema`. |
 | 2026-09-09 | **Thiết kế & Triển khai Logo Mới Phương Án 1 (Modern Ocean Wave & Whale Tail)**: Thay thế hoàn toàn logo Viện Hải dương học cũ; tách nền trong suốt chuẩn RGBA 512×512, bộ app icon PWA (192, 512px) và Favicon đa kích cỡ; đồng bộ hiệu ứng glow cyan trên Header Navbar và Chân trang Footer. |
+| 2026-09-09 | **Nâng Cấp Bộ Soạn Thảo Phân Bố Loài & Chuẩn Hóa Schema Zod Frontend - Backend**: Tách 2 ô trực quan (Việt Nam & Thế giới) trong `SpeciesForm.tsx` (`DistributionEditor.tsx`), Live Preview thời gian thực; sửa lỗi bóc tách ở `SpecimenVisualWidgets.tsx` không gán nhầm sang Thế giới; bảo toàn 100% Zod `.strict()` schema và ràng buộc `<= 2000` ký tự. |
 
 ---
 

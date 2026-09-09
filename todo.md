@@ -5,6 +5,12 @@
 > **Supabase (SSOT):** 2,671 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển). 100% WoRMS cho toàn bộ 2,671 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-09)
+- [x] **Nâng Cấp Bộ Soạn Thảo Phân Bố Loài & Chuẩn Hóa Schema Zod Frontend - Backend (`SpeciesForm.tsx`, `DistributionEditor.tsx`, `SpecimenVisualWidgets.tsx`, `lib/distribution.ts`)**:
+  - Khắc phục lỗi logic bóc tách ở `SpecimenVisualWidgets.tsx`: ngăn chặn việc tự ý cắt văn bản tiếng Việt của các loài chỉ phân bố ở Việt Nam (như Sao biển Gai) rồi đẩy nhầm sang mục THẾ GIỚI.
+  - Xây dựng module tiện ích `lib/distribution.ts` với `splitDistribution`, `formatDistribution`, `parseDistribution` dùng chung.
+  - Xây dựng component `components/admin/DistributionEditor.tsx`: chia 2 ô nhập liệu độc lập (Phân bố tại Việt Nam & Phân bố trên Thế giới), kèm gợi ý vùng biển nhanh, bộ đếm ký tự `.../2000`, nút bật tắt văn bản gộp thô và **Live Preview** hiển thị thẻ trực tiếp theo thời gian thực.
+  - Tích hợp vào `components/admin/SpeciesForm.tsx` và bổ sung lớp phòng thủ Zod validation client-side (`validator.safeParse(payload)`), bảo toàn 100% Data Contract và cờ `.strict()` của backend.
+  - Build Next.js Production pass 100%, 0 lỗi TypeScript (`npx tsc --noEmit`).
 - [x] **Thiết kế & Tích hợp Logo Mới Phương Án 1 (Modern Ocean Wave & Whale Tail)**:
   - Thay thế toàn diện logo Viện Hải dương học cũ bằng logo biểu trưng sóng biển và vây cá voi tuần hoàn hiện đại.
   - Tách nền trong suốt (RGBA), khử viền răng cưa, căn giữa quang học 534×534 px.

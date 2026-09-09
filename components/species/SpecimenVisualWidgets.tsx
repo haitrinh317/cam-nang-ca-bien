@@ -73,68 +73,8 @@ function parseBodySize(raw: string): number | null {
   return null
 }
 
-/**
- * Phân tích chuỗi phân bố địa lý thành 2 nhóm thẻ: Việt Nam & Thế giới
- */
-function parseDistribution(raw?: string | null): { vn: string[]; world: string[]; fallback: string | null } {
-  if (!raw || typeof raw !== 'string') return { vn: [], world: [], fallback: null }
-  const text = raw.trim().replace(/\s+/g, ' ')
+import { parseDistribution } from '@/lib/distribution'
 
-  let worldRaw = ''
-  let vnRaw = ''
-
-  // 1. Nhận diện cấu trúc: '..., Việt Nam. Vùng...' hoặc '... Việt Nam: ...' hoặc '...; Việt Nam: ...'
-  const vnMatch = text.match(/(.*?)(?:Việt Nam\s*[:\.]\s*)(.*)/i)
-  if (vnMatch) {
-    worldRaw = vnMatch[1].replace(/Việt Nam\s*,?/gi, '').trim()
-    vnRaw = vnMatch[2].trim()
-  } else {
-    // 2. Không có chữ 'Việt Nam.', nhưng có dấu chấm phân cách: 'Thái Bình Dương. Trung Bộ và Nam Bộ'
-    const dotParts = text.split(/\.\s+/)
-    if (dotParts.length >= 2) {
-      worldRaw = dotParts[0].replace(/Việt Nam\s*,?/gi, '').trim()
-      vnRaw = dotParts.slice(1).join('. ').trim()
-    } else {
-      worldRaw = text.replace(/Việt Nam\s*,?/gi, '').trim()
-    }
-  }
-
-  // Parse Thế giới thành các mục riêng biệt
-  const worldItems = worldRaw
-    .split(/[,;:–—\/\.]|\bvà\b|\band\b/i)
-    .map(s => s.trim().replace(/^[\-–—,\.;:\s]+|[\-–—,\.;:\s]+$/g, ''))
-    .filter(s => s.length > 1 && !/^(nhiệt đới|á nhiệt đới|ven bờ|ven biển|vùng biển|khu vực|từ|đến|to|from)\b/i.test(s) && !/việt nam/i.test(s))
-
-  // Loại bỏ trùng lặp trong danh sách thế giới
-  const world = Array.from(new Set(worldItems))
-
-  // Parse các vùng biển Việt Nam chuẩn
-  const REGION_MAP = [
-    { key: 'bac-bo', name: 'Vịnh Bắc Bộ', regex: /vịnh bắc bộ|bắc bộ|hải phòng|quảng ninh/i },
-    { key: 'trung-bo', name: 'Vùng Biển Miền Trung', regex: /trung bộ|miền trung|đà nẵng|huế|quảng trị|quảng nam|quảng ngãi|bình định|phú yên|khánh hòa|nha trang|ninh thuận|bình thuận/i },
-    { key: 'nam-bo', name: 'Vùng Biển Nam Bộ', regex: /nam bộ|đông nam bộ|vũng tàu|bà rịa|côn đảo/i },
-    { key: 'tay-nam-bo', name: 'Vùng Biển Tây Nam (Phú Quốc)', regex: /tây nam|phú quốc|kiên giang|vịnh thái lan/i },
-    { key: 'hoang-sa', name: 'Quần đảo Hoàng Sa', regex: /hoàng sa/i },
-    { key: 'truong-sa', name: 'Quần đảo Trường Sa', regex: /trường sa/i },
-  ]
-
-  const vn: string[] = []
-  REGION_MAP.forEach(r => {
-    if (r.regex.test(vnRaw) || r.regex.test(text)) {
-      vn.push(r.name)
-    }
-  })
-
-  // Nếu có đề cập đến Việt Nam nhưng không rõ vùng cụ thể
-  if (vn.length === 0 && (vnRaw.length > 2 || /việt nam/i.test(text))) {
-    vn.push('Vùng biển Việt Nam')
-  }
-
-  // Fallback nếu không bóc tách được mục nào
-  const fallback = (world.length === 0 && vn.length === 0) ? text : null
-
-  return { world, vn, fallback }
-}
 
 export default function SpecimenVisualWidgets({
   sizeStr,
