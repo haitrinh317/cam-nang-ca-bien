@@ -1,10 +1,20 @@
 # TODO — Dự án Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-09 20:20 (Hoàn thành Tích hợp Toàn diện Bộ Sưu Tập Động Vật Độc Biển Việt Nam — 76 loài, 100% WoRMS, 100% Ảnh thực địa, Widget Độc học & Cấp cứu y tế)
-> **Next Session Starting Point**: (1) Thảo luận cùng chú Chình về kiểm tra giao diện và deploy Vercel Production. (2) Mở rộng nhóm sinh vật mới (San hô, Thân mềm).
+> Cập nhật: 2026-09-09 21:00 (Deploy Vercel Production thành công — Tích hợp 76 loài Động vật độc biển, 100% WoRMS, 100% Ảnh, 100% Tiếng Việt chuẩn mực, Fix lỗi layout & Tên gọi khác)
+> **Next Session Starting Point**: Tiếp tục mở rộng các bộ sưu tập sinh vật biển mới (San hô, Thân mềm) hoặc nâng cấp tính năng tương tác.
 > **Supabase (SSOT):** 2,671 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển). 100% WoRMS cho toàn bộ 2,671 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-09)
+- [x] **Triển khai Production Vercel (`/deploy-cabien`) — Commit `1d6288e`**:
+  - Xác thực tài khoản chuẩn `haitrinh082@gmail.com` (`haitrinh082-6335s-projects`), link project và deploy thành công qua Vercel CLI (`vercel --prod --yes`).
+  - URLs chính thức: `https://www.tracuusinhvatbien.app` và `https://cam-nang-ca-bien.vercel.app` (HTTP 200 OK).
+  - Đã kiểm tra trực tiếp qua curl trên Production: Render chính xác `Chiến binh Bồ Đào Nha, Sứa lửa, Sứa bọng`, không còn lỗi JSON/Unicode.
+- [x] **Khắc phục lỗi giao diện & chuẩn hóa hiển thị tiếng Việt theo phản hồi của chú Chình**:
+  - **Bỏ trùng lặp Hồ sơ Độc học**: Gỡ bỏ `<ToxicologyWidget>` khỏi Tab 2 (Sinh học), chỉ giữ lại ở Tab 1 (Thông số).
+  - **Rút gọn thông tin chủ biên**: Giữ `Chủ biên chuyên khảo: PGS.TS. Đào Việt Hà`, bỏ phần chức danh Viện trưởng.
+  - **Sửa đếm tài liệu dẫn**: Logic `parseLiterature` chỉ bẻ dòng sau năm 4 chữ số khi có từ 2 mốc năm trở lên; badge hiển thị chuẩn xác `1 tài liệu dẫn`.
+  - **Triệt tiêu từ mồ côi & Tự động giãn cột**: Grid thẻ mẫu vật tự động chuyển sang 1 cột full-width khi không có nơi lưu trữ mẫu vật, bổ sung `text-wrap: pretty; word-break: normal;` cho văn bản.
+  - **Sửa lỗi tiếng Việt "Tên gọi khác" (`vn_alternate_names`)**: Chuẩn hóa toàn diện 76/76 loài trong Supabase từ JSON array Unicode escaped sang chuỗi tiếng Việt phân cách bằng dấu phẩy; bổ sung hàm phòng thủ `formatAlternateNames()` trên React UI.
 - [x] **Khởi tạo & Hoàn thành 100% Pipeline Bộ Sưu Tập Động Vật Độc Biển Việt Nam (`sinh-vat-doc`) — 76 loài**:
   - **Kiến trúc & Cấu trúc Dữ liệu**: Thực hiện Phương án 3 (Hybrid Architecture) được chú Chình phê duyệt. Thêm collection `sinh-vat-doc` và chuyên khảo *Động vật độc biển Việt Nam* (PGS.TS. Đào Việt Hà) vào CSDL Supabase.
   - **Bóc tách 76 loài/taxa**: Trích xuất 100% đặc điểm hình thái, kích thước, phân bố, cơ chế độc tính, triệu chứng lâm sàng và phác đồ sơ cứu từ chuyên khảo.
