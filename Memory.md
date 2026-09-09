@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-09 21:00 (Deploy Vercel Production thành công: tích hợp toàn diện 76 loài sinh-vat-doc, sửa triệt để lỗi tiếng Việt alternate names, layout mồ côi và trùng widget)
+> **Cập nhật lần cuối:** 2026-09-09 21:15 (Thiết lập ảnh OpenGraph sharing link Option 2 định vị thương hiệu cá nhân haitrinh, cập nhật SEO metadata 2.671+ loài)
 > **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.

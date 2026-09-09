@@ -5,6 +5,11 @@
 > **Supabase (SSOT):** 2,671 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển). 100% WoRMS cho toàn bộ 2,671 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-09)
+- [x] **Tạo & Thiết lập Ảnh OpenGraph Sharing Link Mới (Option 2 — Photorealistic Ocean Hero)**:
+  - Thay thế ảnh cũ có logo Viện Hải dương học (1922) bằng ảnh mới mang định vị thương hiệu cá nhân `haitrinh`.
+  - Thiết kế mỹ thuật đại dương chiều sâu với cá mập voi, rùa biển bơi lội dưới luồng ánh sáng mặt trời (*God rays*) qua rạn san hô lân quang.
+  - Khối card kính mờ (Frosted Glass) tôn vinh con số thực tế **`2.671+ LOÀI SINH VẬT BIỂN`** và 5 nhóm loài (`Cá biển`, `Thực vật`, `Giáp xác`, `Rắn biển`, `Độc biển`).
+  - Đồng bộ cập nhật metadata `2.671+` trong `app/layout.tsx`, `app/(public)/page.tsx` và `lib/species-photos.ts`.
 - [x] **Triển khai Production Vercel (`/deploy-cabien`) — Commit `1d6288e`**:
   - Xác thực tài khoản chuẩn `haitrinh082@gmail.com` (`haitrinh082-6335s-projects`), link project và deploy thành công qua Vercel CLI (`vercel --prod --yes`).
   - URLs chính thức: `https://www.tracuusinhvatbien.app` và `https://cam-nang-ca-bien.vercel.app` (HTTP 200 OK).

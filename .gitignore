@@ -50,6 +50,8 @@ scratch_images/
 !public/logo.png
 !public/favicon.ico
 !public/og-default.png
+!public/og-option1.png
+!public/og-option2.png
 !public/icons/**
 
 # Backup files

@@ -10,7 +10,7 @@
 
 export const SPECIES_PHOTOS_BUCKET = 'species-photos'
 
-const FALLBACK_OG = 'https://cam-nang-ca-bien.vercel.app/og-default.png'
+const FALLBACK_OG = 'https://www.tracuusinhvatbien.app/og-default.png'
 
 /**
  * Build the full public CDN URL for a species photo stored in Supabase Storage.
