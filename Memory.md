@@ -179,6 +179,9 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 | 2026-09-08 | **BottomNav Mobile Drawer**: Giữ 4 tabs chuẩn công thái học, tích hợp Bottom Sheet Drawer (`backdrop-filter: blur(32px)`) cho tab thứ 4 mở rộng toàn bộ các nhóm sinh vật biển hiện có và tương lai. |
 | 2026-09-08 | **Quản trị đa Collection (Admin)**: Mở rộng AdminSidebar, Dashboard KPI đếm 4 collection tổng 2.595 loài; tự động ẩn bộ lọc tập cho các nhóm chỉ có 1 tập chuyên khảo. |
 | 2026-09-08 | **Fix Rò Rỉ Mobile Drawer & Chuẩn Hóa SEO Login/Admin (`haitrinh`)**: Ẩn triệt để drawer trên desktop (`display: none`); gỡ bỏ toạ độ GPS Viện Hải dương học ở login; cập nhật dynamic metadata SEO cho các trang con admin; cập nhật robots.ts disallow `/login`. |
+| 2026-09-09 | **Bộ sưu tập Động vật độc biển (`sinh-vat-doc`) — 76 loài**: Chuyên khảo PGS.TS. Đào Việt Hà (2021), 100% WoRMS, 100% Ảnh thực địa sách (80 ảnh WebP), 100% Bento widget độc học y tế (`ToxicologyWidget`), 100% FishBase/SeaLifeBase song ngữ học thuật, nâng quy mô toàn hệ thống lên **2.671 loài**. |
+| 2026-09-09 | **Thiết kế Ảnh OpenGraph Mới (Option 2 — Photorealistic Ocean Hero)**: Kích thước 1200x630 chuẩn 1.91:1, định vị thương hiệu cá nhân `haitrinh`, tôn vinh con số 2.671+ loài và 5 nhóm sinh vật biển, thay thế logo cũ của Viện Hải dương học. |
+| 2026-09-09 | **Chuẩn hóa Hiển thị Tiếng Việt & Layout Thẻ Mẫu vật**: Loại bỏ trùng lặp widget Độc học ở tab 2; rút gọn tiêu đề chủ biên; sửa `parseLiterature` chống bẻ đôi trích dẫn đơn lẻ; kích hoạt lưới 1 cột full-width (`.specimen-vault-grid--1col`) và `text-wrap: pretty` chống từ mồ côi; chuẩn hóa 76/76 loài về chuỗi tiếng Việt phân cách dấu phẩy cho `vn_alternate_names`. |
 
 ---
 
