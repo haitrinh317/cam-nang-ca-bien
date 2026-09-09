@@ -182,6 +182,8 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 | 2026-09-09 | **Bộ sưu tập Động vật độc biển (`sinh-vat-doc`) — 76 loài**: Chuyên khảo PGS.TS. Đào Việt Hà (2021), 100% WoRMS, 100% Ảnh thực địa sách (80 ảnh WebP), 100% Bento widget độc học y tế (`ToxicologyWidget`), 100% FishBase/SeaLifeBase song ngữ học thuật, nâng quy mô toàn hệ thống lên **2.671 loài**. |
 | 2026-09-09 | **Thiết kế Ảnh OpenGraph Mới (Option 2 — Photorealistic Ocean Hero)**: Kích thước 1200x630 chuẩn 1.91:1, định vị thương hiệu cá nhân `haitrinh`, tôn vinh con số 2.671+ loài và 5 nhóm sinh vật biển, thay thế logo cũ của Viện Hải dương học. |
 | 2026-09-09 | **Chuẩn hóa Hiển thị Tiếng Việt & Layout Thẻ Mẫu vật**: Loại bỏ trùng lặp widget Độc học ở tab 2; rút gọn tiêu đề chủ biên; sửa `parseLiterature` chống bẻ đôi trích dẫn đơn lẻ; kích hoạt lưới 1 cột full-width (`.specimen-vault-grid--1col`) và `text-wrap: pretty` chống từ mồ côi; chuẩn hóa 76/76 loài về chuỗi tiếng Việt phân cách dấu phẩy cho `vn_alternate_names`. |
+| 2026-09-09 | **Triệt tiêu từ mồ côi & ngắt dòng sớm Thẻ đầu sách gốc**: Gỡ bỏ giới hạn `p { max-width: 68ch }` trên `.book-card p` trong `book-browser.css` và `globals.css`; bổ sung `max-width: none; text-wrap: pretty; line-height: 1.55;` cho `.bc-desc` và `text-wrap: balance` cho `.bc-title`, giúp đoạn mô tả sách giãn đều tự nhiên và không bao giờ rớt từ mồ côi. |
+| 2026-09-09 | **Fix lỗi 'Dữ liệu không hợp lệ' khi lưu sửa loài Admin**: Đảo ngược logic `if (id) delete payload.id` trong `SpeciesForm.tsx`; phòng thủ xóa `body.id` trong route `PATCH`; bổ sung `deleted_at` và cho phép trường `id` tùy chọn trong `speciesUpdateSchema`. |
 
 ---
 

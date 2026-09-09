@@ -50,12 +50,15 @@ export const speciesCreateSchema = z.object({
   photo_place: z.string().max(500).nullable().optional(),
   photo_depth: z.string().max(200).nullable().optional(),
   photo_date: z.string().max(200).nullable().optional(),
+  deleted_at: z.string().nullable().optional(),
 }).strict() // reject unknown keys
 
 /** Partial species — used for PATCH (update) */
 export const speciesUpdateSchema = speciesCreateSchema
   .partial()                    // all fields optional
-  .omit({ id: true })          // can't change id via PATCH
+  .extend({
+    id: z.string().optional(),  // accept id if client sends, ignored on update
+  })
 
 /** Bulk import payload */
 export const importSchema = z.object({

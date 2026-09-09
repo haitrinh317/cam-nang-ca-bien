@@ -85,7 +85,8 @@ p {
 .specimen p,
 .specimen-thongso-container p,
 .specimen-bento-card__content,
-.vwc-size-notes p {
+.vwc-size-notes p,
+.book-card p {
   max-width: none !important;
 }
 

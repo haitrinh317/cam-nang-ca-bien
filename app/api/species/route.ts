@@ -112,7 +112,8 @@ export async function PATCH(req: NextRequest) {
   if (!parsed.success) {
     return NextResponse.json({ error: 'Dữ liệu không hợp lệ', details: parsed.error.flatten().fieldErrors }, { status: 400 })
   }
-  const body = parsed.data
+  const body = { ...parsed.data }
+  delete (body as { id?: string }).id
   const { data, error } = await db.from('species').update(body).eq('id', id).select().single()
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
 

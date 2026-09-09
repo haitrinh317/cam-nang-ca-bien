@@ -119,9 +119,11 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
       species_index: form.species_index ? parseInt(form.species_index) : null,
       collection_id: collection,
     }
-    // Remove id from payload (it's in the URL for PATCH)
+    // Remove id from payload when updating (it's passed via query param in URL for PATCH)
     const id = initial?.id
-    if (!id) delete payload.id // new record: let DB generate
+    if (id) {
+      delete payload.id
+    }
     const ok = await onSave(payload, id)
     if (!ok) setSaving(false)
   }

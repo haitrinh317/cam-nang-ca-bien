@@ -5,6 +5,15 @@
 > **Supabase (SSOT):** 2,671 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển). 100% WoRMS cho toàn bộ 2,671 loài.
 
 ## ✅ Hoàn thành mới nhất (2026-09-09)
+- [x] **Khắc phục lỗi 'Dữ liệu không hợp lệ' khi lưu chỉnh sửa loài ở Admin (`SpeciesForm.tsx`, `route.ts`, `schemas.ts`)**:
+  - Đảo ngược logic sai ở `SpeciesForm.tsx` (`if (id) delete payload.id`), không gửi thừa `id` trong body khi gọi `PATCH /api/species`.
+  - Bổ sung `deleted_at: z.string().nullable().optional()` vào `lib/schemas.ts`, hỗ trợ khôi phục loài từ thùng rác.
+  - Cho phép trường `id` tùy chọn trong `speciesUpdateSchema` và loại bỏ `body.id` tại route `PATCH` trước khi ghi DB (phòng thủ đa tầng).
+- [x] **Khắc phục lỗi ngắt dòng sớm & từ mồ côi (Orphan / Widow) ở Thẻ đầu sách gốc các trang con**:
+  - Gỡ bỏ giới hạn `p { max-width: 68ch }` trên `.book-card p` trong cả `styles/book-browser.css` và `styles/globals.css`.
+  - Bổ sung `max-width: none; text-wrap: pretty; line-height: 1.55;` cho `.bc-desc`, triệt tiêu hoàn toàn hiện tượng rớt chữ mồ côi ở dòng cuối (như chữ 'ban đầu.' ở cuốn Động vật độc biển VN).
+  - Bổ sung `text-wrap: balance` cho `.bc-title` và `text-wrap: pretty` cho `.bc-author`.
+  - Build test Next.js Production thành công không có lỗi.
 - [x] **Tạo & Thiết lập Ảnh OpenGraph Sharing Link Mới (Option 2 — Photorealistic Ocean Hero)**:
   - Thay thế ảnh cũ có logo Viện Hải dương học (1922) bằng ảnh mới mang định vị thương hiệu cá nhân `haitrinh`.
   - Thiết kế mỹ thuật đại dương chiều sâu với cá mập voi, rùa biển bơi lội dưới luồng ánh sáng mặt trời (*God rays*) qua rạn san hô lân quang.
