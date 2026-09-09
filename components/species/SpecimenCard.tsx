@@ -24,6 +24,7 @@ import {
   CornerDownRight
 } from 'lucide-react'
 import BiologyDashboard, { BiologyData } from './BiologyDashboard'
+import ToxicologyWidget from './ToxicologyWidget'
 import {
   getResolvedMorphologyVn,
   getResolvedEcologyVn,
@@ -53,9 +54,13 @@ function parseLiterature(lit?: string | null): string[] {
   if (lineSplit.length > 1) return lineSplit
 
   // 4. Phân tách bằng dấu chấm sau năm 4 chữ số: "Tác giả A, 1962. Tác giả B, 1992." (Sách Cá biển cổ)
-  const yearDotSplit = trimmed.split(/(?<=\b(?:18|19|20)\d{2}[a-z]?)\s*\.\s*(?=[A-ZÀ-ỸĐ])/i)
-  if (yearDotSplit.length > 1) {
-    return yearDotSplit.map(s => s.trim().replace(/\.$/, '')).filter(Boolean)
+  // Chỉ phân tách nếu có từ 2 mốc năm 4 chữ số trở lên (đại diện cho nhiều trích dẫn khác nhau)
+  const yearMatches = trimmed.match(/\b(?:18|19|20)\d{2}[a-z]?\b/g)
+  if (yearMatches && yearMatches.length > 1) {
+    const yearDotSplit = trimmed.split(/(?<=\b(?:18|19|20)\d{2}[a-z]?)\s*\.\s*(?=[A-ZÀ-ỸĐ])/i)
+    if (yearDotSplit.length > 1) {
+      return yearDotSplit.map(s => s.trim().replace(/\.$/, '')).filter(Boolean)
+    }
   }
 
   return [trimmed]
@@ -105,6 +110,15 @@ function parseStatus(stat?: string | null): StatusItem[] {
     if (items.length > 0) return items
   }
 
+  // Bóc tách nếu có "Mức độ nguy hiểm:"
+  const dangerMatch = clean.match(/^Mức độ nguy hiểm:\s*([^]*)$/i)
+  if (dangerMatch && dangerMatch[1].trim()) {
+    return [{
+      label: 'Mức độ nguy hiểm',
+      text: dangerMatch[1].trim(),
+    }]
+  }
+
   // Nếu dữ liệu có xuống dòng sẵn
   if (clean.includes('\n')) {
     return clean
@@ -115,6 +129,22 @@ function parseStatus(stat?: string | null): StatusItem[] {
   }
 
   return [{ text: clean }]
+}
+
+function formatAlternateNames(val?: string | null): string {
+  if (!val) return ''
+  const trimmed = val.trim()
+  if (trimmed.startsWith('[') && trimmed.endsWith(']')) {
+    try {
+      const arr = JSON.parse(trimmed)
+      if (Array.isArray(arr)) {
+        return arr.filter(Boolean).join(', ')
+      }
+    } catch {
+      // ignore
+    }
+  }
+  return trimmed.replace(/\\u([0-9a-fA-F]{4})/g, (_, c) => String.fromCharCode(parseInt(c, 16)))
 }
 
 
@@ -380,6 +410,8 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
           <span className="specimen__vol">
             {sp.collection_id === 'thuc-vat-bien' 
               ? (sp.volume === 2 ? 'Tập II · Rong biển VN (1969)' : 'Tập I · Thực vật phía Nam') 
+              : sp.collection_id === 'sinh-vat-doc'
+              ? 'Động vật độc biển VN (2018)'
               : `Tập ${sp.volume || ''}`}
           </span>
         </div>
@@ -390,6 +422,29 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
             {cleanAuthor && <span className="specimen__author" style={{ fontStyle: 'normal', color: 'var(--color-ink-3, #64748b)', marginLeft: '4px' }}> {cleanAuthor}</span>}
           </p>
           <WormsBadge sp={sp} />
+          {bio?.toxicology && (
+            <span 
+              className="specimen__tox-pill"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '5px',
+                height: '24px',
+                padding: '0 10px',
+                borderRadius: '9999px',
+                fontSize: '0.72rem',
+                fontWeight: 700,
+                lineHeight: 1,
+                backgroundColor: bio.toxicology.danger_level === 'lethal' ? 'rgba(239, 68, 68, 0.12)' : 'rgba(245, 158, 11, 0.12)',
+                color: bio.toxicology.danger_level === 'lethal' ? '#dc2626' : '#d97706',
+                border: bio.toxicology.danger_level === 'lethal' ? '1px solid rgba(239, 68, 68, 0.35)' : '1px solid rgba(245, 158, 11, 0.35)',
+              }}
+              title={bio.toxicology.danger_level_vn || 'Sinh vật biển có độc tính'}
+            >
+              <span style={{ fontSize: '0.82rem' }}>☣️</span>
+              <span>{bio.toxicology.danger_level === 'lethal' ? 'Cực độc' : 'Sinh vật độc'}</span>
+            </span>
+          )}
           {familyCrumb && (
             <span className="specimen__family-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.74rem', color: 'var(--color-ink-3, #64748b)', padding: '2px 8px', borderRadius: '4px', background: 'var(--color-paper-2, #f8fafc)', border: '1px solid var(--color-rule-2, rgba(0,0,0,0.06))' }}>
               <span style={{ fontWeight: 600 }}>Họ {familyCrumb.vn}</span>
@@ -474,7 +529,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                     <Tag size={13} />
                     <span>Tên gọi khác:</span>
                   </span>
-                  <span className="specimen-identity-val">{sp.vn_alternate_names}</span>
+                  <span className="specimen-identity-val">{formatAlternateNames(sp.vn_alternate_names)}</span>
                 </div>
               )}
               {sp.en_common_name && (
@@ -595,6 +650,15 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
             )
           })()}
 
+          {/* Hồ sơ Độc học & Phác đồ Cấp cứu (Chuyên khảo Động vật độc biển VN) */}
+          {bio?.toxicology && (
+            <ToxicologyWidget
+              toxicology={bio.toxicology}
+              speciesName={sp.vn_name}
+              scientificName={sp.scientific_name}
+            />
+          )}
+
           {/* 5. Hồ sơ Mẫu vật & Tài liệu dẫn (Specimen Archive Vault) */}
           {(() => {
             const spec = sp.vn_specimen || sp.en_specimen
@@ -625,7 +689,7 @@ function TabStrip({ sp, bio, syns, speciesId, crumbs, cleanAuthor }: TabStripPro
                 </div>
 
                 {(specList.length > 0 || statusItems.length > 0) && (
-                  <div className="specimen-vault-grid">
+                  <div className={`specimen-vault-grid ${specList.length > 0 && statusItems.length > 0 ? 'specimen-vault-grid--2cols' : 'specimen-vault-grid--1col'}`}>
                     {specList.length > 0 && (
                       <div className="specimen-vault-item">
                         <span className="specimen-vault-item__label">

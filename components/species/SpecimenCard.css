@@ -269,8 +269,17 @@
   gap: 16px;
 }
 
+.specimen-vault-grid--1col {
+  grid-template-columns: 1fr;
+}
+
+.specimen-vault-grid--2cols {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 @media (max-width: 640px) {
-  .specimen-vault-grid {
+  .specimen-vault-grid,
+  .specimen-vault-grid--2cols {
     grid-template-columns: 1fr;
   }
 }
@@ -303,6 +312,8 @@
   font-weight: 450;
   color: var(--color-ink-2, #334155);
   line-height: 1.5;
+  text-wrap: pretty;
+  word-break: normal;
 }
 
 .specimen-vault-locations {
@@ -344,6 +355,8 @@
   font-size: 0.84rem;
   line-height: 1.5;
   color: var(--color-ink-2, #334155);
+  text-wrap: pretty;
+  word-break: normal;
 }
 
 .specimen-vault-status-label {
@@ -354,6 +367,8 @@
 .specimen-vault-status-text {
   font-weight: 450;
   color: var(--color-ink-2, #334155);
+  text-wrap: pretty;
+  word-break: normal;
 }
 
 [data-theme="dark"] .specimen-vault-status-label {
@@ -406,6 +421,8 @@
   font-size: 0.88rem;
   color: var(--color-ink-2, #334155);
   line-height: 1.55;
+  text-wrap: pretty;
+  word-break: normal;
 }
 
 .specimen-lit-idx {

@@ -103,7 +103,13 @@ export default function CatalogHeader({
                 <span>{booksCount} công trình tài liệu gốc</span>
               </span>
               <span className="catalog-header__pill">
-                <span>{collection.volumeCount} tập tài liệu</span>
+                <span>
+                  {collection.id === 'sinh-vat-doc'
+                    ? 'Chuyên khảo độc tính'
+                    : collection.id === 'ran-bien'
+                    ? 'Chuyên khảo rắn biển'
+                    : `${collection.volumeCount} tập tài liệu`}
+                </span>
               </span>
             </>
           )}
@@ -126,6 +132,8 @@ export default function CatalogHeader({
                 ? `Tìm trong ${totalSpecies.toLocaleString()}+ loài Giáp xác biển (Tên VN, Tên khoa học, Tôm, Cua, Ghẹ)...`
                 : collection.id === 'ran-bien'
                 ? `Tìm trong ${totalSpecies.toLocaleString()}+ loài Rắn biển Việt Nam (Tên VN, Tên khoa học, Đẻn biển)...`
+                : collection.id === 'sinh-vat-doc'
+                ? `Tìm trong ${totalSpecies.toLocaleString()}+ loài Động vật độc biển (Tên VN, Tên khoa học, Độc tố)...`
                 : `Tìm trong ${totalSpecies.toLocaleString() || '1.764'}+ loài Cá biển Việt Nam (Tên VN, Tên khoa học)...`
             }
           />

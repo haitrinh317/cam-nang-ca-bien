@@ -198,6 +198,29 @@ export const BOOKS_BY_COLLECTION: Record<string, BookMetadata[]> = {
       ],
     },
   ],
+  'sinh-vat-doc': [
+    {
+      id: 'dong-vat-doc-bien-vn',
+      title: 'Động vật độc biển Việt Nam',
+      badge: 'Chuyên khảo (76 loài)',
+      author: 'PGS.TS. Đào Việt Hà (Chủ biên) & CS',
+      publisher: 'NXB Khoa học Tự nhiên và Công nghệ',
+      yearRange: '2021',
+      totalSpecies: 76,
+      description: 'Công trình chuyên khảo toàn diện về các loài sinh vật biển có nọc độc tiếp xúc và độc tố tích lũy thực phẩm tại Việt Nam, bao gồm cơ chế độc tính, triệu chứng lâm sàng và phác đồ sơ cứu ban đầu.',
+      volumes: [
+        {
+          volume: 1,
+          roman: '1',
+          year: '2021',
+          title: 'Động vật độc biển Việt Nam',
+          subTitle: 'Nhiễm độc qua tiếp xúc & Ngộ độc thực phẩm — Phác đồ sơ cứu tai nạn biển',
+          author: 'PGS.TS. Đào Việt Hà (Chủ biên) & CS (Viện Hải dương học)',
+          speciesCount: 76,
+        },
+      ],
+    },
+  ],
 }
 
 export function getBooksForCollection(collectionSlug: string): BookMetadata[] {

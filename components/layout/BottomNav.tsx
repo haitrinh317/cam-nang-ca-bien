@@ -57,6 +57,16 @@ const COLLECTIONS_LIST: CollectionItem[] = [
     available: true,
   },
   {
+    slug: 'sinh-vat-doc',
+    name: 'Động vật độc biển',
+    nameEn: 'Venomous & Poisonous Marine Animals',
+    desc: 'Bạch tuộc đốm xanh, cá nóc, ốc cối, sứa lửa & sơ cứu',
+    stats: '76 loài • Chuyên khảo',
+    icon: <span style={{ fontSize: '24px', lineHeight: 1 }}>☣️</span>,
+    accent: '#fb7185',
+    available: true,
+  },
+  {
     slug: 'san-ho',
     name: 'San hô biển',
     nameEn: 'Marine Corals',
@@ -164,7 +174,8 @@ export function BottomNav() {
   // Is viewing other collections?
   const isCrustaceanActive = pathname === '/giap-xac' || pathname.startsWith('/giap-xac/')
   const isSnakeActive = pathname === '/ran-bien' || pathname.startsWith('/ran-bien/')
-  const isOtherActive = isCrustaceanActive || isSnakeActive
+  const isPoisonActive = pathname === '/sinh-vat-doc' || pathname.startsWith('/sinh-vat-doc/')
+  const isOtherActive = isCrustaceanActive || isSnakeActive || isPoisonActive
 
   // Dynamic 4th tab presentation based on current page
   let fourthTabIcon = <Layers size={20} strokeWidth={2} aria-hidden="true" />
@@ -175,6 +186,9 @@ export function BottomNav() {
   } else if (isSnakeActive) {
     fourthTabIcon = <span style={{ fontSize: '18px', lineHeight: 1 }} aria-hidden="true">🐍</span>
     fourthTabLabel = 'Rắn biển'
+  } else if (isPoisonActive) {
+    fourthTabIcon = <span style={{ fontSize: '18px', lineHeight: 1 }} aria-hidden="true">☣️</span>
+    fourthTabLabel = 'Sinh vật độc'
   }
 
   return (
@@ -273,7 +287,7 @@ export function BottomNav() {
               Nhóm Sinh Vật Biển
             </h2>
             <p className="bottom-sheet__subtitle">
-              Hệ sinh thái số hóa • 2,595 loài tại vùng biển Việt Nam
+              Hệ sinh thái số hóa • 2,671 loài tại vùng biển Việt Nam
             </p>
           </div>
           <button

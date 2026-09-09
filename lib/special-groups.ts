@@ -74,6 +74,17 @@ export const SPECIAL_GROUPS: Record<string, SpecialGroupConfig> = {
     approxCount: 672,
     filterType: 'collection',
   },
+  'sinh-vat-doc': {
+    id: 'sinh-vat-doc',
+    title: 'Động Vật Biển Độc & Phác Đồ Cứu Hộ',
+    subTitle: '76 loài động vật độc biển Việt Nam (Bạch tuộc đốm xanh, Ốc cối, Cá nóc, Rắn biển, Sứa lửa, Cá đuối...) kèm độc tố nhận diện và phác đồ sơ cứu',
+    badge: 'Cảnh Báo Độc Tố & Cấp Cứu Y Tế',
+    badgeColor: 'rose',
+    collection: 'sinh-vat-doc',
+    targetUrl: '/sinh-vat-doc',
+    approxCount: 76,
+    filterType: 'collection',
+  },
 }
 
 export const SPECIAL_GROUPS_LIST: SpecialGroupConfig[] = Object.values(SPECIAL_GROUPS)

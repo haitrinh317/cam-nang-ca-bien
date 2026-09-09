@@ -15,9 +15,11 @@ import {
 } from 'lucide-react'
 import IucnBadge from './IucnBadge'
 import BilingualNoteBlock from './BilingualNoteBlock'
+import { ToxicologyData } from './ToxicologyWidget'
 import './BiologyDashboard.css'
 
 export interface BiologyData {
+  toxicology?: ToxicologyData
   fbName?: string
   maxLength?: string
   maxWeight?: string

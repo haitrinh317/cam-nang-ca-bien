@@ -42,6 +42,12 @@ export const STATIC_COLLECTIONS: Collection[] = [
     icon: '🐍', accentColor: '#f59e0b', volumeCount: 1,
     status: 'active', sortOrder: 4,
   },
+  {
+    id: 'sinh-vat-doc', slug: 'sinh-vat-doc',
+    nameVn: 'Động vật độc biển', nameEn: 'Venomous & Poisonous Marine Animals',
+    icon: '☣️', accentColor: '#fb7185', volumeCount: 1,
+    status: 'active', sortOrder: 5,
+  },
 ]
 
 export function getCollectionBySlug(slug: string): Collection | undefined {

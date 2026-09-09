@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { SPECIAL_GROUPS_LIST } from '@/lib/special-groups'
-import { Sparkles, ArrowRight, ShieldAlert, Waves, Leaf, Compass } from 'lucide-react'
+import { Sparkles, ArrowRight, ShieldAlert, Waves, Leaf, Compass, AlertOctagon } from 'lucide-react'
 import './SpecialGroupsSection.css'
 
 interface Props {
@@ -20,6 +20,8 @@ export default function SpecialGroupsSection({ counts }: Props) {
         return <Compass size={24} className="sgh-icon" />
       case 'thuc-vat-bien':
         return <Leaf size={24} className="sgh-icon" />
+      case 'sinh-vat-doc':
+        return <AlertOctagon size={24} className="sgh-icon" />
       default:
         return <Sparkles size={24} className="sgh-icon" />
     }

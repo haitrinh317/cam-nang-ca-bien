@@ -1,15 +1,15 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-08 14:42 (Fix ISR cache — Admin chỉnh sách phản ánh ngay trang chủ qua /api/revalidate-home. Fix parseLiterature ngắt dòng mồ côi. Deploy Commit 08e9746)
+> **Cập nhật lần cuối:** 2026-09-09 20:42 (Hoàn tất toàn diện quy trình Enrichment theo ocr-to-audit.md cho 76 loài sinh-vat-doc: 100% WoRMS, 100% FishBase/SeaLifeBase, 100% Tên tiếng Anh & Gọi khác, 100% Song ngữ học thuật EN)
 > **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
 
 ---
 
-## 📊 Kiểm Kê Dữ Liệu (Supabase — 2026-09-08)
+## 📊 Kiểm Kê Dữ Liệu (Supabase — 2026-09-09)
 
-### Tổng: 2,595 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển)
+### Tổng: 2,671 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển)
 
 | Collection | Tập | Loài | WoRMS | Biology / Morphology | Trạng thái |
 |---|:---:|:---:|:---:|:---:|---|
@@ -23,6 +23,7 @@
 | `thuc-vat-bien` | 2 (PHH 1969) | 471 | 100% | 100% | ✅ 471 ảnh tiêu bản 300 DPI |
 | `giap-xac` | 1 (ĐVC: Tôm biển) | 132 | 100% | 99.2% | ✅ 100% OCR + WoRMS + 99.2% SeaLifeBase + 40.2% ảnh iNat |
 | `ran-bien` | 1 (Rắn biển VN) | 27 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% SeaLifeBase + 92.6% ảnh (22 sách + iNat) |
+| `sinh-vat-doc` | Chuyên khảo (2021) | 76 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% Toxicology + 100% Ảnh thực địa sách + 100% FishBase/SeaLifeBase + 100% Song ngữ EN |
 
 ---
 
@@ -54,9 +55,9 @@ Deploy: git push origin master + vercel --prod --yes
 
 | Table | Mô tả |
 |---|---|
-| `species` | 2,595 loài, `collection_id` FK, flat schema |
+| `species` | 2,671 loài, `collection_id` FK, flat schema |
 | `species_photos` | Ảnh loài (Supabase Storage bucket `species-photos`) |
-| `collections` | Registry: `ca-bien`, `thuc-vat-bien`, `giap-xac`, `ran-bien` |
+| `collections` | Registry: `ca-bien`, `thuc-vat-bien`, `giap-xac`, `ran-bien`, `sinh-vat-doc` |
 | `literature_sources` | Sách tham khảo hiển thị trên homepage (CRUD từ admin) |
 | `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
 | `audit_log` | Nhật ký thay đổi (jsonb old/new) |

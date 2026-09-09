@@ -172,7 +172,15 @@ export default function GlobalSearch({
                 <div className="ri-sci">{item.scientific_name} {item.authorship || ''}</div>
               </div>
               <span className={`vol-badge ${item.collection_id === 'thuc-vat-bien' ? 'v-plant' : `v${item.volume}`}`}>
-                {item.collection_id === 'thuc-vat-bien' ? 'Thực vật' : `Tập ${item.volume}`}
+                {item.collection_id === 'thuc-vat-bien'
+                  ? 'Thực vật'
+                  : item.collection_id === 'giap-xac'
+                  ? 'Giáp xác'
+                  : item.collection_id === 'ran-bien'
+                  ? 'Rắn biển'
+                  : item.collection_id === 'sinh-vat-doc'
+                  ? 'Độc biển'
+                  : `Tập ${item.volume}`}
               </span>
             </Link>
           ))}

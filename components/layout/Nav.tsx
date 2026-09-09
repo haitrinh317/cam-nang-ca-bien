@@ -32,18 +32,20 @@ export default function Nav() {
             {t('nav.home')}
           </Link>
 
-          {/* One flat link per collection */}
-          {collections.map(col => {
-            const shortName =
-              col.slug === 'ca-bien'
-                ? 'Cá biển'
-                : col.slug === 'thuc-vat-bien'
-                ? 'Rong biển'
-                : col.slug === 'giap-xac'
-                ? 'Giáp xác'
-                : col.slug === 'ran-bien'
-                ? 'Rắn biển'
-                : col.nameVn
+          {/* One flat link per main collection (Desktop keeps 4 primary collections clean) */}
+          {collections
+            .filter(col => col.slug !== 'sinh-vat-doc')
+            .map(col => {
+              const shortName =
+                col.slug === 'ca-bien'
+                  ? 'Cá biển'
+                  : col.slug === 'thuc-vat-bien'
+                  ? 'Rong biển'
+                  : col.slug === 'giap-xac'
+                  ? 'Giáp xác'
+                  : col.slug === 'ran-bien'
+                  ? 'Rắn biển'
+                  : col.nameVn
 
             return (
               <Link

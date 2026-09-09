@@ -1,10 +1,20 @@
 # TODO — Dự án Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-08 14:42 (Fix parseLiterature ngắt dòng mồ côi + Fix ISR cache Admin literature — Deploy Commit 08e9746 Production Vercel)
-> **Next Session Starting Point**: (1) Mở rộng nhóm sinh vật mới (San hô, Thân mềm) theo Động vật chí VN tập tiếp theo. (2) Admin Phase 2: CSV Import + Inline Edit nhanh. (3) Tra bổ sung tên VN ~17 loài rong biển còn thiếu.
-> **Supabase (SSOT):** 2,595 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển). 100% WoRMS cho toàn bộ 2,595 loài.
+> Cập nhật: 2026-09-09 20:20 (Hoàn thành Tích hợp Toàn diện Bộ Sưu Tập Động Vật Độc Biển Việt Nam — 76 loài, 100% WoRMS, 100% Ảnh thực địa, Widget Độc học & Cấp cứu y tế)
+> **Next Session Starting Point**: (1) Thảo luận cùng chú Chình về kiểm tra giao diện và deploy Vercel Production. (2) Mở rộng nhóm sinh vật mới (San hô, Thân mềm).
+> **Supabase (SSOT):** 2,671 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển). 100% WoRMS cho toàn bộ 2,671 loài.
 
-## ✅ Hoàn thành mới nhất (2026-09-08)
+## ✅ Hoàn thành mới nhất (2026-09-09)
+- [x] **Khởi tạo & Hoàn thành 100% Pipeline Bộ Sưu Tập Động Vật Độc Biển Việt Nam (`sinh-vat-doc`) — 76 loài**:
+  - **Kiến trúc & Cấu trúc Dữ liệu**: Thực hiện Phương án 3 (Hybrid Architecture) được chú Chình phê duyệt. Thêm collection `sinh-vat-doc` và chuyên khảo *Động vật độc biển Việt Nam* (PGS.TS. Đào Việt Hà) vào CSDL Supabase.
+  - **Bóc tách 76 loài/taxa**: Trích xuất 100% đặc điểm hình thái, kích thước, phân bố, cơ chế độc tính, triệu chứng lâm sàng và phác đồ sơ cứu từ chuyên khảo.
+  - **Số hóa & Tải lên Kho Ảnh Thực địa**: Chuyển đổi 80 ảnh từ thư mục ảnh gốc độ phân giải cao sang WebP chuẩn và tải lên Supabase Storage bucket `species-photos/sinh-vat-doc/`. Đạt 100% loài có ảnh đại diện và bản quyền tác giả nhiếp ảnh (Trương Sĩ Hải Trình, Thái Minh Quang, Bùi Quang Nghị, Cao Văn Nguyện...).
+  - **WoRMS Sync 100%**: Đồng bộ danh pháp và AphiaID quốc tế cho 76/76 loài vào Supabase.
+  - **Frontend UI & Bento Widget Độc Học (`ToxicologyWidget`)**: Xây dựng widget chuyên biệt cảnh báo nguy cơ tử vong, nhận diện độc tố (TTX, STX, Conotoxins, Ciguatoxin...), cơ chế dược lý, triệu chứng và phác đồ sơ cứu khẩn cấp (Do's & Don'ts). Tích hợp vào `SpecimenCard`, Thống số, Sinh học tab.
+  - **Tích hợp Trang chủ & Điều hướng**: Bổ sung chuyên đề Động vật độc trên Trang chủ (`SpecialGroupsSection`), Top Nav, Bottom Mobile Sheet Drawer và Cổng Quản trị Admin.
+  - **Kiểm định chất lượng**: 0 lỗi TypeScript (`npx tsc --noEmit` PASS 100%).
+
+## ✅ Hoàn thành trước đó (2026-09-08)
 - [x] **Fix ISR cache — Admin chỉnh sách phản ánh ngay trang chủ (Commit 08e9746)**:
   - Phát hiện: `app/(admin)/admin/literature/page.tsx` là `'use client'`, không thể gọi `revalidatePath` — dù toggle `is_visible` xong, trang chủ vẫn giữ bản cache ISR cũ đến 1 tiếng.
   - Tạo mới `app/api/revalidate-home/route.ts` (Server Route): xác thực admin, gọi `revalidatePath('/')` để flush cache ngay lập tức.
