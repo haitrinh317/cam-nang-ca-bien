@@ -455,7 +455,19 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
       </header>
 
       {/* Photo Gallery */}
-      <PhotoGallery speciesId={sp.id} fallbackUrl={sp.photo_url} initialPhotos={initialPhotos as any} />
+      <PhotoGallery
+        speciesId={sp.id}
+        fallbackUrl={sp.photo_url}
+        initialPhotos={initialPhotos as any}
+        fallbackCredit={
+          (bio as any)?.inaturalist ? {
+            photographer: (bio as any).inaturalist.attribution || 'iNaturalist',
+            license: (bio as any).inaturalist.license_code,
+            sourceUrl: (bio as any).inaturalist.photo_url,
+            source: 'iNaturalist'
+          } : null
+        }
+      />
 
       {/* ── Tab Strip ── */}
       <TabStrip

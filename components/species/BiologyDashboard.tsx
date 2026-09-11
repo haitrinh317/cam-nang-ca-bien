@@ -11,7 +11,8 @@ import {
   Egg,
   Fish,
   Leaf,
-  Shrimp
+  Shrimp,
+  Shell
 } from 'lucide-react'
 import IucnBadge from './IucnBadge'
 import BilingualNoteBlock from './BilingualNoteBlock'
@@ -160,7 +161,8 @@ function translateBio(val?: string | null): string {
 export default function BiologyDashboard({ bio, speciesId, collectionId }: Props) {
   const isSeaweed = collectionId === 'thuc-vat-bien' || speciesId.startsWith('thucvat-')
   const isCrustacean = collectionId === 'giap-xac' || speciesId.startsWith('giapxac-')
-  const srcName = isSeaweed ? 'AlgaeBase' : (bio.source || (isCrustacean ? 'SeaLifeBase' : 'FishBase'))
+  const isMollusc = collectionId === 'than-mem' || speciesId.startsWith('thanmem-')
+  const srcName = isSeaweed ? 'AlgaeBase' : (bio.source || (isCrustacean || isMollusc ? 'SeaLifeBase' : 'FishBase'))
 
   // Formatted Quick Metrics
   const weightData = formatWeight(bio.maxWeight)
@@ -184,6 +186,8 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
             <Leaf size={20} className="text-emerald-500" />
           ) : isCrustacean ? (
             <Shrimp size={20} className="text-rose-400" />
+          ) : isMollusc ? (
+            <Shell size={20} className="text-amber-500" />
           ) : (
             <Fish size={20} className="text-cyan-500" />
           )}

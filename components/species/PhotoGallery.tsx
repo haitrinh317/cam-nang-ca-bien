@@ -21,6 +21,12 @@ interface Props {
   speciesId: string
   fallbackUrl?: string | null  // legacy photo_url from species table
   initialPhotos?: Photo[]      // server-fetched photos — eliminates client waterfall
+  fallbackCredit?: {
+    photographer?: string | null
+    license?: string | null
+    sourceUrl?: string | null
+    source?: string | null
+  } | null
 }
 
 function sortPhotos(data: Photo[]): Photo[] {
@@ -33,7 +39,7 @@ function sortPhotos(data: Photo[]): Photo[] {
   })
 }
 
-export default function PhotoGallery({ speciesId, fallbackUrl, initialPhotos }: Props) {
+export default function PhotoGallery({ speciesId, fallbackUrl, initialPhotos, fallbackCredit }: Props) {
   const [photos, setPhotos] = useState<Photo[]>(initialPhotos ? sortPhotos(initialPhotos) : [])
   const [mainIdx, setMainIdx] = useState(0)
   const [loaded, setLoaded] = useState(!!initialPhotos)
@@ -71,9 +77,26 @@ export default function PhotoGallery({ speciesId, fallbackUrl, initialPhotos }: 
   if (loaded && photos.length === 0) {
     if (!fallbackUrl) return null
     return (
-      <figure className="specimen__photo">
-        <img src={fallbackUrl} alt="" decoding="async" fetchPriority="high" />
-      </figure>
+      <div className="specimen__gallery">
+        <figure className="specimen__photo specimen__photo--main">
+          <img src={fallbackUrl} alt="" decoding="async" fetchPriority="high" />
+        </figure>
+        {fallbackCredit && (
+          <div className="specimen__photo-credit">
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              <Camera size={14} /> {fallbackCredit.photographer || 'Unknown'} ·{' '}
+              {fallbackCredit.sourceUrl ? (
+                <a href={fallbackCredit.sourceUrl} target="_blank" rel="noopener">
+                  {fallbackCredit.source || 'iNaturalist'}
+                </a>
+              ) : (
+                fallbackCredit.source || 'iNaturalist'
+              )}
+              {fallbackCredit.license && ` (${fallbackCredit.license.toUpperCase()})`}
+            </span>
+          </div>
+        )}
+      </div>
     )
   }
 

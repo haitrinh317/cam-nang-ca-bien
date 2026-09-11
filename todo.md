@@ -427,3 +427,11 @@
 ### Session 2026-09-06 (Sáng)
 - [x] Build Knowledge Graph toàn bộ codebase bằng /understand — 183 files, 405 nodes, 455 edges, 8 layers, 12 tour steps (2026-09-06)
 - [x] Dashboard tại http://127.0.0.1:4242 (chạy manually: cd ~/.understand-anything-plugin/packages/dashboard && npm run dev)
+
+### Session 2026-09-11
+- [x] Khởi tạo collection `than-mem` (Thân mềm / Mollusca) và OCR thí điểm 74 loài Họ Ốc sứ (Cypraeidae) từ Hylleberg 2003.
+- [x] Đồng bộ và chuẩn hóa dữ liệu Sinh học SeaLifeBase v25.04 cho 74 loài Họ Ốc sứ (`scripts/sync_thanmem_sealifebase.py`).
+- [x] Nâng cấp `BiologyDashboard.tsx`: Thêm nhận diện `isMollusc`, icon `Shell`, hiển thị huy hiệu SeaLifeBase và kích hoạt đầy đủ 3 khối chuyên đề.
+- [x] Đồng bộ 210 ảnh nghiên cứu từ iNaturalist vào Supabase Storage (`species-photos/than-mem/`) và bảng `species_photos`.
+- [x] Nâng cấp `PhotoGallery.tsx`: Hiển thị credit bản quyền iNaturalist, hỗ trợ fallbackCredit khi chỉ có ảnh đơn.
+
