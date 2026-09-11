@@ -382,10 +382,10 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
 
   // Taxonomy breadcrumb — normalized
   const rawCrumbs = [
-    sp.tax_class_vn  ? { rank: 'Lớp',   rankKey: 'class'  as const, vn: sp.tax_class_vn,  lat: sp.tax_class_latin }  : null,
-    sp.tax_order_vn  ? { rank: 'Bộ',    rankKey: 'order'  as const, vn: sp.tax_order_vn,  lat: sp.tax_order_latin }  : null,
-    sp.tax_family_vn ? { rank: 'Họ',    rankKey: 'family' as const, vn: sp.tax_family_vn, lat: sp.tax_family_latin } : null,
-    sp.tax_genus_vn  ? { rank: sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống', rankKey: 'genus' as const, vn: sp.tax_genus_vn,  lat: sp.tax_genus_latin }  : null,
+    (sp.tax_class_vn || sp.tax_class_latin)   ? { rank: 'Lớp',   rankKey: 'class'  as const, vn: sp.tax_class_vn || sp.tax_class_latin || '',  lat: sp.tax_class_latin }  : null,
+    (sp.tax_order_vn || sp.tax_order_latin)   ? { rank: 'Bộ',    rankKey: 'order'  as const, vn: sp.tax_order_vn || sp.tax_order_latin || '',  lat: sp.tax_order_latin }  : null,
+    (sp.tax_family_vn || sp.tax_family_latin) ? { rank: 'Họ',    rankKey: 'family' as const, vn: sp.tax_family_vn || (sp.tax_family_latin ? `Họ ${sp.tax_family_latin}` : ''), lat: sp.tax_family_latin } : null,
+    (sp.tax_genus_vn || sp.tax_genus_latin)   ? { rank: sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống', rankKey: 'genus' as const, vn: sp.tax_genus_vn || (sp.tax_genus_latin ? `${sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống'} ${sp.tax_genus_latin}` : ''),  lat: sp.tax_genus_latin }  : null,
   ].filter(Boolean) as { rank: string; rankKey: 'class' | 'order' | 'family' | 'genus'; vn: string; lat: string | null }[]
 
   const crumbs = rawCrumbs.map(c => {

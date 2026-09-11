@@ -162,7 +162,8 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
   const isSeaweed = collectionId === 'thuc-vat-bien' || speciesId.startsWith('thucvat-')
   const isCrustacean = collectionId === 'giap-xac' || speciesId.startsWith('giapxac-')
   const isMollusc = collectionId === 'than-mem' || speciesId.startsWith('thanmem-')
-  const srcName = isSeaweed ? 'AlgaeBase' : (bio.source || (isCrustacean || isMollusc ? 'SeaLifeBase' : 'FishBase'))
+  const isCoral = collectionId === 'san-ho' || speciesId.startsWith('sanho-')
+  const srcName = isSeaweed ? 'AlgaeBase' : (bio.source || (isCrustacean || isMollusc || isCoral ? 'SeaLifeBase' : 'FishBase'))
 
   // Formatted Quick Metrics
   const weightData = formatWeight(bio.maxWeight)
@@ -188,6 +189,8 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
             <Shrimp size={20} className="text-rose-400" />
           ) : isMollusc ? (
             <Shell size={20} className="text-amber-500" />
+          ) : isCoral ? (
+            <Sparkles size={20} style={{ color: '#f472b6' }} />
           ) : (
             <Fish size={20} className="text-cyan-500" />
           )}
