@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-11 17:15 (Deploy Vercel Production commit bc4b16a — Chuẩn hóa biology SeaLifeBase v25.04 & 210 ảnh iNaturalist cho 74 loài Họ Ốc sứ than-mem)
+> **Cập nhật lần cuối:** 2026-09-11 23:56 (Deploy Vercel Production commit 7e01466 — Tích hợp Bộ sưu tập San hô Việt Nam san-ho 42 loài chuyên khảo TS. Hoàng Xuân Bền)
 > **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
@@ -57,7 +57,7 @@ Deploy: git push origin master + vercel --prod --yes
 
 | Table | Mô tả |
 |---|---|
-| `species` | 2,671 loài, `collection_id` FK, flat schema |
+| `species` | 2,787 loài, `collection_id` FK, flat schema |
 | `species_photos` | Ảnh loài (Supabase Storage bucket `species-photos`) |
 | `collections` | Registry: `ca-bien`, `thuc-vat-bien`, `giap-xac`, `ran-bien`, `sinh-vat-doc`, `than-mem`, `san-ho` |
 | `literature_sources` | Sách tham khảo hiển thị trên homepage (CRUD từ admin) |
