@@ -81,10 +81,10 @@ const COLLECTIONS_LIST: CollectionItem[] = [
     name: 'Động vật thân mềm',
     nameEn: 'Marine Mollusca',
     desc: 'Ốc, sò, mực, bạch tuộc biển',
-    stats: 'Dự kiến 500+ loài',
+    stats: '74 loài Pilot • Họ Ốc sứ',
     icon: <span style={{ fontSize: '24px', lineHeight: 1 }}>🐚</span>,
-    accent: '#cbd5e1',
-    available: false,
+    accent: '#e8c4ff',
+    available: true,
   },
 ]
 

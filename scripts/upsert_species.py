@@ -88,21 +88,25 @@ def normalize_flat(sp: dict) -> dict:
         "worms_accepted_name", "worms_id", "worms_status", "worms_synced_at"
     }
 
-    row = {k: v for k, v in sp.items() if k in VALID_COLS}
+    row = {}
+    NULL_ALLOWED = {"worms_id", "biology", "worms_synced_at", "deleted_at"}
+    for k in sorted(VALID_COLS):
+        val = sp.get(k)
+        if val is None or val == "":
+            row[k] = None if k in NULL_ALLOWED else ""
+        else:
+            row[k] = val
+
     row["synonyms"] = json.dumps(syns, ensure_ascii=False)
     row["conservation_status"] = cs
-    row.setdefault("collection_id", "ca-bien")
+    if not row.get("collection_id"):
+        row["collection_id"] = "ca-bien"
 
     # Infer tax_class for ca-bien if missing
     if row.get("collection_id") == "ca-bien" and not row.get("tax_class_vn"):
         class_vn, class_latin = get_class(row.get("tax_order_latin", ""))
         row["tax_class_vn"] = class_vn
         row["tax_class_latin"] = class_latin
-
-    # Null → empty string for text fields, keep worms_id/biology as None
-    for k, v in row.items():
-        if v is None and k not in ("worms_id", "biology"):
-            row[k] = ""
 
     return row
 

@@ -48,6 +48,12 @@ export const STATIC_COLLECTIONS: Collection[] = [
     icon: '☣️', accentColor: '#fb7185', volumeCount: 1,
     status: 'active', sortOrder: 5,
   },
+  {
+    id: 'than-mem', slug: 'than-mem',
+    nameVn: 'Động vật thân mềm', nameEn: 'Marine Molluscs of Vietnam',
+    icon: '🐚', accentColor: '#e8c4ff', volumeCount: 1,
+    status: 'active', sortOrder: 6,
+  },
 ]
 
 export function getCollectionBySlug(slug: string): Collection | undefined {

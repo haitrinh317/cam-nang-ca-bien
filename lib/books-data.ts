@@ -221,6 +221,29 @@ export const BOOKS_BY_COLLECTION: Record<string, BookMetadata[]> = {
       ],
     },
   ],
+  'than-mem': [
+    {
+      id: 'molluscs-of-vietnam-2003',
+      title: 'Checklist of Marine Molluscs of Vietnam',
+      badge: 'Danh lục chuyên khảo (2.500+ loài)',
+      author: 'Jørgen Hylleberg & Richard N. Kilburn',
+      publisher: 'Phuket Marine Biological Center Special Publication (Vol. 28)',
+      yearRange: '2003',
+      totalSpecies: 2500,
+      description: 'Công trình tổng điều tra, hệ thống hóa và lập danh mục phân loại học toàn diện nhất về các loài Động vật thân mềm biển (Ốc, Sò, Mực, Bạch tuộc...) tại các vùng biển Việt Nam.',
+      volumes: [
+        {
+          volume: 1,
+          roman: '1',
+          year: '2003',
+          title: 'Marine Molluscs of Vietnam',
+          subTitle: 'Danh mục phân loại học, đồng danh, phân bố và dẫn liệu mẫu vật',
+          author: 'J. Hylleberg & R.N. Kilburn',
+          speciesCount: 2500,
+        },
+      ],
+    },
+  ],
 }
 
 export function getBooksForCollection(collectionSlug: string): BookMetadata[] {

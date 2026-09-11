@@ -7,9 +7,9 @@
 
 ---
 
-## 📊 Kiểm Kê Dữ Liệu (Supabase — 2026-09-09)
+## 📊 Kiểm Kê Dữ Liệu (Supabase — 2026-09-11)
 
-### Tổng: 2,671 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển)
+### Tổng: 2,745 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm biển)
 
 | Collection | Tập | Loài | WoRMS | Biology / Morphology | Trạng thái |
 |---|:---:|:---:|:---:|:---:|---|
@@ -24,6 +24,7 @@
 | `giap-xac` | 1 (ĐVC: Tôm biển) | 132 | 100% | 99.2% | ✅ 100% OCR + WoRMS + 99.2% SeaLifeBase + 40.2% ảnh iNat |
 | `ran-bien` | 1 (Rắn biển VN) | 27 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% SeaLifeBase + 92.6% ảnh (22 sách + iNat) |
 | `sinh-vat-doc` | Chuyên khảo (2021) | 76 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% Toxicology + 100% Ảnh thực địa sách + 100% FishBase/SeaLifeBase + 100% Song ngữ EN |
+| `than-mem` | 1 (Hylleberg 2003) | 74 | 100% | 85.1% | ✅ Pilot Họ Ốc sứ Cypraeidae: 100% OCR + 100% WoRMS + 85.1% SeaLifeBase + 97.3% ảnh iNat + 79.7% tên VN chuẩn |
 
 ---
 

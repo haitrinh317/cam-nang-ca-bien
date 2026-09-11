@@ -1,10 +1,22 @@
 # TODO — Dự án Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-09 23:32 (Deploy Vercel Production thành công commit 67d7c8f — Bộ soạn thảo phân bố địa lý trực quan & Chuẩn hóa Zod schema)
-> **Next Session Starting Point**: Tiếp tục mở rộng các bộ sưu tập sinh vật biển mới (San hô, Thân mềm) hoặc nâng cấp Admin Phase 2 (CSV Import + Inline Edit).
-> **Supabase (SSOT):** 2,671 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển). 100% WoRMS cho toàn bộ 2,671 loài.
+> Cập nhật: 2026-09-11 (Hoàn thành Phase 0 & Phase 1 Pilot Họ Ốc sứ Cypraeidae 74 loài collection than-mem — 100% WoRMS + SeaLifeBase + Ảnh iNat)
+> **Next Session Starting Point**: Tiếp tục mở rộng collection `than-mem` Phase 2 cho các họ tiếp theo từ Hylleberg 2003, hoặc triển khai di chuyển các loài thân mềm độc theo ADR-001.
+> **Supabase (SSOT):** 2,745 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm biển). 100% WoRMS cho toàn bộ 2,745 loài.
 
-## ✅ Hoàn thành mới nhất (2026-09-09)
+## ✅ Hoàn thành mới nhất (2026-09-11)
+- [x] **Khởi tạo collection `than-mem` và Hoàn thành Pilot test Họ Ốc sứ Cypraeidae (74 loài)**:
+  - **Quyết định kiến trúc ADR-001 (Taxonomy-First)**: Thống nhất lấy phân loại học làm trục chính (Mollusca), chuyển `sinh-vat-doc` thành Thematic Special Group lọc đa ngành (`biology->toxicology IS NOT NULL`).
+  - **Phase 0 (Hạ tầng)**: Tạo collection `than-mem` trong CSDL Supabase, cập nhật `lib/collections.ts`, `lib/books-data.ts` (cuốn Hylleberg & Kilburn 2003), khởi tạo từ điển họ tiếng Việt `scripts/data/mollusc_family_vi.json`.
+  - **Bước ① (OCR Vision)**: Bóc tách 74 loài từ 7 trang scan (PDF 47–53, sách 49–55) bằng Gemini 3.6 Flash; tự động ghép nối văn bản continuation ngắt qua ranh giới trang (như *Cypraea arabica*).
+  - **Bước ② (WoRMS Validation)**: 100% (74/74) loài được xác thực AphiaID và danh pháp hợp lệ mới nhất (1 accepted *Cypraea tigris*, 73 loài đã chuyển sang các chi hiện đại *Monetaria*, *Mauritia*, *Lyncina*, *Erronea*, *Naria*, *Palmadusta*, *Talparia*...).
+  - **Bước ③ (SeaLifeBase Sync)**: 85.1% (63/74 loài) được làm giàu kích thước vỏ tối đa, độ sâu phân bố, sinh cảnh rạn san hô và tập tính qua DuckDB offline cache.
+  - **Bước ④ (iNaturalist Photos)**: 97.3% (72/74 loài) được gán ảnh thực địa nghiên cứu (research-grade) kèm bản quyền tác giả.
+  - **Bước ⑤ (Tên tiếng Việt đối chiếu)**: 79.7% (59/74 loài) được gán tên tiếng Việt thông dụng chuẩn (*Ốc sứ hổ, Ốc sứ nhẫn, Ốc tiền, Ốc sứ đầu rắn, Ốc sứ A-rập, Ốc sứ chuột chũi, Ốc sứ đồi mồi...*); các loài còn lại chuẩn hóa theo Tầng 3.
+  - **Bước ⑥ (Supabase Upsert)**: Nạp thành công 74/74 records vào Supabase (`thanmem-species-1` đến `thanmem-species-74`).
+  - **Kiểm định Build**: Kích hoạt `than-mem` trên `BottomNav.tsx` và chạy `npm run build` Next.js 16 thành công 100%, 0 lỗi TypeScript.
+
+## ✅ Hoàn thành trước đó (2026-09-09)
 - [x] **Nâng Cấp Bộ Soạn Thảo Phân Bố Loài & Chuẩn Hóa Schema Zod Frontend - Backend (`SpeciesForm.tsx`, `DistributionEditor.tsx`, `SpecimenVisualWidgets.tsx`, `lib/distribution.ts`)**:
   - Khắc phục lỗi logic bóc tách ở `SpecimenVisualWidgets.tsx`: ngăn chặn việc tự ý cắt văn bản tiếng Việt của các loài chỉ phân bố ở Việt Nam (như Sao biển Gai) rồi đẩy nhầm sang mục THẾ GIỚI.
   - Xây dựng module tiện ích `lib/distribution.ts` với `splitDistribution`, `formatDistribution`, `parseDistribution` dùng chung.
