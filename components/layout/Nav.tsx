@@ -45,6 +45,8 @@ export default function Nav() {
                   ? 'Giáp xác'
                   : col.slug === 'ran-bien'
                   ? 'Rắn biển'
+                  : col.slug === 'san-ho'
+                  ? 'San hô'
                   : col.nameVn
 
             return (

@@ -54,6 +54,12 @@ export const STATIC_COLLECTIONS: Collection[] = [
     icon: '🐚', accentColor: '#e8c4ff', volumeCount: 1,
     status: 'active', sortOrder: 6,
   },
+  {
+    id: 'san-ho', slug: 'san-ho',
+    nameVn: 'San hô Việt Nam', nameEn: 'Corals of Vietnam',
+    icon: '🪸', accentColor: '#f9a8d4', volumeCount: 1,
+    status: 'active', sortOrder: 7,
+  },
 ]
 
 export function getCollectionBySlug(slug: string): Collection | undefined {

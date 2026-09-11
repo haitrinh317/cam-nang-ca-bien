@@ -9,7 +9,7 @@
 
 ## 📊 Kiểm Kê Dữ Liệu (Supabase — 2026-09-11)
 
-### Tổng: 2,745 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm biển)
+### Tổng: 2,787 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm + 42 san hô)
 
 | Collection | Tập | Loài | WoRMS | Biology / Morphology | Trạng thái |
 |---|:---:|:---:|:---:|:---:|---|
@@ -25,6 +25,7 @@
 | `ran-bien` | 1 (Rắn biển VN) | 27 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% SeaLifeBase + 92.6% ảnh (22 sách + iNat) |
 | `sinh-vat-doc` | Chuyên khảo (2021) | 76 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% Toxicology + 100% Ảnh thực địa sách + 100% FishBase/SeaLifeBase + 100% Song ngữ EN |
 | `than-mem` | 1 (Hylleberg 2003) | 74 | 100% | 100% | ✅ Pilot Họ Ốc sứ: 100% WoRMS + 100% SeaLifeBase + 210 ảnh WebP Storage + 79.7% tên VN |
+| `san-ho` | Chuyên khảo (TS. Bền) | 42 | 97.6% (41/42) | 97.6% (41/42) | ✅ 100% OCR + 100% WoRMS (loài 30 khuyết trang 102) + 16 SeaLifeBase + 24 ảnh WebP Storage |
 
 ---
 
@@ -58,7 +59,7 @@ Deploy: git push origin master + vercel --prod --yes
 |---|---|
 | `species` | 2,671 loài, `collection_id` FK, flat schema |
 | `species_photos` | Ảnh loài (Supabase Storage bucket `species-photos`) |
-| `collections` | Registry: `ca-bien`, `thuc-vat-bien`, `giap-xac`, `ran-bien`, `sinh-vat-doc` |
+| `collections` | Registry: `ca-bien`, `thuc-vat-bien`, `giap-xac`, `ran-bien`, `sinh-vat-doc`, `than-mem`, `san-ho` |
 | `literature_sources` | Sách tham khảo hiển thị trên homepage (CRUD từ admin) |
 | `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
 | `audit_log` | Nhật ký thay đổi (jsonb old/new) |

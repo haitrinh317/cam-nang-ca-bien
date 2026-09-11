@@ -1,10 +1,19 @@
 # TODO — Dự án Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-11 (Hoàn thành Phase 0 & Phase 1 Pilot Họ Ốc sứ Cypraeidae 74 loài collection than-mem — 100% WoRMS + SeaLifeBase + Ảnh iNat)
-> **Next Session Starting Point**: Tiếp tục mở rộng collection `than-mem` Phase 2 cho các họ tiếp theo từ Hylleberg 2003, hoặc triển khai di chuyển các loài thân mềm độc theo ADR-001.
-> **Supabase (SSOT):** 2,745 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm biển). 100% WoRMS cho toàn bộ 2,745 loài.
+> Cập nhật: 2026-09-11 (Hoàn thành cả hai collection mới: than-mem 74 loài & san-ho 42 loài)
+> **Next Session Starting Point**: Tiếp tục mở rộng collection `than-mem` Phase 2 cho các họ tiếp theo từ Hylleberg 2003, hoặc bổ sung scan trang 102 cho san hô.
+> **Supabase (SSOT):** 2,787 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm biển + 42 san hô).
 
 ## ✅ Hoàn thành mới nhất (2026-09-11)
+- [x] **Khởi tạo & Hoàn thành Toàn Diện Pipeline Bộ Sưu Tập San Hô Việt Nam (`san-ho`) — 42 loài (Chuyên khảo TS. Hoàng Xuân Bền)**:
+  - **Khảo sát & Xử lý hướng xoay scan**: Phân tích 33 file HEIC (3024×4032), xoay 90° chuẩn 31 ảnh ngang, xuất file PDF chất lượng cao `San-ho-8-ngan-Hoang-Xuan-Ben-Trang-80-112.pdf` (53.58 MB, 33 trang). Phát hiện và ghi nhận chính xác việc khuyết trang 102 (loài 30 & nửa sau loài 29).
+  - **Khởi tạo Database & Web Config**: Tạo collection `san-ho` trong bảng `collections` của Supabase (`sort_order = 7`, icon 🪸, màu `#f9a8d4`), tích hợp vào `STATIC_COLLECTIONS`, `books-data.ts`, `AdminSidebar.tsx`, `Nav.tsx`, `BottomNav.tsx`.
+  - **OCR Bóc tách 42 loài (Phase 1)**: Bóc tách cấu trúc khoa học trâm xương (sclerites), hình thái ngoài, sinh thái, phân bố VN và thế giới, tên gốc đồng danh. UPSERT thành công 100% 42 loài vào Supabase bảng `species`.
+  - **WoRMS Sync 100% (Phase 2)**: Đồng bộ danh pháp và AphiaID quốc tế cho 41/41 loài có dữ liệu (100% valid trên WoRMS).
+  - **SeaLifeBase Biology Enrichment (Phase 3)**: Đối chiếu offline DuckDB, bổ sung kích thước, độ sâu (depth ranges) và tên tiếng Anh thương mại/khoa học chính thức cho 16 loài san hô.
+  - **Đồng bộ Ảnh Khoa học & Thực địa (Phase 4)**: Upload 24 ảnh WebP (6 ảnh mẫu vật/lặn biển từ SeaLifeBase + 18 ảnh thực địa research-grade từ iNaturalist) lên Supabase Storage bucket `species-photos` và gán ảnh đại diện `photo_url`.
+  - **Wikidata Name Enrichment (Phase 5)**: Bổ sung tên tiếng Anh và tên gọi tiếng Việt thay thế cho các loài từ Wikidata.
+  - **Audit Chất lượng Dữ liệu (Phase 6)**: Đạt 40 loài Complete (95.2%), 1 loài Partial (#29, 2.4%), 1 loài Skeleton (#30, 2.4% do khuyết trang 102). 0 lỗi TypeScript (`npx tsc --noEmit` PASS).
 - [x] **Khởi tạo collection `than-mem` và Hoàn thành Pilot test Họ Ốc sứ Cypraeidae (74 loài)**:
   - **Quyết định kiến trúc ADR-001 (Taxonomy-First)**: Thống nhất lấy phân loại học làm trục chính (Mollusca), chuyển `sinh-vat-doc` thành Thematic Special Group lọc đa ngành (`biology->toxicology IS NOT NULL`).
   - **Phase 0 (Hạ tầng)**: Tạo collection `than-mem` trong CSDL Supabase, cập nhật `lib/collections.ts`, `lib/books-data.ts` (cuốn Hylleberg & Kilburn 2003), khởi tạo từ điển họ tiếng Việt `scripts/data/mollusc_family_vi.json`.

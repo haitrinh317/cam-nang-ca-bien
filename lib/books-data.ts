@@ -244,6 +244,29 @@ export const BOOKS_BY_COLLECTION: Record<string, BookMetadata[]> = {
       ],
     },
   ],
+  'san-ho': [
+    {
+      id: 'san-ho-8-ngan',
+      title: 'Đa dạng sinh học san hô tám ngăn vùng biển phía Nam Việt Nam',
+      badge: 'Chuyên khảo (42 loài)',
+      author: 'TS. Hoàng Xuân Bền',
+      publisher: 'Viện Hải dương học Nha Trang',
+      yearRange: 'Chuyên khảo',
+      totalSpecies: 42,
+      description: 'Công trình nghiên cứu định loại hình thái, cấu trúc trâm xương, sinh thái và phân bố các loài San hô tám ngăn (Octocorallia) tại vùng biển phía Nam Việt Nam.',
+      volumes: [
+        {
+          volume: 1,
+          roman: 'I',
+          year: '',
+          title: 'San hô tám ngăn vùng biển phía Nam Việt Nam',
+          subTitle: 'Octocorallia — Hình thái ngoài, trâm xương, sinh thái và phân bố',
+          author: 'TS. Hoàng Xuân Bền',
+          speciesCount: 42,
+        },
+      ],
+    },
+  ],
 }
 
 export function getBooksForCollection(collectionSlug: string): BookMetadata[] {

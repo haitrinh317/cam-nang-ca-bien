@@ -29,6 +29,7 @@ const NAV_GROUPS: { section: string; items: NavItem[] }[] = [
       { href: '/admin/giap-xac', icon: <Shrimp size={18} />, label: 'Giáp xác biển', badge: '132' },
       { href: '/admin/ran-bien', icon: <span style={{ fontSize: '15px', lineHeight: 1 }}>🐍</span>, label: 'Rắn biển Việt Nam', badge: '27' },
       { href: '/admin/sinh-vat-doc', icon: <span style={{ fontSize: '15px', lineHeight: 1 }}>☣️</span>, label: 'Động vật độc biển', badge: '76' },
+      { href: '/admin/san-ho', icon: <span style={{ fontSize: '15px', lineHeight: 1 }}>🪸</span>, label: 'San hô Việt Nam', badge: '42' },
     ],
   },
 ]
