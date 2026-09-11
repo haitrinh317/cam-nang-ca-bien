@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-09 23:32 (Deploy Vercel Production commit 67d7c8f — Bộ soạn thảo phân bố địa lý trực quan Live Preview & Chuẩn hóa Zod schema)
+> **Cập nhật lần cuối:** 2026-09-11 17:15 (Deploy Vercel Production commit bc4b16a — Chuẩn hóa biology SeaLifeBase v25.04 & 210 ảnh iNaturalist cho 74 loài Họ Ốc sứ than-mem)
 > **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
@@ -24,7 +24,7 @@
 | `giap-xac` | 1 (ĐVC: Tôm biển) | 132 | 100% | 99.2% | ✅ 100% OCR + WoRMS + 99.2% SeaLifeBase + 40.2% ảnh iNat |
 | `ran-bien` | 1 (Rắn biển VN) | 27 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% SeaLifeBase + 92.6% ảnh (22 sách + iNat) |
 | `sinh-vat-doc` | Chuyên khảo (2021) | 76 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% Toxicology + 100% Ảnh thực địa sách + 100% FishBase/SeaLifeBase + 100% Song ngữ EN |
-| `than-mem` | 1 (Hylleberg 2003) | 74 | 100% | 85.1% | ✅ Pilot Họ Ốc sứ Cypraeidae: 100% OCR + 100% WoRMS + 85.1% SeaLifeBase + 97.3% ảnh iNat + 79.7% tên VN chuẩn |
+| `than-mem` | 1 (Hylleberg 2003) | 74 | 100% | 100% | ✅ Pilot Họ Ốc sứ: 100% WoRMS + 100% SeaLifeBase + 210 ảnh WebP Storage + 79.7% tên VN |
 
 ---
 
