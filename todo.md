@@ -5,6 +5,9 @@
 > **Supabase (SSOT):** 2,787 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm biển + 42 san hô).
 
 ## ✅ Hoàn thành mới nhất (2026-09-12)
+- [x] **Tích hợp Sách Thân mềm vào Quản lý tài liệu gốc (`literature_sources`)**:
+  - Đưa danh lục chuyên khảo *Checklist of Marine Molluscs of Vietnam* (Jørgen Hylleberg & Richard N. Kilburn, 2003, 74 loài pilot Họ Ốc sứ / 2.500+ danh lục) vào CSDL Supabase bảng `literature_sources`.
+  - Thiết lập liên kết `/than-mem`, phân loại biểu tượng `shell`, huy hiệu `Danh Lục Chuyên Khảo` và hiển thị đồng bộ trên trang chủ cùng trang Admin.
 - [x] **Tích hợp Sách San hô vào Quản lý tài liệu gốc (`literature_sources`)**:
   - Đưa chuyên khảo *Đa dạng sinh học san hô tám ngăn vùng biển phía Nam Việt Nam* (TS. Hoàng Xuân Bền, 2011, 42 loài) vào CSDL Supabase bảng `literature_sources`.
   - Thiết lập liên kết trực tiếp `/san-ho`, phân loại biểu tượng `anchor`, huy hiệu `Chuyên Khảo San Hô` và hiển thị đồng bộ trên trang chủ cùng trang Admin Quản lý tài liệu gốc.
