@@ -187,48 +187,149 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
-/* ─── Nav Groups (collection dropdowns) ─── */
-.nav-group {
+/* ─── Nav Dropdown (Bộ sưu tập sinh vật) ─── */
+.nav-dropdown {
   position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
-.nav-group-label {
+.nav-dropdown-trigger {
   color: var(--color-ink-on-navy-70);
-  font-weight: 600;
-  font-size: var(--text-sm);
-  padding: var(--space-xs) var(--space-md);
+  font-weight: 500;
+  font-size: 0.84rem;
+  padding: 6px 12px;
   border-radius: var(--radius-pill);
-  cursor: default;
+  transition: all var(--dur-fast) var(--ease-out);
   white-space: nowrap;
-  transition: color var(--dur-fast) var(--ease-out);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
 }
 
-.nav-group:hover .nav-group-label {
+.nav-dropdown-trigger:hover,
+.nav-dropdown-trigger[aria-expanded="true"] {
+  background: var(--color-white-hover);
   color: var(--color-cyan-raw);
 }
 
-/* Desktop: dropdown on hover */
-.nav-group .nav-link {
-  display: none;
+.nav-dropdown-trigger.active {
+  background: rgba(0, 212, 184, 0.16);
+  color: var(--color-cyan-on-navy);
+  border-color: rgba(0, 212, 184, 0.35);
+  font-weight: 600;
 }
 
-.nav-group:hover .nav-link,
-.nav-group:focus-within .nav-link {
-  display: block;
+.nav-dropdown-icon {
+  transition: transform var(--dur-fast) var(--ease-out);
+  display: inline-flex;
+}
+
+.nav-dropdown-trigger[aria-expanded="true"] .nav-dropdown-icon {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu Glassmorphism Container */
+.nav-dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 180px;
-  background: var(--color-paper-navy);
-  border: 1px solid var(--color-cyan-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-2xs) 0;
-  z-index: 100;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  background: rgba(11, 19, 41, 0.96);
+  backdrop-filter: blur(28px) saturate(1.8);
+  -webkit-backdrop-filter: blur(28px) saturate(1.8);
+  border: 1px solid rgba(111, 255, 232, 0.22);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px -8px rgba(3, 7, 18, 0.7), 0 0 24px rgba(0, 212, 184, 0.14);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  z-index: 220;
+  animation: navDropdownPop 160ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nav-group .nav-link + .nav-link {
-  top: calc(100% + 2.2rem);
+@keyframes navDropdownPop {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+
+/* Dropdown Item Card */
+.nav-dropdown-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.nav-dropdown-card:hover {
+  background: rgba(0, 212, 184, 0.08);
+  border-color: rgba(0, 212, 184, 0.28);
+  transform: translateY(-1px);
+}
+
+.nav-dropdown-card.active {
+  background: rgba(0, 212, 184, 0.16);
+  border-color: var(--color-cyan-raw);
+}
+
+.nav-dropdown-card-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 16px;
+}
+
+.nav-dropdown-card-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.nav-dropdown-card-title {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: #f8fafc;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-dropdown-card:hover .nav-dropdown-card-title {
+  color: var(--color-cyan-on-navy);
+}
+
+.nav-dropdown-card-stats {
+  font-size: 0.69rem;
+  color: var(--color-ink-on-navy-70);
+  line-height: 1.25;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 

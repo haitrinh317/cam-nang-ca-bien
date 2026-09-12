@@ -5,6 +5,11 @@
 > **Supabase (SSOT):** 2,787 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm biển + 42 san hô).
 
 ## ✅ Hoàn thành mới nhất (2026-09-12)
+- [x] **Thu gọn & Tinh giản Thanh Top Navbar (`components/layout/Nav.tsx`, `styles/globals.css`, `styles/responsive.css`)**:
+  - Triển khai **Phương án 1** theo thảo luận và phê duyệt: Giữ `Trang chủ` + `Cá biển` (nhóm chủ lực 1.764 loài) lộ ngoài thanh navbar, gom toàn bộ 6 nhóm sinh vật còn lại vào popover/dropdown kính mờ **"Bộ sưu tập ▾"** (`thuc-vat-bien`, `giap-xac`, `ran-bien`, `sinh-vat-doc`, `than-mem`, `san-ho`).
+  - Giao diện dropdown: 2 cột gọn gàng kèm icon viền màu accent, số lượng loài, mô tả ngắn, hiệu ứng hover nhấc nhẹ và glowing border, đóng mượt mà khi click ra ngoài hoặc nhấn `Escape`.
+  - Tự động nhận diện active state trên nút trigger "Bộ sưu tập" khi người dùng truy cập bất kỳ nhóm con nào.
+  - Kiểm tra tương thích song ngữ (VI/EN) và kiểm định TypeScript `npx tsc --noEmit` pass 100%.
 - [x] **Hoàn thành Phase 2 Hợp nhất Cá biển độc (25 taxa giữa `ca-bien` và `sinh-vat-doc`)**:
   - **Đối soát 1-1**: Xác định chính xác 17 loài cá độc trùng khớp 1-1 giữa *Danh mục Cá biển Việt Nam* (Tập I, III, V) & *Atlas Cá rạn san hô* (Tập VI) với *Động vật độc biển* (2021) (16 loài cá nóc *Arothron, Takifugu, Lagocephalus, Amblyrhynchotes, Chelonodon* và 1 loài cá hồng *Lutjanus bohar* gây ngộ độc Ciguatera).
   - **Chuẩn hóa 8 taxa độc bản**: Chuẩn hóa tài liệu dẫn cho 4 chuyên đề cấp Chi (*Dasyatis sp., Pterois sp., Scorpaena sp., Synanceja sp.*) và 4 loài cá nóc ghi nhận mới (*Torquigener gloerfelti, T. brevipinnis, Lagocephalus suezensis, L. gloveri*).

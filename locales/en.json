@@ -1,6 +1,8 @@
 {
   "nav": {
     "home": "Home",
+    "fish": "Marine Fish",
+    "collections": "Collections",
     "browse": "Taxonomy Tree",
     "byVolume": "Browse by Volume",
     "openMenu": "Open menu",
