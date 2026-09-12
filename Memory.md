@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-12 10:25 (Hoàn thành Phase 1 Rắn biển 27 loài & Phase 2 Cá biển độc 25 taxa — Hợp nhất Tri thức Đa Nguồn & Tích hợp Độc học Tetrodotoxin/Ciguatera)
+> **Cập nhật lần cuối:** 2026-09-12 10:35 (Deploy Vercel Production commit aae6726 — Hợp nhất Tri thức Đa Nguồn Rắn biển 27 loài & Cá biển độc 25 taxa — Chuẩn hóa Tài liệu dẫn đa sách & Tích hợp Độc tố học lâm sàng)
 > **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
