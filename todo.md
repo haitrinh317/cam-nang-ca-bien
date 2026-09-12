@@ -4,7 +4,28 @@
 > **Next Session Starting Point**: Tiếp tục mở rộng collection `than-mem` Phase 2 cho các họ tiếp theo từ Hylleberg 2003, hoặc bổ sung scan trang 102 cho san hô.
 > **Supabase (SSOT):** 2,787 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm biển + 42 san hô).
 
-## ✅ Hoàn thành mới nhất (2026-09-11)
+## ✅ Hoàn thành mới nhất (2026-09-12)
+- [x] **Hoàn thành Phase 2 Hợp nhất Cá biển độc (25 taxa giữa `ca-bien` và `sinh-vat-doc`)**:
+  - **Đối soát 1-1**: Xác định chính xác 17 loài cá độc trùng khớp 1-1 giữa *Danh mục Cá biển Việt Nam* (Tập I, III, V) & *Atlas Cá rạn san hô* (Tập VI) với *Động vật độc biển* (2021) (16 loài cá nóc *Arothron, Takifugu, Lagocephalus, Amblyrhynchotes, Chelonodon* và 1 loài cá hồng *Lutjanus bohar* gây ngộ độc Ciguatera).
+  - **Chuẩn hóa 8 taxa độc bản**: Chuẩn hóa tài liệu dẫn cho 4 chuyên đề cấp Chi (*Dasyatis sp., Pterois sp., Scorpaena sp., Synanceja sp.*) và 4 loài cá nóc ghi nhận mới (*Torquigener gloerfelti, T. brevipinnis, Lagocephalus suezensis, L. gloveri*).
+  - **Thực thi Hợp nhất Phase 2**: Chạy `scripts/execute_merge_fish.py` cập nhật 22 bản ghi `ca-bien` và 25 taxa `sinh-vat-doc`:
+    + Tích hợp hồ sơ độc tố học lâm sàng (Tetrodotoxin TTX, Ciguatoxin CTX, cơ chế, triệu chứng, phác đồ cấp cứu y tế) vào `biology.toxicology`.
+    + Hợp nhất tài liệu dẫn đa nguồn hiển thị trọn vẹn cả 3 công trình (Tập V, Tập VI, Sách Độc biển) và dẫn liệu gốc.
+    + Bổ sung 22 ảnh thực địa cá sống ngoài biển vào thư viện `species_photos` của Cá biển (ghi nhận tác giả ảnh: Trần Thị Hồng Hoa, Trương Sĩ Hải Trình...).
+    + Ghi nhật ký vào bảng `audit_log`.
+- [x] **Thiết lập Kế hoạch Hợp nhất Dữ liệu Đa Nguồn Toàn diện & Hoàn thành Phase 1 (Nhóm Rắn biển 27 loài)**:
+  - **Khảo sát & Đối chiếu Trùng lặp**: Xác định chính xác 23/27 loài rắn biển (85.2%) trùng khớp 100% WoRMS AphiaID giữa *Rắn biển Việt Nam* (2016) và *Động vật độc biển Việt Nam* (2021) (loài #25 đến #47); làm rõ lý do 4 loài không trùng (2 loài không có độc, 2 loài hiếm chưa đưa vào sách 2021).
+  - **Xây dựng Kế hoạch Kiến trúc Đa ngành**: Thống nhất định hướng "Một sinh vật — Một hồ sơ — Đa nguồn tri thức" theo trục phân loại học (Taxonomy-First) cho toàn bộ các nhóm sinh vật có khả năng trùng lặp (Rắn biển, Cá biển độc, Thân mềm độc, Giáp xác độc).
+  - **Quy chuẩn Tài liệu dẫn (`vn_literature`)**: Hợp nhất đa nguồn, phân tách dấu `;`, hiển thị danh sách đánh số `[1]`, `[2]`, `[3]` học thuật trên thẻ mẫu vật `SpecimenCard`.
+  - **Thực thi Hợp nhất Phase 1**: Chạy `scripts/execute_merge_snakes.py` thành công 100% cho 27 loài:
+    + Cập nhật tài liệu dẫn song ngữ cả 2 đầu sách và trích dẫn gốc.
+    + Tích hợp hồ sơ độc học lâm sàng (`toxicology`: cơ chế, triệu chứng, phác đồ sơ cứu khẩn cấp PIB, điều cấm kỵ) vào bản ghi chính `ran-bien`.
+    + Đồng bộ 22 ảnh thực địa chụp sống ngoài tự nhiên từ sách Độc biển vào thư viện `species_photos` của Rắn biển.
+    + Hợp nhất tên gọi khác địa phương (`vn_alternate_names`) và kích thước (`vn_size`, `en_size`).
+    + Đồng bộ nhất quán dữ liệu sang 23 bản ghi `sinhvatdoc-species-25..47`.
+    + Ghi nhật ký vào bảng `audit_log`.
+
+## ✅ Hoàn thành trước đó (2026-09-11)
 - [x] **Khởi tạo & Hoàn thành Toàn Diện Pipeline Bộ Sưu Tập San Hô Việt Nam (`san-ho`) — 42 loài (Chuyên khảo TS. Hoàng Xuân Bền)**:
   - **Khảo sát & Xử lý hướng xoay scan**: Phân tích 33 file HEIC (3024×4032), xoay 90° chuẩn 31 ảnh ngang, xuất file PDF chất lượng cao `San-ho-8-ngan-Hoang-Xuan-Ben-Trang-80-112.pdf` (53.58 MB, 33 trang). Phát hiện và ghi nhận chính xác việc khuyết trang 102 (loài 30 & nửa sau loài 29).
   - **Khởi tạo Database & Web Config**: Tạo collection `san-ho` trong bảng `collections` của Supabase (`sort_order = 7`, icon 🪸, màu `#f9a8d4`), tích hợp vào `STATIC_COLLECTIONS`, `books-data.ts`, `AdminSidebar.tsx`, `Nav.tsx`, `BottomNav.tsx`.

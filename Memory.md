@@ -1,13 +1,13 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-11 23:56 (Deploy Vercel Production commit 7e01466 — Tích hợp Bộ sưu tập San hô Việt Nam san-ho 42 loài chuyên khảo TS. Hoàng Xuân Bền)
+> **Cập nhật lần cuối:** 2026-09-12 10:25 (Hoàn thành Phase 1 Rắn biển 27 loài & Phase 2 Cá biển độc 25 taxa — Hợp nhất Tri thức Đa Nguồn & Tích hợp Độc học Tetrodotoxin/Ciguatera)
 > **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
 
 ---
 
-## 📊 Kiểm Kê Dữ Liệu (Supabase — 2026-09-11)
+## 📊 Kiểm Kê Dữ Liệu (Supabase — 2026-09-12)
 
 ### Tổng: 2,787 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm + 42 san hô)
 
@@ -15,14 +15,14 @@
 |---|:---:|:---:|:---:|:---:|---|
 | `ca-bien` | I | 100 | 100% | 100% | ✅ Hoàn chỉnh |
 | `ca-bien` | II | 266 | 100% | 100% | ✅ Hoàn chỉnh |
-| `ca-bien` | III | 518 | 100% | 100% | ✅ Hoàn chỉnh |
+| `ca-bien` | III | 518 | 100% | 100% | ✅ Hoàn chỉnh + Hợp nhất Ciguatera (*Lutjanus bohar*) |
 | `ca-bien` | IV | 338 | 100% | 100% | ✅ Hoàn chỉnh |
-| `ca-bien` | V | 279 | 100% | 100% | ✅ Hoàn chỉnh |
-| `ca-bien` | VI (Atlas) | 263 | 100% | 100% | ✅ 98.5% ảnh iNaturalist |
+| `ca-bien` | V | 279 | 100% | 100% | ✅ Hoàn chỉnh + Hợp nhất 16 loài Cá nóc độc (Tập V) |
+| `ca-bien` | VI (Atlas) | 263 | 100% | 100% | ✅ 98.5% ảnh iNat + Hợp nhất 5 loài Cá nóc độc (Tập VI) |
 | `thuc-vat-bien` | 1 (Tsutsui) | 201 | 100% | 100% | ✅ Hoàn chỉnh |
 | `thuc-vat-bien` | 2 (PHH 1969) | 471 | 100% | 100% | ✅ 471 ảnh tiêu bản 300 DPI |
 | `giap-xac` | 1 (ĐVC: Tôm biển) | 132 | 100% | 99.2% | ✅ 100% OCR + WoRMS + 99.2% SeaLifeBase + 40.2% ảnh iNat |
-| `ran-bien` | 1 (Rắn biển VN) | 27 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% SeaLifeBase + 92.6% ảnh (22 sách + iNat) |
+| `ran-bien` | 1 (Rắn biển VN) | 27 | 100% | 100% | ✅ 100% Hợp nhất Tri thức Đa Nguồn (23 loài SVD) + 100% Độc học lâm sàng PIB + 52 ảnh |
 | `sinh-vat-doc` | Chuyên khảo (2021) | 76 | 100% | 100% | ✅ 100% OCR + WoRMS + 100% Toxicology + 100% Ảnh thực địa sách + 100% FishBase/SeaLifeBase + 100% Song ngữ EN |
 | `than-mem` | 1 (Hylleberg 2003) | 74 | 100% | 100% | ✅ Pilot Họ Ốc sứ: 100% WoRMS + 100% SeaLifeBase + 210 ảnh WebP Storage + 79.7% tên VN |
 | `san-ho` | Chuyên khảo (TS. Bền) | 42 | 97.6% (41/42) | 97.6% (41/42) | ✅ 100% OCR + 100% WoRMS (loài 30 khuyết trang 102) + 16 SeaLifeBase + 24 ảnh WebP Storage |
@@ -161,6 +161,7 @@ Skill: `deploy-cabien` — xác nhận account trước khi deploy.
 
 | Ngày | Quyết định |
 |---|---|
+| 2026-09-12 | **Hợp nhất Tri thức Đa Nguồn (Taxonomy-First / Single Source of Truth Entity)**: Thống nhất một loài chỉ có 1 hồ sơ duy nhất neo vào phân loại học; gom góp toàn bộ đầu sách ghi nhận loài vào trường `vn_literature` phân tách dấu `;` (`[1]`, `[2]`, `[3]`); tích hợp độc tố học lâm sàng (toxicology), ảnh thực địa và tên gọi khác; hoàn tất Phase 1 cho 27 loài rắn biển. |
 | 2026-08-22 | **Supabase = SSOT** (species.json deprecated) |
 | 2026-08-20 | Next.js 16 migration, deploy Vercel |
 | 2026-08-20 | Rong biển schema khác cá: morphology, photo_place/depth/date |
