@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật lần cuối:** 2026-09-12 12:27 (Khôi phục logo thương hiệu cá nhân sóng biển & vây cá tuần hoàn và đồng bộ PWA manifest)
+> **Cập nhật lần cuối:** 2026-09-12 12:27 (Deploy Vercel Production commit 1d1ea67 — Khôi phục logo thương hiệu cá nhân sóng biển & vây cá tuần hoàn và đồng bộ PWA manifest)
 > **Production URL:** https://www.tracuusinhvatbien.app / https://cam-nang-ca-bien.vercel.app
 > **Dev:** `npm run dev` → localhost:3000
 > **Single Source of Truth:** ⚡ **Supabase PostgreSQL** — species.json là backup local cũ, KHÔNG phải nguồn chính.
