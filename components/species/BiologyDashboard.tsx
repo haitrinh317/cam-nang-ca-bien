@@ -158,12 +158,33 @@ function translateBio(val?: string | null): string {
   return BIO_TRANSLATIONS[key] || val
 }
 
+interface CollectionMeta {
+  Icon: React.ComponentType<{ size?: number; className?: string; style?: React.CSSProperties }>
+  iconClass: string
+  iconStyle?: React.CSSProperties
+  srcName: string
+}
+
+// ponytail: Helper function cô lập rẽ nhánh nhóm sinh vật cho header icon & data source.
+// Tránh tạo adapter pattern cồng kềnh vì logic render bên dưới hoàn toàn data-driven.
+function getCollectionMeta(collectionId?: string | null, speciesId?: string, source?: string | null): CollectionMeta {
+  if (collectionId === 'thuc-vat-bien' || speciesId?.startsWith('thucvat-')) {
+    return { Icon: Leaf, iconClass: 'text-emerald-500', srcName: 'AlgaeBase' }
+  }
+  if (collectionId === 'giap-xac' || speciesId?.startsWith('giapxac-')) {
+    return { Icon: Shrimp, iconClass: 'text-rose-400', srcName: source || 'SeaLifeBase' }
+  }
+  if (collectionId === 'than-mem' || speciesId?.startsWith('thanmem-')) {
+    return { Icon: Shell, iconClass: 'text-amber-500', srcName: source || 'SeaLifeBase' }
+  }
+  if (collectionId === 'san-ho' || speciesId?.startsWith('sanho-')) {
+    return { Icon: Sparkles, iconClass: '', iconStyle: { color: '#f472b6' }, srcName: source || 'SeaLifeBase' }
+  }
+  return { Icon: Fish, iconClass: 'text-cyan-500', srcName: source || 'FishBase' }
+}
+
 export default function BiologyDashboard({ bio, speciesId, collectionId }: Props) {
-  const isSeaweed = collectionId === 'thuc-vat-bien' || speciesId.startsWith('thucvat-')
-  const isCrustacean = collectionId === 'giap-xac' || speciesId.startsWith('giapxac-')
-  const isMollusc = collectionId === 'than-mem' || speciesId.startsWith('thanmem-')
-  const isCoral = collectionId === 'san-ho' || speciesId.startsWith('sanho-')
-  const srcName = isSeaweed ? 'AlgaeBase' : (bio.source || (isCrustacean || isMollusc || isCoral ? 'SeaLifeBase' : 'FishBase'))
+  const { Icon: HeaderIcon, iconClass, iconStyle, srcName } = getCollectionMeta(collectionId, speciesId, bio.source)
 
   // Formatted Quick Metrics
   const weightData = formatWeight(bio.maxWeight)
@@ -183,17 +204,7 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
       {/* ─── HEADER BAR ─── */}
       <div className="bio-dashboard__header">
         <h3 className="bio-dashboard__title">
-          {isSeaweed ? (
-            <Leaf size={20} className="text-emerald-500" />
-          ) : isCrustacean ? (
-            <Shrimp size={20} className="text-rose-400" />
-          ) : isMollusc ? (
-            <Shell size={20} className="text-amber-500" />
-          ) : isCoral ? (
-            <Sparkles size={20} style={{ color: '#f472b6' }} />
-          ) : (
-            <Fish size={20} className="text-cyan-500" />
-          )}
+          <HeaderIcon size={20} className={iconClass} style={iconStyle} />
           <span>Thông Số Sinh Học & Sinh Thái</span>
         </h3>
         <span className="bio-dashboard__source-pill">

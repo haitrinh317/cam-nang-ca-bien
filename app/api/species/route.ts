@@ -7,7 +7,13 @@
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient, createSSRClient } from '@/lib/supabase-server'
-import { sanitizeSearch, SPECIES_PAGE_SIZE, applySpeciesFilters } from '@/lib/species-query'
+import {
+  sanitizeSearch,
+  SPECIES_PAGE_SIZE,
+  applySpeciesFilters,
+  SPECIES_LIST_COLS,
+  SPECIES_DETAIL_COLS,
+} from '@/lib/species-query'
 import { speciesCreateSchema, speciesUpdateSchema } from '@/lib/schemas'
 
 export const dynamic = 'force-dynamic'
@@ -57,7 +63,7 @@ export async function GET(req: NextRequest) {
   const includeDeleted  = searchParams.get('include_deleted') === 'true'
 
   let query = applySpeciesFilters(
-    db.from('species').select('id, volume, species_index, vn_name, scientific_name, tax_family_latin, collection_id', { count: 'exact' }),
+    db.from('species').select(SPECIES_LIST_COLS, { count: 'exact' }),
     collection,
     includeDeleted
   )
@@ -83,7 +89,12 @@ export async function POST(req: NextRequest) {
   if (!parsed.success) {
     return NextResponse.json({ error: 'Dữ liệu không hợp lệ', details: parsed.error.flatten().fieldErrors }, { status: 400 })
   }
-  const body = parsed.data
+  const body = { ...parsed.data }
+  const bioEdits = (body as { _biology_edits?: Record<string, unknown> })._biology_edits
+  delete (body as { _biology_edits?: unknown })._biology_edits
+  if (bioEdits && Object.values(bioEdits).some(v => v !== null && v !== undefined)) {
+    ;(body as Record<string, unknown>).biology = bioEdits
+  }
   const { data, error } = await db.from('species').insert(body).select().single()
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
 
@@ -105,7 +116,7 @@ export async function PATCH(req: NextRequest) {
   const id = req.nextUrl.searchParams.get('id')
   if (!id) return NextResponse.json({ error: 'id required' }, { status: 400 })
 
-  const { data: old } = await db.from('species').select('*').eq('id', id).single()
+  const { data: old } = await db.from('species').select(SPECIES_DETAIL_COLS).eq('id', id).single()
 
   const raw = await req.json()
   const parsed = speciesUpdateSchema.safeParse(raw)
@@ -114,6 +125,22 @@ export async function PATCH(req: NextRequest) {
   }
   const body = { ...parsed.data }
   delete (body as { id?: string }).id
+
+  // Extract _biology_edits, merge safely into current biology JSONB
+  const bioEdits = (body as { _biology_edits?: Record<string, unknown> })._biology_edits
+  delete (body as { _biology_edits?: unknown })._biology_edits
+
+  if (bioEdits && Object.values(bioEdits).some(v => v !== null && v !== undefined)) {
+    const currentBio = (typeof old?.biology === 'string'
+      ? JSON.parse(old.biology)
+      : old?.biology) || {}
+    const merged = { ...currentBio }
+    for (const [k, v] of Object.entries(bioEdits)) {
+      if (v !== undefined) merged[k] = v
+    }
+    ;(body as Record<string, unknown>).biology = merged
+  }
+
   const { data, error } = await db.from('species').update(body).eq('id', id).select().single()
   if (error) return NextResponse.json({ error: error.message }, { status: 400 })
 

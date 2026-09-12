@@ -1,11 +1,11 @@
 /**
- * collections-server.ts — Server-only collection fetcher.
+ * collection-registry-server.ts — Server-only collection fetcher.
  * Imports supabase-server (uses next/headers) — DO NOT import in 'use client' files.
  *
- * For static collection data in client components, use lib/collections.ts.
+ * For static collection data in client components, use lib/collection-registry.ts.
  */
 import { createServerClient } from '@/lib/supabase-server'
-import { STATIC_COLLECTIONS, Collection } from '@/lib/collections'
+import { STATIC_COLLECTIONS, Collection } from '@/lib/collection-registry'
 
 function mapRow(row: Record<string, unknown>): Collection {
   return {

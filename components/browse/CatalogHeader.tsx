@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Home, BookOpen, Layers, Sparkles } from 'lucide-react'
-import type { SpecialGroupConfig } from '@/lib/special-groups'
+import type { SpecialGroupConfig } from '@/lib/collection-registry'
 import GlobalSearch from '@/components/search/GlobalSearch'
 import './CatalogHeader.css'
 

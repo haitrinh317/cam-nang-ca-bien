@@ -51,6 +51,24 @@ export const speciesCreateSchema = z.object({
   photo_depth: z.string().max(200).nullable().optional(),
   photo_date: z.string().max(200).nullable().optional(),
   deleted_at: z.string().nullable().optional(),
+  // WoRMS
+  worms_status: z.string().max(50).nullable().optional(),
+  worms_accepted_name: z.string().max(500).nullable().optional(),
+  worms_id: z.coerce.number().int().nullable().optional(),
+  // Synonyms
+  synonyms: z.union([
+    z.string().max(10000),
+    z.array(z.string()),
+  ]).nullable().optional(),
+  // Biology editable fields (merged into biology JSONB in PATCH handler)
+  _biology_edits: z.object({
+    iucnStatus: z.string().max(20).nullable().optional(),
+    maxLength: z.string().max(200).nullable().optional(),
+    maxWeight: z.string().max(200).nullable().optional(),
+    dangerous: z.string().max(100).nullable().optional(),
+    habitat: z.string().max(500).nullable().optional(),
+    habitatVn: z.string().max(500).nullable().optional(),
+  }).optional(),
 }).strict() // reject unknown keys
 
 /** Partial species — used for PATCH (update) */

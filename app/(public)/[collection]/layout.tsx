@@ -1,4 +1,4 @@
-import { getCollectionBySlug } from '@/lib/collections'
+import { getCollectionBySlug } from '@/lib/collection-registry'
 import { notFound } from 'next/navigation'
 
 interface Props {

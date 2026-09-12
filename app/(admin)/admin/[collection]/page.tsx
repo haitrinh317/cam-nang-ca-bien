@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { getCollectionBySlug } from '@/lib/collections'
+import { getCollectionBySlug } from '@/lib/collection-registry'
 import { notFound } from 'next/navigation'
 import SpeciesTable from '@/components/admin/SpeciesTable'
 

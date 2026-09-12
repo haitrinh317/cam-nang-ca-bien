@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { SPECIAL_GROUPS_LIST } from '@/lib/special-groups'
+import { SPECIAL_GROUPS_LIST } from '@/lib/collection-registry'
 import { Sparkles, ArrowRight, ShieldAlert, Waves, Leaf, Compass, AlertOctagon } from 'lucide-react'
 import './SpecialGroupsSection.css'
 

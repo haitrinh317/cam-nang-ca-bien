@@ -1,12 +1,14 @@
 import '@/styles/catalogue.css'
 import '@/styles/book-browser.css'
-import { getCollectionBySlug } from '@/lib/collections'
+import {
+  getCollectionBySlug,
+  getSpecialGroup,
+  getBooksForCollection,
+} from '@/lib/collection-registry'
 import { notFound } from 'next/navigation'
 import SpeciesGrid from '@/components/browse/SpeciesGrid'
 import CatalogHeader from '@/components/browse/CatalogHeader'
-import { getSpecialGroup } from '@/lib/special-groups'
 import { createServerClient } from '@/lib/supabase-server'
-import { getBooksForCollection } from '@/lib/books-data'
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 

@@ -10,6 +10,9 @@ out/
 *.tsbuildinfo
 * 2*
 
+# Offline data (OCR cache, logs, local-only)
+_offline/
+
 # Production
 build/
 dist/

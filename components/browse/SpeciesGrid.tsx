@@ -4,9 +4,14 @@ import { useEffect, useRef, useState, useCallback, useMemo } from 'react'
 import Link from 'next/link'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { db } from '@/lib/supabase-browser'
-import { getBooksForCollection, BookMetadata, VolumeMetadata } from '@/lib/books-data'
+import {
+  getBooksForCollection,
+  BookMetadata,
+  VolumeMetadata,
+  getSpecialGroup,
+  SpecialGroupConfig,
+} from '@/lib/collection-registry'
 import { applySpeciesFilters } from '@/lib/species-query'
-import { getSpecialGroup, SpecialGroupConfig } from '@/lib/special-groups'
 import { BookOpen, Layers, Search, ArrowRight, ArrowLeft, CheckCircle2, Sparkles, X } from 'lucide-react'
 import './SpecialGroupBanner.css'
 

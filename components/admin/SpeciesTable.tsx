@@ -15,7 +15,7 @@ import {
   ChevronLeft,
   ChevronRight,
 } from 'lucide-react'
-import { getCollectionBySlug } from '@/lib/collections'
+import { getCollectionBySlug } from '@/lib/collection-registry'
 
 interface SpeciesRow {
   [key: string]: unknown

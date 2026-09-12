@@ -12,6 +12,20 @@
 
 export const SPECIES_PAGE_SIZE = 20
 
+/**
+ * Các cột SELECT chuẩn — thêm/xóa cột ở 1 chỗ duy nhất.
+ * SPECIES_LIST_COLS: Dùng cho danh sách phân trang, bảng admin.
+ * SPECIES_DETAIL_COLS: Toàn bộ thông tin chi tiết loài.
+ *
+ * ponytail: Full repository pattern (getById, getByCollection, etc.)
+ * là over-engineering cho các câu query ngắn, mỗi nơi cần projection khác nhau.
+ * Ceiling: Khi có >20 điểm query hoặc migration schema phức tạp mới cần Repository class.
+ */
+export const SPECIES_LIST_COLS =
+  'id, volume, species_index, vn_name, scientific_name, tax_family_latin, collection_id'
+
+export const SPECIES_DETAIL_COLS = '*'
+
 /** Strip chars that could break PostgREST text filters */
 export function sanitizeSearch(raw: string): string {
   return raw.replace(/[%_(),.]/g, '').trim().slice(0, 100)

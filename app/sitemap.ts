@@ -4,7 +4,7 @@
  */
 import { MetadataRoute } from 'next'
 import { createServerClient } from '@/lib/supabase-server'
-import { getCollections } from '@/lib/collections-server'
+import { getCollections } from '@/lib/collection-registry-server'
 
 const BASE = 'https://www.tracuusinhvatbien.app'
 

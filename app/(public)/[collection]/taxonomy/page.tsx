@@ -1,5 +1,5 @@
 import '@/styles/catalogue.css'
-import { getCollectionBySlug } from '@/lib/collections'
+import { getCollectionBySlug } from '@/lib/collection-registry'
 import { createServerClient } from '@/lib/supabase-server'
 import { TAXONOMY_COLS, sortTaxonomyRows } from '@/lib/taxonomy'
 import { notFound } from 'next/navigation'
