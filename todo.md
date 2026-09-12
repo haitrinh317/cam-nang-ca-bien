@@ -5,6 +5,9 @@
 > **Supabase (SSOT):** 2,787 loài (1,764 cá biển + 672 thực vật biển + 132 giáp xác + 27 rắn biển + 76 động vật độc biển + 74 thân mềm biển + 42 san hô).
 
 ## ✅ Hoàn thành mới nhất (2026-09-12)
+- [x] **Tích hợp Sách San hô vào Quản lý tài liệu gốc (`literature_sources`)**:
+  - Đưa chuyên khảo *Đa dạng sinh học san hô tám ngăn vùng biển phía Nam Việt Nam* (TS. Hoàng Xuân Bền, 2011, 42 loài) vào CSDL Supabase bảng `literature_sources`.
+  - Thiết lập liên kết trực tiếp `/san-ho`, phân loại biểu tượng `anchor`, huy hiệu `Chuyên Khảo San Hô` và hiển thị đồng bộ trên trang chủ cùng trang Admin Quản lý tài liệu gốc.
 - [x] **Khôi phục Logo Cá nhân (Sóng biển & Vây cá tuần hoàn)**:
   - Sao lưu bản `public/logo.png` trước khi sửa vào `.backups/public--logo.png.backup.2026-09-12.png`.
   - Khôi phục file `public/logo.png` (512×512 px, RGBA, 198 KB) từ commit nhận diện thương hiệu `d5e7f0c`, giải quyết triệt để sự cố bị ghi đè logo Viện Hải dương học từ commit `4128a93`.
