@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-13 (phiên tối — deploy `7d4abd2`) | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-13 (phiên đêm — deploy `ca27ea2`) | **Production:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 ---

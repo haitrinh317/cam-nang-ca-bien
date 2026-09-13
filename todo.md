@@ -1,19 +1,23 @@
 # TODO — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-13
-> **Supabase (SSOT):** 2,793 loài (7 collection)
+> Cập nhật: 2026-09-13 (phiên đêm)
+> **Supabase (SSOT):** 2,828 loài (8 collection)
 > **Lịch sử hoàn thành đầy đủ:** xem `todo-archive.md`
 
 ---
 
-## ✅ Hoàn thành gần nhất (2026-09-13 — phiên tối)
+## ✅ Hoàn thành gần nhất (2026-09-13 — phiên đêm)
 
+- [x] Tái cấu trúc Admin Shell sang Fixed Two-Panel Grid (100dvh, isolated scroll) chuẩn Vibe Design Harness: sửa dứt điểm lỗi gãy sticky & trôi tụt sidebar
+- [x] Nâng cấp Nhật ký kiểm toán Admin (`/admin/audit-log`): phân trang server-side + lọc theo ngày/phân hệ
+- [x] Tạo trang quản trị tài liệu nguồn chuyên khảo (`/admin/literature`)
+- [x] Khắc phục lỗi đếm 967 loài Cá biển trên Sidebar (PostgREST limit 1000 rows) → đếm song song bằng `head: true` trả về đúng 1.764 loài
+- [x] Hệ thống hóa toàn bộ thư mục công trình khoa học & bài báo Động vật phù du (TS. Trương Sĩ Hải Trình & Nguyễn Cho) vào `docs/thu-muc-dong-vat-phu-du.md`
 - [x] UI Audit vibe-design-harness: Purge 100% emoji → Lucide SVG (Nav, BottomNav, SpecimenCard, SpeciesGrid, SpeciesForm) + xây dựng `hooks/useScrollReveal.ts`
 - [x] Scroll entrance animation: book-card stagger (browse) + heroReveal/panelReveal/bentoReveal (chi tiết loài) + fix bug invisible rows async data
 - [x] Codify UI rules vào AGENTS.md (Section 6) + 2 patterns mới vào patterns.md + refactor animation tokens
 - [x] SpeciesForm.tsx refactor sidebar 2-column workspace layout (chú tự thực hiện)
-
-- [x] Khởi tạo & Triển khai toàn diện Collection Thú biển Việt Nam (`thu-bien` — 34 loài: 1 Bò biển Dugong + 33 Cá voi/heo gồm Cá nhà táng) theo workflow 7 bước `ocr-to-audit.md`: 100% WoRMS AphiaID + 100% SeaLifeBase & GBIF + 100 ảnh Research-grade iNaturalist CC-BY + 100% Sách Đỏ VAST Golden Standard + 100% Complete Audit (34/34 đạt 100 điểm)
+- [x] Khởi tạo & Triển khai toàn diện Collection Thú biển Việt Nam (`thu-bien` — 34 loài: 1 Bò biển Dugong + 33 Cá voi/heo gồm Cá nhà táng) theo workflow 7 bước `ocr-to-audit.md`
 - [x] Đăng ký Collection & Đầu sách đại diện: *Danh lục Thú biển Việt Nam & Mẫu vật Lăng Ông* (Smith et al. 1995; McGowen, Vũ Long et al. 2021; Viện Hải dương học), NXB Khoa học và Kỹ thuật vào Supabase và `lib/collection-registry.ts`
 - [x] Sửa dứt điểm lỗi trùng ảnh Vích & Quản đồng (*Caretta caretta*) — nạp 3 ảnh iNat chuẩn hình thái đầu to, chuẩn hóa `taxon_id` search
 - [x] Nâng cấp AI Skill `sealifebase-sync` v2.0 hỗ trợ toàn bộ 5 nhóm sinh vật biển ngoài cá (Bò sát biển, Thân mềm, San hô, Giáp xác, Động vật độc) kèm 5 System Prompts dịch thuật học thuật, Deep Merge bảo toàn Sách Đỏ VAST, và đồng bộ 100% cho `bo-sat-bien`
