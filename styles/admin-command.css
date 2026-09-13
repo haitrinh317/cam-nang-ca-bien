@@ -2070,3 +2070,461 @@ select.form-input {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
+
+/* ═══════════════════════════════════════════
+   LIVE AUDIT STREAM — Ocean Cyber Telemetry
+   Vibe Design Harness · Studio Grade
+   ═══════════════════════════════════════════ */
+
+.audit-stream-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 14px !important;
+  padding: 1.5rem 1.75rem !important;
+  box-shadow: 0 4px 16px rgba(11, 19, 41, 0.04) !important;
+  margin-top: 2rem !important;
+}
+
+.audit-stream-card__header {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.audit-stream-live-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  padding: 0.2rem 0.6rem !important;
+  border-radius: 999px !important;
+  background: rgba(16, 185, 129, 0.1) !important;
+  border: 1px solid rgba(16, 185, 129, 0.25) !important;
+  font-family: var(--font-outlier, monospace) !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  color: #059669 !important;
+  letter-spacing: 0.06em !important;
+  margin-bottom: 0.4rem !important;
+}
+
+.audit-stream-dot {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50% !important;
+  background: #10b981 !important;
+  box-shadow: 0 0 8px #10b981 !important;
+  animation: live-pulse 2s infinite ease-in-out !important;
+}
+
+@keyframes live-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.35); opacity: 0.55; }
+}
+
+.audit-stream-title {
+  font-family: var(--font-display, 'Lora', Georgia, serif) !important;
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  color: #0b1329 !important;
+  margin: 0 0 0.25rem 0 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.audit-stream-subtitle {
+  font-size: 0.84rem !important;
+  color: #64748b !important;
+  margin: 0 !important;
+  line-height: 1.45 !important;
+}
+
+.audit-stream-header-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+}
+
+/* ── Filter Bar ── */
+.audit-filter-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.75rem !important;
+  margin-bottom: 1rem !important;
+  padding-bottom: 0.85rem !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  flex-wrap: wrap !important;
+}
+
+.audit-filter-chips {
+  display: flex !important;
+  gap: 0.35rem !important;
+  overflow-x: auto !important;
+  scrollbar-width: none !important;
+}
+.audit-filter-chips::-webkit-scrollbar { display: none !important; }
+
+.audit-filter-chip {
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  padding: 0.35rem 0.75rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  white-space: nowrap !important;
+}
+
+.audit-filter-chip:hover {
+  background: #f1f5f9 !important;
+  color: #0b1329 !important;
+}
+
+.audit-filter-chip.active {
+  background: #0b1329 !important;
+  border-color: #0b1329 !important;
+  color: #ffffff !important;
+}
+
+.audit-stream-counter {
+  font-size: 0.76rem !important;
+  color: #94a3b8 !important;
+  font-family: var(--font-outlier, monospace) !important;
+}
+
+/* ── Action Badges ── */
+.audit-badge-pro {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  padding: 0.25rem 0.65rem !important;
+  border-radius: 999px !important;
+  font-size: 0.74rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif) !important;
+  border: 1px solid transparent !important;
+  white-space: nowrap !important;
+}
+
+.audit-badge-pro--create {
+  background: rgba(16, 185, 129, 0.1) !important;
+  color: #059669 !important;
+  border-color: rgba(16, 185, 129, 0.25) !important;
+}
+
+.audit-badge-pro--update {
+  background: rgba(14, 165, 233, 0.1) !important;
+  color: #0284c7 !important;
+  border-color: rgba(14, 165, 233, 0.25) !important;
+}
+
+.audit-badge-pro--delete {
+  background: rgba(239, 68, 68, 0.1) !important;
+  color: #dc2626 !important;
+  border-color: rgba(239, 68, 68, 0.25) !important;
+}
+
+.audit-badge-pro--merge {
+  background: rgba(139, 92, 246, 0.1) !important;
+  color: #7c3aed !important;
+  border-color: rgba(139, 92, 246, 0.25) !important;
+}
+
+.audit-badge-pro--sync {
+  background: rgba(20, 184, 166, 0.1) !important;
+  color: #0d9488 !important;
+  border-color: rgba(20, 184, 166, 0.25) !important;
+}
+
+.audit-badge-pro--bulk {
+  background: rgba(99, 102, 241, 0.1) !important;
+  color: #4f46e5 !important;
+  border-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+/* ── User Cell ── */
+.audit-user-cell {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+}
+
+.audit-user-avatar {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: #0b1329 !important;
+  color: #00d4b8 !important;
+  font-family: var(--font-display, serif) !important;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.audit-user-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.1rem !important;
+}
+
+.audit-user-name-line {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+}
+
+.audit-user-name {
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  color: #0b1329 !important;
+}
+
+.audit-user-role {
+  font-size: 0.64rem !important;
+  font-weight: 700 !important;
+  font-family: var(--font-outlier, monospace) !important;
+  padding: 0.1rem 0.4rem !important;
+  border-radius: 4px !important;
+  background: #f1f5f9 !important;
+  color: #64748b !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.audit-user-email {
+  font-size: 0.72rem !important;
+  color: #94a3b8 !important;
+  font-family: var(--font-outlier, monospace) !important;
+}
+
+/* ── Details Cell ── */
+.audit-details-cell {
+  font-size: 0.85rem !important;
+  line-height: 1.45 !important;
+  color: #1e293b !important;
+}
+
+.audit-details-entity {
+  font-weight: 600 !important;
+  color: #0b1329 !important;
+}
+
+.audit-details-latin {
+  font-style: italic !important;
+  color: #475569 !important;
+}
+
+.audit-details-tag {
+  display: inline-block !important;
+  padding: 0.12rem 0.45rem !important;
+  border-radius: 4px !important;
+  background: #f1f5f9 !important;
+  color: #0284c7 !important;
+  border: 1px solid #e2e8f0 !important;
+  font-family: var(--font-outlier, monospace) !important;
+  font-size: 0.72rem !important;
+  margin-left: 0.4rem !important;
+}
+
+/* ── Time Cell ── */
+.audit-time-cell {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 0.1rem !important;
+}
+
+.audit-time-main {
+  font-family: var(--font-outlier, monospace) !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  color: #0b1329 !important;
+  font-variant-numeric: tabular-nums !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+}
+
+.audit-time-date {
+  font-size: 0.72rem !important;
+  color: #94a3b8 !important;
+  font-family: var(--font-outlier, monospace) !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+/* Table Row Clean Styling */
+.audit-table tr {
+  transition: background 0.12s ease !important;
+}
+
+.audit-table tr:hover {
+  background: rgba(0, 212, 184, 0.03) !important;
+}
+
+/* ── Secondary Filter Bar (Collection & Date Range) ── */
+.audit-filter-secondary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 0.85rem !important;
+  padding: 0.75rem 0.85rem !important;
+  background: #f8fafc !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 10px !important;
+  margin-bottom: 1rem !important;
+  flex-wrap: wrap !important;
+}
+
+.audit-filter-group {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  flex-wrap: wrap !important;
+}
+
+.audit-filter-label {
+  font-size: 0.76rem !important;
+  font-weight: 700 !important;
+  color: #475569 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  white-space: nowrap !important;
+}
+
+.audit-filter-select-wrap {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.audit-filter-select-icon {
+  position: absolute !important;
+  left: 0.65rem !important;
+  color: #0284c7 !important;
+  pointer-events: none !important;
+}
+
+.audit-filter-select {
+  padding: 0.35rem 2rem 0.35rem 2rem !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: #0b1329 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  height: 32px !important;
+  cursor: pointer !important;
+}
+
+.audit-filter-select:focus {
+  border-color: #00d4b8 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(0, 212, 184, 0.15) !important;
+}
+
+.audit-date-chips {
+  display: inline-flex !important;
+  gap: 0.25rem !important;
+  align-items: center !important;
+}
+
+.audit-date-chip {
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 6px !important;
+  padding: 0.25rem 0.55rem !important;
+  font-size: 0.74rem !important;
+  font-weight: 600 !important;
+  color: #475569 !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+}
+
+.audit-date-chip:hover {
+  background: #f1f5f9 !important;
+  color: #0b1329 !important;
+}
+
+.audit-date-chip.active {
+  background: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+.audit-date-inputs {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+}
+
+.audit-date-input {
+  height: 30px !important;
+  padding: 0.2rem 0.5rem !important;
+  font-size: 0.75rem !important;
+  font-family: var(--font-outlier, monospace) !important;
+  font-variant-numeric: tabular-nums !important;
+  color: #0b1329 !important;
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 6px !important;
+}
+
+.audit-date-input:focus {
+  border-color: #00d4b8 !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(0, 212, 184, 0.15) !important;
+}
+
+.audit-stream-container {
+  position: relative !important;
+}
+
+.audit-stream-loading-mask {
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(2px) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 10 !important;
+  border-radius: 12px !important;
+}
+
+.audit-stream-loading-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.5rem 1rem !important;
+  background: #0b1329 !important;
+  color: #00d4b8 !important;
+  border-radius: 999px !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  font-family: var(--font-body, sans-serif) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.audit-pagination-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0.85rem 1rem !important;
+  background: #f8fafc !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+  flex-wrap: wrap !important;
+  gap: 0.75rem !important;
+}

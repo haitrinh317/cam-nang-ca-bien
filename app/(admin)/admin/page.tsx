@@ -3,6 +3,7 @@ import { createServerClient } from '@/lib/supabase-server'
 import Link from 'next/link'
 import '@/styles/admin.css'
 import '@/styles/admin-command.css'
+import AuditLogStream from '@/components/admin/AuditLogStream'
 import {
   Database,
   Fish,
@@ -105,7 +106,7 @@ export default async function AdminDashboard() {
     { count: photosCount },
     { count: wormsVerifiedCount },
     { count: vnRedListCount },
-    { data: recentAudit },
+    { data: recentAudit, count: auditTotalCount },
   ] = await Promise.all([
     db.from('species').select('*', { count: 'exact', head: true }).is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'ca-bien').is('deleted_at', null),
@@ -121,9 +122,9 @@ export default async function AdminDashboard() {
     db.from('species').select('*', { count: 'exact', head: true }).not('worms_id', 'is', null).is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).not('vn_status', 'is', null).is('deleted_at', null),
     db.from('audit_log')
-      .select('id, created_at, user_email, action, details')
+      .select('id, created_at, user_email, action, collection_id, species_id, details', { count: 'exact' })
       .order('created_at', { ascending: false })
-      .limit(8),
+      .range(0, 9),
   ])
 
   const total = totalCount || (
@@ -477,80 +478,7 @@ export default async function AdminDashboard() {
       </section>
 
       {/* ── ACTIVITY LOG STREAM ── */}
-      <section className="admin-activity-card" aria-labelledby="activity-heading">
-        <div className="admin-activity-card__header">
-          <div>
-            <h2 id="activity-heading">Nhật Ký Kiểm Toán Thời Gian Thực</h2>
-            <p className="admin-page__subtitle" style={{ margin: 0 }}>
-              Cơ chế kiểm toán bảo mật (Audit Log Stream) theo dõi biến động dữ liệu Supabase
-            </p>
-          </div>
-          <Link href="/admin/ca-bien" className="btn btn-outline btn-sm">
-            <span>Duyệt CSDL</span>
-            <ArrowRight size={13} aria-hidden="true" />
-          </Link>
-        </div>
-
-        <div className="admin-table-scroll">
-          <table className="admin-table">
-            <thead>
-              <tr>
-                <th style={{ width: 140 }}>Hành động</th>
-                <th style={{ width: 220 }}>Tài khoản</th>
-                <th>Chi tiết thay đổi</th>
-                <th style={{ width: 180, textAlign: 'right' }}>Thời gian</th>
-              </tr>
-            </thead>
-            <tbody>
-              {(!recentAudit || recentAudit.length === 0) && (
-                <tr>
-                  <td colSpan={4} style={{ textAlign: 'center', padding: '2.5rem', color: 'var(--color-muted)' }}>
-                    Chưa có nhật ký hoạt động nào được ghi nhận.
-                  </td>
-                </tr>
-              )}
-              {recentAudit?.map((log) => {
-                const act = ACTION_MAP[log.action] || {
-                  label: log.action,
-                  cls: 'audit-badge--update',
-                }
-                const formattedDetails = formatLogDetails(log.details)
-                const dateStr = new Date(log.created_at).toLocaleString('vi-VN', {
-                  day: '2-digit',
-                  month: '2-digit',
-                  year: 'numeric',
-                  hour: '2-digit',
-                  minute: '2-digit',
-                })
-
-                return (
-                  <tr key={log.id}>
-                    <td>
-                      <span className={`audit-badge ${act.cls}`}>{act.label}</span>
-                    </td>
-                    <td style={{ fontWeight: 600, color: 'var(--color-ink-2)' }}>
-                      <span style={{ fontFamily: 'var(--font-outlier)' }}>
-                        {log.user_email || 'System'}
-                      </span>
-                    </td>
-                    <td>
-                      <span className="admin-details-pill" title={formattedDetails}>
-                        {formattedDetails}
-                      </span>
-                    </td>
-                    <td style={{ textAlign: 'right', color: 'var(--color-muted)', fontSize: '0.82rem', fontFamily: 'var(--font-outlier)' }}>
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-                        <Clock size={12} aria-hidden="true" />
-                        {dateStr}
-                      </span>
-                    </td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
-        </div>
-      </section>
+      <AuditLogStream initialLogs={(recentAudit || []) as any} initialTotal={auditTotalCount || 0} />
     </div>
   )
 }

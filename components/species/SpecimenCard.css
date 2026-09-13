@@ -1155,12 +1155,12 @@
 
 /* ── Hero: animate on page load ── */
 .specimen__hero {
-  animation: heroReveal 380ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) both;
+  animation: heroReveal var(--dur-slow) var(--ease-out) both;
 }
 
 /* ── Tab panels: animate when becoming active ── */
 .detail-tab-panel.active {
-  animation: panelReveal 280ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) both;
+  animation: panelReveal var(--dur-normal) var(--ease-out) both;
 }
 
 /* ── Cards: hidden until .is-revealed (via IntersectionObserver) ── */
@@ -1176,7 +1176,7 @@
 .specimen-identity-card.is-revealed,
 .specimen-vault-card.is-revealed,
 .specimen-value-card.is-revealed {
-  animation: bentoReveal 360ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) both;
+  animation: bentoReveal var(--dur-slow, 400ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) both;
 }
 
 /* Stagger: bento-card qua nth-child trong bento-grid */

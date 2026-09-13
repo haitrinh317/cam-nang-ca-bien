@@ -323,7 +323,7 @@
 
 /* When JS marks as revealed → animate in */
 .book-card.is-revealed {
-  animation: cardReveal 420ms var(--ease-out) both;
+  animation: cardReveal var(--dur-slow) var(--ease-out) both;
 }
 
 /* Stagger: each nth-child gets extra delay (max 8 cards) */
