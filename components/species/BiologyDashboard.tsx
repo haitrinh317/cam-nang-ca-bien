@@ -13,6 +13,8 @@ import {
   Leaf,
   Shrimp,
   Shell,
+  Turtle,
+  Biohazard,
   BookOpen,
   ExternalLink
 } from 'lucide-react'
@@ -60,6 +62,8 @@ export interface BiologyData {
   morphDescription?: string
   morphDescriptionVn?: string
   source?: string
+  specCode?: number
+  gbifKey?: number
   algaebaseId?: number
   algaebaseUrl?: string
 }
@@ -270,11 +274,18 @@ function getCollectionMeta(collectionId?: string | null, speciesId?: string, sou
   if (collectionId === 'thuc-vat-bien' || speciesId?.startsWith('thucvat-')) {
     return { Icon: Leaf, iconClass: 'text-emerald-500', srcName: 'AlgaeBase' }
   }
+  if (collectionId === 'bo-sat-bien' || speciesId?.startsWith('ruabien-') || speciesId?.startsWith('ranbien-') || speciesId?.startsWith('casau-')) {
+    return { Icon: Turtle, iconClass: 'text-amber-400', srcName: source || 'SeaLifeBase' }
+  }
+  if (collectionId === 'sinh-vat-doc' || speciesId?.startsWith('doc-')) {
+    const isSlb = source?.includes('SeaLifeBase')
+    return { Icon: Biohazard, iconClass: 'text-rose-400', srcName: source || (isSlb ? 'SeaLifeBase' : 'FishBase / SeaLifeBase') }
+  }
   if (collectionId === 'giap-xac' || speciesId?.startsWith('giapxac-')) {
     return { Icon: Shrimp, iconClass: 'text-rose-400', srcName: source || 'SeaLifeBase' }
   }
   if (collectionId === 'than-mem' || speciesId?.startsWith('thanmem-')) {
-    return { Icon: Shell, iconClass: 'text-amber-500', srcName: source || 'SeaLifeBase' }
+    return { Icon: Shell, iconClass: 'text-purple-400', srcName: source || 'SeaLifeBase' }
   }
   if (collectionId === 'san-ho' || speciesId?.startsWith('sanho-')) {
     return { Icon: Sparkles, iconClass: '', iconStyle: { color: '#f472b6' }, srcName: source || 'SeaLifeBase' }
