@@ -63,9 +63,9 @@ Deploy: git push origin master + vercel --prod --yes
 
 | Table | Mô tả |
 |---|---|
-| `species` | 2,793 loài, `collection_id` FK, flat schema |
+| `species` | 2,828 loài, `collection_id` FK, flat schema |
 | `species_photos` | Ảnh loài (Storage bucket `species-photos`) |
-| `collections` | 7 collection: ca-bien, thuc-vat-bien, giap-xac, bo-sat-bien, sinh-vat-doc, than-mem, san-ho |
+| `collections` | 8 collection: ca-bien, thuc-vat-bien, giap-xac, bo-sat-bien, sinh-vat-doc, than-mem, san-ho, thu-bien |
 | `literature_sources` | Sách tham khảo hiển thị trên homepage |
 | `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
 | `audit_log` | Nhật ký thay đổi (jsonb old/new) |
@@ -98,6 +98,7 @@ Deploy: git push origin master + vercel --prod --yes
 
 - **SSOT**: Supabase. File local JSON chỉ là backup cũ.
 - **Frontend–Backend Parity**: Dữ liệu hiển thị ở Frontend (WoRMS, Synonyms, Biology) được hỗ trợ xem và chỉnh sửa có kiểm soát trong Admin (tab Đồng bộ, merge JSONB an toàn).
+- **Collection Admin Parity**: Mỗi khi tạo hoặc nâng cấp collection mới, BẮT BUỘC cập nhật đồng bộ ở Admin (`AdminSidebar.tsx`, `app/(admin)/admin/page.tsx` KPI grid, `admin.css` accent, `next.config.ts` redirects).
 - **OCR**: KHÔNG báo tiến độ ảo — chỉ báo khi đã upsert thành công
 - **RLS**: KHÔNG reference bảng có RLS trong policy (gây infinite recursion)
 - **Hợp nhất Đa Nguồn**: Một loài = 1 hồ sơ, neo phân loại học, gom `vn_literature` bằng dấu `;`
