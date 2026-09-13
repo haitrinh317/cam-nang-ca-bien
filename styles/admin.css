@@ -916,6 +916,8 @@
   overflow: hidden;
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
   box-shadow: 0 1px 3px rgba(11, 19, 41, 0.04);
+  text-decoration: none;
+  color: inherit;
 }
 
 .admin-kpi-card:hover {
@@ -943,8 +945,25 @@
   background: #fca5a5;
 }
 
-.admin-kpi-card--ranbien::before {
+.admin-kpi-card--ranbien::before,
+.admin-kpi-card--bosat::before {
   background: #f59e0b;
+}
+
+.admin-kpi-card--doc::before {
+  background: #fb7185;
+}
+
+.admin-kpi-card--thanmem::before {
+  background: #c084fc;
+}
+
+.admin-kpi-card--sanho::before {
+  background: #f472b6;
+}
+
+.admin-kpi-card--thubien::before {
+  background: #38bdf8;
 }
 
 .admin-kpi-card--lit::before {

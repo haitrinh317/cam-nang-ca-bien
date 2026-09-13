@@ -77,6 +77,10 @@ export default async function AdminDashboard() {
     { count: thucVatCount },
     { count: giapXacCount },
     { count: boSatCount },
+    { count: sinhVatDocCount },
+    { count: thanMemCount },
+    { count: sanHoCount },
+    { count: thuBienCount },
     { count: litCount },
     { data: recentAudit },
   ] = await Promise.all([
@@ -85,6 +89,10 @@ export default async function AdminDashboard() {
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'thuc-vat-bien').is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'giap-xac').is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'bo-sat-bien').is('deleted_at', null),
+    db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'sinh-vat-doc').is('deleted_at', null),
+    db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'than-mem').is('deleted_at', null),
+    db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'san-ho').is('deleted_at', null),
+    db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'thu-bien').is('deleted_at', null),
     db.from('literature_sources').select('*', { count: 'exact', head: true }),
     db.from('audit_log')
       .select('id, created_at, user_email, action, details')
@@ -92,7 +100,7 @@ export default async function AdminDashboard() {
       .limit(8),
   ])
 
-  const total = totalCount || (caBienCount || 0) + (thucVatCount || 0) + (giapXacCount || 0) + (boSatCount || 0)
+  const total = totalCount || (caBienCount || 0) + (thucVatCount || 0) + (giapXacCount || 0) + (boSatCount || 0) + (sinhVatDocCount || 0) + (thanMemCount || 0) + (sanHoCount || 0) + (thuBienCount || 0)
 
   // Volume breakdown (Cá biển tập 1-5)
   const volPromises = [1, 2, 3, 4, 5].map((v) =>
@@ -126,53 +134,89 @@ export default async function AdminDashboard() {
             <div className="admin-kpi-card__icon" aria-hidden="true"><Database size={18} /></div>
           </div>
           <p className="admin-kpi-card__value">{total.toLocaleString('vi-VN')}</p>
-          <p className="admin-kpi-card__sub">Toàn bộ kho dữ liệu số hóa</p>
+          <p className="admin-kpi-card__sub">Toàn bộ 8 nhóm sinh vật</p>
         </div>
 
-        <div className="admin-kpi-card">
+        <Link href="/admin/ca-bien" className="admin-kpi-card" title="Quản lý Cá biển Việt Nam">
           <div className="admin-kpi-card__header">
             <h3 className="admin-kpi-card__title">Cá biển</h3>
             <div className="admin-kpi-card__icon" aria-hidden="true"><Fish size={18} /></div>
           </div>
           <p className="admin-kpi-card__value">{(caBienCount || 0).toLocaleString('vi-VN')}</p>
           <p className="admin-kpi-card__sub">Tập I – V &amp; Atlas cá rạn</p>
-        </div>
+        </Link>
 
-        <div className="admin-kpi-card admin-kpi-card--thucvat">
+        <Link href="/admin/thuc-vat-bien" className="admin-kpi-card admin-kpi-card--thucvat" title="Quản lý Thực vật biển">
           <div className="admin-kpi-card__header">
             <h3 className="admin-kpi-card__title">Thực vật biển</h3>
             <div className="admin-kpi-card__icon" aria-hidden="true"><Leaf size={18} /></div>
           </div>
           <p className="admin-kpi-card__value">{(thucVatCount || 0).toLocaleString('vi-VN')}</p>
           <p className="admin-kpi-card__sub">Rong biển &amp; cỏ biển</p>
-        </div>
+        </Link>
 
-        <div className="admin-kpi-card admin-kpi-card--giapxac">
+        <Link href="/admin/giap-xac" className="admin-kpi-card admin-kpi-card--giapxac" title="Quản lý Giáp xác biển">
           <div className="admin-kpi-card__header">
             <h3 className="admin-kpi-card__title">Giáp xác biển</h3>
             <div className="admin-kpi-card__icon" aria-hidden="true"><Shrimp size={18} /></div>
           </div>
           <p className="admin-kpi-card__value">{(giapXacCount || 0).toLocaleString('vi-VN')}</p>
           <p className="admin-kpi-card__sub">Tôm biển &amp; tôm tít</p>
-        </div>
+        </Link>
 
-        <div className="admin-kpi-card admin-kpi-card--ranbien">
+        <Link href="/admin/bo-sat-bien" className="admin-kpi-card admin-kpi-card--bosat" title="Quản lý Bò sát biển">
           <div className="admin-kpi-card__header">
             <h3 className="admin-kpi-card__title">Bò sát biển</h3>
             <div className="admin-kpi-card__icon" aria-hidden="true"><span style={{ fontSize: '16px', lineHeight: 1 }}>🐢</span></div>
           </div>
           <p className="admin-kpi-card__value">{(boSatCount || 0).toLocaleString('vi-VN')}</p>
           <p className="admin-kpi-card__sub">Rùa, rắn &amp; cá sấu biển</p>
-        </div>
+        </Link>
 
-        <div className="admin-kpi-card admin-kpi-card--lit">
+        <Link href="/admin/sinh-vat-doc" className="admin-kpi-card admin-kpi-card--doc" title="Quản lý Động vật độc biển">
+          <div className="admin-kpi-card__header">
+            <h3 className="admin-kpi-card__title">Động vật độc</h3>
+            <div className="admin-kpi-card__icon" aria-hidden="true"><span style={{ fontSize: '16px', lineHeight: 1 }}>☣️</span></div>
+          </div>
+          <p className="admin-kpi-card__value">{(sinhVatDocCount || 0).toLocaleString('vi-VN')}</p>
+          <p className="admin-kpi-card__sub">Nọc độc &amp; ngộ độc biển</p>
+        </Link>
+
+        <Link href="/admin/than-mem" className="admin-kpi-card admin-kpi-card--thanmem" title="Quản lý Động vật thân mềm">
+          <div className="admin-kpi-card__header">
+            <h3 className="admin-kpi-card__title">Thân mềm biển</h3>
+            <div className="admin-kpi-card__icon" aria-hidden="true"><span style={{ fontSize: '16px', lineHeight: 1 }}>🐚</span></div>
+          </div>
+          <p className="admin-kpi-card__value">{(thanMemCount || 0).toLocaleString('vi-VN')}</p>
+          <p className="admin-kpi-card__sub">Ốc, sò, mực &amp; bạch tuộc</p>
+        </Link>
+
+        <Link href="/admin/san-ho" className="admin-kpi-card admin-kpi-card--sanho" title="Quản lý San hô Việt Nam">
+          <div className="admin-kpi-card__header">
+            <h3 className="admin-kpi-card__title">San hô</h3>
+            <div className="admin-kpi-card__icon" aria-hidden="true"><span style={{ fontSize: '16px', lineHeight: 1 }}>🪸</span></div>
+          </div>
+          <p className="admin-kpi-card__value">{(sanHoCount || 0).toLocaleString('vi-VN')}</p>
+          <p className="admin-kpi-card__sub">San hô tám ngăn vùng Nam</p>
+        </Link>
+
+        <Link href="/admin/thu-bien" className="admin-kpi-card admin-kpi-card--thubien" title="Quản lý Thú biển Việt Nam">
+          <div className="admin-kpi-card__header">
+            <h3 className="admin-kpi-card__title">Thú biển</h3>
+            <div className="admin-kpi-card__icon" aria-hidden="true"><span style={{ fontSize: '16px', lineHeight: 1 }}>🐋</span></div>
+          </div>
+          <p className="admin-kpi-card__value">{(thuBienCount || 0).toLocaleString('vi-VN')}</p>
+          <p className="admin-kpi-card__sub">Cá voi, cá heo &amp; bò biển</p>
+        </Link>
+
+        <Link href="/admin/literature" className="admin-kpi-card admin-kpi-card--lit" title="Quản lý Tài liệu gốc">
           <div className="admin-kpi-card__header">
             <h3 className="admin-kpi-card__title">Tài liệu gốc</h3>
             <div className="admin-kpi-card__icon" aria-hidden="true"><BookOpen size={18} /></div>
           </div>
           <p className="admin-kpi-card__value">{(litCount || 0).toLocaleString('vi-VN')}</p>
           <p className="admin-kpi-card__sub">Chuyên khảo &amp; sách nguồn</p>
-        </div>
+        </Link>
       </section>
 
       {/* Volume Distribution Bento Dossier Section */}

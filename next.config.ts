@@ -22,6 +22,8 @@ const nextConfig: NextConfig = {
       // ran-bien → /bo-sat-bien (Collection upgrade redirect)
       { source: '/ran-bien', destination: '/bo-sat-bien', permanent: true },
       { source: '/ran-bien/:path*', destination: '/bo-sat-bien/:path*', permanent: true },
+      { source: '/admin/ran-bien', destination: '/admin/bo-sat-bien', permanent: true },
+      { source: '/admin/ran-bien/:path*', destination: '/admin/bo-sat-bien/:path*', permanent: true },
     ]
   },
 

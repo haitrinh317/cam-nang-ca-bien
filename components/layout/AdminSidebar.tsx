@@ -27,9 +27,11 @@ const NAV_GROUPS: { section: string; items: NavItem[] }[] = [
       { href: '/admin/ca-bien', icon: <Fish size={18} />, label: 'Cá biển Việt Nam', badge: '1.764' },
       { href: '/admin/thuc-vat-bien', icon: <Leaf size={18} />, label: 'Thực vật biển', badge: '672' },
       { href: '/admin/giap-xac', icon: <Shrimp size={18} />, label: 'Giáp xác biển', badge: '132' },
-      { href: '/admin/ran-bien', icon: <span style={{ fontSize: '15px', lineHeight: 1 }}>🐍</span>, label: 'Rắn biển Việt Nam', badge: '27' },
+      { href: '/admin/bo-sat-bien', icon: <span style={{ fontSize: '15px', lineHeight: 1 }}>🐢</span>, label: 'Bò sát biển', badge: '33' },
       { href: '/admin/sinh-vat-doc', icon: <span style={{ fontSize: '15px', lineHeight: 1 }}>☣️</span>, label: 'Động vật độc biển', badge: '76' },
+      { href: '/admin/than-mem', icon: <span style={{ fontSize: '15px', lineHeight: 1 }}>🐚</span>, label: 'Động vật thân mềm', badge: '74' },
       { href: '/admin/san-ho', icon: <span style={{ fontSize: '15px', lineHeight: 1 }}>🪸</span>, label: 'San hô Việt Nam', badge: '42' },
+      { href: '/admin/thu-bien', icon: <span style={{ fontSize: '15px', lineHeight: 1 }}>🐋</span>, label: 'Thú biển Việt Nam', badge: '34' },
     ],
   },
 ]
