@@ -336,23 +336,10 @@
 .book-card.is-revealed:nth-child(7) { animation-delay: 360ms; }
 .book-card.is-revealed:nth-child(8) { animation-delay: 420ms; }
 
-/* ── Species rows: subtle fade+slide-left on scroll ── */
-.species-row {
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: none; /* let animation handle initial state */
-}
-
-.species-row.is-revealed {
-  animation: rowReveal 300ms var(--ease-out) both;
-}
-
-/* ── Prefers reduced motion: skip animation, just show ── */
+/* ── prefers-reduced-motion: skip animation, just show ── */
 @media (prefers-reduced-motion: reduce) {
   .book-card,
-  .book-card.is-revealed,
-  .species-row,
-  .species-row.is-revealed {
+  .book-card.is-revealed {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;

@@ -97,12 +97,9 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
   const [localFilter, setLocalFilter] = useState<string>('')
   const hasRestoredScroll = useRef(false)
   const bookCardsRef = useRef<HTMLDivElement | null>(null)
-  const tableBodyRef = useRef<HTMLTableSectionElement | null>(null)
 
-  // Scroll reveal: book-cards stagger on mount / book change
+  // Scroll reveal: book-cards stagger on mount
   useScrollReveal(bookCardsRef, '.book-card')
-  // Scroll reveal: species rows fade-slide when data changes
-  useScrollReveal(tableBodyRef, '.species-row')
 
   // Active book object
   const activeBook = useMemo(() => {
@@ -733,7 +730,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                   <th className="th-action"></th>
                 </tr>
               </thead>
-              <tbody ref={tableBodyRef}>
+              <tbody>
                 {filteredSpecies.length === 0 ? (
                   <tr>
                     <td colSpan={4} className="td-empty">
