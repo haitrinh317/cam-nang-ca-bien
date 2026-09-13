@@ -98,10 +98,23 @@ export default function SpeciesTable({ collection }: Props) {
     }, 450)
   }
 
-  const clearSearch = () => {
+  const clearSearch = (e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault()
+      e.stopPropagation()
+    }
+    if (searchTimer.current) clearTimeout(searchTimer.current)
     setSearch('')
     setPage(1)
     load(1, vol, '')
+    document.getElementById('searchAdmin')?.focus()
+  }
+
+  const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Escape' && search) {
+      e.preventDefault()
+      clearSearch()
+    }
   }
 
   const handleVolChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -193,7 +206,9 @@ export default function SpeciesTable({ collection }: Props) {
       <div className="admin-toolbar">
         <div className="admin-toolbar__filters">
           <div className="admin-search-box">
-            <Search size={16} aria-hidden="true" />
+            <span className="admin-search-box__icon" aria-hidden="true">
+              <Search size={16} />
+            </span>
             <input
               type="text"
               id="searchAdmin"
@@ -201,23 +216,17 @@ export default function SpeciesTable({ collection }: Props) {
               placeholder="Tìm theo tên Việt, tên Latinh..."
               value={search}
               onChange={handleSearch}
+              onKeyDown={handleSearchKeyDown}
             />
             {search && (
               <button
                 type="button"
+                className="admin-search-clear-btn"
                 onClick={clearSearch}
-                style={{
-                  position: 'absolute',
-                  right: '0.6rem',
-                  background: 'none',
-                  border: 'none',
-                  color: 'var(--color-muted)',
-                  cursor: 'pointer',
-                  padding: '2px',
-                }}
-                title="Xóa tìm kiếm"
+                title="Xóa từ khóa tìm kiếm (Esc)"
+                aria-label="Xóa từ khóa tìm kiếm"
               >
-                <X size={14} />
+                <X size={13} aria-hidden="true" />
               </button>
             )}
           </div>
