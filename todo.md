@@ -9,6 +9,7 @@
 ## ✅ Hoàn thành gần nhất (2026-09-13)
 
 - [x] Nâng cấp & Hợp nhất Collection Bò sát biển Việt Nam (`bo-sat-bien` — 33 loài: 27 Rắn biển + 5 Rùa biển + 1 Cá sấu hoa cà) kèm 18 ảnh iNaturalist CC-BY & 301 redirects
+- [x] Bổ sung hồ sơ Sách Đỏ VAST 2024 (`http://vnredlist.vast.vn/`) & hoàn thành Audit 100% Complete cho 6 loài bò sát biển mới
 - [x] Tích hợp Danh Lục Đỏ Việt Nam (VAST 2024-1) & Hệ thống Dual-Conservation Badges (74 loài)
 - [x] Tái cấu trúc kiến trúc toàn diện (5/5 Ứng viên hoàn thành: SpecimenCard, Parity, Registry, Biology seam, Query cols)
 - [x] Sửa ảnh cá mặt trăng *Mola mola* (Research-grade) & thắt chặt bộ lọc `find_taxon_id`
