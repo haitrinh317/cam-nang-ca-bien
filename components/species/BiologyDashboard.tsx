@@ -38,9 +38,12 @@ export interface BiologyData {
   iucnTaxonId?: string | number
   dangerous?: string
   feedingType?: string
+  feedingTypeVn?: string
   trophicLevel?: number
   reproduction?: string
+  reproductionVn?: string
   spawning?: string
+  spawningVn?: string
   spawnAggregation?: boolean
   parentalCare?: string
   importance?: string
@@ -217,6 +220,28 @@ const BIO_TRANSLATIONS: Record<string, string> = {
   'never/rarely': 'Không / Hiếm khi nuôi',
   'likely future use': 'Có tiềm năng phát triển nuôi trồng',
 
+  // ── Sinh thái Bò sát biển & Môi trường bổ sung ──
+  'sandy beaches': 'Bãi cát ven biển',
+  'sandy beach': 'Bãi cát ven biển',
+  'oceanic': 'Biển khơi đại dương',
+  'oceanic deep water': 'Vùng nước sâu đại dương',
+  'marine lagoons': 'Đầm phá nước lợ / mặn',
+  'spongivore': 'Ăn bọt biển (Spongivore)',
+  'gelatinivore': 'Chuyên ăn sứa biển (Gelatinivore)',
+  'gelatinivory': 'Chuyên ăn sứa biển',
+  'herbivorous, grazing on aquatic plants and seagrass beds': 'Ăn thực vật: Gặm cỏ biển, rong tảo và thực vật thủy sinh (khi trưởng thành)',
+  'oviparous, nocturnal beach nesting, 80-120 eggs/clutch': 'Đẻ trứng: Lên bãi cát đào tổ đẻ trứng vào ban đêm, 80 - 120 trứng/lứa',
+  'spongivore, feeding primarily on marine sponges': 'Ăn bọt biển: Chuyên ăn bọt biển (hải miên) độc trên rạn san hô',
+  'oviparous, nesting on sandy beaches near coral reefs': 'Đẻ trứng: Đào tổ trên bãi cát hẻo lánh gần rạn san hô, 100 - 180 trứng/lứa',
+  'carnivore, feeding on crabs, molluscs, shrimps and jellyfish': 'Ăn thịt / Ăn tạp: Cua ghẹ, động vật thân mềm, tôm và sứa',
+  'oviparous, beach nesting (solitary in vietnam)': 'Đẻ trứng: Lên bãi cát đẻ trứng đơn lẻ (tại Việt Nam), 90 - 120 trứng/lứa',
+  'carnivore, specialized in crushing hard-shelled invertebrates': 'Ăn thịt: Nghiền nát động vật không xương sống có vỏ cứng (cua, ốc, cầu gai)',
+  'oviparous, beach nesting in subtropical regions': 'Đẻ trứng: Đào tổ đẻ trứng trên các bãi cát lớn vùng cận nhiệt đới, 100 - 120 trứng/lứa',
+  'jellyfish specialist (gelatinivory)': 'Chuyên ăn sứa biển (Gelatinivore) và sinh vật thân mềm trôi nổi',
+  'oviparous, deep sandy beach nesting': 'Đẻ trứng: Đào tổ đẻ trứng trên các bãi cát dốc sâu ven đại dương, 80 - 110 trứng/lứa',
+  'apex predator, carnivore hunting fish, crabs, turtles and mammals': 'Động vật ăn thịt đầu bảng: Săn cá, cua, rùa biển, chim và thú lớn',
+  'oviparous, mound nest made of vegetation and mud, 40-70 eggs': 'Đẻ trứng: Đắp tổ gò cao bằng bùn và lá cây mục ven bờ sông rạch, 40 - 70 trứng/lứa',
+
   // ── Cảnh báo an toàn (Danger) ──
   'harmless': 'Vô hại đối với con người',
   'reports of ciguatera poisoning': 'Có nguy cơ tích lũy độc tố Ciguatera',
@@ -377,10 +402,10 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
               </div>
             )}
 
-            {bio.feedingType && (
+            {(bio.feedingTypeVn || bio.feedingType) && (
               <div className="bio-item-row">
                 <span className="bio-item-label">Tập tính dinh dưỡng</span>
-                <span className="bio-item-val">{translateBio(bio.feedingType)}</span>
+                <span className="bio-item-val">{translateBio(bio.feedingTypeVn || bio.feedingType)}</span>
               </div>
             )}
           </div>
@@ -393,17 +418,17 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
             <span>Sinh Sản & Tập Tính Bầy Đàn</span>
           </div>
           <div className="bio-group-card__list">
-            {bio.reproduction && (
+            {(bio.reproductionVn || bio.reproduction) && (
               <div className="bio-item-row">
                 <span className="bio-item-label">Hình thức sinh sản</span>
-                <span className="bio-item-val">{translateBio(bio.reproduction)}</span>
+                <span className="bio-item-val">{translateBio(bio.reproductionVn || bio.reproduction)}</span>
               </div>
             )}
 
-            {bio.spawning && (
+            {(bio.spawningVn || bio.spawning) && (
               <div className="bio-item-row">
                 <span className="bio-item-label">Mùa vụ sinh sản</span>
-                <span className="bio-item-val">{translateBio(bio.spawning)}</span>
+                <span className="bio-item-val">{translateBio(bio.spawningVn || bio.spawning)}</span>
               </div>
             )}
 
