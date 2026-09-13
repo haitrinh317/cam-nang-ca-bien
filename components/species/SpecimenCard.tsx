@@ -9,6 +9,7 @@ import ThongsoTab from './tabs/ThongsoTab'
 import SinhhocTab from './tabs/SinhhocTab'
 import PhanloaiTab from './tabs/PhanloaiTab'
 import type { TaxCrumb } from './tabs/PhanloaiTab'
+import { Biohazard } from 'lucide-react'
 import './SpecimenCard.css'
 
 export interface Species {
@@ -138,7 +139,7 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
               }}
               title={bio.toxicology.danger_level_vn || 'Sinh vật biển có độc tính'}
             >
-              <span style={{ fontSize: '0.82rem' }}>☣️</span>
+              <Biohazard size={13} strokeWidth={2} />
               <span>{bio.toxicology.danger_level === 'lethal' ? 'Cực độc' : 'Sinh vật độc'}</span>
             </span>
           )}

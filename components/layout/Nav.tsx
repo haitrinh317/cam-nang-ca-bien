@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { t } from '@/lib/i18n'
 import HeaderControls from './HeaderControls'
-import { Fish, Leaf, Shrimp, ChevronDown, Layers } from 'lucide-react'
+import { Fish, Leaf, Shrimp, ChevronDown, Layers, Turtle, Biohazard, Shell, Sparkles, Waves } from 'lucide-react'
 
 interface DropdownCollection {
   slug: string
@@ -38,7 +38,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'Bò sát biển',
     nameEn: 'Marine Reptiles',
     stats: '33 loài • 3 tập',
-    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🐢</span>,
+    icon: <Turtle size={19} color="#f59e0b" strokeWidth={1.75} />,
     accentColor: '#f59e0b',
   },
   {
@@ -46,7 +46,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'Động vật độc biển',
     nameEn: 'Venomous Animals',
     stats: '76 loài • Độc tố học',
-    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>☣️</span>,
+    icon: <Biohazard size={19} color="#fb7185" strokeWidth={1.75} />,
     accentColor: '#fb7185',
   },
   {
@@ -54,7 +54,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'Động vật thân mềm',
     nameEn: 'Marine Mollusca',
     stats: 'Ốc, mực, trai biển',
-    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🐚</span>,
+    icon: <Shell size={19} color="#e8c4ff" strokeWidth={1.75} />,
     accentColor: '#e8c4ff',
   },
   {
@@ -62,7 +62,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'San hô Việt Nam',
     nameEn: 'Corals of Vietnam',
     stats: 'San hô rạn Việt Nam',
-    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🪸</span>,
+    icon: <Sparkles size={19} color="#f9a8d4" strokeWidth={1.75} />,
     accentColor: '#f9a8d4',
   },
   {
@@ -70,7 +70,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'Thú biển Việt Nam',
     nameEn: 'Marine Mammals',
     stats: '34 loài • 1 tập',
-    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🐋</span>,
+    icon: <Waves size={19} color="#38bdf8" strokeWidth={1.75} />,
     accentColor: '#38bdf8',
   },
 ]

@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Home, Fish, Leaf, Shrimp, Layers, X, ArrowRight, Sparkles } from 'lucide-react'
+import { Home, Fish, Leaf, Shrimp, Layers, X, ArrowRight, Sparkles, Turtle, Biohazard, Shell, Waves } from 'lucide-react'
 
 interface CollectionItem {
   slug: string
@@ -52,7 +52,7 @@ const COLLECTIONS_LIST: CollectionItem[] = [
     nameEn: 'Marine Reptiles',
     desc: 'Rùa biển, rắn biển & cá sấu hoa cà',
     stats: '33 loài • 3 tập',
-    icon: <span style={{ fontSize: '24px', lineHeight: 1 }}>🐢</span>,
+    icon: <Turtle size={24} color="#f59e0b" strokeWidth={1.75} />,
     accent: '#f59e0b',
     available: true,
   },
@@ -62,7 +62,7 @@ const COLLECTIONS_LIST: CollectionItem[] = [
     nameEn: 'Venomous & Poisonous Marine Animals',
     desc: 'Bạch tuộc đốm xanh, cá nóc, ốc cối, sứa lửa & sơ cứu',
     stats: '76 loài • Chuyên khảo',
-    icon: <span style={{ fontSize: '24px', lineHeight: 1 }}>☣️</span>,
+    icon: <Biohazard size={24} color="#fb7185" strokeWidth={1.75} />,
     accent: '#fb7185',
     available: true,
   },
@@ -72,7 +72,7 @@ const COLLECTIONS_LIST: CollectionItem[] = [
     nameEn: 'Corals of Vietnam',
     desc: 'San hô tám ngăn, san hô mềm & cấu trúc trâm xương',
     stats: '42 loài • Chuyên khảo',
-    icon: <span style={{ fontSize: '24px', lineHeight: 1 }}>🪸</span>,
+    icon: <Sparkles size={24} color="#f9a8d4" strokeWidth={1.75} />,
     accent: '#f9a8d4',
     available: true,
   },
@@ -82,7 +82,7 @@ const COLLECTIONS_LIST: CollectionItem[] = [
     nameEn: 'Marine Mollusca',
     desc: 'Ốc, sò, mực, bạch tuộc biển',
     stats: '74 loài Pilot • Họ Ốc sứ',
-    icon: <span style={{ fontSize: '24px', lineHeight: 1 }}>🐚</span>,
+    icon: <Shell size={24} color="#e8c4ff" strokeWidth={1.75} />,
     accent: '#e8c4ff',
     available: true,
   },
@@ -92,7 +92,7 @@ const COLLECTIONS_LIST: CollectionItem[] = [
     nameEn: 'Marine Mammals of Vietnam',
     desc: 'Cá voi, cá heo, cá nhà táng & bò biển',
     stats: '34 loài • 1 tập',
-    icon: <span style={{ fontSize: '24px', lineHeight: 1 }}>🐋</span>,
+    icon: <Waves size={24} color="#38bdf8" strokeWidth={1.75} />,
     accent: '#38bdf8',
     available: true,
   },
@@ -183,22 +183,34 @@ export function BottomNav() {
 
   // Is viewing other collections?
   const isCrustaceanActive = pathname === '/giap-xac' || pathname.startsWith('/giap-xac/')
-  const isSnakeActive = pathname === '/ran-bien' || pathname.startsWith('/ran-bien/')
+  const isReptileActive = pathname === '/bo-sat-bien' || pathname.startsWith('/bo-sat-bien/')
   const isPoisonActive = pathname === '/sinh-vat-doc' || pathname.startsWith('/sinh-vat-doc/')
-  const isOtherActive = isCrustaceanActive || isSnakeActive || isPoisonActive
+  const isMolluskaActive = pathname === '/than-mem' || pathname.startsWith('/than-mem/')
+  const isCoralActive = pathname === '/san-ho' || pathname.startsWith('/san-ho/')
+  const isMammalActive = pathname === '/thu-bien' || pathname.startsWith('/thu-bien/')
+  const isOtherActive = isCrustaceanActive || isReptileActive || isPoisonActive || isMolluskaActive || isCoralActive || isMammalActive
 
   // Dynamic 4th tab presentation based on current page
   let fourthTabIcon = <Layers size={20} strokeWidth={2} aria-hidden="true" />
   let fourthTabLabel = 'Nhóm khác'
   if (isCrustaceanActive) {
-    fourthTabIcon = <Shrimp size={20} strokeWidth={2} aria-hidden="true" />
+    fourthTabIcon = <Shrimp size={20} strokeWidth={1.75} aria-hidden="true" />
     fourthTabLabel = 'Giáp xác'
-  } else if (isSnakeActive) {
-    fourthTabIcon = <span style={{ fontSize: '18px', lineHeight: 1 }} aria-hidden="true">🐍</span>
-    fourthTabLabel = 'Rắn biển'
+  } else if (isReptileActive) {
+    fourthTabIcon = <Turtle size={20} strokeWidth={1.75} aria-hidden="true" />
+    fourthTabLabel = 'Bò sát biển'
   } else if (isPoisonActive) {
-    fourthTabIcon = <span style={{ fontSize: '18px', lineHeight: 1 }} aria-hidden="true">☣️</span>
+    fourthTabIcon = <Biohazard size={20} strokeWidth={1.75} aria-hidden="true" />
     fourthTabLabel = 'Sinh vật độc'
+  } else if (isMolluskaActive) {
+    fourthTabIcon = <Shell size={20} strokeWidth={1.75} aria-hidden="true" />
+    fourthTabLabel = 'Thân mềm'
+  } else if (isCoralActive) {
+    fourthTabIcon = <Sparkles size={20} strokeWidth={1.75} aria-hidden="true" />
+    fourthTabLabel = 'San hô'
+  } else if (isMammalActive) {
+    fourthTabIcon = <Waves size={20} strokeWidth={1.75} aria-hidden="true" />
+    fourthTabLabel = 'Thú biển'
   }
 
   return (

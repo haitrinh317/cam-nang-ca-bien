@@ -12,7 +12,7 @@ import {
   SpecialGroupConfig,
 } from '@/lib/collection-registry'
 import { applySpeciesFilters } from '@/lib/species-query'
-import { BookOpen, Layers, Search, ArrowRight, ArrowLeft, CheckCircle2, Sparkles, X } from 'lucide-react'
+import { BookOpen, Layers, Search, ArrowRight, ArrowLeft, CheckCircle2, Sparkles, X, Compass, Waves } from 'lucide-react'
 import './SpecialGroupBanner.css'
 
 // ponytail: sessionStorage key for scroll restoration when returning from species detail
@@ -503,7 +503,8 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                 }}
                 onClick={() => setArchipelagoSubFilter('HS')}
               >
-                🏝️ Hoàng Sa ({speciesList.filter(isHSLocation).length})
+                <Compass size={13} aria-hidden="true" />
+                Hoàng Sa ({speciesList.filter(isHSLocation).length})
               </button>
               <button
                 type="button"
@@ -525,7 +526,8 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                 }}
                 onClick={() => setArchipelagoSubFilter('TS')}
               >
-                🌊 Trường Sa ({speciesList.filter(isTSLocation).length})
+                <Waves size={13} aria-hidden="true" />
+                Trường Sa ({speciesList.filter(isTSLocation).length})
               </button>
               <button
                 type="button"

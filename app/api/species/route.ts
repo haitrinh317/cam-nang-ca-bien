@@ -61,6 +61,7 @@ export async function GET(req: NextRequest) {
   const search          = sanitizeSearch(searchParams.get('search') || '')
   const page            = parseInt(searchParams.get('page') || '1')
   const includeDeleted  = searchParams.get('include_deleted') === 'true'
+  const filterType      = searchParams.get('filter') // 'has_photo' | 'no_photo' | 'red_list' | 'worms_valid'
 
   let query = applySpeciesFilters(
     db.from('species').select(SPECIES_LIST_COLS, { count: 'exact' }),
@@ -70,6 +71,10 @@ export async function GET(req: NextRequest) {
 
   if (vol) query = query.eq('volume', parseInt(vol))
   if (search) query = query.or(`vn_name.ilike.%${search}%,scientific_name.ilike.%${search}%`)
+  if (filterType === 'has_photo') query = query.not('photo_url', 'is', null).neq('photo_url', '')
+  if (filterType === 'no_photo') query = query.or('photo_url.is.null,photo_url.eq.""')
+  if (filterType === 'red_list') query = query.not('biology->vnRedList', 'is', null)
+  if (filterType === 'worms_valid') query = query.eq('worms_status', 'valid')
 
   const from = (page - 1) * SPECIES_PAGE_SIZE
   query = query.range(from, from + SPECIES_PAGE_SIZE - 1).order('volume').order('species_index')

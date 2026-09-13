@@ -940,6 +940,281 @@
  * display: Lora · body: Be Vietnam Pro · outlier: JetBrains Mono
  */
 
+/* ═══════════════════════════════════════════
+   MARINE COMMAND CENTER (VIBE HARNESS OCEAN EDITION)
+   ═══════════════════════════════════════════ */
+
+.admin-command-hero {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+@media (max-width: 1024px) {
+  .admin-command-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-hero-card {
+  background: linear-gradient(135deg, rgba(12, 20, 42, 0.88), rgba(7, 13, 29, 0.95));
+  border: 1px solid rgba(0, 212, 184, 0.22);
+  border-radius: 18px;
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-hero-card::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(0, 212, 184, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.admin-hero-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.admin-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  font-family: var(--font-outlier, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #34d399;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.admin-live-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: adminPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes adminPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.admin-hero-card__label {
+  font-family: var(--font-outlier, monospace);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(240, 253, 249, 0.6);
+  margin: 0 0 0.4rem 0;
+}
+
+.admin-hero-card__stat {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.admin-hero-card__num {
+  font-family: var(--font-display, serif);
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 14px rgba(0, 212, 184, 0.25);
+}
+
+.admin-hero-card__unit {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-cyan-on-navy, #00f0d0);
+  letter-spacing: 0.02em;
+}
+
+.admin-grand-spectrum {
+  display: flex;
+  width: 100%;
+  height: 9px;
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 1.35rem;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.admin-spectrum-seg {
+  height: 100%;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.2s ease;
+  position: relative;
+}
+
+.admin-spectrum-seg:hover {
+  filter: brightness(1.35);
+  cursor: pointer;
+}
+
+.admin-collection-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.admin-collection-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  font-size: 0.74rem;
+  color: rgba(240, 253, 249, 0.75);
+  text-decoration: none;
+  font-family: var(--font-body);
+  transition: all 0.15s ease;
+}
+
+.admin-collection-chip:hover {
+  background: rgba(0, 212, 184, 0.1);
+  border-color: rgba(0, 212, 184, 0.3);
+  color: #00f0d0;
+  transform: translateY(-1px);
+}
+
+.admin-collection-chip__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Health Card ── */
+.admin-health-card {
+  background: linear-gradient(135deg, rgba(12, 20, 42, 0.88), rgba(7, 13, 29, 0.95));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.admin-health-card__title {
+  font-size: 0.82rem;
+  font-family: var(--font-outlier, monospace);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(240, 253, 249, 0.6);
+  margin: 0 0 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-health-meters {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.admin-health-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.admin-health-meter__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+}
+
+.admin-health-meter__label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--color-ink-2, #e2e8f0);
+  font-weight: 600;
+}
+
+.admin-health-meter__val {
+  font-family: var(--font-outlier, monospace);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.admin-health-meter__track {
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.admin-health-meter__bar {
+  height: 100%;
+  border-radius: 9999px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Collection Sub-Section Headers ── */
+.admin-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.admin-group-title {
+  font-size: 0.88rem;
+  font-family: var(--font-outlier, monospace);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(240, 253, 249, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.admin-group-count {
+  font-size: 0.76rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(240, 253, 249, 0.6);
+}
+
 /* ── KPI Grid ── */
 .admin-kpi-grid {
   display: grid;
@@ -1048,6 +1323,63 @@
   line-height: 1.1;
   margin: 0;
   letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+[data-theme="dark"] .admin-kpi-card {
+  background: rgba(12, 20, 42, 0.75);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .admin-kpi-card:hover {
+  background: rgba(15, 26, 54, 0.9);
+  border-color: rgba(0, 212, 184, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 15px rgba(0, 212, 184, 0.1);
+}
+
+[data-theme="dark"] .admin-kpi-card__icon {
+  background: rgba(255, 255, 255, 0.06);
+  color: #00f0d0;
+}
+
+[data-theme="dark"] .admin-volumes-section {
+  background: rgba(12, 20, 42, 0.75);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .admin-vol-tile {
+  background: rgba(7, 13, 29, 0.6);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .admin-vol-tile:hover {
+  background: rgba(15, 26, 54, 0.9);
+  border-color: rgba(0, 212, 184, 0.4);
+}
+
+[data-theme="dark"] .admin-activity-card {
+  background: rgba(12, 20, 42, 0.75);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+[data-theme="dark"] .admin-table thead th {
+  background: rgba(7, 13, 29, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(240, 253, 249, 0.7);
+}
+
+[data-theme="dark"] .admin-table tbody td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .admin-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .admin-kpi-card__sub {

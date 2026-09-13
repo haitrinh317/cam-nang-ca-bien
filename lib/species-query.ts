@@ -22,7 +22,7 @@ export const SPECIES_PAGE_SIZE = 20
  * Ceiling: Khi có >20 điểm query hoặc migration schema phức tạp mới cần Repository class.
  */
 export const SPECIES_LIST_COLS =
-  'id, volume, species_index, vn_name, scientific_name, tax_family_latin, collection_id'
+  'id, volume, species_index, vn_name, scientific_name, tax_family_latin, collection_id, worms_status, worms_accepted_name, vn_status, biology, photo_url, deleted_at'
 
 export const SPECIES_DETAIL_COLS = '*'
 

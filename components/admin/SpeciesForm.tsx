@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ClipboardList, Leaf, Globe, BookOpen, Camera, Database, X, Plus } from 'lucide-react'
+import { ClipboardList, Leaf, Globe, BookOpen, Camera, Database, X, Plus, Settings2, Satellite, Egg, Gem, FileText, AlertTriangle, Flag } from 'lucide-react'
 import PhotoManager from './PhotoManager'
 import DistributionEditor from './DistributionEditor'
 import { speciesUpdateSchema, speciesCreateSchema } from '@/lib/schemas'
@@ -320,7 +320,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
         <form onSubmit={handleSubmit}>
           {errorMsg && (
             <div style={{ margin: '0.5rem 1.5rem 0.5rem', padding: '0.75rem 1rem', borderRadius: '8px', background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)', color: '#dc2626', fontSize: '0.85rem', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span>⚠️</span>
+              <AlertTriangle size={14} strokeWidth={2} />
               <span>{errorMsg}</span>
             </div>
           )}
@@ -400,7 +400,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                 <div className="sync-section">
                   <div className="sync-section-header">
                     <span className="sync-section-title">
-                      ⚙️ Dữ liệu danh pháp &amp; Sinh học có thể hiệu chỉnh
+                    <Settings2 size={14} strokeWidth={1.75} /> Dữ liệu danh pháp &amp; Sinh học có thể hiệu chỉnh
                     </span>
                     <span className="sync-badge sync-badge--editable">Sửa được</span>
                   </div>
@@ -588,7 +588,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                 <div className="sync-section">
                   <div className="sync-section-header">
                     <span className="sync-section-title">
-                      📖 Dữ liệu tham chiếu &amp; Tri thức mở rộng
+                      <BookOpen size={14} strokeWidth={1.75} /> Dữ liệu tham chiếu &amp; Tri thức mở rộng
                     </span>
                     <span className="sync-badge sync-badge--readonly">Chỉ đọc (Read-only)</span>
                   </div>
@@ -596,7 +596,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                   <div className="sync-readonly-grid">
                     {/* Card 1: Nguồn dữ liệu & Metadata */}
                     <div className="sync-readonly-card">
-                      <div className="sync-readonly-card__title">📡 Nguồn &amp; Danh pháp mở rộng</div>
+                      <div className="sync-readonly-card__title"><Satellite size={13} strokeWidth={1.75} /> Nguồn &amp; Danh pháp mở rộng</div>
                       <div className="sync-readonly-field">
                         <span className="sync-readonly-label">Nguồn dữ liệu:</span>
                         <span className="sync-readonly-val">{bio.source || <span className="sync-readonly-val--empty">Không có</span>}</span>
@@ -625,7 +625,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
 
                     {/* Card 2: Sinh thái & Dinh dưỡng */}
                     <div className="sync-readonly-card">
-                      <div className="sync-readonly-card__title">🌿 Sinh thái &amp; Dinh dưỡng</div>
+                      <div className="sync-readonly-card__title"><Leaf size={13} strokeWidth={1.75} /> Sinh thái &amp; Dinh dưỡng</div>
                       <div className="sync-readonly-field">
                         <span className="sync-readonly-label">Kiểu dinh dưỡng:</span>
                         <span className="sync-readonly-val">{bio.feedingType || <span className="sync-readonly-val--empty">Chưa có</span>}</span>
@@ -646,7 +646,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
 
                     {/* Card 3: Sinh sản & Tập tính */}
                     <div className="sync-readonly-card">
-                      <div className="sync-readonly-card__title">🐣 Sinh sản &amp; Tập tính</div>
+                      <div className="sync-readonly-card__title"><Egg size={13} strokeWidth={1.75} /> Sinh sản &amp; Tập tính</div>
                       <div className="sync-readonly-field">
                         <span className="sync-readonly-label">Hình thức sinh sản:</span>
                         <span className="sync-readonly-val">{bio.reproduction || <span className="sync-readonly-val--empty">Chưa có</span>}</span>
@@ -667,7 +667,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
 
                     {/* Card 4: Kinh tế & Mức độ tổn thương */}
                     <div className="sync-readonly-card">
-                      <div className="sync-readonly-card__title">💎 Giá trị kinh tế &amp; Tổn thương</div>
+                      <div className="sync-readonly-card__title"><Gem size={13} strokeWidth={1.75} /> Giá trị kinh tế &amp; Tổn thương</div>
                       <div className="sync-readonly-field">
                         <span className="sync-readonly-label">Tầm quan trọng thương mại:</span>
                         <span className="sync-readonly-val">{bio.importanceVn || bio.importance || <span className="sync-readonly-val--empty">Chưa có</span>}</span>
@@ -689,7 +689,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                     {/* Card: Danh Lục Đỏ Việt Nam (VAST 2024) */}
                     {bio.vnRedList && (
                       <div className="sync-readonly-card">
-                        <div className="sync-readonly-card__title">🇻🇳 Danh Lục Đỏ Việt Nam (VAST 2024)</div>
+                        <div className="sync-readonly-card__title"><Flag size={13} strokeWidth={1.75} /> Danh Lục Đỏ Việt Nam (VAST 2024)</div>
                         <div className="sync-readonly-field">
                           <span className="sync-readonly-label">Phân hạng bảo tồn:</span>
                           <span className="sync-readonly-val">
@@ -727,7 +727,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                   {/* Card 5: Ghi chú & Tóm tắt sinh học */}
                   {(bio.biologySummaryVn || bio.biologySummary || bio.ecologyNotesVn || bio.ecologyNotes || bio.morphDescriptionVn || bio.morphDescription) && (
                     <div className="sync-readonly-card">
-                      <div className="sync-readonly-card__title">📝 Tóm tắt &amp; Ghi chú học thuật</div>
+                      <div className="sync-readonly-card__title"><FileText size={13} strokeWidth={1.75} /> Tóm tắt &amp; Ghi chú học thuật</div>
                       {(bio.biologySummaryVn || bio.biologySummary) && (
                         <div className="sync-readonly-field">
                           <span className="sync-readonly-label">Tóm tắt sinh học:</span>
@@ -752,7 +752,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                   {/* Card 6: Độc học lâm sàng (nếu có dữ liệu từ sinh-vat-doc) */}
                   {bio.toxicology && (
                     <div className="sync-readonly-card" style={{ borderColor: 'rgba(239, 68, 68, 0.3)' }}>
-                      <div className="sync-readonly-card__title" style={{ color: '#ef4444' }}>⚠️ Độc học lâm sàng &amp; Cấp cứu</div>
+                      <div className="sync-readonly-card__title" style={{ color: '#ef4444' }}><AlertTriangle size={13} strokeWidth={2} /> Độc học lâm sàng &amp; Cấp cứu</div>
                       {bio.toxicology.toxinType && (
                         <div className="sync-readonly-field">
                           <span className="sync-readonly-label">Loại độc tố:</span>

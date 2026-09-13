@@ -47,11 +47,15 @@ const nextConfig: NextConfig = {
           { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=86400' },
         ],
       },
-      {
-        // Cache static assets aggressively
-        source: '/_next/static/(.*)',
-        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
-      },
+      ...(process.env.NODE_ENV === 'production'
+        ? [
+            {
+              // Cache static assets aggressively in production only
+              source: '/_next/static/(.*)',
+              headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+            },
+          ]
+        : []),
     ]
   },
 };
