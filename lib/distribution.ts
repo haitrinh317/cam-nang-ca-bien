@@ -37,16 +37,19 @@ export function splitDistribution(raw?: string | null): DistributionParts {
   const text = raw.trim()
   if (!text) return { world: '', vn: '' }
 
-  // 1. Nhận diện nhãn rõ ràng: 'Thế giới:' và 'Việt Nam:'
+  // 1. Nhận diện nhãn rõ ràng: 'Thế giới:' và 'Việt Nam:' (bao gồm cả 'Tại Việt Nam:', 'Ở Việt Nam:')
   const hasTgLabel = /thế giới\s*[:\.]/i.test(text)
-  const hasVnLabel = /việt nam\s*[:\.]/i.test(text)
+  const hasVnLabel = /(?:tại\s+|ở\s+)?việt nam\s*[:\.]/i.test(text)
 
   if (hasTgLabel && hasVnLabel) {
-    if (text.search(/thế giới\s*[:\.]/i) < text.search(/việt nam\s*[:\.]/i)) {
-      const match = text.match(/thế giới\s*[:\.]\s*(.*?)(?:[\.;\n]\s*việt nam\s*[:\.]\s*|\bviệt nam\s*[:\.]\s*)(.+)/i)
-      if (match) return { world: match[1].trim(), vn: match[2].trim() }
+    if (text.search(/thế giới\s*[:\.]/i) < text.search(/(?:tại\s+|ở\s+)?việt nam\s*[:\.]/i)) {
+      const match = text.match(/thế giới\s*[:\.]\s*(.*?)(?:[\.;\n]\s*(?:tại\s+|ở\s+)?việt nam\s*[:\.]\s*|\b(?:tại\s+|ở\s+)?việt nam\s*[:\.]\s*)(.+)/i)
+      if (match) {
+        const w = match[1].trim().replace(/[\s\.,;:\-]+$/, '').replace(/\b(?:tại|ở)\s*$/i, '').trim()
+        return { world: w, vn: match[2].trim() }
+      }
     } else {
-      const match = text.match(/việt nam\s*[:\.]\s*(.*?)(?:[\.;\n]\s*thế giới\s*[:\.]\s*|\bthế giới\s*[:\.]\s*)(.+)/i)
+      const match = text.match(/(?:tại\s+|ở\s+)?việt nam\s*[:\.]\s*(.*?)(?:[\.;\n]\s*thế giới\s*[:\.]\s*|\bthế giới\s*[:\.]\s*)(.+)/i)
       if (match) return { vn: match[1].trim(), world: match[2].trim() }
     }
   }
@@ -57,18 +60,20 @@ export function splitDistribution(raw?: string | null): DistributionParts {
   }
 
   if (hasVnLabel && !hasTgLabel) {
-    const matchWithPreWorld = text.match(/^(.*?)(?:,\s*việt nam|\bviệt nam)\s*[:\.]\s*(.+)/i)
+    const matchWithPreWorld = text.match(/^(.*?)(?:,\s*(?:tại\s+|ở\s+)?việt nam|\b(?:tại\s+|ở\s+)?việt nam)\s*[:\.]\s*(.+)/i)
     if (matchWithPreWorld && matchWithPreWorld[1].trim().length > 0) {
-      return { world: matchWithPreWorld[1].trim().replace(/,\s*$/, ''), vn: matchWithPreWorld[2].trim() }
+      const w = matchWithPreWorld[1].trim().replace(/[\s\.,;:\-]+$/, '').replace(/\b(?:tại|ở)\s*$/i, '').trim()
+      return { world: w, vn: matchWithPreWorld[2].trim() }
     }
-    const matchOnlyVn = text.match(/việt nam\s*[:\.]\s*(.*)/i)
+    const matchOnlyVn = text.match(/(?:tại\s+|ở\s+)?việt nam\s*[:\.]\s*(.*)/i)
     return { world: '', vn: matchOnlyVn ? matchOnlyVn[1].trim() : text }
   }
 
   // 2. Định dạng sách kinh điển: 'Triều Tiên, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Trung Bộ.'
-  const vnMatch = text.match(/^(.*?)(?:,\s*Việt Nam|\bViệt Nam)\s*\.\s*(.{2,})/i)
+  const vnMatch = text.match(/^(.*?)(?:,\s*(?:tại\s+|ở\s+)?Việt Nam|\b(?:tại\s+|ở\s+)?Việt Nam)\s*\.\s*(.{2,})/i)
   if (vnMatch && vnMatch[1].trim().length > 0) {
-    return { world: vnMatch[1].trim().replace(/,\s*$/, ''), vn: vnMatch[2].trim() }
+    const w = vnMatch[1].trim().replace(/[\s\.,;:\-]+$/, '').replace(/\b(?:tại|ở)\s*$/i, '').trim()
+    return { world: w, vn: vnMatch[2].trim() }
   }
 
   // 3. Phân tách bằng dấu chấm có chứa từ khóa
@@ -137,7 +142,7 @@ export function parseDistribution(raw?: string | null): ParsedDistribution {
     ? worldRaw
         .split(/[,;:–—\/\.]|\bvà\b|\band\b/i)
         .map(s => s.trim().replace(/^[\-–—,\.;:\s]+|[\-–—,\.;:\s]+$/g, ''))
-        .filter(s => s.length > 1 && !/^(nhiệt đới|á nhiệt đới|cận nhiệt đới|ven bờ|ven biển|vùng biển|khu vực|từ|đến|to|from)\b/i.test(s) && !/việt nam/i.test(s))
+        .filter(s => s.length > 1 && !/^(nhiệt đới|á nhiệt đới|cận nhiệt đới|ven bờ|ven biển|vùng biển|khu vực|từ|đến|to|from|tại|ở|khắp|toàn|các)\b/i.test(s) && !/việt nam/i.test(s))
     : []
 
   const world = Array.from(new Set(worldItems))

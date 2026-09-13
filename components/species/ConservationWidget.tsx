@@ -120,71 +120,8 @@ function renderFormattedInline(rawText: string): React.ReactNode[] {
   return nodes
 }
 
-/**
- * Tự động ngắt đoạn văn thông minh cho nội dung bảo tồn:
- * - Ưu tiên dấu ngắt dòng có sẵn (\n)
- * - Tách câu tại dấu chấm/chấm than/hỏi, bảo vệ các từ viết tắt học thuật (NĐ-CP, Ref., sp., et al., GS., TS.)
- * - Nhóm 2-3 câu thành từng đoạn văn thoáng đãng, dễ đọc
- */
-function splitIntoParagraphs(text: string): string[] {
-  if (!text) return []
-  const trimmed = text.trim()
-  if (!trimmed) return []
+import { splitIntoParagraphs } from '@/lib/species-text'
 
-  // 1. Nếu văn bản đã có ngắt dòng
-  if (trimmed.includes('\n')) {
-    return trimmed
-      .split(/\n+/)
-      .map(p => p.trim())
-      .filter(Boolean)
-  }
-
-  // 2. Nếu văn bản ngắn (dưới 180 ký tự), giữ nguyên 1 đoạn
-  if (trimmed.length <= 180) {
-    return [trimmed]
-  }
-
-  // 3. Tách câu thông minh có bảo vệ từ viết tắt
-  const protectedText = trimmed.replace(
-    /\b(Refs?|sp|spp|et al|e\.g|i\.e|NĐ-CP|GS|TS|ThS)\.\s*/gi,
-    (m, word) => `${word}_DOT_ `
-  )
-
-  const sentences = protectedText
-    .split(/(?<=[.!?])\s+(?=[\p{Lu}0-9])/u)
-    .map(s => s.replace(/_DOT_/g, '.').trim())
-    .filter(Boolean)
-
-  if (sentences.length <= 2) {
-    return [trimmed]
-  }
-
-  const paragraphs: string[] = []
-  let currentChunk: string[] = []
-  let currentLen = 0
-
-  for (const s of sentences) {
-    currentChunk.push(s)
-    currentLen += s.length
-
-    // Khi đã có từ 2 câu và dài trên 180 ký tự, hoặc đủ 3 câu -> tạo đoạn mới
-    if ((currentChunk.length >= 2 && currentLen >= 180) || currentChunk.length >= 3) {
-      paragraphs.push(currentChunk.join(' '))
-      currentChunk = []
-      currentLen = 0
-    }
-  }
-
-  if (currentChunk.length > 0) {
-    if (paragraphs.length > 0 && currentChunk.length === 1 && currentLen < 120) {
-      paragraphs[paragraphs.length - 1] += ' ' + currentChunk.join(' ')
-    } else {
-      paragraphs.push(currentChunk.join(' '))
-    }
-  }
-
-  return paragraphs
-}
 
 /**
  * Xử lý & làm sạch trường Mối đe dọa (threats):
@@ -201,8 +138,9 @@ function cleanThreats(raw?: string | null): string[] {
 
 /**
  * Xử lý & làm sạch trường Hiện trạng & Xu hướng quần thể (population):
- * - Loại bỏ tiền tố lặp 'Hiện trạng quần thể Hiện trạng quần thể'
+ * - Loại bỏ tiền tố lặp 'Hiện trạng quần thể'
  * - Tách riêng chỉ số 'Xu hướng quần thể' (Suy giảm, Ổn định, Không rõ...) thành pill độc lập
+ * - Dọn sạch triệt để tiền tố lặp 'tại tự nhiên:' để không bị trùng lặp trên UI
  * - Phân đoạn thân bài khảo sát
  */
 function cleanPopulation(raw?: string | null): { paragraphs: string[]; trend: string } {
@@ -210,10 +148,10 @@ function cleanPopulation(raw?: string | null): { paragraphs: string[]; trend: st
   let cleaned = raw.replace(/^(Hiện\s+trạng\s+quần\s+thể\s*:?\s*)+/i, '').trim()
   cleaned = cleaned.replace(/\.([\p{Lu}])/gu, '. $1')
 
-  const trendMatch = cleaned.match(/(?:[\.\s]|^)Xu\s+hướng\s+quần\s+thể\s*:?\s*([^\.\n]+(?:\.|$))/i)
+  const trendMatch = cleaned.match(/(?:[\.\s]|^)Xu\s+hướng\s+quần\s+thể(?:\s+tại\s+tự\s+nhiên)?\s*:?\s*([^\.\n]+(?:\.|$))/i)
   let trend = ''
   if (trendMatch) {
-    trend = trendMatch[1].replace(/\.$/, '').trim()
+    trend = trendMatch[1].replace(/\.$/, '').replace(/^tại\s+tự\s+nhiên\s*:?\s*/i, '').trim()
     cleaned = cleaned.replace(trendMatch[0], '').trim()
   }
 

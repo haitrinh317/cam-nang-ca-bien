@@ -8,6 +8,9 @@
 
 ## ✅ Hoàn thành gần nhất (2026-09-13)
 
+- [x] Tối ưu hóa ngắt đoạn tự động (smart paragraph splitting) trong Bento cards (Hình thái, Sinh thái, Giá trị kinh tế), dọn dẹp nhãn mồ côi "Tại" trong phân bố và chuẩn hóa Trend Pill Sách Đỏ
+- [x] Tạo AI Skill `vnredlist-sync` v1.0 (Sách Đỏ VAST → Golden Standard) & chuẩn hóa 79/79 loài đạt 100%
+- [x] Bổ sung bước ⑥ `vnredlist-sync` vào workflow `ocr-to-audit.md` (pipeline 7 bước)
 - [x] Nâng cấp & Hợp nhất Collection Bò sát biển Việt Nam (`bo-sat-bien` — 33 loài: 27 Rắn biển + 5 Rùa biển + 1 Cá sấu hoa cà) kèm 18 ảnh iNaturalist CC-BY & 301 redirects
 - [x] Bổ sung hồ sơ Sách Đỏ VAST 2024 (`http://vnredlist.vast.vn/`) & hoàn thành Audit 100% Complete cho 6 loài bò sát biển mới
 - [x] Tích hợp Danh Lục Đỏ Việt Nam (VAST 2024-1) & Hệ thống Dual-Conservation Badges (74 loài)

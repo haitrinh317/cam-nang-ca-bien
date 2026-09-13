@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-13 | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-13 (phiên chiều) | **Production:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 ---
@@ -21,14 +21,14 @@
 
 ---
 
-## 📊 Kiểm Kê Dữ Liệu — 2,793 loài
+## 📊 Kiểm Kê Dữ Liệu — 2,794 loài | Sách Đỏ VAST: 79 loài (100% Golden Standard)
 
 | Collection | Loài | WoRMS | Trạng thái |
 |---|:---:|:---:|---|
 | `ca-bien` (Tập I-VI) | 1,764 | 100% | ✅ Hoàn chỉnh + Hợp nhất 21 loài cá độc |
 | `thuc-vat-bien` (Tập 1-2) | 672 | 100% | ✅ Hoàn chỉnh (201 + 471 ảnh tiêu bản) |
 | `giap-xac` | 132 | 100% | ✅ 99.2% SeaLifeBase + 40% ảnh iNat |
-| `bo-sat-bien` | 33 | 100% | ✅ 27 Rắn biển + 5 Rùa biển + 1 Cá sấu hoa cà |
+| `bo-sat-bien` | 33 | 100% | ✅ 27 Rắn biển + 5 Rùa biển + 1 Cá sấu hoa cà + Sách Đỏ VAST 6/6 |
 | `sinh-vat-doc` | 76 | 100% | ✅ 100% Toxicology + 80 ảnh thực địa |
 | `than-mem` (Pilot Ốc sứ) | 74 | 100% | ✅ 85% SeaLifeBase + 210 ảnh iNat |
 | `san-ho` | 42 | 97.6% | ✅ Khuyết trang 102 (loài 30) |
@@ -69,7 +69,7 @@ Deploy: git push origin master + vercel --prod --yes
 | `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
 | `audit_log` | Nhật ký thay đổi (jsonb old/new) |
 
-**Migrations:** 001→009 (xem `migrations/` cho chi tiết)
+**Migrations:** 001→010 (010: Nâng cấp Bò sát biển, archive `ran-bien`)
 
 ---
 

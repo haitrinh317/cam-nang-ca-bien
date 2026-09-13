@@ -82,71 +82,8 @@ function renderFormattedInline(rawText: string): React.ReactNode[] {
   return nodes
 }
 
-/**
- * Tự động ngắt đoạn thông minh:
- * - Ưu tiên dấu ngắt dòng có sẵn (\n\n hoặc \n)
- * - Nếu là khối văn bản liền đặc (> 250 ký tự), phân tách câu hợp lý tránh ngắt nhầm (Ref. xxxx)
- * - Gom mỗi 2-3 câu thành một đoạn văn thoáng đãng
- */
-function splitIntoParagraphs(text: string): string[] {
-  if (!text) return []
-  const trimmed = text.trim()
+import { splitIntoParagraphs } from '@/lib/species-text'
 
-  // 1. Nếu văn bản đã có dấu ngắt dòng
-  if (trimmed.includes('\n')) {
-    return trimmed
-      .split(/\n+/)
-      .map(p => p.trim())
-      .filter(Boolean)
-  }
-
-  // 2. Nếu văn bản ngắn (<= 250 ký tự), giữ nguyên 1 đoạn
-  if (trimmed.length <= 250) {
-    return [trimmed]
-  }
-
-  // 3. Tách câu thông minh: bảo vệ các từ viết tắt có dấu chấm như Ref., Refs., sp., spp., et al.
-  const protectedText = trimmed.replace(
-    /\b(Refs?|sp|spp|et al|e\.g|i\.e)\.\s*/gi,
-    (m, word) => `${word}_DOT_ `
-  )
-
-  // Ngắt câu tại dấu chấm/chấm than/chấm hỏi theo sau bởi khoảng trắng và ký tự viết hoa
-  const rawSentences = protectedText
-    .split(/(?<=[.!?])\s+(?=[A-ZÀ-Ỹ0-9])/)
-    .map(s => s.replace(/_DOT_/g, '.').trim())
-    .filter(Boolean)
-
-  if (rawSentences.length <= 3) {
-    return [trimmed]
-  }
-
-  const paragraphs: string[] = []
-  let currentChunk: string[] = []
-  let currentLen = 0
-
-  for (const sentence of rawSentences) {
-    currentChunk.push(sentence)
-    currentLen += sentence.length
-
-    // Khi đã có từ 2 câu và dài trên 220 ký tự, hoặc đã đủ 3 câu -> tạo đoạn mới
-    if ((currentChunk.length >= 2 && currentLen >= 220) || currentChunk.length >= 3) {
-      paragraphs.push(currentChunk.join(' '))
-      currentChunk = []
-      currentLen = 0
-    }
-  }
-
-  if (currentChunk.length > 0) {
-    if (paragraphs.length > 0 && currentChunk.length === 1 && currentLen < 150) {
-      paragraphs[paragraphs.length - 1] += ' ' + currentChunk.join(' ')
-    } else {
-      paragraphs.push(currentChunk.join(' '))
-    }
-  }
-
-  return paragraphs.length > 0 ? paragraphs : [trimmed]
-}
 
 /**
  * Component hiển thị đoạn văn bản có format thẻ in nghiêng và ngắt đoạn

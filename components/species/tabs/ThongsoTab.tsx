@@ -19,7 +19,8 @@ import ToxicologyWidget from '../ToxicologyWidget'
 import {
   getResolvedMorphologyVn,
   getResolvedEcologyVn,
-  getResolvedEconomicValueVn
+  getResolvedEconomicValueVn,
+  splitIntoParagraphs,
 } from '@/lib/species-text'
 import {
   parseLiterature,
@@ -97,16 +98,22 @@ export default function ThongsoTab({ sp, bio }: ThongsoTabProps) {
                     </div>
                     <span className="specimen-bento-card__badge">Hình thái học</span>
                   </div>
-                  <p
-                    className="specimen-bento-card__content"
-                    style={{
-                      maxWidth: 'none',
-                      width: '100%',
-                      textWrap: 'pretty',
-                    }}
-                  >
-                    {displayMorph}
-                  </p>
+                  <div className="specimen-bento-card__body" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    {splitIntoParagraphs(displayMorph).map((p, idx) => (
+                      <p
+                        key={idx}
+                        className="specimen-bento-card__content"
+                        style={{
+                          maxWidth: 'none',
+                          width: '100%',
+                          textWrap: 'pretty',
+                          margin: 0,
+                        }}
+                      >
+                        {p}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               )}
 
@@ -121,16 +128,22 @@ export default function ThongsoTab({ sp, bio }: ThongsoTabProps) {
                     </div>
                     <span className="specimen-bento-card__badge">Tập tính sinh thái</span>
                   </div>
-                  <p
-                    className="specimen-bento-card__content"
-                    style={{
-                      maxWidth: 'none',
-                      width: '100%',
-                      textWrap: 'pretty',
-                    }}
-                  >
-                    {displayEcology}
-                  </p>
+                  <div className="specimen-bento-card__body" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                    {splitIntoParagraphs(displayEcology).map((p, idx) => (
+                      <p
+                        key={idx}
+                        className="specimen-bento-card__content"
+                        style={{
+                          maxWidth: 'none',
+                          width: '100%',
+                          textWrap: 'pretty',
+                          margin: 0,
+                        }}
+                      >
+                        {p}
+                      </p>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -160,16 +173,22 @@ export default function ThongsoTab({ sp, bio }: ThongsoTabProps) {
                   {isFood && <span className="specimen-value-tag specimen-value-tag--food">Thực phẩm</span>}
                 </div>
               </div>
-              <p
-                className="specimen-bento-card__content"
-                style={{
-                  maxWidth: 'none',
-                  width: '100%',
-                  textWrap: 'pretty',
-                }}
-              >
-                {displayEconomic}
-              </p>
+              <div className="specimen-bento-card__body" style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {splitIntoParagraphs(displayEconomic).map((p, idx) => (
+                  <p
+                    key={idx}
+                    className="specimen-bento-card__content"
+                    style={{
+                      maxWidth: 'none',
+                      width: '100%',
+                      textWrap: 'pretty',
+                      margin: 0,
+                    }}
+                  >
+                    {p}
+                  </p>
+                ))}
+              </div>
             </div>
           )
         })()}

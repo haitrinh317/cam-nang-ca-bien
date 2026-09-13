@@ -110,12 +110,13 @@ def normalize_golden_population(raw_population: str, status: str = "", criteria:
     cleaned = re.sub(r"\.([A-ZÀ-Ỹ])", r". \1", cleaned)
 
     # Kiểm tra xem đã có chốt xu hướng quần thể chưa
-    trend_match = re.search(r"(?:[\.\s]|^)Xu\s+hướng\s+quần\s+thể\s*:?\s*([^\.\n]+(?:\.|$))", cleaned, re.IGNORECASE)
+    trend_match = re.search(r"(?:[\.\s]|^)Xu\s+hướng\s+quần\s+thể(?:\s+tại\s+tự\s+nhiên)?\s*:?\s*([^\.\n]+(?:\.|$))", cleaned, re.IGNORECASE)
     
     if trend_match:
         # Đã có -> Chuẩn hóa lại cho câu chữ chuẩn mực
         trend_val = trend_match.group(1).replace(".", "").strip()
-        cleaned_body = re.sub(r"(?:[\.\s]|^)Xu\s+hướng\s+quần\s+thể\s*:?\s*[^\.\n]+(?:\.|$)", "", cleaned, flags=re.IGNORECASE).strip()
+        trend_val = re.sub(r"^tại\s+tự\s+nhiên\s*:?\s*", "", trend_val, flags=re.IGNORECASE).strip()
+        cleaned_body = re.sub(r"(?:[\.\s]|^)Xu\s+hướng\s+quần\s+thể(?:\s+tại\s+tự\s+nhiên)?\s*:?\s*[^\.\n]+(?:\.|$)", "", cleaned, flags=re.IGNORECASE).strip()
         cleaned_body = cleaned_body.rstrip(". ") + "."
         return f"{cleaned_body} Xu hướng quần thể tại tự nhiên: {trend_val}."
     else:
