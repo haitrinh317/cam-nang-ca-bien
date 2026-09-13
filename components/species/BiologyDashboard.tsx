@@ -13,7 +13,8 @@ import {
   Leaf,
   Shrimp,
   Shell,
-  BookOpen
+  BookOpen,
+  ExternalLink
 } from 'lucide-react'
 import IucnBadge from './IucnBadge'
 import VnRedListBadge, { VnRedListInfo } from './VnRedListBadge'
@@ -34,6 +35,7 @@ export interface BiologyData {
   habitat?: string
   habitatVn?: string
   iucnStatus?: string
+  iucnTaxonId?: string | number
   dangerous?: string
   feedingType?: string
   trophicLevel?: number
@@ -433,8 +435,35 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
             {bio.iucnStatus && (
               <div className="bio-item-row">
                 <span className="bio-item-label">Sách Đỏ Quốc Tế (IUCN Toàn Cầu)</span>
-                <div>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
                   <IucnBadge status={bio.iucnStatus} />
+                  {bio.iucnTaxonId && (
+                    <a
+                      href={`https://www.iucnredlist.org/species/${bio.iucnTaxonId}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bio-iucn-link"
+                      title="Xem hồ sơ gốc trên IUCN Red List (Mở trang mới)"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '4px',
+                        fontSize: '0.78rem',
+                        color: 'var(--color-primary, #0ea5e9)',
+                        textDecoration: 'none',
+                        padding: '2px 7px',
+                        borderRadius: '4px',
+                        background: 'rgba(14, 165, 233, 0.08)',
+                        border: '1px solid rgba(14, 165, 233, 0.25)',
+                        fontWeight: 500,
+                        lineHeight: 1.2,
+                        transition: 'all 0.15s ease',
+                      }}
+                    >
+                      <span>IUCN ↗</span>
+                      <ExternalLink size={11} />
+                    </a>
+                  )}
                 </div>
               </div>
             )}
@@ -531,6 +560,7 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
         <ConservationWidget
           vnRedList={bio.vnRedList}
           iucnStatus={bio.iucnStatus}
+          iucnTaxonId={bio.iucnTaxonId}
           speciesName={bio.fbName}
         />
       )}

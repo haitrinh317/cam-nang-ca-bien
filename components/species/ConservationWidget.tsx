@@ -22,6 +22,7 @@ import './ConservationWidget.css'
 export interface ConservationWidgetProps {
   vnRedList?: VnRedListInfo | null
   iucnStatus?: string | null
+  iucnTaxonId?: string | number | null
   speciesName?: string
   scientificName?: string
 }
@@ -253,6 +254,7 @@ function cleanConservation(raw?: string | null): { existing: string[]; proposed:
 export default function ConservationWidget({
   vnRedList,
   iucnStatus,
+  iucnTaxonId,
   speciesName,
   scientificName,
 }: ConservationWidgetProps) {
@@ -320,10 +322,24 @@ export default function ConservationWidget({
           )}
 
           {iucnStatus && (
-            <span className="conservation-badge conservation-badge--iucn">
-              <Globe size={12} />
-              <span>IUCN: {iucnStatus}</span>
-            </span>
+            iucnTaxonId ? (
+              <a
+                href={`https://www.iucnredlist.org/species/${iucnTaxonId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="conservation-badge conservation-badge--iucn"
+                title="Xem hồ sơ loài trên IUCN Red List Toàn Cầu (Mở trang mới)"
+                style={{ textDecoration: 'none', cursor: 'pointer' }}
+              >
+                <Globe size={12} />
+                <span>IUCN: {iucnStatus} ↗</span>
+              </a>
+            ) : (
+              <span className="conservation-badge conservation-badge--iucn">
+                <Globe size={12} />
+                <span>IUCN: {iucnStatus}</span>
+              </span>
+            )
           )}
 
           {refCode && (
