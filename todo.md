@@ -6,7 +6,12 @@
 
 ---
 
-## ✅ Hoàn thành gần nhất (2026-09-13)
+## ✅ Hoàn thành gần nhất (2026-09-13 — phiên tối)
+
+- [x] UI Audit vibe-design-harness: Purge 100% emoji → Lucide SVG (Nav, BottomNav, SpecimenCard, SpeciesGrid, SpeciesForm) + xây dựng `hooks/useScrollReveal.ts`
+- [x] Scroll entrance animation: book-card stagger (browse) + heroReveal/panelReveal/bentoReveal (chi tiết loài) + fix bug invisible rows async data
+- [x] Codify UI rules vào AGENTS.md (Section 6) + 2 patterns mới vào patterns.md + refactor animation tokens
+- [x] SpeciesForm.tsx refactor sidebar 2-column workspace layout (chú tự thực hiện)
 
 - [x] Khởi tạo & Triển khai toàn diện Collection Thú biển Việt Nam (`thu-bien` — 34 loài: 1 Bò biển Dugong + 33 Cá voi/heo gồm Cá nhà táng) theo workflow 7 bước `ocr-to-audit.md`: 100% WoRMS AphiaID + 100% SeaLifeBase & GBIF + 100 ảnh Research-grade iNaturalist CC-BY + 100% Sách Đỏ VAST Golden Standard + 100% Complete Audit (34/34 đạt 100 điểm)
 - [x] Đăng ký Collection & Đầu sách đại diện: *Danh lục Thú biển Việt Nam & Mẫu vật Lăng Ông* (Smith et al. 1995; McGowen, Vũ Long et al. 2021; Viện Hải dương học), NXB Khoa học và Kỹ thuật vào Supabase và `lib/collection-registry.ts`
