@@ -136,7 +136,15 @@ export async function PATCH(req: NextRequest) {
       : old?.biology) || {}
     const merged = { ...currentBio }
     for (const [k, v] of Object.entries(bioEdits)) {
+      if (k === 'vnRedListStatus' || k === 'vnRedListRefCode') continue
       if (v !== undefined) merged[k] = v
+    }
+    if (bioEdits.vnRedListStatus !== undefined || bioEdits.vnRedListRefCode !== undefined) {
+      merged.vnRedList = {
+        ...(typeof merged.vnRedList === 'object' && merged.vnRedList !== null ? (merged.vnRedList as Record<string, unknown>) : {}),
+        ...(bioEdits.vnRedListStatus !== undefined ? { status: bioEdits.vnRedListStatus } : {}),
+        ...(bioEdits.vnRedListRefCode !== undefined ? { refCode: bioEdits.vnRedListRefCode } : {}),
+      }
     }
     ;(body as Record<string, unknown>).biology = merged
   }

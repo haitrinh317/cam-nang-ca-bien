@@ -46,6 +46,21 @@ interface BiologyData {
     firstAidProtocol?: string | null
     [key: string]: unknown
   } | null
+  vnRedList?: {
+    status?: string | null
+    statusVn?: string | null
+    year?: string | null
+    version?: string | null
+    assessor?: string | null
+    contributor?: string | null
+    refCode?: string | null
+    citation?: string | null
+    criteria?: string | null
+    threats?: string | null
+    conservation?: string | null
+    population?: string | null
+    url?: string | null
+  } | null
   [key: string]: unknown
 }
 
@@ -184,6 +199,8 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
     worms_accepted_name: initial?.worms_accepted_name || '',
     worms_id:            initial?.worms_id ? String(initial.worms_id) : '',
     bio_iucnStatus:      bio.iucnStatus || '',
+    bio_vnRedListStatus: bio.vnRedList?.status || '',
+    bio_vnRedListRefCode: bio.vnRedList?.refCode || '',
     bio_maxLength:       bio.maxLength || '',
     bio_maxWeight:       bio.maxWeight || '',
     bio_dangerous:       bio.dangerous || '',
@@ -230,6 +247,8 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
 
       const bioEdits: Record<string, unknown> = {
         iucnStatus: form.bio_iucnStatus || null,
+        vnRedListStatus: form.bio_vnRedListStatus || null,
+        vnRedListRefCode: form.bio_vnRedListRefCode || null,
         maxLength: form.bio_maxLength || null,
         maxWeight: form.bio_maxWeight || null,
         dangerous: form.bio_dangerous || null,
@@ -241,6 +260,8 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
 
     // Clean form-internal helper keys
     delete payload.bio_iucnStatus
+    delete payload.bio_vnRedListStatus
+    delete payload.bio_vnRedListRefCode
     delete payload.bio_maxLength
     delete payload.bio_maxWeight
     delete payload.bio_dangerous
@@ -437,6 +458,32 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                         <option value="NE">NE — Chưa đánh giá (Not Evaluated)</option>
                       </select>
                     </div>
+
+                    <div className="form-field">
+                      <label className="form-label" htmlFor="field-bio_vnRedListStatus">Danh Lục Đỏ Việt Nam (VAST 2024)</label>
+                      <select
+                        id="field-bio_vnRedListStatus"
+                        className="form-input admin-select"
+                        name="bio_vnRedListStatus"
+                        value={form.bio_vnRedListStatus}
+                        onChange={onChange}
+                      >
+                        <option value="">-- Chưa có trong SĐVN / Trống --</option>
+                        <option value="CR">CR — Cực kỳ nguy cấp</option>
+                        <option value="EN">EN — Nguy cấp</option>
+                        <option value="VU">VU — Sắp nguy cấp</option>
+                        <option value="NT">NT — Gần bị đe dọa</option>
+                        <option value="LC">LC — Ít quan tâm</option>
+                        <option value="DD">DD — Thiếu dữ liệu</option>
+                      </select>
+                    </div>
+
+                    <Field
+                      label="Mã hồ sơ Danh Lục Đỏ VN (refCode, VD: FS45)"
+                      name="bio_vnRedListRefCode"
+                      value={form.bio_vnRedListRefCode}
+                      onChange={onChange}
+                    />
 
                     <Field
                       label="Kích thước tối đa (maxLength)"
@@ -638,6 +685,43 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                         <span className="sync-readonly-val">{bio.vulnerability ? String(bio.vulnerability) : <span className="sync-readonly-val--empty">Chưa có</span>}</span>
                       </div>
                     </div>
+
+                    {/* Card: Danh Lục Đỏ Việt Nam (VAST 2024) */}
+                    {bio.vnRedList && (
+                      <div className="sync-readonly-card">
+                        <div className="sync-readonly-card__title">🇻🇳 Danh Lục Đỏ Việt Nam (VAST 2024)</div>
+                        <div className="sync-readonly-field">
+                          <span className="sync-readonly-label">Phân hạng bảo tồn:</span>
+                          <span className="sync-readonly-val">
+                            {bio.vnRedList.status ? `${bio.vnRedList.status} — ${bio.vnRedList.statusVn || ''}` : <span className="sync-readonly-val--empty">Chưa có</span>}
+                          </span>
+                        </div>
+                        {bio.vnRedList.refCode && (
+                          <div className="sync-readonly-field">
+                            <span className="sync-readonly-label">Mã hồ sơ:</span>
+                            <span className="sync-readonly-val">{bio.vnRedList.refCode}</span>
+                          </div>
+                        )}
+                        {bio.vnRedList.assessor && (
+                          <div className="sync-readonly-field">
+                            <span className="sync-readonly-label">Người đánh giá:</span>
+                            <span className="sync-readonly-val">{bio.vnRedList.assessor}</span>
+                          </div>
+                        )}
+                        {bio.vnRedList.threats && (
+                          <div className="sync-readonly-field">
+                            <span className="sync-readonly-label">Mối đe dọa:</span>
+                            <span className="sync-readonly-val" style={{ fontSize: '0.8rem', lineHeight: 1.4 }}>{bio.vnRedList.threats}</span>
+                          </div>
+                        )}
+                        {bio.vnRedList.conservation && (
+                          <div className="sync-readonly-field">
+                            <span className="sync-readonly-label">Biện pháp bảo tồn:</span>
+                            <span className="sync-readonly-val" style={{ fontSize: '0.8rem', lineHeight: 1.4 }}>{bio.vnRedList.conservation}</span>
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
 
                   {/* Card 5: Ghi chú & Tóm tắt sinh học */}

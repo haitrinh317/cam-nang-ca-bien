@@ -8,6 +8,7 @@
 
 ## ✅ Hoàn thành gần nhất (2026-09-13)
 
+- [x] Tích hợp Danh Lục Đỏ Việt Nam (VAST 2024-1) & Hệ thống Dual-Conservation Badges (74 loài sinh vật biển nguy cấp được làm giàu dữ liệu, hiển thị song hành IUCN & SĐVN)
 - [x] Tái cấu trúc kiến trúc toàn diện (5/5 Ứng viên hoàn thành):
   - [x] Ứng viên #1: Đào sâu SpecimenCard (tách orchestrator 170 dòng + 3 tabs + 6 pure parsers)
   - [x] Ứng viên #2: Frontend-Backend Parity (Tab Đồng bộ trong Admin, sửa WoRMS/Synonyms/IUCN/Size)

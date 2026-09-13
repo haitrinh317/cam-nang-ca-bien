@@ -27,6 +27,10 @@ interface SpeciesItem {
   authorship: string | null
   biology?: {
     iucnStatus?: string
+    vnRedList?: {
+      status?: string
+      refCode?: string
+    }
   } | null
   vn_distribution?: string | null
   en_distribution?: string | null
@@ -45,6 +49,7 @@ export const isTSLocation = (s: SpeciesItem) => {
 }
 
 import IucnBadge, { IUCN_COLOR } from '@/components/species/IucnBadge'
+import VnRedListBadge from '@/components/species/VnRedListBadge'
 
 const BADGE_THEMES: Record<string, { bg: string; color: string; border: string }> = {
   cyan: { bg: 'rgba(0, 212, 184, 0.12)', color: '#008f7a', border: 'rgba(0, 212, 184, 0.3)' },
@@ -702,6 +707,9 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                           </Link>
                           {sp.biology?.iucnStatus && (
                             <IucnBadge status={sp.biology.iucnStatus} />
+                          )}
+                          {sp.biology?.vnRedList?.status && (
+                            <VnRedListBadge status={sp.biology.vnRedList.status} compact />
                           )}
                           {activeGroup?.id === 'hoang-sa-truong-sa' && (
                             <>

@@ -15,12 +15,14 @@ import {
   Shell
 } from 'lucide-react'
 import IucnBadge from './IucnBadge'
+import VnRedListBadge, { VnRedListInfo } from './VnRedListBadge'
 import BilingualNoteBlock from './BilingualNoteBlock'
 import { ToxicologyData } from './ToxicologyWidget'
 import './BiologyDashboard.css'
 
 export interface BiologyData {
   toxicology?: ToxicologyData
+  vnRedList?: VnRedListInfo
   fbName?: string
   maxLength?: string
   maxWeight?: string
@@ -356,9 +358,42 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
           <div className="bio-group-card__list">
             {bio.iucnStatus && (
               <div className="bio-item-row">
-                <span className="bio-item-label">Tình trạng Sách Đỏ Quốc Tế</span>
+                <span className="bio-item-label">Sách Đỏ Quốc Tế (IUCN Toàn Cầu)</span>
                 <div>
                   <IucnBadge status={bio.iucnStatus} />
+                </div>
+              </div>
+            )}
+
+            {bio.vnRedList?.status && (
+              <div className="bio-item-row">
+                <span className="bio-item-label">Danh Lục Đỏ Việt Nam (VAST 2024)</span>
+                <div>
+                  <VnRedListBadge status={bio.vnRedList.status} refCode={bio.vnRedList.refCode} />
+                </div>
+              </div>
+            )}
+
+            {bio.vnRedList?.threats && (
+              <div className="bio-alert-box bio-alert-box--warning" style={{ marginTop: '0.65rem' }}>
+                <ShieldAlert size={20} className="bio-alert-box__icon" />
+                <div className="bio-alert-box__content">
+                  <span className="bio-alert-box__title">
+                    Mối đe dọa tại Việt Nam (Danh lục Đỏ 2024)
+                  </span>
+                  <p className="bio-alert-box__desc">
+                    {bio.vnRedList.threats}
+                  </p>
+                  {bio.vnRedList.conservation && (
+                    <p className="bio-alert-box__desc" style={{ marginTop: '0.4rem', borderTop: '1px dashed rgba(255,255,255,0.15)', paddingTop: '0.4rem' }}>
+                      <strong>Biện pháp bảo tồn đề xuất:</strong> {bio.vnRedList.conservation}
+                    </p>
+                  )}
+                  {bio.vnRedList.assessor && (
+                    <div style={{ fontSize: '0.75rem', opacity: 0.75, marginTop: '0.4rem' }}>
+                      Người đánh giá: {bio.vnRedList.assessor} {bio.vnRedList.refCode ? `(Mã: ${bio.vnRedList.refCode})` : ''}
+                    </div>
+                  )}
                 </div>
               </div>
             )}

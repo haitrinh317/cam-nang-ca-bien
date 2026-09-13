@@ -63,6 +63,8 @@ export const speciesCreateSchema = z.object({
   // Biology editable fields (merged into biology JSONB in PATCH handler)
   _biology_edits: z.object({
     iucnStatus: z.string().max(20).nullable().optional(),
+    vnRedListStatus: z.string().max(20).nullable().optional(),
+    vnRedListRefCode: z.string().max(50).nullable().optional(),
     maxLength: z.string().max(200).nullable().optional(),
     maxWeight: z.string().max(200).nullable().optional(),
     dangerous: z.string().max(100).nullable().optional(),
