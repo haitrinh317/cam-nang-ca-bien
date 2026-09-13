@@ -506,13 +506,20 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
               </div>
             )}
 
-            {(bio.importanceVn || bio.importance) && (
+            {(bio.importanceVn || bio.importance || bio.aquaculture) && (
               <div className="bio-item-row">
                 <span className="bio-item-label">Giá trị thương mại & Nuôi trồng</span>
-                <span className="bio-item-val">
-                  {bio.importanceVn || translateBio(bio.importance)}
-                  {bio.aquaculture ? ` • Nuôi trồng: ${translateBio(bio.aquaculture)}` : ''}
-                </span>
+                <div className="bio-item-val">
+                  {(bio.importanceVn || bio.importance) && (
+                    <div>{bio.importanceVn || translateBio(bio.importance)}</div>
+                  )}
+                  {bio.aquaculture && (
+                    <div className="bio-item-subval">
+                      <span className="bio-item-subval__label">Nuôi trồng:</span>{' '}
+                      {translateBio(bio.aquaculture)}
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>
