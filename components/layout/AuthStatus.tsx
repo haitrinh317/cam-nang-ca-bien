@@ -4,7 +4,11 @@ import { useEffect, useState } from 'react'
 import { db } from '@/lib/supabase-browser'
 import { LogOut, ShieldCheck } from 'lucide-react'
 
-export default function AuthStatus() {
+interface Props {
+  collapsed?: boolean
+}
+
+export default function AuthStatus({ collapsed }: Props) {
   const [email, setEmail] = useState<string | null>(null)
 
   useEffect(() => {
@@ -23,6 +27,26 @@ export default function AuthStatus() {
   if (!email) return null
 
   const initial = email.charAt(0).toUpperCase()
+  const name = email.split('@')[0]
+
+  if (collapsed) {
+    return (
+      <div className="auth-status auth-status--collapsed">
+        <div className="auth-status__avatar" title={`${email} (Admin)`}>
+          {initial}
+        </div>
+        <button
+          className="auth-status__logout-icon-btn"
+          data-class="btn"
+          onClick={handleLogout}
+          type="button"
+          title="Đăng xuất khỏi phiên làm việc"
+        >
+          <LogOut size={13} aria-hidden="true" />
+        </button>
+      </div>
+    )
+  }
 
   return (
     <div className="auth-status">
@@ -32,18 +56,19 @@ export default function AuthStatus() {
         </div>
         <div className="auth-status__info">
           <div className="auth-status__email" title={email}>
-            {email}
+            {name}
           </div>
           <div className="auth-status__role-badge">
             <span className="auth-status__dot" aria-hidden="true" />
             <ShieldCheck size={11} aria-hidden="true" />
-            <span>QUẢN TRỊ VIÊN</span>
+            <span>ADMIN PRO</span>
           </div>
         </div>
       </div>
 
       <button
         className="auth-status__logout"
+        data-class="btn"
         onClick={handleLogout}
         type="button"
         title="Đăng xuất khỏi phiên làm việc"
