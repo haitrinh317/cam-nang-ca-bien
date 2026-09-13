@@ -16,6 +16,7 @@ import os
 import sys
 import time
 import uuid
+import re
 from pathlib import Path
 
 import requests
@@ -107,17 +108,35 @@ def inat_get(endpoint, params=None):
     return resp.json()
 
 
-def find_taxon_id(scientific_name):
-    """Look up iNaturalist taxon ID for a scientific name."""
-    data = inat_get("taxa", {"q": scientific_name, "rank": "species", "per_page": 5})
+def find_taxon_id(scientific_name, collection="ca-bien"):
+    """Look up iNaturalist taxon ID for a scientific name with strict verification."""
+    # Làm sạch tên khoa học: bỏ tác giả, năm nếu có
+    clean_name = re.sub(r'\(.*?\)', '', scientific_name).strip()
+    words = clean_name.split()
+    if len(words) >= 2:
+        clean_name = f"{words[0]} {words[1]}"
+    genus = words[0] if words else ""
+
+    data = inat_get("taxa", {"q": clean_name, "rank": "species", "per_page": 10})
     results = data.get("results", [])
-    # Exact match first
+
+    # 1. Khớp chính xác tên loài
     for t in results:
-        if t.get("name", "").lower() == scientific_name.lower():
+        tname = t.get("name", "").strip().lower()
+        if tname == clean_name.lower() or tname == scientific_name.lower():
             return t["id"]
-    # Partial match fallback
-    if results:
-        return results[0]["id"]
+
+    # 2. Khớp cùng chi (genus) và cùng giới động vật (nếu là cá biển)
+    for t in results:
+        tname = t.get("name", "").strip().lower()
+        iconic = t.get("iconic_taxon_name", "")
+        # Nếu là ca-bien thì không bao giờ lấy thực vật hoặc nấm
+        if collection == "ca-bien" and iconic in ("Plantae", "Fungi", "Insecta"):
+            continue
+        if tname.startswith(genus.lower() + " "):
+            return t["id"]
+
+    # TUYỆT ĐỐI KHÔNG fallback bừa bãi results[0] nếu không khớp tên chi
     return None
 
 
