@@ -176,8 +176,8 @@ export default function GlobalSearch({
                   ? 'Thực vật'
                   : item.collection_id === 'giap-xac'
                   ? 'Giáp xác'
-                  : item.collection_id === 'ran-bien'
-                  ? 'Rắn biển'
+                  : item.collection_id === 'bo-sat-bien' || item.collection_id === 'ran-bien'
+                  ? (item.volume === 2 ? 'Rùa biển' : item.volume === 3 ? 'Cá sấu' : 'Rắn biển')
                   : item.collection_id === 'sinh-vat-doc'
                   ? 'Độc biển'
                   : `Tập ${item.volume}`}

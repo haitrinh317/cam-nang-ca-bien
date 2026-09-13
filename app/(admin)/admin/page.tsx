@@ -76,7 +76,7 @@ export default async function AdminDashboard() {
     { count: caBienCount },
     { count: thucVatCount },
     { count: giapXacCount },
-    { count: ranBienCount },
+    { count: boSatCount },
     { count: litCount },
     { data: recentAudit },
   ] = await Promise.all([
@@ -84,7 +84,7 @@ export default async function AdminDashboard() {
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'ca-bien').is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'thuc-vat-bien').is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'giap-xac').is('deleted_at', null),
-    db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'ran-bien').is('deleted_at', null),
+    db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'bo-sat-bien').is('deleted_at', null),
     db.from('literature_sources').select('*', { count: 'exact', head: true }),
     db.from('audit_log')
       .select('id, created_at, user_email, action, details')
@@ -92,7 +92,7 @@ export default async function AdminDashboard() {
       .limit(8),
   ])
 
-  const total = totalCount || (caBienCount || 0) + (thucVatCount || 0) + (giapXacCount || 0) + (ranBienCount || 0)
+  const total = totalCount || (caBienCount || 0) + (thucVatCount || 0) + (giapXacCount || 0) + (boSatCount || 0)
 
   // Volume breakdown (Cá biển tập 1-5)
   const volPromises = [1, 2, 3, 4, 5].map((v) =>
@@ -158,11 +158,11 @@ export default async function AdminDashboard() {
 
         <div className="admin-kpi-card admin-kpi-card--ranbien">
           <div className="admin-kpi-card__header">
-            <h3 className="admin-kpi-card__title">Rắn biển</h3>
-            <div className="admin-kpi-card__icon" aria-hidden="true"><span style={{ fontSize: '16px', lineHeight: 1 }}>🐍</span></div>
+            <h3 className="admin-kpi-card__title">Bò sát biển</h3>
+            <div className="admin-kpi-card__icon" aria-hidden="true"><span style={{ fontSize: '16px', lineHeight: 1 }}>🐢</span></div>
           </div>
-          <p className="admin-kpi-card__value">{(ranBienCount || 0).toLocaleString('vi-VN')}</p>
-          <p className="admin-kpi-card__sub">Rắn biển &amp; đẻn biển</p>
+          <p className="admin-kpi-card__value">{(boSatCount || 0).toLocaleString('vi-VN')}</p>
+          <p className="admin-kpi-card__sub">Rùa, rắn &amp; cá sấu biển</p>
         </div>
 
         <div className="admin-kpi-card admin-kpi-card--lit">

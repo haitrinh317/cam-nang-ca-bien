@@ -21,14 +21,14 @@
 
 ---
 
-## 📊 Kiểm Kê Dữ Liệu — 2,787 loài
+## 📊 Kiểm Kê Dữ Liệu — 2,793 loài
 
 | Collection | Loài | WoRMS | Trạng thái |
 |---|:---:|:---:|---|
 | `ca-bien` (Tập I-VI) | 1,764 | 100% | ✅ Hoàn chỉnh + Hợp nhất 21 loài cá độc |
 | `thuc-vat-bien` (Tập 1-2) | 672 | 100% | ✅ Hoàn chỉnh (201 + 471 ảnh tiêu bản) |
 | `giap-xac` | 132 | 100% | ✅ 99.2% SeaLifeBase + 40% ảnh iNat |
-| `ran-bien` | 27 | 100% | ✅ Hợp nhất Đa Nguồn + 100% Độc học PIB |
+| `bo-sat-bien` | 33 | 100% | ✅ 27 Rắn biển + 5 Rùa biển + 1 Cá sấu hoa cà |
 | `sinh-vat-doc` | 76 | 100% | ✅ 100% Toxicology + 80 ảnh thực địa |
 | `than-mem` (Pilot Ốc sứ) | 74 | 100% | ✅ 85% SeaLifeBase + 210 ảnh iNat |
 | `san-ho` | 42 | 97.6% | ✅ Khuyết trang 102 (loài 30) |
@@ -62,9 +62,9 @@ Deploy: git push origin master + vercel --prod --yes
 
 | Table | Mô tả |
 |---|---|
-| `species` | 2,787 loài, `collection_id` FK, flat schema |
+| `species` | 2,793 loài, `collection_id` FK, flat schema |
 | `species_photos` | Ảnh loài (Storage bucket `species-photos`) |
-| `collections` | 7 collection: ca-bien, thuc-vat-bien, giap-xac, ran-bien, sinh-vat-doc, than-mem, san-ho |
+| `collections` | 7 collection: ca-bien, thuc-vat-bien, giap-xac, bo-sat-bien, sinh-vat-doc, than-mem, san-ho |
 | `literature_sources` | Sách tham khảo hiển thị trên homepage |
 | `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
 | `audit_log` | Nhật ký thay đổi (jsonb old/new) |

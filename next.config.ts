@@ -19,6 +19,9 @@ const nextConfig: NextConfig = {
       { source: '/species.html', destination: '/ca-bien', permanent: false },
       // admin.html → /admin
       { source: '/admin.html', destination: '/admin', permanent: true },
+      // ran-bien → /bo-sat-bien (Collection upgrade redirect)
+      { source: '/ran-bien', destination: '/bo-sat-bien', permanent: true },
+      { source: '/ran-bien/:path*', destination: '/bo-sat-bien/:path*', permanent: true },
     ]
   },
 

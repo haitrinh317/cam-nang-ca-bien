@@ -34,11 +34,11 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     accentColor: '#fca5a5',
   },
   {
-    slug: 'ran-bien',
-    nameVn: 'Rắn biển Việt Nam',
-    nameEn: 'Sea Snakes in Vietnam',
-    stats: '27 loài • Chuyên khảo',
-    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🐍</span>,
+    slug: 'bo-sat-bien',
+    nameVn: 'Bò sát biển',
+    nameEn: 'Marine Reptiles',
+    stats: '33 loài • 3 tập',
+    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🐢</span>,
     accentColor: '#f59e0b',
   },
   {
