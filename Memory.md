@@ -21,7 +21,7 @@
 
 ---
 
-## 📊 Kiểm Kê Dữ Liệu — 2,794 loài | Sách Đỏ VAST: 79 loài (100% Golden Standard)
+## 📊 Kiểm Kê Dữ Liệu — 2,828 loài | Sách Đỏ VAST: 113 loài (100% Golden Standard)
 
 | Collection | Loài | WoRMS | Trạng thái |
 |---|:---:|:---:|---|
@@ -32,6 +32,7 @@
 | `sinh-vat-doc` | 76 | 100% | ✅ 100% Toxicology + 80 ảnh thực địa |
 | `than-mem` (Pilot Ốc sứ) | 74 | 100% | ✅ 85% SeaLifeBase + 210 ảnh iNat |
 | `san-ho` | 42 | 97.6% | ✅ Khuyết trang 102 (loài 30) |
+| `thu-bien` | 34 | 100% | ✅ 1 Bò biển + 33 Cá voi (gồm Cá nhà táng) + 100% SeaLifeBase + 100 ảnh iNat CC-BY + 100% Sách Đỏ VAST Golden Standard + 100% Complete Audit |
 
 ---
 

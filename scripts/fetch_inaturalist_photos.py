@@ -133,6 +133,10 @@ def find_taxon_id(scientific_name, collection="ca-bien"):
         # Nếu là ca-bien thì không bao giờ lấy thực vật hoặc nấm
         if collection == "ca-bien" and iconic in ("Plantae", "Fungi", "Insecta"):
             continue
+        if collection == "thu-bien" and iconic != "Mammalia":
+            continue
+        if collection == "bo-sat-bien" and iconic != "Reptilia":
+            continue
         if tname.startswith(genus.lower() + " "):
             return t["id"]
 
@@ -260,9 +264,9 @@ def process_species(sp, idx, total, dry_run=False):
     prefix = f"[{idx}/{total}]"
 
     # 1. Find taxon on iNaturalist
-    taxon_id = find_taxon_id(sci_name)
+    taxon_id = find_taxon_id(sci_name, collection=COLLECTION)
     if not taxon_id and alt_name and alt_name != sci_name:
-        taxon_id = find_taxon_id(alt_name)
+        taxon_id = find_taxon_id(alt_name, collection=COLLECTION)
         if taxon_id:
             print(f"  {prefix} Used WoRMS accepted name: {alt_name}")
 

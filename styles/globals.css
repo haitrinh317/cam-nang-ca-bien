@@ -479,4 +479,99 @@ a:focus-visible {
   border: 1px solid var(--color-rank-species-bd);
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   VN RED LIST BADGE (Huy hiệu Sách Đỏ Việt Nam VAST 2024)
+   Chuẩn hóa toàn hệ thống: Sử dụng 100% token từ tokens.css
+   ═══════════════════════════════════════════════════════════════ */
+.vn-redlist-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  padding: var(--redlist-badge-padding, 4px 12px);
+  border-radius: var(--redlist-badge-radius, 9999px);
+  font-weight: var(--redlist-badge-font-weight, 700);
+  font-size: var(--redlist-badge-font-size, 0.75rem);
+  letter-spacing: .04em;
+  line-height: 1.2;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: var(--redlist-badge-bg, rgba(217, 119, 6, 0.12));
+  border: 1px solid var(--redlist-badge-border, rgba(217, 119, 6, 0.35));
+  color: var(--redlist-badge-color, var(--redlist-vu-accent));
+  box-shadow: 0 1px 2px var(--redlist-badge-shadow, rgba(0, 0, 0, 0.05));
+  transition: opacity var(--dur-fast, 150ms) ease;
+}
+
+.vn-redlist-badge--compact {
+  padding: var(--redlist-badge-compact-padding, 2px 8px);
+  font-size: 0.7rem;
+  border-radius: var(--radius-xs, 4px);
+}
+
+.vn-redlist-badge--cr {
+  --redlist-badge-bg: var(--redlist-cr-bg-light);
+  --redlist-badge-border: var(--redlist-cr-border);
+  --redlist-badge-color: var(--redlist-cr-accent);
+  --redlist-badge-shadow: var(--redlist-cr-glow);
+}
+
+.vn-redlist-badge--en {
+  --redlist-badge-bg: var(--redlist-en-bg-light);
+  --redlist-badge-border: var(--redlist-en-border);
+  --redlist-badge-color: var(--redlist-en-accent);
+  --redlist-badge-shadow: var(--redlist-en-glow);
+}
+
+.vn-redlist-badge--vu {
+  --redlist-badge-bg: var(--redlist-vu-bg-light);
+  --redlist-badge-border: var(--redlist-vu-border);
+  --redlist-badge-color: var(--redlist-vu-accent);
+  --redlist-badge-shadow: var(--redlist-vu-glow);
+}
+
+.vn-redlist-badge--nt {
+  --redlist-badge-bg: var(--redlist-nt-bg-light);
+  --redlist-badge-border: var(--redlist-nt-border);
+  --redlist-badge-color: var(--redlist-nt-accent);
+  --redlist-badge-shadow: var(--redlist-nt-glow);
+}
+
+.vn-redlist-badge--lc {
+  --redlist-badge-bg: var(--redlist-lc-bg-light);
+  --redlist-badge-border: var(--redlist-lc-border);
+  --redlist-badge-color: var(--redlist-lc-accent);
+  --redlist-badge-shadow: var(--redlist-lc-glow);
+}
+
+.vn-redlist-badge--ew {
+  --redlist-badge-bg: var(--redlist-ew-bg-light);
+  --redlist-badge-border: var(--redlist-ew-border);
+  --redlist-badge-color: var(--redlist-ew-accent);
+  --redlist-badge-shadow: var(--redlist-ew-glow);
+}
+
+.vn-redlist-badge--ex {
+  --redlist-badge-bg: var(--redlist-ex-bg-light);
+  --redlist-badge-border: var(--redlist-ex-border);
+  --redlist-badge-color: var(--redlist-ex-accent);
+  --redlist-badge-shadow: var(--redlist-ex-glow);
+}
+
+.vn-redlist-badge--dd {
+  --redlist-badge-bg: var(--redlist-dd-bg-light);
+  --redlist-badge-border: var(--redlist-dd-border);
+  --redlist-badge-color: var(--redlist-dd-accent);
+  --redlist-badge-shadow: var(--redlist-dd-glow);
+}
+
+.vn-redlist-badge__dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+  flex-shrink: 0;
+}
+
+
 

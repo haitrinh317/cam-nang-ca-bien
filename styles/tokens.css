@@ -86,6 +86,102 @@
   --color-rank-species-text: #0f766e;
   --color-rank-species-bd:   rgba(0, 212, 184, 0.35);
 
+  /* ─── Conservation & Red List Design System (Sách Đỏ Việt Nam VAST & IUCN Toàn Cầu) ───
+   * Thiết kế chuẩn hóa: Áp dụng cho mọi phân hệ tra cứu (Cá biển, Thú biển, Bò sát, San hô, Thân mềm...)
+   * Đầy đủ các phân hạng: CR, EN, VU, NT, LC, EW, EX, DD
+   */
+  /* Phân hạng CR: Cực kỳ nguy cấp (Critically Endangered) */
+  --redlist-cr-accent:         #dc2626;
+  --redlist-cr-bg-light:       rgba(254, 242, 242, 0.85);
+  --redlist-cr-border:         rgba(220, 38, 38, 0.3);
+  --redlist-cr-glow:           rgba(220, 38, 38, 0.15);
+  --redlist-cr-bg-dark:        rgba(69, 10, 10, 0.45);
+
+  /* Phân hạng EN: Nguy cấp (Endangered) */
+  --redlist-en-accent:         #ea580c;
+  --redlist-en-bg-light:       rgba(255, 247, 237, 0.85);
+  --redlist-en-border:         rgba(234, 88, 12, 0.3);
+  --redlist-en-glow:           rgba(234, 88, 12, 0.15);
+  --redlist-en-bg-dark:        rgba(67, 20, 7, 0.45);
+
+  /* Phân hạng VU: Sắp nguy cấp (Vulnerable) */
+  --redlist-vu-accent:         #d97706;
+  --redlist-vu-bg-light:       rgba(255, 251, 235, 0.85);
+  --redlist-vu-border:         rgba(217, 119, 6, 0.3);
+  --redlist-vu-glow:           rgba(217, 119, 6, 0.15);
+  --redlist-vu-bg-dark:        rgba(69, 26, 3, 0.45);
+
+  /* Phân hạng NT: Gần bị đe dọa (Near Threatened) */
+  --redlist-nt-accent:         #65a30d;
+  --redlist-nt-bg-light:       rgba(247, 254, 231, 0.85);
+  --redlist-nt-border:         rgba(101, 163, 13, 0.3);
+  --redlist-nt-glow:           rgba(101, 163, 13, 0.12);
+  --redlist-nt-bg-dark:        rgba(26, 46, 5, 0.45);
+
+  /* Phân hạng LC: Ít quan tâm (Least Concern) */
+  --redlist-lc-accent:         #16a34a;
+  --redlist-lc-bg-light:       rgba(240, 253, 244, 0.85);
+  --redlist-lc-border:         rgba(22, 163, 74, 0.3);
+  --redlist-lc-glow:           rgba(22, 163, 74, 0.12);
+  --redlist-lc-bg-dark:        rgba(5, 46, 22, 0.45);
+
+  /* Phân hạng EW: Tuyệt chủng ngoài tự nhiên (Extinct in the Wild) */
+  --redlist-ew-accent:         #7c3aed;
+  --redlist-ew-bg-light:       rgba(245, 243, 255, 0.85);
+  --redlist-ew-border:         rgba(124, 58, 237, 0.3);
+  --redlist-ew-glow:           rgba(124, 58, 237, 0.15);
+  --redlist-ew-bg-dark:        rgba(46, 16, 101, 0.45);
+
+  /* Phân hạng EX: Tuyệt chủng (Extinct) */
+  --redlist-ex-accent:         #475569;
+  --redlist-ex-bg-light:       rgba(248, 250, 252, 0.85);
+  --redlist-ex-border:         rgba(71, 85, 105, 0.3);
+  --redlist-ex-glow:           rgba(71, 85, 105, 0.12);
+  --redlist-ex-bg-dark:        rgba(15, 23, 42, 0.45);
+
+  /* Phân hạng DD: Thiếu dữ liệu (Data Deficient) */
+  --redlist-dd-accent:         #64748b;
+  --redlist-dd-bg-light:       rgba(248, 250, 252, 0.85);
+  --redlist-dd-border:         rgba(100, 116, 139, 0.3);
+  --redlist-dd-glow:           rgba(100, 116, 139, 0.1);
+  --redlist-dd-bg-dark:        rgba(30, 41, 59, 0.45);
+
+  /* ─── Cấu trúc Thẻ & Thành phần Hồ Sơ Bảo Tồn (Bento Layout) ─── */
+  --redlist-widget-radius:     var(--radius-xl, 24px);
+  --redlist-widget-padding:    var(--space-xl, 28px);
+  --redlist-widget-gap:        var(--space-lg, 20px);
+  --redlist-top-bar-height:    4px;
+
+  --redlist-card-radius:       var(--radius-lg, 18px);
+  --redlist-card-padding:      18px;
+  --redlist-card-border:       1px solid rgba(226, 232, 240, 0.9);
+  --redlist-card-bg:           #ffffff;
+
+  /* Thẻ Hành động Bảo tồn (Hero Action Card) */
+  --redlist-hero-border-left:  5px;
+  --redlist-hero-padding:      18px 20px;
+
+  /* Phân nhóm con: Biện pháp đã có / hiện hành */
+  --redlist-subgroup-existing-accent:  #059669;
+  --redlist-subgroup-existing-border:  3.5px;
+  --redlist-subgroup-existing-bg:      rgba(255, 255, 255, 0.85);
+
+  /* Phân nhóm con: Biện pháp đề xuất cấp thiết */
+  --redlist-subgroup-proposed-border:  3.5px;
+
+  /* Metric Pill: Xu hướng quần thể tự nhiên */
+  --redlist-trend-pill-radius: var(--radius-sm, 6px);
+  --redlist-trend-pill-padding: 6px 12px;
+  --redlist-trend-pill-bg:     rgba(217, 119, 6, 0.08);
+  --redlist-trend-pill-border: rgba(217, 119, 6, 0.22);
+
+  /* Huy hiệu bảo tồn (Dual Badges) */
+  --redlist-badge-radius:      var(--radius-pill, 9999px);
+  --redlist-badge-padding:     4px 12px;
+  --redlist-badge-compact-padding: 2px 8px;
+  --redlist-badge-font-size:   0.75rem;
+  --redlist-badge-font-weight: 700;
+
   /* ─── Typography: Self-hosted via next/font/google (fallback: Be Vietnam Pro, Segoe UI, system fonts) ─── */
   --font-display:          var(--font-lora), var(--font-be-vietnam), 'Be Vietnam Pro', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
   --font-body:             var(--font-be-vietnam), 'Be Vietnam Pro', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
@@ -244,6 +340,43 @@
   --color-rank-species-bg:   rgba(0, 212, 184, 0.2);
   --color-rank-species-text: #00f0d0;
   --color-rank-species-bd:   rgba(0, 212, 184, 0.4);
+
+  /* ─── Conservation & Red List Tokens in Dark Mode ─── */
+  --redlist-cr-bg-light:       rgba(69, 10, 10, 0.45);
+  --redlist-cr-border:         rgba(248, 113, 113, 0.35);
+  --redlist-cr-glow:           rgba(239, 68, 68, 0.2);
+
+  --redlist-en-bg-light:       rgba(67, 20, 7, 0.45);
+  --redlist-en-border:         rgba(251, 146, 60, 0.35);
+  --redlist-en-glow:           rgba(249, 115, 22, 0.2);
+
+  --redlist-vu-bg-light:       rgba(69, 26, 3, 0.45);
+  --redlist-vu-border:         rgba(251, 191, 36, 0.35);
+  --redlist-vu-glow:           rgba(245, 158, 11, 0.2);
+
+  --redlist-nt-bg-light:       rgba(26, 46, 5, 0.45);
+  --redlist-nt-border:         rgba(163, 230, 53, 0.35);
+  --redlist-nt-glow:           rgba(132, 204, 22, 0.18);
+
+  --redlist-lc-bg-light:       rgba(5, 46, 22, 0.45);
+  --redlist-lc-border:         rgba(74, 222, 128, 0.35);
+  --redlist-lc-glow:           rgba(34, 197, 94, 0.18);
+
+  --redlist-ew-bg-light:       rgba(46, 16, 101, 0.45);
+  --redlist-ew-border:         rgba(196, 181, 253, 0.35);
+
+  --redlist-ex-bg-light:       rgba(15, 23, 42, 0.55);
+  --redlist-ex-border:         rgba(148, 163, 184, 0.3);
+
+  --redlist-dd-bg-light:       rgba(30, 41, 59, 0.45);
+  --redlist-dd-border:         rgba(148, 163, 184, 0.3);
+
+  /* Cấu trúc thẻ trong Dark Mode */
+  --redlist-card-bg:           rgba(30, 41, 59, 0.5);
+  --redlist-card-border:       1px solid rgba(255, 255, 255, 0.08);
+  --redlist-subgroup-existing-bg: rgba(15, 23, 42, 0.5);
+  --redlist-trend-pill-bg:     rgba(217, 119, 6, 0.16);
+  --redlist-trend-pill-border: rgba(217, 119, 6, 0.35);
 
   /* Shadows → deep oceanic */
   --shadow-xs:             0 1px 3px rgba(0, 0, 0, 0.5);

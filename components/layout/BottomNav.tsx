@@ -86,6 +86,16 @@ const COLLECTIONS_LIST: CollectionItem[] = [
     accent: '#e8c4ff',
     available: true,
   },
+  {
+    slug: 'thu-bien',
+    name: 'Thú biển Việt Nam',
+    nameEn: 'Marine Mammals of Vietnam',
+    desc: 'Cá voi, cá heo, cá nhà táng & bò biển',
+    stats: '34 loài • 1 tập',
+    icon: <span style={{ fontSize: '24px', lineHeight: 1 }}>🐋</span>,
+    accent: '#38bdf8',
+    available: true,
+  },
 ]
 
 export function BottomNav() {

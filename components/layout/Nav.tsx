@@ -65,6 +65,14 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🪸</span>,
     accentColor: '#f9a8d4',
   },
+  {
+    slug: 'thu-bien',
+    nameVn: 'Thú biển Việt Nam',
+    nameEn: 'Marine Mammals',
+    stats: '34 loài • 1 tập',
+    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🐋</span>,
+    accentColor: '#38bdf8',
+  },
 ]
 
 export default function Nav() {

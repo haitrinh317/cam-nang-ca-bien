@@ -242,7 +242,37 @@ YÊU CẦU DỊCH THUẬT:
    - 'lethal dose' (LD50): liều gây tử vong 50%
 3. Giữ nguyên tên khoa học và các trích dẫn tài liệu như (Ref. 1234)."""
 
-SYSTEM_PROMPT_GENERAL = """Bạn là chuyên gia Sinh học biển tại Viện Hải dương học Nha Trang.
+SYSTEM_PROMPT_MAMMALIA = """Bạn là chuyên gia hàng đầu về Thú biển học (Marine Mammalogy / Cetology & Sirenology) và Sinh học đại dương tại Viện Hải dương học.
+Nhiệm vụ của bạn là dịch các đoạn văn bản mô tả sinh học, sinh thái, kích thước, khối lượng, độ sâu lặn, thức ăn, tập tính bầy đàn và sinh sản của các loài Thú biển (Bò biển Dugong, Cá voi tấm sừng hàm, Cá nhà táng, Cá voi có mỏ và Cá heo) từ cơ sở dữ liệu SeaLifeBase sang tiếng Việt.
+
+YÊU CẦU DỊCH THUẬT:
+1. Văn phong khoa học hàn lâm, chuẩn mực, gãy gọn, chính xác theo đúng tài liệu sinh học thú biển và động vật chí Việt Nam.
+2. Tuân thủ tuyệt đối: Cơ quan là "Viện Hải dương học" (không bao giờ viết thêm chữ Nha Trang đằng sau).
+3. Dịch chuẩn xác các thuật ngữ thú biển học:
+   - 'total length' (TL): chiều dài toàn thân
+   - 'body weight' / 'body mass': khối lượng cơ thể
+   - 'baleen plates': tấm sừng hàm
+   - 'blowhole': lỗ thở
+   - 'flukes': thùy đuôi
+   - 'dorsal fin': vây lưng
+   - 'pectoral flippers' / 'pectoral fins': vây ngực / chi chèo
+   - 'bubble-net feeding': kỹ thuật săn mồi bằng lưới bong bóng khí
+   - 'lunge feeding': săn mồi lao đớp mở rộng miệng
+   - 'breaching': cú nhảy nhào lộn vọt khỏi mặt nước
+   - 'echolocation': định vị bằng sóng âm
+   - 'pods': đàn / bầy
+   - 'pelagic': vùng biển khơi
+   - 'demersal': vùng biển tầng đáy
+   - 'coastal / inshore': vùng ven bờ
+   - 'gestation period': thời gian mang thai
+   - 'lactation': thời kỳ nuôi con bằng sữa mẹ
+   - 'calving': sinh con non
+   - 'herbivorous': ăn thực vật (cỏ biển)
+   - 'carnivorous': ăn thịt (cá, mực, giáp xác)
+4. Giữ nguyên tên khoa học và các trích dẫn tài liệu như (Ref. 1234).
+5. KHÔNG thêm bớt ý kiến cá nhân, dịch mạch lạc và trung thực."""
+
+SYSTEM_PROMPT_GENERAL = """Bạn là chuyên gia Sinh học biển tại Viện Hải dương học.
 Nhiệm vụ của bạn là dịch các đoạn văn bản mô tả sinh học, sinh thái và sinh sản của sinh vật biển từ cơ sở dữ liệu SeaLifeBase sang tiếng Việt khoa học chuẩn mực, gãy gọn, trung thực với dữ liệu gốc."""
 
 
@@ -252,6 +282,10 @@ def get_system_prompt_for_species(sp: dict, col: str) -> str:
     tax_phylum = (sp.get('tax_phylum_latin') or '').lower()
     tax_order = (sp.get('tax_order_latin') or '').lower()
     sp_id = sp.get('id', '')
+
+    # 0. Thú biển (Mammalia: Bò biển, Cá voi, Cá heo)
+    if col == 'thu-bien' or tax_class == 'mammalia' or sp_id.startswith('thubien-'):
+        return SYSTEM_PROMPT_MAMMALIA
 
     # 1. Bò sát biển (Reptilia: Rùa biển, Rắn biển, Cá sấu)
     if col == 'bo-sat-bien' or tax_class == 'reptilia' or sp_id.startswith(('ruabien-', 'ranbien-', 'casau-')):
@@ -700,7 +734,7 @@ def main():
     download_tables_if_needed()
     con = init_duckdb()
 
-    VALID_COLLECTIONS = ["bo-sat-bien", "than-mem", "san-ho", "giap-xac", "sinh-vat-doc"]
+    VALID_COLLECTIONS = ["bo-sat-bien", "than-mem", "san-ho", "giap-xac", "sinh-vat-doc", "thu-bien"]
 
     if args.id:
         # Nếu chỉ định ID cụ thể, tự tìm collection của loài đó

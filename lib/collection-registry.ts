@@ -511,6 +511,40 @@ export const REGISTRY: Record<string, CollectionDef> = {
       },
     ],
   },
+  'thu-bien': {
+    id: 'thu-bien',
+    slug: 'thu-bien',
+    nameVn: 'Thú biển Việt Nam',
+    nameEn: 'Marine Mammals of Vietnam',
+    icon: '🐋',
+    accentColor: '#38bdf8',
+    volumeCount: 1,
+    status: 'active',
+    sortOrder: 8,
+    books: [
+      {
+        id: 'marine-mammals-vn-2021',
+        title: 'Danh lục Thú biển Việt Nam & Mẫu vật Lăng Ông',
+        badge: 'Danh lục & Chuyên khảo (34 loài)',
+        author: 'Smith et al. 1995; McGowen, Vũ Long et al. 2021; Viện Hải dương học',
+        publisher: 'NXB Khoa học và Kỹ thuật',
+        yearRange: '1995 - 2021',
+        totalSpecies: 34,
+        description: 'Hệ thống hóa danh lục phân loại học toàn diện về các loài Thú biển (Bộ Cá voi Cetacea và Bộ Hải ngưu Sirenia) ghi nhận tại các vùng biển Việt Nam cùng tư liệu mẫu vật tại các di tích Lăng Ông Nam Hải.',
+        volumes: [
+          {
+            volume: 1,
+            roman: 'I',
+            year: '2021',
+            title: 'Danh lục Thú biển Việt Nam',
+            subTitle: 'Phân loại học, sinh học, phân bố và hiện trạng bảo tồn Thú biển Việt Nam',
+            author: 'Smith et al. 1995; McGowen, Vũ Long et al. 2021; Viện Hải dương học',
+            speciesCount: 34,
+          },
+        ],
+      },
+    ],
+  },
 }
 
 // ─── DERIVED COMPATIBILITY EXPORTS ────────────────────────────────────

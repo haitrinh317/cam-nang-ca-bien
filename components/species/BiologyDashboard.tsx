@@ -277,6 +277,9 @@ function getCollectionMeta(collectionId?: string | null, speciesId?: string, sou
   if (collectionId === 'bo-sat-bien' || speciesId?.startsWith('ruabien-') || speciesId?.startsWith('ranbien-') || speciesId?.startsWith('casau-')) {
     return { Icon: Turtle, iconClass: 'text-amber-400', srcName: source || 'SeaLifeBase' }
   }
+  if (collectionId === 'thu-bien' || speciesId?.startsWith('thubien-')) {
+    return { Icon: Waves, iconClass: 'text-sky-400', srcName: source || 'SeaLifeBase' }
+  }
   if (collectionId === 'sinh-vat-doc' || speciesId?.startsWith('doc-')) {
     const isSlb = source?.includes('SeaLifeBase')
     return { Icon: Biohazard, iconClass: 'text-rose-400', srcName: source || (isSlb ? 'SeaLifeBase' : 'FishBase / SeaLifeBase') }

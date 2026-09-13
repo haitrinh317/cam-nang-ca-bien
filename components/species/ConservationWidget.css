@@ -6,19 +6,19 @@
    ═══════════════════════════════════════════════════════════════ */
 
 .conservation-widget {
-  --status-accent: #d97706;
-  --status-light-bg: rgba(255, 251, 235, 0.75);
-  --status-border: rgba(217, 119, 6, 0.25);
-  --status-glow: rgba(217, 119, 6, 0.1);
-  --status-dark-bg: rgba(69, 26, 3, 0.35);
+  --status-accent: var(--redlist-vu-accent, #d97706);
+  --status-light-bg: var(--redlist-vu-bg-light, rgba(255, 251, 235, 0.75));
+  --status-border: var(--redlist-vu-border, rgba(217, 119, 6, 0.25));
+  --status-glow: var(--redlist-vu-glow, rgba(217, 119, 6, 0.1));
+  --status-dark-bg: var(--redlist-vu-bg-dark, rgba(69, 26, 3, 0.35));
 
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg, 20px);
-  padding: var(--space-xl, 24px);
+  gap: var(--redlist-widget-gap, var(--space-lg, 20px));
+  padding: var(--redlist-widget-padding, var(--space-xl, 24px));
   background: linear-gradient(180deg, var(--status-light-bg) 0%, rgba(255, 255, 255, 0.98) 100%);
   border: 1.5px solid var(--status-border);
-  border-radius: var(--radius-xl, 16px);
+  border-radius: var(--redlist-widget-radius, var(--radius-xl, 20px));
   box-shadow: 0 4px 20px -2px var(--status-glow), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
   position: relative;
   overflow: hidden;
@@ -31,53 +31,69 @@
   box-shadow: 0 4px 24px -2px var(--status-glow);
 }
 
-/* ─── Phối màu Themes ─── */
+/* ─── Phối màu Themes theo Design Tokens (styles/tokens.css) ─── */
 .conservation-widget.theme-cr {
-  --status-accent: #dc2626;
-  --status-light-bg: rgba(254, 242, 242, 0.85);
-  --status-border: rgba(220, 38, 38, 0.3);
-  --status-glow: rgba(220, 38, 38, 0.15);
-  --status-dark-bg: rgba(69, 10, 10, 0.45);
+  --status-accent: var(--redlist-cr-accent);
+  --status-light-bg: var(--redlist-cr-bg-light);
+  --status-border: var(--redlist-cr-border);
+  --status-glow: var(--redlist-cr-glow);
+  --status-dark-bg: var(--redlist-cr-bg-dark);
 }
 
 .conservation-widget.theme-en {
-  --status-accent: #ea580c;
-  --status-light-bg: rgba(255, 247, 237, 0.85);
-  --status-border: rgba(234, 88, 12, 0.3);
-  --status-glow: rgba(234, 88, 12, 0.15);
-  --status-dark-bg: rgba(67, 20, 7, 0.45);
+  --status-accent: var(--redlist-en-accent);
+  --status-light-bg: var(--redlist-en-bg-light);
+  --status-border: var(--redlist-en-border);
+  --status-glow: var(--redlist-en-glow);
+  --status-dark-bg: var(--redlist-en-bg-dark);
 }
 
 .conservation-widget.theme-vu {
-  --status-accent: #d97706;
-  --status-light-bg: rgba(255, 251, 235, 0.85);
-  --status-border: rgba(217, 119, 6, 0.3);
-  --status-glow: rgba(217, 119, 6, 0.15);
-  --status-dark-bg: rgba(69, 26, 3, 0.45);
+  --status-accent: var(--redlist-vu-accent);
+  --status-light-bg: var(--redlist-vu-bg-light);
+  --status-border: var(--redlist-vu-border);
+  --status-glow: var(--redlist-vu-glow);
+  --status-dark-bg: var(--redlist-vu-bg-dark);
 }
 
 .conservation-widget.theme-nt {
-  --status-accent: #65a30d;
-  --status-light-bg: rgba(247, 254, 231, 0.85);
-  --status-border: rgba(101, 163, 13, 0.3);
-  --status-glow: rgba(101, 163, 13, 0.12);
-  --status-dark-bg: rgba(26, 46, 5, 0.45);
+  --status-accent: var(--redlist-nt-accent);
+  --status-light-bg: var(--redlist-nt-bg-light);
+  --status-border: var(--redlist-nt-border);
+  --status-glow: var(--redlist-nt-glow);
+  --status-dark-bg: var(--redlist-nt-bg-dark);
 }
 
 .conservation-widget.theme-lc {
-  --status-accent: #16a34a;
-  --status-light-bg: rgba(240, 253, 244, 0.85);
-  --status-border: rgba(22, 163, 74, 0.3);
-  --status-glow: rgba(22, 163, 74, 0.12);
-  --status-dark-bg: rgba(5, 46, 22, 0.45);
+  --status-accent: var(--redlist-lc-accent);
+  --status-light-bg: var(--redlist-lc-bg-light);
+  --status-border: var(--redlist-lc-border);
+  --status-glow: var(--redlist-lc-glow);
+  --status-dark-bg: var(--redlist-lc-bg-dark);
+}
+
+.conservation-widget.theme-ew {
+  --status-accent: var(--redlist-ew-accent);
+  --status-light-bg: var(--redlist-ew-bg-light);
+  --status-border: var(--redlist-ew-border);
+  --status-glow: var(--redlist-ew-glow);
+  --status-dark-bg: var(--redlist-ew-bg-dark);
+}
+
+.conservation-widget.theme-ex {
+  --status-accent: var(--redlist-ex-accent);
+  --status-light-bg: var(--redlist-ex-bg-light);
+  --status-border: var(--redlist-ex-border);
+  --status-glow: var(--redlist-ex-glow);
+  --status-dark-bg: var(--redlist-ex-bg-dark);
 }
 
 .conservation-widget.theme-dd {
-  --status-accent: #64748b;
-  --status-light-bg: rgba(248, 250, 252, 0.85);
-  --status-border: rgba(100, 116, 139, 0.3);
-  --status-glow: rgba(100, 116, 139, 0.1);
-  --status-dark-bg: rgba(30, 41, 59, 0.45);
+  --status-accent: var(--redlist-dd-accent);
+  --status-light-bg: var(--redlist-dd-bg-light);
+  --status-border: var(--redlist-dd-border);
+  --status-glow: var(--redlist-dd-glow);
+  --status-dark-bg: var(--redlist-dd-bg-dark);
 }
 
 /* Thanh chỉ báo cấp độ trên đỉnh thẻ */
@@ -87,7 +103,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: var(--redlist-top-bar-height, 4px);
   background: linear-gradient(90deg, var(--status-accent), rgba(255, 255, 255, 0.6), var(--status-accent));
 }
 
@@ -170,10 +186,10 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 12px;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 700;
+  padding: var(--redlist-badge-padding, 4px 12px);
+  border-radius: var(--redlist-badge-radius, 9999px);
+  font-size: var(--redlist-badge-font-size, 0.75rem);
+  font-weight: var(--redlist-badge-font-weight, 700);
   line-height: 1.2;
   letter-spacing: 0.01em;
 }
@@ -235,10 +251,10 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 16px;
-  background: #ffffff;
-  border-radius: var(--radius-lg, 12px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
+  padding: var(--redlist-card-padding, 18px);
+  background: var(--redlist-card-bg, #ffffff);
+  border-radius: var(--redlist-card-radius, 18px);
+  border: var(--redlist-card-border, 1px solid rgba(226, 232, 240, 0.9));
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
@@ -325,18 +341,18 @@
   align-items: center;
   gap: 7px;
   margin-top: 4px;
-  padding: 6px 12px;
-  border-radius: var(--radius-sm, 8px);
-  background: rgba(217, 119, 6, 0.08);
-  border: 1px solid rgba(217, 119, 6, 0.22);
+  padding: var(--redlist-trend-pill-padding, 6px 12px);
+  border-radius: var(--redlist-trend-pill-radius, 6px);
+  background: var(--redlist-trend-pill-bg, rgba(217, 119, 6, 0.08));
+  border: 1px solid var(--redlist-trend-pill-border, rgba(217, 119, 6, 0.22));
   font-size: 0.82rem;
   color: var(--status-accent);
   width: fit-content;
 }
 
 [data-theme='dark'] .conservation-trend-pill {
-  background: rgba(217, 119, 6, 0.16);
-  border-color: rgba(217, 119, 6, 0.35);
+  background: var(--redlist-trend-pill-bg, rgba(217, 119, 6, 0.16));
+  border-color: var(--redlist-trend-pill-border, rgba(217, 119, 6, 0.35));
 }
 
 .conservation-trend-pill__icon {
@@ -363,8 +379,8 @@
   grid-column: 1 / -1;
   background: linear-gradient(135deg, var(--status-light-bg) 0%, rgba(255, 255, 255, 0.98) 100%);
   border: 1.5px solid var(--status-border);
-  border-left: 5px solid var(--status-accent);
-  padding: 18px 20px;
+  border-left: var(--redlist-hero-border-left, 5px) solid var(--status-accent);
+  padding: var(--redlist-hero-padding, 18px 20px);
   box-shadow: 0 4px 14px var(--status-glow);
 }
 
@@ -410,17 +426,17 @@
 }
 
 [data-theme='dark'] .conservation-subgroup {
-  background: rgba(15, 23, 42, 0.5);
+  background: var(--redlist-subgroup-existing-bg, rgba(15, 23, 42, 0.5));
   border-color: rgba(255, 255, 255, 0.07);
   box-shadow: none;
 }
 
 .conservation-subgroup--existing {
-  border-left: 3.5px solid #059669;
+  border-left: var(--redlist-subgroup-existing-border, 3.5px) solid var(--redlist-subgroup-existing-accent, #059669);
 }
 
 .conservation-subgroup--proposed {
-  border-left: 3.5px solid var(--status-accent);
+  border-left: var(--redlist-subgroup-proposed-border, 3.5px) solid var(--status-accent);
 }
 
 .conservation-subgroup__header {
