@@ -16,6 +16,7 @@ import {
 } from 'lucide-react'
 import IucnBadge from './IucnBadge'
 import VnRedListBadge, { VnRedListInfo } from './VnRedListBadge'
+import ConservationWidget from './ConservationWidget'
 import BilingualNoteBlock from './BilingualNoteBlock'
 import { ToxicologyData } from './ToxicologyWidget'
 import './BiologyDashboard.css'
@@ -374,30 +375,6 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
               </div>
             )}
 
-            {bio.vnRedList?.threats && (
-              <div className="bio-alert-box bio-alert-box--warning" style={{ marginTop: '0.65rem' }}>
-                <ShieldAlert size={20} className="bio-alert-box__icon" />
-                <div className="bio-alert-box__content">
-                  <span className="bio-alert-box__title">
-                    Mối đe dọa tại Việt Nam (Danh lục Đỏ 2024)
-                  </span>
-                  <p className="bio-alert-box__desc">
-                    {bio.vnRedList.threats}
-                  </p>
-                  {bio.vnRedList.conservation && (
-                    <p className="bio-alert-box__desc" style={{ marginTop: '0.4rem', borderTop: '1px dashed rgba(255,255,255,0.15)', paddingTop: '0.4rem' }}>
-                      <strong>Biện pháp bảo tồn đề xuất:</strong> {bio.vnRedList.conservation}
-                    </p>
-                  )}
-                  {bio.vnRedList.assessor && (
-                    <div style={{ fontSize: '0.75rem', opacity: 0.75, marginTop: '0.4rem' }}>
-                      Người đánh giá: {bio.vnRedList.assessor} {bio.vnRedList.refCode ? `(Mã: ${bio.vnRedList.refCode})` : ''}
-                    </div>
-                  )}
-                </div>
-              </div>
-            )}
-
             {/* Hộp Cảnh Báo An Toàn & Độc Tố Chuyên Biệt */}
             {isCiguatera && (
               <div className="bio-alert-box bio-alert-box--warning">
@@ -468,6 +445,15 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
           </div>
         </div>
       </div>
+
+      {/* ─── HỒ SƠ BẢO TỒN & SÁCH ĐỎ VIỆT NAM (VAST 2024) - HERO CARD FULL-WIDTH ─── */}
+      {bio.vnRedList && (
+        <ConservationWidget
+          vnRedList={bio.vnRedList}
+          iucnStatus={bio.iucnStatus}
+          speciesName={bio.fbName}
+        />
+      )}
 
       {/* ─── TẦNG 3: GHI CHÚ KHOA HỌC DÀI (CHI TIẾT VĂN BẢN TIẾNG VIỆT & TIẾNG ANH) ─── */}
       {(bio.biologySummary || bio.ecologyNotes || bio.reproductionNotes || bio.morphDescription) && (
