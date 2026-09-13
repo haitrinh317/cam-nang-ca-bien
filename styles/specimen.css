@@ -905,6 +905,21 @@ details[open] summary.synonym-summary::after { transform: rotate(90deg); }
   font-size: var(--text-xs);
   margin-top: var(--space-xs);
 }
+.bio-notes-paragraphs p {
+  margin-bottom: 0.75rem;
+  line-height: 1.72;
+}
+.bio-notes-paragraphs p:last-child {
+  margin-bottom: 0;
+}
+.bio-notes-text em {
+  font-style: italic;
+  color: inherit;
+}
+.bio-notes-text strong {
+  font-weight: 700;
+  color: inherit;
+}
 .bio-notes-disclaimer {
   font-size: var(--text-xs);
   color: var(--color-ink-3);
