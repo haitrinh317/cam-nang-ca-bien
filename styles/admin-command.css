@@ -978,27 +978,106 @@
   max-width: 860px !important;
 }
 
+/* Studio 2-Column Fixed Frame (Option 2 — Zero Layout Shift) */
+.admin-modal--studio {
+  max-width: 1080px !important;
+  width: 95vw !important;
+  height: 86vh !important;
+  min-height: 640px !important;
+  max-height: 880px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  border-radius: 16px !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
 /* ── Header ── */
 .admin-modal__header {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
-  padding: 1.5rem 2rem 1.25rem !important;
-  border-bottom: 1px solid #f1f5f9 !important;
-  background: #f8fafc !important;
+  padding: 1.15rem 1.75rem !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  background: #ffffff !important;
   border-radius: 16px 16px 0 0 !important;
-  position: sticky !important;
-  top: 0 !important;
+  flex-shrink: 0 !important;
   z-index: 10 !important;
 }
 
-.admin-modal__header h3 {
+.admin-modal__title-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.2rem !important;
+}
+
+.admin-modal__badge-line {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.4rem !important;
+}
+
+.admin-modal__collection-tag {
+  font-family: var(--font-outlier, monospace) !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  color: #0369a1 !important;
+  background: #e0f2fe !important;
+  border: 1px solid #bae6fd !important;
+  padding: 0.12rem 0.45rem !important;
+  border-radius: 4px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+}
+
+.admin-modal__id-tag {
+  font-family: var(--font-outlier, monospace) !important;
+  font-size: 0.68rem !important;
+  color: #64748b !important;
+  background: #f1f5f9 !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 0.12rem 0.45rem !important;
+  border-radius: 4px !important;
+}
+
+.admin-modal__vol-tag {
+  font-family: var(--font-outlier, monospace) !important;
+  font-size: 0.68rem !important;
+  font-weight: 600 !important;
+  color: #0f766e !important;
+  background: #ccfbf1 !important;
+  border: 1px solid #99f6e4 !important;
+  padding: 0.12rem 0.45rem !important;
+  border-radius: 4px !important;
+}
+
+.admin-modal__title {
   font-family: var(--font-display, 'Lora', Georgia, serif) !important;
-  font-size: 1.2rem !important;
+  font-size: 1.25rem !important;
   font-weight: 700 !important;
   color: #0b1329 !important;
   margin: 0 !important;
   letter-spacing: -0.01em !important;
+}
+
+.admin-modal__sci-name {
+  font-size: 0.82rem !important;
+  color: #64748b !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+}
+
+.admin-modal__sci-name em {
+  font-style: italic !important;
+  color: #0b1329 !important;
+}
+
+.admin-modal__author {
+  color: #94a3b8 !important;
+  font-size: 0.78rem !important;
 }
 
 .admin-modal__close {
@@ -1006,7 +1085,7 @@
   border: none !important;
   color: #94a3b8 !important;
   cursor: pointer !important;
-  padding: 0.4rem !important;
+  padding: 0.45rem !important;
   border-radius: 8px !important;
   display: grid !important;
   place-items: center !important;
@@ -1018,7 +1097,159 @@
   color: #0b1329 !important;
 }
 
-/* ── Tabs ── */
+/* ── 2-Column Studio Workspace ── */
+.admin-modal__workspace {
+  display: flex !important;
+  flex: 1 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+}
+
+/* Left Sidebar Navigation */
+.admin-modal__sidebar {
+  width: 250px !important;
+  flex-shrink: 0 !important;
+  background: #f8fafc !important;
+  border-right: 1px solid #e2e8f0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: 1.15rem 0.85rem !important;
+  overflow-y: auto !important;
+  box-sizing: border-box !important;
+}
+
+.modal-nav {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.35rem !important;
+}
+
+.modal-nav-btn {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.75rem !important;
+  padding: 0.7rem 0.85rem !important;
+  border-radius: 10px !important;
+  border: 1px solid transparent !important;
+  background: transparent !important;
+  color: #64748b !important;
+  text-align: left !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.modal-nav-btn:hover {
+  background: #edf2f7 !important;
+  color: #0b1329 !important;
+}
+
+.modal-nav-btn.active {
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0b1329 !important;
+  box-shadow: 0 2px 5px rgba(11, 19, 41, 0.05) !important;
+}
+
+.modal-nav-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: 2px !important;
+  color: #64748b !important;
+  transition: color 0.15s ease !important;
+  flex-shrink: 0 !important;
+}
+
+.modal-nav-btn.active .modal-nav-icon {
+  color: #008577 !important;
+}
+
+.modal-nav-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.15rem !important;
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+.modal-nav-label {
+  font-size: 0.84rem !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif) !important;
+  color: inherit !important;
+}
+
+.modal-nav-desc {
+  font-size: 0.7rem !important;
+  color: #94a3b8 !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.modal-sidebar-footer {
+  padding-top: 0.85rem !important;
+  border-top: 1px solid #e2e8f0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.4rem !important;
+  margin-top: 1rem !important;
+}
+
+.modal-sidebar-kpi {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  font-size: 0.72rem !important;
+  color: #64748b !important;
+  font-family: var(--font-outlier, monospace) !important;
+}
+
+.modal-sidebar-kpi .kpi-val {
+  font-weight: 700 !important;
+  color: #0b1329 !important;
+}
+
+/* Right Content Area */
+.admin-modal__content-area {
+  flex: 1 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+}
+
+.admin-modal__alert {
+  margin: 1rem 2rem 0 !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 8px !important;
+  background: rgba(239, 68, 68, 0.08) !important;
+  border: 1px solid rgba(239, 68, 68, 0.25) !important;
+  color: #dc2626 !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+}
+
+.admin-modal__scroll-body {
+  flex: 1 !important;
+  overflow-y: auto !important;
+  padding: 1.75rem 2.25rem !important;
+  scrollbar-gutter: stable !important;
+  box-sizing: border-box !important;
+}
+
+/* Legacy Top Tabs fallback (for other modals) */
 .form-tabs {
   display: flex !important;
   gap: 0 !important;
@@ -1060,7 +1291,6 @@
   background: #f8fafc !important;
 }
 
-/* ── Modal body ── */
 .admin-modal__body {
   padding: 1.5rem 2rem !important;
 }
@@ -1307,7 +1537,47 @@ select.form-input {
   align-items: center !important;
 }
 
-/* ── Responsive: narrow modal ── */
+/* ── Responsive: Studio modal (Tablet & Mobile) ── */
+@media (max-width: 840px) {
+  .admin-modal--studio {
+    width: 96vw !important;
+    height: 92vh !important;
+    max-height: 92vh !important;
+  }
+  .admin-modal__workspace {
+    flex-direction: column !important;
+  }
+  .admin-modal__sidebar {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 0.5rem 0.75rem !important;
+    overflow-x: auto !important;
+    flex-shrink: 0 !important;
+  }
+  .modal-nav {
+    flex-direction: row !important;
+    gap: 0.25rem !important;
+  }
+  .modal-nav-btn {
+    padding: 0.5rem 0.75rem !important;
+    white-space: nowrap !important;
+    width: auto !important;
+  }
+  .modal-nav-desc {
+    display: none !important;
+  }
+  .modal-sidebar-footer {
+    display: none !important;
+  }
+  .admin-modal__scroll-body {
+    padding: 1.25rem 1.5rem !important;
+  }
+  .admin-modal__footer {
+    padding: 1rem 1.5rem !important;
+  }
+}
+
 @media (max-width: 640px) {
   .admin-modal--wide {
     max-width: 100% !important;

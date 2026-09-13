@@ -284,48 +284,89 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
     if (!ok) setSaving(false)
   }
 
-  const TABS: { key: Tab; label: React.ReactNode }[] = [
-    { key: 'basic', label: <><ClipboardList size={16} /> Cơ bản</> },
-    { key: 'taxonomy', label: <><Leaf size={16} /> Phân loại</> },
-    { key: 'vn', label: <><Globe size={16} /> Tiếng Việt</> },
-    { key: 'en', label: <><BookOpen size={16} /> English</> },
+  const TABS: { key: Tab; label: string; desc: string; icon: React.ReactNode }[] = [
+    { key: 'basic', label: 'Cơ bản', desc: 'ID, tên gọi, tập & STT', icon: <ClipboardList size={16} /> },
+    { key: 'taxonomy', label: 'Phân loại', desc: 'Lớp, bộ, họ, chi/giống', icon: <Leaf size={16} /> },
+    { key: 'vn', label: 'Chuyên khảo VN', desc: 'Hình thái, sinh thái, phân bố', icon: <Globe size={16} /> },
+    { key: 'en', label: 'Chuyên khảo EN', desc: 'Mô tả tiếng Anh quốc tế', icon: <BookOpen size={16} /> },
     ...(initial?.id ? [
-      { key: 'sync' as Tab, label: <><Database size={16} /> Đồng bộ</> },
-      { key: 'photo' as Tab, label: <><Camera size={16} /> Ảnh</> },
+      { key: 'sync' as Tab, label: 'Đồng bộ & Tri thức', desc: 'WoRMS, Sinh học, Sách Đỏ', icon: <Database size={16} /> },
+      { key: 'photo' as Tab, label: 'Thư viện Ảnh', desc: 'Mẫu vật & ảnh thực địa', icon: <Camera size={16} /> },
     ] : []),
   ]
 
   return (
     <div className="admin-modal-overlay" onClick={onClose}>
-      <div className="admin-modal admin-modal--wide" onClick={e => e.stopPropagation()}>
+      <div className="admin-modal admin-modal--studio" onClick={e => e.stopPropagation()}>
+        {/* Header */}
         <div className="admin-modal__header">
-          <h3>{initial ? `Sửa: ${initial.vn_name}` : 'Thêm Loài Mới'}</h3>
-          <button className="admin-modal__close" onClick={onClose} type="button" aria-label="Đóng"><X size={20} /></button>
-        </div>
-
-        {/* Tabs */}
-        <div className="form-tabs">
-          {TABS.map(t => (
-            <button
-              key={t.key}
-              className={`form-tab${tab === t.key ? ' active' : ''}`}
-              onClick={() => setTab(t.key)}
-              type="button"
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
-
-        <form onSubmit={handleSubmit}>
-          {errorMsg && (
-            <div style={{ margin: '0.5rem 1.5rem 0.5rem', padding: '0.75rem 1rem', borderRadius: '8px', background: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)', color: '#dc2626', fontSize: '0.85rem', fontWeight: 500, display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <AlertTriangle size={14} strokeWidth={2} />
-              <span>{errorMsg}</span>
+          <div className="admin-modal__title-group">
+            <div className="admin-modal__badge-line">
+              <span className="admin-modal__collection-tag">{collection}</span>
+              {initial?.id && <span className="admin-modal__id-tag">#{initial.id}</span>}
+              {form.volume && <span className="admin-modal__vol-tag">Tập {form.volume}</span>}
             </div>
-          )}
+            <h3 className="admin-modal__title">{initial ? `Sửa: ${initial.vn_name}` : 'Thêm Loài Mới'}</h3>
+            {initial?.scientific_name && (
+              <p className="admin-modal__sci-name">
+                <em>{initial.scientific_name}</em> {initial.authorship ? <span className="admin-modal__author">{initial.authorship}</span> : null}
+              </p>
+            )}
+          </div>
+          <button className="admin-modal__close" data-class="close-btn" onClick={onClose} type="button" aria-label="Đóng"><X size={20} /></button>
+        </div>
 
-          <div className="admin-modal__body">
+        {/* 2-Column Workspace */}
+        <form onSubmit={handleSubmit} className="admin-modal__workspace">
+          {/* Left Navigation Sidebar */}
+          <aside className="admin-modal__sidebar">
+            <div className="modal-nav">
+              {TABS.map(t => {
+                const isActive = tab === t.key
+                return (
+                  <button
+                    key={t.key}
+                    type="button"
+                    data-class="nav-btn"
+                    className={`modal-nav-btn ${isActive ? 'active' : ''}`}
+                    onClick={() => setTab(t.key)}
+                  >
+                    <span className="modal-nav-icon">{t.icon}</span>
+                    <div className="modal-nav-meta">
+                      <span className="modal-nav-label">{t.label}</span>
+                      <span className="modal-nav-desc">{t.desc}</span>
+                    </div>
+                  </button>
+                )
+              })}
+            </div>
+
+            <div className="modal-sidebar-footer">
+              <div className="modal-sidebar-kpi">
+                <span>Chế độ:</span>
+                <span className="kpi-val">{initial ? 'Chỉnh sửa' : 'Tạo mới'}</span>
+              </div>
+              {initial?.worms_status && (
+                <div className="modal-sidebar-kpi">
+                  <span>WoRMS:</span>
+                  <span className="kpi-val" style={{ color: initial.worms_status === 'accepted' ? '#008577' : '#d97706' }}>
+                    {initial.worms_status}
+                  </span>
+                </div>
+              )}
+            </div>
+          </aside>
+
+          {/* Right Panel: Scrollable Body + Action Footer */}
+          <section className="admin-modal__content-area">
+            {errorMsg && (
+              <div className="admin-modal__alert">
+                <AlertTriangle size={15} strokeWidth={2} />
+                <span>{errorMsg}</span>
+              </div>
+            )}
+
+            <div className="admin-modal__scroll-body">
             {/* Tab: Cơ bản */}
             {tab === 'basic' && (
               <div className="form-grid">
@@ -530,6 +571,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                             {s}
                             <button
                               type="button"
+                              data-class="chip-btn"
                               className="synonyms-chip-remove"
                               onClick={() => handleRemoveSynonym(s)}
                               title={`Xóa ${s}`}
@@ -556,6 +598,7 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                       />
                       <button
                         type="button"
+                        data-class="btn"
                         className="btn btn-outline"
                         style={{ padding: '0 0.85rem', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
                         onClick={handleAddSynonym}
@@ -787,14 +830,15 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
                 />
               </div>
             )}
-          </div>
+            </div>
 
-          <div className="admin-modal__footer">
-            <button className="btn btn-outline" onClick={onClose} type="button">Hủy</button>
-            <button className="btn btn-primary" type="submit" disabled={saving}>
-              {saving ? 'Đang lưu...' : (initial ? 'Cập nhật' : 'Thêm loài')}
-            </button>
-          </div>
+            <div className="admin-modal__footer">
+              <button className="btn btn-outline" data-class="btn" onClick={onClose} type="button">Hủy bỏ</button>
+              <button className="btn btn-primary" data-class="btn" type="submit" disabled={saving}>
+                {saving ? 'Đang lưu...' : (initial ? 'Cập nhật thay đổi' : 'Thêm loài mới')}
+              </button>
+            </div>
+          </section>
         </form>
       </div>
     </div>

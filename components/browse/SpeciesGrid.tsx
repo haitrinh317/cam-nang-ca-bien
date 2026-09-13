@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react'
+import { useScrollReveal } from '@/hooks/useScrollReveal'
 import Link from 'next/link'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { db } from '@/lib/supabase-browser'
@@ -95,6 +96,13 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
   const [status, setStatus] = useState<'loading' | 'error' | 'ok'>('loading')
   const [localFilter, setLocalFilter] = useState<string>('')
   const hasRestoredScroll = useRef(false)
+  const bookCardsRef = useRef<HTMLDivElement | null>(null)
+  const tableBodyRef = useRef<HTMLTableSectionElement | null>(null)
+
+  // Scroll reveal: book-cards stagger on mount / book change
+  useScrollReveal(bookCardsRef, '.book-card')
+  // Scroll reveal: species rows fade-slide when data changes
+  useScrollReveal(tableBodyRef, '.species-row')
 
   // Active book object
   const activeBook = useMemo(() => {
@@ -564,7 +572,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
               <span>CHỌN ĐẦU SÁCH KHOA HỌC GỐC</span>
             </div>
 
-            <div className="book-cards-grid">
+            <div className="book-cards-grid" ref={bookCardsRef}>
               {books.map(book => {
                 const isSelected = book.id === selectedBookId
                 return (
@@ -725,7 +733,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
                   <th className="th-action"></th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody ref={tableBodyRef}>
                 {filteredSpecies.length === 0 ? (
                   <tr>
                     <td colSpan={4} className="td-empty">
