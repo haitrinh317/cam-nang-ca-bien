@@ -30,7 +30,16 @@ interface Props {
 }
 
 function sortPhotos(data: Photo[]): Photo[] {
-  return [...data].sort((a, b) => {
+  // Deduplicate by storage_path to prevent identical duplicate images on UI
+  const seen = new Set<string>()
+  const unique = data.filter(p => {
+    if (!p.storage_path) return false
+    if (seen.has(p.storage_path)) return false
+    seen.add(p.storage_path)
+    return true
+  })
+
+  return [...unique].sort((a, b) => {
     if (a.source === 'manual' && b.source !== 'manual') return -1
     if (a.source !== 'manual' && b.source === 'manual') return 1
     if (a.is_primary && !b.is_primary) return -1
