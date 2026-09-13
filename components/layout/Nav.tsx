@@ -22,7 +22,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'Thực vật & Rong biển',
     nameEn: 'Marine Plants & Algae',
     stats: '672 loài • 2 tập',
-    icon: <Leaf size={17} color="#a7f3d0" />,
+    icon: <Leaf size={19} color="#a7f3d0" />,
     accentColor: '#a7f3d0',
   },
   {
@@ -30,7 +30,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'Giáp xác biển',
     nameEn: 'Marine Crustaceans',
     stats: '132 loài • 1 tập',
-    icon: <Shrimp size={17} color="#fca5a5" />,
+    icon: <Shrimp size={19} color="#fca5a5" />,
     accentColor: '#fca5a5',
   },
   {
@@ -38,7 +38,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'Rắn biển Việt Nam',
     nameEn: 'Sea Snakes in Vietnam',
     stats: '27 loài • Chuyên khảo',
-    icon: <span style={{ fontSize: '17px', lineHeight: 1 }}>🐍</span>,
+    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🐍</span>,
     accentColor: '#f59e0b',
   },
   {
@@ -46,7 +46,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'Động vật độc biển',
     nameEn: 'Venomous Animals',
     stats: '76 loài • Độc tố học',
-    icon: <span style={{ fontSize: '17px', lineHeight: 1 }}>☣️</span>,
+    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>☣️</span>,
     accentColor: '#fb7185',
   },
   {
@@ -54,7 +54,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'Động vật thân mềm',
     nameEn: 'Marine Mollusca',
     stats: 'Ốc, mực, trai biển',
-    icon: <span style={{ fontSize: '17px', lineHeight: 1 }}>🐚</span>,
+    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🐚</span>,
     accentColor: '#e8c4ff',
   },
   {
@@ -62,7 +62,7 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameVn: 'San hô Việt Nam',
     nameEn: 'Corals of Vietnam',
     stats: 'San hô rạn Việt Nam',
-    icon: <span style={{ fontSize: '17px', lineHeight: 1 }}>🪸</span>,
+    icon: <span style={{ fontSize: '19px', lineHeight: 1 }}>🪸</span>,
     accentColor: '#f9a8d4',
   },
 ]
@@ -148,8 +148,8 @@ export default function Nav() {
               setDropdownOpen(false)
             }}
           >
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <Fish size={15} />
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '7px' }}>
+              <Fish size={17} />
               {t('nav.fish') || 'Cá biển'}
             </span>
           </Link>
@@ -169,10 +169,10 @@ export default function Nav() {
               aria-haspopup="true"
               aria-label={t('nav.collections') || 'Bộ sưu tập'}
             >
-              <Layers size={15} />
+              <Layers size={17} />
               <span>{t('nav.collections') || 'Bộ sưu tập'}</span>
               <span className="nav-dropdown-icon">
-                <ChevronDown size={14} />
+                <ChevronDown size={15} />
               </span>
             </button>
 
