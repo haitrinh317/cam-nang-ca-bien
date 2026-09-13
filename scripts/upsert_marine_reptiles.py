@@ -444,26 +444,32 @@ def fetch_and_upload_photos():
         sci_name = sp["scientific_name"]
         print(f"\n🔍 Đang tìm ảnh cho {sp['vn_name']} ({sci_name})...")
         
-        # 4.1 Tra cứu iNaturalist API
+        # 4.1 Tra cứu iNaturalist API bằng Taxon ID chính xác để tránh nhầm loài
+        taxon_res = requests.get(f"{INAT_API}/taxa", headers=HEADERS_INAT, params={"q": sci_name, "rank": "species"}, timeout=15).json().get("results", [])
+        exact_taxon = next((t for t in taxon_res if t.get("name", "").lower() == sci_name.lower()), None)
+        
         inat_url = f"{INAT_API}/observations"
         params = {
-            "taxon_name": sci_name,
             "quality_grade": "research",
             "photos": "true",
-            "per_page": 5,
+            "per_page": 10,
             "order_by": "votes"
         }
+        if exact_taxon:
+            params["taxon_id"] = exact_taxon["id"]
+        else:
+            params["taxon_name"] = sci_name
         
         try:
             r = requests.get(inat_url, headers=HEADERS_INAT, params=params, timeout=20)
             data = r.json()
-            results = data.get("results", [])
+            results = [o for o in data.get("results", []) if o.get("taxon", {}).get("name", "").lower() == sci_name.lower()]
             
-            if not results:
-                # Thử bỏ quality_grade=research nếu không có
+            if not results and "taxon_id" in params:
+                # Thử bỏ quality_grade=research nếu hiếm gặp
                 params.pop("quality_grade", None)
                 r = requests.get(inat_url, headers=HEADERS_INAT, params=params, timeout=20)
-                results = r.json().get("results", [])
+                results = [o for o in r.json().get("results", []) if o.get("taxon", {}).get("name", "").lower() == sci_name.lower()]
                 
             if not results:
                 print(f"⚠️ Không tìm thấy ảnh trên iNaturalist cho {sci_name}")
