@@ -8,13 +8,13 @@
 
 ## ✅ Hoàn thành gần nhất (2026-09-13)
 
-- [x] Tích hợp Danh Lục Đỏ Việt Nam (VAST 2024-1) & Hệ thống Dual-Conservation Badges (74 loài sinh vật biển nguy cấp được làm giàu dữ liệu, hiển thị song hành IUCN & SĐVN)
-- [x] Tái cấu trúc kiến trúc toàn diện (5/5 Ứng viên hoàn thành):
-  - [x] Ứng viên #1: Đào sâu SpecimenCard (tách orchestrator 170 dòng + 3 tabs + 6 pure parsers)
-  - [x] Ứng viên #2: Frontend-Backend Parity (Tab Đồng bộ trong Admin, sửa WoRMS/Synonyms/IUCN/Size)
-  - [x] Ứng viên #3: Hợp nhất Collection Registry (gộp 4 file thành 1 deep module `collection-registry.ts`)
-  - [x] Ứng viên #4: Đóng gói seam render sinh học (`BiologyDashboard.tsx` helper `getCollectionMeta`)
-  - [x] Ứng viên #5: Chuẩn hóa hằng số SELECT query (`SPECIES_LIST_COLS`, `SPECIES_DETAIL_COLS`)
+- [x] Tích hợp Danh Lục Đỏ Việt Nam (VAST 2024-1) & Hệ thống Dual-Conservation Badges (74 loài)
+- [x] Tái cấu trúc kiến trúc toàn diện (5/5 Ứng viên hoàn thành: SpecimenCard, Parity, Registry, Biology seam, Query cols)
+- [x] Sửa ảnh cá mặt trăng *Mola mola* (Research-grade) & thắt chặt bộ lọc `find_taxon_id`
+- [x] Hiển thị in nghiêng HTML (`<i>`, `<em>`) & ngắt đoạn thông minh ghi chú sinh học dài, quét sạch CJK
+- [x] Thiết kế lại mục "Tư Liệu Khoa Học & Ghi Chú Chuyên Sâu" chuẩn Bento Card Hallmark
+- [x] Chuẩn hóa cấu trúc & ngắt đoạn thông minh Hồ Sơ Bảo Tồn Sách Đỏ Việt Nam (tách Biện pháp hiện hành, Đề xuất cấp thiết, Pill xu hướng)
+- [x] Rà soát & Việt hóa 100% tiếng Việt khoa học cho tab Sinh học (môi trường sống, sinh sản, dinh dưỡng)
 
 ## ✅ Hoàn thành (2026-09-12)
 

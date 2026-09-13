@@ -12,7 +12,8 @@ import {
   Fish,
   Leaf,
   Shrimp,
-  Shell
+  Shell,
+  BookOpen
 } from 'lucide-react'
 import IucnBadge from './IucnBadge'
 import VnRedListBadge, { VnRedListInfo } from './VnRedListBadge'
@@ -109,44 +110,112 @@ function formatLongevity(raw?: string): string | null {
   return `${Math.round(num)} năm`
 }
 
-// ── Từ điển dịch thuật sinh học chuẩn mực ─────────────────────────
+// ── Từ điển dịch thuật sinh học chuẩn mực (Ngư loại & Sinh học biển) ─────────────────────────
 const BIO_TRANSLATIONS: Record<string, string> = {
-  // Feeding Type
-  'hunting macrofauna (predator)': 'Săn mồi lớn (Động vật ăn thịt)',
-  'browsing on substrate': 'Kiếm ăn trên nền đáy',
-  'grazing on substrate': 'Gặm thức ăn trên rạn / nền đáy',
-  'filter feeding': 'Lọc thức ăn phù du',
-  'herbivores': 'Ăn thực vật / rong tảo',
-  'omnivores': 'Ăn tạp',
-  'carnivores': 'Ăn thịt',
-  'planktivores': 'Ăn sinh vật phù du',
-  'corallivores': 'Ăn polyp san hô',
-  'detritivores': 'Ăn mùn bã hữu cơ',
-  // Reproduction
+  // ── Môi trường sống (Habitat) ──
+  'neritic': 'Vùng biển nông ven bờ (Neritic)',
+  'estuaries': 'Vùng cửa sông',
+  'estuary': 'Vùng cửa sông',
+  'coral reefs': 'Rạn san hô',
+  'coral reef': 'Rạn san hô',
+  'soft bottom': 'Đáy mềm (Cát / Bùn)',
+  'benthic': 'Tầng đáy (Benthic)',
+  'rocky': 'Rạn đá / Đáy đá',
+  'rocky reefs': 'Rạn đá ven biển',
+  'rocky reef': 'Rạn đá ven biển',
+  'rubble': 'Đáy vụn san hô / Sỏi đá',
+  'mangroves': 'Rừng ngập mặn',
+  'mangrove': 'Rừng ngập mặn',
+  'mud': 'Đáy bùn',
+  'muddy': 'Đáy bùn',
+  'sand': 'Đáy cát',
+  'sandy': 'Đáy cát',
+  'marine': 'Biển khơi / Nước mặn',
+  'demersal': 'Tầng sát đáy (Demersal)',
+  'reef-associated': 'Gắn liền với rạn san hô',
+  'benthopelagic': 'Tầng trung - đáy (Benthopelagic)',
+  'pelagic': 'Tầng nổi / Biển khơi (Pelagic)',
+  'bathydemersal': 'Sát đáy biển sâu (Bathydemersal)',
+  'bathypelagic': 'Tầng nổi biển sâu (Bathypelagic)',
+  'seagrass beds': 'Thảm cỏ biển',
+  'seagrass bed': 'Thảm cỏ biển',
+  'seagrass': 'Thảm cỏ biển',
+  'seaweeds': 'Thảm rong biển',
+  'seaweed': 'Thảm rong biển',
+  'brackish': 'Nước lợ',
+  'freshwater': 'Nước ngọt',
+  'lagoons': 'Đầm phá ven biển',
+  'lagoon': 'Đầm phá ven biển',
+  'intertidal': 'Vùng gian triều (Triều kiệt - ngập)',
+  'subtidal': 'Vùng dưới triều',
+  'it is found on rocks in the mid intertidal zone of shores strong wave action': 'Bám trên đá ở vùng trung gian triều nơi có sóng vỗ mạnh',
+
+  // ── Hình thức sinh sản (Reproduction) ──
+  'dioecism, in brood pouch or similar structure fertilization': 'Phân tính, thụ tinh và ấp trong túi ấp của cá bố (brood pouch)',
   'dioecism, internal (oviduct) fertilization': 'Phân tính, thụ tinh trong (ống dẫn trứng)',
-  'dioecism, external fertilization': 'Phân giới tính, thụ tinh ngoài',
-  'protogyny, external fertilization': 'Chuyển giới tính (cái sang đực), thụ tinh ngoài',
-  'protandry, external fertilization': 'Chuyển giới tính (đực sang cái), thụ tinh ngoài',
+  'dioecism, external fertilization': 'Phân tính, thụ tinh ngoài',
+  'dioecism': 'Phân tính (đơn tính đực - cái riêng biệt)',
+  'true hermaphroditism, external fertilization': 'Lưỡng tính đồng thời, thụ tinh ngoài',
+  'protogyny, external fertilization': 'Chuyển đổi giới tính (từ cái sang đực), thụ tinh ngoài',
+  'protandry, external fertilization': 'Chuyển đổi giới tính (từ đực sang cái), thụ tinh ngoài',
   'hermaphroditic': 'Lưỡng tính',
   'oviparous': 'Đẻ trứng (Oviparous)',
   'viviparous': 'Đẻ con (Viviparous)',
   'ovoviviparous': 'Noãn thai sinh (Trứng nở trong bụng mẹ)',
-  'none': 'Không có',
-  'paternal': 'Cá bố chăm sóc trứng / tổ',
-  'maternal': 'Cá mẹ ấp trứng',
+  'external fertilization': 'Thụ tinh ngoài',
+  'internal fertilization': 'Thụ tinh trong',
+
+  // ── Mùa vụ sinh sản (Spawning) ──
+  'two seasonal peaks per year': 'Hai đỉnh sinh sản trong năm',
+  'once in a lifetime': 'Sinh sản một lần duy nhất trong đời (Semelparous)',
   'one clear seasonal peak per year': 'Một đỉnh sinh sản chính trong năm',
+  'variable throughout range': 'Biến thiên theo từng vùng phân bố',
+  'no obvious seasonal peak': 'Không có đỉnh sinh sản cố định (rải rác quanh năm)',
+  'throughout the year, but peaking once': 'Sinh sản quanh năm, có một đỉnh tập trung',
   'multiple spawning per year': 'Đẻ trứng nhiều đợt trong năm',
-  // Commercial & Aquaculture
+
+  // ── Chăm sóc con non (Parental Care) ──
+  'paternal': 'Cá bố chăm sóc trứng / tổ',
+  'maternal': 'Cá mẹ ấp / bảo vệ trứng',
+  'biparental': 'Cả cá bố và cá mẹ cùng chăm sóc',
+  'none': 'Không chăm sóc (thả trứng tự do)',
+
+  // ── Tập tính dinh dưỡng (Feeding Type) ──
+  'hunting macrofauna (predator)': 'Săn mồi lớn (Động vật ăn thịt)',
+  'browsing on substrate': 'Kiếm ăn trên nền đáy',
+  'grazing on substrate': 'Gặm thức ăn trên rạn / nền đáy',
+  'grazing on aquatic plants': 'Gặm thực vật thủy sinh / rong cỏ biển',
+  'filter feeding': 'Lọc thức ăn phù du',
+  'filtering plankton': 'Lọc sinh vật phù du',
+  'selective plankton feeding': 'Lọc sinh vật phù du có chọn lọc',
+  'corallivore, preys exclusively on hard coral polyps': 'Chuyên ăn polyp san hô cứng (Corallivore)',
+  'corallivores': 'Ăn polyp san hô',
+  'herbivores': 'Ăn thực vật / rong tảo',
+  'omnivores': 'Ăn tạp',
+  'carnivores': 'Ăn thịt',
+  'planktivores': 'Ăn sinh vật phù du',
+  'detritivores': 'Ăn mùn bã hữu cơ',
+  'variable': 'Thức ăn biến đổi theo mùa / đa dạng',
+  'picking parasites off a host (cleaner)': 'Rỉa ký sinh trùng trên cơ thể vật chủ (loài dọn vệ sinh)',
+  'other': 'Tập tính ăn khác',
+
+  // ── Khai thác thương mại & Nuôi trồng (Commercial & Aquaculture) ──
   'commercial': 'Khai thác thương mại',
   'highly commercial': 'Khai thác thương mại giá trị cao',
-  'minor commercial': 'Khai thác thương mại nhỏ / địa phương',
+  'minor commercial': 'Khai thác thương mại quy mô nhỏ',
   'subsistence fisheries': 'Khai thác tự cung tự cấp',
+  'bycatch': 'Sản phẩm đánh bắt phụ (Bycatch)',
   'gamefish': 'Đối tượng câu cá thể thao',
-  'of no interest': 'Ít hoặc không có giá trị thương phẩm',
+  'of potential interest': 'Có tiềm năng khai thác / nghiên cứu',
+  'of no interest': 'Không có giá trị khai thác thương mại',
   'no interest': 'Không có giá trị khai thác',
+  'alginate extraction, biofertilizer, and pharmaceutical potential': 'Chiết xuất alginat, làm phân bón sinh học và tiềm năng dược phẩm',
+  'commercial shellcraft & collection, subsistence food': 'Khai thác làm đồ mỹ nghệ vỏ ốc, sưu tầm & thực phẩm',
   'experimental': 'Nuôi thử nghiệm',
   'never/rarely': 'Không / Hiếm khi nuôi',
-  // Danger
+  'likely future use': 'Có tiềm năng phát triển nuôi trồng',
+
+  // ── Cảnh báo an toàn (Danger) ──
   'harmless': 'Vô hại đối với con người',
   'reports of ciguatera poisoning': 'Có nguy cơ tích lũy độc tố Ciguatera',
   'poisonous to eat': 'Thịt có độc, không ăn được',
@@ -284,13 +353,17 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
           <div className="bio-group-card__list">
             {(bio.habitatVn || bio.habitat) && (
               <div className="bio-item-row">
-                <span className="bio-item-label">Môi trường sống (Habitat)</span>
+                <span className="bio-item-label">Môi trường sống sinh thái</span>
                 <div className="bio-tag-cloud">
-                  {(bio.habitatVn || bio.habitat || '').split(',').map((h, i) => (
-                    <span key={i} className={`bio-tag ${i === 0 ? 'bio-tag--primary' : ''}`}>
-                      {translateBio(h.trim())}
-                    </span>
-                  ))}
+                  {(bio.habitatVn || bio.habitat || '')
+                    .split(/[,;]+/)
+                    .map(h => h.trim())
+                    .filter(Boolean)
+                    .map((h, i) => (
+                      <span key={i} className={`bio-tag ${i === 0 ? 'bio-tag--primary' : ''}`}>
+                        {translateBio(h)}
+                      </span>
+                    ))}
                 </div>
               </div>
             )}
@@ -457,49 +530,66 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
 
       {/* ─── TẦNG 3: GHI CHÚ KHOA HỌC DÀI (CHI TIẾT VĂN BẢN TIẾNG VIỆT & TIẾNG ANH) ─── */}
       {(bio.biologySummary || bio.ecologyNotes || bio.reproductionNotes || bio.morphDescription) && (
-        <div className="bio-notes-section">
-          <h4 className="bio-notes-section__title">Tư Liệu Khoa Học & Ghi Chú Chuyên Sâu</h4>
+        <section className="bio-notes-section" aria-label="Tư liệu khoa học và ghi chú chuyên sâu">
+          <div className="bio-notes-section__header">
+            <div className="bio-notes-section__title-group">
+              <span className="bio-notes-section__icon-box">
+                <BookOpen size={18} aria-hidden="true" />
+              </span>
+              <div className="bio-notes-section__title-wrap">
+                <h4 className="bio-notes-section__title">Tư Liệu Khoa Học &amp; Ghi Chú Chuyên Sâu</h4>
+                <p className="bio-notes-section__subtitle">
+                  Chuyên khảo sinh học &amp; sinh thái học đối chiếu từ các cơ sở dữ liệu biển quốc tế
+                </p>
+              </div>
+            </div>
+            <span className="bio-notes-section__count-pill">
+              {[bio.biologySummary, bio.ecologyNotes, bio.reproductionNotes, bio.morphDescription].filter(Boolean).length} chuyên mục
+            </span>
+          </div>
 
-          {bio.biologySummary && (
-            <BilingualNoteBlock
-              labelEn={`Biology summary (${srcName})`}
-              labelVn={`Tóm tắt sinh học (${srcName})`}
-              text={bio.biologySummary}
-              textVn={bio.biologySummaryVn}
-              cacheKey={`bio_summary_${speciesId}`}
-            />
-          )}
+          <div className="bio-notes-cards-list">
+            {bio.biologySummary && (
+              <BilingualNoteBlock
+                labelEn={`Biology summary (${srcName})`}
+                labelVn={`Tóm tắt sinh học (${srcName})`}
+                text={bio.biologySummary}
+                textVn={bio.biologySummaryVn}
+                cacheKey={`bio_summary_${speciesId}`}
+              />
+            )}
 
-          {bio.ecologyNotes && (
-            <BilingualNoteBlock
-              labelEn="Ecology notes"
-              labelVn="Ghi chú sinh thái học"
-              text={bio.ecologyNotes}
-              textVn={bio.ecologyNotesVn}
-              cacheKey={`ecology_${speciesId}`}
-            />
-          )}
+            {bio.ecologyNotes && (
+              <BilingualNoteBlock
+                labelEn="Ecology notes"
+                labelVn="Ghi chú sinh thái học"
+                text={bio.ecologyNotes}
+                textVn={bio.ecologyNotesVn}
+                cacheKey={`ecology_${speciesId}`}
+              />
+            )}
 
-          {bio.reproductionNotes && (
-            <BilingualNoteBlock
-              labelEn="Reproduction notes"
-              labelVn="Ghi chú sinh sản & Vòng đời"
-              text={bio.reproductionNotes}
-              textVn={bio.reproductionNotesVn}
-              cacheKey={`repro_${speciesId}`}
-            />
-          )}
+            {bio.reproductionNotes && (
+              <BilingualNoteBlock
+                labelEn="Reproduction notes"
+                labelVn="Ghi chú sinh sản & Vòng đời"
+                text={bio.reproductionNotes}
+                textVn={bio.reproductionNotesVn}
+                cacheKey={`repro_${speciesId}`}
+              />
+            )}
 
-          {bio.morphDescription && (
-            <BilingualNoteBlock
-              labelEn="Morphological description (GBIF)"
-              labelVn="Mô tả hình thái học chuẩn (GBIF)"
-              text={bio.morphDescription}
-              textVn={bio.morphDescriptionVn}
-              cacheKey={`morph_${speciesId}`}
-            />
-          )}
-        </div>
+            {bio.morphDescription && (
+              <BilingualNoteBlock
+                labelEn="Morphological description (GBIF)"
+                labelVn="Mô tả hình thái học chuẩn (GBIF)"
+                text={bio.morphDescription}
+                textVn={bio.morphDescriptionVn}
+                cacheKey={`morph_${speciesId}`}
+              />
+            )}
+          </div>
+        </section>
       )}
     </div>
   )

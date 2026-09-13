@@ -288,15 +288,74 @@
 }
 
 .conservation-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.conservation-card__text {
   margin: 0;
   font-size: 0.88rem;
-  line-height: 1.6;
+  line-height: 1.72;
   color: #334155;
   text-wrap: pretty;
 }
 
-[data-theme='dark'] .conservation-card__body {
+[data-theme='dark'] .conservation-card__text {
   color: #cbd5e1;
+}
+
+.conservation-card__text em {
+  font-style: italic;
+  color: inherit;
+}
+
+.conservation-card__text strong {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+[data-theme='dark'] .conservation-card__text strong {
+  color: #ffffff;
+}
+
+/* Chỉ báo xu hướng quần thể tự nhiên */
+.conservation-trend-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 4px;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm, 8px);
+  background: rgba(217, 119, 6, 0.08);
+  border: 1px solid rgba(217, 119, 6, 0.22);
+  font-size: 0.82rem;
+  color: var(--status-accent);
+  width: fit-content;
+}
+
+[data-theme='dark'] .conservation-trend-pill {
+  background: rgba(217, 119, 6, 0.16);
+  border-color: rgba(217, 119, 6, 0.35);
+}
+
+.conservation-trend-pill__icon {
+  flex-shrink: 0;
+}
+
+.conservation-trend-pill__label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+[data-theme='dark'] .conservation-trend-pill__label {
+  color: #94a3b8;
+}
+
+.conservation-trend-pill__val {
+  font-weight: 800;
+  color: var(--status-accent);
+  letter-spacing: 0.01em;
 }
 
 /* ─── Hero Action Card (Biện pháp bảo tồn) ─── */
@@ -331,15 +390,77 @@
   color: #ffffff;
 }
 
-.conservation-card--hero .conservation-card__body {
-  font-size: 0.92rem;
-  font-weight: 500;
-  color: #1e293b;
-  line-height: 1.65;
+.conservation-card__body--hero {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 4px;
 }
 
-[data-theme='dark'] .conservation-card--hero .conservation-card__body {
-  color: #f1f5f9;
+/* Phân nhóm Biện pháp Đã có & Đề xuất cấp thiết */
+.conservation-subgroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md, 10px);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+[data-theme='dark'] .conservation-subgroup {
+  background: rgba(15, 23, 42, 0.5);
+  border-color: rgba(255, 255, 255, 0.07);
+  box-shadow: none;
+}
+
+.conservation-subgroup--existing {
+  border-left: 3.5px solid #059669;
+}
+
+.conservation-subgroup--proposed {
+  border-left: 3.5px solid var(--status-accent);
+}
+
+.conservation-subgroup__header {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.conservation-subgroup--existing .conservation-subgroup__header {
+  color: #059669;
+}
+
+[data-theme='dark'] .conservation-subgroup--existing .conservation-subgroup__header {
+  color: #10b981;
+}
+
+.conservation-subgroup--proposed .conservation-subgroup__header {
+  color: var(--status-accent);
+}
+
+[data-theme='dark'] .conservation-subgroup--proposed .conservation-subgroup__header {
+  filter: brightness(1.2);
+}
+
+.conservation-subgroup__icon {
+  flex-shrink: 0;
+}
+
+.conservation-subgroup__title {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.conservation-subgroup__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 2px;
 }
 
 /* ─── Footer Attributions ─── */

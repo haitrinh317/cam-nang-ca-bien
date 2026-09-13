@@ -1,7 +1,16 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { AlertTriangle } from 'lucide-react'
+import { 
+  Sparkles, 
+  Compass, 
+  Egg, 
+  Ruler, 
+  BookOpen, 
+  Globe, 
+  ChevronDown, 
+  AlertTriangle 
+} from 'lucide-react'
 
 interface Props {
   labelEn: string
@@ -146,16 +155,11 @@ function FormattedParagraphs({ content, isEn = false }: { content: string; isEn?
   const paras = splitIntoParagraphs(content)
 
   return (
-    <div className={`bio-notes-paragraphs ${isEn ? 'bio-notes-paragraphs--en' : ''}`}>
+    <div className={`bio-note-card__paragraphs ${isEn ? 'bio-note-card__paragraphs--en' : ''}`}>
       {paras.map((p, idx) => (
         <p
           key={idx}
-          className={`bio-notes-text ${isEn ? 'bio-notes-text--en' : ''}`}
-          style={{
-            lineHeight: 1.68,
-            marginBottom: idx === paras.length - 1 ? 0 : '0.75rem',
-            textWrap: 'pretty',
-          }}
+          className={`bio-note-card__text ${isEn ? 'bio-note-card__text--en' : ''}`}
         >
           {renderFormattedInline(p)}
         </p>
@@ -164,10 +168,66 @@ function FormattedParagraphs({ content, isEn = false }: { content: string; isEn?
   )
 }
 
+/**
+ * Tách tiêu đề sạch và phát hiện nguồn dữ liệu
+ */
+function extractTitleAndSource(rawVn: string, rawEn: string): {
+  titleVn: string
+  titleEn: string
+  source: string
+  iconType: 'summary' | 'ecology' | 'reproduction' | 'morphology' | 'default'
+} {
+  // Trích xuất nguồn (nếu có trong ngoặc đơn)
+  const sourceMatch = rawEn.match(/\((FishBase.*?|AlgaeBase|GBIF|SeaLifeBase.*?)\)/i) ||
+                      rawVn.match(/\((FishBase.*?|AlgaeBase|GBIF|SeaLifeBase.*?)\)/i)
+  const source = sourceMatch ? sourceMatch[1].trim() : 'FishBase / GBIF'
+
+  // Làm sạch tiêu đề tiếng Việt và tiếng Anh (loại bỏ tên nguồn trong ngoặc)
+  const titleVn = rawVn.replace(/\s*\((FishBase.*?|AlgaeBase|GBIF|SeaLifeBase.*?)\)/i, '').trim()
+  const titleEn = rawEn.replace(/\s*\((FishBase.*?|AlgaeBase|GBIF|SeaLifeBase.*?)\)/i, '').trim()
+
+  // Phân loại Icon & Theme màu sắc
+  const lower = (rawEn + ' ' + rawVn).toLowerCase()
+  let iconType: 'summary' | 'ecology' | 'reproduction' | 'morphology' | 'default' = 'default'
+
+  if (lower.includes('summary') || lower.includes('tóm tắt')) {
+    iconType = 'summary'
+  } else if (lower.includes('ecology') || lower.includes('sinh thái')) {
+    iconType = 'ecology'
+  } else if (lower.includes('repro') || lower.includes('sinh sản')) {
+    iconType = 'reproduction'
+  } else if (lower.includes('morph') || lower.includes('hình thái')) {
+    iconType = 'morphology'
+  }
+
+  return { titleVn, titleEn, source, iconType }
+}
+
 export default function BilingualNoteBlock({ labelEn, labelVn, text, cacheKey, textVn }: Props) {
   const [runtimeVnText, setRuntimeVnText] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
+
+  // Phân tích tiêu đề & nguồn
+  const { titleVn, titleEn, source, iconType } = extractTitleAndSource(labelVn, labelEn)
+
+  // Icon và Style theo loại chuyên đề
+  let IconComponent = BookOpen
+  let iconClass = 'bio-note-card__icon--default'
+
+  if (iconType === 'summary') {
+    IconComponent = Sparkles
+    iconClass = 'bio-note-card__icon--cyan'
+  } else if (iconType === 'ecology') {
+    IconComponent = Compass
+    iconClass = 'bio-note-card__icon--blue'
+  } else if (iconType === 'reproduction') {
+    IconComponent = Egg
+    iconClass = 'bio-note-card__icon--amber'
+  } else if (iconType === 'morphology') {
+    IconComponent = Ruler
+    iconClass = 'bio-note-card__icon--purple'
+  }
 
   // Nếu đã có sẵn bản dịch chuẩn từ CSDL
   const hasPrecomputedVn = Boolean(textVn && textVn.trim())
@@ -183,52 +243,56 @@ export default function BilingualNoteBlock({ labelEn, labelVn, text, cacheKey, t
       .finally(() => setLoading(false))
   }, [text, cacheKey, hasPrecomputedVn])
 
-  if (hasPrecomputedVn) {
-    return (
-      <div className="bio-notes-block">
-        <div className="bio-notes-header">
-          <span className="bio-notes-label-vn">{labelVn}</span>
-          <span className="bio-notes-label-en">({labelEn})</span>
-        </div>
-        <div className="bio-notes-vn" style={{ marginBottom: '0.65rem' }}>
-          <FormattedParagraphs content={textVn!} />
-        </div>
-        <details className="bio-notes-en-details">
-          <summary className="bio-notes-en-toggle">
-            Xem văn bản gốc tiếng Anh ({labelEn.includes('AlgaeBase') ? 'AlgaeBase' : 'FishBase / GBIF'})
-          </summary>
-          <div className="bio-notes-en" style={{ marginTop: '0.5rem' }}>
-            <FormattedParagraphs content={text} isEn />
-          </div>
-        </details>
-      </div>
-    )
-  }
-
   return (
-    <div className="bio-notes-block">
-      <div className="bio-notes-header">
-        <span className="bio-notes-label-vn">{labelEn}</span>
-        <span className="bio-notes-label-en">({labelVn})</span>
+    <article className="bio-note-card" aria-label={titleVn}>
+      {/* ─── Card Header ─── */}
+      <header className="bio-note-card__header">
+        <div className="bio-note-card__title-group">
+          <span className={`bio-note-card__icon ${iconClass}`}>
+            <IconComponent size={16} aria-hidden="true" />
+          </span>
+          <div className="bio-note-card__heading">
+            <h5 className="bio-note-card__title">{titleVn}</h5>
+            <span className="bio-note-card__en-label">({titleEn})</span>
+          </div>
+        </div>
+
+        <span className="bio-note-card__source-pill">
+          {source}
+        </span>
+      </header>
+
+      {/* ─── Card Body: Bản dịch tiếng Việt ─── */}
+      <div className="bio-note-card__body">
+        {hasPrecomputedVn ? (
+          <FormattedParagraphs content={textVn!} />
+        ) : (
+          <div className="bio-note-card__runtime">
+            {loading && <span className="bio-notes-loading">Đang tải bản dịch đối chiếu...</span>}
+            {error && <span className="bio-notes-error">Không thể tải bản dịch tự động.</span>}
+            {runtimeVnText && (
+              <>
+                <FormattedParagraphs content={runtimeVnText} />
+                <p className="bio-notes-disclaimer">
+                  <AlertTriangle size={13} /> Bản dịch từ AI, chỉ có tính chất tham khảo học thuật.
+                </p>
+              </>
+            )}
+          </div>
+        )}
       </div>
-      <div className="bio-notes-en" style={{ marginBottom: '0.65rem' }}>
-        <FormattedParagraphs content={text} isEn />
-      </div>
-      <details className="bio-notes-en-details">
-        <summary className="bio-notes-en-toggle">Xem bản dịch tiếng Việt (tham khảo)</summary>
-        <div className="bio-notes-vn" style={{ marginTop: '0.5rem' }}>
-          {loading && <span className="bio-notes-loading">Đang dịch...</span>}
-          {error && <span className="bio-notes-error">Không thể tải bản dịch.</span>}
-          {runtimeVnText && (
-            <>
-              <FormattedParagraphs content={runtimeVnText} />
-              <p className="bio-notes-disclaimer" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', marginTop: '0.5rem' }}>
-                <AlertTriangle size={14} /> Bản dịch từ AI, chỉ có tính chất tham khảo.
-              </p>
-            </>
-          )}
+
+      {/* ─── Collapsible Panel: Văn bản gốc Tiếng Anh đối chiếu ─── */}
+      <details className="bio-note-card__en-details">
+        <summary className="bio-note-card__en-summary">
+          <Globe size={13} className="bio-note-card__globe-icon" />
+          <span>Xem văn bản gốc tiếng Anh ({source})</span>
+          <ChevronDown size={14} className="bio-note-card__chevron" />
+        </summary>
+        <div className="bio-note-card__en-content">
+          <FormattedParagraphs content={text} isEn />
         </div>
       </details>
-    </div>
+    </article>
   )
 }
