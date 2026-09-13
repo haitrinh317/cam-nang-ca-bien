@@ -58,6 +58,18 @@ export default function AdminSidebar() {
     }
   }, [])
 
+  // Sync collapsed class to admin-wrapper parent for smooth grid transition
+  useEffect(() => {
+    const wrapper = document.querySelector('.admin-wrapper')
+    if (wrapper) {
+      if (collapsed) {
+        wrapper.classList.add('has-collapsed-sidebar')
+      } else {
+        wrapper.classList.remove('has-collapsed-sidebar')
+      }
+    }
+  }, [collapsed])
+
   // Auto-sync fresh counts in background using exact DB count
   useEffect(() => {
     async function syncExactCounts() {

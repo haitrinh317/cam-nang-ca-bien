@@ -11,9 +11,10 @@
 
 .admin-wrapper {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  min-height: 100vh;
-  min-height: 100dvh;
+  grid-template-columns: 272px 1fr;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
   background: var(--color-paper, #f8fafc);
   color: var(--color-ink, #0b1329);
   font-family: var(--font-body, sans-serif);
@@ -25,11 +26,10 @@
   border-right: 1px solid rgba(0, 212, 184, 0.12);
   display: flex;
   flex-direction: column;
-  position: sticky;
+  position: relative;
   top: 0;
-  height: 100vh;
-  height: 100dvh;
-  overflow-y: auto;
+  height: 100%;
+  overflow: hidden;
   z-index: 50;
   box-shadow: 2px 0 16px rgba(0, 0, 0, 0.2);
 }
@@ -266,9 +266,10 @@
 .admin-content {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  min-height: 100dvh;
-  overflow: auto;
+  height: 100%;
+  max-height: 100dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
   background: var(--color-paper, #f8fafc);
 }
 
