@@ -66,16 +66,7 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
                     <CornerDownRight size={14} />
                   </span>
                 )}
-                <span
-                  className={`rank-badge rank-${c.rankKey}`}
-                  style={{
-                    flexShrink: 0,
-                    fontSize: 'var(--text-xs, 0.82rem)',
-                    padding: '2px 7px',
-                    borderRadius: '4px',
-                    letterSpacing: '0.04em'
-                  }}
-                >
+                <span className={`rank-badge rank-${c.rankKey}`}>
                   {c.rank}
                 </span>
                 <span
@@ -116,16 +107,7 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
               <span className="tax-tree-branch tax-tree-branch--current" aria-hidden="true" style={{ display: 'inline-flex', alignItems: 'center' }}>
                 <CornerDownRight size={16} />
               </span>
-              <span
-                className="rank-badge rank-species"
-                style={{
-                  flexShrink: 0,
-                  fontSize: 'var(--text-xs, 0.82rem)',
-                  padding: '2px 8px',
-                  borderRadius: '4px',
-                  letterSpacing: '0.05em'
-                }}
-              >
+              <span className="rank-badge rank-species">
                 Loài
               </span>
               <span

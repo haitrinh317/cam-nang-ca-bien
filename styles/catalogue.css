@@ -56,52 +56,8 @@
 
 .node-toggle.expanded { transform: rotate(90deg); }
 
-.rank-badge {
-  font-family: var(--font-outlier);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding: var(--space-3xs) var(--space-xs);
-  border-radius: var(--radius-xs);
-  letter-spacing: 0.06em;
-  flex-shrink: 0;
-}
+/* Taxonomy rank badges (.rank-badge, .rank-class, .rank-order, v.v.) kế thừa trực tiếp từ globals.css */
 
-.rank-class {
-  background: var(--color-rank-class-bg);
-  color: var(--color-rank-class-text);
-  border: 1px solid var(--color-rank-class-bd);
-}
-
-.rank-order {
-  background: var(--color-rank-order-bg);
-  color: var(--color-rank-order-text);
-  border: 1px solid var(--color-rank-order-bd);
-}
-
-.rank-family {
-  background: var(--color-rank-family-bg);
-  color: var(--color-rank-family-text);
-  border: 1px solid var(--color-rank-family-bd);
-}
-
-.rank-genus {
-  background: var(--color-rank-genus-bg);
-  color: var(--color-rank-genus-text);
-  border: 1px solid var(--color-rank-genus-bd);
-}
-
-.rank-species {
-  background: rgba(0, 212, 184, 0.12);
-  color: #0f766e;
-  border: 1px solid rgba(0, 212, 184, 0.35);
-}
-
-[data-theme="dark"] .rank-species {
-  background: rgba(0, 212, 184, 0.2);
-  color: #00f0d0;
-  border-color: rgba(0, 212, 184, 0.4);
-}
 
 .species-item {
   display: flex;

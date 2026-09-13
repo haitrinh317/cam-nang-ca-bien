@@ -46,11 +46,22 @@ export const metadata: Metadata = {
 export default async function HomePage() {
   const db = createServerClient()
 
-  // Parallel fetch: species stats + literature sources
+  const hsOr = 'vn_distribution.ilike.%Hoàng Sa%,vn_distribution.ilike.%Trường Sa%,vn_distribution.ilike.%Hoàng-sa%,vn_distribution.ilike.%Trường-sa%,vn_distribution.ilike.%Nam Yết%,vn_specimen.ilike.%Hoàng-sa%,vn_specimen.ilike.%Trường-sa%,vn_name.ilike.%Trường Sa%'
+  const coralFamilies = [
+    'Pomacentridae', 'Chaetodontidae', 'Labridae', 'Serranidae', 'Scaridae',
+    'Acanthuridae', 'Lutjanidae', 'Holocentridae', 'Mullidae', 'Apogonidae'
+  ]
+
+  // Parallel fetch: species stats + literature sources + live special group counts
   const [
     { count: totalSpecies },
     { data: familyRows },
     { data: litSources, count: litCount },
+    { count: coralCount },
+    { count: nguyCapCount },
+    { count: hsCount },
+    { count: seaweedCount },
+    { count: toxicCount },
   ] = await Promise.all([
     db.from('species')
       .select('*', { count: 'exact', head: true })
@@ -63,6 +74,27 @@ export default async function HomePage() {
       .select('*', { count: 'exact' })
       .eq('is_visible', true)
       .order('sort_order'),
+    db.from('species')
+      .select('*', { count: 'exact', head: true })
+      .is('deleted_at', null)
+      .eq('collection_id', 'ca-bien')
+      .in('tax_family_latin', coralFamilies),
+    db.from('species')
+      .select('*', { count: 'exact', head: true })
+      .is('deleted_at', null)
+      .or('biology->>iucnStatus.in.(CR,EN,VU,NT),biology->vnRedList.not.is.null'),
+    db.from('species')
+      .select('*', { count: 'exact', head: true })
+      .is('deleted_at', null)
+      .or(hsOr),
+    db.from('species')
+      .select('*', { count: 'exact', head: true })
+      .is('deleted_at', null)
+      .eq('collection_id', 'thuc-vat-bien'),
+    db.from('species')
+      .select('*', { count: 'exact', head: true })
+      .is('deleted_at', null)
+      .eq('collection_id', 'sinh-vat-doc'),
   ])
 
   const familyCount = familyRows
@@ -70,6 +102,14 @@ export default async function HomePage() {
     : 210
 
   const sources = (litSources || []) as LiteratureSourceRow[]
+
+  const specialGroupCounts: Record<string, number> = {
+    'san-ho': coralCount || 195,
+    'nguy-cap': nguyCapCount || 152,
+    'hoang-sa-truong-sa': hsCount || 160,
+    'thuc-vat-bien': seaweedCount || 672,
+    'sinh-vat-doc': toxicCount || 76,
+  }
 
   return (
     <>
@@ -100,8 +140,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Khám phá 4 nhóm chuyên đề sinh thái & bảo tồn */}
-      <SpecialGroupsSection />
+      {/* Khám phá 5 nhóm chuyên đề sinh thái & bảo tồn */}
+      <SpecialGroupsSection counts={specialGroupCounts} />
 
       {/* Danh sách các tài liệu gốc dùng để tra cứu — data từ Supabase */}
       <LiteratureSection sources={sources} />

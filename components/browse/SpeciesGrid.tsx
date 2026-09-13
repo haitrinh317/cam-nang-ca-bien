@@ -117,11 +117,17 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
       .is('deleted_at', null)
 
     if (activeGroup?.id === 'hoang-sa-truong-sa') {
-      // Truy vấn toàn bộ 148 loài Hoàng Sa & Trường Sa (bao gồm cả cá biển và thực vật biển)
+      // Truy vấn toàn bộ 160 loài Hoàng Sa & Trường Sa (bao gồm cả cá biển và thực vật biển)
       query = query
         .or('vn_distribution.ilike.%Hoàng Sa%,vn_distribution.ilike.%Trường Sa%,vn_distribution.ilike.%Hoàng-sa%,vn_distribution.ilike.%Trường-sa%,vn_distribution.ilike.%Nam Yết%,vn_specimen.ilike.%Hoàng-sa%,vn_specimen.ilike.%Trường-sa%,vn_name.ilike.%Trường Sa%')
         .order('volume')
         .order('species_index')
+        .limit(800)
+    } else if (activeGroup?.id === 'nguy-cap') {
+      // Truy vấn toàn bộ loài nguy cấp theo Danh lục Đỏ Quốc tế IUCN hoặc Sách Đỏ Việt Nam (VAST)
+      query = query
+        .or('biology->>iucnStatus.in.(CR,EN,VU,NT),biology->vnRedList.not.is.null')
+        .order('vn_name')
         .limit(800)
     } else if (activeGroup) {
       query = applySpeciesFilters(query, collection)
@@ -206,8 +212,12 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
   // In-memory filter for the list
   const filteredSpecies = useMemo(() => {
     let list = speciesList
-    if (activeGroup?.id === 'nguy-cap' && iucnSubFilter !== 'ALL') {
-      list = list.filter(sp => (sp.biology?.iucnStatus || '').toUpperCase() === iucnSubFilter)
+    if (activeGroup?.id === 'nguy-cap') {
+      if (iucnSubFilter === 'VN_REDLIST') {
+        list = list.filter(sp => !!sp.biology?.vnRedList?.status)
+      } else if (iucnSubFilter !== 'ALL') {
+        list = list.filter(sp => (sp.biology?.iucnStatus || '').toUpperCase() === iucnSubFilter)
+      }
     }
     if (activeGroup?.id === 'hoang-sa-truong-sa') {
       if (archipelagoSubFilter === 'HS') {
@@ -351,11 +361,11 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
           <h1 className="sgb-title">{activeGroup.title}</h1>
           <p className="sgb-desc">{activeGroup.subTitle}</p>
 
-          {/* Bộ lọc nhanh theo phân hạng Danh lục đỏ IUCN */}
+          {/* Bộ lọc nhanh theo phân hạng Sách Đỏ Việt Nam & Danh lục đỏ IUCN */}
           {activeGroup.id === 'nguy-cap' && (
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginTop: '16px', paddingTop: '16px', borderTop: '1px dashed var(--color-rule)' }}>
               <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-ink-3)', marginRight: '4px' }}>
-                Sách Đỏ IUCN:
+                Hệ thống bảo tồn:
               </span>
               <button
                 type="button"
@@ -377,6 +387,40 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
               >
                 Tất cả ({speciesList.length})
               </button>
+
+              {/* Nút lọc riêng Sách Đỏ Việt Nam */}
+              {(() => {
+                const vnCount = speciesList.filter(s => !!s.biology?.vnRedList?.status).length
+                const isSelected = iucnSubFilter === 'VN_REDLIST'
+                return (
+                  <button
+                    type="button"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                      padding: '4px 11px',
+                      borderRadius: '6px',
+                      fontSize: '0.82rem',
+                      fontWeight: isSelected ? 700 : 500,
+                      background: isSelected ? 'rgba(225, 29, 72, 0.15)' : 'var(--color-paper-2)',
+                      color: isSelected ? '#be123c' : 'var(--color-ink)',
+                      border: `1.5px solid ${isSelected ? '#e11d48' : 'rgba(225, 29, 72, 0.3)'}`,
+                      cursor: 'pointer',
+                      transition: 'all 0.15s ease',
+                      whiteSpace: 'nowrap',
+                    }}
+                    onClick={() => setIucnSubFilter('VN_REDLIST')}
+                  >
+                    <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: '#e11d48' }} />
+                    <span style={{ fontWeight: 600 }}>Sách Đỏ Việt Nam</span>
+                    <span style={{ fontSize: '0.82rem', fontWeight: 600 }}>({vnCount})</span>
+                  </button>
+                )
+              })()}
+
+              <div style={{ width: '1px', height: '18px', background: 'var(--color-rule)', margin: '0 4px' }} />
+
               {(['CR', 'EN', 'VU', 'NT'] as const).map(code => {
                 const count = speciesList.filter(s => (s.biology?.iucnStatus || '').toUpperCase() === code).length
                 const isSelected = iucnSubFilter === code

@@ -432,3 +432,53 @@ a:focus-visible {
   padding: calc(var(--nav-height) + var(--space-2xl) + var(--space-2xs)) var(--space-xl) var(--space-xl);
 }
 
+/* ═══════════════════════════════════════════
+   TAXONOMY RANK BADGES (LỚP, BỘ, HỌ, GIỐNG/CHI, LOÀI)
+   Hệ thống nhãn bậc phân loại học chuẩn toàn website
+   ═══════════════════════════════════════════ */
+.rank-badge {
+  font-family: var(--font-outlier);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-xs, 4px);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  line-height: 1.35;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rank-class {
+  background: var(--color-rank-class-bg);
+  color: var(--color-rank-class-text);
+  border: 1px solid var(--color-rank-class-bd);
+}
+
+.rank-order {
+  background: var(--color-rank-order-bg);
+  color: var(--color-rank-order-text);
+  border: 1px solid var(--color-rank-order-bd);
+}
+
+.rank-family {
+  background: var(--color-rank-family-bg);
+  color: var(--color-rank-family-text);
+  border: 1px solid var(--color-rank-family-bd);
+}
+
+.rank-genus {
+  background: var(--color-rank-genus-bg);
+  color: var(--color-rank-genus-text);
+  border: 1px solid var(--color-rank-genus-bd);
+}
+
+.rank-species {
+  background: var(--color-rank-species-bg);
+  color: var(--color-rank-species-text);
+  border: 1px solid var(--color-rank-species-bd);
+}
+
+

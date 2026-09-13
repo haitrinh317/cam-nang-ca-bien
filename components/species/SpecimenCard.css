@@ -308,10 +308,10 @@
 
 .specimen-vault-item__val {
   font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.84rem;
+  font-size: var(--text-sm, 0.95rem);
   font-weight: 450;
   color: var(--color-ink-2, #334155);
-  line-height: 1.5;
+  line-height: var(--lh-normal, 1.6);
   text-wrap: pretty;
   word-break: normal;
 }
@@ -328,10 +328,10 @@
   align-items: center;
   gap: 8px;
   font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.84rem;
+  font-size: var(--text-sm, 0.95rem);
   font-weight: 450;
   color: var(--color-ink-2, #334155);
-  line-height: 1.5;
+  line-height: var(--lh-normal, 1.6);
 }
 
 .specimen-vault-dot {
@@ -352,8 +352,8 @@
 
 .specimen-vault-status-row {
   font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.84rem;
-  line-height: 1.5;
+  font-size: var(--text-sm, 0.95rem);
+  line-height: var(--lh-normal, 1.6);
   color: var(--color-ink-2, #334155);
   text-wrap: pretty;
   word-break: normal;

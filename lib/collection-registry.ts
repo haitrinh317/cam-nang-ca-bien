@@ -43,7 +43,7 @@ export interface SpecialGroupConfig {
   collection: string
   targetUrl: string
   approxCount: number
-  filterType: 'families' | 'orders' | 'iucn' | 'collection' | 'archipelago'
+  filterType: 'families' | 'orders' | 'iucn' | 'collection' | 'archipelago' | 'threatened'
   filterValues?: string[]
 }
 
@@ -93,13 +93,13 @@ export const SPECIAL_GROUPS: Record<string, SpecialGroupConfig> = {
   'nguy-cap': {
     id: 'nguy-cap',
     title: 'Loài Nguy Cấp & Cần Bảo Vệ',
-    subTitle: 'Các loài sinh vật biển Việt Nam đang đứng trước nguy cơ đe dọa tuyệt chủng theo Danh lục đỏ Quốc tế IUCN (CR: Cực kỳ nguy cấp, EN: Nguy cấp, VU: Sắp nguy cấp, NT: Gần bị đe dọa)',
-    badge: 'Bảo Tồn Nguồn Lợi Sinh Học',
+    subTitle: 'Các loài sinh vật biển Việt Nam đang đứng trước nguy cơ đe dọa tuyệt chủng theo Sách Đỏ Việt Nam (Viện Hàn lâm KH&CN - VAST) và Danh lục Đỏ Quốc tế IUCN (CR: Cực kỳ nguy cấp, EN: Nguy cấp, VU: Sắp nguy cấp, NT: Gần bị đe dọa)',
+    badge: 'Sách Đỏ VN & IUCN',
     badgeColor: 'rose',
     collection: 'ca-bien',
     targetUrl: '/ca-bien?group=nguy-cap',
-    approxCount: 120,
-    filterType: 'iucn',
+    approxCount: 152,
+    filterType: 'threatened',
     filterValues: ['CR', 'EN', 'VU', 'NT'],
   },
   'hoang-sa-truong-sa': {
@@ -110,7 +110,7 @@ export const SPECIAL_GROUPS: Record<string, SpecialGroupConfig> = {
     badgeColor: 'amber',
     collection: 'ca-bien',
     targetUrl: '/ca-bien?group=hoang-sa-truong-sa',
-    approxCount: 148,
+    approxCount: 160,
     filterType: 'archipelago',
   },
   'thuc-vat-bien': {
