@@ -62,8 +62,9 @@ export default function VnRedListBadge({
   if (!status) return null
 
   const code = status.toUpperCase().trim()
-  const color = VN_REDLIST_COLOR[code] || '#64748b'
   const label = VN_REDLIST_LABEL[code] || code
+  const statusThemeClass = `vn-redlist-badge--${code.toLowerCase()}`
+  const compactClass = compact ? 'vn-redlist-badge--compact' : ''
 
   const tooltipText = showTooltip
     ? `Danh Lục Đỏ Việt Nam (VAST 2024): ${code} — ${label}${refCode ? ` (Mã: ${refCode})` : ''}`
@@ -71,37 +72,11 @@ export default function VnRedListBadge({
 
   return (
     <span
-      className={`vn-redlist-badge ${className}`}
+      className={`vn-redlist-badge ${statusThemeClass} ${compactClass} ${className}`}
       title={tooltipText}
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: '0.28rem',
-        padding: compact ? '0.1rem 0.38rem' : '0.16rem 0.52rem',
-        borderRadius: '4px',
-        background: `${color}18`,
-        border: `1px solid ${color}4d`,
-        color: color,
-        fontWeight: 700,
-        fontSize: compact ? '0.75rem' : '0.82rem',
-        letterSpacing: '.04em',
-        lineHeight: 1.2,
-        verticalAlign: 'middle',
-        boxShadow: `0 1px 2px ${color}10`,
-        whiteSpace: 'nowrap',
-        ...style,
-      }}
+      style={style}
     >
-      <span
-        style={{
-          display: 'inline-block',
-          width: 6,
-          height: 6,
-          borderRadius: '50%',
-          backgroundColor: color,
-        }}
-        aria-hidden="true"
-      />
+      <span className="vn-redlist-badge__dot" aria-hidden="true" />
       <span style={{ fontSize: '0.7rem', opacity: 0.85, fontWeight: 600 }}>SĐVN:</span>
       <span>{code}</span>
       {refCode && !compact && (

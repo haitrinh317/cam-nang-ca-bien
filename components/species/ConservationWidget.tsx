@@ -27,49 +27,49 @@ export interface ConservationWidgetProps {
   scientificName?: string
 }
 
-// Bảng cấu hình giao diện & màu sắc chủ đạo theo phân hạng bảo tồn
+// Bảng cấu hình giao diện & màu sắc chủ đạo theo phân hạng bảo tồn (chuẩn hóa tokens.css)
 const STATUS_CONFIG: Record<string, {
   color: string
   themeClass: string
   defaultVn: string
 }> = {
   CR: {
-    color: '#dc2626',
+    color: 'var(--redlist-cr-accent, #dc2626)',
     themeClass: 'theme-cr',
     defaultVn: 'Cực kỳ nguy cấp',
   },
   EN: {
-    color: '#ea580c',
+    color: 'var(--redlist-en-accent, #ea580c)',
     themeClass: 'theme-en',
     defaultVn: 'Nguy cấp',
   },
   VU: {
-    color: '#d97706',
+    color: 'var(--redlist-vu-accent, #d97706)',
     themeClass: 'theme-vu',
     defaultVn: 'Sắp nguy cấp',
   },
   NT: {
-    color: '#65a30d',
+    color: 'var(--redlist-nt-accent, #65a30d)',
     themeClass: 'theme-nt',
     defaultVn: 'Gần bị đe dọa',
   },
   LC: {
-    color: '#16a34a',
+    color: 'var(--redlist-lc-accent, #16a34a)',
     themeClass: 'theme-lc',
     defaultVn: 'Ít quan tâm',
   },
   EW: {
-    color: '#7c3aed',
+    color: 'var(--redlist-ew-accent, #7c3aed)',
     themeClass: 'theme-ew',
     defaultVn: 'Tuyệt chủng ngoài tự nhiên',
   },
   EX: {
-    color: '#475569',
+    color: 'var(--redlist-ex-accent, #475569)',
     themeClass: 'theme-ex',
     defaultVn: 'Tuyệt chủng',
   },
   DD: {
-    color: '#64748b',
+    color: 'var(--redlist-dd-accent, #64748b)',
     themeClass: 'theme-dd',
     defaultVn: 'Thiếu dữ liệu',
   },
