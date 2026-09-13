@@ -8,6 +8,7 @@
 
 ## ✅ Hoàn thành gần nhất (2026-09-13)
 
+- [x] Sửa dứt điểm lỗi trùng ảnh Vích & Quản đồng (*Caretta caretta*) — nạp 3 ảnh iNat chuẩn hình thái đầu to, chuẩn hóa `taxon_id` search
 - [x] Nâng cấp AI Skill `sealifebase-sync` v2.0 hỗ trợ toàn bộ 5 nhóm sinh vật biển ngoài cá (Bò sát biển, Thân mềm, San hô, Giáp xác, Động vật độc) kèm 5 System Prompts dịch thuật học thuật, Deep Merge bảo toàn Sách Đỏ VAST, và đồng bộ 100% cho `bo-sat-bien`
 - [x] Tối ưu hóa ngắt đoạn tự động (smart paragraph splitting) trong Bento cards (Hình thái, Sinh thái, Giá trị kinh tế), dọn dẹp nhãn mồ côi "Tại" trong phân bố và chuẩn hóa Trend Pill Sách Đỏ
 - [x] Tạo AI Skill `vnredlist-sync` v1.0 (Sách Đỏ VAST → Golden Standard) & chuẩn hóa 79/79 loài đạt 100%
