@@ -1163,44 +1163,35 @@
   animation: panelReveal var(--dur-normal) var(--ease-out) both;
 }
 
-/* ── Cards: hidden until .is-revealed (via IntersectionObserver) ── */
+/* ── Cards: luôn hiển thị an toàn, hiệu ứng chuyển tab do panelReveal trên .detail-tab-panel.active đảm nhiệm ── */
 .specimen-bento-card,
 .specimen-identity-card,
 .specimen-vault-card,
 .specimen-value-card {
-  opacity: 0;
-  transform: translateY(16px);
+  opacity: 1;
+  transform: none;
 }
 
-.specimen-bento-card.is-revealed,
-.specimen-identity-card.is-revealed,
-.specimen-vault-card.is-revealed,
-.specimen-value-card.is-revealed {
-  animation: bentoReveal var(--dur-slow, 400ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) both;
-}
-
-/* Stagger: bento-card qua nth-child trong bento-grid */
-.specimen-bento-grid .specimen-bento-card.is-revealed:nth-child(1) { animation-delay:  0ms; }
-.specimen-bento-grid .specimen-bento-card.is-revealed:nth-child(2) { animation-delay:  55ms; }
-.specimen-bento-grid .specimen-bento-card.is-revealed:nth-child(3) { animation-delay: 110ms; }
-.specimen-bento-grid .specimen-bento-card.is-revealed:nth-child(4) { animation-delay: 165ms; }
-.specimen-bento-grid .specimen-bento-card.is-revealed:nth-child(5) { animation-delay: 220ms; }
-.specimen-bento-grid .specimen-bento-card.is-revealed:nth-child(6) { animation-delay: 275ms; }
+/* Stagger nhẹ cho bento-card trong bento-grid khi panel active */
+.detail-tab-panel.active .specimen-bento-grid .specimen-bento-card:nth-child(1) { animation: bentoReveal var(--dur-slow, 400ms) var(--ease-out) both; animation-delay:  0ms; }
+.detail-tab-panel.active .specimen-bento-grid .specimen-bento-card:nth-child(2) { animation: bentoReveal var(--dur-slow, 400ms) var(--ease-out) both; animation-delay:  40ms; }
+.detail-tab-panel.active .specimen-bento-grid .specimen-bento-card:nth-child(3) { animation: bentoReveal var(--dur-slow, 400ms) var(--ease-out) both; animation-delay:  80ms; }
+.detail-tab-panel.active .specimen-bento-grid .specimen-bento-card:nth-child(4) { animation: bentoReveal var(--dur-slow, 400ms) var(--ease-out) both; animation-delay: 120ms; }
+.detail-tab-panel.active .specimen-bento-grid .specimen-bento-card:nth-child(5) { animation: bentoReveal var(--dur-slow, 400ms) var(--ease-out) both; animation-delay: 160ms; }
+.detail-tab-panel.active .specimen-bento-grid .specimen-bento-card:nth-child(6) { animation: bentoReveal var(--dur-slow, 400ms) var(--ease-out) both; animation-delay: 200ms; }
 
 /* ── prefers-reduced-motion ── */
 @media (prefers-reduced-motion: reduce) {
   .specimen__hero,
   .detail-tab-panel.active,
+  .detail-tab-panel.active .specimen-bento-grid .specimen-bento-card,
   .specimen-bento-card,
-  .specimen-bento-card.is-revealed,
   .specimen-identity-card,
-  .specimen-identity-card.is-revealed,
   .specimen-vault-card,
-  .specimen-vault-card.is-revealed,
-  .specimen-value-card,
-  .specimen-value-card.is-revealed {
+  .specimen-value-card {
     opacity: 1 !important;
     transform: none !important;
     animation: none !important;
   }
 }
+

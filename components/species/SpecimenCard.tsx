@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useRef } from 'react'
-import { useScrollReveal } from '@/hooks/useScrollReveal'
 import PhotoGallery from './PhotoGallery'
 import WormsBadge from './WormsBadge'
 import { BiologyData } from './BiologyDashboard'
@@ -64,9 +63,6 @@ type TabId = 'thongso' | 'sinhhoc' | 'phanloai'
 export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initialPhotos?: unknown[] }) {
   const [active, setActive] = useState<TabId>('thongso')
   const specimenRef = useRef<HTMLDivElement | null>(null)
-
-  // Reveal bento/identity/vault/value cards on scroll
-  useScrollReveal(specimenRef, '.specimen-bento-card, .specimen-identity-card, .specimen-vault-card, .specimen-value-card')
 
   // Parse synonyms
   let syns: string[] = []
