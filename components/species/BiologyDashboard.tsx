@@ -22,10 +22,12 @@ import IucnBadge from './IucnBadge'
 import VnRedListBadge, { VnRedListInfo } from './VnRedListBadge'
 import ConservationWidget from './ConservationWidget'
 import BilingualNoteBlock from './BilingualNoteBlock'
+import { WormsTaxonomyNode } from '@/lib/taxonomy'
 import { ToxicologyData } from './ToxicologyWidget'
 import './BiologyDashboard.css'
 
 export interface BiologyData {
+  wormsTaxonomy?: WormsTaxonomyNode
   toxicology?: ToxicologyData
   vnRedList?: VnRedListInfo
   fbName?: string

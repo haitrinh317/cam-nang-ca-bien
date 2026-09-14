@@ -13,6 +13,7 @@
 - [x] **Khôi phục toàn diện & sửa lỗi chính tả 100% Tập IV Cá Biển Việt Nam** (341/341 loài): Thay thế 10 loài Cá Mú (#51–#60) bằng Cá Bàng Chài gốc; phục hồi 3 loài khuyết (#78, #102, #124); chuẩn hóa Họ Cá Đối Đục (*Opistognathidae*); sửa lỗi chính tả 27 loài ("Cá đối chứ không phải cá đồi"); đồng bộ WoRMS cho 19 loài.
 - [x] **Rà soát & chuẩn hóa toàn diện Cây phân loại Cá biển (1,767 loài)**: Bóc tách 31 trang Mục lục sách gốc Tập 3, phục hồi 508 loài Tập 3 bị khuyết trắng taxonomy; chuẩn hóa 100% prefix `"Họ "` và `"Bộ "`; xóa sạch chữ Latin rò rỉ; triệt tiêu hoàn toàn mục "Unknown" (0 loài thiếu Lớp/Bộ/Họ/Giống).
 - [x] **Nâng cấp phân trang fetch Supabase 3,000 loài** cho trang Cây phân loại (`/[collection]/taxonomy` & `TaxonomyTree.tsx`), loại bỏ giới hạn trần PostgREST 1000/2000 dòng.
+- [x] **Thiết kế & Triển khai Kiến trúc Cây Phân Loại Kép (Dual Taxonomy Architecture)**: Đồng bộ 100% WoRMS Taxonomy (56 bộ phân tử hiện đại) cho 1,767 loài cá biển; tích hợp bộ chuyển đổi Toggle Switch tức thì giữa **🧬 WoRMS Hiện Đại (2026)** và **🏛️ Sách Gốc (Viện Hải dương học)** trên cây phân loại và bảng đối chiếu song song trên trang chi tiết loài.
 - [x] **Commit & Deploy Vercel Production**: Commit `c1929dc`, hệ thống live ổn định tại `https://www.tracuusinhvatbien.app`.
 
 ## ✅ Hoàn thành (2026-09-13 — phiên đêm)

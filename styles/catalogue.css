@@ -99,3 +99,108 @@
   margin-left: var(--space-xs);
 }
 
+/* ═══════════════════════════════════════════
+   DUAL TAXONOMY TOGGLE & META BAR
+   ═══════════════════════════════════════════ */
+.taxonomy-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.taxonomy-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-xl);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-xs);
+}
+
+.taxonomy-segmented-switch {
+  display: inline-flex;
+  background: var(--color-paper);
+  border: 1px solid var(--color-rule);
+  border-radius: 9999px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.taxonomy-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: all var(--dur-normal) var(--ease-out);
+}
+
+.taxonomy-switch-btn:hover {
+  color: var(--color-ink);
+}
+
+.taxonomy-switch-btn.active {
+  background: var(--brand-primary);
+  color: #0b1329;
+  box-shadow: 0 2px 10px rgba(0, 240, 208, 0.28);
+}
+
+.taxonomy-switch-btn.active--classic {
+  background: #38bdf8;
+  color: #07172c;
+  box-shadow: 0 2px 10px rgba(56, 189, 248, 0.28);
+}
+
+.taxonomy-stats-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--color-ink-2);
+  background: var(--color-paper);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-rule);
+}
+
+.taxonomy-stats-pill strong {
+  color: var(--brand-primary);
+  font-weight: 700;
+}
+
+.taxonomy-context-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  background: rgba(0, 240, 208, 0.05);
+  border: 1px solid rgba(0, 240, 208, 0.18);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--color-ink-2);
+}
+
+.taxonomy-context-banner--classic {
+  background: rgba(56, 189, 248, 0.05);
+  border-color: rgba(56, 189, 248, 0.18);
+}
+
+.taxonomy-context-banner svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+

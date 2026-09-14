@@ -825,6 +825,140 @@
   font-style: normal;
 }
 
+/* ─── Dual Taxonomy Comparison in Detail Tab ─── */
+.dual-tax-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--color-rule);
+}
+
+.dual-tax-switcher {
+  display: inline-flex;
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-rule);
+  border-radius: 9999px;
+  padding: 3px;
+  gap: 3px;
+}
+
+.dual-tax-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  background: transparent;
+  color: var(--color-muted);
+  cursor: pointer;
+  transition: all var(--dur-normal) var(--ease-out);
+}
+
+.dual-tax-btn:hover {
+  color: var(--color-ink);
+}
+
+.dual-tax-btn.active {
+  background: var(--brand-primary);
+  color: #0b1329;
+}
+
+.dual-tax-btn.active--classic {
+  background: #38bdf8;
+  color: #07172c;
+}
+
+.dual-tax-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-rule);
+}
+
+@media (max-width: 640px) {
+  .dual-tax-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dual-tax-card {
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  background: var(--color-paper-2);
+  border: 1px solid var(--color-rule);
+}
+
+.dual-tax-card--modern {
+  border-color: rgba(0, 240, 208, 0.25);
+  background: rgba(0, 240, 208, 0.03);
+}
+
+.dual-tax-card--classic {
+  border-color: rgba(56, 189, 248, 0.25);
+  background: rgba(56, 189, 248, 0.03);
+}
+
+.dual-tax-card__title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.dual-tax-card--modern .dual-tax-card__title {
+  color: var(--brand-primary);
+}
+
+.dual-tax-card--classic .dual-tax-card__title {
+  color: #38bdf8;
+}
+
+.dual-tax-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.82rem;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.dual-tax-row:last-child {
+  border-bottom: none;
+}
+
+.dual-tax-label {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+
+.dual-tax-val {
+  text-align: right;
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.dual-tax-val em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-muted);
+  margin-left: 4px;
+}
+
 /* 2. WoRMS Dossier Card */
 .specimen-worms-link-btn {
   display: inline-flex;

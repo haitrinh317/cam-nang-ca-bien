@@ -61,7 +61,7 @@ export default async function TaxonomyPage({ params }: Props) {
     db.from('species').select(TAXONOMY_COLS).eq('collection_id', collection).is('deleted_at', null).range(2000, 2999),
   ])
 
-  const species = sortTaxonomyRows([...(r1.data || []), ...(r2.data || []), ...(r3.data || [])])
+  const species = sortTaxonomyRows([...(r1.data || []), ...(r2.data || []), ...(r3.data || [])] as any[], 'modern')
 
   return (
     <>

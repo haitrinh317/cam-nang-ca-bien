@@ -1,10 +1,13 @@
 'use client'
 
+import { useState } from 'react'
 import {
   Network,
   ShieldCheck,
   BookOpen,
   CornerDownRight,
+  Dna,
+  Layers,
 } from 'lucide-react'
 import WormsBadge from '../WormsBadge'
 import { formatSynonym } from '@/lib/species-parsers'
@@ -25,6 +28,18 @@ interface PhanloaiTabProps {
 }
 
 export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiTabProps) {
+  const wt = sp.biology?.wormsTaxonomy
+  const hasModernTax = Boolean(wt && wt.order && wt.family)
+  const [taxMode, setTaxMode] = useState<'modern' | 'classic'>(hasModernTax ? 'modern' : 'classic')
+
+  // Build active stepped crumbs according to taxMode
+  const activeCrumbs: TaxCrumb[] = (taxMode === 'modern' && wt) ? [
+    { rank: 'Lớp', rankKey: 'class', vn: wt.classVn || wt.class || 'Lớp', lat: wt.class || null },
+    { rank: 'Bộ', rankKey: 'order', vn: wt.orderVn || wt.order || 'Bộ', lat: wt.order || null },
+    { rank: 'Họ', rankKey: 'family', vn: wt.familyVn || wt.family || 'Họ', lat: wt.family || null },
+    { rank: 'Chi', rankKey: 'genus', vn: wt.genusVn || wt.genus || 'Chi', lat: wt.genus || null },
+  ] : crumbs
+
   return (
     <div
       id="tab-panel-phanloai"
@@ -40,15 +55,51 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
               <span className="specimen-bento-card__icon specimen-bento-card__icon--blue">
                 <Network size={16} />
               </span>
-              <h3 className="specimen-bento-card__title">Cây Phân loại học</h3>
+              <div>
+                <h3 className="specimen-bento-card__title">Cây Phân loại học</h3>
+                <span style={{ fontSize: '0.8rem', color: 'var(--color-muted)', display: 'block', marginTop: '2px' }}>
+                  {taxMode === 'modern' ? 'Theo Chuẩn Phát sinh Chủng loài WoRMS 2026' : 'Theo Sách Chuyên khảo Viện Hải dương học'}
+                </span>
+              </div>
             </div>
             <span className="specimen-bento-card__badge">
-              {crumbs.length + 1} bậc phân loại
+              {activeCrumbs.length + 1} bậc phân loại
             </span>
           </div>
 
+          {/* Dual Taxonomy Switcher (nếu có dữ liệu WoRMS) */}
+          {hasModernTax && (
+            <div className="dual-tax-controls">
+              <div className="dual-tax-switcher" role="tablist" aria-label="Hệ thống phân loại">
+                <button
+                  type="button"
+                  className={`dual-tax-btn ${taxMode === 'modern' ? 'active' : ''}`}
+                  onClick={() => setTaxMode('modern')}
+                  title="Hệ thống phát sinh chủng loài phân tử cập nhật mới nhất"
+                >
+                  <Dna size={14} />
+                  <span>WoRMS Hiện Đại</span>
+                </button>
+                <button
+                  type="button"
+                  className={`dual-tax-btn ${taxMode === 'classic' ? 'active--classic' : ''}`}
+                  onClick={() => setTaxMode('classic')}
+                  title="Trật tự phân loại gốc theo bộ sách Danh mục Cá biển VN"
+                >
+                  <BookOpen size={14} />
+                  <span>Sách Chuyên Khảo</span>
+                </button>
+              </div>
+
+              <span style={{ fontSize: '0.78rem', color: 'var(--color-muted)' }}>
+                {taxMode === 'modern' ? 'Phân loại học phân tử' : 'Hình thái học truyền thống'}
+              </span>
+            </div>
+          )}
+
+          {/* Stepped Tree Lineage */}
           <div className="tax-tree-container">
-            {crumbs.map((c, idx) => (
+            {activeCrumbs.map((c, idx) => (
               <div
                 key={c.rankKey}
                 className={`tax-tree-node tax-tree-node--${c.rankKey}`}
@@ -95,13 +146,13 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
             {/* Bậc Loài cuối cùng (Current Target Specimen) */}
             <div
               className="tax-tree-node tax-tree-node--species tax-tree-node--current"
-              data-level={crumbs.length}
+              data-level={activeCrumbs.length}
               style={{
                 display: 'flex',
                 alignItems: 'center',
                 flexWrap: 'wrap',
                 gap: '4px 8px',
-                marginLeft: `calc(${crumbs.length} * var(--tax-indent, 24px))`
+                marginLeft: `calc(${activeCrumbs.length} * var(--tax-indent, 24px))`
               }}
             >
               <span className="tax-tree-branch tax-tree-branch--current" aria-hidden="true" style={{ display: 'inline-flex', alignItems: 'center' }}>
@@ -141,6 +192,55 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
               )}
             </div>
           </div>
+
+          {/* Bảng Đối Chiếu Cây Phân Loại Kép (Dual Taxonomy Comparison Table) */}
+          {hasModernTax && wt && (
+            <div className="dual-tax-comparison-grid">
+              <div className="dual-tax-card dual-tax-card--modern">
+                <div className="dual-tax-card__title">
+                  <Dna size={14} /> Chuẩn Hiện Đại (WoRMS 2026)
+                </div>
+                <div className="dual-tax-row">
+                  <span className="dual-tax-label">Lớp:</span>
+                  <span className="dual-tax-val">{wt.classVn || wt.class} <em>({wt.class})</em></span>
+                </div>
+                <div className="dual-tax-row">
+                  <span className="dual-tax-label">Bộ:</span>
+                  <span className="dual-tax-val">{wt.orderVn || wt.order} <em>({wt.order})</em></span>
+                </div>
+                <div className="dual-tax-row">
+                  <span className="dual-tax-label">Họ:</span>
+                  <span className="dual-tax-val">{wt.familyVn || wt.family} <em>({wt.family})</em></span>
+                </div>
+                <div className="dual-tax-row">
+                  <span className="dual-tax-label">Chi:</span>
+                  <span className="dual-tax-val">{wt.genusVn || wt.genus} <em>({wt.genus})</em></span>
+                </div>
+              </div>
+
+              <div className="dual-tax-card dual-tax-card--classic">
+                <div className="dual-tax-card__title">
+                  <BookOpen size={14} /> Sách Gốc (Viện Hải dương học)
+                </div>
+                <div className="dual-tax-row">
+                  <span className="dual-tax-label">Lớp:</span>
+                  <span className="dual-tax-val">{sp.tax_class_vn || sp.tax_class_latin} <em>({sp.tax_class_latin})</em></span>
+                </div>
+                <div className="dual-tax-row">
+                  <span className="dual-tax-label">Bộ:</span>
+                  <span className="dual-tax-val">{sp.tax_order_vn || sp.tax_order_latin} <em>({sp.tax_order_latin})</em></span>
+                </div>
+                <div className="dual-tax-row">
+                  <span className="dual-tax-label">Họ:</span>
+                  <span className="dual-tax-val">{sp.tax_family_vn || sp.tax_family_latin} <em>({sp.tax_family_latin})</em></span>
+                </div>
+                <div className="dual-tax-row">
+                  <span className="dual-tax-label">Giống:</span>
+                  <span className="dual-tax-val">{sp.tax_genus_vn || sp.tax_genus_latin} <em>({sp.tax_genus_latin})</em></span>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* 2. Thẩm Định Danh Pháp Quốc Tế (WoRMS Curatorial Dossier) */}
