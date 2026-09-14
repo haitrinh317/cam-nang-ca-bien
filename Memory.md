@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-13 (phiên đêm — deploy `ca27ea2`) | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-14 (Chuẩn hóa 100% chính tả, khôi phục 341/341 loài Cá biển Tập IV) | **Production:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 ---
@@ -25,7 +25,7 @@
 
 | Collection | Loài | WoRMS | Trạng thái |
 |---|:---:|:---:|---|
-| `ca-bien` (Tập I-VI) | 1,764 | 100% | ✅ Hoàn chỉnh + Hợp nhất 21 loài cá độc |
+| `ca-bien` (Tập I-VI) | 1,766 | 100% | ✅ Hoàn chỉnh 341 loài Tập IV (chuẩn hóa Họ Cá Đối Đục, thay thế 10 loài Bàng Chài, sửa chính tả) + Hợp nhất 21 loài cá độc |
 | `thuc-vat-bien` (Tập 1-2) | 672 | 100% | ✅ Hoàn chỉnh (201 + 471 ảnh tiêu bản) |
 | `giap-xac` | 132 | 100% | ✅ 99.2% SeaLifeBase + 40% ảnh iNat |
 | `bo-sat-bien` | 33 | 100% | ✅ 27 Rắn biển + 5 Rùa biển + 1 Cá sấu hoa cà + Sách Đỏ VAST 6/6 + 100% SeaLifeBase & GBIF + 100% ảnh thực địa độc bản |

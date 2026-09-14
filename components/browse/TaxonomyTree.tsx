@@ -47,14 +47,15 @@ export default function TaxonomyTree({ collection, initialSpecies }: Props) {
     if (initialSpecies && initialSpecies.length > 0) return
 
     async function load() {
-      // ponytail: Supabase max-rows = 1000. Fetch 2 pages for collection.
-      const [r1, r2] = await Promise.all([
+      // ponytail: Supabase max-rows = 1000. Fetch 3 pages for collection.
+      const [r1, r2, r3] = await Promise.all([
         db.from('species').select(TAXONOMY_COLS).eq('collection_id', collection).is('deleted_at', null).range(0, 999),
         db.from('species').select(TAXONOMY_COLS).eq('collection_id', collection).is('deleted_at', null).range(1000, 1999),
+        db.from('species').select(TAXONOMY_COLS).eq('collection_id', collection).is('deleted_at', null).range(2000, 2999),
       ])
       if (r1.error) { setStatus('error'); return }
 
-      setAllSpecies(sortTaxonomyRows([...(r1.data || []), ...(r2.data || [])] as SpeciesRow[]))
+      setAllSpecies(sortTaxonomyRows([...(r1.data || []), ...(r2.data || []), ...(r3.data || [])] as SpeciesRow[]))
       setStatus('ok')
     }
     load()
