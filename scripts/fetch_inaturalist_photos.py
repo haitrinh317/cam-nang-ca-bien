@@ -61,12 +61,15 @@ def supa_get(endpoint, params=None):
 
 
 def supa_post(endpoint, data):
-    """POST to Supabase REST API."""
+    """POST to Supabase REST API with conflict handling."""
     url = f"{SUPABASE_URL}/rest/v1/{endpoint}"
-    headers = {**HEADERS_SUPA, "Prefer": "return=representation"}
+    headers = {**HEADERS_SUPA, "Prefer": "resolution=ignore-duplicates,return=representation"}
     resp = requests.post(url, headers=headers, json=data, timeout=30)
     resp.raise_for_status()
-    return resp.json()
+    try:
+        return resp.json()
+    except Exception:
+        return []
 
 
 def supa_patch(endpoint, data):
@@ -110,37 +113,34 @@ def inat_get(endpoint, params=None):
 
 def find_taxon_id(scientific_name, collection="ca-bien"):
     """Look up iNaturalist taxon ID for a scientific name with strict verification."""
+    if not scientific_name:
+        return None
     # Làm sạch tên khoa học: bỏ tác giả, năm nếu có
     clean_name = re.sub(r'\(.*?\)', '', scientific_name).strip()
     words = clean_name.split()
     if len(words) >= 2:
         clean_name = f"{words[0]} {words[1]}"
-    genus = words[0] if words else ""
+    target_names = {clean_name.lower(), scientific_name.strip().lower()}
 
     data = inat_get("taxa", {"q": clean_name, "rank": "species", "per_page": 10})
     results = data.get("results", [])
 
-    # 1. Khớp chính xác tên loài
+    # 1. Khớp chính xác tên loài hoặc matched_term (synonym chuẩn trên iNaturalist)
     for t in results:
-        tname = t.get("name", "").strip().lower()
-        if tname == clean_name.lower() or tname == scientific_name.lower():
-            return t["id"]
-
-    # 2. Khớp cùng chi (genus) và cùng giới động vật (nếu là cá biển)
-    for t in results:
-        tname = t.get("name", "").strip().lower()
         iconic = t.get("iconic_taxon_name", "")
-        # Nếu là ca-bien thì không bao giờ lấy thực vật hoặc nấm
-        if collection == "ca-bien" and iconic in ("Plantae", "Fungi", "Insecta"):
+        # Lọc giới tính hợp lệ theo collection
+        if collection == "ca-bien" and iconic in ("Plantae", "Fungi", "Insecta", "Aves", "Mammalia", "Amphibia", "Reptilia"):
             continue
         if collection == "thu-bien" and iconic != "Mammalia":
             continue
         if collection == "bo-sat-bien" and iconic != "Reptilia":
             continue
-        if tname.startswith(genus.lower() + " "):
+
+        tname = t.get("name", "").strip().lower()
+        matched = t.get("matched_term", "").strip().lower()
+        if tname in target_names or matched in target_names:
             return t["id"]
 
-    # TUYỆT ĐỐI KHÔNG fallback bừa bãi results[0] nếu không khớp tên chi
     return None
 
 
@@ -170,7 +170,7 @@ def fetch_observations(taxon_id, place_id=None, max_photos=3):
         observer = obs.get("user", {}).get("login", "Unknown")
         for p in obs.get("photos", []):
             pid = p.get("id")
-            if pid in seen_ids:
+            if pid in seen_ids or pid in EXISTING_INAT_IDS:
                 continue
             seen_ids.add(pid)
             # Get medium URL (max 500px wide on iNaturalist)
@@ -255,17 +255,38 @@ def get_existing_photo_species():
     return existing
 
 
+EXISTING_INAT_IDS = set()
+
+def load_existing_inat_ids():
+    """Load existing inat_photo_ids to prevent unique constraint conflicts."""
+    global EXISTING_INAT_IDS
+    offset = 0
+    batch = 1000
+    while True:
+        rows = supa_get("species_photos", {
+            "select": "inat_photo_id",
+            "inat_photo_id": "not.is.null",
+            "offset": offset,
+            "limit": batch,
+        })
+        EXISTING_INAT_IDS.update(r["inat_photo_id"] for r in rows if r.get("inat_photo_id"))
+        if len(rows) < batch:
+            break
+        offset += batch
+    print(f"   Existing iNaturalist photo IDs in DB: {len(EXISTING_INAT_IDS)}")
+
+
 def process_species(sp, idx, total, dry_run=False):
     """Process a single species: find photos, download, upload, insert DB."""
     species_id = sp["id"]
-    sci_name = sp["scientific_name"]
-    alt_name = sp.get("worms_accepted_name")
+    sci_name = sp["scientific_name"].strip()
+    alt_name = (sp.get("worms_accepted_name") or "").strip()
 
     prefix = f"[{idx}/{total}]"
 
     # 1. Find taxon on iNaturalist
     taxon_id = find_taxon_id(sci_name, collection=COLLECTION)
-    if not taxon_id and alt_name and alt_name != sci_name:
+    if not taxon_id and alt_name and alt_name.lower() != sci_name.lower():
         taxon_id = find_taxon_id(alt_name, collection=COLLECTION)
         if taxon_id:
             print(f"  {prefix} Used WoRMS accepted name: {alt_name}")
@@ -327,6 +348,7 @@ def process_species(sp, idx, total, dry_run=False):
                 except Exception:
                     pass
             uploaded += 1
+            EXISTING_INAT_IDS.add(p["photo_id"])
         except Exception as e:
             print(f"    ⚠️  Photo {i+1} failed: {e}")
 
@@ -361,6 +383,9 @@ def main():
     # Get existing photos (for incremental)
     existing = get_existing_photo_species()
     print(f"   Species already with photos: {len(existing)}")
+
+    # Load existing inat photo IDs
+    load_existing_inat_ids()
 
     # Filter out species that already have photos
     todo = [sp for sp in all_species if sp["id"] not in existing]

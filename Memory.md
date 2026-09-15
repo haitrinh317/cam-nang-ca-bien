@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-15 (Fix lặp rank prefix taxonomy & Hoàn thiện Dual Taxonomy Architecture | Production live) | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-15 (Đột phá phủ ảnh minh họa cá biển 87.9% [1,553 loài] & FishBase 99.8% | Production live) | **Production:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 ---
@@ -25,13 +25,13 @@
 
 | Collection | Loài | WoRMS | Trạng thái |
 |---|:---:|:---:|---|
-| `ca-bien` (Tập I-VI) | 1,767 | 100% | ✅ Hoàn chỉnh 341 loài Tập IV + Chuẩn hóa 100% Cây phân loại (0 Unknown, 48 Bộ, 194 Họ) + Hợp nhất 21 loài cá độc |
+| `ca-bien` (Tập I-VI) | 1,767 | 100% | ✅ 99.8% FishBase v25.04 (1,764/1,767) + 100% Cây phân loại kép + 87.9% Ảnh minh họa (1,553/1,767 loài) + Hợp nhất 21 cá độc |
 | `thuc-vat-bien` (Tập 1-2) | 672 | 100% | ✅ Hoàn chỉnh (201 + 471 ảnh tiêu bản) |
 | `giap-xac` | 132 | 100% | ✅ 99.2% SeaLifeBase + 40% ảnh iNat |
-| `bo-sat-bien` | 33 | 100% | ✅ 27 Rắn biển + 5 Rùa biển + 1 Cá sấu hoa cà + Sách Đỏ VAST 6/6 + 100% SeaLifeBase & GBIF + 100% ảnh thực địa độc bản |
-| `sinh-vat-doc` | 76 | 100% | ✅ 100% Toxicology + 80 ảnh thực địa |
-| `than-mem` (Pilot Ốc sứ) | 74 | 100% | ✅ 85% SeaLifeBase + 210 ảnh iNat |
-| `san-ho` | 42 | 97.6% | ✅ Khuyết trang 102 (loài 30) |
+| `bo-sat-bien` | 33 | 100% | ✅ 100% SeaLifeBase & GBIF (33/33 loài) + Sách Đỏ VAST 6/6 Golden Standard + 100% ảnh thực địa |
+| `sinh-vat-doc` | 76 | 100% | ✅ 100% Toxicology + 100% SeaLifeBase cho nhóm thân mềm/sứa/nhum độc + 80 ảnh thực địa |
+| `than-mem` (Pilot Ốc sứ) | 74 | 100% | ✅ 100% SeaLifeBase + 210 ảnh iNat |
+| `san-ho` | 42 | 97.6% | ✅ 20 loài SeaLifeBase v25.04 + Khuyết trang 102 (loài 30) |
 | `thu-bien` | 34 | 100% | ✅ 1 Bò biển + 33 Cá voi (gồm Cá nhà táng) + 100% SeaLifeBase + 100 ảnh iNat CC-BY + 100% Sách Đỏ VAST Golden Standard + 100% Complete Audit |
 
 ---

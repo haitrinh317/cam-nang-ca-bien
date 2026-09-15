@@ -8,6 +8,14 @@
 
 ## ✅ Hoàn thành gần nhất (2026-09-15)
 
+- [x] **Đột phá Phủ Ảnh Minh Họa Cá Biển Hoàn Tất (1,553 / 1,767 loài — 87.9%)**:
+  - **Backfill giải cứu 841 loài cá biển:** Phát hiện & giải cứu 841 loài đã có ảnh chất lượng cao trên Supabase Storage nhưng bị bỏ trống cột `photo_url` trên bảng `species`. Chạy thành công `backfill_cabien_photo_urls.py`, nâng độ phủ từ 32% lên 79.68%.
+  - **Chạy hoàn tất 100% `inaturalist-sync` cho 359 loài còn thiếu:** Bổ sung thêm **145 loài** cá biển có ảnh research-grade CC-BY từ iNaturalist, nén và tải lên **422 ảnh WebP mới** vào bucket `species-photos` (nâng tổng số ảnh hệ thống lên **5,331 ảnh**).
+  - **Kết quả tổng kết:** Tỷ lệ cá biển hiển thị ảnh đại diện đạt **87.89% (1,553 / 1,767 loài)**. 214 loài còn lại chủ yếu là cá tầng đáy sâu/hiếm gặp không có quan sát CC-licensed trên iNaturalist. Toàn hệ thống sinh vật biển đạt **2,470 / 2,830 loài có ảnh (87.28%)**.
+- [x] **Đồng bộ toàn diện FishBase v25.04 & SeaLifeBase v25.04 (99.8% FishBase coverage)**:
+  - Sửa dứt điểm lỗi chính tả & danh pháp tam thức cho 6 loài cá biển (`Parexocoetus brachypterus`, `Parexocoetus mento`, `Ostracion meleagris`, `Cá ngựa vằn`, `Cá Đường`, `Cá Ngừ mắt to`) trên Supabase.
+  - Xây dựng `sync_fishbase_ca_bien.py` với cơ chế đối chiếu 3 tầng (*Tên gốc OCR ➔ WoRMS Accepted Name ➔ Bảng đồng danh FishBase `synonyms.parquet`*): đồng bộ thành công **544 / 547 loài** cá biển còn thiếu; nâng tỷ lệ phủ FishBase toàn bộ 1,767 loài cá lên **99.83% (1,764/1,767 loài)**; bổ sung 1,482 loài có dải độ sâu và 1,176 loài có mô tả sinh học dịch tiếng Việt bằng Gemini AI.
+  - Chạy `sync_sealifebase.py` hoàn tất: Bổ sung 20 loài San hô (`san-ho`), 11 loài Bò sát biển (`bo-sat-bien` đạt 100% 33/33 loài), và 31 loài Sinh vật độc (`sinh-vat-doc`).
 - [x] **Chuẩn hóa nhãn cấp bậc "Giống" (Động vật) vs "Chi" (Thực vật) & Tinh gọn UI tab Phân loại**:
   - Chuẩn hóa hiển thị cấp Genus trong tab Phân loại (`PhanloaiTab.tsx`) và Cây phân loại (`TaxonomyTree.tsx`): tự động hiển thị **Chi** cho `thuc-vat-bien` và **Giống** cho tất cả các collection động vật (`ca-bien`, `bo-sat-bien`, `giap-xac`, `than-mem`, `san-ho`, `thu-bien`, `sinh-vat-doc`) ở cả 2 chế độ WoRMS Hiện Đại và Sách Chuyên Khảo.
   - Loại bỏ khối 2 card so sánh tĩnh ("Chuẩn Hiện Đại" và "Sách Gốc") trong `PhanloaiTab.tsx` do đã có toggle switch 2 chế độ trên cây phân loại trực quan; giúp giao diện liền mạch, tinh gọn. Build pass 100%.
