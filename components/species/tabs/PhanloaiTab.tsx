@@ -10,7 +10,8 @@ import {
   Layers,
 } from 'lucide-react'
 import WormsBadge from '../WormsBadge'
-import { formatSynonym } from '@/lib/species-parsers'
+import { formatSynonym, cleanTaxonHierarchy } from '@/lib/species-parsers'
+import { stripRankPrefix } from '@/lib/taxonomy'
 import type { Species } from '../SpecimenCard'
 
 export interface TaxCrumb {
@@ -32,13 +33,35 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
   const hasModernTax = Boolean(wt && wt.order && wt.family)
   const [taxMode, setTaxMode] = useState<'modern' | 'classic'>(hasModernTax ? 'modern' : 'classic')
 
+  // Clean WoRMS modern taxonomy ranks to avoid "Lớp Lớp...", "Bộ Bộ..."
+  const modernClass = cleanTaxonHierarchy('Lớp', wt?.classVn, wt?.class)
+  const modernOrder = cleanTaxonHierarchy('Bộ', wt?.orderVn, wt?.order)
+  const modernFamily = cleanTaxonHierarchy('Họ', wt?.familyVn, wt?.family)
+  const modernGenus = cleanTaxonHierarchy('Chi', wt?.genusVn, wt?.genus)
+
+  // Book taxonomy crumbs
+  const bookClassRaw = crumbs.find(c => c.rankKey === 'class')
+  const bookOrderRaw = crumbs.find(c => c.rankKey === 'order')
+  const bookFamilyRaw = crumbs.find(c => c.rankKey === 'family')
+  const bookGenusRaw = crumbs.find(c => c.rankKey === 'genus')
+
+  const bookClass = cleanTaxonHierarchy('Lớp', bookClassRaw?.vn || sp.tax_class_vn, bookClassRaw?.lat || sp.tax_class_latin)
+  const bookOrder = cleanTaxonHierarchy('Bộ', bookOrderRaw?.vn || sp.tax_order_vn, bookOrderRaw?.lat || sp.tax_order_latin)
+  const bookFamily = cleanTaxonHierarchy('Họ', bookFamilyRaw?.vn || sp.tax_family_vn, bookFamilyRaw?.lat || sp.tax_family_latin)
+  const bookGenus = cleanTaxonHierarchy(sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống', bookGenusRaw?.vn || sp.tax_genus_vn, bookGenusRaw?.lat || sp.tax_genus_latin)
+
   // Build active stepped crumbs according to taxMode
   const activeCrumbs: TaxCrumb[] = (taxMode === 'modern' && wt) ? [
-    { rank: 'Lớp', rankKey: 'class', vn: wt.classVn || wt.class || 'Lớp', lat: wt.class || null },
-    { rank: 'Bộ', rankKey: 'order', vn: wt.orderVn || wt.order || 'Bộ', lat: wt.order || null },
-    { rank: 'Họ', rankKey: 'family', vn: wt.familyVn || wt.family || 'Họ', lat: wt.family || null },
-    { rank: 'Chi', rankKey: 'genus', vn: wt.genusVn || wt.genus || 'Chi', lat: wt.genus || null },
-  ] : crumbs
+    { rank: 'Lớp', rankKey: 'class' as const, vn: modernClass.vn, lat: modernClass.lat },
+    { rank: 'Bộ', rankKey: 'order' as const, vn: modernOrder.vn, lat: modernOrder.lat },
+    { rank: 'Họ', rankKey: 'family' as const, vn: modernFamily.vn, lat: modernFamily.lat },
+    { rank: 'Chi', rankKey: 'genus' as const, vn: modernGenus.vn, lat: modernGenus.lat },
+  ] : [
+    { rank: 'Lớp', rankKey: 'class' as const, vn: bookClass.vn, lat: bookClass.lat },
+    { rank: 'Bộ', rankKey: 'order' as const, vn: bookOrder.vn, lat: bookOrder.lat },
+    { rank: 'Họ', rankKey: 'family' as const, vn: bookFamily.vn, lat: bookFamily.lat },
+    { rank: sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống', rankKey: 'genus' as const, vn: bookGenus.vn, lat: bookGenus.lat },
+  ].filter(c => c.vn || c.lat)
 
   return (
     <div
@@ -124,12 +147,13 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
                   className="tax-tree-vn"
                   style={{
                     fontSize: '0.95rem',
-                    fontWeight: 600
+                    fontWeight: 600,
+                    fontStyle: c.lat && c.lat.toLowerCase() === c.vn.toLowerCase() ? 'italic' : 'normal'
                   }}
                 >
                   {c.vn}
                 </span>
-                {c.lat && (
+                {c.lat && c.lat.toLowerCase() !== c.vn.toLowerCase() && (
                   <em
                     className="tax-tree-lat"
                     style={{
@@ -168,7 +192,7 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
                   fontWeight: 600
                 }}
               >
-                {sp.vn_name}
+                {stripRankPrefix(sp.vn_name)}
               </span>
               <em
                 className="tax-tree-lat tax-tree-lat--current"
@@ -202,19 +226,41 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
                 </div>
                 <div className="dual-tax-row">
                   <span className="dual-tax-label">Lớp:</span>
-                  <span className="dual-tax-val">{wt.classVn || wt.class} <em>({wt.class})</em></span>
+                  <span className="dual-tax-val">
+                    {modernClass.vn}
+                    {modernClass.lat && modernClass.lat.toLowerCase() !== modernClass.vn.toLowerCase() && (
+                      <em> ({modernClass.lat})</em>
+                    )}
+                  </span>
                 </div>
                 <div className="dual-tax-row">
                   <span className="dual-tax-label">Bộ:</span>
-                  <span className="dual-tax-val">{wt.orderVn || wt.order} <em>({wt.order})</em></span>
+                  <span className="dual-tax-val">
+                    {modernOrder.vn}
+                    {modernOrder.lat && modernOrder.lat.toLowerCase() !== modernOrder.vn.toLowerCase() && (
+                      <em> ({modernOrder.lat})</em>
+                    )}
+                  </span>
                 </div>
                 <div className="dual-tax-row">
                   <span className="dual-tax-label">Họ:</span>
-                  <span className="dual-tax-val">{wt.familyVn || wt.family} <em>({wt.family})</em></span>
+                  <span className="dual-tax-val">
+                    {modernFamily.vn}
+                    {modernFamily.lat && modernFamily.lat.toLowerCase() !== modernFamily.vn.toLowerCase() && (
+                      <em> ({modernFamily.lat})</em>
+                    )}
+                  </span>
                 </div>
                 <div className="dual-tax-row">
                   <span className="dual-tax-label">Chi:</span>
-                  <span className="dual-tax-val">{wt.genusVn || wt.genus} <em>({wt.genus})</em></span>
+                  <span className="dual-tax-val">
+                    <span style={{ fontStyle: modernGenus.lat && modernGenus.lat.toLowerCase() === modernGenus.vn.toLowerCase() ? 'italic' : 'normal' }}>
+                      {modernGenus.vn}
+                    </span>
+                    {modernGenus.lat && modernGenus.lat.toLowerCase() !== modernGenus.vn.toLowerCase() && (
+                      <em> ({modernGenus.lat})</em>
+                    )}
+                  </span>
                 </div>
               </div>
 
@@ -224,19 +270,41 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
                 </div>
                 <div className="dual-tax-row">
                   <span className="dual-tax-label">Lớp:</span>
-                  <span className="dual-tax-val">{sp.tax_class_vn || sp.tax_class_latin} <em>({sp.tax_class_latin})</em></span>
+                  <span className="dual-tax-val">
+                    {bookClass.vn || bookClass.lat || '—'}
+                    {bookClass.lat && bookClass.lat.toLowerCase() !== (bookClass.vn || '').toLowerCase() && (
+                      <em> ({bookClass.lat})</em>
+                    )}
+                  </span>
                 </div>
                 <div className="dual-tax-row">
                   <span className="dual-tax-label">Bộ:</span>
-                  <span className="dual-tax-val">{sp.tax_order_vn || sp.tax_order_latin} <em>({sp.tax_order_latin})</em></span>
+                  <span className="dual-tax-val">
+                    {bookOrder.vn || bookOrder.lat || '—'}
+                    {bookOrder.lat && bookOrder.lat.toLowerCase() !== (bookOrder.vn || '').toLowerCase() && (
+                      <em> ({bookOrder.lat})</em>
+                    )}
+                  </span>
                 </div>
                 <div className="dual-tax-row">
                   <span className="dual-tax-label">Họ:</span>
-                  <span className="dual-tax-val">{sp.tax_family_vn || sp.tax_family_latin} <em>({sp.tax_family_latin})</em></span>
+                  <span className="dual-tax-val">
+                    {bookFamily.vn || bookFamily.lat || '—'}
+                    {bookFamily.lat && bookFamily.lat.toLowerCase() !== (bookFamily.vn || '').toLowerCase() && (
+                      <em> ({bookFamily.lat})</em>
+                    )}
+                  </span>
                 </div>
                 <div className="dual-tax-row">
-                  <span className="dual-tax-label">Giống:</span>
-                  <span className="dual-tax-val">{sp.tax_genus_vn || sp.tax_genus_latin} <em>({sp.tax_genus_latin})</em></span>
+                  <span className="dual-tax-label">{sp.collection_id === 'thuc-vat-bien' ? 'Chi:' : 'Giống:'}</span>
+                  <span className="dual-tax-val">
+                    <span style={{ fontStyle: bookGenus.lat && bookGenus.lat.toLowerCase() === (bookGenus.vn || '').toLowerCase() ? 'italic' : 'normal' }}>
+                      {bookGenus.vn || bookGenus.lat || '—'}
+                    </span>
+                    {bookGenus.lat && bookGenus.lat.toLowerCase() !== (bookGenus.vn || '').toLowerCase() && (
+                      <em> ({bookGenus.lat})</em>
+                    )}
+                  </span>
                 </div>
               </div>
             </div>

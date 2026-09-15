@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-14 (Chuẩn hóa 100% Cây phân loại 1,767 loài Cá biển & Khôi phục 341/341 loài Tập IV | Commit: `c1929dc`) | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-15 (Fix lặp rank prefix taxonomy & Hoàn thiện Dual Taxonomy Architecture | Production live) | **Production:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 ---

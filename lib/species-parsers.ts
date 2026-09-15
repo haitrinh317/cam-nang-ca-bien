@@ -128,18 +128,18 @@ export function cleanTaxonHierarchy(rank: string, vnRaw?: string | null, latRaw?
   let vn = (vnRaw || '').trim()
   let lat = (latRaw || '').trim()
 
-  // 1. Bỏ tiền tố rank: Lớp, Bộ, Họ, Giống, Chi
-  vn = vn.replace(new RegExp(`^(Lớp|Bộ|Họ|Giống|Chi)\\s*`, 'i'), '')
-  // Bỏ số thứ tự (ví dụ "11: ", "12. ")
+  // 1. Bỏ số thứ tự và tiền tố rank (ví dụ "Giống 11: ", "11. Giống ", "Lớp ", "Bộ ")
+  vn = vn.replace(/^(\d+[\s:\.\-]+)?(Lớp|Bộ|Họ|Giống|Chi|Phân lớp|Phân bộ|Phân họ)[\s:\.\-]+(\d+[\s:\.\-]+)?/i, '')
+  vn = vn.replace(/^(Lớp|Bộ|Họ|Giống|Chi|Phân lớp|Phân bộ|Phân họ)\s+/i, '')
   vn = vn.replace(/^\d+[\s:\.\-]+/, '')
 
   // 2. Làm sạch Latin: bỏ tiền tố "Family ", "Order ", "Class "
-  lat = lat.replace(/^(Class|Order|Family|Genus)\s+/i, '')
+  lat = lat.replace(/^(Class|Order|Family|Genus|Subclass|Suborder|Subfamily)\s+/i, '')
 
-  // 3. Chuẩn hóa Latin cho Chi/Giống: nếu quá dài hoặc chứa trích dẫn sách, chỉ lấy danh pháp chi chính
+  // 3. Chuẩn hóa Latin cho Chi/Giống: nếu quá dài hoặc chứa trích dẫn tác giả/năm, chỉ lấy danh pháp chi chính
   if (rank === 'Giống' || rank === 'Chi') {
     const genusWord = lat.split(/\s+/)[0]
-    if (lat.length > 35 || lat.includes('Ann.') || lat.includes('Vol.') || lat.includes('pp.') || lat.includes('Type:')) {
+    if (lat.length > 20 || lat.includes(',') || /\b\d{4}\b/.test(lat) || lat.includes('Ann.') || lat.includes('Vol.') || lat.includes('pp.') || lat.includes('Type:')) {
       lat = genusWord
     }
   }

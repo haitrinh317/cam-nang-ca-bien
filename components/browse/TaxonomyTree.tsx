@@ -10,7 +10,8 @@ import {
   TaxonomyMode,
   sortTaxonomyRows,
   buildTaxonomyTree,
-  getTaxonomyStats
+  getTaxonomyStats,
+  stripRankPrefix
 } from '@/lib/taxonomy'
 
 interface Props {
@@ -106,8 +107,12 @@ export default function TaxonomyTree({ collection, initialSpecies }: Props) {
     setShowTree(false)
   }
 
-  const label = (latin: string, vn: string) =>
-    latin && latin !== 'Unknown' ? `${vn} (${latin})` : vn
+  const label = (latin: string, vn: string) => {
+    const clean = stripRankPrefix(vn)
+    if (!latin || latin === 'Unknown') return clean
+    if (clean && latin.toLowerCase() === clean.toLowerCase()) return clean
+    return clean ? `${clean} (${latin})` : latin
+  }
 
   return (
     <>

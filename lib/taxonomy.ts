@@ -48,6 +48,14 @@ export type OrderNode  = { vn: string; families: Record<string, FamilyNode> }
 export type ClassNode  = { vn: string; orders: Record<string, OrderNode> }
 export type TaxonomyTree = Record<string, ClassNode>
 
+/** Loại bỏ các tiền tố cấp bậc (Lớp, Bộ, Họ, Chi, Giống...) để tránh lặp từ trên UI */
+export function stripRankPrefix(name?: string | null): string {
+  if (!name) return ''
+  return name
+    .replace(/^(Lớp|Bộ|Họ|Chi|Giống|Phân lớp|Phân bộ|Phân họ)\s+/i, '')
+    .trim()
+}
+
 /** Helper: Extract taxonomic ranks according to selected mode */
 export function getSpeciesTaxonomy(sp: SpeciesRow, mode: TaxonomyMode = 'modern') {
   const wt = sp.biology?.wormsTaxonomy

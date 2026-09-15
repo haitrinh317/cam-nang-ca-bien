@@ -1,12 +1,16 @@
 # TODO — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-09-14
+> Cập nhật: 2026-09-15
 > **Supabase (SSOT):** 2,828 loài (8 collection) | **Production Live:** https://www.tracuusinhvatbien.app
 > **Lịch sử hoàn thành đầy đủ:** xem `todo-archive.md`
 
 ---
 
-## ✅ Hoàn thành gần nhất (2026-09-14)
+## ✅ Hoàn thành gần nhất (2026-09-15)
+
+- [x] **Commit & Deploy Vercel Production fix lặp rank prefix** (`fix(taxonomy): strip duplicated rank prefixes`): Sửa triệt để lỗi hiển thị lặp từ cấp bậc (`Lớp - Lớp`, `Bộ - Bộ`, `Họ - Họ`...) trên cả cây phân loại bậc thang lẫn card đối chiếu song song WoRMS / Sách gốc; hệ thống live tại `https://cam-nang-ca-bien.vercel.app` & `https://www.tracuusinhvatbien.app`.
+
+## ✅ Hoàn thành (2026-09-14)
 
 - [x] **Thu thập & tải 31 bài báo/sách chuyên khảo Động vật phù du** (TS. Trương Sĩ Hải Trình & CN. Nguyễn Cho) toàn văn PDF vào `Documents/dong-vat-phu-du/` (~55.6 MB).
 - [x] **Sửa lỗi trắng Tab "Phân loại" trên trang chi tiết loài**: Chuyển trạng thái bento card sang `opacity: 1`, gỡ bỏ `useScrollReveal` trên dynamic tab panels (tuân thủ quy tắc AGENTS.md: chỉ dùng scroll reveal cho static DOM).
@@ -14,7 +18,8 @@
 - [x] **Rà soát & chuẩn hóa toàn diện Cây phân loại Cá biển (1,767 loài)**: Bóc tách 31 trang Mục lục sách gốc Tập 3, phục hồi 508 loài Tập 3 bị khuyết trắng taxonomy; chuẩn hóa 100% prefix `"Họ "` và `"Bộ "`; xóa sạch chữ Latin rò rỉ; triệt tiêu hoàn toàn mục "Unknown" (0 loài thiếu Lớp/Bộ/Họ/Giống).
 - [x] **Nâng cấp phân trang fetch Supabase 3,000 loài** cho trang Cây phân loại (`/[collection]/taxonomy` & `TaxonomyTree.tsx`), loại bỏ giới hạn trần PostgREST 1000/2000 dòng.
 - [x] **Thiết kế & Triển khai Kiến trúc Cây Phân Loại Kép (Dual Taxonomy Architecture)**: Đồng bộ 100% WoRMS Taxonomy (56 bộ phân tử hiện đại) cho 1,767 loài cá biển; tích hợp bộ chuyển đổi Toggle Switch tức thì giữa **🧬 WoRMS Hiện Đại (2026)** và **🏛️ Sách Gốc (Viện Hải dương học)** trên cây phân loại và bảng đối chiếu song song trên trang chi tiết loài.
-- [x] **Commit & Deploy Vercel Production**: Commit `c1929dc`, hệ thống live ổn định tại `https://www.tracuusinhvatbien.app`.
+- [x] **Sửa lỗi lặp tiền tố cấp bậc taxonomy** (`Lớp - Lớp`, `Bộ - Bộ`, `Họ - Họ`...): Nâng cấp `cleanTaxonHierarchy` + `stripRankPrefix`, cập nhật `PhanloaiTab.tsx` (stepped tree + comparison card) và `TaxonomyTree.tsx`. Build pass 100%.
+- [x] **Kiểm tra phân loại Cá Mó (Scaridae → Labridae)**: Xác nhận 31 loài cá mó trong dự án đều đã đúng `family = "Labridae"` theo WoRMS 2026 / Near et al. 2025. Sách gốc vẫn giữ `Scaridae` đúng học thuật.
 
 ## ✅ Hoàn thành (2026-09-13 — phiên đêm)
 
@@ -30,7 +35,7 @@
 
 ## 🔲 Đang chờ / WIP
 
-### Ưu tiên cao
+### Ưu tiên cao 🔥
 - [ ] Mở rộng collection `than-mem` Phase 2 cho các họ tiếp theo từ Hylleberg 2003
 - [ ] Chuẩn bị Hợp nhất Phase 3 cho Thân mềm độc (11 loài ốc cối, bạch tuộc)
 
