@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-15 (Đột phá phủ ảnh minh họa cá biển 87.9% [1,553 loài] & FishBase 99.8% | Production live) | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-15 (Deploy Production `97c495c`: Sửa CSS ô tìm kiếm & chuẩn hóa 100% Lucide SVG Hallmark | Giáp xác 100% song ngữ specs & Bù trang 102 san hô) | **Production:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 ---
