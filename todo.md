@@ -8,6 +8,9 @@
 
 ## ✅ Hoàn thành gần nhất (2026-09-15)
 
+- [x] **Chuẩn hóa nhãn cấp bậc "Giống" (Động vật) vs "Chi" (Thực vật) & Tinh gọn UI tab Phân loại**:
+  - Chuẩn hóa hiển thị cấp Genus trong tab Phân loại (`PhanloaiTab.tsx`) và Cây phân loại (`TaxonomyTree.tsx`): tự động hiển thị **Chi** cho `thuc-vat-bien` và **Giống** cho tất cả các collection động vật (`ca-bien`, `bo-sat-bien`, `giap-xac`, `than-mem`, `san-ho`, `thu-bien`, `sinh-vat-doc`) ở cả 2 chế độ WoRMS Hiện Đại và Sách Chuyên Khảo.
+  - Loại bỏ khối 2 card so sánh tĩnh ("Chuẩn Hiện Đại" và "Sách Gốc") trong `PhanloaiTab.tsx` do đã có toggle switch 2 chế độ trên cây phân loại trực quan; giúp giao diện liền mạch, tinh gọn. Build pass 100%.
 - [x] **Commit & Deploy Vercel Production fix lặp rank prefix** (`fix(taxonomy): strip duplicated rank prefixes`): Sửa triệt để lỗi hiển thị lặp từ cấp bậc (`Lớp - Lớp`, `Bộ - Bộ`, `Họ - Họ`...) trên cả cây phân loại bậc thang lẫn card đối chiếu song song WoRMS / Sách gốc; hệ thống live tại `https://cam-nang-ca-bien.vercel.app` & `https://www.tracuusinhvatbien.app`.
 
 ## ✅ Hoàn thành (2026-09-14)

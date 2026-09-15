@@ -219,7 +219,7 @@ export default function TaxonomyTree({ collection, initialSpecies }: Props) {
                 {Object.entries(orData.families).map(([faLatin, faData]) => (
                   <TreeNode key={faLatin} title={label(faLatin, faData.vn)} rankClass="rank-family" rankName="Họ">
                     {Object.entries(faData.genera).map(([geLatin, geData]) => (
-                      <TreeNode key={geLatin} title={label(geLatin, geData.vn)} rankClass="rank-genus" rankName="Giống">
+                      <TreeNode key={geLatin} title={label(geLatin, geData.vn)} rankClass="rank-genus" rankName={collection === 'thuc-vat-bien' ? 'Chi' : 'Giống'}>
                         {geData.species.map(sp => (
                           <Link
                             key={sp.id}

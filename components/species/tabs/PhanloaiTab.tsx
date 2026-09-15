@@ -7,7 +7,6 @@ import {
   BookOpen,
   CornerDownRight,
   Dna,
-  Layers,
 } from 'lucide-react'
 import WormsBadge from '../WormsBadge'
 import { formatSynonym, cleanTaxonHierarchy } from '@/lib/species-parsers'
@@ -33,11 +32,14 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
   const hasModernTax = Boolean(wt && wt.order && wt.family)
   const [taxMode, setTaxMode] = useState<'modern' | 'classic'>(hasModernTax ? 'modern' : 'classic')
 
+  const isPlant = sp.collection_id === 'thuc-vat-bien'
+  const genusRankLabel = isPlant ? 'Chi' : 'Giống'
+
   // Clean WoRMS modern taxonomy ranks to avoid "Lớp Lớp...", "Bộ Bộ..."
   const modernClass = cleanTaxonHierarchy('Lớp', wt?.classVn, wt?.class)
   const modernOrder = cleanTaxonHierarchy('Bộ', wt?.orderVn, wt?.order)
   const modernFamily = cleanTaxonHierarchy('Họ', wt?.familyVn, wt?.family)
-  const modernGenus = cleanTaxonHierarchy('Chi', wt?.genusVn, wt?.genus)
+  const modernGenus = cleanTaxonHierarchy(genusRankLabel, wt?.genusVn, wt?.genus)
 
   // Book taxonomy crumbs
   const bookClassRaw = crumbs.find(c => c.rankKey === 'class')
@@ -48,19 +50,19 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
   const bookClass = cleanTaxonHierarchy('Lớp', bookClassRaw?.vn || sp.tax_class_vn, bookClassRaw?.lat || sp.tax_class_latin)
   const bookOrder = cleanTaxonHierarchy('Bộ', bookOrderRaw?.vn || sp.tax_order_vn, bookOrderRaw?.lat || sp.tax_order_latin)
   const bookFamily = cleanTaxonHierarchy('Họ', bookFamilyRaw?.vn || sp.tax_family_vn, bookFamilyRaw?.lat || sp.tax_family_latin)
-  const bookGenus = cleanTaxonHierarchy(sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống', bookGenusRaw?.vn || sp.tax_genus_vn, bookGenusRaw?.lat || sp.tax_genus_latin)
+  const bookGenus = cleanTaxonHierarchy(genusRankLabel, bookGenusRaw?.vn || sp.tax_genus_vn, bookGenusRaw?.lat || sp.tax_genus_latin)
 
   // Build active stepped crumbs according to taxMode
   const activeCrumbs: TaxCrumb[] = (taxMode === 'modern' && wt) ? [
     { rank: 'Lớp', rankKey: 'class' as const, vn: modernClass.vn, lat: modernClass.lat },
     { rank: 'Bộ', rankKey: 'order' as const, vn: modernOrder.vn, lat: modernOrder.lat },
     { rank: 'Họ', rankKey: 'family' as const, vn: modernFamily.vn, lat: modernFamily.lat },
-    { rank: 'Chi', rankKey: 'genus' as const, vn: modernGenus.vn, lat: modernGenus.lat },
+    { rank: genusRankLabel, rankKey: 'genus' as const, vn: modernGenus.vn, lat: modernGenus.lat },
   ] : [
     { rank: 'Lớp', rankKey: 'class' as const, vn: bookClass.vn, lat: bookClass.lat },
     { rank: 'Bộ', rankKey: 'order' as const, vn: bookOrder.vn, lat: bookOrder.lat },
     { rank: 'Họ', rankKey: 'family' as const, vn: bookFamily.vn, lat: bookFamily.lat },
-    { rank: sp.collection_id === 'thuc-vat-bien' ? 'Chi' : 'Giống', rankKey: 'genus' as const, vn: bookGenus.vn, lat: bookGenus.lat },
+    { rank: genusRankLabel, rankKey: 'genus' as const, vn: bookGenus.vn, lat: bookGenus.lat },
   ].filter(c => c.vn || c.lat)
 
   return (
@@ -216,99 +218,6 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
               )}
             </div>
           </div>
-
-          {/* Bảng Đối Chiếu Cây Phân Loại Kép (Dual Taxonomy Comparison Table) */}
-          {hasModernTax && wt && (
-            <div className="dual-tax-comparison-grid">
-              <div className="dual-tax-card dual-tax-card--modern">
-                <div className="dual-tax-card__title">
-                  <Dna size={14} /> Chuẩn Hiện Đại (WoRMS 2026)
-                </div>
-                <div className="dual-tax-row">
-                  <span className="dual-tax-label">Lớp:</span>
-                  <span className="dual-tax-val">
-                    {modernClass.vn}
-                    {modernClass.lat && modernClass.lat.toLowerCase() !== modernClass.vn.toLowerCase() && (
-                      <em> ({modernClass.lat})</em>
-                    )}
-                  </span>
-                </div>
-                <div className="dual-tax-row">
-                  <span className="dual-tax-label">Bộ:</span>
-                  <span className="dual-tax-val">
-                    {modernOrder.vn}
-                    {modernOrder.lat && modernOrder.lat.toLowerCase() !== modernOrder.vn.toLowerCase() && (
-                      <em> ({modernOrder.lat})</em>
-                    )}
-                  </span>
-                </div>
-                <div className="dual-tax-row">
-                  <span className="dual-tax-label">Họ:</span>
-                  <span className="dual-tax-val">
-                    {modernFamily.vn}
-                    {modernFamily.lat && modernFamily.lat.toLowerCase() !== modernFamily.vn.toLowerCase() && (
-                      <em> ({modernFamily.lat})</em>
-                    )}
-                  </span>
-                </div>
-                <div className="dual-tax-row">
-                  <span className="dual-tax-label">Chi:</span>
-                  <span className="dual-tax-val">
-                    <span style={{ fontStyle: modernGenus.lat && modernGenus.lat.toLowerCase() === modernGenus.vn.toLowerCase() ? 'italic' : 'normal' }}>
-                      {modernGenus.vn}
-                    </span>
-                    {modernGenus.lat && modernGenus.lat.toLowerCase() !== modernGenus.vn.toLowerCase() && (
-                      <em> ({modernGenus.lat})</em>
-                    )}
-                  </span>
-                </div>
-              </div>
-
-              <div className="dual-tax-card dual-tax-card--classic">
-                <div className="dual-tax-card__title">
-                  <BookOpen size={14} /> Sách Gốc (Viện Hải dương học)
-                </div>
-                <div className="dual-tax-row">
-                  <span className="dual-tax-label">Lớp:</span>
-                  <span className="dual-tax-val">
-                    {bookClass.vn || bookClass.lat || '—'}
-                    {bookClass.lat && bookClass.lat.toLowerCase() !== (bookClass.vn || '').toLowerCase() && (
-                      <em> ({bookClass.lat})</em>
-                    )}
-                  </span>
-                </div>
-                <div className="dual-tax-row">
-                  <span className="dual-tax-label">Bộ:</span>
-                  <span className="dual-tax-val">
-                    {bookOrder.vn || bookOrder.lat || '—'}
-                    {bookOrder.lat && bookOrder.lat.toLowerCase() !== (bookOrder.vn || '').toLowerCase() && (
-                      <em> ({bookOrder.lat})</em>
-                    )}
-                  </span>
-                </div>
-                <div className="dual-tax-row">
-                  <span className="dual-tax-label">Họ:</span>
-                  <span className="dual-tax-val">
-                    {bookFamily.vn || bookFamily.lat || '—'}
-                    {bookFamily.lat && bookFamily.lat.toLowerCase() !== (bookFamily.vn || '').toLowerCase() && (
-                      <em> ({bookFamily.lat})</em>
-                    )}
-                  </span>
-                </div>
-                <div className="dual-tax-row">
-                  <span className="dual-tax-label">{sp.collection_id === 'thuc-vat-bien' ? 'Chi:' : 'Giống:'}</span>
-                  <span className="dual-tax-val">
-                    <span style={{ fontStyle: bookGenus.lat && bookGenus.lat.toLowerCase() === (bookGenus.vn || '').toLowerCase() ? 'italic' : 'normal' }}>
-                      {bookGenus.vn || bookGenus.lat || '—'}
-                    </span>
-                    {bookGenus.lat && bookGenus.lat.toLowerCase() !== (bookGenus.vn || '').toLowerCase() && (
-                      <em> ({bookGenus.lat})</em>
-                    )}
-                  </span>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* 2. Thẩm Định Danh Pháp Quốc Tế (WoRMS Curatorial Dossier) */}
