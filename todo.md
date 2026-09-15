@@ -8,6 +8,15 @@
 
 ## ✅ Hoàn thành gần nhất (2026-09-15)
 
+- [x] **Khắc phục dứt điểm lỗi vỡ CSS ô tìm kiếm trên toàn hệ thống (`GlobalSearch.tsx` & `GlobalSearch.css`)**:
+  - Tách CSS tìm kiếm thành stylesheet độc lập tự chứa `components/search/GlobalSearch.css`, loại bỏ phụ thuộc vào `hero.css` của Trang chủ.
+  - Sửa lỗi vỡ giao diện dropdown khi tìm kiếm trên tất cả các trang danh mục (`/giap-xac`, `/ca-bien`, `/thuc-vat-bien`...): định dạng flexbox cho hàng kết quả, khoảng cách padding chuẩn, gạch phân cách và hiệu ứng hover mượt mà.
+  - Thiết kế bảng huy hiệu phân loại (badge pills) sắc nét cho từng nhóm sinh vật (Giáp xác, Thực vật biển, San hô, Thân mềm, Da gai, Bò sát, Độc biển, Cá biển) và hỗ trợ hoàn hảo chế độ tối Dark Mode.
+- [x] **Audit & Nâng Cấp Toàn Diện Nhóm Giáp Xác Biển (136 loài: 132 `giap-xac` + 4 `sinh-vat-doc`)**:
+  - **Audit 7 bước chuẩn `ocr-to-audit.md`:** Khảo sát và đánh giá toàn diện cấu trúc OCR, WoRMS (100% có AphiaID), SeaLifeBase (99.3% có biology), iNaturalist và Sách Đỏ VAST 2024 (6 loài Tôm hùm đạt 100% Golden Standard).
+  - **Chuẩn hóa danh pháp WoRMS:** Bổ sung `worms_accepted_name` cho 5 loài Tôm tít đồng danh (`Lysiosquilla maculata`, `Bigelowina phalangium`, `Carinosquilla lirata`, `Miyakella nepa`, `Quollastria gonypetes`), đạt 100% độ phủ danh pháp hiện hành.
+  - **Dịch thuật song ngữ 100%:** Dùng Gemini AI Carcinology dịch và cập nhật 132/132 loài có `en_size` và `en_distribution` học thuật trên Supabase (nâng tỷ lệ song ngữ từ 2.9% lên 100.0%).
+  - **Bổ sung ảnh iNaturalist bằng WoRMS Fallback:** Thu thập và tải lên 25 ảnh WebP chất lượng cao CC-BY vào bucket `species-photos`, bổ sung 9 loài có ảnh mới, nâng tổng số ảnh giáp xác lên 178 ảnh và tỷ lệ loài Complete lên 48.5% (66/136 loài).
 - [x] **Đột phá Phủ Ảnh Minh Họa Cá Biển Hoàn Tất (1,553 / 1,767 loài — 87.9%)**:
   - **Backfill giải cứu 841 loài cá biển:** Phát hiện & giải cứu 841 loài đã có ảnh chất lượng cao trên Supabase Storage nhưng bị bỏ trống cột `photo_url` trên bảng `species`. Chạy thành công `backfill_cabien_photo_urls.py`, nâng độ phủ từ 32% lên 79.68%.
   - **Chạy hoàn tất 100% `inaturalist-sync` cho 359 loài còn thiếu:** Bổ sung thêm **145 loài** cá biển có ảnh research-grade CC-BY từ iNaturalist, nén và tải lên **422 ảnh WebP mới** vào bucket `species-photos` (nâng tổng số ảnh hệ thống lên **5,331 ảnh**).
@@ -50,8 +59,8 @@
 - [ ] Mở rộng collection `than-mem` Phase 2 cho các họ tiếp theo từ Hylleberg 2003
 - [ ] Chuẩn bị Hợp nhất Phase 3 cho Thân mềm độc (11 loài ốc cối, bạch tuộc)
 
-### Ưu tiên trung bình
-- [ ] Bổ sung scan trang 102 chuyên khảo San hô (loài 30 & đuôi loài 29)
+- [x] **Hoàn tất xử lý khuyết trang 102 Chuyên khảo San hô (`san-ho`)**: Bóc tách trang 102 từ `IMG_1300.HEIC`, cập nhật hoàn chỉnh loài 29 (*Sclerophytum minimum*) và loài 30 (*Sclerophytum notandum*) lên Supabase, đạt 100% WoRMS và 100% chuyên khảo cho toàn bộ 42 loài san hô.
+- [ ] **Triển khai bóc tách 100+ loài Thân mềm Hai mảnh vỏ (Bivalvia) kinh tế biển Việt Nam** (PGS.TS. Đỗ Công Thung 2015, 206 trang scan Chương 3).
 - [ ] Admin Phase 2: CSV Import + Inline Edit nhanh
 
 ### Ưu tiên thấp

@@ -1,0 +1,406 @@
+/* Hallmark · component: GlobalSearch · genre: editorial-scholarly
+ * pre-emit critique: P5 H5 E5 S5 R5 V5 · tokens: locked
+ * anti-slop: 100% Lucide SVG icons (no emojis, no raw svg, no glyphs)
+ */
+
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL SEARCH COMPONENT (Studio-Grade / Hallmark)
+   ═══════════════════════════════════════════════════════════════ */
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* ─── Search Input Container ─── */
+.search-input-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm, 0.75rem);
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-navy-raw);
+  border-radius: var(--radius-pill, 9999px);
+  padding: var(--space-xs, 0.5rem) var(--space-xl, 1.25rem);
+  box-shadow: 0 4px 16px rgba(11, 19, 41, 0.08);
+  transition: border-color var(--dur-fast) var(--ease-out),
+              box-shadow var(--dur-fast) var(--ease-out),
+              background var(--dur-fast) var(--ease-out);
+  min-height: 48px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.search-input-container:focus-within {
+  background: var(--color-paper-2);
+  border-color: var(--color-cyan-raw);
+  box-shadow: 0 0 0 3.5px rgba(0, 212, 184, 0.22), 0 8px 24px rgba(11, 19, 41, 0.12);
+}
+
+.search-input-icon {
+  color: var(--color-ink-3);
+  flex-shrink: 0;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.search-input-container:focus-within .search-input-icon {
+  color: var(--color-cyan-raw);
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: var(--text-base, 16px);
+  font-weight: 500;
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.35;
+  padding: var(--space-3xs, 0.25rem) 0;
+}
+
+.search-input::placeholder {
+  color: var(--color-placeholder);
+  opacity: 0.85;
+  font-size: var(--text-sm, 0.88rem);
+  font-weight: 400;
+}
+
+.search-clear-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink-3);
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill, 9999px);
+  line-height: 1;
+  flex-shrink: 0;
+  transition: background var(--dur-fast) var(--ease-out),
+              color var(--dur-fast) var(--ease-out);
+}
+
+.search-clear-btn:hover {
+  background: var(--color-rule);
+  color: var(--color-ink);
+}
+
+/* ─── Search Results Dropdown ─── */
+.search-results {
+  position: absolute;
+  top: calc(100% + var(--space-xs, 8px));
+  left: 0;
+  right: 0;
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-navy-raw);
+  border-radius: var(--radius-lg, 14px);
+  box-shadow: 0 20px 48px rgba(11, 19, 41, 0.22), 0 8px 18px rgba(11, 19, 41, 0.10);
+  z-index: 99999 !important;
+  max-height: 420px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: searchDropdownFadeIn var(--dur-fast) var(--ease-out);
+}
+
+@keyframes searchDropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-results::-webkit-scrollbar {
+  width: 5px;
+}
+
+.search-results::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background: var(--color-rule);
+  border-radius: var(--radius-pill, 9999px);
+}
+
+/* ─── Result Item Row ─── */
+.result-item {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: var(--space-md, 0.85rem) var(--space-xl, 1.25rem) !important;
+  border-bottom: 1px solid var(--color-rule-2) !important;
+  cursor: pointer;
+  color: var(--color-ink) !important;
+  text-decoration: none !important;
+  gap: var(--space-md, 0.85rem) !important;
+  transition: background var(--dur-fast) var(--ease-out);
+  box-sizing: border-box;
+}
+
+.result-item:last-child {
+  border-bottom: none !important;
+}
+
+.result-item:hover,
+.result-item:focus-visible {
+  background: var(--color-paper) !important;
+  outline: none;
+}
+
+.result-item .ri-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs, 0.2rem);
+  min-width: 0;
+  flex: 1;
+}
+
+.result-item .ri-name {
+  font-weight: 600;
+  font-size: var(--text-sm, 0.92rem);
+  color: var(--color-navy-raw);
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.result-item .ri-sci {
+  color: var(--color-ink-3);
+  font-size: var(--text-xs, 0.82rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ─── Collection / Volume Badges (Pills — Pure Text, No Emojis) ─── */
+.vol-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: var(--space-3xs, 0.25rem) var(--space-sm, 0.65rem) !important;
+  border-radius: var(--radius-sm, 6px) !important;
+  font-family: var(--font-outlier, monospace) !important;
+  font-size: var(--text-xs, 0.74rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  line-height: 1.2 !important;
+  transition: all var(--dur-fast) var(--ease-out);
+  background: var(--color-navy-raw);
+  color: var(--color-cyan-raw);
+  border: 1px solid transparent;
+}
+
+/* Specific Collection Text Badges */
+.vol-badge.v-plant {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #047857 !important;
+  border: 1px solid rgba(16, 185, 129, 0.28) !important;
+}
+
+.vol-badge.v-crustacean {
+  background: rgba(245, 158, 11, 0.14) !important;
+  color: #b45309 !important;
+  border: 1px solid rgba(245, 158, 11, 0.32) !important;
+}
+
+.vol-badge.v-coral {
+  background: rgba(244, 63, 94, 0.12) !important;
+  color: #be123c !important;
+  border: 1px solid rgba(244, 63, 94, 0.28) !important;
+}
+
+.vol-badge.v-mollusk {
+  background: rgba(139, 92, 246, 0.12) !important;
+  color: #6d28d9 !important;
+  border: 1px solid rgba(139, 92, 246, 0.28) !important;
+}
+
+.vol-badge.v-echinoderm {
+  background: rgba(99, 102, 241, 0.12) !important;
+  color: #4338ca !important;
+  border: 1px solid rgba(99, 102, 241, 0.28) !important;
+}
+
+.vol-badge.v-reptile {
+  background: rgba(13, 148, 136, 0.12) !important;
+  color: #0f766e !important;
+  border: 1px solid rgba(13, 148, 136, 0.28) !important;
+}
+
+.vol-badge.v-toxic {
+  background: rgba(220, 38, 38, 0.14) !important;
+  color: #b91c1c !important;
+  border: 1px solid rgba(220, 38, 38, 0.30) !important;
+}
+
+/* Status States */
+.search-state-msg {
+  padding: var(--space-xl, 1.5rem);
+  text-align: center;
+  font-size: var(--text-sm, 0.88rem);
+  color: var(--color-muted);
+  line-height: 1.45;
+}
+
+.search-state-msg--error {
+  color: var(--color-error);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK MODE ADAPTATIONS
+   ═══════════════════════════════════════════════════════════════ */
+[data-theme="dark"] .search-input-container {
+  background: #070d1d !important;
+  border-color: rgba(0, 212, 184, 0.35) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .search-input-container:focus-within {
+  border-color: var(--color-cyan-on-navy, #00f0d0) !important;
+  box-shadow: 0 0 0 3.5px rgba(0, 240, 208, 0.25), 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .search-input {
+  color: var(--color-ink-on-navy, #f8fafc) !important;
+}
+
+[data-theme="dark"] .search-input::placeholder {
+  color: var(--color-neutral, #64748b) !important;
+}
+
+[data-theme="dark"] .search-clear-btn {
+  color: var(--color-placeholder, #94a3b8) !important;
+}
+
+[data-theme="dark"] .search-clear-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--color-ink-on-navy, #f8fafc) !important;
+}
+
+[data-theme="dark"] .search-results {
+  background: #0c152d !important;
+  border-color: rgba(0, 212, 184, 0.32) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.75), 0 0 20px rgba(0, 212, 184, 0.12) !important;
+}
+
+[data-theme="dark"] .search-results::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .result-item {
+  color: var(--color-ink-on-navy, #f8fafc) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .result-item:hover,
+[data-theme="dark"] .result-item:focus-visible {
+  background: rgba(0, 212, 184, 0.1) !important;
+}
+
+[data-theme="dark"] .result-item .ri-name {
+  color: var(--color-ink-on-navy, #f8fafc) !important;
+}
+
+[data-theme="dark"] .result-item .ri-sci {
+  color: var(--color-placeholder, #94a3b8) !important;
+}
+
+[data-theme="dark"] .vol-badge {
+  background: #070d1d !important;
+  color: var(--color-cyan-on-navy, #00f0d0) !important;
+  border-color: rgba(0, 240, 208, 0.3) !important;
+}
+
+[data-theme="dark"] .vol-badge.v-plant {
+  background: rgba(16, 185, 129, 0.2) !important;
+  color: #34d399 !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+}
+
+[data-theme="dark"] .vol-badge.v-crustacean {
+  background: rgba(245, 158, 11, 0.2) !important;
+  color: #fbbf24 !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+}
+
+[data-theme="dark"] .vol-badge.v-coral {
+  background: rgba(244, 63, 94, 0.2) !important;
+  color: #fb7185 !important;
+  border-color: rgba(244, 63, 94, 0.4) !important;
+}
+
+[data-theme="dark"] .vol-badge.v-mollusk {
+  background: rgba(139, 92, 246, 0.2) !important;
+  color: #a78bfa !important;
+  border-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+[data-theme="dark"] .vol-badge.v-echinoderm {
+  background: rgba(99, 102, 241, 0.2) !important;
+  color: #818cf8 !important;
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+[data-theme="dark"] .vol-badge.v-reptile {
+  background: rgba(20, 184, 166, 0.2) !important;
+  color: #2dd4bf !important;
+  border-color: rgba(20, 184, 166, 0.4) !important;
+}
+
+[data-theme="dark"] .vol-badge.v-toxic {
+  background: rgba(239, 68, 68, 0.25) !important;
+  color: #f87171 !important;
+  border-color: rgba(239, 68, 68, 0.45) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE ON MOBILE
+   ═══════════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .search-input-container {
+    padding: var(--space-3xs, 0.4rem) var(--space-md, 0.95rem);
+    min-height: 44px;
+  }
+
+  .search-input {
+    font-size: 16px; /* Chống auto-zoom iOS Safari */
+  }
+
+  .result-item {
+    padding: var(--space-sm, 0.75rem) var(--space-md, 0.95rem) !important;
+    gap: var(--space-xs, 0.65rem) !important;
+  }
+
+  .result-item .ri-name {
+    font-size: var(--text-xs, 0.86rem);
+  }
+
+  .result-item .ri-sci {
+    font-size: 0.76rem;
+  }
+
+  .vol-badge {
+    font-size: 0.68rem !important;
+    padding: 0.2rem var(--space-xs, 0.5rem) !important;
+  }
+}

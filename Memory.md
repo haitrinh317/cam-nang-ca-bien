@@ -27,11 +27,11 @@
 |---|:---:|:---:|---|
 | `ca-bien` (Tập I-VI) | 1,767 | 100% | ✅ 99.8% FishBase v25.04 (1,764/1,767) + 100% Cây phân loại kép + 87.9% Ảnh minh họa (1,553/1,767 loài) + Hợp nhất 21 cá độc |
 | `thuc-vat-bien` (Tập 1-2) | 672 | 100% | ✅ Hoàn chỉnh (201 + 471 ảnh tiêu bản) |
-| `giap-xac` | 132 | 100% | ✅ 99.2% SeaLifeBase + 40% ảnh iNat |
+| `giap-xac` | 132 | 100% | ✅ 99.2% SeaLifeBase + 100% Song ngữ (VN/EN specs) + 47.0% ảnh iNat (62/132 loài, 178 ảnh WebP) |
 | `bo-sat-bien` | 33 | 100% | ✅ 100% SeaLifeBase & GBIF (33/33 loài) + Sách Đỏ VAST 6/6 Golden Standard + 100% ảnh thực địa |
 | `sinh-vat-doc` | 76 | 100% | ✅ 100% Toxicology + 100% SeaLifeBase cho nhóm thân mềm/sứa/nhum độc + 80 ảnh thực địa |
 | `than-mem` (Pilot Ốc sứ) | 74 | 100% | ✅ 100% SeaLifeBase + 210 ảnh iNat |
-| `san-ho` | 42 | 97.6% | ✅ 20 loài SeaLifeBase v25.04 + Khuyết trang 102 (loài 30) |
+| `san-ho` | 42 | 100% | ✅ 100% WoRMS & 100% Sách chuyên khảo (Đã bù trang 102 loài 29 & 30) + 20 loài SeaLifeBase v25.04 |
 | `thu-bien` | 34 | 100% | ✅ 1 Bò biển + 33 Cá voi (gồm Cá nhà táng) + 100% SeaLifeBase + 100 ảnh iNat CC-BY + 100% Sách Đỏ VAST Golden Standard + 100% Complete Audit |
 
 ---

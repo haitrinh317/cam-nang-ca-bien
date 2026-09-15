@@ -181,54 +181,8 @@
   z-index: 1000;
 }
 
-.catalog-header__search .search-input-container {
-  background: var(--color-paper);
-  border: 1.5px solid var(--color-navy-raw);
-  border-radius: var(--radius-pill);
-  padding: 0.5rem 1.25rem;
-  box-shadow: 0 2px 8px rgba(11, 19, 41, 0.05);
-  transition: all var(--dur-fast) var(--ease-out);
-  min-height: 48px;
-}
-
 .catalog-header:focus-within {
   z-index: 400 !important;
-}
-
-.catalog-header__search .search-input-container:focus-within {
-  background: var(--color-paper-2);
-  border-color: var(--color-cyan-raw);
-  box-shadow: 0 0 0 3px rgba(0, 212, 184, 0.22), 0 6px 18px rgba(11, 19, 41, 0.08);
-}
-
-.catalog-header__search .search-input {
-  font-size: 16px;
-  padding: 0.35rem 0;
-  color: var(--color-ink);
-}
-
-.catalog-header__search .search-input::placeholder {
-  color: var(--color-ink-3);
-  opacity: 0.85;
-  font-size: 0.88rem;
-}
-
-/* Đảm bảo dropdown kết quả hiển thị hoàn toàn rõ nét, nổi trên mọi layer, không bị cắt cụt */
-.catalog-header .search-results {
-  position: absolute;
-  top: calc(100% + 6px);
-  left: 0;
-  right: 0;
-  background: var(--color-paper-2);
-  border: 1.5px solid var(--color-navy-raw);
-  border-radius: var(--radius-lg, 12px);
-  box-shadow: 0 20px 48px rgba(11, 19, 41, 0.25), 0 8px 16px rgba(11, 19, 41, 0.12);
-  z-index: 99999 !important;
-  max-height: 420px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  overscroll-behavior: contain;
-  -webkit-overflow-scrolling: touch;
 }
 
 /* Responsive on Mobile */
@@ -257,19 +211,6 @@
 
   .catalog-header__search {
     margin-top: var(--space-sm);
-  }
-
-  .catalog-header__search .search-input-container {
-    padding: 0.4rem 0.95rem;
-    min-height: 44px;
-  }
-
-  .catalog-header__search .search-input {
-    font-size: 16px;
-  }
-
-  .catalog-header__search .search-input::placeholder {
-    font-size: 0.85rem;
   }
 }
 

@@ -2,7 +2,9 @@
 
 import { useState, useRef, useCallback } from 'react'
 import Link from 'next/link'
+import { Search, X } from 'lucide-react'
 import { db } from '@/lib/supabase-browser'
+import './GlobalSearch.css'
 
 interface SearchResult {
   id: string
@@ -18,6 +20,30 @@ interface GlobalSearchProps {
   collectionName?: string
   placeholder?: string
   className?: string
+}
+
+function getBadgeInfo(item: SearchResult) {
+  switch (item.collection_id) {
+    case 'thuc-vat-bien':
+      return { className: 'vol-badge v-plant', label: 'Thực vật' }
+    case 'giap-xac':
+      return { className: 'vol-badge v-crustacean', label: 'Giáp xác' }
+    case 'san-ho':
+      return { className: 'vol-badge v-coral', label: 'San hô' }
+    case 'than-mem':
+      return { className: 'vol-badge v-mollusk', label: 'Thân mềm' }
+    case 'da-gai':
+      return { className: 'vol-badge v-echinoderm', label: 'Da gai' }
+    case 'bo-sat-bien':
+    case 'ran-bien': {
+      const reptileLabel = item.volume === 2 ? 'Rùa biển' : item.volume === 3 ? 'Cá sấu' : 'Rắn biển'
+      return { className: 'vol-badge v-reptile', label: reptileLabel }
+    }
+    case 'sinh-vat-doc':
+      return { className: 'vol-badge v-toxic', label: 'Độc biển' }
+    default:
+      return { className: `vol-badge v${item.volume || 1}`, label: item.volume ? `Tập ${item.volume}` : 'Cá biển' }
+  }
 }
 
 export default function GlobalSearch({
@@ -97,9 +123,7 @@ export default function GlobalSearch({
       }}
     >
       <div className="search-input-container">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flexShrink: 0 }}>
-          <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
-        </svg>
+        <Search size={18} className="search-input-icon" aria-hidden="true" />
         <input
           type="text"
           id={inputId}
@@ -119,22 +143,8 @@ export default function GlobalSearch({
             className="search-clear-btn"
             onClick={handleClear}
             aria-label="Xóa từ khóa tìm kiếm"
-            style={{
-              background: 'transparent',
-              border: 'none',
-              cursor: 'pointer',
-              color: 'var(--color-ink-3)',
-              padding: '4px',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: '50%',
-              fontSize: '0.85rem',
-              lineHeight: 1,
-              flexShrink: 0,
-            }}
           >
-            ✕
+            <X size={15} aria-hidden="true" />
           </button>
         )}
       </div>
@@ -146,44 +156,39 @@ export default function GlobalSearch({
           style={{ zIndex: 99999, position: 'absolute', top: 'calc(100% + 6px)', left: 0, right: 0 }}
         >
           {status === 'loading' && (
-            <div style={{ padding: '1.5rem', textAlign: 'center', color: 'var(--color-muted)' }}>Đang tìm kiếm...</div>
+            <div className="search-state-msg">Đang tìm kiếm...</div>
           )}
           {status === 'error' && (
-            <div style={{ padding: '1.5rem', textAlign: 'center', color: '#f87171' }}>Lỗi kết nối. Thử lại sau.</div>
+            <div className="search-state-msg search-state-msg--error">Lỗi kết nối. Thử lại sau.</div>
           )}
           {status === 'empty' && (
-            <div style={{ padding: '1.5rem', textAlign: 'center', color: 'var(--color-muted)' }}>
+            <div className="search-state-msg">
               Không tìm thấy loài nào phù hợp trong {collectionName ? `danh mục ${collectionName}` : 'hệ thống'}.
             </div>
           )}
-          {status === 'idle' && results.map(item => (
-            <Link
-              key={item.id}
-              href={`/${collectionId || item.collection_id || 'ca-bien'}/${item.id}`}
-              className="result-item"
-              onPointerDown={() => { clickingResult.current = true }}
-              onClick={() => {
-                clickingResult.current = false
-                setOpen(false)
-              }}
-            >
-              <div>
-                <div className="ri-name">{item.vn_name || item.scientific_name}</div>
-                <div className="ri-sci">{item.scientific_name} {item.authorship || ''}</div>
-              </div>
-              <span className={`vol-badge ${item.collection_id === 'thuc-vat-bien' ? 'v-plant' : `v${item.volume}`}`}>
-                {item.collection_id === 'thuc-vat-bien'
-                  ? 'Thực vật'
-                  : item.collection_id === 'giap-xac'
-                  ? 'Giáp xác'
-                  : item.collection_id === 'bo-sat-bien' || item.collection_id === 'ran-bien'
-                  ? (item.volume === 2 ? 'Rùa biển' : item.volume === 3 ? 'Cá sấu' : 'Rắn biển')
-                  : item.collection_id === 'sinh-vat-doc'
-                  ? 'Độc biển'
-                  : `Tập ${item.volume}`}
-              </span>
-            </Link>
-          ))}
+          {status === 'idle' && results.map(item => {
+            const badge = getBadgeInfo(item)
+            return (
+              <Link
+                key={item.id}
+                href={`/${collectionId || item.collection_id || 'ca-bien'}/${item.id}`}
+                className="result-item"
+                onPointerDown={() => { clickingResult.current = true }}
+                onClick={() => {
+                  clickingResult.current = false
+                  setOpen(false)
+                }}
+              >
+                <div className="ri-info">
+                  <div className="ri-name">{item.vn_name || item.scientific_name}</div>
+                  <div className="ri-sci">{item.scientific_name} {item.authorship || ''}</div>
+                </div>
+                <span className={badge.className}>
+                  {badge.label}
+                </span>
+              </Link>
+            )
+          })}
         </div>
       )}
     </div>
