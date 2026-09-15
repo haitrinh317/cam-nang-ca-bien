@@ -7,6 +7,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient, createSSRClient } from '@/lib/supabase-server'
 import { SPECIES_PHOTOS_BUCKET as BUCKET } from '@/lib/species-photos'
+import { z } from 'zod'
 
 const MAX_SIZE = 5 * 1024 * 1024 // 5MB
 
@@ -126,9 +127,10 @@ export async function PATCH(req: NextRequest) {
   if (!admin) return NextResponse.json({ error: 'Forbidden: admin role required' }, { status: 403 })
 
   const adminDb = createServerClient()
-  const body = await req.json()
-  const { species_id, photo_id } = body
-  if (!species_id || !photo_id) return NextResponse.json({ error: 'Missing params' }, { status: 400 })
+  const raw = await req.json()
+  const parsed = z.object({ species_id: z.string().min(1), photo_id: z.string().uuid() }).safeParse(raw)
+  if (!parsed.success) return NextResponse.json({ error: parsed.error.issues[0]?.message || 'Invalid params' }, { status: 400 })
+  const { species_id, photo_id } = parsed.data
 
   // Unset all primary
   await adminDb.from('species_photos')

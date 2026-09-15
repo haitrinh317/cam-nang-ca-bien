@@ -7,9 +7,8 @@ import LiteratureSection from '@/components/home/LiteratureSection'
 import type { LiteratureSourceRow } from '@/components/home/LiteratureSection'
 import type { Metadata } from 'next'
 
-// ponytail: force-dynamic — Admin có thể edit literature_sources bất kỳ lúc nào,
-// trang chủ cần phản ánh ngay. 3 query nhẹ (count species/family + 6 lit rows) — không cần ISR.
-export const dynamic = 'force-dynamic'
+// ponytail: ISR 1h — stats/literature hiếm khi thay đổi. Admin flush thủ công qua /api/revalidate-home.
+export const revalidate = 3600
 
 export const metadata: Metadata = {
   title: {
@@ -53,9 +52,11 @@ export default async function HomePage() {
   ]
 
   // Parallel fetch: species stats + literature sources + live special group counts
+  // ponytail: familyCount hardcoded — con số ~210 họ gần như cố định, loại bỏ query tải 2,828 rows.
+  const familyCount = 210
+
   const [
     { count: totalSpecies },
-    { data: familyRows },
     { data: litSources, count: litCount },
     { count: coralCount },
     { count: nguyCapCount },
@@ -66,10 +67,6 @@ export default async function HomePage() {
     db.from('species')
       .select('*', { count: 'exact', head: true })
       .is('deleted_at', null),
-    db.from('species')
-      .select('tax_family_latin')
-      .is('deleted_at', null)
-      .not('tax_family_latin', 'is', null),
     db.from('literature_sources')
       .select('*', { count: 'exact' })
       .eq('is_visible', true)
@@ -96,10 +93,6 @@ export default async function HomePage() {
       .is('deleted_at', null)
       .eq('collection_id', 'sinh-vat-doc'),
   ])
-
-  const familyCount = familyRows
-    ? new Set(familyRows.map(r => r.tax_family_latin).filter(Boolean)).size
-    : 210
 
   const sources = (litSources || []) as LiteratureSourceRow[]
 

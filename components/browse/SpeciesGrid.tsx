@@ -63,9 +63,10 @@ interface Props {
   collection: string // e.g. 'ca-bien'
   initialVol?: number
   initialGroup?: string
+  initialSpecies?: SpeciesItem[] // Server-prefetched species for initial volume (avoids client refetch)
 }
 
-export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }: Props) {
+export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, initialSpecies }: Props) {
   const books = useMemo(() => getBooksForCollection(collection), [collection])
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -92,8 +93,8 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
 
   const [selectedBookId, setSelectedBookId] = useState<string>(initialBook?.id || '')
   const [currentVol, setCurrentVol] = useState<number>(volFromUrl)
-  const [speciesList, setSpeciesList] = useState<SpeciesItem[]>([])
-  const [status, setStatus] = useState<'loading' | 'error' | 'ok'>('loading')
+  const [speciesList, setSpeciesList] = useState<SpeciesItem[]>(initialSpecies || [])
+  const [status, setStatus] = useState<'loading' | 'error' | 'ok'>(initialSpecies ? 'ok' : 'loading')
   const [localFilter, setLocalFilter] = useState<string>('')
   const hasRestoredScroll = useRef(false)
   const bookCardsRef = useRef<HTMLDivElement | null>(null)
@@ -173,6 +174,8 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
   }, [collection, activeGroup, currentVol])
 
   useEffect(() => {
+    // ponytail: skip first fetch if server already provided initialSpecies for this vol+no-group
+    if (initialSpecies?.length && !activeGroup && currentVol === initialVol) return
     loadData()
   }, [loadData])
 
@@ -241,6 +244,18 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
       String(sp.species_index).includes(q)
     )
   }, [speciesList, localFilter, activeGroup, iucnSubFilter, archipelagoSubFilter])
+
+  // ponytail: memoize filter counts — avoid 7×O(n) on every render
+  const filterCounts = useMemo(() => ({
+    hs: speciesList.filter(isHSLocation).length,
+    ts: speciesList.filter(isTSLocation).length,
+    both: speciesList.filter(s => isHSLocation(s) && isTSLocation(s)).length,
+    vnRedList: speciesList.filter(s => !!s.biology?.vnRedList?.status).length,
+    cr: speciesList.filter(s => (s.biology?.iucnStatus || '').toUpperCase() === 'CR').length,
+    en: speciesList.filter(s => (s.biology?.iucnStatus || '').toUpperCase() === 'EN').length,
+    vu: speciesList.filter(s => (s.biology?.iucnStatus || '').toUpperCase() === 'VU').length,
+    nt: speciesList.filter(s => (s.biology?.iucnStatus || '').toUpperCase() === 'NT').length,
+  }), [speciesList])
 
   // ponytail: progressive rendering — render 50 rows at a time, load more on scroll.
   // Zero dependencies, native IntersectionObserver. Ceiling: re-renders full visible slice
@@ -368,26 +383,12 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
 
           {/* Bộ lọc nhanh theo phân hạng Sách Đỏ Việt Nam & Danh lục đỏ IUCN */}
           {activeGroup.id === 'nguy-cap' && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginTop: '16px', paddingTop: '16px', borderTop: '1px dashed var(--color-rule)' }}>
-              <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-ink-3)', marginRight: '4px' }}>
-                Hệ thống bảo tồn:
-              </span>
+            <div className="sgb-filter-bar">
+              <span className="sgb-filter-bar__label">Hệ thống bảo tồn:</span>
               <button
                 type="button"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  padding: '5px 12px',
-                  borderRadius: '6px',
-                  fontSize: '0.82rem',
-                  fontWeight: iucnSubFilter === 'ALL' ? 700 : 500,
-                  background: iucnSubFilter === 'ALL' ? 'var(--color-navy-raw)' : 'var(--color-paper-2)',
-                  color: iucnSubFilter === 'ALL' ? '#ffffff' : 'var(--color-ink)',
-                  border: '1px solid var(--color-rule)',
-                  cursor: 'pointer',
-                  transition: 'all 0.15s ease',
-                }}
+                className="sgb-filter-btn sgb-filter-btn--navy"
+                aria-pressed={iucnSubFilter === 'ALL'}
                 onClick={() => setIucnSubFilter('ALL')}
               >
                 Tất cả ({speciesList.length})
@@ -395,65 +396,38 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
 
               {/* Nút lọc riêng Sách Đỏ Việt Nam */}
               {(() => {
-                const vnCount = speciesList.filter(s => !!s.biology?.vnRedList?.status).length
-                const isSelected = iucnSubFilter === 'VN_REDLIST'
+                const vnCount = filterCounts.vnRedList
                 return (
                   <button
                     type="button"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      padding: '4px 11px',
-                      borderRadius: '6px',
-                      fontSize: '0.82rem',
-                      fontWeight: isSelected ? 700 : 500,
-                      background: isSelected ? 'rgba(225, 29, 72, 0.15)' : 'var(--color-paper-2)',
-                      color: isSelected ? '#be123c' : 'var(--color-ink)',
-                      border: `1.5px solid ${isSelected ? '#e11d48' : 'rgba(225, 29, 72, 0.3)'}`,
-                      cursor: 'pointer',
-                      transition: 'all 0.15s ease',
-                      whiteSpace: 'nowrap',
-                    }}
+                    className="sgb-filter-btn sgb-filter-btn--redlist"
+                    aria-pressed={iucnSubFilter === 'VN_REDLIST'}
                     onClick={() => setIucnSubFilter('VN_REDLIST')}
                   >
-                    <span style={{ display: 'inline-block', width: '8px', height: '8px', borderRadius: '50%', background: '#e11d48' }} />
+                    <span className="sgb-redlist-dot" />
                     <span style={{ fontWeight: 600 }}>Sách Đỏ Việt Nam</span>
-                    <span style={{ fontSize: '0.82rem', fontWeight: 600 }}>({vnCount})</span>
+                    <span style={{ fontWeight: 600 }}>({vnCount})</span>
                   </button>
                 )
               })()}
 
-              <div style={{ width: '1px', height: '18px', background: 'var(--color-rule)', margin: '0 4px' }} />
+              <div className="sgb-filter-divider" />
 
               {(['CR', 'EN', 'VU', 'NT'] as const).map(code => {
-                const count = speciesList.filter(s => (s.biology?.iucnStatus || '').toUpperCase() === code).length
+                const count = filterCounts[code.toLowerCase() as 'cr' | 'en' | 'vu' | 'nt']
                 const isSelected = iucnSubFilter === code
                 const color = IUCN_COLOR[code]
                 return (
                   <button
                     key={code}
                     type="button"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '6px',
-                      padding: '4px 10px',
-                      borderRadius: '6px',
-                      fontSize: '0.82rem',
-                      fontWeight: isSelected ? 700 : 500,
-                      background: isSelected ? `${color}25` : 'var(--color-paper-2)',
-                      color: isSelected ? color : 'var(--color-ink)',
-                      border: `1.5px solid ${isSelected ? color : 'var(--color-rule)'}`,
-                      cursor: 'pointer',
-                      transition: 'background 0.15s ease, border-color 0.15s ease',
-                      whiteSpace: 'nowrap',
-                      touchAction: 'manipulation',
-                    }}
+                    className="sgb-filter-btn sgb-filter-btn--iucn"
+                    aria-pressed={isSelected}
+                    style={isSelected ? { background: `${color}25`, color, borderColor: color } : undefined}
                     onClick={() => setIucnSubFilter(code)}
                   >
                     <IucnBadge status={code} />
-                    <span style={{ fontSize: '0.82rem', fontWeight: 600 }}>({count})</span>
+                    <span style={{ fontWeight: 600 }}>({count})</span>
                   </button>
                 )
               })}
@@ -462,99 +436,41 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup }
 
           {/* Bộ lọc nhanh theo Hoàng Sa & Trường Sa */}
           {activeGroup.id === 'hoang-sa-truong-sa' && (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginTop: '16px', paddingTop: '16px', borderTop: '1px dashed var(--color-rule)' }}>
-              <span style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-ink-3)', marginRight: '4px', whiteSpace: 'nowrap' }}>
-                Phạm vi biển đảo:
-              </span>
+            <div className="sgb-filter-bar">
+              <span className="sgb-filter-bar__label">Phạm vi biển đảo:</span>
               <button
                 type="button"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  padding: '5px 12px',
-                  borderRadius: '6px',
-                  fontSize: '0.82rem',
-                  fontWeight: archipelagoSubFilter === 'ALL' ? 700 : 500,
-                  background: archipelagoSubFilter === 'ALL' ? 'var(--color-navy-raw)' : 'var(--color-paper-2)',
-                  color: archipelagoSubFilter === 'ALL' ? '#ffffff' : 'var(--color-ink)',
-                  border: archipelagoSubFilter === 'ALL' ? '1.5px solid var(--color-navy-raw)' : '1.5px solid var(--color-rule)',
-                  cursor: 'pointer',
-                  transition: 'background 0.15s ease, border-color 0.15s ease',
-                  whiteSpace: 'nowrap',
-                  touchAction: 'manipulation',
-                }}
+                className="sgb-filter-btn sgb-filter-btn--navy"
+                aria-pressed={archipelagoSubFilter === 'ALL'}
                 onClick={() => setArchipelagoSubFilter('ALL')}
               >
                 Tất cả ({speciesList.length})
               </button>
               <button
                 type="button"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  padding: '5px 12px',
-                  borderRadius: '6px',
-                  fontSize: '0.82rem',
-                  fontWeight: archipelagoSubFilter === 'HS' ? 700 : 500,
-                  background: archipelagoSubFilter === 'HS' ? '#b45309' : 'var(--color-paper-2)',
-                  color: archipelagoSubFilter === 'HS' ? '#ffffff' : '#b45309',
-                  border: archipelagoSubFilter === 'HS' ? '1.5px solid #b45309' : '1.5px solid var(--color-rule)',
-                  cursor: 'pointer',
-                  transition: 'background 0.15s ease, border-color 0.15s ease',
-                  whiteSpace: 'nowrap',
-                  touchAction: 'manipulation',
-                }}
+                className="sgb-filter-btn sgb-filter-btn--amber"
+                aria-pressed={archipelagoSubFilter === 'HS'}
                 onClick={() => setArchipelagoSubFilter('HS')}
               >
                 <Compass size={13} aria-hidden="true" />
-                Hoàng Sa ({speciesList.filter(isHSLocation).length})
+                Hoàng Sa ({filterCounts.hs})
               </button>
               <button
                 type="button"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  padding: '5px 12px',
-                  borderRadius: '6px',
-                  fontSize: '0.82rem',
-                  fontWeight: archipelagoSubFilter === 'TS' ? 700 : 500,
-                  background: archipelagoSubFilter === 'TS' ? '#0369a1' : 'var(--color-paper-2)',
-                  color: archipelagoSubFilter === 'TS' ? '#ffffff' : '#0369a1',
-                  border: archipelagoSubFilter === 'TS' ? '1.5px solid #0369a1' : '1.5px solid var(--color-rule)',
-                  cursor: 'pointer',
-                  transition: 'background 0.15s ease, border-color 0.15s ease',
-                  whiteSpace: 'nowrap',
-                  touchAction: 'manipulation',
-                }}
+                className="sgb-filter-btn sgb-filter-btn--blue"
+                aria-pressed={archipelagoSubFilter === 'TS'}
                 onClick={() => setArchipelagoSubFilter('TS')}
               >
                 <Waves size={13} aria-hidden="true" />
-                Trường Sa ({speciesList.filter(isTSLocation).length})
+                Trường Sa ({filterCounts.ts})
               </button>
               <button
                 type="button"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '6px',
-                  padding: '5px 12px',
-                  borderRadius: '6px',
-                  fontSize: '0.82rem',
-                  fontWeight: archipelagoSubFilter === 'BOTH' ? 700 : 500,
-                  background: archipelagoSubFilter === 'BOTH' ? '#047857' : 'var(--color-paper-2)',
-                  color: archipelagoSubFilter === 'BOTH' ? '#ffffff' : '#047857',
-                  border: archipelagoSubFilter === 'BOTH' ? '1.5px solid #047857' : '1.5px solid var(--color-rule)',
-                  cursor: 'pointer',
-                  transition: 'background 0.15s ease, border-color 0.15s ease',
-                  whiteSpace: 'nowrap',
-                  touchAction: 'manipulation',
-                }}
+                className="sgb-filter-btn sgb-filter-btn--green"
+                aria-pressed={archipelagoSubFilter === 'BOTH'}
                 onClick={() => setArchipelagoSubFilter('BOTH')}
               >
-                ⭐ Cả 2 quần đảo ({speciesList.filter(s => isHSLocation(s) && isTSLocation(s)).length})
+                ⭐ Cả 2 quần đảo ({filterCounts.both})
               </button>
             </div>
           )}

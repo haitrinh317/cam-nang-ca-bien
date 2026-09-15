@@ -143,3 +143,100 @@
   overflow-wrap: anywhere;
   word-break: break-word;
 }
+
+/* ── Filter bar (IUCN / Hoàng Sa-Trường Sa sub-filters) ── */
+
+.sgb-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--color-rule);
+}
+
+.sgb-filter-bar__label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-ink-3);
+  margin-right: 4px;
+  white-space: nowrap;
+}
+
+.sgb-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: var(--color-paper-2);
+  color: var(--color-ink);
+  border: 1.5px solid var(--color-rule);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+
+.sgb-filter-btn[aria-pressed="true"] {
+  font-weight: 700;
+}
+
+/* Color variants — active state */
+.sgb-filter-btn--navy[aria-pressed="true"] {
+  background: var(--color-navy-raw);
+  color: #ffffff;
+  border-color: var(--color-navy-raw);
+}
+.sgb-filter-btn--amber[aria-pressed="true"] {
+  background: #b45309;
+  color: #ffffff;
+  border-color: #b45309;
+}
+.sgb-filter-btn--amber:not([aria-pressed="true"]) { color: #b45309; }
+
+.sgb-filter-btn--blue[aria-pressed="true"] {
+  background: #0369a1;
+  color: #ffffff;
+  border-color: #0369a1;
+}
+.sgb-filter-btn--blue:not([aria-pressed="true"]) { color: #0369a1; }
+
+.sgb-filter-btn--green[aria-pressed="true"] {
+  background: #047857;
+  color: #ffffff;
+  border-color: #047857;
+}
+.sgb-filter-btn--green:not([aria-pressed="true"]) { color: #047857; }
+
+/* IUCN sub-filter — smaller padding */
+.sgb-filter-btn--iucn {
+  padding: 4px 10px;
+}
+
+.sgb-filter-btn--redlist[aria-pressed="true"] {
+  background: rgba(225, 29, 72, 0.15);
+  color: #be123c;
+  border-color: #e11d48;
+}
+.sgb-filter-btn--redlist:not([aria-pressed="true"]) {
+  border-color: rgba(225, 29, 72, 0.3);
+}
+
+.sgb-filter-divider {
+  width: 1px;
+  height: 18px;
+  background: var(--color-rule);
+  margin: 0 4px;
+}
+
+.sgb-redlist-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e11d48;
+}

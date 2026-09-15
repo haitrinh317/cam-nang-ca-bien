@@ -1,7 +1,7 @@
 import '@/styles/catalogue.css'
 import { getCollectionBySlug } from '@/lib/collection-registry'
 import { createServerClient } from '@/lib/supabase-server'
-import { TAXONOMY_COLS, sortTaxonomyRows } from '@/lib/taxonomy'
+import { TAXONOMY_COLS, sortTaxonomyRows, type SpeciesRow } from '@/lib/taxonomy'
 import { notFound } from 'next/navigation'
 import TaxonomyTree from '@/components/browse/TaxonomyTree'
 import type { Metadata } from 'next'
@@ -55,13 +55,16 @@ export default async function TaxonomyPage({ params }: Props) {
   if (!col) notFound()
 
   const db = createServerClient()
-  const [r1, r2, r3] = await Promise.all([
-    db.from('species').select(TAXONOMY_COLS).eq('collection_id', collection).is('deleted_at', null).range(0, 999),
-    db.from('species').select(TAXONOMY_COLS).eq('collection_id', collection).is('deleted_at', null).range(1000, 1999),
-    db.from('species').select(TAXONOMY_COLS).eq('collection_id', collection).is('deleted_at', null).range(2000, 2999),
-  ])
+  // ponytail: single query with explicit limit — replaces 3 range queries (0-999, 1000-1999, 2000-2999).
+  // Supabase JS .limit() overrides PostgREST default max_rows. Ceiling: if collection exceeds 3000 species.
+  const { data: rawSpecies } = await db
+    .from('species')
+    .select(TAXONOMY_COLS)
+    .eq('collection_id', collection)
+    .is('deleted_at', null)
+    .limit(3000)
 
-  const species = sortTaxonomyRows([...(r1.data || []), ...(r2.data || []), ...(r3.data || [])] as any[], 'modern')
+  const species = sortTaxonomyRows((rawSpecies || []) as SpeciesRow[], 'modern')
 
   return (
     <>

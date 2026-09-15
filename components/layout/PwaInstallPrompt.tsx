@@ -3,6 +3,12 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
+// ponytail: Safari PWA APIs not in standard TS lib
+declare global {
+  interface Navigator { standalone?: boolean }
+  interface Window { MSStream?: unknown }
+}
+
 export function PwaInstallPrompt() {
   const [isOpen, setIsOpen] = useState(false)
   const [isIos, setIsIos] = useState(false)
@@ -12,7 +18,7 @@ export function PwaInstallPrompt() {
     // 1. Kiểm tra nếu đang mở trong ứng dụng PWA đã cài đặt (Standalone Mode)
     const isStandalone =
       window.matchMedia('(display-mode: standalone)').matches ||
-      (window.navigator as any).standalone === true
+      window.navigator.standalone === true
     if (isStandalone) return
 
     // 2. Kiểm tra nếu người dùng đã bấm bỏ qua gần đây (trong vòng 14 ngày)
@@ -24,7 +30,7 @@ export function PwaInstallPrompt() {
 
     // 3. Nhận diện thiết bị iOS
     const ua = window.navigator.userAgent
-    const isAppleDevice = /iPad|iPhone|iPod/.test(ua) && !(window as any).MSStream
+    const isAppleDevice = /iPad|iPhone|iPod/.test(ua) && !window.MSStream
     setIsIos(isAppleDevice)
 
     // 4. Bắt sự kiện beforeinstallprompt trên Android Chrome / Chromium

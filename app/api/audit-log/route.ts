@@ -5,6 +5,7 @@
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient, createSSRClient } from '@/lib/supabase-server'
+import { z } from 'zod'
 
 export const dynamic = 'force-dynamic'
 
@@ -37,12 +38,26 @@ export async function GET(req: NextRequest) {
   }
 
   const { searchParams } = req.nextUrl
-  const collection = searchParams.get('collection')
-  const action = searchParams.get('action')
-  const fromDate = searchParams.get('fromDate')
-  const toDate = searchParams.get('toDate')
-  const page = Math.max(1, parseInt(searchParams.get('page') || '1'))
-  const pageSize = Math.min(Math.max(1, parseInt(searchParams.get('pageSize') || searchParams.get('limit') || '20')), 100)
+  const qSchema = z.object({
+    collection: z.string().max(30).optional(),
+    action: z.string().max(20).optional(),
+    fromDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+    toDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
+    page: z.coerce.number().int().min(1).default(1),
+    pageSize: z.coerce.number().int().min(1).max(100).default(20),
+  })
+  const parsed = qSchema.safeParse({
+    collection: searchParams.get('collection') || undefined,
+    action: searchParams.get('action') || undefined,
+    fromDate: searchParams.get('fromDate') || undefined,
+    toDate: searchParams.get('toDate') || undefined,
+    page: searchParams.get('page') || 1,
+    pageSize: searchParams.get('pageSize') || searchParams.get('limit') || 20,
+  })
+  if (!parsed.success) {
+    return NextResponse.json({ error: parsed.error.issues[0]?.message || 'Invalid params' }, { status: 400 })
+  }
+  const { collection, action, fromDate, toDate, page, pageSize } = parsed.data
 
   let query = adminDb
     .from('audit_log')

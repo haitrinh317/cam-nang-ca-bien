@@ -2,9 +2,11 @@
 
 import { useEffect, useState, useCallback, useRef } from 'react'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import '@/styles/admin.css'
 import '@/styles/admin-command.css'
-import SpeciesForm from './SpeciesForm'
+// ponytail: lazy load SpeciesForm (44KB) — only needed when user clicks Edit/Add
+const SpeciesForm = dynamic(() => import('./SpeciesForm'), { ssr: false })
 import ImportModal from './ImportModal'
 import AuditLog from './AuditLog'
 import {

@@ -68,6 +68,11 @@ export interface BiologyData {
   gbifKey?: number
   algaebaseId?: number
   algaebaseUrl?: string
+  inaturalist?: {
+    attribution?: string
+    license_code?: string
+    photo_url?: string
+  }
 }
 
 interface Props {

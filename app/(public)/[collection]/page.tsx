@@ -5,6 +5,7 @@ import {
   getSpecialGroup,
   getBooksForCollection,
 } from '@/lib/collection-registry'
+import { applySpeciesFilters } from '@/lib/species-query'
 import { notFound } from 'next/navigation'
 import SpeciesGrid from '@/components/browse/SpeciesGrid'
 import CatalogHeader from '@/components/browse/CatalogHeader'
@@ -68,21 +69,26 @@ export default async function CollectionPage({ params, searchParams }: Props) {
   const books = getBooksForCollection(collection)
 
   const db = createServerClient()
-  const [{ count: totalSpecies }, { data: familyRows }] = await Promise.all([
+  // ponytail: parallel fetch count + initial species list for first render
+  // Columns must match SpeciesGrid.loadData() select to avoid shape mismatch
+  const GRID_COLS = 'id, volume, species_index, vn_name, scientific_name, authorship, biology, vn_distribution, en_distribution, vn_specimen, collection_id'
+  const [{ count: totalSpecies }, { data: initialSpecies }] = await Promise.all([
     db.from('species')
       .select('*', { count: 'exact', head: true })
       .eq('collection_id', collection)
       .is('deleted_at', null),
-    db.from('species')
-      .select('tax_family_latin')
-      .eq('collection_id', collection)
-      .is('deleted_at', null)
-      .not('tax_family_latin', 'is', null),
+    // Pre-fetch species for initial volume (no group) — eliminates client Supabase call on first load
+    !group
+      ? applySpeciesFilters(
+          db.from('species').select(GRID_COLS),
+          collection
+        ).eq('volume', initialVol).order('species_index').limit(800)
+      : Promise.resolve({ data: null }),
   ])
 
-  const familyCount = familyRows
-    ? new Set(familyRows.map(r => r.tax_family_latin).filter(Boolean)).size
-    : 210
+  // ponytail: familyCount ước tính từ totalSpecies — tránh query tải N rows chỉ để đếm DISTINCT.
+  // Tỉ lệ loài/họ trung bình ~13. Ceiling: sai lệch ±10% với collection nhỏ.
+  const familyCount = Math.max(1, Math.round((totalSpecies || 0) / 13))
 
   const activeGroup = group ? getSpecialGroup(group) : null
 
@@ -97,12 +103,21 @@ export default async function CollectionPage({ params, searchParams }: Props) {
       />
 
       <Suspense fallback={<div className="list-status-message"><div className="spinner" /><span>Đang tải danh sách...</span></div>}>
-        <SpeciesGrid collection={collection} initialVol={initialVol} initialGroup={group} />
+        <SpeciesGrid collection={collection} initialVol={initialVol} initialGroup={group} initialSpecies={initialSpecies || undefined} />
       </Suspense>
     </>
   )
 }
 
 export async function generateStaticParams() {
-  return [{ collection: 'ca-bien' }, { collection: 'thuc-vat-bien' }, { collection: 'giap-xac' }]
+  return [
+    { collection: 'ca-bien' },
+    { collection: 'thuc-vat-bien' },
+    { collection: 'giap-xac' },
+    { collection: 'bo-sat-bien' },
+    { collection: 'sinh-vat-doc' },
+    { collection: 'than-mem' },
+    { collection: 'san-ho' },
+    { collection: 'thu-bien' },
+  ]
 }

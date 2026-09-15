@@ -6,8 +6,6 @@ import '@/styles/responsive.css'
 import '@/styles/buttons.css'
 import '@/styles/mobile.css'
 import '@/styles/dark-mode.css'
-import { BottomNav } from '@/components/layout/BottomNav'
-import { PwaInstallPrompt } from '@/components/layout/PwaInstallPrompt'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -152,8 +150,6 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        <BottomNav />
-        <PwaInstallPrompt />
       </body>
     </html>
   )

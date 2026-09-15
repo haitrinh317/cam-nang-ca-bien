@@ -107,6 +107,8 @@ export default async function AdminDashboard() {
     { count: wormsVerifiedCount },
     { count: vnRedListCount },
     { data: recentAudit, count: auditTotalCount },
+    // Volume breakdown (Cá biển tập 1-5) — gộp vào 1 Promise.all, tránh waterfall
+    ...volResults
   ] = await Promise.all([
     db.from('species').select('*', { count: 'exact', head: true }).is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'ca-bien').is('deleted_at', null),
@@ -125,6 +127,10 @@ export default async function AdminDashboard() {
       .select('id, created_at, user_email, action, collection_id, species_id, details', { count: 'exact' })
       .order('created_at', { ascending: false })
       .range(0, 9),
+    ...[1, 2, 3, 4, 5].map((v) =>
+      db.from('species').select('*', { count: 'exact', head: true })
+        .eq('collection_id', 'ca-bien').eq('volume', v).is('deleted_at', null)
+    ),
   ])
 
   const total = totalCount || (
@@ -138,16 +144,6 @@ export default async function AdminDashboard() {
     (thuBienCount || 0)
   )
 
-  // Volume breakdown (Cá biển tập 1-5)
-  const volPromises = [1, 2, 3, 4, 5].map((v) =>
-    db
-      .from('species')
-      .select('*', { count: 'exact', head: true })
-      .eq('collection_id', 'ca-bien')
-      .eq('volume', v)
-      .is('deleted_at', null)
-  )
-  const volResults = await Promise.all(volPromises)
   const volCounts = volResults.map((r) => r.count ?? 0)
   const totalVolSpecies = volCounts.reduce((acc, c) => acc + c, 0) || 1
 
@@ -478,7 +474,7 @@ export default async function AdminDashboard() {
       </section>
 
       {/* ── ACTIVITY LOG STREAM ── */}
-      <AuditLogStream initialLogs={(recentAudit || []) as any} initialTotal={auditTotalCount || 0} />
+      <AuditLogStream initialLogs={(recentAudit || []) as import('@/components/admin/AuditLogStream').LogEntry[]} initialTotal={auditTotalCount || 0} />
     </div>
   )
 }

@@ -41,8 +41,8 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // Edge Cache cho trang chi tiết loài và cây phân loại (24h)
-        source: '/:collection(ca-bien|thuc-vat-bien)/:path*',
+        // Edge Cache cho trang chi tiết loài và cây phân loại (24h) — tất cả 8 collections
+        source: '/:collection(ca-bien|thuc-vat-bien|giap-xac|bo-sat-bien|sinh-vat-doc|than-mem|san-ho|thu-bien)/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=86400' },
         ],

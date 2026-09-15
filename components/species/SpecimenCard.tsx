@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useRef } from 'react'
-import PhotoGallery from './PhotoGallery'
+import PhotoGallery, { type Photo } from './PhotoGallery'
 import WormsBadge from './WormsBadge'
 import { BiologyData } from './BiologyDashboard'
 import { cleanTaxonHierarchy } from '@/lib/species-parsers'
@@ -60,7 +60,7 @@ export interface Species {
 
 type TabId = 'thongso' | 'sinhhoc' | 'phanloai'
 
-export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initialPhotos?: unknown[] }) {
+export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initialPhotos?: Photo[] }) {
   const [active, setActive] = useState<TabId>('thongso')
   const specimenRef = useRef<HTMLDivElement | null>(null)
 
@@ -157,12 +157,12 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
       <PhotoGallery
         speciesId={sp.id}
         fallbackUrl={sp.photo_url}
-        initialPhotos={initialPhotos as any}
+        initialPhotos={initialPhotos}
         fallbackCredit={
-          (bio as any)?.inaturalist ? {
-            photographer: (bio as any).inaturalist.attribution || 'iNaturalist',
-            license: (bio as any).inaturalist.license_code,
-            sourceUrl: (bio as any).inaturalist.photo_url,
+          bio?.inaturalist ? {
+            photographer: bio.inaturalist.attribution || 'iNaturalist',
+            license: bio.inaturalist.license_code,
+            sourceUrl: bio.inaturalist.photo_url,
             source: 'iNaturalist'
           } : null
         }

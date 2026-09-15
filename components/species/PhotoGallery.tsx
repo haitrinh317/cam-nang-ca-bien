@@ -6,7 +6,7 @@ import { db } from '@/lib/supabase-browser'
 import { getSpeciesPhotoUrl } from '@/lib/species-photos'
 import { Camera, X, ChevronLeft, ChevronRight } from 'lucide-react'
 
-interface Photo {
+export interface Photo {
   id: string
   storage_path: string
   source: string

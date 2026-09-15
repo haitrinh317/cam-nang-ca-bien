@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server'
+import { z } from 'zod'
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY
+
+const translateSchema = z.object({
+  text: z.string().min(1).max(10000),
+})
 
 async function translateWithGemini(text: string): Promise<string> {
   if (!GEMINI_API_KEY) throw new Error('No GEMINI_API_KEY')
@@ -40,8 +45,12 @@ async function translateChunk(text: string): Promise<string> {
 
 export async function POST(request: Request) {
   try {
-    const { text } = await request.json()
-    if (!text) return NextResponse.json({ error: 'Missing text' }, { status: 400 })
+    const raw = await request.json()
+    const parsed = translateSchema.safeParse(raw)
+    if (!parsed.success) {
+      return NextResponse.json({ error: parsed.error.issues[0]?.message || 'Invalid input' }, { status: 400 })
+    }
+    const { text } = parsed.data
 
     // Ưu tiên sử dụng Gemini
     if (GEMINI_API_KEY) {
