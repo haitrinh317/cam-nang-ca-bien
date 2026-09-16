@@ -135,6 +135,12 @@ def find_taxon_id(scientific_name, collection="ca-bien"):
             continue
         if collection == "bo-sat-bien" and iconic != "Reptilia":
             continue
+        if collection == "than-mem" and iconic != "Mollusca":
+            continue
+        if collection == "giap-xac" and iconic not in ("Crustacea", "Animalia"):
+            continue
+        if collection == "san-ho" and iconic not in ("Cnidaria", "Animalia"):
+            continue
 
         tname = t.get("name", "").strip().lower()
         matched = t.get("matched_term", "").strip().lower()

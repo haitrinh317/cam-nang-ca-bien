@@ -32,6 +32,8 @@ if not SUPABASE_URL or not SUPABASE_KEY:
     sys.exit(1)
 
 
+import re
+
 # Bypass SSL
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
@@ -44,32 +46,49 @@ HEADERS = {
     "Prefer": "return=minimal"
 }
 
-def fetch_wikidata_info(sci_name):
-    try:
-        url_search = f"https://www.wikidata.org/w/api.php?action=wbsearchentities&search={urllib.parse.quote(sci_name)}&language=en&format=json&limit=3"
-        req = urllib.request.Request(url_search, headers={'User-Agent': 'AntigravityFish/1.0 (contact@haitrinh.org)'})
-        with urllib.request.urlopen(req, context=ctx, timeout=8) as resp:
-            res = json.loads(resp.read().decode('utf-8'))
-            hits = res.get('search', [])
-            if not hits:
-                return None
-            entity_id = hits[0]['id']
+def clean_scientific_name(sci_name):
+    if not sci_name:
+        return ""
+    # Loại bỏ ngoặc đơn chi phụ, ví dụ: Anadara (Anadara) antiquata -> Anadara antiquata
+    cleaned = re.sub(r'\(.*?\)', '', sci_name).strip()
+    words = cleaned.split()
+    if len(words) >= 2:
+        return f"{words[0]} {words[1]}"
+    return cleaned
 
-        url_get = f"https://www.wikidata.org/w/api.php?action=wbgetentities&ids={entity_id}&props=labels|aliases&languages=en|vi&format=json"
-        req_get = urllib.request.Request(url_get, headers={'User-Agent': 'AntigravityFish/1.0'})
-        with urllib.request.urlopen(req_get, context=ctx, timeout=8) as resp:
-            data = json.loads(resp.read().decode('utf-8'))
-            entity = data.get('entities', {}).get(entity_id, {})
-            labels = entity.get('labels', {})
-            aliases = entity.get('aliases', {})
-            return {
-                'en_name': labels.get('en', {}).get('value', ''),
-                'vi_name': labels.get('vi', {}).get('value', ''),
-                'en_aliases': [a['value'] for a in aliases.get('en', [])],
-                'vi_aliases': [a['value'] for a in aliases.get('vi', [])]
-            }
-    except Exception as e:
-        return None
+def fetch_wikidata_info(sci_name):
+    clean_name = clean_scientific_name(sci_name)
+    search_terms = [clean_name] if clean_name else []
+    if sci_name and sci_name not in search_terms:
+        search_terms.append(sci_name)
+
+    for term in search_terms:
+        try:
+            url_search = f"https://www.wikidata.org/w/api.php?action=wbsearchentities&search={urllib.parse.quote(term)}&language=en&format=json&limit=3"
+            req = urllib.request.Request(url_search, headers={'User-Agent': 'AntigravityFish/1.0 (contact@haitrinh.org)'})
+            with urllib.request.urlopen(req, context=ctx, timeout=8) as resp:
+                res = json.loads(resp.read().decode('utf-8'))
+                hits = res.get('search', [])
+                if not hits:
+                    continue
+                entity_id = hits[0]['id']
+
+            url_get = f"https://www.wikidata.org/w/api.php?action=wbgetentities&ids={entity_id}&props=labels|aliases&languages=en|vi&format=json"
+            req_get = urllib.request.Request(url_get, headers={'User-Agent': 'AntigravityFish/1.0'})
+            with urllib.request.urlopen(req_get, context=ctx, timeout=8) as resp:
+                data = json.loads(resp.read().decode('utf-8'))
+                entity = data.get('entities', {}).get(entity_id, {})
+                labels = entity.get('labels', {})
+                aliases = entity.get('aliases', {})
+                return {
+                    'en_name': labels.get('en', {}).get('value', ''),
+                    'vi_name': labels.get('vi', {}).get('value', ''),
+                    'en_aliases': [a['value'] for a in aliases.get('en', [])],
+                    'vi_aliases': [a['value'] for a in aliases.get('vi', [])]
+                }
+        except Exception:
+            continue
+    return None
 
 def is_valid_vi(name):
     """Chỉ lấy tên có ký tự tiếng Việt (non-ASCII), tránh lấy tên khoa học."""

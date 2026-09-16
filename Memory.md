@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-15 (Deploy Production `97c495c`: Sửa CSS ô tìm kiếm & chuẩn hóa 100% Lucide SVG Hallmark | Giáp xác 100% song ngữ specs & Bù trang 102 san hô) | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-16 (Triển khai hoàn tất 143 loài Hai mảnh vỏ Bivalvia Tập 2 Đỗ Công Thung 2015, chuẩn hóa 100% OCR đọc trục dọc, WoRMS, SeaLifeBase, iNaturalist) | **Production:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 ---
@@ -21,18 +21,18 @@
 
 ---
 
-## 📊 Kiểm Kê Dữ Liệu — 2,828 loài | Sách Đỏ VAST: 113 loài (100% Golden Standard)
+## 📊 Kiểm Kê Dữ Liệu — 2,971 loài | Sách Đỏ VAST: 122 loài (100% Golden Standard)
 
 | Collection | Loài | WoRMS | Trạng thái |
 |---|:---:|:---:|---|
 | `ca-bien` (Tập I-VI) | 1,767 | 100% | ✅ 99.8% FishBase v25.04 (1,764/1,767) + 100% Cây phân loại kép + 87.9% Ảnh minh họa (1,553/1,767 loài) + Hợp nhất 21 cá độc |
 | `thuc-vat-bien` (Tập 1-2) | 672 | 100% | ✅ Hoàn chỉnh (201 + 471 ảnh tiêu bản) |
+| `than-mem` (Tập 1-2) | 217 | 100% | ✅ 74 Ốc sứ (Hylleberg 2003) + 143 Hai mảnh vỏ Bivalvia (Đỗ Công Thung 2015) + 100% WoRMS & SeaLifeBase + 302 ảnh WebP (74.1%) + 7 loài Sách Đỏ VAST |
 | `giap-xac` | 132 | 100% | ✅ 99.2% SeaLifeBase + 100% Song ngữ (VN/EN specs) + 47.0% ảnh iNat (62/132 loài, 178 ảnh WebP) |
-| `bo-sat-bien` | 33 | 100% | ✅ 100% SeaLifeBase & GBIF (33/33 loài) + Sách Đỏ VAST 6/6 Golden Standard + 100% ảnh thực địa |
 | `sinh-vat-doc` | 76 | 100% | ✅ 100% Toxicology + 100% SeaLifeBase cho nhóm thân mềm/sứa/nhum độc + 80 ảnh thực địa |
-| `than-mem` (Pilot Ốc sứ) | 74 | 100% | ✅ 100% SeaLifeBase + 210 ảnh iNat |
 | `san-ho` | 42 | 100% | ✅ 100% WoRMS & 100% Sách chuyên khảo (Đã bù trang 102 loài 29 & 30) + 20 loài SeaLifeBase v25.04 |
 | `thu-bien` | 34 | 100% | ✅ 1 Bò biển + 33 Cá voi (gồm Cá nhà táng) + 100% SeaLifeBase + 100 ảnh iNat CC-BY + 100% Sách Đỏ VAST Golden Standard + 100% Complete Audit |
+| `bo-sat-bien` | 33 | 100% | ✅ 100% SeaLifeBase & GBIF (33/33 loài) + Sách Đỏ VAST 6/6 Golden Standard + 100% ảnh thực địa |
 
 ---
 
