@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-16 (Deploy Production `30bbc73`: Triển khai hoàn tất 143 loài Hai mảnh vỏ Bivalvia Tập 2 Đỗ Công Thung 2015, chuẩn hóa 100% OCR đọc trục dọc, WoRMS, SeaLifeBase, iNaturalist) | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-16 (Deploy Production `0024c86`: Chuẩn hóa tách tên chính và tên gọi khác cho 143 loài Bivalvia Tập 2 Đỗ Công Thung 2015) | **Production:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 ---
