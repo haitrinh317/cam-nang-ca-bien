@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-16 (Triển khai hoàn tất 143 loài Hai mảnh vỏ Bivalvia Tập 2 Đỗ Công Thung 2015, chuẩn hóa 100% OCR đọc trục dọc, WoRMS, SeaLifeBase, iNaturalist) | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-16 (Deploy Production `30bbc73`: Triển khai hoàn tất 143 loài Hai mảnh vỏ Bivalvia Tập 2 Đỗ Công Thung 2015, chuẩn hóa 100% OCR đọc trục dọc, WoRMS, SeaLifeBase, iNaturalist) | **Production:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 ---
@@ -63,7 +63,7 @@ Deploy: git push origin master + vercel --prod --yes
 
 | Table | Mô tả |
 |---|---|
-| `species` | 2,828 loài, `collection_id` FK, flat schema |
+| `species` | 2,971 loài, `collection_id` FK, flat schema |
 | `species_photos` | Ảnh loài (Storage bucket `species-photos`) |
 | `collections` | 8 collection: ca-bien, thuc-vat-bien, giap-xac, bo-sat-bien, sinh-vat-doc, than-mem, san-ho, thu-bien |
 | `literature_sources` | Sách tham khảo hiển thị trên homepage |
