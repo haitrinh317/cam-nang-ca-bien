@@ -63,9 +63,37 @@ for sp_idx, idx, f, raw_line, name in sp_headers:
 sorted_sp = sorted(unique_headers.keys())
 print(f"Verified {len(sorted_sp)} species headers.")
 
-# Fetch DB records for fallback vn_name
-r_db = requests.get(f"{url}/rest/v1/species?collection_id=eq.than-mem&id=like.thanmem-tap2*&select=id,species_index,vn_name,scientific_name,authorship", headers=headers)
+# Fetch DB records for fallback vn_name and existing alternates
+r_db = requests.get(f"{url}/rest/v1/species?collection_id=eq.than-mem&id=like.thanmem-tap2*&select=id,species_index,vn_name,scientific_name,authorship,vn_alternate_names", headers=headers)
 db_records = {sp['species_index']: sp for sp in r_db.json()}
+
+def process_vietnamese_names(raw_vn_name, existing_alt=""):
+    raw = raw_vn_name.strip().rstrip('.').strip()
+    raw = re.sub(r'\s+hoặc\s+', ', ', raw, flags=re.IGNORECASE)
+    parts = [p.strip().rstrip('.').strip() for p in raw.split(',') if p.strip()]
+    if not parts:
+        return raw, existing_alt
+        
+    primary_name = parts[0]
+    if primary_name and primary_name[0].islower():
+        primary_name = primary_name[0].upper() + primary_name[1:]
+        
+    new_alts = []
+    for p in parts[1:]:
+        if p and p[0].islower():
+            p = p[0].upper() + p[1:]
+        if p and p.lower() != primary_name.lower() and p not in new_alts:
+            new_alts.append(p)
+            
+    if existing_alt:
+        for ea in [x.strip() for x in existing_alt.split(',') if x.strip()]:
+            if 'động vật' in ea.lower():
+                continue
+            if ea and ea.lower() != primary_name.lower() and ea not in new_alts:
+                new_alts.append(ea)
+                
+    alt_str = ', '.join(new_alts)
+    return primary_name, alt_str
 
 def clean_binomial_split(raw_line):
     s = re.sub(r'\(hình\s*\d+\)[\.\s]*$', '', raw_line, flags=re.IGNORECASE).strip()
@@ -215,8 +243,9 @@ def parse_species_record(sp_num):
     world_dist = "; ".join(world_dist_parts) if world_dist_parts else "Ấn Độ - Tây Thái Bình Dương (Indo-West Pacific)."
     val_vn = re.sub(r'\s+', ' ', " ".join(value_lines)).strip() if value_lines else "Chưa rõ."
 
-    # Fallback vn_name
+    # Fallback and standardization of vn_name & vn_alternate_names
     existing = db_records.get(sp_num, {})
+    existing_alt = existing.get('vn_alternate_names') or ''
     if not vn_name or len(vn_name) < 2:
         existing_vn = existing.get('vn_name', '')
         if existing_vn and 'chưa có' not in existing_vn.lower() and '#' not in existing_vn:
@@ -224,12 +253,15 @@ def parse_species_record(sp_num):
         else:
             vn_name = "Chưa có tên tiếng Việt chính thức"
 
+    vn_name, vn_alt = process_vietnamese_names(vn_name, existing_alt)
+
     return {
         "id": f"thanmem-tap2-species-{sp_num}",
         "species_index": sp_num,
         "scientific_name": sci_clean,
         "authorship": authorship,
         "vn_name": vn_name,
+        "vn_alternate_names": vn_alt,
         "synonyms": synonyms,
         "vn_size": vn_size,
         "vn_specimen": specimen,
@@ -248,6 +280,7 @@ def update_sp(sp_num):
         'scientific_name': rec['scientific_name'],
         'authorship': rec['authorship'],
         'vn_name': rec['vn_name'],
+        'vn_alternate_names': rec['vn_alternate_names'],
         'vn_size': rec['vn_size'],
         'vn_specimen': rec['vn_specimen'],
         'morphology_vn': rec['morphology_vn'],
