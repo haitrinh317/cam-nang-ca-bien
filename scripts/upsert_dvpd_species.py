@@ -78,11 +78,11 @@ def main():
             'genus': sp.get('taxonomy_genus', ''),
             'specimens_vnmn': sp.get('specimens', []),
             'environmental_indicator': True if any(kw in sp.get('ecology_vn', '').lower() for kw in ['chỉ thị', 'nước trồi', 'biển khơi', 'nước mặn']) else False,
-            'source_project': 'Bảo tàng Thiên nhiên Việt Nam (VNMN) 2016–2019 / Viện Hải dương học',
+            'source_project': 'Viện Hải dương học (2016–2019)',
             'atlat_captions': sp.get('captions', [])
         }
 
-        morph_desc = f"Đặc điểm hình thái và giải phẫu hiển vi xác định loài trên cơ sở tiêu bản mẫu vật {specimens_str if specimens_str else 'Bảo tàng Thiên nhiên Việt Nam (VNMN)'}. Tiêu bản chụp lát cắt vi thể độ nét cao."
+        morph_desc = f"Đặc điểm hình thái và giải phẫu hiển vi xác định loài trên cơ sở tiêu bản mẫu vật {specimens_str if specimens_str else 'Viện Hải dương học'}. Tiêu bản chụp lát cắt vi thể độ nét cao."
 
         row = {
             'id': sp_id,
@@ -103,15 +103,15 @@ def main():
             'tax_genus_latin': sp.get('taxonomy_genus', ''),
             'tax_genus_vn': f"Chi {sp.get('taxonomy_genus', '')}" if sp.get('taxonomy_genus') else '',
             'morphology_vn': morph_desc,
-            'morphology_en': 'Microscopic diagnostic morphology and anatomical dissection illustrated from VNMN museum specimens.',
+            'morphology_en': 'Microscopic diagnostic morphology and anatomical dissection illustrated from Institute of Oceanography museum specimens.',
             'ecology_vn': sp.get('ecology_vn', ''),
             'ecology_en': '',
             'vn_distribution': sp.get('vn_distribution', ''),
             'en_distribution': sp.get('en_distribution', ''),
-            'vn_specimen': specimens_str if specimens_str else 'Mẫu lưu trữ Bảo tàng Thiên nhiên Việt Nam (VNMN)',
-            'en_specimen': specimens_str if specimens_str else 'Vietnam National Museum of Nature (VNMN)',
+            'vn_specimen': specimens_str if specimens_str else 'Mẫu lưu trữ Viện Hải dương học',
+            'en_specimen': specimens_str if specimens_str else 'Institute of Oceanography',
             'vn_literature': sp.get('vn_literature', ''),
-            'en_literature': 'Atlas of Marine Planktonic Copepods in Vietnam (2016-2019), Truong Si Hai Trinh et al., Vietnam National Museum of Nature.',
+            'en_literature': 'Atlas of Marine Planktonic Copepods in Vietnam (2016-2019), Truong Si Hai Trinh et al., Institute of Oceanography.',
             'photo_url': sp.get('photo_url'),
             'worms_id': sp.get('worms_id'),
             'worms_status': sp.get('worms_status', ''),

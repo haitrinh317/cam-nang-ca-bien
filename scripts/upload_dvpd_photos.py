@@ -79,9 +79,9 @@ def main():
                             'species_id': sp_id,
                             'photo_url': pub_url,
                             'caption': cap_info,
-                            'source': 'Atlat Động vật phù du 2016–2019 (VNMN)',
-                            'photographer': 'TS. Trương Sĩ Hải Trình & CS / Bảo tàng Thiên nhiên Việt Nam (VNMN)',
-                            'license': 'VNMN Academic Research',
+                            'source': 'Atlat Động vật phù du 2016–2019 (Viện Hải dương học)',
+                            'photographer': 'TS. Trương Sĩ Hải Trình & CS / Viện Hải dương học',
+                            'license': 'Viện Hải dương học',
                             'is_primary': (s_idx == 1),
                             'sort_order': s_idx
                         })

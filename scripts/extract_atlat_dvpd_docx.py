@@ -207,7 +207,7 @@ def extract_dvpd():
             'captions': sp['captions'],
             'images': sp['images'],
             'image_count': len(sp['images']),
-            'vn_literature': "Atlat Động vật phù du (2016–2019) — TS. Trương Sĩ Hải Trình & CS (Viện Hải dương học, Viện Hàn lâm KHCN Việt Nam / Bảo tàng Thiên nhiên Việt Nam VNMN)."
+            'vn_literature': "Atlat Động vật phù du (2016–2019) — TS. Trương Sĩ Hải Trình & CS (Viện Hải dương học, Viện Hàn lâm KHCN Việt Nam)."
         }
         final_list.append(item)
         idx += 1

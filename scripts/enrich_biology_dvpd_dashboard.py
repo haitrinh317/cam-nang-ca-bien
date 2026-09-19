@@ -74,7 +74,7 @@ def main():
         habitat_vn = sp.get('ecology_vn', '') or 'Vùng biển ven bờ đến viễn duyên (neritic-oceanic); tầng mặt hải dương (epipelagic)'
 
         specimens = sp.get('specimens', [])
-        spec_text = f"tiêu bản {', '.join(specimens)}" if specimens else "mẫu vật nghiên cứu Bảo tàng Thiên nhiên Việt Nam"
+        spec_text = f"tiêu bản {', '.join(specimens)}" if specimens else "mẫu vật nghiên cứu Viện Hải dương học"
 
         # Cấu trúc hoàn chỉnh cho BiologyDashboard
         new_biology = {
@@ -103,7 +103,7 @@ def main():
             'ecologyNotes': sp.get('en_distribution', '') or eco_remarks,
             'ecologyNotesVn': f"{sp.get('ecology_vn', '')}. Phân bố tại Việt Nam: {sp.get('vn_distribution', '')}.",
             
-            # Trường chuyên sâu Banyuls & Mẫu vật VNMN
+            # Trường chuyên sâu Banyuls & Mẫu vật
             'banyuls_database_id': old_bio.get('banyuls_database_id'),
             'banyuls_url': old_bio.get('banyuls_url'),
             'banyuls_full_name': old_bio.get('banyuls_full_name'),
@@ -114,7 +114,7 @@ def main():
             'subclass': 'Copepoda',
             'order': sp.get('taxonomy_order', 'Calanoida'),
             'family': sp.get('taxonomy_family', ''),
-            'source_project': 'Bảo tàng Thiên nhiên Việt Nam (VNMN) 2016–2019 / Viện Hải dương học'
+            'source_project': 'Viện Hải dương học (2016–2019)'
         }
 
         # Cập nhật vào Supabase

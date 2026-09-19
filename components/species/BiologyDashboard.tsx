@@ -670,7 +670,7 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
 
             {bio.specimens_vnmn && bio.specimens_vnmn.length > 0 && (
               <div className="bio-item-row">
-                <span className="bio-item-label">Mẫu vật lưu trữ tại Bảo tàng Thiên nhiên Việt Nam</span>
+                <span className="bio-item-label">Mẫu vật lưu trữ tại Viện Hải dương học</span>
                 <div className="bio-tag-cloud">
                   {bio.specimens_vnmn.map((code, idx) => (
                     <span key={idx} className="bio-tag bio-tag--primary">
