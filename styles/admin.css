@@ -1286,6 +1286,11 @@
   background: #38bdf8;
 }
 
+.admin-kpi-card--dongvatphudu::before,
+.admin-kpi-card--phudu::before {
+  background: #38bdf8;
+}
+
 .admin-kpi-card--lit::before {
   background: #6366f1;
 }

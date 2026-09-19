@@ -21,6 +21,7 @@ import {
   ShieldCheck,
   Image as ImageIcon,
   Database,
+  Microscope,
 } from 'lucide-react'
 
 interface Props {
@@ -41,14 +42,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const COLLECTION_ICONS: Record<string, { icon: React.ElementType; color: string; bg: string }> = {
-  'ca-bien':        { icon: Fish,      color: '#0f766e', bg: '#e0f7f4' },
-  'thuc-vat-bien':  { icon: Leaf,      color: '#059669', bg: '#ecfdf5' },
-  'giap-xac':       { icon: Shrimp,    color: '#dc2626', bg: '#fef2f2' },
-  'bo-sat-bien':    { icon: Turtle,    color: '#d97706', bg: '#fffbeb' },
-  'sinh-vat-doc':   { icon: Biohazard, color: '#e11d48', bg: '#fff1f2' },
-  'than-mem':       { icon: Shell,     color: '#7c3aed', bg: '#f5f3ff' },
-  'san-ho':         { icon: Sparkles,  color: '#db2777', bg: '#fdf2f8' },
-  'thu-bien':       { icon: Waves,     color: '#0284c7', bg: '#f0f9ff' },
+  'ca-bien':        { icon: Fish,       color: '#0f766e', bg: '#e0f7f4' },
+  'thuc-vat-bien':  { icon: Leaf,       color: '#059669', bg: '#ecfdf5' },
+  'giap-xac':       { icon: Shrimp,     color: '#dc2626', bg: '#fef2f2' },
+  'bo-sat-bien':    { icon: Turtle,     color: '#d97706', bg: '#fffbeb' },
+  'sinh-vat-doc':   { icon: Biohazard,  color: '#e11d48', bg: '#fff1f2' },
+  'than-mem':       { icon: Shell,      color: '#7c3aed', bg: '#f5f3ff' },
+  'san-ho':         { icon: Sparkles,   color: '#db2777', bg: '#fdf2f8' },
+  'thu-bien':       { icon: Waves,      color: '#0284c7', bg: '#f0f9ff' },
+  'dong-vat-phu-du':{ icon: Microscope, color: '#0891b2', bg: '#ecfeff' },
 }
 
 export default async function AdminCollectionPage({ params }: Props) {

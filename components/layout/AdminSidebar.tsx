@@ -7,7 +7,7 @@ import AuthStatus from '@/components/layout/AuthStatus'
 import { 
   LayoutDashboard, BookOpen, ExternalLink, Fish, Leaf, 
   Shrimp, Turtle, Biohazard, Shell, Sparkles, Waves, 
-  PanelLeftClose, PanelLeftOpen, Compass, ShieldCheck
+  PanelLeftClose, PanelLeftOpen, Compass, ShieldCheck, Microscope
 } from 'lucide-react'
 import { db } from '@/lib/supabase-browser'
 
@@ -30,6 +30,7 @@ const ECO_NAV: EcoNavItem[] = [
   { href: '/admin/than-mem',      label: 'Động vật thân mềm',   shortLabel: 'Thân mềm',      icon: Shell,     color: '#c084fc', slug: 'than-mem',      defaultCount: 74 },
   { href: '/admin/san-ho',        label: 'San hô Việt Nam',     shortLabel: 'San hô',        icon: Sparkles,  color: '#f472b6', slug: 'san-ho',        defaultCount: 42 },
   { href: '/admin/thu-bien',      label: 'Thú biển Việt Nam',   shortLabel: 'Thú biển',      icon: Waves,     color: '#38bdf8', slug: 'thu-bien',      defaultCount: 34 },
+  { href: '/admin/dong-vat-phu-du', label: 'Động vật phù du',   shortLabel: 'Phù du',        icon: Microscope, color: '#38bdf8', slug: 'dong-vat-phu-du', defaultCount: 101 },
 ]
 
 export default function AdminSidebar() {
@@ -44,6 +45,7 @@ export default function AdminSidebar() {
     'than-mem': 74,
     'san-ho': 42,
     'thu-bien': 34,
+    'dong-vat-phu-du': 101,
   })
 
   // Read saved collapse state from localStorage

@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Home, Fish, Leaf, Shrimp, Layers, X, ArrowRight, Sparkles, Turtle, Biohazard, Shell, Waves } from 'lucide-react'
+import { Home, Fish, Leaf, Shrimp, Layers, X, ArrowRight, Sparkles, Turtle, Biohazard, Shell, Waves, Microscope } from 'lucide-react'
 
 interface CollectionItem {
   slug: string
@@ -93,6 +93,16 @@ const COLLECTIONS_LIST: CollectionItem[] = [
     desc: 'Cá voi, cá heo, cá nhà táng & bò biển',
     stats: '34 loài • 1 tập',
     icon: <Waves size={24} color="#38bdf8" strokeWidth={1.75} />,
+    accent: '#38bdf8',
+    available: true,
+  },
+  {
+    slug: 'dong-vat-phu-du',
+    name: 'Động vật phù du',
+    nameEn: 'Marine Zooplankton of Vietnam',
+    desc: 'Giáp xác chân chèo Copepoda vi thể',
+    stats: '101 loài • 1 tập',
+    icon: <Microscope size={24} color="#38bdf8" strokeWidth={1.75} />,
     accent: '#38bdf8',
     available: true,
   },

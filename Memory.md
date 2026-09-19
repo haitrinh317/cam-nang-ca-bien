@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-16 (Deploy Production `0024c86`: Chuẩn hóa tách tên chính và tên gọi khác cho 143 loài Bivalvia Tập 2 Đỗ Công Thung 2015) | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-19 (Triển khai hoàn tất Phân hệ thứ 9 `dong-vat-phu-du`: 101 loài Giáp xác chân chèo Copepoda, 103 ảnh vi thể VNMN, tích hợp CSDL Banyuls) | **Production:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 ---
@@ -21,7 +21,7 @@
 
 ---
 
-## 📊 Kiểm Kê Dữ Liệu — 2,971 loài | Sách Đỏ VAST: 122 loài (100% Golden Standard)
+## 📊 Kiểm Kê Dữ Liệu — 3,072 loài (9 Phân hệ) | Sách Đỏ VAST: 122 loài (100% Golden Standard)
 
 | Collection | Loài | WoRMS | Trạng thái |
 |---|:---:|:---:|---|
@@ -29,6 +29,7 @@
 | `thuc-vat-bien` (Tập 1-2) | 672 | 100% | ✅ Hoàn chỉnh (201 + 471 ảnh tiêu bản) |
 | `than-mem` (Tập 1-2) | 217 | 100% | ✅ 74 Ốc sứ (Hylleberg 2003) + 143 Hai mảnh vỏ Bivalvia (Đỗ Công Thung 2015) + 100% WoRMS & SeaLifeBase + 302 ảnh WebP (74.1%) + 7 loài Sách Đỏ VAST |
 | `giap-xac` | 132 | 100% | ✅ 99.2% SeaLifeBase + 100% Song ngữ (VN/EN specs) + 47.0% ảnh iNat (62/132 loài, 178 ảnh WebP) |
+| `dong-vat-phu-du` | 101 | 99.0% | ✅ 101 loài Copepoda (Atlat ĐVPD 2016–2019, TS. Trương Sĩ Hải Trình & CS) + 98% CSDL Banyuls (Sorbonne/CNRS) + 103 ảnh vi thể VNMN (98% có ảnh) + 0% Skeleton |
 | `sinh-vat-doc` | 76 | 100% | ✅ 100% Toxicology + 100% SeaLifeBase cho nhóm thân mềm/sứa/nhum độc + 80 ảnh thực địa |
 | `san-ho` | 42 | 100% | ✅ 100% WoRMS & 100% Sách chuyên khảo (Đã bù trang 102 loài 29 & 30) + 20 loài SeaLifeBase v25.04 |
 | `thu-bien` | 34 | 100% | ✅ 1 Bò biển + 33 Cá voi (gồm Cá nhà táng) + 100% SeaLifeBase + 100 ảnh iNat CC-BY + 100% Sách Đỏ VAST Golden Standard + 100% Complete Audit |

@@ -4,8 +4,8 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { t } from '@/lib/i18n'
-import HeaderControls from './HeaderControls'
-import { Fish, Leaf, Shrimp, ChevronDown, Layers, Turtle, Biohazard, Shell, Sparkles, Waves } from 'lucide-react'
+import { Fish, Leaf, Shrimp, ChevronDown, Layers, Turtle, Biohazard, Shell, Sparkles, Waves, Microscope } from 'lucide-react'
+import HeaderControls from '@/components/layout/HeaderControls'
 
 interface DropdownCollection {
   slug: string
@@ -71,6 +71,14 @@ const DROPDOWN_COLLECTIONS: DropdownCollection[] = [
     nameEn: 'Marine Mammals',
     stats: '34 loài • 1 tập',
     icon: <Waves size={19} color="#38bdf8" strokeWidth={1.75} />,
+    accentColor: '#38bdf8',
+  },
+  {
+    slug: 'dong-vat-phu-du',
+    nameVn: 'Động vật phù du',
+    nameEn: 'Marine Zooplankton',
+    stats: '101 loài • 1 tập',
+    icon: <Microscope size={19} color="#38bdf8" strokeWidth={1.75} />,
     accentColor: '#38bdf8',
   },
 ]

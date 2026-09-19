@@ -29,6 +29,14 @@
 ## 🔲 Đang chờ / WIP
 
 ### Ưu tiên cao 🔥
+- [ ] **Triển khai 101 loài Động vật phù du (Copepoda 2016–2019) theo quy trình 7 bước (WIP)**:
+  - [x] Bước ①: Bóc tách DOCX sang Staging (101 loài độc bản + 103 ảnh vi thể VNMN)
+  - [x] Bước ②: WoRMS Sync (100/101 loài xác thực danh pháp quốc tế)
+  - [x] Bước ④: Upload 103 ảnh vi thể WebP lên Supabase Storage bucket `species-photos`
+  - [x] Bước ⑤: Khởi tạo Collection `dong-vat-phu-du` trong DB & nạp 101 loài vào `species` (103 ảnh vào `species_photos`)
+  - [x] Bước ⑥: Cập nhật Nav, BottomNav, AdminSidebar và KPI Dashboard (9 phân hệ)
+  - [ ] Bước ③: Enrichment chuyên ngành Copepoda (CSDL Banyuls `copepodes.obs-banyuls.fr`)
+  - [ ] Bước ⑦: Audit Sinh vật kiểm tra chất lượng (>90% Complete, 0% Skeleton)
 - [ ] Mở rộng collection `than-mem` Phase 3 cho các họ tiếp theo từ Hylleberg 2003
 - [ ] Chuẩn bị Hợp nhất Phase 4 cho Thân mềm độc (11 loài ốc cối, bạch tuộc)
 - [ ] Admin Phase 2: CSV Import + Inline Edit nhanh

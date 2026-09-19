@@ -566,6 +566,40 @@ export const REGISTRY: Record<string, CollectionDef> = {
       },
     ],
   },
+  'dong-vat-phu-du': {
+    id: 'dong-vat-phu-du',
+    slug: 'dong-vat-phu-du',
+    nameVn: 'Động vật phù du Việt Nam',
+    nameEn: 'Marine Zooplankton of Vietnam',
+    icon: '🔬',
+    accentColor: '#38bdf8',
+    volumeCount: 1,
+    status: 'active',
+    sortOrder: 9,
+    books: [
+      {
+        id: 'atlat-dvpd-2016-2019',
+        title: 'Atlat Động vật phù du Việt Nam (2016 – 2019)',
+        badge: 'Giáp xác chân chèo (101 loài)',
+        author: 'TS. Trương Sĩ Hải Trình & CS',
+        publisher: 'Bảo tàng Thiên nhiên Việt Nam (VNMN) & Viện Hải dương học',
+        yearRange: '2016 – 2019',
+        totalSpecies: 101,
+        description: 'Tập hợp ảnh mẫu vi thể hiển vi độ nét cao và hồ sơ phân loại học, sinh học - sinh thái, phân bố địa lý của 101 loài Giáp xác chân chèo (Copepoda) thu thập tại các vùng biển Việt Nam, lưu trữ mẫu vật tại Bảo tàng Thiên nhiên Việt Nam.',
+        volumes: [
+          {
+            volume: 1,
+            roman: 'I',
+            year: '2019',
+            title: 'Atlat Giáp xác chân chèo (Copepoda)',
+            subTitle: 'Phân loại học, sinh học - sinh thái, phân bố và mẫu vật nghiên cứu Bảo tàng Thiên nhiên Việt Nam',
+            author: 'TS. Trương Sĩ Hải Trình & CS',
+            speciesCount: 101,
+          },
+        ],
+      },
+    ],
+  },
 }
 
 // ─── DERIVED COMPATIBILITY EXPORTS ────────────────────────────────────

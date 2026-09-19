@@ -23,6 +23,7 @@ import {
   Image,
   ShieldCheck,
   ExternalLink,
+  Microscope,
 } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -102,6 +103,7 @@ export default async function AdminDashboard() {
     { count: thanMemCount },
     { count: sanHoCount },
     { count: thuBienCount },
+    { count: dvpdCount },
     { count: litCount },
     { count: photosCount },
     { count: wormsVerifiedCount },
@@ -119,6 +121,7 @@ export default async function AdminDashboard() {
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'than-mem').is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'san-ho').is('deleted_at', null),
     db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'thu-bien').is('deleted_at', null),
+    db.from('species').select('*', { count: 'exact', head: true }).eq('collection_id', 'dong-vat-phu-du').is('deleted_at', null),
     db.from('literature_sources').select('*', { count: 'exact', head: true }),
     db.from('species_photos').select('*', { count: 'exact', head: true }),
     db.from('species').select('*', { count: 'exact', head: true }).not('worms_id', 'is', null).is('deleted_at', null),
@@ -141,7 +144,8 @@ export default async function AdminDashboard() {
     (sinhVatDocCount || 0) +
     (thanMemCount || 0) +
     (sanHoCount || 0) +
-    (thuBienCount || 0)
+    (thuBienCount || 0) +
+    (dvpdCount || 0)
   )
 
   const volCounts = volResults.map((r) => r.count ?? 0)
@@ -162,6 +166,7 @@ export default async function AdminDashboard() {
     { name: 'San hô', count: sanHoCount || 0, color: '#f472b6', slug: 'san-ho' },
     { name: 'Thú biển', count: thuBienCount || 0, color: '#38bdf8', slug: 'thu-bien' },
     { name: 'Bò sát biển', count: boSatCount || 0, color: '#f59e0b', slug: 'bo-sat-bien' },
+    { name: 'Động vật phù du', count: dvpdCount || 0, color: '#06b6d4', slug: 'dong-vat-phu-du' },
   ]
 
   return (
@@ -171,7 +176,7 @@ export default async function AdminDashboard() {
         <div>
           <h1 className="admin-page__title">Trung Tâm Chỉ Huy Dữ Liệu</h1>
           <p className="admin-page__subtitle">
-            Hệ thống giám sát &amp; quản trị CSDL Đa dạng Sinh học Biển Việt Nam — 8 Phân hệ sinh thái
+            Hệ thống giám sát &amp; quản trị CSDL Đa dạng Sinh học Biển Việt Nam — 9 Phân hệ sinh thái
           </p>
         </div>
         <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
@@ -194,7 +199,7 @@ export default async function AdminDashboard() {
             <div className="admin-hero-card__head">
               <span className="admin-live-badge">
                 <span className="admin-live-pulse" aria-hidden="true" />
-                <span>CSDL TRỰC TUYẾN · 8 PHÂN HỆ</span>
+                <span>CSDL TRỰC TUYẾN · 9 PHÂN HỆ</span>
               </span>
               <span style={{ fontSize: '0.74rem', color: 'rgba(240, 253, 249, 0.5)', fontFamily: 'var(--font-outlier)' }}>
                 Supabase RLS Protected
@@ -359,7 +364,7 @@ export default async function AdminDashboard() {
           <Turtle size={15} style={{ color: '#f59e0b' }} aria-hidden="true" />
           <span>Động Vật Đặc Thù &amp; Bảo Tồn Cấp Thiết</span>
         </span>
-        <span className="admin-group-count">4 Phân hệ</span>
+        <span className="admin-group-count">5 Phân hệ</span>
       </div>
 
       <section className="admin-kpi-grid" aria-label="Động vật đặc thù và bảo tồn">
@@ -397,6 +402,15 @@ export default async function AdminDashboard() {
           </div>
           <p className="admin-kpi-card__value">{(sinhVatDocCount || 0).toLocaleString('vi-VN')}</p>
           <p className="admin-kpi-card__sub">Nọc độc, ngộ độc &amp; gai độc biển</p>
+        </Link>
+
+        <Link href="/admin/dong-vat-phu-du" className="admin-kpi-card admin-kpi-card--dongvatphudu" title="Quản lý Động vật phù du">
+          <div className="admin-kpi-card__header">
+            <h3 className="admin-kpi-card__title">Động vật phù du</h3>
+            <div className="admin-kpi-card__icon" aria-hidden="true"><Microscope size={18} /></div>
+          </div>
+          <p className="admin-kpi-card__value">{(dvpdCount || 0).toLocaleString('vi-VN')}</p>
+          <p className="admin-kpi-card__sub">Copepoda &amp; Phù du chân mái chèo</p>
         </Link>
       </section>
 

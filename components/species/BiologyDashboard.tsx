@@ -16,7 +16,8 @@ import {
   Turtle,
   Biohazard,
   BookOpen,
-  ExternalLink
+  ExternalLink,
+  Microscope
 } from 'lucide-react'
 import IucnBadge from './IucnBadge'
 import VnRedListBadge, { VnRedListInfo } from './VnRedListBadge'
@@ -73,6 +74,17 @@ export interface BiologyData {
     license_code?: string
     photo_url?: string
   }
+  banyuls_database_id?: string | number
+  banyuls_url?: string
+  banyuls_full_name?: string
+  dimensions_banyuls?: {
+    summary?: string
+    female_mm?: string
+    male_mm?: string
+  }
+  global_quotations_count?: string
+  specimens_vnmn?: string[]
+  environmental_indicator?: boolean
 }
 
 interface Props {
@@ -105,8 +117,17 @@ function formatWeight(raw?: string): { main: string; unit: string; note?: string
 /** Format chiều dài hiển thị gọn gàng */
 function formatLength(raw?: string): { main: string; unit: string; type?: string } | null {
   if (!raw) return null
+  const isMm = raw.toLowerCase().includes('mm')
+  const isMeter = raw.toLowerCase().includes('m') && !raw.toLowerCase().includes('cm') && !isMm
+  const defaultUnit = isMm ? 'mm' : (isMeter ? 'm' : 'cm')
+
+  // Nếu chuỗi chứa F và M (đặc thù ĐVPD / Copepoda)
+  if (raw.includes('F:') || raw.includes('M:') || raw.includes('(F)') || raw.includes('(M)')) {
+    return { main: raw.replace(/\s*mm/g, '').trim(), unit: 'mm', type: 'Dải kích thước cá thể F / M' }
+  }
+
   const num = parseNumber(raw)
-  if (num === null) return { main: raw, unit: '' }
+  if (num === null) return { main: raw, unit: defaultUnit }
 
   let type = ''
   if (raw.includes('SL')) type = 'Chiều dài chuẩn (SL)'
@@ -114,8 +135,8 @@ function formatLength(raw?: string): { main: string; unit: string; type?: string
   else if (raw.includes('FL')) type = 'Chiều dài chẽ đuôi (FL)'
   else if (raw.includes('WD')) type = 'Chiều rộng đĩa (WD)'
 
-  const formatted = num >= 10 ? Math.round(num).toLocaleString() : num.toFixed(1)
-  return { main: formatted, unit: 'cm', type }
+  const formatted = num >= 10 ? Math.round(num).toLocaleString() : num.toFixed(2)
+  return { main: formatted, unit: defaultUnit, type }
 }
 
 /** Format tuổi thọ */
@@ -299,6 +320,9 @@ function getCollectionMeta(collectionId?: string | null, speciesId?: string, sou
   }
   if (collectionId === 'san-ho' || speciesId?.startsWith('sanho-')) {
     return { Icon: Sparkles, iconClass: '', iconStyle: { color: '#f472b6' }, srcName: source || 'SeaLifeBase' }
+  }
+  if (collectionId === 'dong-vat-phu-du' || speciesId?.startsWith('dvpd-')) {
+    return { Icon: Microscope, iconClass: 'text-cyan-400', srcName: source || 'Banyuls Copepoda' }
   }
   return { Icon: Fish, iconClass: 'text-cyan-500', srcName: source || 'FishBase' }
 }
@@ -600,6 +624,65 @@ export default function BiologyDashboard({ bio, speciesId, collectionId }: Props
           </div>
         </div>
       </div>
+
+      {/* ─── KHỐI CHUYÊN BIỆT: CSDL BANYULS COPEPODA & MẪU VẬT BẢO TÀNG THIÊN NHIÊN VN (VNMN) ─── */}
+      {(bio.banyuls_url || (bio.specimens_vnmn && bio.specimens_vnmn.length > 0)) && (
+        <div className="bio-group-card" style={{ marginTop: '1.25rem' }}>
+          <div className="bio-group-card__header">
+            <Microscope size={18} className="text-cyan-400" />
+            <span>Hồ Sơ Giám Định Hiển Vi &amp; CSDL Phù Du Quốc Tế (Banyuls / Sorbonne / CNRS)</span>
+          </div>
+          <div className="bio-group-card__list">
+            {bio.banyuls_url && (
+              <div className="bio-item-row">
+                <span className="bio-item-label">Cơ sở dữ liệu Quốc tế Banyuls Copepoda</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
+                  <a
+                    href={bio.banyuls_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Mở hồ sơ chẩn loại hiển vi trên Biodiversity of Marine Planktonic Copepods"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '5px',
+                      fontSize: '0.8rem',
+                      padding: '4px 12px',
+                      borderRadius: '6px',
+                      color: '#06b6d4',
+                      border: '1px solid rgba(6, 182, 212, 0.4)',
+                      background: 'rgba(6, 182, 212, 0.08)',
+                      fontWeight: 600,
+                      textDecoration: 'none'
+                    }}
+                  >
+                    <span>Thẻ loài Banyuls ID #{bio.banyuls_database_id} ({bio.banyuls_full_name || bio.fbName})</span>
+                    <ExternalLink size={12} />
+                  </a>
+                  {bio.global_quotations_count && (
+                    <span style={{ fontSize: '0.78rem', color: 'var(--color-ink-3)' }}>
+                      Dẫn liệu nghiên cứu: {bio.global_quotations_count}
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {bio.specimens_vnmn && bio.specimens_vnmn.length > 0 && (
+              <div className="bio-item-row">
+                <span className="bio-item-label">Mẫu vật lưu trữ tại Bảo tàng Thiên nhiên Việt Nam</span>
+                <div className="bio-tag-cloud">
+                  {bio.specimens_vnmn.map((code, idx) => (
+                    <span key={idx} className="bio-tag bio-tag--primary">
+                      {code}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* ─── HỒ SƠ BẢO TỒN & SÁCH ĐỎ VIỆT NAM (VAST 2024) - HERO CARD FULL-WIDTH ─── */}
       {bio.vnRedList && (
