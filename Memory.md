@@ -1,7 +1,8 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-19 (Triển khai hoàn tất Phân hệ thứ 9 `dong-vat-phu-du`: 101 loài Giáp xác chân chèo Copepoda, 103 ảnh vi thể VNMN, tích hợp CSDL Banyuls) | **Production:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-09-19 (Commit: `6ad781f` — Triển khai hoàn tất Phân hệ thứ 9 `dong-vat-phu-du`: 101 loài Giáp xác chân chèo Copepoda, 103 ảnh vi thể VNMN, tích hợp CSDL Banyuls) | **Production Live:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
+
 
 ---
 
