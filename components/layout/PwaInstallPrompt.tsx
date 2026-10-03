@@ -1,18 +1,21 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 
 // ponytail: Safari PWA APIs not in standard TS lib
 declare global {
   interface Navigator { standalone?: boolean }
   interface Window { MSStream?: unknown }
+  interface BeforeInstallPromptEvent extends Event {
+    prompt(): Promise<void>
+    userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
+  }
 }
 
 export function PwaInstallPrompt() {
   const [isOpen, setIsOpen] = useState(false)
   const [isIos, setIsIos] = useState(false)
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null)
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
 
   useEffect(() => {
     // 1. Kiểm tra nếu đang mở trong ứng dụng PWA đã cài đặt (Standalone Mode)
@@ -36,7 +39,7 @@ export function PwaInstallPrompt() {
     // 4. Bắt sự kiện beforeinstallprompt trên Android Chrome / Chromium
     const handleBeforeInstall = (e: Event) => {
       e.preventDefault()
-      setDeferredPrompt(e)
+      setDeferredPrompt(e as BeforeInstallPromptEvent)
     }
     window.addEventListener('beforeinstallprompt', handleBeforeInstall)
 

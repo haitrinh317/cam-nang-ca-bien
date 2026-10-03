@@ -44,7 +44,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   ])
   if (!data) return { title: 'Loài không tìm thấy' }
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
   const primaryPhoto = photos?.[0]
   const photoUrl = resolvePhotoUrl(primaryPhoto)
 

@@ -17,11 +17,6 @@ export function getLocale(): string {
   return localStorage.getItem(STORAGE_KEY) || DEFAULT_LOCALE
 }
 
-export function setLocale(locale: string): void {
-  localStorage.setItem(STORAGE_KEY, locale)
-  document.documentElement.lang = locale
-}
-
 /** Resolve dot-path key: t('nav.home') → 'Trang Chủ' */
 export function t(key: string, locale?: string): string {
   const lang = locale || getLocale()
@@ -33,10 +28,4 @@ export function t(key: string, locale?: string): string {
     val = (val as Record<string, unknown>)[p]
   }
   return typeof val === 'string' ? val : key
-}
-
-/** Get all strings for a locale */
-export function getStrings(locale?: string): Strings {
-  const lang = locale || getLocale()
-  return localeMap[lang] || localeMap[DEFAULT_LOCALE]
 }

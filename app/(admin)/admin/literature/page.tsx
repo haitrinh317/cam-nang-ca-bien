@@ -6,7 +6,7 @@ import { db } from '@/lib/supabase-browser'
 import { 
   BookOpen, Plus, Pencil, Trash2, Eye, EyeOff, Search, 
   LayoutGrid, Table as TableIcon, ExternalLink, Compass, 
-  Leaf, Fish, Anchor, Shell, Waves, X, Check, BookMarked,
+  Leaf, Fish, Anchor, Shell, Waves, X, BookMarked,
   Library, Sparkles, Layers, Bookmark, ChevronLeft, ChevronRight
 } from 'lucide-react'
 import { STATIC_COLLECTIONS } from '@/lib/collection-registry'

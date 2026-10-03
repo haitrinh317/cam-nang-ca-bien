@@ -1,11 +1,11 @@
 /**
- * middleware.ts — Protect /admin/* routes
+ * proxy.ts (Next 16, formerly middleware.ts) — Protect /admin/* routes
  * Redirect to /login if no Supabase session.
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const res = NextResponse.next()
 
   // Only guard /admin paths

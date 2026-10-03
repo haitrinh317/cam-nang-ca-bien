@@ -9,7 +9,6 @@ import {
   Sparkles, 
   Camera, 
   BookOpen, 
-  CheckCircle2, 
   AlertTriangle,
   Zap
 } from 'lucide-react'
@@ -35,8 +34,6 @@ interface ToxicologyWidgetProps {
 
 export default function ToxicologyWidget({
   toxicology,
-  speciesName,
-  scientificName
 }: ToxicologyWidgetProps) {
   if (!toxicology) return null
 

@@ -1,7 +1,7 @@
 import '@/styles/about.css'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, BookOpen, ShieldCheck, Sparkles, Globe, HeartHandshake, Compass, Library, CheckCircle2 } from 'lucide-react'
+import { ArrowLeft, BookOpen, Sparkles, Globe, HeartHandshake, Compass, Library, CheckCircle2 } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Giới thiệu',

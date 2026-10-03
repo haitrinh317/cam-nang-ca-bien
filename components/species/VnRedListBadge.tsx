@@ -1,16 +1,5 @@
 import React from 'react'
 
-export const VN_REDLIST_COLOR: Record<string, string> = {
-  LC: '#22c55e', // Ít quan tâm
-  NT: '#84cc16', // Gần bị đe dọa
-  VU: '#f59e0b', // Sắp nguy cấp
-  EN: '#ea580c', // Nguy cấp
-  CR: '#dc2626', // Cực kỳ nguy cấp
-  EW: '#7c3aed', // Tuyệt chủng ngoài tự nhiên
-  EX: '#475569', // Tuyệt chủng
-  DD: '#64748b', // Thiếu dữ liệu
-}
-
 export const VN_REDLIST_LABEL: Record<string, string> = {
   LC: 'Ít quan tâm',
   NT: 'Gần bị đe dọa',

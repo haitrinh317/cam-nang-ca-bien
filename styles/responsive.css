@@ -64,7 +64,6 @@
 
   .hamburger-btn { display: none !important; }
 
-
   .nav-links {
     position: fixed;
     top: 0;
@@ -149,23 +148,10 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .section-browse { padding: 0 var(--space-md); }
-
-  .bio-grid  { grid-template-columns: 1fr; gap: 0; }
-
   /* Specimen card mobile */
   .specimen__hero { padding: var(--space-md) var(--space-md) var(--space-sm); }
   .specimen__name { font-size: clamp(1.5rem, 6.5vw, var(--text-display-s)); }
-  .specimen__taxonomy { padding: var(--space-sm) var(--space-md); }
-  .specimen__section { padding: var(--space-md) var(--space-md); }
-  /* kv-row collapses at 900px (covers iPad Air portrait) — see separate rule below */
-  .specimen details.synonym-details { margin: 0; }
-  .specimen .biology-panel { margin: 0; }
-}
 
-/* ─── kv-row: 1-column dưới 900px để cover cả iPad Air portrait ─── */
-@media (max-width: 900px) {
-  .kv-row { grid-template-columns: 1fr; gap: var(--space-sm); }
 }
 
 /* ═══════════════════════════════════════════
@@ -195,12 +181,7 @@
   .specimen__hero {
     padding: var(--space-lg) var(--space-lg) var(--space-md);
   }
-  .specimen__section {
-    padding: var(--space-md) var(--space-lg);
-  }
-  .kv-row {
-    gap: var(--space-md);
-  }
+
 }
 
 /* ═══════════════════════════════════════════
@@ -216,20 +197,15 @@
     margin: 0 var(--space-2xs);
     height: 24px;
   }
-  .section-browse { margin-bottom: var(--space-2xl); }
-  .section-browse-header { margin-bottom: var(--space-lg); }
+
   .hero h1 { font-size: clamp(1.75rem, 10vw, 2.5rem); }
 
   .vol-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-sm); }
   .vol-card { padding: var(--space-lg) var(--space-md); }
   .vol-card-num { font-size: var(--text-3xl); }
 
-  .grid-species { grid-template-columns: 1fr; }
-
   .specimen__hero { padding: var(--space-xl) var(--space-md) var(--space-md); }
-  .specimen__section { padding: var(--space-lg) var(--space-md); }
-  .specimen details.synonym-details { margin: 0 var(--space-md) var(--space-md); }
-  .specimen .biology-panel { margin: 0 var(--space-md) var(--space-md); }
+
 }
 
 /* ═══════════════════════════════════════════
@@ -241,6 +217,4 @@
   .hero__stat-label { font-size: 0.72rem; }
   .hero__stat-divider { margin: 0 2px; }
 }
-
-
 

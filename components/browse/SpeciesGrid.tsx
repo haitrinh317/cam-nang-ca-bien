@@ -8,12 +8,10 @@ import { db } from '@/lib/supabase-browser'
 import {
   getBooksForCollection,
   BookMetadata,
-  VolumeMetadata,
   getSpecialGroup,
-  SpecialGroupConfig,
 } from '@/lib/collection-registry'
 import { applySpeciesFilters } from '@/lib/species-query'
-import { BookOpen, Layers, Search, ArrowRight, ArrowLeft, CheckCircle2, Sparkles, X, Compass, Waves } from 'lucide-react'
+import { BookOpen, Layers, Search, ArrowRight, ArrowLeft, CheckCircle2, Sparkles, Compass, Waves } from 'lucide-react'
 import './SpecialGroupBanner.css'
 
 // ponytail: sessionStorage key for scroll restoration when returning from species detail

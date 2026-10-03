@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import { db } from '@/lib/supabase-browser'
-import { SPECIES_PHOTOS_BUCKET, getSpeciesPhotoUrl } from '@/lib/species-photos'
+import { getSpeciesPhotoUrl } from '@/lib/species-photos'
 import { Camera, Upload, Star, Trash2, Loader2, User } from 'lucide-react'
 
 interface Photo {

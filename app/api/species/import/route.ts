@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
     collection_id,
   }))
 
-  const { data, error, count } = await db
+  const { data, error } = await db
     .from('species')
     .upsert(rows, { onConflict: 'id' })
     .select('id')

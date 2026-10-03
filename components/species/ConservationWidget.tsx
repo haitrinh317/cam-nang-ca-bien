@@ -193,9 +193,15 @@ export default function ConservationWidget({
   vnRedList,
   iucnStatus,
   iucnTaxonId,
-  speciesName,
-  scientificName,
 }: ConservationWidgetProps) {
+  // Hooks must run before any early return (rules-of-hooks)
+  const threats = vnRedList?.threats
+  const population = vnRedList?.population
+  const conservation = vnRedList?.conservation
+  const threatParagraphs = React.useMemo(() => cleanThreats(threats), [threats])
+  const populationData = React.useMemo(() => cleanPopulation(population), [population])
+  const conservationData = React.useMemo(() => cleanConservation(conservation), [conservation])
+
   if (!vnRedList) return null
 
   const statusCode = (vnRedList.status || '').toUpperCase().trim()
@@ -207,15 +213,7 @@ export default function ConservationWidget({
 
   const statusVn = vnRedList.statusVn || VN_REDLIST_LABEL[statusCode] || config.defaultVn
   const refCode = vnRedList.refCode
-  const threats = vnRedList.threats
-  const population = vnRedList.population
-  const conservation = vnRedList.conservation
   const vastUrl = vnRedList.url || 'http://vnredlist.vast.vn/'
-
-  // Xử lý làm sạch và phân đoạn văn bản
-  const threatParagraphs = React.useMemo(() => cleanThreats(threats), [threats])
-  const populationData = React.useMemo(() => cleanPopulation(population), [population])
-  const conservationData = React.useMemo(() => cleanConservation(conservation), [conservation])
 
   // Nếu không có bất kỳ nội dung chi tiết nào, không hiển thị card lớn
   const hasDetails = threatParagraphs.length > 0 ||

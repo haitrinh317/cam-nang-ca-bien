@@ -616,24 +616,9 @@ export const BOOKS_BY_COLLECTION: Record<string, BookMetadata[]> = Object.fromEn
 
 // ─── LOOKUP HELPERS ───────────────────────────────────────────────────
 
-/** Get unified collection definition (including books and special groups) */
-export function getCollection(slug: string): CollectionDef | undefined {
-  return REGISTRY[slug]
-}
-
 /** Get basic collection metadata by slug */
 export function getCollectionBySlug(slug: string): Collection | undefined {
   return REGISTRY[slug]
-}
-
-/** Get all collections */
-export function getAllCollections(): Collection[] {
-  return STATIC_COLLECTIONS
-}
-
-/** Get active collections only */
-export function getActiveCollections(): Collection[] {
-  return STATIC_COLLECTIONS.filter(c => c.status === 'active')
 }
 
 /** Get books metadata list for a collection */
@@ -644,9 +629,4 @@ export function getBooksForCollection(collectionSlug: string): BookMetadata[] {
 /** Get special group definition by ID */
 export function getSpecialGroup(groupId: string): SpecialGroupConfig | null {
   return SPECIAL_GROUPS[groupId] || null
-}
-
-/** Get all special groups as array */
-export function getSpecialGroupsList(): SpecialGroupConfig[] {
-  return SPECIAL_GROUPS_LIST
 }

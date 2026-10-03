@@ -793,18 +793,6 @@
   box-shadow: 0 2px 8px rgba(0, 212, 184, 0.08);
 }
 
-.tax-tree-current-badge {
-  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: rgba(0, 212, 184, 0.15);
-  color: #0d9488;
-  border: 1px solid rgba(0, 212, 184, 0.3);
-  flex-shrink: 0;
-}
-
 .tax-tree-vn--current {
   font-size: 0.98rem;
   font-weight: 600;
@@ -875,166 +863,10 @@
   color: #07172c;
 }
 
-.dual-tax-comparison-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px solid var(--color-rule);
-}
-
-@media (max-width: 640px) {
-  .dual-tax-comparison-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.dual-tax-card {
-  border-radius: var(--radius-md);
-  padding: 12px 14px;
-  background: var(--color-paper-2);
-  border: 1px solid var(--color-rule);
-}
-
-.dual-tax-card--modern {
-  border-color: rgba(0, 240, 208, 0.25);
-  background: rgba(0, 240, 208, 0.03);
-}
-
-.dual-tax-card--classic {
-  border-color: rgba(56, 189, 248, 0.25);
-  background: rgba(56, 189, 248, 0.03);
-}
-
-.dual-tax-card__title {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 8px;
-}
-
-.dual-tax-card--modern .dual-tax-card__title {
-  color: var(--brand-primary);
-}
-
-.dual-tax-card--classic .dual-tax-card__title {
-  color: #38bdf8;
-}
-
-.dual-tax-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px;
-  font-size: 0.82rem;
-  padding: 4px 0;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-}
-
-.dual-tax-row:last-child {
-  border-bottom: none;
-}
-
-.dual-tax-label {
-  color: var(--color-muted);
-  font-size: 0.78rem;
-  flex-shrink: 0;
-}
-
-.dual-tax-val {
-  text-align: right;
-  color: var(--color-ink);
-  font-weight: 600;
-}
-
-.dual-tax-val em {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--color-muted);
-  margin-left: 4px;
-}
-
-/* 2. WoRMS Dossier Card */
-.specimen-worms-link-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: var(--radius-sm, 6px);
-  background: var(--color-paper-2, #f8fafc);
-  border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.1));
-  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: var(--color-ink-2, #334155);
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: all var(--dur-fast, 150ms) ease;
-}
-
-.specimen-worms-link-btn:hover {
-  background: var(--color-paper-3, #f1f5f9);
-  border-color: rgba(0, 212, 184, 0.4);
-  color: var(--color-accent, #00d4b8);
-}
-
 .worms-dossier-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 12px;
-}
-
-.worms-dossier-item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  background: var(--color-paper-2, #f8fafc);
-  padding: 10px 14px;
-  border-radius: var(--radius-sm, 6px);
-  border: 1px solid var(--color-rule-2, rgba(11, 19, 41, 0.06));
-}
-
-.worms-dossier-item--full {
-  grid-column: 1 / -1;
-}
-
-.worms-dossier-label {
-  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--color-ink-3, #64748b);
-}
-
-.worms-dossier-value {
-  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--color-ink, #0b1329);
-  display: flex;
-  align-items: center;
-}
-
-.worms-dossier-aphia code {
-  font-family: var(--font-outlier, monospace);
-  font-size: 0.9rem;
-  background: rgba(11, 19, 41, 0.05);
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: var(--color-ink, #0b1329);
-}
-
-.worms-accepted-highlight {
-  font-style: italic !important;
-  font-weight: 700;
-  color: var(--color-accent, #00d4b8);
 }
 
 /* 3. Synonyms List */
@@ -1182,7 +1014,6 @@
 }
 
 [data-theme="dark"] .specimen-synonym-item,
-[data-theme="dark"] .specimen-worms-link-btn,
 [data-theme="dark"] .specimen-tax-empty {
   background: var(--color-paper-2);
 }

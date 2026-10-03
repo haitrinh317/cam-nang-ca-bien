@@ -95,7 +95,6 @@
   text-align: center;
 }
 
-
 @media (max-width: 768px) {
   /* ─── Body: make room for floating island dock ─── */
   body {
@@ -478,41 +477,6 @@
     z-index: 200;
   }
 
-  /* ─── Species grid: 2 column on mobile ─── */
-  .grid-species {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-md);
-  }
-
-  .species-card-mini {
-    padding: 0;
-  }
-  .scm-content {
-    padding: var(--space-md) var(--space-sm);
-  }
-
-  /* Allow long names to wrap — no line-clamp */
-  .scm-name {
-    font-size: 0.875rem;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-    line-height: var(--lh-snug);
-  }
-
-  .scm-sci {
-    font-size: 0.75rem;
-  }
-
-  .scm-id {
-    font-size: 0.65rem;
-  }
-
-  /* Thumbnail: full card width on mobile */
-  .scm-thumb {
-    height: 90px;
-  }
-
   /* ─── Gallery: responsive height ─── */
   .specimen__gallery {
     margin: var(--space-md) 0; /* Tighter margins on mobile */
@@ -546,29 +510,6 @@
     border-radius: 0;
     margin: 0 calc(-1 * var(--space-xl));
     padding: 6px var(--space-xl);
-  }
-
-  /* ─── Biology Panel on mobile (match clean layout) ─── */
-  .biology-panel, .specimen .biology-panel {
-    background: transparent;
-    border: none;
-    padding: var(--space-lg) var(--space-md);
-    margin: 0;
-  }
-
-  /* ─── Synonyms Panel on mobile (match clean layout) ─── */
-  details.synonym-details, .specimen details.synonym-details {
-    background: transparent;
-    border: none;
-    margin: 0;
-  }
-  summary.synonym-summary {
-    padding: var(--space-lg) var(--space-md) var(--space-sm) var(--space-md);
-    border-bottom: 2px solid var(--color-rule);
-    margin-bottom: var(--space-xl);
-  }
-  .synonym-content {
-    padding: 0 var(--space-md) var(--space-md);
   }
 
   /* ─── Touch targets ─── */
@@ -624,24 +565,5 @@
     scroll-snap-align: start;
   }
 
-  .specimen__section {
-    padding: var(--space-md) var(--space-sm);
-  }
-
-  .specimen__section-title {
-    font-size: 1.1rem;
-  }
-
-  /* Tighter grid on very small phones */
-  .grid-species {
-    gap: var(--space-sm);
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .scm-thumb {
-    height: 110px;
-  }
-
-  .scm-name { font-size: 0.8125rem; }
 }
 

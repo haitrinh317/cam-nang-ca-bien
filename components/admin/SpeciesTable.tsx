@@ -184,7 +184,8 @@ export default function SpeciesTable({ collection, themeColor = '#00f0d0' }: Pro
     })
     const json = await res.json()
     if (!res.ok) {
-      showToast(json.error, 'err')
+      const [field, msgs] = Object.entries((json.details ?? {}) as Record<string, string[]>)[0] ?? []
+      showToast(field ? `${json.error} [${field}]: ${msgs?.[0] ?? ''}` : json.error, 'err')
       return false
     }
     showToast(isNew ? 'Đã thêm loài mới thành công ✓' : 'Đã cập nhật dữ liệu ✓')

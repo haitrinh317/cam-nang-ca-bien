@@ -6,7 +6,6 @@ import {
   ShieldAlert, 
   CheckCircle2, 
   AlertTriangle, 
-  Compass, 
   Sparkles,
   Egg,
   Fish,

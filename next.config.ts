@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   turbopack: {
-    root: '.', // Silence the lockfile warning
+    root: process.cwd(), // Silence the lockfile warning (must be absolute)
   },
 
   // Redirect old Vite MPA URLs → new Next.js routes
@@ -41,21 +41,13 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        // Edge Cache cho trang chi tiết loài và cây phân loại (24h) — tất cả 8 collections
-        source: '/:collection(ca-bien|thuc-vat-bien|giap-xac|bo-sat-bien|sinh-vat-doc|than-mem|san-ho|thu-bien)/:path*',
+        // Edge Cache cho trang chi tiết loài và cây phân loại (24h) — tất cả 9 collections
+        source: '/:collection(ca-bien|thuc-vat-bien|giap-xac|bo-sat-bien|sinh-vat-doc|than-mem|san-ho|thu-bien|dong-vat-phu-du)/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=86400' },
         ],
       },
-      ...(process.env.NODE_ENV === 'production'
-        ? [
-            {
-              // Cache static assets aggressively in production only
-              source: '/_next/static/(.*)',
-              headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
-            },
-          ]
-        : []),
+      // /_next/static: Next.js already serves immutable cache headers — no custom rule needed
     ]
   },
 };

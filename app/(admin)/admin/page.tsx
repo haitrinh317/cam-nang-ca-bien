@@ -5,7 +5,6 @@ import '@/styles/admin.css'
 import '@/styles/admin-command.css'
 import AuditLogStream from '@/components/admin/AuditLogStream'
 import {
-  Database,
   Fish,
   Leaf,
   Shrimp,
@@ -15,7 +14,6 @@ import {
   Sparkles,
   Waves,
   BookOpen,
-  Clock,
   ArrowRight,
   BookCheck,
   Activity,
@@ -29,14 +27,6 @@ import {
 export const metadata: Metadata = {
   title: 'Trung Tâm Chỉ Huy Quản Trị — Cẩm Nang Sinh Vật Biển',
   description: 'Trung tâm giám sát và quản trị số hóa đa dạng sinh học biển Việt Nam — Dự án cá nhân phát triển bởi haitrinh.',
-}
-
-const ACTION_MAP: Record<string, { label: string; cls: string }> = {
-  create:      { label: 'Thêm mới',       cls: 'audit-badge--create' },
-  update:      { label: 'Cập nhật',       cls: 'audit-badge--update' },
-  delete:      { label: 'Xóa',            cls: 'audit-badge--delete' },
-  bulk_import: { label: 'Import dữ liệu', cls: 'audit-badge--bulk_import' },
-  bulk_delete: { label: 'Xóa hàng loạt',  cls: 'audit-badge--delete' },
 }
 
 const MONOGRAPHS = [
@@ -66,29 +56,6 @@ const MONOGRAPHS = [
     latin: 'Perciformes (Labridae, Gobiidae)',
   },
 ]
-
-function formatLogDetails(details: unknown): string {
-  if (!details) return '—'
-  if (typeof details === 'string') {
-    try {
-      const parsed = JSON.parse(details)
-      return formatLogDetails(parsed)
-    } catch {
-      return details
-    }
-  }
-  if (typeof details === 'object') {
-    const obj = details as Record<string, unknown>
-    const parts: string[] = []
-    if (obj.vn_name) parts.push(`Tên VN: "${obj.vn_name}"`)
-    if (obj.scientific_name) parts.push(`Tên KH: ${obj.scientific_name}`)
-    if (obj.volume) parts.push(`Tập ${obj.volume}`)
-    if (obj.count) parts.push(`Số lượng: ${obj.count}`)
-    if (parts.length > 0) return parts.join(' · ')
-    return JSON.stringify(obj).replace(/["{}]/g, '').slice(0, 80)
-  }
-  return String(details)
-}
 
 export default async function AdminDashboard() {
   const db = createServerClient()

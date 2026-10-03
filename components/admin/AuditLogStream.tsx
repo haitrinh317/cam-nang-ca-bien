@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { 
   ArrowRight, RotateCw, PlusCircle, Edit2, Trash2, 
   Layers, RefreshCw, Database, ShieldCheck, Clock, 
-  Calendar, ChevronLeft, ChevronRight, Filter, Eye
+  Calendar, ChevronLeft, ChevronRight, Filter
 } from 'lucide-react'
 
 export interface LogEntry {

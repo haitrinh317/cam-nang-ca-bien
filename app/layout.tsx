@@ -130,6 +130,7 @@ export default function RootLayout({
       lang="vi"
       className={`${lora.variable} ${beVietnamPro.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
     >
       <head>
         <meta name="theme-color" content="#0c142a" />

@@ -7,7 +7,7 @@ import AuthStatus from '@/components/layout/AuthStatus'
 import { 
   LayoutDashboard, BookOpen, ExternalLink, Fish, Leaf, 
   Shrimp, Turtle, Biohazard, Shell, Sparkles, Waves, 
-  PanelLeftClose, PanelLeftOpen, Compass, ShieldCheck, Microscope
+  PanelLeftClose, PanelLeftOpen, Compass, Microscope
 } from 'lucide-react'
 import { db } from '@/lib/supabase-browser'
 

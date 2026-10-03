@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { ClipboardList, Leaf, Globe, BookOpen, Camera, Database, X, Plus, Settings2, Satellite, Egg, Gem, FileText, AlertTriangle, Flag } from 'lucide-react'
 import PhotoManager from './PhotoManager'
 import DistributionEditor from './DistributionEditor'
-import { speciesUpdateSchema, speciesCreateSchema } from '@/lib/schemas'
 
 interface BiologyData {
   iucnStatus?: string | null
@@ -268,18 +267,8 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
     delete payload.bio_habitat
     delete payload.bio_habitatVn
 
-    // Client-side Zod Schema Verification
-    const validator = id ? speciesUpdateSchema : speciesCreateSchema
-    const check = validator.safeParse(payload)
-    if (!check.success) {
-      const fieldErrors = check.error.flatten().fieldErrors as Record<string, string[] | undefined>
-      const firstField = Object.keys(fieldErrors)[0]
-      const firstMsg = fieldErrors[firstField]?.[0] || 'Dữ liệu không hợp lệ theo Zod schema'
-      setErrorMsg(`Lỗi Zod schema [${firstField}]: ${firstMsg}`)
-      setSaving(false)
-      return
-    }
-
+    // ponytail: zod validation runs server-side only (/api/species) — keeps ~400KB zod out of the client bundle.
+    // Field errors come back in the API response and are shown via toast in SpeciesTable.handleSave.
     const ok = await onSave(payload, id)
     if (!ok) setSaving(false)
   }

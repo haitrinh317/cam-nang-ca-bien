@@ -41,7 +41,7 @@
 ## 🏗️ Tech Stack & Routes
 
 ```
-Next.js 16 (App Router) + React 19 + TypeScript
+Next.js 16.3.8 (App Router) + React 19 + TypeScript + ESLint 9 (`npm run lint`)
 Supabase (PostgreSQL + RLS + Auth + Storage)
 CSS: Vanilla CSS (tokens.css + globals.css + admin.css)
 Deploy: git push origin master + vercel --prod --yes
@@ -81,7 +81,7 @@ Deploy: git push origin master + vercel --prod --yes
 - `is_admin()`: SECURITY DEFINER — bypass RLS trên `user_roles`
 - RLS: write locked cho `service_role` + authenticated admin
 - API routes: POST/PATCH/DELETE verify admin role
-- Middleware: `/admin/*` → redirect `/login`
+- Proxy (`proxy.ts`, Next 16 — thay `middleware.ts`): `/admin/*` → redirect `/login`
 
 ---
 
@@ -118,7 +118,7 @@ OCR Document/                    ← Next.js project root
 ├── lib/                         ← Utilities
 ├── styles/                      ← CSS (tokens + globals + admin)
 ├── public/                      ← Static assets
-├── scripts/                     ← Active scripts (13 file)
+├── scripts/                     ← Active scripts (12 file, được skill tham chiếu)
 │   └── archive/                 ← Scripts one-shot đã dùng xong
 ├── migrations/                  ← SQL 001-009
 ├── _offline/                    ← Data offline (gitignored)

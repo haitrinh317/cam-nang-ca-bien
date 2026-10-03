@@ -98,14 +98,12 @@
 
 /* ─── 3. Section Titles & Subtitles ─── */
 [data-theme="dark"] .sgs-title,
-[data-theme="dark"] .lit-title,
-[data-theme="dark"] .section-title {
+[data-theme="dark"] .lit-title {
   color: #f8fafc !important;
 }
 
 [data-theme="dark"] .sgs-subtitle,
-[data-theme="dark"] .lit-subtitle,
-[data-theme="dark"] .section-subtitle {
+[data-theme="dark"] .lit-subtitle {
   color: #94a3b8 !important;
 }
 
@@ -157,15 +155,6 @@
 
 [data-theme="dark"] .lit-card__author {
   color: #e2e8f0 !important;
-}
-
-[data-theme="dark"] .lit-card__publisher,
-[data-theme="dark"] .lit-card__meta-item {
-  color: #94a3b8 !important;
-}
-
-[data-theme="dark"] .lit-card__count-num {
-  color: #00f0d0 !important;
 }
 
 [data-theme="dark"] .lit-card__footer {
@@ -220,20 +209,8 @@
   color: #f8fafc !important;
 }
 
-[data-theme="dark"] .vft-count,
-[data-theme="dark"] .vft-desc {
+[data-theme="dark"] .vft-count {
   color: #94a3b8 !important;
-}
-
-/* ─── 7. Species Table & Mini Cards ─── */
-[data-theme="dark"] .species-table th {
-  background: #0c142a !important;
-  color: #94a3b8 !important;
-  border-color: rgba(255, 255, 255, 0.12) !important;
-}
-
-[data-theme="dark"] .species-table td {
-  border-color: rgba(255, 255, 255, 0.06) !important;
 }
 
 [data-theme="dark"] .species-vn-link {
@@ -242,28 +219,6 @@
 
 [data-theme="dark"] .species-vn-link:hover {
   color: #00f0d0 !important;
-}
-
-[data-theme="dark"] .species-sci-cell {
-  color: #94a3b8 !important;
-}
-
-[data-theme="dark"] .species-order-header td {
-  background: #0e1935 !important;
-  color: #00f0d0 !important;
-}
-
-[data-theme="dark"] .species-card-mini {
-  background: #0c152d !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
-}
-
-[data-theme="dark"] .scm-name {
-  color: #f1f5f9 !important;
-}
-
-[data-theme="dark"] .scm-sci {
-  color: #94a3b8 !important;
 }
 
 /* ─── 8. Specimen Detail View ─── */
@@ -276,7 +231,6 @@
   border-color: rgba(0, 212, 184, 0.2) !important;
 }
 
-[data-theme="dark"] .specimen__title,
 [data-theme="dark"] .specimen__name {
   color: #f8fafc !important;
 }
@@ -287,20 +241,6 @@
 
 [data-theme="dark"] .specimen__author {
   color: #94a3b8 !important;
-}
-
-[data-theme="dark"] .specimen__section-title {
-  color: #f8fafc !important;
-}
-
-[data-theme="dark"] .specimen-table th {
-  color: #94a3b8 !important;
-  background: #0c142a !important;
-}
-
-[data-theme="dark"] .specimen-table td {
-  color: #f1f5f9 !important;
-  border-color: rgba(255, 255, 255, 0.06) !important;
 }
 
 /* ─── Tab Phân Loại (Stepped Tree & Synonyms) ─── */
@@ -389,18 +329,6 @@
   box-shadow: 0 2px 8px rgba(0, 212, 184, 0.08);
 }
 
-.tax-tree-current-badge {
-  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: rgba(0, 212, 184, 0.15);
-  color: #0d9488;
-  border: 1px solid rgba(0, 212, 184, 0.3);
-  flex-shrink: 0;
-}
-
 .tax-tree-vn--current {
   font-size: 1.05rem;
   font-weight: 700;
@@ -463,30 +391,6 @@
   font-style: italic !important;
   font-weight: 600;
   color: var(--color-ink, #0b1329);
-}
-
-.specimen-worms-link-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: var(--radius-sm, 6px);
-  background: var(--color-paper-2, #f8fafc);
-  border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.1));
-  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: var(--color-ink-2, #334155);
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: all var(--dur-fast, 150ms) ease;
-}
-
-.specimen-worms-link-btn:hover {
-  background: var(--color-paper-3, #f1f5f9);
-  border-color: rgba(0, 212, 184, 0.4);
-  color: var(--color-accent, #00d4b8);
 }
 
 /* WoRMS Dossier Tiles */

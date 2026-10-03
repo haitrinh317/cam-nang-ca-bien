@@ -1,8 +1,8 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { Search, ChevronDown, BookOpen, Database, Sparkles, ShieldCheck, HelpCircle } from 'lucide-react'
-import { FAQ_DATA, FaqItem } from '@/lib/faq-data'
+import { Search, ChevronDown, BookOpen, Sparkles, ShieldCheck, HelpCircle } from 'lucide-react'
+import { FAQ_DATA } from '@/lib/faq-data'
 
 export default function FaqAccordion() {
   const [activeCategory, setActiveCategory] = useState<string>('all')
