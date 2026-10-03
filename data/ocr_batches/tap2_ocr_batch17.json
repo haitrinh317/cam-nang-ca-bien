@@ -1,0 +1,469 @@
+[
+  {
+    "id": "tap2-species-144",
+    "volume": 2,
+    "speciesIndex": 144,
+    "vnName": "Cá Kìm thân tròn",
+    "scientificName": "Hemirhamphus quoyi",
+    "authorship": "Cuvier and Valenciennes, 1846",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm thường Hemirhamphus Cuvier and Valenciennes",
+        "latin": "Hemirhamphus Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm thân tròn",
+        "size": "15 - 20 cm. Lớn nhất 30 cm.",
+        "distribution": "Australia, Indonesia, New Guinea, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Thick-bodied garfish.",
+        "size": "15 - 20 cm. Maximum 30 cm.",
+        "distribution": "Australia, Indonesia, New Guinea, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hemirhamphus quoyi Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.19, p.35, 1846; Fowler, 1918; Herre, 1944.",
+      "Hemirhamphus quoyi Bleeker, Nat. Tijds. Ned.-Ind., Vol.2, p.491, 1851; Meyer, 1885; Gunther, 1866; Weber and de Beaufort, 1922.",
+      "Hyporhamphus quoyi Evermann and Seale, Proc. U.S. Nat. Mus., Vol.31, p.506, 1906."
+    ]
+  },
+  {
+    "id": "tap2-species-145",
+    "volume": 2,
+    "speciesIndex": 145,
+    "vnName": "Cá Kìm chấm",
+    "scientificName": "Hemirhamphus far",
+    "authorship": "(Forskal, 1775)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm thường Hemirhamphus Cuvier and Valenciennes",
+        "latin": "Hemirhamphus Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm chấm",
+        "size": "20 - 25 cm. Lớn nhất 50 cm.",
+        "distribution": "Địa Trung Hải, Hồng Hải, Đông và Nam Phi, Ấn Độ, Srilanca, Australia, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Spotted halfbeak, Black-barred garfish.",
+        "size": "20 - 25 cm. Maximum 50 cm.",
+        "distribution": "Mediterranean Sea, Red Sea, East and South Africa, India, Sri Lanka, Australia, Indonesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Esox far Forskal, Descript. Animal., p.67, 1775.",
+      "Hemiramphus commersonii Cuvier, Regne Animal., ed.2, Vol.2, p.286, 1829; Bleeker, 1852.",
+      "Hemiramphus far Ruppell, New Wirbelt., Fische Rothen Meeres, p.74, 1835; Klunzinger, 1871; Jordan and Evermann, 1902; Weber, 1913; Fowler, 1928; Chevey, 1932; Herre, 1944.",
+      "Hemirhamphus commersonii Bleeker, Verh. Bat. Gen., Vol.23, Snoekacht. Viss., p.11, 1850; Gunther, 1866.",
+      "Hemirhamphus far Bleeker, Adta Soc. Sci. Indo-Neerl., Vol.8, p.55, 1860; Day, 1878,; Gunther, 1910; Weber and de Beaufort, 1922."
+    ]
+  },
+  {
+    "id": "tap2-species-146",
+    "volume": 2,
+    "speciesIndex": 146,
+    "vnName": "Cá Kìm Gai-ma",
+    "scientificName": "Hemirhamphus gaimard",
+    "authorship": "Cuvier and Valenciennes, 1846",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm thường Hemirhamphus Cuvier and Valenciennes",
+        "latin": "Hemirhamphus Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm Gai-ma",
+        "size": "31 cm.",
+        "distribution": "Ấn Độ, Australia, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Herre, 1953."
+      },
+      "en": {
+        "commonName": "Gaimard halfbeak.",
+        "size": "31 cm.",
+        "distribution": "India, Australia, Indonesia, Malaysia, Philippines, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Herre, 1953."
+      }
+    },
+    "synonyms": [
+      "Hemirhamphus gaimardi Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.19, p.36, 1846; Kner, 1865-67; Fowler, 1928; Herre, 1944.",
+      "Hemirhamphus gaimardi Bleeker, Nat. Tijds. Dierk. Ned.-Ind., Vol.2, p.472, 1851; Seale, 1910; Weber and de Beaufort, 1922.",
+      "Hemirhamphus limbatus Day, Fishes India, p.516, 1878.",
+      "Hemiramphus limbatus Jordan and Richardson, Bull. U.S. Bur. Fisheries, Vol.27, p.243, 1908; Fowler, 1918.",
+      "Dermatogenys viviparus Copeia, No.58, p.62, 1918."
+    ]
+  },
+  {
+    "id": "tap2-species-147",
+    "volume": 2,
+    "speciesIndex": 147,
+    "vnName": "Cá Kìm giữa",
+    "scientificName": "Hyporhamphus intermedius",
+    "authorship": "(Cantor, 1847)",
+    "status": "unknown",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm dưới Hyporhamphus Gill",
+        "latin": "Hyporhamphus Gill"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm giữa",
+        "size": "6 - 15 cm.",
+        "distribution": "Srilanca, Australia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "",
+        "literature": "Trương Xuân Lâm, 1962. Parin, 1980. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Chinese small-winged flying fish.",
+        "size": "6 - 15 cm.",
+        "distribution": "Sri Lanka, Australia, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "",
+        "literature": "Zhang, 1962. Parin, 1980. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hemirhamphus intermedius Cantor, Ann. Mag. Nat. Hist., Vol.9, p.485; Richardson, 1845; Abbott, 1901.",
+      "Hyporhamphus kurumeus Jordan and Starks, Proc. U.S. Nat. Mus., Vol.26, p.534, 1903.",
+      "Hyporhamphus intermedius (Cantor), in The Marine Fishes of Vietnam, Vol.2, No.1, p.106, fig.51 of Nguyen Khac Huong, 1993.",
+      "Hyporhamphus (Hyporhamphus) entermedius (Cantor), in Parin: Transactions of the Shirshov Institute of Oceanography, Acad. Sci. USSR, Vol.97, p.50, 1980."
+    ]
+  },
+  {
+    "id": "tap2-species-148",
+    "volume": 2,
+    "speciesIndex": 148,
+    "vnName": "Cá Kìm Trung Hoa",
+    "scientificName": "Hyporhamphus sinensis",
+    "authorship": "Gunther, 1864",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm dưới Hyporhamphus Gill",
+        "latin": "Hyporhamphus Gill"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm Trung Hoa",
+        "size": "10 - 13 cm.",
+        "distribution": "Ở biển và cửa sông, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Mai Đình Yên, 1978. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Chinese small-winged flying fish.",
+        "size": "10 - 13 cm.",
+        "distribution": "In the sea and in the estuary, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Mai Dinh Yen, 1978. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hyporhamphus sinensis Gunther, Cat. Fish. British Mus., Vol.6, pp.267-292, 1864."
+    ]
+  },
+  {
+    "id": "tap2-species-149",
+    "volume": 2,
+    "speciesIndex": 149,
+    "vnName": "Cá Kìm Đús-su",
+    "scientificName": "Hyporhamphus dussumierii",
+    "authorship": "(Cuvier and Valenciennes, 1846)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm dưới Hyporhamphus Gill",
+        "latin": "Hyporhamphus Gill"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm Đús-su",
+        "size": "22 - 27 cm. Lớn nhất 30 cm.",
+        "distribution": "Địa Trung Hải, Hồng Hải, Đông Phi, Indonesia, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Dussumieri small-winged flying fish.",
+        "size": "22 - 27 cm. Maximum 30 cm.",
+        "distribution": "Mediterranean Sea, East Africa, Red Sea, Indonesia, Malaysia, Philippines, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Hemirhamphus dussumieri Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.19, p.33, pl.520, 1846; Bleeker, 1851; Gunther, 1910; Weber and de Beaufort, 1922; Herre, 1944.",
+      "Hyporhamphus dussumieri Evermann and Seale, Bull. U.S. Bur. Fisheries, Vol.26, p.58, 1907.",
+      "Hemirhamphus erythrorinchus var. Lesueur, Jour. Acad. Nat. Sci. Phila., Vol.2, p.138, 1821.",
+      "Hemirhamphus reynaldi Day, Fishes of British India, No.4, p.515, 1878-88; Weber, 1913."
+    ]
+  },
+  {
+    "id": "tap2-species-150",
+    "volume": 2,
+    "speciesIndex": 150,
+    "vnName": "Cá Kìm sông",
+    "scientificName": "Hyporhamphus unifasciatus",
+    "authorship": "(Ranzani, 1842)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Kìm dưới Hyporhamphus Gill",
+        "latin": "Hyporhamphus Gill"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Kìm sông",
+        "size": "7 - 16 cm. Lớn nhất 30 cm.",
+        "distribution": "Ở biển và cửa sông, Đông Phi, Ấn Độ, Indonesia, Philippines, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Thuỷ Sản 2, tp Hồ Chí Minh.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "Silver-linned halfbeak.",
+        "size": "7 - 16 cm. Maximum 30 cm.",
+        "distribution": "In the sea and in the estuary, East Africa, Indonesia, Philippines, Vietnam. Southern Vietnam.",
+        "specimen": "HoChiMinh City Research Institute of Aquatic Products.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Hemirhamphus unifasciatus Ranzani, Nov. Comm. Acad. Sci. Inst. Bonon, Vol.5, p.326, 1842; Gunther, 1866; Bleeker, 1866-72; Day, 1878; Weber and de Beaufort, 1922; Fowler, 1927.",
+      "Hemirhamphus neglectus Bleeker, Atlas Ichth., Vol.6, pl.254, fig.5, 1866-72; Jordan and Richardson, 1908.",
+      "Hyporhamphus unifasciatus Jordan and Evermann, Fishes North and Middle America, Vol.1, p.720, pl.96, fig.311, 1806; Herre, 1936."
+    ]
+  },
+  {
+    "id": "tap2-species-151",
+    "volume": 2,
+    "speciesIndex": 151,
+    "vnName": "Cá Chuồn kìm",
+    "scientificName": "Oxyporhamphus micropterus",
+    "authorship": "(Cuvier and Valenciennes, 1846)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Kìm",
+        "latin": "Hemirhamphidae"
+      },
+      "genus": {
+        "vn": "Cá Chuồn kìm Oxyporhamphus Gill",
+        "latin": "Oxyporhamphus Gill"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn kìm",
+        "size": "17,5 cm",
+        "distribution": "Ấn Độ Dương, Thái Bình Dương, Australia, Indonesia, Malaysia, Fiji, Hawaii, Philippines, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Indo-Pacific small-winged flying fish.",
+        "size": "17.5 cm",
+        "distribution": "Indian Ocean, Pacific Ocean, Autralian Indonesia, Malaysia, Fiji, Hawaii, Philippines, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus micropterus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 19, p. 92, pl. 563, 1846; Bleeker, 1853; Gunther, 1909.",
+      "Cypsilurus micropterus Bleeker, Ned. Tijids. Dierk., Vol.3, p. 128, 1866.",
+      "Evolantia micropterus Heller and Snodgrass, Proc. Washington Acad. Sci., Vol.5, p.189, 1903; Jordan and Evermam, 1905; Fowler, 1928; Weber and de Beaufort, 1922; Chevay, 1934.",
+      "Hemirhamphus convexus Weber and de Beaufort, Fishes Indo- Australian Archipelago, Vol.4, p. 159, 1922; Herre, 1944."
+    ]
+  },
+  {
+    "id": "tap2-species-152",
+    "volume": 2,
+    "speciesIndex": 152,
+    "vnName": "Cá Chuồn vây ngắn",
+    "scientificName": "Parexocoetus brachypterus brachypterus",
+    "authorship": "(Richardson, 1846)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá chuồn vây ngắn Parexocoetus Bleeker",
+        "latin": "Parexocoetus Bleeker"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn vây ngắn",
+        "size": "9 - 10 cm.",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Hồng Hải, Australia, Indonesia, Hawaii, Philippines, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "",
+        "size": "9 - 10 cm.",
+        "distribution": "Atlantic Ocean, Indian Ocean, Red Sea, Australia, Indonesia, Hawaii, Philippines, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus brachypterus. Richardson, Ichth, Chinan, Japan, p. 265, 1846; Gunther, 1866.",
+      "Exocoetus brachiopterus Cuvier and Valenciennes, Hist. Nat. Pois., Vol. 19, p.65, 1846.",
+      "Exocoetus mento Cuvier and Valenciennes, Hist. Nat. Poiss., Vol. 19, p. 124, 1846; Bleeker, 1852; Gunther, 1866; Meyer, 1885.",
+      "Parexocoetus mento Bleeker, Ned. Tijds. Ned.-Ind., Vol. 3, p. 126, 1866; Fowler, 1905; Jordan and Seale, 1907; Jordan and Richardson, 1908.",
+      "Exoetus brachyopterus Steindachner, Dents. Akad. Wiss. Wien, Vol. 70, p. 512, 1900.",
+      "Parexocoetus brachopterus Jenkins, Bull. U.S. Fish. Comm., Vol. 22, p. 435, 1903; Jordan and Evermann, 1905; Weber and de Beaufort, 1922; Fowler, 1928; Herre, 1940-41."
+    ]
+  },
+  {
+    "id": "tap2-species-153",
+    "volume": 2,
+    "speciesIndex": 153,
+    "vnName": "Cá Chuồn men-tô",
+    "scientificName": "Parexocoetus mento mento",
+    "authorship": "(Valenciennes, 1847)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Chuồn",
+        "latin": "Exocoetidae"
+      },
+      "genus": {
+        "vn": "Cá chuồn vây ngắn Parexocoetus Bleeker",
+        "latin": "Parexocoetus Bleeker"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chuồn men-tô",
+        "size": "4 - 11 cm.",
+        "distribution": "Ấn Độ Dương, Thái Bình Dương, Đông Phi, Indonesia, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Yellow-bellied flying fish, Short-winged flying fish.",
+        "size": "4 - 11 cm.",
+        "distribution": "Indian Ocean, Pacific Ocean, East Africa, Indonesia, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography:",
+        "status": "Common, seldom abundant.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Exocoetus mento Valenciennes, Nat. Hist. Poiss., Vol. 19, p. 124-125, 1847 (1846).",
+      "Parexocoetus mento mento Abe, Fig, and Descr., Vol. 55, p.1115, pl. 220, fig. 571, 1956; Parin, 1960."
+    ]
+  }
+]

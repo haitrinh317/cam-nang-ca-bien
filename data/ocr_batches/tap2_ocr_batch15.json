@@ -1,0 +1,482 @@
+[
+  {
+    "id": "tap2-species-124",
+    "volume": 2,
+    "speciesIndex": 124,
+    "vnName": "Cá Ngát",
+    "scientificName": "Plotosus anguillaris",
+    "authorship": "(Bloch, 1797)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Ngát",
+        "latin": "Plotosidae"
+      },
+      "genus": {
+        "vn": "Cá Ngát Plotosus Lacepede",
+        "latin": "Plotosus Lacepede"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Ngát",
+        "size": "15 - 20 cm. Lớn nhất 90 cm.",
+        "distribution": "Ở biển và cửa sông, Đông Phi, Madagascar, Hồng Hải, Ấn Độ, Australia, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Eel-tailed catfish, Striped catfish.",
+        "size": "15 - 20 cm. Maximum 90 cm.",
+        "distribution": "In the sea and in the estuary, East Africa, Madagascar, Red Sea, India, Australia, Malaysia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Platystacus anguillaris Bloch, Syst. Ichth., Vol.11, p.49, pl.373, fig.1-2, 1797.",
+      "Plotosus anguillaris Lacepede, Hist. Nat. Poiss., Vol.5, pp.128, 130, pl.3, fig.2, 1803; Gunther, 1864; Jordan and Seale, 1907; Weber and de Beaufort, 1913; Fowler and Bean, 1922; Herre, 1953.",
+      "Plotosus ikapor Lesson, in St. Vincent, Dict. Classique Hist.Nat., Vol.15, p.435, 1829.",
+      "Plotosus marginatus Bennett, in Life Raffles, Cat. Zool., p.691, 1830.",
+      "Plotosus vittatus Swainson, Nat. Hist. Animals, Vol.2, Fishes, p.307, 1839.",
+      "Plotosus lineatus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.15, p.412, 1840.",
+      "Plotosus castaneus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.15, p.421, 1840.",
+      "Plotosus castaneoides Bleeker, Nat. Tijds. Ned.-Ind., Vol.2, p.490, 1851.",
+      "Plotosus arab Bleeker, Atlas Ichth., Vol.2, p.98, pl.95, fig.2, 1862; Day, 1878; Jordan and Snyder, 1900; Steindachner, 1906."
+    ]
+  },
+  {
+    "id": "tap2-species-125",
+    "volume": 2,
+    "speciesIndex": 125,
+    "vnName": "Cá Ngát chó",
+    "scientificName": "Plotosus canius",
+    "authorship": "Hamilton (né Buchanan), 1822",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Ngát",
+        "latin": "Plotosidae"
+      },
+      "genus": {
+        "vn": "Cá Ngát Plotosus Lacepede",
+        "latin": "Plotosus Lacepede"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Ngát chó",
+        "size": "13 - 27 cm. Lớn nhất 90 cm.",
+        "distribution": "Ấn Độ, Fiji, Indonesia, Philippines, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Carcasson, 1977. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Canine catfish eel.",
+        "size": "13 - 27cm. Maximum 90 cm.",
+        "distribution": "India, Fiji, Indonesia, Philippines, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Carcasson, 1977. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Plotosus canius Hamilton (né Buchanan), Fishes Ganges, p.142, p.26, fig.45, 1822; Bleeker, 1862; Gunther, 1864; Day, 1878; Weber and de Beaufoet, 1913; Herre, 1953; Suvatti, 1937.",
+      "Plotosus unicolor Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.15, p.315, 1840.",
+      "Plotosus viviparus Bleeker, Nat. Geneesk. Arch. Ned.-Ind., Vol.3, Part 2, p.182, 1846.",
+      "Plotosus horridus Bleeker, Nat. Geneesk. Arch. Ned.-Ind., Vol.3, Part 2, p.183, 1846.",
+      "Plotosus multiradiatus Bleeker, Nat. Geneesk. Arch. Ned.-Ind., Vol.3, Part 2, p.183, 1846."
+    ]
+  },
+  {
+    "id": "tap2-species-126",
+    "volume": 2,
+    "speciesIndex": 126,
+    "vnName": "Cá Ngát môi trắng",
+    "scientificName": "Paraplotosus albilabris",
+    "authorship": "(Cuvier and Valenciennes, 1840)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Ngát",
+        "latin": "Plotosidae"
+      },
+      "genus": {
+        "vn": "Cá Ngát môi trắng Paraplotosus Bleeker",
+        "latin": "Paraplotosus Bleeker"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Ngát môi trắng",
+        "size": "35 cm.",
+        "distribution": "Australia, Indonesia, New Guinea, Malaysia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Carcasson, 1977. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "White-liped catfish eel.",
+        "size": "35 cm.",
+        "distribution": "Australia, Indonesia, New Guinea, Malaysia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Carcasson, 1977. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Plotosus albilabris Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.15, p.316, 1840; Bleeker, 1862.",
+      "Copidiglanis albilabris Gunther, Cat. Fishes British Mus., Vol.5, p.26, 1864.",
+      "Plotosus macrophthalmus Bleeker, Verh. Bat. Gen., Silur. Batav. Conspect., p.170, 1867.",
+      "Paraplotosus albilabris Weber and de Beaufort, Fishes Indo-Australian Archipelago, Vol.2, p.225, fig. 88-90, 1913. Herre, 1953."
+    ]
+  },
+  {
+    "id": "tap2-species-127",
+    "volume": 2,
+    "speciesIndex": 127,
+    "vnName": "Cá Tra",
+    "scientificName": "Pangasius krempfi",
+    "authorship": "Fang and Chaux, 1942",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Tra",
+        "latin": "Schilbeidae"
+      },
+      "genus": {
+        "vn": "Cá Tra Pangasius Cuvier and Valenciennes",
+        "latin": "Pangasius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Tra",
+        "size": "",
+        "distribution": "Ở biển và cửa sông, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Schilbeid catfish.",
+        "size": "",
+        "distribution": "In the sea and in the estuary, Vietnam. Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Pangasius krempfi Fang and Chaux, Bull. Mus. Nat. Hist. Paris (2), Vol.21, No.3, pp.342-346, fig.5, 1942."
+    ]
+  },
+  {
+    "id": "tap2-species-128",
+    "volume": 2,
+    "speciesIndex": 128,
+    "vnName": "Cá Dứa",
+    "scientificName": "Pangasius polyuranodon",
+    "authorship": "Bleeker, 1852",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Tra",
+        "latin": "Schilbeidae"
+      },
+      "genus": {
+        "vn": "Cá Tra Pangasius Cuvier and Valenciennes",
+        "latin": "Pangasius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Dứa",
+        "size": "14 - 22 cm. Lớn nhất 40 cm.",
+        "distribution": "Ở biển và cửa sông, Indonesia, Thái Lan, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Thủy Sản 2 Tp Hồ Chí Minh.",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "Polyuranodon schilbeid catfish.",
+        "size": "14 - 22 cm. Maximum 40 cm.",
+        "distribution": "In the sea and in the estuary, Indonesia, Thailand, Vietnam. Southern Vietnam.",
+        "specimen": "HoChiMinh City Research Institute of Aquatic Products.",
+        "status": "Common, relatively numerous.",
+        "literature": "Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Pangasius polyuranodon Bleeker, Verh. Bat. Gen., Vol.55, p.425, 1852."
+    ]
+  },
+  {
+    "id": "tap2-species-129",
+    "volume": 2,
+    "speciesIndex": 129,
+    "vnName": "Cá Úc Trung hoa",
+    "scientificName": "Arius sinensis",
+    "authorship": "Lacepede, 1803",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Úc",
+        "latin": "Ariidae"
+      },
+      "genus": {
+        "vn": "Cá Úc Arius Cuvier and Valenciennes",
+        "latin": "Arius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Úc Trung hoa",
+        "size": "15 - 24 cm. Lớn nhất 50 cm.",
+        "distribution": "Ở biển và cửa sông, Ấn Độ, Burma, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Chinese sea catfish.",
+        "size": "15 - 24 cm. Maximum 50 cm.",
+        "distribution": "In the sea and in the estuary, India, Burma, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively numerous.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Tachysurus sinensis Lacepede, Hist. Nat. Poiss., Vol.5, p.150, 1803",
+      "Arius falcarius Richardson, Voy. Sulphur Ichth., Vol.134, p.62, fig.7-8; Bleeker, 1847.",
+      "Arius sinensis Bleeker, Ned. Tijds. Dierk., Vol.4, p.125, 1874."
+    ]
+  },
+  {
+    "id": "tap2-species-130",
+    "volume": 2,
+    "speciesIndex": 130,
+    "vnName": "Cá Úc đầu cứng",
+    "scientificName": "Arius leiotetocephaluds",
+    "authorship": "Bleeker, 1846",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Úc",
+        "latin": "Ariidae"
+      },
+      "genus": {
+        "vn": "Cá Úc Arius Cuvier and Valenciennes",
+        "latin": "Arius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Úc đầu cứng",
+        "size": "15 - 38 cm. Lớn nhất 42 cm.",
+        "distribution": "Ở biển và cửa sông, Australia, Indonesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Hard-headed sea catfish.",
+        "size": "15 - 38 cm. Maximum 42 cm.",
+        "distribution": "In the sea and in the estuary, Australia, Indonesia, Philippines, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Arius leiotetocephalus Bleeker, Nat. Geneesk. Arch. Ned.-Ind., Vol.3, p.292, 1846; Weber and de Beaufort, 1913; Herre, 1953.",
+      "Ariodes meyenii Muller and Troschel, Horae Ichth., Vol.3, p.9, 1849.",
+      "Ariodes leiocephalus Bleeker, Ichth. Arch. Ind. Prodr., p.88, 1858.",
+      "Arius leiocephalus Gunther, Cat. Fishes British Mus., Vol.5, p.165, 1864.",
+      "Tachysurus leiotetocephalus Suvatti, Index Fishes Siam, p.62, 1937; Fowler, 1941."
+    ]
+  },
+  {
+    "id": "tap2-species-131",
+    "volume": 2,
+    "speciesIndex": 131,
+    "vnName": "Cá Úc thường",
+    "scientificName": "Arius thalassinus",
+    "authorship": "(Ruppell, 1835)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Úc",
+        "latin": "Ariidae"
+      },
+      "genus": {
+        "vn": "Cá Úc Arius Cuvier and Valenciennes",
+        "latin": "Arius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Úc thường",
+        "size": "30 - 50 cm. Lớn nhất 90 cm.",
+        "distribution": "Hồng Hải, Australia, Indonesia, New Caledonia, Ấn Độ, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Common sea catfish.",
+        "size": "30 - 50 cm. Maximum 90 cm.",
+        "distribution": "Red Sea, Australia, Indonesia, New Caledonia, India, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Bagrus thalassinus Ruppell, Nueu Wirbelt., Fische Rothen Meeres, p.75, pl.20, fig.2, 1835.",
+      "Bagrus netuma Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.14, p.438, pl.417, 1839.",
+      "Arius nasutus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.15, p.60, 1840.",
+      "Bagrus rhodonotus Bleeker, Nat. Geneesk. Arch. Ned.-Ind., Vol.3, p.157, 1846.",
+      "Netuma thalassina Bleeker, Atlas Ichth., Vol.2, p.28, pl.61, 1862; Fowler, 1904; Ogilby, 1915.",
+      "Sarcogenys rostratus Kuhl and van Hasselt, in Bleeker, Atlas Ichth., Vol.2, p.28, 1862.",
+      "Arius thalassinus Gunther, Cat. Fishes British Mus., Vol.5, p.139, 1864; Day, 1878; Boulenger, 1887; Weber and de Beaufort, 1913; Herre, 1940.",
+      "Arius andamanensis Day, Proc. Zool. Soc. London, p.699, 1870.",
+      "Tachysurus thalassinus Suvatti, Index Fishes Siam, p.64, 1937; Fowler, 1941."
+    ]
+  },
+  {
+    "id": "tap2-species-132",
+    "volume": 2,
+    "speciesIndex": 132,
+    "vnName": "Cá Úc chấm",
+    "scientificName": "Arius maculatus",
+    "authorship": "(Thunberg, 1792)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Úc",
+        "latin": "Ariidae"
+      },
+      "genus": {
+        "vn": "Cá Úc Arius Cuvier and Valenciennes",
+        "latin": "Arius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Úc chấm",
+        "size": "16 cm.",
+        "distribution": "Ở biển và cửa sông, Indonesia, Philippines, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Thủy Sản 2 Tp Hồ Chí Minh.",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "Spotted sea catfish.",
+        "size": "16 cm.",
+        "distribution": "In the sea and in the estuary, Indonesia, Philippines, Vietnam. Southern Vietnam.",
+        "specimen": "HoChiMinh City Research Institute of Aquatic Products.",
+        "status": "Common, seldom abundant.",
+        "literature": "Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Silurus maculatus Thunberg, Kongl. Vet. Akad. Nya. Handlingar Stockholm, Vol.13, p.31, pl.1, fig.2, 1792.",
+      "Arius gagoroides Bleeker, Nat. Geneesk. Arch. Ned.-Ind., Vol.3, p.168, 1846.",
+      "Arius heckelii Bleeker, Nat. Gen. Arch. Ned.-Ind., Vol.3, p.169, 1846.",
+      "Arius pidada Bleeker, Nat. Gen. Arch. Ned.-Ind., Vol.3, p.169, 1846.",
+      "Arius angulatus Bleeker, Nat. Gen. Arch. Ned.-Ind., Vol.3, p.170, 1846.",
+      "Arius chondropterygioides Bleeker. Nat. Gen. Arch. Ned.-Ind., Vol.3, p.170, 1846.",
+      "Arius viviparus Bleeker, Nat. Gen. Arch. Ned.-Ind., Vol.3, p.171, 1846.",
+      "Arius borneensis Bleeker, Nat. Tijds. Ned.-Ind., Vol.2, p.67, 1851.",
+      "Arius arius Bleeker, Ichth. Arch. Ind. Prodr., Vol.1, p.73, 1858.",
+      "Pseudarius arius Bleeker, Atlas Ichth., Vol.2, p.36, 1862.",
+      "Arius maculatus Gunther, Cat. Fishes British Mus., Vol.5, p.166, 1864; Weber and de Beaufort, 1913; Herre, 1933."
+    ]
+  },
+  {
+    "id": "tap2-species-133",
+    "volume": 2,
+    "speciesIndex": 133,
+    "vnName": "Cá Úc trắng",
+    "scientificName": "Arius sciurus",
+    "authorship": "H. M. Smith, 1931",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nheo",
+        "latin": "Siluriformes"
+      },
+      "family": {
+        "vn": "Cá Úc",
+        "latin": "Ariidae"
+      },
+      "genus": {
+        "vn": "Cá Úc Arius Cuvier and Valenciennes",
+        "latin": "Arius Cuvier and Valenciennes"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Úc trắng",
+        "size": "17 cm. Lớn nhất 60 cm.",
+        "distribution": "Ở biển cá con đi vào cửa sông, Thái Lan, Việt Nam. Nam Bộ.",
+        "specimen": "Viện Thuỷ Sản 2 tp Hồ Chí Minh.",
+        "status": "Ít gặp.",
+        "literature": "Mai Đình Yên, 1992."
+      },
+      "en": {
+        "commonName": "White sea catfish.",
+        "size": "17 cm. Maximum 60 cm.",
+        "distribution": "The youngers move from the sea into the estuary, Thailand, Vietnam. Southern Vietnam.",
+        "specimen": "HoChiMinh City Research Institute of Aquatic Products.",
+        "status": "Uncommon.",
+        "literature": "Mai Dinh Yen, 1992."
+      }
+    },
+    "synonyms": [
+      "Arius sciurus H. M. Smith, 1931a, p.30 (Tapi river).",
+      "Tachysurus sciurus H. M. Smith, 1945, p.409 (Siam)."
+    ]
+  }
+]

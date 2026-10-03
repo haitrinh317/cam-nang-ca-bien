@@ -1,0 +1,192 @@
+{
+  "111": {
+    "idx": 111,
+    "name": "Lysiosquillina maculata",
+    "AphiaID": 409044,
+    "valid_AphiaID": 211183,
+    "status": "unaccepted",
+    "valid_name": "Lysiosquilla maculata",
+    "family": "Lysiosquillidae",
+    "order": "Stomatopoda"
+  },
+  "112": {
+    "idx": 112,
+    "name": "Acanthosquilla acanthocarpus",
+    "AphiaID": 1754539,
+    "valid_AphiaID": 409061,
+    "status": "junior subjective synonym",
+    "valid_name": "Bigelowina phalangium",
+    "family": "Nannosquillidae",
+    "order": "Stomatopoda"
+  },
+  "113": {
+    "idx": 113,
+    "name": "Acanthosquilla multifasciata",
+    "AphiaID": 220300,
+    "valid_AphiaID": 220300,
+    "status": "accepted",
+    "valid_name": "Acanthosquilla multifasciata",
+    "family": "Nannosquillidae",
+    "order": "Stomatopoda"
+  },
+  "114": {
+    "idx": 114,
+    "name": "Heterosquilloides insignis",
+    "AphiaID": 409114,
+    "valid_AphiaID": 409114,
+    "status": "accepted",
+    "valid_name": "Heterosquilloides insignis",
+    "family": "Tetrasquillidae",
+    "order": "Stomatopoda"
+  },
+  "115": {
+    "idx": 115,
+    "name": "Anchisquilla fasciata",
+    "AphiaID": 409177,
+    "valid_AphiaID": 409177,
+    "status": "accepted",
+    "valid_name": "Anchisquilla fasciata",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "116": {
+    "idx": 116,
+    "name": "Carinosquilla carinata",
+    "AphiaID": 220301,
+    "valid_AphiaID": 220301,
+    "status": "accepted",
+    "valid_name": "Carinosquilla carinata",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "117": {
+    "idx": 117,
+    "name": "Carinosquilla multicarinata",
+    "AphiaID": 409197,
+    "valid_AphiaID": 409197,
+    "status": "accepted",
+    "valid_name": "Carinosquilla multicarinata",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "118": {
+    "idx": 118,
+    "name": "Clorida bombayensis",
+    "AphiaID": 409203,
+    "valid_AphiaID": 409203,
+    "status": "accepted",
+    "valid_name": "Clorida bombayensis",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "119": {
+    "idx": 119,
+    "name": "Clorida decorata",
+    "AphiaID": 409205,
+    "valid_AphiaID": 409205,
+    "status": "accepted",
+    "valid_name": "Clorida decorata",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "120": {
+    "idx": 120,
+    "name": "Clorida latreillei",
+    "AphiaID": 409212,
+    "valid_AphiaID": 409212,
+    "status": "accepted",
+    "valid_name": "Clorida latreillei",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "121": {
+    "idx": 121,
+    "name": "Cloridina chlorida",
+    "AphiaID": 409217,
+    "valid_AphiaID": 409217,
+    "status": "accepted",
+    "valid_name": "Cloridina chlorida",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "122": {
+    "idx": 122,
+    "name": "Cloridina pelamidae",
+    "AphiaID": 409222,
+    "valid_AphiaID": 409222,
+    "status": "accepted",
+    "valid_name": "Cloridina pelamidae",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "123": {
+    "idx": 123,
+    "name": "Erugosquilla woodmasoni",
+    "AphiaID": 409245,
+    "valid_AphiaID": 409245,
+    "status": "accepted",
+    "valid_name": "Erugosquilla woodmasoni",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "124": {
+    "idx": 124,
+    "name": "Keijia lirata",
+    "AphiaID": 1649025,
+    "valid_AphiaID": 409196,
+    "status": "superseded combination",
+    "valid_name": "Carinosquilla lirata",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "126": {
+    "idx": 126,
+    "name": "Miyakea nepa",
+    "AphiaID": 409287,
+    "valid_AphiaID": 723698,
+    "status": "superseded combination",
+    "valid_name": "Miyakella nepa",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "127": {
+    "idx": 127,
+    "name": "Oratosquilla oratoria",
+    "AphiaID": 395015,
+    "valid_AphiaID": 395015,
+    "status": "accepted",
+    "valid_name": "Oratosquilla oratoria",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "128": {
+    "idx": 128,
+    "name": "Oratosquillina gonypetes",
+    "AphiaID": 1650942,
+    "valid_AphiaID": 409328,
+    "status": "superseded combination",
+    "valid_name": "Quollastria gonypetes",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "129": {
+    "idx": 129,
+    "name": "Oratosquillina gravieri",
+    "AphiaID": 409303,
+    "valid_AphiaID": 409303,
+    "status": "accepted",
+    "valid_name": "Oratosquillina gravieri",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  },
+  "131": {
+    "idx": 131,
+    "name": "Oratosquillina perpensa",
+    "AphiaID": 409312,
+    "valid_AphiaID": 409312,
+    "status": "accepted",
+    "valid_name": "Oratosquillina perpensa",
+    "family": "Squillidae",
+    "order": "Stomatopoda"
+  }
+}

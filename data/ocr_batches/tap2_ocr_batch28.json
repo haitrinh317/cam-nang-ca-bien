@@ -1,0 +1,497 @@
+[
+  {
+    "id": "tap2-species-254",
+    "volume": 2,
+    "speciesIndex": 254,
+    "vnName": "Cá Đối vẩy to",
+    "scientificName": "Liza macrolepis",
+    "authorship": "(Smith, 1849)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+        "latin": "Liza Jordan and Swain"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối vẩy to",
+        "size": "10 - 15 cm. Lớn nhất 35 cm.",
+        "distribution": "Ở biển và cửa sông, hồ, Đông Phi, Madagascar, Srilanca, Australia, Indonesia, Melanesia, Polynesia, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Borned mullet.",
+        "size": "10 - 15 cm. Maximum 35 cm.",
+        "distribution": "In the sea and the esluaries, lakes, East Africa, Madagascar, Sri Lanka, Australia, Indonesia, Melanesia, Polynesia, Malaysia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively little.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil macrolepis Smith, Illustrations Zoology South Africa, Vol.4, pl.28, fig.2, 1849; Fowler, 1928; Rosax, 1934.",
+      "Mugil troschelii Bleeker, Nat. Tijds. Ned.-Ind., Vol.16, p.277, 1858-59; Gunther, 1861; Weber and de Beaufort, 1922.",
+      "Mugil troschellii Day, Fishes India, p.358, 1878.",
+      "Liza troscheli Jordan and Seale, Bull. U. S. Bur. Fish., Vol.25, p.217, 1906; Smith and Seale, 1906,; Jordan and Richardson, 1908; Herre, 1934.",
+      "Liza macrolepis Herre, 1940-41 Exped.; Check list Phil. Fish., p.231, 1953."
+    ]
+  },
+  {
+    "id": "tap2-species-255",
+    "volume": 2,
+    "speciesIndex": 255,
+    "vnName": "Cá Đối nhồng",
+    "scientificName": "Liza so-iuy",
+    "authorship": "Basilewski, 1855",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+        "latin": "Liza Jordan and Swain"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối nhồng",
+        "size": "30 - 40 cm. Lớn nhất 60 cm.",
+        "distribution": "Nga, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, tương đối ít.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Haarder mullet.",
+        "size": "30 - 40 cm. Maximum 60 cm.",
+        "distribution": "Russia, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively little.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil so-iuy Basilewski, Nouv. Mem. Imp. Soc. Nat. Moscow, Vol.10, p.236, pl.4, fig.3, 1855.",
+      "Mugil haematochilus Gunther, Cat. Fish., Vol.3, p.422, 1861."
+    ]
+  },
+  {
+    "id": "tap2-species-256",
+    "volume": 2,
+    "speciesIndex": 256,
+    "vnName": "Cá Đối đuôi bằng",
+    "scientificName": "Liza vaigiensis",
+    "authorship": "(Quoy and Gaimard, 1825)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+        "latin": "Liza Jordan and Swain"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối đuôi bằng",
+        "size": "15 - 40 cm. Lớn nhất 60 cm.",
+        "distribution": "Ở biển và cửa sông, Đông Phi, Ấn Độ, Hồng Hải, Australia, Indonesia, Melanesia, Micronesia, Polynesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Square-tailed mullet, Black-finned mullet.",
+        "size": "15 - 40 cm. Maximum 60 cm.",
+        "distribution": "In the sea and in the estuary, East Africa, India, Red Sea, Australia, Indonesia, Melanesia, Micronesia, Polynesia, Malaysia, Philippine, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively numerous.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil vaigiensis Quoy and Gaimard, Voy. Uranie, Zoologie, p.337, pl.59, fig.2, 1825; Bleeker, 1860; Weber and de Beaufort, 1922; Duncker, 1926; Fowler, 1928; Roxas, 1934.",
+      "Mugil macrolepidotus Ruppell, Atlas Reise, Nordl. Afrika, Fische Rothen Meers, p.140, 1828; Cuvier and Valenciennes, 1836; Bleeker, 1845.",
+      "Mugil melanochir (Koch and van Hasselt) Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.11, p.143, 1836; Bleeker, 1850.",
+      "Mugil rossii Bleeker, Nat. Tijds. Ned.-Ind., Vol.7, p.45, 1854; Weber, 1913.",
+      "Mugil waigiensis Peters, Monatsber, Akad. Wiss. Berlin, p.842, 1877; Gunther, 1876-81; Sauvage, 1891.",
+      "Liza waigiensis Seale, Occas. Papers Bishop Mus., Vol.4, p.15, 1906; Jordan and Seale, 1907; Seale and Bean, 1907.",
+      "Liza vaigiensis Kendall and Goldborough, Mem. Mus. Comp. Zool., Vol.26, p.257, 1911; Fowler, 1927; Herre, 1940-41.",
+      "Mugil ogilbyi Fowler, Proc. Acad. Nat. Sci. Phila., Vol.70, p.5, fig.2, 1918; Roxas, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-257",
+    "volume": 2,
+    "speciesIndex": 257,
+    "vnName": "Cá Đối môi dầy",
+    "scientificName": "Liza crenilabis",
+    "authorship": "(Forskal, 1775)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+        "latin": "Liza Jordan and Swain"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối môi dầy",
+        "size": "38 cm. Lớn nhất 50 cm.",
+        "distribution": "Hồng Hải, Madagascar, Australia, Indonesia, Melanesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Carsasson, 1977."
+      },
+      "en": {
+        "commonName": "Thick-lipped mullet, Fringe-lipped mullet.",
+        "size": "38 cm. Maximum 50 cm.",
+        "distribution": "Red Sea, Madagascar, Australia, Indonesia, Melanesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Carcasson, 1977."
+      }
+    },
+    "synonyms": [
+      "Mugil, crenilabris Kner, Novara Exped., Fische, p.228, 1865-67; Day, 1878; Gunther, 1881; Rosax, 1934.",
+      "Mugil crenilabis Forskal, Descript. Animal., p.73, 1775; Ruppell, 1835; Cuvier and Valencien28 36; Gunther, 1861; Klunzinger, 1870; Weber and de Beaufort, 1922; Fowler, 1927.",
+      "Querimana crenilabis Jordan and Seale, Bull. U. S. Bur. Fisheries, Vol.25, p.218, 1906.",
+      "Liza crenilabis Kendall and Goldsborough, Mem. Mus. Comp. Zool., Vol.26, p.258, 1911.",
+      "Mugil cirrhostomus (Forst.) Bloch and Schneider, Syst. Ichth., p.121, 1801; Forster, 1844.",
+      "Mugil ruppellii Gunther, Cat. British Mus., Vol.3, p.458, 1859-61.",
+      "Crenimugil crenilabris (Forskal), in Carcasson: A Field Guide to the Coral Reef Fishes of the Indian and West Pacific Ocean, p.83, 1977."
+    ]
+  },
+  {
+    "id": "tap2-species-258",
+    "volume": 2,
+    "speciesIndex": 258,
+    "vnName": "Cá Đối chấm vằn",
+    "scientificName": "Liza caeruleomaculatus",
+    "authorship": "Lacepede, 1803",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+        "latin": "Liza Jordan and Swain"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối chấm vằn",
+        "size": "41 cm.",
+        "distribution": "Ở biển và cửa sông, Madagascar, Zanzibar, Mauritius, New Guinea, Indonesia, Malaysia, Philippines, Thái Lan, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953; Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Banak mullet.",
+        "size": "41 cm.",
+        "distribution": "In the sea and in the estuary, Madagascar, Zanzibar, Mauritius, New Guinea, Indonesia, Malaysia, Philippines, Thailand, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Mugil caeruleomaculatus Lacepede, Hist. Nat. Poiss., Vol.5, pp.385 and 389, 1803; Cuvier and Valenciennes, 1836; Bleeker, 1851; Gunther, 1861; Sauvage, 1891; Weber and de Beaufort, 1922; Rosax, 1934.",
+      "Liza caeruleomaculatus Seale, Philippine Jour. Sci., Vol.5, sec.D, p.268, 1910; Herre, 1936-37."
+    ]
+  },
+  {
+    "id": "tap2-species-259",
+    "volume": 2,
+    "speciesIndex": 259,
+    "vnName": "Cá Đối vẩy thưa",
+    "scientificName": "Liza oligolepis",
+    "authorship": "(Bleeker, 1858)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+        "latin": "Liza Jordan and Swain"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối vẩy thưa",
+        "size": "9 - 10 cm. Lớn nhất 30 cm.",
+        "distribution": "Ở biển và cửa sông, Đông Phi, Ấn Độ, Philippines, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Carcasson, 1977, Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Oligo-scaled mullet, Large-scaled mullet.",
+        "size": "9 - 10 cm. Maximum 30 cm.",
+        "distribution": "In the sea and in the estuary, East Africa, India, Indonesia, Malaysia, Philippines, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Carcasson, 1977. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Mugil oligolepis Bleeker, Nat. Tijds. Ned.-Ind., Vol.16, p.275, 1858-59; Gunther, 1961; Day, 1878; Weber and de Beaufort, 1922; Roxas, 1934.",
+      "Liza oligolepis Jordan and Richardson, Bull. U. S. Bur. Fisheries, Vol.27, p.244, 1908; Herre, 1933.",
+      "Mugil macrolepis Bleeker, Nat. Tijds. Ned.-Ind., Vol.3, p.422, 1852 (not of Smith)."
+    ]
+  },
+  {
+    "id": "tap2-species-260",
+    "volume": 2,
+    "speciesIndex": 260,
+    "vnName": "Cá Đối vẩy cổ",
+    "scientificName": "Liza melinoptera",
+    "authorship": "(Cuvier and Valenciennes, 1836)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+        "latin": "Liza Jordan and Swain"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối vẩy cổ",
+        "size": "22 - 24 cm.",
+        "distribution": "Ở biển và cửa sông, Đông Phi, Samoa, Fiji, Micronesia, Indonesia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Orsi, 1974. Myers, 1991."
+      },
+      "en": {
+        "commonName": "Giantscaled mullet.",
+        "size": "22 - 24 cm.",
+        "distribution": "In the sea and in the estuary, East Africa, Samoa, Fiji, Micronesia, Indonesia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Orsi, Orsi, 1974. Myers, 1991."
+      }
+    },
+    "synonyms": [
+      "Mugil melinopterus Cuvier and Valenciennes, Hist. Nat.Poiss., Vol.11, p.146, pl.313, 1836; Gunther, 1861; Weber and de Beaufort, 1922; Duncker and Mohr, 1926; Roxas, 1934.",
+      "Mugil melanopterus Gunther, Fische der Sudsee, Vol.2, p.218, 1881.",
+      "Liza melinoptera Jordan and Seale, Bull. U. S. Bur. Fish., Vol.25, p.217, 1906; Herre, 1940-41."
+    ]
+  },
+  {
+    "id": "tap2-species-261",
+    "volume": 2,
+    "speciesIndex": 261,
+    "vnName": "Cá Nhụ lớn",
+    "scientificName": "Eleutheronema tetradactylus",
+    "authorship": "Shaw, 1804",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemidae"
+      },
+      "genus": {
+        "vn": "Cá Nhụ lớn Eleutheronema Bleeker",
+        "latin": "Eleutheronema Bleeker"
+      },
+      "suborder": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemoidei"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhụ lớn",
+        "size": "55 - 70 cm. Lớn nhất 200 cm.",
+        "distribution": "Ở biển và cửa sông, Ấn Độ, Australia, Indonesia, Malaysia, Philippines, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Four-thread tasselfish, Four-fingered threadfin.",
+        "size": "55 - 70 cm. Maximum 200 cm.",
+        "distribution": "In the sea and in the estuary, India, Australia, Indonesia, Malaysia, Philippines, Thailand, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Polynemus tetradactylus Shaw, General Zoology, Vol.5, p.155, 1804; Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.375, 1829; Bleeker, 1849; Cantor, 1850; Klunzinger, 1880; Seale, 1910.",
+      "Eleutheronema tetradactylus Bleeker, Verh. Akad. Amsterdam, Vol.14, p.110, 1862.",
+      "Eleutheronema tetradactylum Bleeker, Verh. Akad. Amsterdam, Vol.14, p.124, 1862; Jordan and Richardson, 1909; Weber and de Beaufort, 1922; Fowler, 1927; Herre, 1934.",
+      "Polydactylus tetradactylus Jordan and Richardson, Bull. U. S. Bur. Fisheries, Vol.27, p.245, 1908.",
+      "Polydactylus rhadinus Jordan and Evermann, Proc. U. S. Nat. Mus., Vol.25, p.351, 1902.",
+      "Polydactylus plebeius Fowler, Copeia, No.58, p.64, 1918, not of Broussonet.",
+      "Polynemus teria Hamilton-Buchanan, Ganges Fishes, pp.224, p.381, 1822.",
+      "Polynemus salliah Cantor, Jour. Royal Asiat. Soc., Vol.5, p.166, 1838.",
+      "Polynemus quadrifilis Cantor, Jour. Royal Asiat. Soc., Vol.5, p.166, 1838, not of Cuvier and Valenciennes.",
+      "Polynemus caecus Macleay, Proc. Linn. Soc. N. S. Wales, Vol.2, p.354, 1878.",
+      "Polydactylus (Eleutheronema) tetradactylus McCullloch, Rec. W. Austr. Mus., Vol.1, p.214, 1913."
+    ]
+  },
+  {
+    "id": "tap2-species-262",
+    "volume": 2,
+    "speciesIndex": 262,
+    "vnName": "Cá Nhụ gộc",
+    "scientificName": "Polynemus plebejus",
+    "authorship": "(Broussonet, 1788)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemidae"
+      },
+      "genus": {
+        "vn": "Cá Nhụ thường Polynemus Linnaeus",
+        "latin": "Polynemus Linnaeus"
+      },
+      "suborder": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemoidei"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhụ gộc",
+        "size": "26 - 35 cm.",
+        "distribution": "Ở biển và cửa sông, Đông Phi, Madagascar, Mauritius, Ấn Độ, New Guinea, Australia, Indonesia, Malaysia, Samoa, Tahiti, Fiji, Philippines, Nhật Bản, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Common threadfin, Common tasselfish.",
+        "size": "26 - 35 cm.",
+        "distribution": "In the sea and in the estuary, East Africa, Madagascar, Mauritius, India, New Guinea, Australia, Indonesia, Malaysia, Samoa, Tahiti, Fiji, Philippines, Japan, Thailand, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Polynemus plebejus Broussonet, Ichthyologia, p.23, pl.8,1782; McCulloch, 1929; Herre, 1940-41.",
+      "Polynemus lineatus Lacepede, Hist. Nat. Poiss., Vol.5, pl.13, fig.2, p.410, 1803; Gunther, 1860; Kner, 1865-67.",
+      "Polynemus plebejus Bleeker, Nat. Geneesk. Arch. Ned.-Ind., Vol.2, pp.524 and 527, 1845; Gunther, 1873-75; Day, 1878; Weber and de Beaufort, 1922.",
+      "Polynemus taeniatus Gunther, Cat. Fishes British Mus., Vol.2, p.526, 1860; Gilchrist and Thompson, 1908.",
+      "Polydactylus plebeius Seale, Occas. Papres Bishop. Mus., Vol.4, p.18, 1906; Jordan and Seale, 1906; Seale and Bean, 1907; Fowler, 1928; Herre, 1934.",
+      "Polydactylus plebejus Fowler, Proc. Acad. Nat. Sci. Phila., Vol.79, p.265, 1927; Herre, 1927.",
+      "Polydactylus agonasi Jordan and McGregor, Proc. U. S. Nat. Mus., Vol.30, p.814, 1906.",
+      "Polynemus agonasi Franz, Abh. Bayr. Akad. Munchen, Vol.4, suppl. Band 1, Abh., 1910, p.25."
+    ]
+  },
+  {
+    "id": "tap2-species-263",
+    "volume": 2,
+    "speciesIndex": 263,
+    "vnName": "Cá Nhụ chấm",
+    "scientificName": "Polynemus sextarius",
+    "authorship": "(Bloch and Schneider, 1801)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemidae"
+      },
+      "genus": {
+        "vn": "Cá Nhụ thường Polynemus Linnaeus",
+        "latin": "Polynemus Linnaeus"
+      },
+      "suborder": {
+        "vn": "Cá Nhụ",
+        "latin": "Polynemoidei"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhụ chấm",
+        "size": "15 - 20 cm. Lớn nhất 30 cm.",
+        "distribution": "Đông Phi, Ấn Độ, Srilanca, Indonesia, Malaysia, Melanesia, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Weber and de Beaufort, 1922. Trương Xuân Lâm 1962, Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Blackspot threadfin, Blackspot tasselfish.",
+        "size": "15 - 20 cm. Maximum 30 cm.",
+        "distribution": "East Africa, India, Sri Lanka, Indonesia, Malaysia, Melanesia, Thailand, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively numerous.",
+        "literature": "Weber and de Beaufort, 1922. Zhang, 1963. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Polynemus sextarius Bloch and Schneider, Syst. Ichth., p.18, 1801; Bleeker, 1849; Cantor, 1850; Gunther, 1860; Day, 1878-88; Gilchrist and Thompson, 1908.",
+      "Trichidion sextarius Bleeker, Ned. Tijds. Dierk., Vol.2, p.174, 1865.",
+      "Trichidion sectarium Jordan and Starks, Ann. Carneg. Mus., Vol.11, p.455, 1917.",
+      "Trichidion sextarium Jordan and Starks, Ann. Carneg. Mus., Vol.4, p.143, 1872."
+    ]
+  }
+]

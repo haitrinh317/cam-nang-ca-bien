@@ -1,0 +1,467 @@
+[
+  {
+    "id": "tap2-species-184",
+    "volume": 2,
+    "speciesIndex": 184,
+    "vnName": "Cá Chồn râu",
+    "scientificName": "Brotula multibarbata",
+    "authorship": "Temminck and Schneider, 1842",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei"
+      },
+      "family": {
+        "vn": "Cá Chồn râu",
+        "latin": "Brotulidae"
+      },
+      "genus": {
+        "vn": "Cá Chồn râu Brotula Cuvier",
+        "latin": "Brotula Cuvier"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chồn râu",
+        "size": "204 - 285 mm. Lớn nhất 600 mm.",
+        "distribution": "Ấn Độ Dương, Thái Bình Dương, Hồng Hải, Nam Phi, Indonesia, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Lindberg and Krasyukova, 1975. Nguyễn Nhật Thi, 1991."
+      },
+      "en": {
+        "commonName": "Weasel fish, Barbed brotula.",
+        "size": "204 - 285 mm. Maximum 600 mm.",
+        "distribution": "Indian Ocean, Pacific Ocean, Red Sea, South Africa, Indonesia, Malaysia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Lindberg and Krasyukova, 1975. Nguyen Nhat Thi, 1991."
+      }
+    },
+    "synonyms": [
+      "Brotula multibarbata Temmninck and Schneider, Fauna Japonica, Pisces, p.251, 1842; Herre, 1953; Matsubara, 1955; Lindberg and Krasyukova, 1975.",
+      "Brotula ensiformis Gunther, Cat. Fish. Brit. Mus., Vol.4, p.372, 1862; Fowler, 1931.",
+      "Brotula maculata Day, Proc. Zool. Soc. London, p.196, 1868.",
+      "Brotula japonica Steindachner and Doderlein, Fische Japan, Beitrage, Vol.4, p.24, 1887.",
+      "Brotula formosae Jordan and Evermann, Proc. U. S. Nat. Mus., Vol.25, p.364, 1902.",
+      "Nematobrotula ensiformis Jordan and Seale, Bull. U. S. Bur. Fisheries, Vol.25, p.436, 1906."
+    ]
+  },
+  {
+    "id": "tap2-species-185",
+    "volume": 2,
+    "speciesIndex": 185,
+    "vnName": "Cá Chồn gai",
+    "scientificName": "Neobythites sivicolus",
+    "authorship": "(Jordan and Snyder, 1901)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei"
+      },
+      "family": {
+        "vn": "Cá Chồn râu",
+        "latin": "Brotulidae"
+      },
+      "genus": {
+        "vn": "Cá Chồn gai Neobythites Goode and Bean",
+        "latin": "Neobythites Goode and Bean"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chồn gai",
+        "size": "176 - 200 mm. Lớn nhất 290 mm",
+        "distribution": "Tây Bắc Thái Bình Dương, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Chu Nguyên Đình, 1963. Nguyễn Nhật Thi, 1991."
+      },
+      "en": {
+        "commonName": "White spotted brotula.",
+        "size": "176 - 200 mm. Maximum 290 mm.",
+        "distribution": "North-West Pacific Ocean, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Chu, 1963. Nguyen Nhat Thi, 1991."
+      }
+    },
+    "synonyms": [
+      "Watasea sivicola Jordan and Snyder, Proc. U. S. Nat. Mus., Vol.23, No.1235, p.765, 1900; Jordan and Fowler, 1902.",
+      "Neobythites sivicolus Matsubara, Fish Morph. and Hier., p.797, 1955; Chu, 1963; Lindberg and Krasyukova, 1975."
+    ]
+  },
+  {
+    "id": "tap2-species-186",
+    "volume": 2,
+    "speciesIndex": 186,
+    "vnName": "Cá Chồn chấm đen",
+    "scientificName": "Neobythites nigromaculatus",
+    "authorship": "Kamohara, 1938",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei"
+      },
+      "family": {
+        "vn": "Cá Chồn râu",
+        "latin": "Brotulidae"
+      },
+      "genus": {
+        "vn": "Cá Chồn gai Neobythites Goode and Bean",
+        "latin": "Neobythites Goode and Bean"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chồn chấm đen",
+        "size": "123 - 170 mm. Lớn nhất 186 mm.",
+        "distribution": "Ấn Độ Dương, Thái Bình Dương, Đông Phi, Indonesia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Bảo tàng TINRO (Liên Xô cũ).",
+        "status": "Ít gặp.",
+        "literature": "Chu Nguyên Đình, 1962; L.N. Bessednov, 1976."
+      },
+      "en": {
+        "commonName": "Spotfin brotula.",
+        "size": "123 - 170 mm. Maximum 186 mm.",
+        "distribution": "Indian Ocean, Pacific Ocean, East Africa, Indonesia, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Museum of TINRO (Russia).",
+        "status": "Uncommon.",
+        "literature": "Chu, 1962; L.N.Bessednov, 1976."
+      }
+    },
+    "synonyms": [
+      "Neobythites nigromaculatus Kamahora, Offshore bottom-fishes, Tosa, p.67, 1938; Matsubara, 1955.",
+      "Neobythites malayanus Kamohara (not of Weber), Zool. Mag., Tokyo, Vol.45, p.476, 1933.",
+      "Neobythites (Watasea) nigromaculatus Kamohara, Rept. Usa. Mar. Biol. St., Vol.1, p.11, 1954; Chu, 1962."
+    ]
+  },
+  {
+    "id": "tap2-species-187",
+    "volume": 2,
+    "speciesIndex": 187,
+    "vnName": "Cá Chồn ac-ma",
+    "scientificName": "Hoprobrotula armata",
+    "authorship": "(Temminck and Schlegel, 1847)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei"
+      },
+      "family": {
+        "vn": "Cá Chồn râu",
+        "latin": "Brotulidae"
+      },
+      "genus": {
+        "vn": "Cá Chồn gai Hoplobrotula Gill",
+        "latin": "Hoplobrotula Gill"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chồn ac-ma",
+        "size": "220 - 425 mm. Lớn nhất 600 mm.",
+        "distribution": "Tây Bắc Thái Bình Dương, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Bảo tàng TINRO (Liên Xô cũ).",
+        "status": "Ít gặp, số lượng không nhiều.",
+        "literature": "Chu Nguyên Đình, 1962; L.N. Bessednov, 1976."
+      },
+      "en": {
+        "commonName": "Armoured Weaselfish, Snub-nosed brotula.",
+        "size": "220 - 425 mm. Maximum 600 mm.",
+        "distribution": "North-West Pacific Ocean, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Museum of TINRO (Russia).",
+        "status": "Uncommon, seldom abundant.",
+        "literature": "Chu, 1962; L.N.Bessednov, 1976."
+      }
+    },
+    "synonyms": [
+      "Brotula armata Temminck and Schlegel, Fauna Japonica, Poiss., p.255, 1847.",
+      "Sirembo armata Steindachner and Doderlein, Fische Japan, Beitrage, Vol.4, p.24, 1887.",
+      "Hoplobrotula armata Jordan and Snyder, Proc. U. S. Nat. Mus., p.767, 1900; Jordan and Fowler, 1902; Matsubara, 1955; Chu, 1963; Lindberg and Krasyukova, 1975."
+    ]
+  },
+  {
+    "id": "tap2-species-188",
+    "volume": 2,
+    "speciesIndex": 188,
+    "vnName": "Cá Chồn tiên",
+    "scientificName": "Sirembo imberbis",
+    "authorship": "(Temminck and Schlegel, 1846)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei"
+      },
+      "family": {
+        "vn": "Cá Chồn râu",
+        "latin": "Brotulidae"
+      },
+      "genus": {
+        "vn": "Cá Chồn tiên Sirembo Bleeker",
+        "latin": "Sirembo Bleeker"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chồn tiên",
+        "size": "60 - 190 mm. Lớn nhất 230 mm.",
+        "distribution": "Tây Bắc Thái Bình Dương, Triều Tiên, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng không nhiều.",
+        "literature": "Chu Nguyên Đình, 1962. Nguyễn Nhật Thi, 1991."
+      },
+      "en": {
+        "commonName": "Loach brotula.",
+        "size": "60 - 190 mm. Maximum 230 mm.",
+        "distribution": "North-West Pacific Ocean, Korea, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Chu, 1962. Nguyen Nhat Thi, 1991."
+      }
+    },
+    "synonyms": [
+      "Brotula imberbis Temminck and Schlegel, Fauna japonica, Poiss., p.253, 1846.",
+      "Sirembo imberbis Bleeker, Act. Soc. Indo-Neerl., Vol.4, p.22, 1858; Matsubara, 1955; Chu, 1963; Lindberg and Krasyukova, 1975."
+    ]
+  },
+  {
+    "id": "tap2-species-189",
+    "volume": 2,
+    "speciesIndex": 189,
+    "vnName": "Cá Chồn khoang",
+    "scientificName": "Sirembo marmoratum",
+    "authorship": "(Goode and Bean, 1895)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei"
+      },
+      "family": {
+        "vn": "Cá Chồn râu",
+        "latin": "Brotulidae"
+      },
+      "genus": {
+        "vn": "Cá Chồn tiên Sirembo Bleeker",
+        "latin": "Sirembo Bleeker"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chồn khoang",
+        "size": "112 - 140 mm. Lớn nhất 164 mm.",
+        "distribution": "Tây Thái Bình Dương, Philippines, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng không nhiều.",
+        "literature": "Chu Nguyên Đình, 1962. Nguyễn Nhật Thi, 1991."
+      },
+      "en": {
+        "commonName": "Marmoreal brotula.",
+        "size": "112 - 140 mm. Maximum 164 mm.",
+        "distribution": "West Pacific Ocean, Philippines, China, Vietnam. Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Chu, 1962. Nguyen Nhat Thi, 1991."
+      }
+    },
+    "synonyms": [
+      "Lepophidium marmoratum Goode and Bean, Oceanic Ichth., p.348, 1895.",
+      "Umalius heraldi Herre, Check list. Philippine Fishes, p.818, 1953.",
+      "Sirembo marmoratum (Goode and Bean), in Chu, Nam Hải Ngư loại chí, p.718, 1962."
+    ]
+  },
+  {
+    "id": "tap2-species-190",
+    "volume": 2,
+    "speciesIndex": 190,
+    "vnName": "Cá Chồn mu-ra",
+    "scientificName": "Ophidion muraenolepis",
+    "authorship": "(Gunther, 1880)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei"
+      },
+      "family": {
+        "vn": "Cá Chồn",
+        "latin": "Ophidiidae"
+      },
+      "genus": {
+        "vn": "Cá Chồn Ophidion Linnaeus",
+        "latin": "Ophidion Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chồn mu-ra",
+        "size": "175 mm.",
+        "distribution": "Indonesia, Nhật Bản, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải sản Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "de Beaufort and Chapman, 1951."
+      },
+      "en": {
+        "commonName": "Drab cusk-eel.",
+        "size": "175 mm.",
+        "distribution": "Indonesia, Japan, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Research Institute of Marine Products.",
+        "status": "Rare.",
+        "literature": "de Beaufort and Chapman, 1951."
+      }
+    },
+    "synonyms": [
+      "Ophidium muraenolepis Gunther, Rep. Chalenger Zool., Vol.1 Part 6, p.46, 1880.",
+      "Ophidium asiro Jordan and Fowler, Proc U. S. Nat. Mus., Vol 25, p.752, 1902.",
+      "Otophidium asiro Jordan and Fowler, in Matsubara: Fish Morph. and Hier., Part 2, p 803, 1955."
+    ]
+  },
+  {
+    "id": "tap2-species-191",
+    "volume": 2,
+    "speciesIndex": 191,
+    "vnName": "Cá Ngọc",
+    "scientificName": "Carapus homei",
+    "authorship": "(Richardson, 1844)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei"
+      },
+      "family": {
+        "vn": "Cá Ngọc",
+        "latin": "Carapidae"
+      },
+      "genus": {
+        "vn": "Cá Ngọc Carapus Rafinesque",
+        "latin": "Carapus Rafinesque"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Ngọc",
+        "size": "20 cm.",
+        "distribution": "Australia, Indonesia, Malaysia, Samoa, Hawaii, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "de Beaufort and Chapman, 1951. Herre, 1953."
+      },
+      "en": {
+        "commonName": "Pearlfish.",
+        "size": "20 cm.",
+        "distribution": "Australia, Indonesia, Malaysia, Samoa, Hawaii, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "de Beaufort and Chapman, 1951. Herre, 1953."
+      }
+    },
+    "synonyms": [
+      "Oxybeles homei Richardson, Voy. Erebus and Terror, Fishes, p.74, pl.44, fig.7-18, 1844-48.",
+      "Oxybeles brandesu Bleeker, Nat. Tijds. Ned.-Ind., Vol.1, pp.276-278, fig.2-3, 1851.",
+      "Fierasfer homei Kaup, Cat. Apodal Fishes British Mus., p.158, 1856; Gunther, 1862; Fowler, 1900; Jordan and Seale, 1906.",
+      "Carapus homei Fowler, Bull.22, Bishop Mus., p.38, 1925; Herre, 1941."
+    ]
+  },
+  {
+    "id": "tap2-species-192",
+    "volume": 2,
+    "speciesIndex": 192,
+    "vnName": "Cá Ngọc mảnh",
+    "scientificName": "Carapus gracilis",
+    "authorship": "(Bleeker, 1856)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei"
+      },
+      "family": {
+        "vn": "Cá Ngọc",
+        "latin": "Carapidae"
+      },
+      "genus": {
+        "vn": "Cá Ngọc Carapus Rafinesque",
+        "latin": "Carapus Rafinesque"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Ngọc mảnh",
+        "size": "17cm. Lớn nhất 23 cm.",
+        "distribution": "New Guinea, Fiji, Samoa, Hawaii, Indonesia, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "de Beaufort and Chapman, 1951. Carcasson, 1977."
+      },
+      "en": {
+        "commonName": "Graceful pearlfish.",
+        "size": "17 cm. Maximum 23 cm.",
+        "distribution": "New Guinea, Fiji, Samoa, Hawaii, Indonesia, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "de Beaufort and Chapman, 1951. Carcasson, 1977."
+      }
+    },
+    "synonyms": [
+      "Oxybeles gracilis Bleeker, Nat. Tijds. Ned.-Ind., Vol. 11, p.105, 1856; Doleschall, 1858.",
+      "Fierasfer gracilis Gunther, Cat. Brit. Mus., Vol.4, p.382, 1862; Barnard, 1927.",
+      "Fierasfer umbratilis Jordan and Evermann, Bull. U. S. Fish. Comm., Vol.22, p.206, 1904.",
+      "Jordanicus umbratilis Gilbert, Bull. U. S. Fish. Comm. Part 2, p.656, 1905.",
+      "Jordanicus gracilis Gunther, Fische der Sudsee, Vol.3, p.339, 1909; Fowler, 1928.",
+      "Fierasfer frantii Popta, Notes Leyden Mus., Vol.34, p.185, 1912.",
+      "Fierasfer parvipinnis M.Weber, Siboga Exp. Fische, p.97 (not of Kaup), 1913."
+    ]
+  },
+  {
+    "id": "tap2-species-193",
+    "volume": 2,
+    "speciesIndex": 193,
+    "vnName": "Cá Tráp gai",
+    "scientificName": "Trachichthodes lineatus",
+    "authorship": "(Cuvier and Valenciennes, 1859)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Berycidae"
+      },
+      "genus": {
+        "vn": "Cá Tráp gai Trachichthodes Gilchrist",
+        "latin": "Trachichthodes Gilchrist"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Tráp gai",
+        "size": "10 - 24 cm,",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải sản Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, 1963. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Swallow-tailed alfonsino, Flat-headed alfonsino.",
+        "size": "10 - 24 cm.",
+        "distribution": "Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Research Institute of Marine Products.",
+        "status": "Rare.",
+        "literature": "Zhang, 1963. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Beryx lineatus Cuvier and Valenciennes, Regne Animal, Vol.3, p.226, 1859.",
+      "Trachichthodes lineatus (Cuvier), in Dictionary of Animal names in five languages, p.213, 1989."
+    ]
+  }
+]

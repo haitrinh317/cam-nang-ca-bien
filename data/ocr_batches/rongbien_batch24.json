@@ -1,0 +1,62 @@
+[
+  {
+    "id": "thucvat-species-112",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 112,
+    "vn_name": "Rong Bún, Rong Bún đỏ",
+    "scientific_name": "Liagora sp.3",
+    "authorship": "",
+    "tax_order_latin": "Nemaliales",
+    "tax_family_latin": "Liagoraceae",
+    "morphology_en": "This species is heavily calcified, pinkish, and ramiform. The branches are cylindrical and dichotomous. The apical portions are not as heavily calcified as the rest of the plant, and they are bifurcate, cylindrical, obtuse or stubby barrel-shaped tip. Plants are found on rocks in the lower intertidal zone of shores exposed to moderate wave action.\n1. Natural habit. 2. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong tẩm vôi nhiều, chia nhánh, màu hồng. Nhánh trụ tròn chia nhánh chạc hai. Phần đỉnh không tẩm vôi nhiều, trụ tròn, xẻ chạc hai, đỉnh tù hay dạng thùng. Rong mọc trên đá ở mực triều thấp, nơi sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Bãi Tiên, Nha Trang",
+    "photo_depth": "1.0 m",
+    "photo_date": "31 Jan. 2002"
+  },
+  {
+    "id": "thucvat-species-113",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 113,
+    "vn_name": "Rong Bún, Rong Bún đỏ",
+    "scientific_name": "Liagora sp.4",
+    "authorship": "",
+    "tax_order_latin": "Nemaliales",
+    "tax_family_latin": "Liagoraceae",
+    "morphology_en": "This species is soft, lubricous, slightly calcified, pinkish and ramiform. The branches are cylindrical, irregularly dichotomous, with knot-shaped proliferations. The apical portions curve slightly downward and are bifurcate, obtuse and red on the tips. Plants are found on rocks or gravel in the lower intertidal zone of calm to moderately wave-exposed shores.\n1. Natural habit. 2. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong mềm, trơn nhớt, hơi tẩm vôi, chia nhánh, màu hồng. Nhánh trụ tròn, chia chạc hai không đều, nhánh nhỏ dạng mấu. Phần đỉnh hơi cong xuống, xẻ chạc hai, tù, màu đỏ. Rong mọc trên đá, sỏi đá nhỏ ở mực triều thấp, nơi nước yên đến sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Bãi Tiên, Nha Trang",
+    "photo_depth": "1.0 m",
+    "photo_date": "18 Jan. 2002"
+  },
+  {
+    "id": "thucvat-species-114",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 114,
+    "vn_name": "chưa có tên Việt Nam",
+    "scientific_name": "Trichogloeopsis sp.",
+    "authorship": "",
+    "tax_order_latin": "Nemaliales",
+    "tax_family_latin": "Liagoraceae",
+    "morphology_en": "Plants are soft, lubricous, slightly calcified, ramiform, and pinkish. The branches are cylindrical, tapered, and divide irregularly several times in various planes. The apices are acute and reddish. This species grows on rocks in the lower intertidal zone of moderately wave-exposed shores.\n1. Natural habit. 2. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong mềm, trơn nhớt, hơi tẩm vôi, chia nhánh, màu hồng. Nhánh trụ tròn, chia nhánh không đều nhiều lần trong mỗi hướng, thon dần, đỉnh nhọn màu đỏ. Rong mọc trên đá ở mực triều thấp, nơi sóng vừa.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Hòn Mun, Nha Trang",
+    "photo_depth": "1.5 m",
+    "photo_date": "17 Mar. 2002"
+  },
+  {
+    "id": "thucvat-species-115",
+    "collection_id": "thuc-vat-bien",
+    "species_index": 115,
+    "vn_name": "Rong Thạch giác",
+    "scientific_name": "Amphiroa ancepes",
+    "authorship": "(Lamarck) Decaisne",
+    "tax_order_latin": "Corallinales",
+    "tax_family_latin": "Corallinaceae",
+    "morphology_en": "Plants are heavily calcified, pink to light red, with flat and irregularly dichotomous branches. The edge of the branches is uneven, and apices are obtuse. This species grows on rocks in the subtidal zone of shores exposed to strong to moderate wave action.\n1. Natural habit. 2. Dried specimen of the plant in picture 1.",
+    "morphology_vn": "Rong tẩm nhiều vôi, nhánh dẹp, chia nhánh chạc hai không đều, màu hồng đến hơi đỏ, bờ nhánh không phẳng, đỉnh tù. Rong mọc trên đá ở vùng dưới triều, nơi sóng vừa đến mạnh.\n1. Dạng sống tự nhiên. 2. Mẫu khô của cây rong ở hình 1.",
+    "photo_place": "Mũi Dinh, Ninh Thuận",
+    "photo_depth": "3.5 m",
+    "photo_date": "21 Jul. 2003"
+  }
+]

@@ -1,0 +1,458 @@
+[
+  {
+    "id": "tap2-species-104",
+    "volume": 2,
+    "speciesIndex": 104,
+    "vnName": "Cá Lạc",
+    "scientificName": "Muraenesox talabonoides",
+    "authorship": "(Bleeker, 1853)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Dưa",
+        "latin": "Muraenesocidae"
+      },
+      "genus": {
+        "vn": "Cá Dưa Muraenesox McClelland",
+        "latin": "Muraenesox McClelland"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lạc",
+        "size": "52 - 85 cm. Lớn nhất 100 cm.",
+        "distribution": "Indonesia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Indian pike conger.",
+        "size": "52 - 85 cm. Maximum 100 cm.",
+        "distribution": "Indonesia, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Zhang, 1993. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Conger talabonoides Bleeker, Verh. Bat. Gen., Vol.25, p.20, 1853.",
+      "Muraenesox talabonoides Bleeker, Atlas. Ichth., Vol.4, p.23, 1864; Gunther, 1870; Day, 1878-88; Chen, 1929;",
+      "Congresox talabonoides (Bleeker), Dictionary of Animal names in five languages, Fishes, p.108, 1989."
+    ]
+  },
+  {
+    "id": "tap2-species-105",
+    "volume": 2,
+    "speciesIndex": 105,
+    "vnName": "Cá Lịch rắn",
+    "scientificName": "Neenchelys buitendijki",
+    "authorship": "Weber and de Beaufort, 1916",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Lịch rắn",
+        "latin": "Neenchelyidae"
+      },
+      "genus": {
+        "vn": "Cá Lịch rắn Neenchelys Bamber",
+        "latin": "Neenchelys Bamber"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lịch rắn",
+        "size": "22 cm.",
+        "distribution": "Indonesia, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Weber and de Beaufort, 1961. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Fintail serpent eel.",
+        "size": "22 cm.",
+        "distribution": "Indonesia, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Weber and de Beaufort, 1916. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Neenchelys buitendijki Weber & de Beaufout, The Fishes of the Indo-Australian Archipelago, Vol.3, pp.268-269, 1916, fig.116-117."
+    ]
+  },
+  {
+    "id": "tap2-species-106",
+    "volume": 2,
+    "speciesIndex": 106,
+    "vnName": "Cá Nhệch vây trần",
+    "scientificName": "Muraenichthys gymnopterus",
+    "authorship": "Bleeker, 1853",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Nhệch",
+        "latin": "Echelidae"
+      },
+      "genus": {
+        "vn": "Cá Nhệch không vây ngực Muraenichthys Bleeker",
+        "latin": "Muraenichthys Bleeker"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhệch vây trần",
+        "size": "27 cm.",
+        "distribution": "Indonesia, Philippines, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Weber and de Beaufort, 1916. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Finnaked worm eel.",
+        "size": "27 cm.",
+        "distribution": "Indonesia, Philippines, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Weber and de Beaufort, 1916. Zhang, 1962 Nguyen Khac Huong, 1993"
+      }
+    },
+    "synonyms": [
+      "Muraena gymnopterus Bleeker, Verh. Bat. Gen., Vol.25, p.52, 1853.",
+      "Muraenichthys gymnopterus Bleeker, Nat. Tijds. Ned.-Ind., Vol.4, p.506, 1853; Gunther, 1870; Jordan and Seale, 1907; Weber and de Beaufort, 1916; Herre, 1940-41; Fowler, 1927.",
+      "Muraenichthys microstomus Bleeker, Atlas Ichth., Vol.4, p.32, pl.6, fig.2, 1864."
+    ]
+  },
+  {
+    "id": "tap2-species-107",
+    "volume": 2,
+    "speciesIndex": 107,
+    "vnName": "Cá Nhệch răng một hàng",
+    "scientificName": "Muraenichthys malabonensis",
+    "authorship": "Herre, 1923",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Nhệch",
+        "latin": "Echelidae"
+      },
+      "genus": {
+        "vn": "Cá Nhệch không vây ngực Muraenichthys Bleeker",
+        "latin": "Muraenichthys Bleeker"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhệch răng một hàng",
+        "size": "15 - 20 cm.",
+        "distribution": "Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Single tooth-lined worm eel.",
+        "size": "15 - 20 cm.",
+        "distribution": "Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Muraenichthys malabonensis Herre, Philippine Jour. Sci., Vol.23, p.157, pl.2, fig.1, 1923."
+    ]
+  },
+  {
+    "id": "tap2-species-108",
+    "volume": 2,
+    "speciesIndex": 108,
+    "vnName": "Cá Nhệch đầu mắt to",
+    "scientificName": "Myrophis macrophthalmus",
+    "authorship": "(Kamohara, 1938)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Nhệch",
+        "latin": "Echelidae"
+      },
+      "genus": {
+        "vn": "Cá Nhệch đầu Myrophis Lutken",
+        "latin": "Myrophis Lutken"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhệch đầu mắt to",
+        "size": "23 - 33 cm.",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Big-eyed worm eel.",
+        "size": "23 - 33 cm.",
+        "distribution": "Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Parabathymyrus macrophthalmus Kamohara, Off Shore bottom-fish., Tosa, Japan, p.14, fig.4, 1938."
+    ]
+  },
+  {
+    "id": "tap2-species-109",
+    "volume": 2,
+    "speciesIndex": 109,
+    "vnName": "Cá Chình cò",
+    "scientificName": "Chlopsis fierasfer",
+    "authorship": "Jordan and Snyder, 1901",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình mỏ vịt",
+        "latin": "Nettastomidae"
+      },
+      "genus": {
+        "vn": "Cá Chình cò Chlopsis Rafinesque",
+        "latin": "Chlopsis Rafinesque"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình cò",
+        "size": "22 - 40 cm.",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Black-tailed duckbill eel.",
+        "size": "22 - 40 cm.",
+        "distribution": "Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Chlopsis fierasfer Jordan and Snyder, Proc. U. S. Nat. Mus., Vol.23, p.860, fig.10, 1901.",
+      "Saurenchelys fierasfer Jordan and Snyder, in Dictionary of Animal names in five languages, Fishes, p.113, 1989."
+    ]
+  },
+  {
+    "id": "tap2-species-110",
+    "volume": 2,
+    "speciesIndex": 110,
+    "vnName": "Cá Chình bạc",
+    "scientificName": "Anago anago",
+    "authorship": "(Temminck and Schlegel, 1846)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình biển",
+        "latin": "Congridae"
+      },
+      "genus": {
+        "vn": "Cá Chình bạc Anago Jordan and Hubbs",
+        "latin": "Anago Jordan and Hubbs"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình bạc",
+        "size": "25 - 30 cm. Lớn nhất : 60 cm.",
+        "distribution": "Indonesia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Sea conger, Silvery conger.",
+        "size": "25 - 30 cm. Maximum 60 cm.",
+        "distribution": "Indonesia, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Conger anago Schlegel, Fauna Japonica, Pisces, p.259, pl.113, fig.1, 1846; Fowler and Bean, 1922.",
+      "Conger anagoides Bleeker, Verh. Bat. Gen., Vol.25, p.76, 1853.",
+      "Ophisoma anagoides Bleeker, Atlas Ichth., Vol.4, p.27, 1864.",
+      "Congromuraena anagoides Bleeker, Atlas Ichth., Vol.4, pl.5, fig.3, 1864.",
+      "Congromuraena anago Gunther, Cat. Fishes British Mus., Vol.8, p.42, 1870.",
+      "Congrellus anago Jordan and Snyder, Proc. U. S. Nat., Vol.23, p.855, 1901. Weber and de Beaufort, 1916.",
+      "Anago anago Jordan and Hubbs, Mem. Carnegie Mus., Vol.10, p.193, 1925.",
+      "Ariosoma (Anago) anago Herre, Fishes, 1931 Phlilippine Exped., p.16, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-111",
+    "volume": 2,
+    "speciesIndex": 111,
+    "vnName": "Cá Chình đuôi đen",
+    "scientificName": "Rhynchocymba ectenura",
+    "authorship": "(Jordan and Richardson, 1909)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình biển",
+        "latin": "Congridae"
+      },
+      "genus": {
+        "vn": "Cá Chình mõm nhọn Rhynchocymba Jordan and Hubbs",
+        "latin": "Rhynchocymba Jordan and Hubbs"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình đuôi đen",
+        "size": "35 - 41 cm.",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Black-tailed, Fox conger.",
+        "size": "35 - 41 cm.",
+        "distribution": "Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Leptocephalus ectenurus Jordan and Richardson, Mem. Carnegie Mus., Vol.4, p.171, pl.77, fig.5.",
+      "Conger ectenurus Fowler, Hong Kong Naturalist, Vol.3, p.52, 1932.",
+      "Rhynchoconger ectenurus Chen, Bull. Biol. Dep. Sun. Yetsen Univ., Vol.1, 1929, No.1, p.12, fig.5.",
+      "Rhynchoconger ectenurus (Jordan and Richardson) in Dictionary of Animal names in five languages, Fishes, p.111."
+    ]
+  },
+  {
+    "id": "tap2-species-112",
+    "volume": 2,
+    "speciesIndex": 112,
+    "vnName": "Cá Chình thường",
+    "scientificName": "Rhynchocymba nystromi",
+    "authorship": "(Jordan and Snyder, 1901)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình biển",
+        "latin": "Congridae"
+      },
+      "genus": {
+        "vn": "Cá Chình mõm nhọn Rhynchocymba Jordan and Hubbs",
+        "latin": "Rhynchocymba Jordan and Hubbs"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình thường",
+        "size": "20 - 30 cm.",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Fox conger.",
+        "size": "20 - 30 cm.",
+        "distribution": "Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Leptocephalus nystromi Jordan and Snyder, Proc. U. S. Nat. Mus., Vol.23, p.953, fig. 1901."
+    ]
+  },
+  {
+    "id": "tap2-species-113",
+    "volume": 2,
+    "speciesIndex": 113,
+    "vnName": "Cá Chình đuôi nhọn",
+    "scientificName": "Uroconger lepturus",
+    "authorship": "(Richardson, 1844)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chình biển",
+        "latin": "Anguilliformes"
+      },
+      "family": {
+        "vn": "Cá Chình biển",
+        "latin": "Congridae"
+      },
+      "genus": {
+        "vn": "Cá Chình đuôi nhọn Uroconger Kaup",
+        "latin": "Uroconger Kaup"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chình đuôi nhọn",
+        "size": "16 - 27 cm.",
+        "distribution": "Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Slender conger eel, Long-tailed conger.",
+        "size": "16 - 27 cm.",
+        "distribution": "Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Conger lepturus Richardson, Zool. Voy. Sulph., p.106, pl. 56, figs.1-6, 1844-45.",
+      "Uroconger lepturus Kaup, Cat. Apodal Fishes British Mus., p.110, 1856; Bleeker, 1864; Day, 1878; Jordan and Seale, 1907; Weber and de Beaufort, 1916; Herre, 1940-41."
+    ]
+  }
+]

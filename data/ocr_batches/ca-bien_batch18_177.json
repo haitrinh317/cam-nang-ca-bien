@@ -1,0 +1,42 @@
+[
+  {
+    "id": "tap6-species-262",
+    "collection_id": "ca-bien",
+    "volume": 6,
+    "species_index": 262,
+    "vn_name": "Cá nóc chuột chấm son",
+    "scientific_name": "Arothron nigropunctatus",
+    "authorship": "Bloch & Schneider, 1801",
+    "en_common_name": "Blackspotted puffer",
+    "morphology_vn": "D. 10-11; A. 10-12. Cơ thể thường có màu xám nhạt với những đốm loang màu đen quanh mõm và mắt. Thân có chấm đen kích thước to nhỏ khác nhau phân bố không đều trên cơ thể. Trên đầu (ngoại trừ phần xung quanh miệng), thân, bụng, cuống đuôi có nhiều gai nhỏ li ti. Vây đuôi tròn, rìa mép có hàng chấm đen không đều. Vây ngực màu vàng không có chấm.",
+    "ecology_vn": "Mẫu vật thường được phát hiện chủ yếu trong hệ sinh thái rạn san hô, thảm cỏ biển, ở độ sâu 3-25m; Cá thể chưa trưởng thành thường bơi đơn lẻ; Khi trưởng thành bơi theo cặp và di chuyển trong phạm vi lãnh thổ đã được xác định; Thức ăn chủ yếu là động vật giáp xác, thân mềm, polyp san hô (thường là các loài thuộc giống Acropora) (Randall, J.E., et al, 1990).",
+    "vn_distribution": "Việt Nam: Nơi phát hiện mẫu vật: Vịnh Nha Trang, Nam Yết, Côn Đảo, Phú Quốc, Thổ Chu,... Thế giới: Vùng biển Ấn Độ - Thái Bình Dương.",
+    "economic_value_vn": "Có giá trị trong y học (thịt, gan, ruột, mật độc nhẹ; da, tinh sào độc mạnh và trứng cực độc).",
+    "vn_size": "15,5cm; kích thước lớn nhất 33,0cm TL (Lieske, E. and R. Myers, 1994).",
+    "vn_specimen": "Viện Nghiên cứu Hải sản, Viện Hải dương học.",
+    "conservation_status": "unknown",
+    "synonyms": [],
+    "tax_order_latin": "Tetraodontiformes",
+    "tax_family_latin": "Tetraodontidae"
+  },
+  {
+    "id": "tap6-species-263",
+    "collection_id": "ca-bien",
+    "volume": 6,
+    "species_index": 263,
+    "vn_name": "Cá nóc dẹt va-len-tin",
+    "scientific_name": "Canthigaster valentini",
+    "authorship": "Bleeker, 1853",
+    "en_common_name": "Valentin's sharpnose puffer",
+    "morphology_vn": "D. 9; A. 9. Thân hình bầu dục, cơ thể dẹt hai bên, mõm dài và hơi nhọn. Đỉnh đầu sau mắt nhô cao lên. Bụng không có khả năng phình to. Thân nhiều gai nhỏ, thưa. Cơ thể có nền màu trắng với 4 vằn đen lớn vắt ngang lưng. Tia vây lưng, vây hậu môn và vây ngực đều có màu cam. Rìa mắt, cằm và vây đuôi màu vàng. Nhiều chấm nâu phân bố khắp cơ thể.",
+    "ecology_vn": "Mẫu vật thường được phát hiện chủ yếu trong hệ sinh thái rạn san hô, thảm cỏ ven biển, ở độ sâu 2-55m; Cá thể chưa trưởng thành thường bơi đơn lẻ; Khi trưởng thành bơi theo cặp (hoặc nhiều con đực với 1 con cái); Con đực bảo vệ con cái, lãnh thổ và tổ trứng trong mùa sinh sản; Thức ăn chủ yếu là tảo đa bào, động vật giáp xác, đôi khi ăn polyp san hô (Gladstone, W., 1987).",
+    "vn_distribution": "Việt Nam: Nơi phát hiện mẫu vật: Nam Yết, Phú Quý, Thổ Chu,... Thế giới: Vùng biển Ấn Độ - Thái Bình Dương.",
+    "economic_value_vn": "Có giá trị trong y học; Là loài cá có độc tính theo mùa. Có thể khai thác nuôi trong các bể cá cảnh.",
+    "vn_size": "14,5cm; kích thước lớn nhất 24,0cm TL (Smith, M.M. and P.C. Heemstra, 1986).",
+    "vn_specimen": "Viện Nghiên cứu Hải sản, Viện Hải dương học.",
+    "conservation_status": "unknown",
+    "synonyms": [],
+    "tax_order_latin": "Tetraodontiformes",
+    "tax_family_latin": "Tetraodontidae"
+  }
+]

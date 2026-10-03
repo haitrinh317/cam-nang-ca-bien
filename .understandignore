@@ -1,0 +1,36 @@
+# Understand-Anything Ignore Patterns
+# Tối ưu hóa phạm vi quét mã nguồn, tránh ngốn token vào dữ liệu data & scans
+
+# Dependencies & Build artifacts
+node_modules/
+.next/
+dist/
+build/
+.cache/
+.git/
+.agents/
+
+# Heavy data, Scans, Backups
+data/
+Documents/
+backups/
+v1_backup/
+vite_legacy/
+scratch/
+scratch_images/
+Logs/
+public/
+locales/
+
+# Binary & media files
+*.pdf
+*.zip
+*.tar.gz
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.svg
+*.csv
+*.xlsx
+*.json

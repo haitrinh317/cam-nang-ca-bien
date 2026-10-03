@@ -1,0 +1,460 @@
+[
+  {
+    "id": "tap2-species-194",
+    "volume": 2,
+    "speciesIndex": 194,
+    "vnName": "Cá Sơn đá Nhật Bản",
+    "scientificName": "Ostichthys japonicus",
+    "authorship": "(Cuvier and Valenciennes, 1829)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá vẩy cứng Ostichthys Jordan and Evermann",
+        "latin": "Ostichthys Jordan and Evermann"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá Nhật Bản",
+        "size": "15 - 20 cm.",
+        "distribution": "Hawaii, Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Golden perch, Hardscale soldierfish.",
+        "size": "15 - 20 cm.",
+        "distribution": "Hawaii, Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Myripristis japonicus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.173, pl.58, 1829.",
+      "Ostichthys japonicus Jordan and Evermann, Proc. U. S. Nat. Mus., Vol.25, p.334, 1902."
+    ]
+  },
+  {
+    "id": "tap2-species-195",
+    "volume": 2,
+    "speciesIndex": 195,
+    "vnName": "Cá Sơn đá biển sâu",
+    "scientificName": "Ostichthys kaianus",
+    "authorship": "(Gunther, 1880)",
+    "status": "unknown",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá vẩy cứng Ostichthys Jordan and Evermann",
+        "latin": "Ostichthys Jordan and Evermann"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá biển sâu"
+      },
+      "en": {
+        "commonName": "Deep water soldierfish."
+      }
+    },
+    "synonyms": [
+      "Myripristis kaianus Gunther, Challenger Rep. Zoology, Vol.1, Shore Fishes, 1880, p.39.",
+      "Ostichthys kaianus (Gunther), in Dictionary of Animal names in five languages, p.217, 1989."
+    ]
+  },
+  {
+    "id": "tap2-species-196",
+    "volume": 2,
+    "speciesIndex": 196,
+    "vnName": "Cá Sơn đá vảy răng cưa",
+    "scientificName": "Myripristis murdjan",
+    "authorship": "(Forskal, 1775)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá vảy răng cưa Myripristis Cuvier",
+        "latin": "Myripristis Cuvier"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá vảy răng cưa",
+        "size": "15 - 20 cm. Lớn nhất 30 cm.",
+        "distribution": "Châu Phi, Ấn Độ, Srilanca, Indonesia, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Pinecone soldierfish, Big-scaled soldierfish.",
+        "size": "15 - 20 cm. Maximum 30cm.",
+        "distribution": "Africa, India, Sri Lanka, Indonesia, Malaysia, Philippines, Japan, China, Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Sciaena murdjan Forskal, Descript. Animal., p.48, 1775.",
+      "Perca murdjan Bloch and Schneider, Syst. Ichth., p.86, 1801; Lacepede, 1802.",
+      "Myripristis murdjan Ruppell, Atlas Reise Nordl. Africa, Fische Rothen Meers, p.86, pl.23, fig.2, 1828; Bleeker, 1853; Gunther, 1859;Day, 1878; Sauvage, 1891; Seale, 1901; Jordan and Evermann, 1905; Fowler, 1918; Weber and de Beaufort, 1929; Herre, 1940-41."
+    ]
+  },
+  {
+    "id": "tap2-species-197",
+    "volume": 2,
+    "speciesIndex": 197,
+    "vnName": "Cá Sơn đá răng đôi",
+    "scientificName": "Myripristis hexagonus",
+    "authorship": "Lacepede, 1802",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá vảy răng cưa Myripristis Cuvier",
+        "latin": "Myripristis Cuvier"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá răng đôi",
+        "size": "18 cm. Lớn nhất 20 cm.",
+        "distribution": "Mauritius, New Guinea, Fiji, Micronesia, Indonesia, Malaysia, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1929. Carcasson, 1977."
+      },
+      "en": {
+        "commonName": "Double-tooth soldierfish.",
+        "size": "18 cm. Maximum 20 cm.",
+        "distribution": "Mauritius, New Guinea, Fiji, Micronesia, Polynesia, Indonesia, Malaysia. Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1929. Carcasson, 1977."
+      }
+    },
+    "synonyms": [
+      "Lutjanus hexagonus Lacepede, Hist. Nat. Poiss., Vol.4, p.123, 1802.",
+      "Myripristis hexagonus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.171, 1829; Quoy and Gaimard, 1826-34; Gunther, 1859; Sauvage, 1891.",
+      "Myripristis pahudi Bleeker, Verh. Kon. Akad. Amsterdam, Vol.15, p.22, 1863."
+    ]
+  },
+  {
+    "id": "tap2-species-198",
+    "volume": 2,
+    "speciesIndex": 198,
+    "vnName": "Cá Sơn đá má nhẵn",
+    "scientificName": "Myripristis pralinius",
+    "authorship": "Cuvier and Valenciennes, 1829",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá vảy răng cưa Myripristis Cuvier",
+        "latin": "Myripristis Cuvier"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá má nhẵn",
+        "size": "16 cm. Lớn nhất 20 cm.",
+        "distribution": "Madagascar, Mauritius, Hồng Hải, Srilanca, Hawaii, Indonesia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1929. Herre, 1953."
+      },
+      "en": {
+        "commonName": "Smooth-checked soldierfish.",
+        "size": "16cm. Maximum 20cm.",
+        "distribution": "Madagascar, Mauritius, Red Sea, Sri Lanka, Hawaii, Indonesia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1929. Herre, 1953."
+      }
+    },
+    "synonyms": [
+      "Myripristis pralinius Cuvier and Valenciennes, Hist. Nat. poiss., Vol.3, p.170, 1829; Gunther, 1859; Sauvage, 1891; Seale, 1902; Jordan and Seale, 1906; Weber and de Beaufort, 1929.",
+      "Myripristis seychellensis Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.172, 1829; Sauvage, 1891.",
+      "Myripristis pralinus Lesson, Voy. Coquille, Zool., Vol.2, p.222, 1830; Fowler, 1928.",
+      "Myripristis borbonicus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.8, p.489, 1831.",
+      "Myripristis bleekeri Gunther, Cat. Fishes British Mus., Vol.1, p.20, 1859; Bleeker, 1863.",
+      "Myripristis indicus Bleeker, Ned. Tijds. Dierk., Vol.4, p.183, 1873; Weber, 1913.",
+      "Myripristis symetricus Jordan and Evermann, Bull. U. S. Fish. Comm., Vol.23, Part 1, pl.26, p.151, 1905.",
+      "Myripristis sanguineus Jordan and Seale, Bull. U. S. Bur. Fisheries, Vol.25, p.221, fig.24, 1906; Seale, 1906."
+    ]
+  },
+  {
+    "id": "tap2-species-199",
+    "volume": 2,
+    "speciesIndex": 199,
+    "vnName": "Cá Sơn đá môi đen",
+    "scientificName": "Myripristis melanostictis",
+    "authorship": "Bleeker, 1863",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá vảy răng cưa Myripristis Cuvier",
+        "latin": "Myripristis Cuvier"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá môi đen",
+        "size": "20 cm.",
+        "distribution": "Indonesia, Philippines, Nhật Bản, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1929. Herre, 1953."
+      },
+      "en": {
+        "commonName": "Blacktip soldierfish.",
+        "size": "20 cm.",
+        "distribution": "Indonesia, Philippines, Japan, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1929. Herre, 1953."
+      }
+    },
+    "synonyms": [
+      "Myripristis melanostictis Bleeker, Ned. Tijds. Dierk., Vol.1, p.237, 1863; Weber and de Beaufort, 1929.",
+      "Myripristis melanostigma Bleeker, Atlas Ichth., Vol.9, pl.355, fig.3, 1877, error.",
+      "Myripristis macrolepis Bleeker, Ned. Tijds. Dierk., Vol.4, p.195, 1873; Evermann and Seale, 1907; Seale and Bean, 1907; Snyder, 1912; Weber, 1913."
+    ]
+  },
+  {
+    "id": "tap2-species-200",
+    "volume": 2,
+    "speciesIndex": 200,
+    "vnName": "Cá Sơn đá đỏ",
+    "scientificName": "Holocentrus ruber",
+    "authorship": "(Forskal, 1775)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá thường Holocentrus Scopoli",
+        "latin": "Holocentrus Scopoli"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá đỏ",
+        "size": "10 - 20 cm. Lớn nhất 23 cm.",
+        "distribution": "Đông Phi, Hồng Hải, Madagascar, Mauritius, Ấn Độ, Srilanca, Australia, Indonesia, Samoa, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Red squirrelfish.",
+        "size": "10 - 20 cm. Maximum 23 cm.",
+        "distribution": "East Africa, Red Sea, Madagascar, Mauritius, India, Sri Lanka, Australia, Indonesia, Samoa, Malaysia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Sciaena rubra Forskal, Descript. Animal., p.48, 1775.",
+      "Perca rubra Bloch and Schneider, Syst. Ichth., p.90, 1801.",
+      "Perca praslin Lacepede, Hist. Nat. Poiss., Vol.4, pp.397, 415, 1802.",
+      "Holocentrum alborubrum Lacepede, Hist. Nat. Poiss., Vol.4, p.372, 1802; Richardson, 1846.",
+      "Holocentrus ruber Ruppell, Atlas Reise Nordl. Afrika, Fische Rothen Meers, p.83, pl.22, fig.1, 1828; Jordan and Seale, 1905; Jordan and Richardson, 1908; Jordan, Tanaka and Snyder, 1913; Fowler, 1918; Herre, 1940-41.",
+      "Holocentrus rubrum Gunther, Cat. Fishes British Mus., Vol.1, p.35, 1859; Meyer, 1885; Weber and de Beaufort, 1929.",
+      "Holocentrus praslin Jordan and Seale, Bull. U. S. Bur. Fisheries, Vol.25, p.225, fig.6, 1906; Jordan and Starks, 1907."
+    ]
+  },
+  {
+    "id": "tap2-species-201",
+    "volume": 2,
+    "speciesIndex": 201,
+    "vnName": "Cá Sơn đá chấm đuôi",
+    "scientificName": "Holocentrus caudimaculatus",
+    "authorship": "Ruppell, 1835",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá thường Holocentrus Scopoli",
+        "latin": "Holocentrus Scopoli"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá chấm đuôi",
+        "size": "20 cm. Lớn nhất 30 cm.",
+        "distribution": "Hồng Hải, Madagascar, Indonesia, Samoa, Malaysia, Tahiti, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Carcasson, 1977."
+      },
+      "en": {
+        "commonName": "Tail-spot squirrelfish.",
+        "size": "20 cm. Maximum 30 cm.",
+        "distribution": "Red Sea, Madagascar, Indonesia, Samoa, Malaysia, Tahiti, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Carcasson, 1977."
+      }
+    },
+    "synonyms": [
+      "Holocentrus spinifer Ruppell, Atlas Reise Nordl. Afrika Fische Rothen Meers, p.86, pl.23, fig.1, 1828, not of Forskal.",
+      "Holocentrus spiniferum Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.206, 1829; Vol.7, p.498, 1831.",
+      "Holocentrus caudimaculatum Ruppell, New Wirbelt., Fische Rothen Meers, p.97, 1835; Gunther, 1859; Steindachner, 1861; Plafair, 1867; Klunzinger, 1870; Bleeker, 1873; Day, 1878; Seale and Bean, 1907; Fowler, 1907; Weber and de Beaufort, 1929.",
+      "Holocentrus caudimaculatus Jordan and Seale, Bull. U. S. Bur. Fisheries, Vol.25, p.223, 1906; Fowler, 1928; Herre, 1938."
+    ]
+  },
+  {
+    "id": "tap2-species-202",
+    "volume": 2,
+    "speciesIndex": 202,
+    "vnName": "Cá Sơn đá sư tử",
+    "scientificName": "Holocentrus diadema",
+    "authorship": "Lacepede, 1803",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá thường Holocentrus Scopoli",
+        "latin": "Holocentrus Scopoli"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá sư tử",
+        "size": "16 - 17 cm.",
+        "distribution": "Hồng Hải, Madagascar, Hawaii, Tahiti, Australia, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Carcasson, 1977."
+      },
+      "en": {
+        "commonName": "Crowned squirrelfish, Lion parasol.",
+        "size": "16 - 17 cm.",
+        "distribution": "Red Sea, Madagascar, Hawaii, Tahiti, Australia, Indonesia, Malaysia, Philippines, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Carcasson, 1977."
+      }
+    },
+    "synonyms": [
+      "Holocentrus diadema Lacepede, Hist. Nat. Poiss., vol.9, pp.235, 290, and 292, 1799; Ruppell, 1828; Bleeker 1865; Seale, 1901; Jordan and Evermann, 1905; Fowler, 1918; Herre, 1938.",
+      "Holocentrum diadema Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.213, 1829; Bleeker, 1852; Gunther, 1959; Klunzinger, 1870; Weber and de Beaufort, 1929."
+    ]
+  },
+  {
+    "id": "tap2-species-203",
+    "volume": 2,
+    "speciesIndex": 203,
+    "vnName": "Cá Sơn đá sừng",
+    "scientificName": "Holocentrus cornutus",
+    "authorship": "Bleeker, 1853",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá thường Holocentrus Scopoli",
+        "latin": "Holocentrus Scopoli"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá sừng",
+        "size": "14 cm. Lớn nhất 20 cm.",
+        "distribution": "Đông Phi, Australia, Indonesia, Melanesia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Carcasson, 1977."
+      },
+      "en": {
+        "commonName": "Horned squirrelfish, Red-white squirrelfish.",
+        "size": "14 cm. Maximum 20cm.",
+        "distribution": "East Africa, Australia, Indonesia, Melanesia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Carcasson, 1977."
+      }
+    },
+    "synonyms": [
+      "Holocentrum cornutum Bleeker, Nat. Tijds. Ned.-Ind., Vol.5, p.240, 1853; Gunther, 1859; Weber and de Beaufort, 1929.",
+      "Holocentrum melanospilos Bleeker, Acta Soc. Sci. Indo-Neerl., Vol.3, p.2, 1858.",
+      "Holocentrus cornutus Bleeker, Ned. Tijds. Dierk., Vol.1, p.251, 1863; Evermann and Seale, 1907; Seale and Bean, 1907; Fowler, 1933; Herre, 1938.",
+      "Holocentrum melanospilus Bleeker, Ned. Tijds. Dierk., Vol.4, p.226, 1873."
+    ]
+  }
+]

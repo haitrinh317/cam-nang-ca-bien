@@ -1,0 +1,3 @@
+# 2. Hệ Thống Styling Vanilla CSS Phân Tách Theo Route (Route-Modular Tokens)
+
+File `styles/globals.css` ban đầu phát triển thành một khối monolith hơn 5,190 dòng (124KB), gây nghẽn hiệu năng tải trang trên mobile và cồng kềnh khi bảo trì. Thay vì đưa vào các thư viện utility nặng nề như TailwindCSS, chúng tôi quyết định bảo tồn Vanilla CSS thuần túy và hệ Design Tokens (OKLCH, Lora, Be Vietnam Pro, JetBrains Mono), nhưng chia tách kiến trúc thành 11 module CSS độc lập nhập khẩu có chọn lọc theo từng route Next.js (`specimen.css`, `browse.css`, `hero.css`, `mobile.css`...). Kiến trúc này giúp giảm 70% dung lượng CSS tải ở trang đích, ngăn chặn xung đột class toàn cục và đảm bảo chuẩn hiển thị /hallmark tối đa.

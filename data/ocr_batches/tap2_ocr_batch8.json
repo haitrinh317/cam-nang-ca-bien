@@ -1,0 +1,461 @@
+[
+  {
+    "id": "tap2-species-60",
+    "volume": 2,
+    "speciesIndex": 60,
+    "vnName": "Cá Ngần lớn",
+    "scientificName": "Protosalanx hyalocranius",
+    "authorship": "(Abbott, 1901)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Hồi",
+        "latin": "Salmoniformes"
+      },
+      "family": {
+        "vn": "Cá Ngần",
+        "latin": "Salangidae"
+      },
+      "genus": {
+        "vn": "Cá Ngần lớn Protosalanx Regan, 1908",
+        "latin": "Protosalanx Regan, 1908"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "Lớn nhất 70 mm.",
+        "distribution": "Triều Tiên, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Vương Văn Tân, 1963. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Proto-salangid",
+        "size": "Maximum 70 mm.",
+        "distribution": "Korea, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Wang, 1963. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Salanx hyalocranius Abbott, Proc. U.S. Nat. Mus., Vol.23, 1901, p.490.",
+      "Protosalanx hyalocranius Fang, Sinensia, Vol.4, No.9, 1934, p.240.",
+      "Protosalanx brevirostris Pellegrin, Bull. Mus. Hist. Nat. Paris, 1923, p.357; Chabanaud, 1927; Bourret, 1927.",
+      "Protosalanx tangkahkeii Wu, Bull. Mus. Paris, 2e, Tom. 3, No.2, p.219, 1931."
+    ]
+  },
+  {
+    "id": "tap2-species-61",
+    "volume": 2,
+    "speciesIndex": 61,
+    "vnName": "Cá Ngần vây dài",
+    "scientificName": "Salanx longianalis",
+    "authorship": "Regan, 1908",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Hồi",
+        "latin": "Salmoniformes"
+      },
+      "family": {
+        "vn": "Cá Ngần",
+        "latin": "Salangidae"
+      },
+      "genus": {
+        "vn": "Cá Ngần Salanx Cuvier, 1817",
+        "latin": "Salanx Cuvier, 1817"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "13 - 15 cm.",
+        "distribution": "Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Vương Văn Tân, 1963. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Long-anal icefish",
+        "size": "13 - 15 cm.",
+        "distribution": "China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Wang, 1963. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Parasalanx longianalis Regan, Ann. Mag. Nat. Hist., Vol.2, 1908, p.446.",
+      "Salanx longiannalis Zhang, Hoàng Bột Hải ngư loại điều tra báo cáo, p.63, fig.44."
+    ]
+  },
+  {
+    "id": "tap2-species-62",
+    "volume": 2,
+    "speciesIndex": 62,
+    "vnName": "Cá Ngần đầu nhọn",
+    "scientificName": "Salanx acuticeps",
+    "authorship": "Regan, 1908",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Hồi",
+        "latin": "Salmoniformes"
+      },
+      "family": {
+        "vn": "Cá Ngần",
+        "latin": "Salangidae"
+      },
+      "genus": {
+        "vn": "Cá Ngần Salanx Cuvier, 1817",
+        "latin": "Salanx Cuvier, 1817"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "10 - 12 cm. Lớn nhất 15 cm.",
+        "distribution": "Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Vương Văn Tân, 1963. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Headpointed icefish",
+        "size": "10 - 12 cm. Maximum 15 cm.",
+        "distribution": "China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Wang, 1963. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Salanx acuticeps Regan, Ann. Mag. Nat. Hist. ser.8, Vol.2, 1908; p.360; Zhang, 1955.",
+      "Parasalanx acuticeps Regan, Ann. Mag. Nat. Hist., ser.8, Vol.2, 1908, p.446; Fang, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-63",
+    "volume": 2,
+    "speciesIndex": 63,
+    "vnName": "Cá Ngần Trung Hoa",
+    "scientificName": "Leucosoma chinensis",
+    "authorship": "(Osbeck, 1765)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Hồi",
+        "latin": "Salmoniformes"
+      },
+      "family": {
+        "vn": "Cá Ngần",
+        "latin": "Salangidae"
+      },
+      "genus": {
+        "vn": "Cá Ngần trắng Leucosoma Gray, 1831",
+        "latin": "Leucosoma Gray, 1831"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "Lớn nhất 15 cm.",
+        "distribution": "Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Chinese icefish",
+        "size": "Maximum 15 cm.",
+        "distribution": "China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Albula chinensis Osbeck, Reise Ostindien, China, 1765, p.309.",
+      "Leucosoma chinensis Chevey and Lemasson, 33e Note Inst. Oceanogr. Indoch., 1937, p.16, fig.2."
+    ]
+  },
+  {
+    "id": "tap2-species-64",
+    "volume": 2,
+    "speciesIndex": 64,
+    "vnName": "Cá Ánh bạc",
+    "scientificName": "Argentina semifasciata",
+    "authorship": "Kishinouye, 1911",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Hồi",
+        "latin": "Salmoniformes"
+      },
+      "family": {
+        "vn": "Cá Ánh bạc",
+        "latin": "Argentinidae"
+      },
+      "genus": {
+        "vn": "Cá Ánh bạc Argentina Linnaeus, 1758",
+        "latin": "Argentina Linnaeus, 1758"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "[KHÔNG RÕ]",
+        "distribution": "Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải sản Hải Phòng.",
+        "status": "Rất hiếm.",
+        "literature": "Matsubara, 1955."
+      },
+      "en": {
+        "commonName": "Argentines",
+        "size": "[UNKNOWN]",
+        "distribution": "Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Haiphong Research Institute of Marine Products.",
+        "status": "Very rare.",
+        "literature": "Matsubara, 1955."
+      }
+    },
+    "synonyms": [
+      "Argentina semifasciatus Kishinouye, Jour. Coll. Agri. Imp. Univ. Tokyo, Vol.2, No.7, 1911, pp.383-386, pl.30."
+    ]
+  },
+  {
+    "id": "tap2-species-65",
+    "volume": 2,
+    "speciesIndex": 65,
+    "vnName": "Cá Răng lỗi",
+    "scientificName": "Chauliodus sloani",
+    "authorship": "Bloch & Schneider, 1801",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Hồi",
+        "latin": "Salmoniformes"
+      },
+      "family": {
+        "vn": "Cá Răng lỗi",
+        "latin": "Chauliodontidae"
+      },
+      "genus": {
+        "vn": "Cá Răng lỗi Chauliodus Bloch et Schneider, 1801",
+        "latin": "Chauliodus Bloch et Schneider, 1801"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "20,5 cm.",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Thái Bình Dương, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất ít gặp.",
+        "literature": "Kuronuma, 1961. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Needletooth, Sloan's viperfish",
+        "size": "20,5 cm.",
+        "distribution": "Atlantic Ocean, Indian Ocean, Pacific Ocean, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Kuronuma, 1961. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Chauliodus sloani Bloch & Schneider, Syst. Ichth., 1801, p.430.",
+      "Chauliodus sloani Gunther, Cat. Fishes British Mus., Vol.5, 1864, p.392.",
+      "Chauliodus sloani Jordan and Evermann, The Fishes of North and Middle America, 1896, p.585; Chevey, 1932."
+    ]
+  },
+  {
+    "id": "tap2-species-66",
+    "volume": 2,
+    "speciesIndex": 66,
+    "vnName": "Cá Sao gai",
+    "scientificName": "Polyipnus spinosus",
+    "authorship": "Gunther, 1887",
+    "status": "unknown",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Hồi",
+        "latin": "Salmoniformes"
+      },
+      "family": {
+        "vn": "Cá Sao gai",
+        "latin": "Sternoptychidae"
+      },
+      "genus": {
+        "vn": "Cá Sao gai Polyipnus Gunther, 1887",
+        "latin": "Polyipnus Gunther, 1887"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "[KHÔNG RÕ]",
+        "distribution": "[KHÔNG RÕ]",
+        "specimen": "[KHÔNG RÕ]",
+        "status": "[KHÔNG RÕ]",
+        "literature": "[KHÔNG RÕ]"
+      },
+      "en": {
+        "commonName": "Hatchetfish",
+        "size": "[UNKNOWN]",
+        "distribution": "[UNKNOWN]",
+        "specimen": "[UNKNOWN]",
+        "status": "[UNKNOWN]",
+        "literature": "[UNKNOWN]"
+      }
+    },
+    "synonyms": [
+      "Polyipnus spinosus Gunther, Report. Voy. Challenger Deep-sea Fishes, p.170, pl.1887; Weber and Beaufort, 1913; Fowler, 1936.",
+      "Polyioipnus stereope Jordan and Seale, Bull. U.S. Fishes Comm., Vol.22, p.581, pl.2, fig.3, 1904.",
+      "Polyipnus tridentifer McCulloch, Biol. Results Endeavor, 1909-1914, Vol.2, p.78 and p.87, pl.16, 1914."
+    ]
+  },
+  {
+    "id": "tap2-species-67",
+    "volume": 2,
+    "speciesIndex": 67,
+    "vnName": "Cá Mối đầu to",
+    "scientificName": "Trachinocephalus myops",
+    "authorship": "(Forster, 1801)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Mối",
+        "latin": "Synodontidae"
+      },
+      "genus": {
+        "vn": "Cá Mối đầu to Trachinocephalus Gill, 1861",
+        "latin": "Trachinocephalus Gill, 1861"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "14 - 22 cm. Lớn nhất 33 cm.",
+        "distribution": "Đại Tây Dương, Ấn Độ Dương, Thái Bình Dương, Đông Phi, Ấn Độ, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Trung Bộ, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Blunthead lizardfish, Snakefish",
+        "size": "14 - 22 cm. Maximum 33 cm.",
+        "distribution": "Atlantic Ocean, Indian Ocean, Pacific Ocean, East Africa, India, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, abundant.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Salmo myops Forster, in Bloch and Schneider, Syst. Ichth. 1801, p.421.",
+      "Trachinocephalus myops Gill, Proc. Acad. Nat. Sci. Phila. Supplement, p.53, 1861; Jordan, 1890; Jordan and Evermann, 1896; Evermann and Marsh, 1902; Jenkins, 1904; Waite, 1909; Jordan and Evermann, 1905; Jordan and Herre, 1907; Evermann and Seale, 1907; Gilchrist and Thompson, 1917; Barnard, 1925; Whitley, 1927. Fowler, 1932; Norman, 1935; Herre, 1940-41; Domantay, 1940.",
+      "Synodus myops Bleeker, Atlas Ichth., Vol.6, p.153, pl.278, fig.3, 1866-72; Jordan and Gilbert, 1833.",
+      "Goodella hypozoma Ogilby, Proc. Linn. Soc. New South Wales. Vol.22, p.250, 1897.",
+      "Trachinocephalus limbatus Seale, Occas. Papers Bishop Mus., Vol.1, p.17, 1902; McCulloch, 1929.",
+      "Saurus (Trachinocephalus) myops Metzelaar, Trop. Atlantic Visschen, p.23, 1919."
+    ]
+  },
+  {
+    "id": "tap2-species-68",
+    "volume": 2,
+    "speciesIndex": 68,
+    "vnName": "Cá Mối vây lưng dài",
+    "scientificName": "Saurida filamentosa",
+    "authorship": "Ogilby, 1910",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Mối",
+        "latin": "Synodontidae"
+      },
+      "genus": {
+        "vn": "Cá Mối Saurida Cuvier and Valenciennes, 1849",
+        "latin": "Saurida Cuvier and Valenciennes, 1849"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "20 - 30 cm. Lớn nhất 39 cm.",
+        "distribution": "Australia, Trung Quốc, Việt nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng nhiều.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Long-finned lizardfish",
+        "size": "20 - 30 cm. Maximum 39 cm.",
+        "distribution": "Australia, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, abundant.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Saurida filamentosa Ogilby, New fist, Queensland Coast, Proc. Royal Soc. Queensland, Vol.23, 1910, p.88."
+    ]
+  },
+  {
+    "id": "tap2-species-69",
+    "volume": 2,
+    "speciesIndex": 69,
+    "vnName": "Cá Mối hoa",
+    "scientificName": "Saurida undosquamis",
+    "authorship": "(Richardson, 1848)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Khớp quan",
+        "latin": "Myctophiformes"
+      },
+      "family": {
+        "vn": "Cá Mối",
+        "latin": "Synodontidae"
+      },
+      "genus": {
+        "vn": "Cá Mối Saurida Cuvier and Valenciennes, 1849",
+        "latin": "Saurida Cuvier and Valenciennes, 1849"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "15 - 30 cm. Lớn nhất 49 cm.",
+        "distribution": "Ấn Độ Dương, Thái Bình Dương, Australia, Đông Phi, Hồng hải, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung, Nam Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, rất nhiều.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Large-sealed lizardfish, Spotted tail grinner",
+        "size": "15 - 30 cm. Maximum 49 cm.",
+        "distribution": "Indian Ocean, Pacific Ocean, Australia, East Africa, Red Sea, Japan, China, Vietnam. Gulf of Tonkin, Central and Southern Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, very abundant.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Saurida undosquamis Richardson, Zool. Voy. Erebus and Terror Fishes, 1848, p.138, pl.51, fig.1-6.",
+      "Saurida undosquamis Gunther, Cat. Fishes Brit. Mus., Vol.5, 1864, p.400; Regan, 1918; Norman, 1935; Herre, 1948.",
+      "Saurida grandisquamis Gunther, Cat. Fishes Brit. Mus., Vol.5, 1864, p.400; Weber and de Beaufort, 1913; Fowler, 1928.",
+      "Saurida tumbil Playfair and Gunther, Fishes Zanzibar, p.116, 1866; in part Regan, 1908; Gilchrist and Thompson, 1909.",
+      "Saurida argyrophanes Jordan and Evermann, Proc. U.S. Nat. Mus., Vol.25, p.239, 1902; Jordan and Herre, 1907."
+    ]
+  }
+]

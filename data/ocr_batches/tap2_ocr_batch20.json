@@ -1,0 +1,475 @@
+[
+  {
+    "id": "tap2-species-174",
+    "volume": 2,
+    "speciesIndex": 174,
+    "vnName": "Cá Nhói lưng đen",
+    "scientificName": "Tylosurus melanotus",
+    "authorship": "(Bleeker, 1850)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Nhói",
+        "latin": "Belonidae"
+      },
+      "genus": {
+        "vn": "Cá Nhói Tylosurus Cocco",
+        "latin": "Tylosurus Cocco"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhói lưng đen",
+        "size": "50 - 70 cm. Lớn nhất 104 cm.",
+        "distribution": "Australia, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Black-backed needlefish.",
+        "size": "50 - 70 cm. Maximum 104 cm.",
+        "distribution": "Australia, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Belone coromandelica van Hasselt, Allgemeine Konst-en Letterbode, Vol. 1, p.130, 1823.",
+      "Belone timucoides van Hasselt, Bull. de Ferussac, Vol.2, Zool., p.374, 1824.",
+      "Belone melanotus Bleeker, Nat. Tijds. Ned.-Ind., Vol.1, p.94, 1850; Gunther, 1866; Meyer, 1885.",
+      "Mastacembelus melanotus Bleeker, Atlas Ichth., Vol.6, p.47, 1866-72.",
+      "Mastacembelus choram Bleeker, Atlas Ichth., Vol.6, p.256, fig.1, 1866-72.",
+      "Tylosurus coromandelicus Jordan and Starks, Proc. U.S. Nat. Mus., Vol.26, p.530, 1903.",
+      "Tylosurus melanotus Fowler, Jour. Acad. Nat. Sci. Phila., Vol.12, p.501, 1904; Weber and de Beaufort, 1922; Herre, 1934.",
+      "Strongylura coromandelica Fowler, Proc. Acad. Nat. Sci. Phila., Vol.71, p.5, 1919.",
+      "Strongylura melanutus Fowler, Proc. Acad. Nat. Sci. Phila., Vol.79, p.261, 1927."
+    ]
+  },
+  {
+    "id": "tap2-species-175",
+    "volume": 2,
+    "speciesIndex": 175,
+    "vnName": "Cá Nhói đuôi chấm",
+    "scientificName": "Tylosurus strongylurus",
+    "authorship": "(van Hasselt, 1823)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Nhói",
+        "latin": "Belonidae"
+      },
+      "genus": {
+        "vn": "Cá Nhói Tylosurus Cocco",
+        "latin": "Tylosurus Cocco"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhói đuôi chấm",
+        "size": "20 - 25 cm. Lớn nhất 52 cm.",
+        "distribution": "Đông Phi, Ấn Độ, Hồng Hải, Australia, Indonesia, Malaysia, New Guinea, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Spot-tailed needlefish.",
+        "size": "20 - 25 cm. Maximum 52 cm.",
+        "distribution": "East Africa, India, Red Sea, Australia, Indonesia, Malaysia, New Guinea, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Belone strongylurus van Hasselt, Allgemeine Konst en Letterbode, Deel 1, p.130, 1823.",
+      "Belone caudimacula Cuvier, Regne Animals, Discriples ed., Vol.7, p.234, Footnote, 1836; Bleeker, 1845; Cuvier and Valenciennes, 1846, Cantor, 1850.",
+      "Mastacembelus caudimacula Bleeker, Ned. Tijds. Dierk., Vol.2, pp.176 and 194, 1865.",
+      "Belone caudimaculata Gunther, Cat. Fishes British Mus., Vol.6, p.245, 1866; Meyer, 1885.",
+      "Belone strongylurus Gunther, Cat. Fishes British Mus., Vol.6, p.246, 1866; Day, 1878.",
+      "Tylosurus caudimaculatus Jordan and Richardson, Bull. U.S. Bur. Fisheries, Vol.27, p.242, 1908; Seale, 1914; Borodin, 1930.",
+      "Tylosurus strongylurus Seale, Philippine Jour. Sci., Vol.5D, p.267, 1910; Weber and de Beaufort, 1922; Herre, 1940-41.",
+      "Strongylura strongylura Fowler, Proc. Acad. Nat. Sci. Phila., Vol.79, p.261, 1827."
+    ]
+  },
+  {
+    "id": "tap2-species-176",
+    "volume": 2,
+    "speciesIndex": 176,
+    "vnName": "Cá Nhói đuôi không chấm",
+    "scientificName": "Tylosurus leiurus",
+    "authorship": "(Bleeker, 1850)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Nhói",
+        "latin": "Belonidae"
+      },
+      "genus": {
+        "vn": "Cá Nhói Tylosurus Cocco",
+        "latin": "Tylosurus Cocco"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhói đuôi không chấm",
+        "size": "40 - 50 cm. Lớn nhất 58 cm.",
+        "distribution": "Ở biển và cửa sông, Ấn Độ, Srilanca, Indonesia, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Banded needlefish.",
+        "size": "40 - 50 cm. Maximum 58 cm.",
+        "distribution": "In the sea and in the estuary, India, Sri Lanka, Indonesia, Malaysia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Belone leiurus Bleeker, Nat. Tijds. Dierk., Vol.3, p.244, 1866, not of Cuvier and Valenciennes.",
+      "Mastacembelus leiurus Bleeker, Atlas Ichth., Vol.6, p.46, pl.275, fig.2, 1866-72.",
+      "Tylosurus leiurus Jordan and Evermann, Proc. U.S. Nat. Mus., Vol.25, p.329, 1903; Weber and de Beaufort, 1922; Herre, 1928.",
+      "Strongylura leiuroides Fowler, Proc. Acad. Sci. Phila., Vol.71, p. 5, 1919.",
+      "Strongylura leiura Fowler, Proc. Acad. Sci. Phila., Vol.79, p.261, 1927."
+    ]
+  },
+  {
+    "id": "tap2-species-177",
+    "volume": 2,
+    "speciesIndex": 177,
+    "vnName": "Cá Nhói sấu",
+    "scientificName": "Tylosurus crocodilus",
+    "authorship": "(le Sueur, 1821)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Nhói",
+        "latin": "Beloniformes"
+      },
+      "family": {
+        "vn": "Cá Nhói",
+        "latin": "Belonidae"
+      },
+      "genus": {
+        "vn": "Cá Nhói Tylosurus Cocco",
+        "latin": "Tylosurus Cocco"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nhói sấu",
+        "size": "100 cm.",
+        "distribution": "Hồng Hải, Đông Phi, Indonesia, Malaysia, Tahiti, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Hound needlefish, Fork-tailed alligator gar.",
+        "size": "100 cm.",
+        "distribution": "Red Sea, East Africa, Indonesia, Malaysia, Tahiti, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Esox belone Forskal, Descript. Animals, p.67, 1775, not of Linnaeus.",
+      "Belone crocodilus Le Sueur, Jour. Acad. Nat. Sci. Phila., Vol.2, p.129, 1821; Cuvier and Valenciennes, 1846.",
+      "Belone choram Ruppell, Neue Wirbelt., Fische Rothen Meers, p.72, 1835; Gunther, 1866; Klunzinger, 1871; Day, 1878.",
+      "Tylosurus crocodilus Fowler, Jour. Acad. Nat. Sci. Phila., Vol.12, p.501, pl.9, upper fig., 1904; Weber and de Beaufort, 1922; Herre, 1934.",
+      "Strongylura crocodila Fowler, Proc. Acad. Nat. Sci. Phila., Vol.71, p.5, 1919.",
+      "Tylosurus choram Seale, Occas. Papers Bishop Mus., Vol.4, p.12, 1906."
+    ]
+  },
+  {
+    "id": "tap2-species-178",
+    "volume": 2,
+    "speciesIndex": 178,
+    "vnName": "Cá Suốt đầu dẹp",
+    "scientificName": "Atherina bleekeri",
+    "authorship": "Gunther, 1861",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Suốt",
+        "latin": "Atheriniformes"
+      },
+      "family": {
+        "vn": "Cá Suốt",
+        "latin": "Atherinidae"
+      },
+      "genus": {
+        "vn": "Cá Suốt Atherina Linnaeus",
+        "latin": "Atherina Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Suốt đầu dẹp",
+        "size": "60 - 70 cm. Lớn nhất 87 cm.",
+        "distribution": "Ở biển và cửa sông, Triều Tiên, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Trương Xuân Lâm, 1962, Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Flathead silverside.",
+        "size": "60 - 70 cm. Maximum 87 cm.",
+        "distribution": "In the sea and in the estuary, Korea, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Atherina bleekeri Gunther, Cat. Fish. British Mus., Vol.3, p.398, 1868; Seale, 1914; Fowler, 1935.",
+      "Atherina japonica Chevey, Serv. Oceanogr. Peches Indochine, 7e note, 1934, p.171.",
+      "Allanetta bleekeri Lindberg, Fishes of Japan, p.338, fig.320, 1965."
+    ]
+  },
+  {
+    "id": "tap2-species-179",
+    "volume": 2,
+    "speciesIndex": 179,
+    "vnName": "Cá Suốt mắt to",
+    "scientificName": "Atherina forskali",
+    "authorship": "Ruppell, 1835",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Suốt",
+        "latin": "Atheriniformes"
+      },
+      "family": {
+        "vn": "Cá Suốt",
+        "latin": "Atherinidae"
+      },
+      "genus": {
+        "vn": "Cá Suốt Atherina Linnaeus",
+        "latin": "Atherina Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Suốt mắt to",
+        "size": "8 - 11 cm. Lớn nhất 13 cm.",
+        "distribution": "Ấn Độ Dương, Tây Thái Bình Dương, Hồng Hải, Mauritius, Madagascar, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Big-eyed silverside.",
+        "size": "8 - 11 cm. Maximum 13 cm.",
+        "distribution": "Indian Ocean, Western Pacific Ocean, Red sea, Mauritius, Madagascar, Indonesia, Malaysia, Philippine, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Atherina forskalii Ruppell, Neue Wirbelt., Fische Rothen Meers, Vol.132, p.33, pl.33, fig.1, 1835; Klunzinger, 1884.",
+      "Atherina forskali Cantor, Jour. Asiatic Soc. Bengal, Vol.18, p.1805, 1850; Day, 1787; Jordan and Hubbs, 1917; Weber and de Beaufort, 1922; Herre, 1940-41.",
+      "Atherina lacunosa Bleeker, Nat. Tijds. Ned.-Ind., Vol.5, p.504, 1853, not of Forster; Evermann and Seale, 1907; Seale and Bean, 1907.",
+      "Atherina pinguis Bleeker, Acta Soc. Sci. Indo-Neerl., Vol.8, 1860."
+    ]
+  },
+  {
+    "id": "tap2-species-180",
+    "volume": 2,
+    "speciesIndex": 180,
+    "vnName": "Cá Suốt nhiệt đới",
+    "scientificName": "Atherina duodecimalis",
+    "authorship": "Cuvier and Valenciennes, 1835",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Suốt",
+        "latin": "Atheriniformes"
+      },
+      "family": {
+        "vn": "Cá Suốt",
+        "latin": "Atherinidae"
+      },
+      "genus": {
+        "vn": "Cá Suốt Atherina Linnaeus",
+        "latin": "Atherina Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Suốt nhiệt đới",
+        "size": "9 - 10 cm.",
+        "distribution": "Srilanca, Indonesia, Melanesia, Malaysia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trần Định, 1985."
+      },
+      "en": {
+        "commonName": "Tropical silverside.",
+        "size": "9 - 10 cm.",
+        "distribution": "Sri Lanka, Indonesia, Melanesia, Malaysia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Tran, 1985."
+      }
+    },
+    "synonyms": [
+      "Atherina duodecimalis Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.10, p.458, 1835; Bleeker, 1851; Gunther, 1861; Sauvage, 1891; Weber and de Beaufort, 1922; Fowler, 1927.",
+      "Hepsetia duodecimalis Cuvier and Valenciennes, in Herre: Check list of Philippine fishes, p.225, 1953.",
+      "Pranesus duodecimalis Cuvier and Valenciennes, in Carcasson: A Field Guide to the Coral Reef Fishes of the Indian and West Pacific names in five languages, p.191, 1989.",
+      "Atherinomorus duodecimalis (Valenciennes), in Dictionary of Animal names in five languages, p.191, 1981."
+    ]
+  },
+  {
+    "id": "tap2-species-181",
+    "volume": 2,
+    "speciesIndex": 181,
+    "vnName": "Cá Tuyết tê giác",
+    "scientificName": "Bregmaceros macclellandi",
+    "authorship": "Thompson, 1840",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tuyết",
+        "latin": "Gadiformes"
+      },
+      "family": {
+        "vn": "Cá Tuyết tê giác",
+        "latin": "Bregmacerotidae"
+      },
+      "genus": {
+        "vn": "Cá Tuyết tê giác Bregmaceros Thompson",
+        "latin": "Bregmaceros Thompson"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Tuyết tê giác",
+        "size": "47 - 93 mm. Lớn nhất 130 mm.",
+        "distribution": "Nam Phi, Ấn Độ, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Nam Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Chu Nguyên Đình, 1963, Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Spotted codlet.",
+        "size": "47 - 93 mm. Maximum 130mm.",
+        "distribution": "South Africa, India, Indonesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Southern Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Chu, 1963. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Bregmaceros macclellandi Thompson, Ann. Mag. Nat. Hist., Vol.4, p.184, 1840; Gunther, 1862; Day, 1878; Goode and Bean, 1895; Jordan and Evermann, 1898; Weber and de Beaufort, 1929; Fowler, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-182",
+    "volume": 2,
+    "speciesIndex": 182,
+    "vnName": "Cá Tuyết tê giác vây đen",
+    "scientificName": "Bregmaceros atripinnis",
+    "authorship": "Tickell, 1865",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tuyết",
+        "latin": "Gadiformes"
+      },
+      "family": {
+        "vn": "Cá Tuyết tê giác",
+        "latin": "Bregmacerotidae"
+      },
+      "genus": {
+        "vn": "Cá Tuyết tê giác Bregmaceros Thompson",
+        "latin": "Bregmaceros Thompson"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Tuyết tê giác vây đen",
+        "size": "80 - 90 mm.",
+        "distribution": "New Zealand, Burma, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Chu Nguyên Đình, 1963. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Black-finned codlet.",
+        "size": "80 - 90 mm.",
+        "distribution": "New Zealand, Burma, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Chu, 1963. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Asthenurus atripinnis Tickeel, J. A. S. Beng., Vol.34, pt.2, p.32, pl.1.",
+      "Bregmaceros atripinnis Day, Proc. Zoll. Soc. Lond., p.522, 1869."
+    ]
+  },
+  {
+    "id": "tap2-species-183",
+    "volume": 2,
+    "speciesIndex": 183,
+    "vnName": "Cá Chồn râu ac-ma",
+    "scientificName": "Acanthonus armatus",
+    "authorship": "Gunther, 1878",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chồn rắn",
+        "latin": "Ophidioidei"
+      },
+      "family": {
+        "vn": "Cá Chồn râu",
+        "latin": "Brotulidae"
+      },
+      "genus": {
+        "vn": "Cá Chồn Acan Acanthonus Gunther",
+        "latin": "Acanthonus Gunther"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chồn râu ac-ma",
+        "size": "325 mm.",
+        "distribution": "Thái Bình Dương, New Guinea, Philippines. Trung Bộ.",
+        "specimen": "Bảo tàng Manila (Philippipes).",
+        "status": "Rất hiếm.",
+        "literature": "Herre, 1953."
+      },
+      "en": {
+        "commonName": "Armata brotula.",
+        "size": "325 mm.",
+        "distribution": "Pacific Ocean, New Guinea, Philippines. Central Vietnam.",
+        "specimen": "Manila Museum (Philippines).",
+        "status": "Very rare.",
+        "literature": "Herre, 1953."
+      }
+    },
+    "synonyms": [
+      "Acanthonus armatus Gunther, Report Voy. Challenger, Zool., Vol.22, Deep-sea Fishes, p.117, 1878; Herre, 1953."
+    ]
+  }
+]

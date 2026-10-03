@@ -1,0 +1,90 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js build output
+.next/
+.next*/
+out/
+*.tsbuildinfo
+* 2*
+
+# Offline data (OCR cache, logs, local-only)
+_offline/
+
+# Production
+build/
+dist/
+
+# Environment variables — NEVER commit real keys
+.env
+.env.local
+.env.*.local
+.env.vercel
+.env.*
+
+# Vercel
+.vercel/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+scripts/__pycache__/
+*.egg-info/
+.venv/
+data/fishbase_cache/
+data/sealifebase_cache/
+
+# Raw data & large files (gitignored — store locally only)
+data/raw/
+data/tap2_images/
+scratch_images/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.pdf
+
+# Allow public images for site illustrations
+!public/images/**
+!public/logo.png
+!public/favicon.ico
+!public/og-default.png
+!public/og-option1.png
+!public/og-option2.png
+!public/icons/**
+
+# Backup files
+.backups/
+v1_backup/
+backups/
+
+# Logs
+Logs/
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Project-specific scratch
+scratch/
+Documents/
+
+# Duplicate public assets (legacy from Vite era)
+"public/logo (1).png"
+"public/site (1).webmanifest"
+
+# Agent working files
+.agents/
+
+# Understand-Anything local data
+.ua/
+
+.vercel

@@ -1,0 +1,408 @@
+/* Hallmark · macrostructure: Workbench+Catalogue · tone: editorial-scholarly
+ * route: custom (tuned) · genre: editorial
+ * vibe: "fluorescent cyan dominant, oxford-navy scholarly, museum archival"
+ * paper: #e6fffa (cyan-tint light) · accent: #6fffe8 (Fluorescent Cyan) · ink: #0c142a (Oxford Blue)
+ * display: Be Vietnam Pro · body: Be Vietnam Pro · outlier: JetBrains Mono
+ * axes: light / sans-serif / cool-cyan
+ * gates: all-pass
+ */
+
+/* ═══════════════════════════════════════════
+   TOKENS — Cẩm nang Cá biển Việt Nam v3.0
+   Theme: Fluorescent Cyan · Custom Tuned
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* ─── Brand Anchors ─── */
+  --color-cyan-raw:        #00d4b8;
+  --color-navy-raw:        #0b1329;
+
+  /* ─── Paper (Surfaces — clean crisp pearl/slate) ─── */
+  --color-paper:           #f8fafc;
+  --color-paper-2:         #ffffff;
+  --color-paper-3:         #f1f5f9;
+  --color-paper-4:         #e2e8f0;
+  --color-paper-cyan:      #e0f7f4;
+  --color-paper-navy:      #0b1329;
+
+  /* ─── Ink (Typography — sharp, high contrast) ─── */
+  --color-ink:             #0b1329;
+  --color-ink-2:           #1e293b;
+  --color-ink-3:           #334155;
+  --color-ink-on-cyan:     #0b1329;
+  --color-ink-on-navy:     #f8fafc;
+  --color-cyan-on-navy:    #00f0d0;
+
+  /* ─── Accent ─── */
+  --color-accent:          #00d4b8;
+  --color-accent-dark:     #0b1329;
+  --color-accent-hover:    #00bfa5;
+  --color-accent-subtle:   #e6faf7;
+
+  /* ─── Neutrals ─── */
+  --color-rule:            rgba(11, 19, 41, 0.12);
+  --color-rule-2:          rgba(11, 19, 41, 0.06);
+  --color-muted:           #475569;
+  --color-neutral:         #64748b;
+  --color-placeholder:     #94a3b8;
+
+  /* ─── Focus ─── */
+  --color-focus:           #0b1329;
+
+  /* ─── States ─── */
+  --color-success:         #059669;
+  --color-success-bg:      #ecfdf5;
+  --color-success-border:  #a7f3d0;
+  --color-warning:         #d97706;
+  --color-warning-bg:      #fffbeb;
+  --color-warning-border:  #fde68a;
+  --color-error:           #dc2626;
+  --color-error-bg:        #fef2f2;
+  --color-error-border:    #fca5a5;
+  --color-info-bg:         #f0f9ff;
+  --color-info-border:     #bae6fd;
+
+  /* ─── Volume accent colors ─── */
+  --color-vol-1:           #3730a3;
+  --color-vol-2:           #065f46;
+  --color-vol-3:           #991b1b;
+  --color-vol-4:           #92400e;
+  --color-vol-5:           #1e40af;
+
+  /* ─── Taxonomy rank colors ─── */
+  --color-rank-class-bg:   #ede9fe;
+  --color-rank-class-text: #5b21b6;
+  --color-rank-class-bd:   #ddd6fe;
+  --color-rank-order-bg:   #e0e7ff;
+  --color-rank-order-text: #3730a3;
+  --color-rank-order-bd:   #c7d2fe;
+  --color-rank-family-bg:  #d1fae5;
+  --color-rank-family-text:#065f46;
+  --color-rank-family-bd:  #a7f3d0;
+  --color-rank-genus-bg:   #fef3c7;
+  --color-rank-genus-text: #92400e;
+  --color-rank-genus-bd:   #fde68a;
+  --color-rank-species-bg:   rgba(0, 212, 184, 0.12);
+  --color-rank-species-text: #0f766e;
+  --color-rank-species-bd:   rgba(0, 212, 184, 0.35);
+
+  /* ─── Conservation & Red List Design System (Sách Đỏ Việt Nam VAST & IUCN Toàn Cầu) ───
+   * Thiết kế chuẩn hóa: Áp dụng cho mọi phân hệ tra cứu (Cá biển, Thú biển, Bò sát, San hô, Thân mềm...)
+   * Đầy đủ các phân hạng: CR, EN, VU, NT, LC, EW, EX, DD
+   */
+  /* Phân hạng CR: Cực kỳ nguy cấp (Critically Endangered) */
+  --redlist-cr-accent:         #dc2626;
+  --redlist-cr-bg-light:       rgba(254, 242, 242, 0.85);
+  --redlist-cr-border:         rgba(220, 38, 38, 0.3);
+  --redlist-cr-glow:           rgba(220, 38, 38, 0.15);
+  --redlist-cr-bg-dark:        rgba(69, 10, 10, 0.45);
+
+  /* Phân hạng EN: Nguy cấp (Endangered) */
+  --redlist-en-accent:         #ea580c;
+  --redlist-en-bg-light:       rgba(255, 247, 237, 0.85);
+  --redlist-en-border:         rgba(234, 88, 12, 0.3);
+  --redlist-en-glow:           rgba(234, 88, 12, 0.15);
+  --redlist-en-bg-dark:        rgba(67, 20, 7, 0.45);
+
+  /* Phân hạng VU: Sắp nguy cấp (Vulnerable) */
+  --redlist-vu-accent:         #d97706;
+  --redlist-vu-bg-light:       rgba(255, 251, 235, 0.85);
+  --redlist-vu-border:         rgba(217, 119, 6, 0.3);
+  --redlist-vu-glow:           rgba(217, 119, 6, 0.15);
+  --redlist-vu-bg-dark:        rgba(69, 26, 3, 0.45);
+
+  /* Phân hạng NT: Gần bị đe dọa (Near Threatened) */
+  --redlist-nt-accent:         #65a30d;
+  --redlist-nt-bg-light:       rgba(247, 254, 231, 0.85);
+  --redlist-nt-border:         rgba(101, 163, 13, 0.3);
+  --redlist-nt-glow:           rgba(101, 163, 13, 0.12);
+  --redlist-nt-bg-dark:        rgba(26, 46, 5, 0.45);
+
+  /* Phân hạng LC: Ít quan tâm (Least Concern) */
+  --redlist-lc-accent:         #16a34a;
+  --redlist-lc-bg-light:       rgba(240, 253, 244, 0.85);
+  --redlist-lc-border:         rgba(22, 163, 74, 0.3);
+  --redlist-lc-glow:           rgba(22, 163, 74, 0.12);
+  --redlist-lc-bg-dark:        rgba(5, 46, 22, 0.45);
+
+  /* Phân hạng EW: Tuyệt chủng ngoài tự nhiên (Extinct in the Wild) */
+  --redlist-ew-accent:         #7c3aed;
+  --redlist-ew-bg-light:       rgba(245, 243, 255, 0.85);
+  --redlist-ew-border:         rgba(124, 58, 237, 0.3);
+  --redlist-ew-glow:           rgba(124, 58, 237, 0.15);
+  --redlist-ew-bg-dark:        rgba(46, 16, 101, 0.45);
+
+  /* Phân hạng EX: Tuyệt chủng (Extinct) */
+  --redlist-ex-accent:         #475569;
+  --redlist-ex-bg-light:       rgba(248, 250, 252, 0.85);
+  --redlist-ex-border:         rgba(71, 85, 105, 0.3);
+  --redlist-ex-glow:           rgba(71, 85, 105, 0.12);
+  --redlist-ex-bg-dark:        rgba(15, 23, 42, 0.45);
+
+  /* Phân hạng DD: Thiếu dữ liệu (Data Deficient) */
+  --redlist-dd-accent:         #64748b;
+  --redlist-dd-bg-light:       rgba(248, 250, 252, 0.85);
+  --redlist-dd-border:         rgba(100, 116, 139, 0.3);
+  --redlist-dd-glow:           rgba(100, 116, 139, 0.1);
+  --redlist-dd-bg-dark:        rgba(30, 41, 59, 0.45);
+
+  /* ─── Cấu trúc Thẻ & Thành phần Hồ Sơ Bảo Tồn (Bento Layout) ─── */
+  --redlist-widget-radius:     var(--radius-xl, 24px);
+  --redlist-widget-padding:    var(--space-xl, 28px);
+  --redlist-widget-gap:        var(--space-lg, 20px);
+  --redlist-top-bar-height:    4px;
+
+  --redlist-card-radius:       var(--radius-lg, 18px);
+  --redlist-card-padding:      18px;
+  --redlist-card-border:       1px solid rgba(226, 232, 240, 0.9);
+  --redlist-card-bg:           #ffffff;
+
+  /* Thẻ Hành động Bảo tồn (Hero Action Card) */
+  --redlist-hero-border-left:  5px;
+  --redlist-hero-padding:      18px 20px;
+
+  /* Phân nhóm con: Biện pháp đã có / hiện hành */
+  --redlist-subgroup-existing-accent:  #059669;
+  --redlist-subgroup-existing-border:  3.5px;
+  --redlist-subgroup-existing-bg:      rgba(255, 255, 255, 0.85);
+
+  /* Phân nhóm con: Biện pháp đề xuất cấp thiết */
+  --redlist-subgroup-proposed-border:  3.5px;
+
+  /* Metric Pill: Xu hướng quần thể tự nhiên */
+  --redlist-trend-pill-radius: var(--radius-sm, 6px);
+  --redlist-trend-pill-padding: 6px 12px;
+  --redlist-trend-pill-bg:     rgba(217, 119, 6, 0.08);
+  --redlist-trend-pill-border: rgba(217, 119, 6, 0.22);
+
+  /* Huy hiệu bảo tồn (Dual Badges) */
+  --redlist-badge-radius:      var(--radius-pill, 9999px);
+  --redlist-badge-padding:     4px 12px;
+  --redlist-badge-compact-padding: 2px 8px;
+  --redlist-badge-font-size:   0.75rem;
+  --redlist-badge-font-weight: 700;
+
+  /* ─── Typography: Self-hosted via next/font/google (fallback: Be Vietnam Pro, Segoe UI, system fonts) ─── */
+  --font-display:          var(--font-lora), var(--font-be-vietnam), 'Be Vietnam Pro', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  --font-body:             var(--font-be-vietnam), 'Be Vietnam Pro', 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  --font-outlier:          var(--font-jetbrains-mono), 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* ─── Type scale (Tối ưu tra cứu to rõ cho khoa học, iPad & Mobile) ─── */
+  --text-xs:               0.85rem;   /* ~13.6px - Nhãn dữ liệu, STT, badge */
+  --text-sm:               0.95rem;   /* ~15.2px - Tác giả, chú thích, metadata */
+  --text-base:             1.05rem;   /* ~16.8px - Nội dung tra cứu, mô tả hình thái */
+  --text-lg:               1.2rem;    /* ~19.2px - Tên tiếng Việt, tiểu mục */
+  --text-xl:               1.4rem;    /* ~22.4px - Tiêu đề section */
+  --text-2xl:              1.75rem;   /* ~28px */
+  --text-3xl:              2.25rem;   /* ~36px */
+  --text-4xl:              2.85rem;   /* ~45px */
+  --text-display:          clamp(2.4rem, 4.5vw + 1rem, 3.8rem);
+  --text-display-s:        clamp(1.8rem, 3.5vw + 0.5rem, 2.8rem);
+
+  /* ─── Line heights (Thoáng mắt, chuẩn học thuật) ─── */
+  --lh-tight:              1.2;
+  --lh-snug:               1.35;
+  --lh-normal:             1.6;
+  --lh-relaxed:            1.75;
+
+
+  /* ─── Spacing (Compact density) ─── */
+  --space-3xs:             2px;
+  --space-2xs:             4px;
+  --space-xs:              8px;
+  --space-sm:              12px;
+  --space-md:              16px;
+  --space-lg:              20px;
+  --space-xl:              28px;
+  --space-2xl:             36px;
+  --space-3xl:             48px;
+  --space-4xl:             64px;
+  --space-5xl:             96px;
+
+  /* ─── Motion ─── */
+  --dur-instant:           80ms;
+  --dur-fast:              150ms;
+  --dur-normal:            250ms;
+  --dur-slow:              400ms;
+  --ease-out:              cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:               cubic-bezier(0.55, 0, 1, 0.45);
+  --ease-in-out:           cubic-bezier(0.45, 0, 0.55, 1);
+
+  /* ─── Radius ─── */
+  --radius-xs:             4px;
+  --radius-sm:             6px;
+  --radius-md:             12px;
+  --radius-lg:             18px;
+  --radius-xl:             24px;
+  --radius-pill:           9999px;
+
+  /* ─── Shadows ─── */
+  --shadow-xs:             0 1px 3px rgba(12, 20, 42, 0.06);
+  --shadow-sm:             0 2px 8px rgba(12, 20, 42, 0.06);
+  --shadow-md:             0 8px 24px -4px rgba(12, 20, 42, 0.1);
+  --shadow-lg:             0 16px 40px -8px rgba(12, 20, 42, 0.14);
+  --shadow-cyan:           0 0 40px rgba(111, 255, 232, 0.5);
+  --shadow-focus:          0 0 0 3px rgba(12, 20, 42, 0.15);
+
+  /* ─── Alpha / Semi-transparent (gate 48 — no raw rgba in components) ─── */
+  --color-navy-glass:      rgba(12, 20, 42, 0.9);
+  --color-navy-overlay:    rgba(12, 20, 42, 0.65);
+  --color-cyan-border:     rgba(111, 255, 232, 0.2);
+  --color-cyan-highlight:  rgba(111, 255, 232, 0.18);
+  --color-ink-on-navy-70:  rgba(240, 253, 249, 0.7);
+  --color-ink-on-navy-60:  rgba(240, 253, 249, 0.6);
+  --color-rule-footer:     rgba(240, 253, 249, 0.1);
+  --color-white-hover:     rgba(255, 255, 255, 0.08);
+  --color-ink-a70:         rgba(12, 20, 42, 0.7);
+  --color-link:            oklch(46% 0.19 255);
+  --color-link-hover:      oklch(39% 0.19 255);
+  --text-2xs:              0.72rem;
+
+  /* ─── Complex shadows (composite values belong in token layer) ─── */
+  --shadow-nav:            0 8px 32px rgba(12, 20, 42, 0.3), 0 0 0 1px rgba(111, 255, 232, 0.06) inset;
+  --shadow-search:         0 6px 20px rgba(12, 20, 42, 0.15);
+  --shadow-search-focus:   0 0 0 3px rgba(12, 20, 42, 0.2), 0 10px 30px rgba(12, 20, 42, 0.18);
+
+  /* ─── Rules ─── */
+  --rule-weight:           1px;
+  --rule-weight-md:        2px;
+
+  /* ─── Layout ─── */
+  --max-width:             1200px;
+  --nav-height:            60px;
+  --measure:               68ch;
+  --measure-narrow:        48ch;
+
+  /* ─── Admin / Brand (aliases for admin panel) ─── */
+  --brand-primary:         var(--color-accent);
+  --brand-primary-rgb:     111, 255, 232;
+  --color-surface:         var(--color-paper);
+  --color-surface-2:       var(--color-paper-2);
+  --color-surface-3:       var(--color-paper-3);
+  --color-border:          var(--color-rule);
+  --color-ink-base:        var(--color-ink);
+  --color-heading:         var(--color-ink);
+}
+
+/* ═══════════════════════════════════════════
+   DARK MODE — [data-theme="dark"]
+   Inverts paper/ink while keeping cyan accent
+   ═══════════════════════════════════════════ */
+[data-theme="dark"] {
+  /* Paper → deep oceanic midnight */
+  --color-paper:           #070d1d;
+  --color-paper-2:         #0c142a;
+  --color-paper-3:         #131e3d;
+  --color-paper-4:         #1a2850;
+
+  /* Ink → crystal clear, high legibility */
+  --color-ink:             #f8fafc;
+  --color-ink-2:           #e2e8f0;
+  --color-ink-3:           #94a3b8;
+  --color-heading:         #f8fafc;
+  --color-navy-raw:        #f1f5f9; /* Critical fix: invert navy text from dark to radiant white-slate */
+  --color-ink-on-cyan:     #00f0d0;
+  --color-ink-a70:         rgba(241, 245, 249, 0.75);
+  --color-paper-navy:      #070d1d;
+  --color-paper-cyan:      #08272b;
+  --color-accent-dark:     #00d4b8;
+
+  /* Neutrals */
+  --color-rule:            rgba(255, 255, 255, 0.12);
+  --color-rule-2:          rgba(255, 255, 255, 0.06);
+  --color-muted:           #38bdf8;
+  --color-neutral:         #94a3b8;
+  --color-placeholder:     #64748b;
+
+  /* Focus */
+  --color-focus:           #00f0d0;
+
+  /* Volume accent colors (lightened for dark mode legibility) */
+  --color-vol-1:           #818cf8;
+  --color-vol-2:           #34d399;
+  --color-vol-3:           #f87171;
+  --color-vol-4:           #fbbf24;
+  --color-vol-5:           #60a5fa;
+
+  /* Taxonomy rank colors in dark mode */
+  --color-rank-class-bg:   #2e1065;
+  --color-rank-class-text: #c4b5fd;
+  --color-rank-class-bd:   #5b21b6;
+  --color-rank-order-bg:   #172554;
+  --color-rank-order-text: #93c5fd;
+  --color-rank-order-bd:   #1d4ed8;
+  --color-rank-family-bg:  #064e3b;
+  --color-rank-family-text:#6ee7b7;
+  --color-rank-family-bd:  #047857;
+  --color-rank-genus-bg:   #78350f;
+  --color-rank-genus-text: #fde68a;
+  --color-rank-genus-bd:   #b45309;
+  --color-rank-species-bg:   rgba(0, 212, 184, 0.2);
+  --color-rank-species-text: #00f0d0;
+  --color-rank-species-bd:   rgba(0, 212, 184, 0.4);
+
+  /* ─── Conservation & Red List Tokens in Dark Mode ─── */
+  --redlist-cr-bg-light:       rgba(69, 10, 10, 0.45);
+  --redlist-cr-border:         rgba(248, 113, 113, 0.35);
+  --redlist-cr-glow:           rgba(239, 68, 68, 0.2);
+
+  --redlist-en-bg-light:       rgba(67, 20, 7, 0.45);
+  --redlist-en-border:         rgba(251, 146, 60, 0.35);
+  --redlist-en-glow:           rgba(249, 115, 22, 0.2);
+
+  --redlist-vu-bg-light:       rgba(69, 26, 3, 0.45);
+  --redlist-vu-border:         rgba(251, 191, 36, 0.35);
+  --redlist-vu-glow:           rgba(245, 158, 11, 0.2);
+
+  --redlist-nt-bg-light:       rgba(26, 46, 5, 0.45);
+  --redlist-nt-border:         rgba(163, 230, 53, 0.35);
+  --redlist-nt-glow:           rgba(132, 204, 22, 0.18);
+
+  --redlist-lc-bg-light:       rgba(5, 46, 22, 0.45);
+  --redlist-lc-border:         rgba(74, 222, 128, 0.35);
+  --redlist-lc-glow:           rgba(34, 197, 94, 0.18);
+
+  --redlist-ew-bg-light:       rgba(46, 16, 101, 0.45);
+  --redlist-ew-border:         rgba(196, 181, 253, 0.35);
+
+  --redlist-ex-bg-light:       rgba(15, 23, 42, 0.55);
+  --redlist-ex-border:         rgba(148, 163, 184, 0.3);
+
+  --redlist-dd-bg-light:       rgba(30, 41, 59, 0.45);
+  --redlist-dd-border:         rgba(148, 163, 184, 0.3);
+
+  /* Cấu trúc thẻ trong Dark Mode */
+  --redlist-card-bg:           rgba(30, 41, 59, 0.5);
+  --redlist-card-border:       1px solid rgba(255, 255, 255, 0.08);
+  --redlist-subgroup-existing-bg: rgba(15, 23, 42, 0.5);
+  --redlist-trend-pill-bg:     rgba(217, 119, 6, 0.16);
+  --redlist-trend-pill-border: rgba(217, 119, 6, 0.35);
+
+  /* Shadows → deep oceanic */
+  --shadow-xs:             0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-sm:             0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md:             0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  --shadow-lg:             0 16px 40px -8px rgba(0, 0, 0, 0.7);
+  --shadow-nav:            0 8px 32px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 240, 208, 0.15) inset;
+  --shadow-search:         0 6px 20px rgba(0, 0, 0, 0.5);
+  --shadow-search-focus:   0 0 0 3px rgba(0, 240, 208, 0.25), 0 10px 30px rgba(0, 0, 0, 0.6);
+
+  /* Glass */
+  --color-navy-glass:      rgba(11, 19, 41, 0.92);
+  --color-cyan-highlight:  rgba(0, 240, 208, 0.12);
+  --color-accent-subtle:   rgba(0, 240, 208, 0.14);
+
+  /* States */
+  --color-success-bg:      #052e16;
+  --color-success-border:  #166534;
+  --color-warning-bg:      #1c1107;
+  --color-warning-border:  #854d0e;
+  --color-error-bg:        #1c0a0a;
+  --color-error-border:    #991b1b;
+  --color-info-bg:         #082030;
+  --color-info-border:     #0c4a6e;
+
+  /* Links */
+  --color-link:            oklch(78% 0.15 210);
+  --color-link-hover:      oklch(88% 0.16 180);
+}

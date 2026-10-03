@@ -1,0 +1,459 @@
+/* ═══════════════════════════════════════════
+   WORKBENCH — Specimen Detail (species.html)
+   Macrostructure: museum archival card
+   ═══════════════════════════════════════════ */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  color: var(--color-ink-3);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  transition: transform var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+}
+
+.back-link:hover {
+  transform: translateX(-4px);
+  color: var(--color-navy-raw);
+  background: var(--color-paper-2);
+  border-color: var(--color-rule);
+}
+
+/* ─── Specimen outer card ─── */
+/* ═══════════════════════════════════════════
+   MUSEUM SPECIMEN CARD — species.html
+   ═══════════════════════════════════════════ */
+
+.specimen {
+  background: var(--color-paper-2);
+  border: 1.5px solid var(--color-rule);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  animation: fadeIn var(--dur-slow) var(--ease-out) both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.vol-1 { --vol-color: var(--color-vol-1); }
+.vol-2 { --vol-color: var(--color-vol-2); }
+.vol-3 { --vol-color: var(--color-vol-3); }
+.vol-4 { --vol-color: var(--color-vol-4); }
+.vol-5 { --vol-color: var(--color-vol-5); }
+
+/* ─── Hero ─── */
+.specimen__hero {
+  background: linear-gradient(160deg, var(--color-paper) 0%, var(--color-paper-2) 100%);
+  padding: var(--space-xl) var(--space-xl) var(--space-md);
+  border-bottom: 3px solid var(--vol-color, var(--color-navy-raw));
+  position: relative;
+}
+
+.specimen__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.specimen__index {
+  font-family: var(--font-outlier);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--vol-color, var(--color-muted));
+  letter-spacing: 0.04em;
+}
+
+.specimen__vol {
+  font-family: var(--font-outlier);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-paper-2);
+  background: var(--vol-color, var(--color-navy-raw));
+  padding: 2px var(--space-xs);
+  border-radius: var(--radius-sm);
+}
+
+.specimen__name {
+  font-family: var(--font-display);
+  font-size: var(--text-display-s);
+  font-weight: 700;
+  font-style: normal;
+  color: var(--color-ink);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-2xs);
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.specimen__sci {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-ink-2);
+  font-style: italic;
+  font-weight: 500;
+  line-height: var(--lh-snug);
+  margin: 0;
+}
+
+.specimen__author {
+  font-style: normal;
+  color: var(--color-muted);
+  font-weight: 400;
+  font-size: var(--text-base);
+}
+
+/* ─── Species Photo Gallery ─── */
+.specimen__gallery {
+  margin: var(--space-xl) 0;
+  text-align: center;
+}
+.specimen__photo {
+  margin: 0 0 var(--space-sm);
+  text-align: center;
+  cursor: zoom-in;
+  /* Fixed height — no layout shift when switching photos */
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-paper);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+.specimen__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  transition: opacity 0.2s ease;
+}
+
+/* Thumbnail strip */
+.specimen__photo-thumbs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+.specimen__thumb {
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.15s;
+  flex-shrink: 0;
+}
+.specimen__thumb:hover { transform: scale(1.05); }
+.specimen__thumb.active { border-color: var(--color-accent); }
+.specimen__thumb img {
+  width: 72px;
+  height: 54px;
+  object-fit: cover;
+  display: block;
+  border-radius: calc(var(--radius-sm) - 2px);
+}
+
+/* Dot indicators (Mobile only) */
+.specimen__photo-dots {
+  display: none;
+}
+.specimen__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-rule);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.specimen__dot.active {
+  background: var(--color-navy-raw);
+  transform: scale(1.25);
+}
+
+/* Photo credit */
+.specimen__photo-credit {
+  font-size: var(--text-xs);
+  color: var(--color-ink-3);
+  margin-top: var(--space-xs);
+  line-height: var(--lh-normal);
+}
+.specimen__photo-credit a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ─── Lightbox ─── */
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: zoom-out;
+  animation: lightbox-in 0.2s ease-out;
+}
+@keyframes lightbox-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.photo-lightbox img {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  cursor: default;
+}
+.photo-lightbox__close {
+  position: absolute;
+  top: var(--space-lg);
+  right: var(--space-lg);
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.photo-lightbox__close:hover { background: rgba(255,255,255,0.3); }
+.photo-lightbox__credit {
+  color: rgba(255,255,255,0.7);
+  font-size: var(--text-xs);
+  margin-top: var(--space-sm);
+}
+.photo-lightbox__credit a { color: rgba(255,255,255,0.9); text-decoration: underline; }
+.photo-lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  line-height: 1;
+}
+.photo-lightbox__nav:hover { background: rgba(255,255,255,0.25); }
+.photo-lightbox__nav--prev { left: var(--space-lg); }
+.photo-lightbox__nav--next { right: var(--space-lg); }
+
+/* ─── WoRMS Curatorial Badge & Scientific Name Row (/hallmark) ─── */
+.specimen__sci-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 8px 16px !important;
+  margin-top: 4px !important;
+  margin-bottom: var(--space-xs, 8px) !important;
+}
+
+.specimen__sci {
+  margin: 0 !important;
+  line-height: 1.35 !important;
+}
+
+.specimen__sci-name {
+  font-style: italic !important;
+  font-family: var(--font-display, 'Lora', Georgia, serif) !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.specimen__author {
+  font-style: normal !important;
+  font-family: var(--font-display, 'Lora', Georgia, serif) !important;
+  color: var(--color-ink-3, #64748b) !important;
+  font-size: 0.88em !important;
+  font-weight: 400 !important;
+  margin-left: 4px !important;
+}
+
+.worms-badge-wrap {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.worms-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  height: 24px !important;
+  padding: 0 10px !important;
+  border-radius: 9999px !important;
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif) !important;
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  box-sizing: border-box !important;
+  transition: background-color 150ms ease,
+              border-color 150ms ease,
+              color 150ms ease,
+              box-shadow 150ms ease !important;
+}
+
+.worms-pill__icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+}
+
+.worms-pill__label {
+  letter-spacing: 0.01em !important;
+}
+
+.worms-pill__ext {
+  opacity: 0.65 !important;
+  flex-shrink: 0 !important;
+  transition: transform 0.15s ease, opacity 0.15s ease !important;
+}
+
+.worms-pill:hover .worms-pill__ext {
+  opacity: 1 !important;
+  transform: translate(1px, -1px) !important;
+}
+
+/* 1. Trạng thái Hợp lệ (Valid / Accepted) */
+.worms-pill--valid {
+  background: rgba(16, 185, 129, 0.08) !important;
+  color: #047857 !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+.worms-pill--valid:hover {
+  background: rgba(16, 185, 129, 0.16) !important;
+  border-color: rgba(16, 185, 129, 0.5) !important;
+  color: #065f46 !important;
+  box-shadow: 0 1px 4px rgba(16, 185, 129, 0.15) !important;
+}
+
+/* 2. Trạng thái Danh pháp cũ (Synonym) */
+.worms-pill--synonym {
+  background: rgba(245, 158, 11, 0.08) !important;
+  color: #b45309 !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+}
+
+.worms-pill--synonym:hover {
+  background: rgba(245, 158, 11, 0.16) !important;
+  border-color: rgba(245, 158, 11, 0.55) !important;
+  color: #92400e !important;
+  box-shadow: 0 1px 4px rgba(245, 158, 11, 0.15) !important;
+}
+
+/* 3. Trạng thái Chưa rõ / Lỗi (Uncertain / Unknown / Not Found) */
+.worms-pill--uncertain,
+.worms-pill--unknown,
+.worms-pill--not-found {
+  background: var(--color-paper-2, rgba(148, 163, 184, 0.12)) !important;
+  color: var(--color-ink-3, #64748b) !important;
+  border: 1px solid var(--color-rule, rgba(148, 163, 184, 0.28)) !important;
+}
+
+.worms-pill--uncertain:hover,
+.worms-pill--unknown:hover,
+.worms-pill--not-found:hover {
+  background: var(--color-paper-3, rgba(148, 163, 184, 0.2)) !important;
+  color: var(--color-ink-2, #334155) !important;
+}
+
+/* Chú thích Tên hiện hành cho loài đồng nghĩa */
+.worms-pill__synonym-note {
+  font-family: var(--font-body, 'Be Vietnam Pro', sans-serif) !important;
+  font-size: 0.76rem !important;
+  color: var(--color-ink-3, #64748b) !important;
+  margin-left: 2px !important;
+}
+
+.worms-pill__accepted-name {
+  font-style: italic !important;
+  font-weight: 600 !important;
+  color: var(--color-ink, #0f172a) !important;
+}
+
+/* ─── Dark Mode cho WoRMS Pill ─── */
+[data-theme="dark"] .worms-pill--valid {
+  background: rgba(16, 185, 129, 0.16) !important;
+  color: #34d399 !important;
+  border-color: rgba(16, 185, 129, 0.36) !important;
+}
+
+[data-theme="dark"] .worms-pill--valid:hover {
+  background: rgba(16, 185, 129, 0.25) !important;
+  border-color: rgba(16, 185, 129, 0.6) !important;
+  color: #6ee7b7 !important;
+  box-shadow: 0 1px 6px rgba(16, 185, 129, 0.3) !important;
+}
+
+[data-theme="dark"] .worms-pill--synonym {
+  background: rgba(245, 158, 11, 0.16) !important;
+  color: #fbbf24 !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+}
+
+[data-theme="dark"] .worms-pill--synonym:hover {
+  background: rgba(245, 158, 11, 0.25) !important;
+  border-color: rgba(245, 158, 11, 0.65) !important;
+  color: #fde68a !important;
+  box-shadow: 0 1px 6px rgba(245, 158, 11, 0.3) !important;
+}
+
+[data-theme="dark"] .worms-pill--uncertain,
+[data-theme="dark"] .worms-pill--unknown,
+[data-theme="dark"] .worms-pill--not-found {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #94a3b8 !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+[data-theme="dark"] .worms-pill__accepted-name {
+  color: #00f0d0 !important;
+}
+
+.bio-notes-disclaimer {
+  font-size: var(--text-xs);
+  color: var(--color-ink-3);
+  font-style: italic;
+  margin: 0;
+}
+.bio-notes-loading, .bio-notes-error {
+  font-size: var(--text-xs);
+  color: var(--color-ink-3);
+  font-style: italic;
+}
+.bio-notes-error { color: #f87171; }
+

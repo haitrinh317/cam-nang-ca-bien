@@ -1,0 +1,462 @@
+[
+  {
+    "id": "tap2-species-204",
+    "volume": 2,
+    "speciesIndex": 204,
+    "vnName": "Cá Sơn đá dài",
+    "scientificName": "Flammeo sammara",
+    "authorship": "(Forskal, 1775)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Sơn đá",
+        "latin": "Holocentridae"
+      },
+      "genus": {
+        "vn": "Cá Sơn đá dài Flammeo Jordan and Evermann",
+        "latin": "Flammeo Jordan and Evermann"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Sơn đá dài",
+        "size": "15 - 17 cm. Lớn nhất 23 cm.",
+        "distribution": "Hồng Hải, Ấn Độ Dương, Australia, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Bloodspot squirrelfish, Lion make.",
+        "size": "15 - 17 cm. Maximum 23 cm.",
+        "distribution": "Red Sea, Indian Ocean, Australia, Indonesia, Philippines, Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Sciaena sammara Forskal, Descript. Animal., p.48, 1775.",
+      "Holocentrus sammara Ruppell, Atlas Reise Nordl. Afrika, Fische Rothen Merrs, p.85, pl.22, fig.3, 1828; Bleeker, 1849; Jordan and Seale, 1906; Jordan and Richardson, 1908; Fowler, 1927; Herre, 1938.",
+      "Holocentrum sammara Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.3, p.216, 1829; Bleeker, 1848; Gunther, 1859; Day, 1878; Weber and de Beaufort, 1929.",
+      "Holocentrum christianum Cuvier and Valeciennes, Hist. Nat. Poiss., Vol.3, p.219, 1829.",
+      "Holocentrum tahiticum Kner, Sitzungsber. Akad. Wiss. Wien, Vol.29, p.482, 1864.",
+      "Flameo sammara Seale, Occas. Papers Bishop Mus., Vol.1, p.14, 1902; Jordan and Evermann, 1905; Fowler, 1918.",
+      "Holocentrus fuscostriatus Seale, Occas. Papers Bishop Mus., Vol.1, p.69, 1901.",
+      "Holocentrus thorntonensis Fowler, Proc. Acad. Nat. Sci. Phila., p.213, 1904.",
+      "Kutaflammeo sammara (Forskal), in Carcasson: A Field Guide to the Coral Reef Fishes of the Indian and West Pacific Oceans."
+    ]
+  },
+  {
+    "id": "tap2-species-205",
+    "volume": 2,
+    "speciesIndex": 205,
+    "vnName": "Cá Nành xe Nhật Bản",
+    "scientificName": "Monocentris japonicus",
+    "authorship": "Houttuyn, 1782",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Tráp mắt vàng",
+        "latin": "Beryciformes"
+      },
+      "family": {
+        "vn": "Cá Nành xe",
+        "latin": "Monocentridae"
+      },
+      "genus": {
+        "vn": "Cá Nành xe Monocentris Bloch and Schneider",
+        "latin": "Monocentris Bloch and Schneider"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Nành xe Nhật Bản",
+        "size": "16 cm.",
+        "distribution": "Đông Phi, Ấn Độ Dương, Autralia, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Japanese knight fish",
+        "size": "16 cm.",
+        "distribution": "East Africa, Indian Ocean, Australia, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Monocentris japonicus Houttuyn, Verh. Holland Maatsch. Vetensch. Haarlem, Vol.20, p.329, pl.2, 1782.",
+      "Sciaena japonica (cataphracta) Thunberg, Nov. Act. Scient. Suec., Vol.11, p.102, 1790.",
+      "Monocentris carinata Bloch and Schneider, Syst. Ichth., p.100, 1801.",
+      "Lepisacanthus japonicus Lacepede, Hist. Nat. Poiss., Vol.3, p.321, 1802.",
+      "Monocentris japonicus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.4, p.461, 1829; Schlegel, 1843; Gunther, 1859; Alcock, 1898; Jordan and Fowler, 1902; Weber and de Beaufort, 1929; Herre, 1941.",
+      "Monocentris cataphracta Bleeker, Verh. Akad. Amsterdam, Vol.1, Bijdr. Ichth. Fauna Japan, p.5, 1854."
+    ]
+  },
+  {
+    "id": "tap2-species-206",
+    "volume": 2,
+    "speciesIndex": 206,
+    "vnName": "Cá Dây gương",
+    "scientificName": "Zenopsis nebulosa",
+    "authorship": "(Temminck and Schlegel, 1847)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Dây",
+        "latin": "Zeiformes"
+      },
+      "family": {
+        "vn": "Cá Dây",
+        "latin": "Zeidae"
+      },
+      "genus": {
+        "vn": "Cá Dây gương Zenopsis Gill",
+        "latin": "Zenopsis Gill"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Dây gương",
+        "distribution": "Australia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Mirror dory, Mirror perch.",
+        "distribution": "Australia, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Zeus nebulosa Temminck and Schlegel, Fauna Japonica, Poissons, p.123, pl.66, 1847.",
+      "Zenopsis nebulosa Jordan and Fowler, Proc. U. S. Nat. Mus., Vol.25, p.515, 1902."
+    ]
+  },
+  {
+    "id": "tap2-species-207",
+    "volume": 2,
+    "speciesIndex": 207,
+    "vnName": "Cá Dây Nhật Bản",
+    "scientificName": "Zeus japonicus",
+    "authorship": "Cuvier and Valenciennes, 1835",
+    "status": "very_rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Dây",
+        "latin": "Zeiformes"
+      },
+      "family": {
+        "vn": "Cá Dây",
+        "latin": "Zeidae"
+      },
+      "genus": {
+        "vn": "Cá Dây Zeus Linnaeus",
+        "latin": "Zeus Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Dây Nhật Bản",
+        "size": "29 - 36cm.",
+        "distribution": "Nam Phi, Australia, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Rất hiếm.",
+        "literature": "Trương Xuân Lâm, 1962, Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Japanese dory.",
+        "size": "29 - 36cm.",
+        "distribution": "South Africa, Australia, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Very rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Zeus japonicus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.10, p.24, 1835; Jordan and Fowler, 1902; Matsubara, 1955."
+    ]
+  },
+  {
+    "id": "tap2-species-208",
+    "volume": 2,
+    "speciesIndex": 208,
+    "vnName": "Cá Dây lưng gù",
+    "scientificName": "Zen cypho",
+    "authorship": "Fowler, 1934",
+    "status": "very_rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Dây",
+        "latin": "Zeiformes"
+      },
+      "family": {
+        "vn": "Cá Dây",
+        "latin": "Zeidae"
+      },
+      "genus": {
+        "vn": "Cá Dây lưng gù Zen Jordan",
+        "latin": "Zen Jordan"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Dây lưng gù",
+        "size": "6 - 11 cm.",
+        "distribution": "Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Rất hiếm.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962, Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Dory.",
+        "size": "6 - 11 cm.",
+        "distribution": "Philippines, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Very rare.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Zen cypho Fowler, Proc. Acad. Nat. Sci. Phila., Vol.85, p.350, fig.103, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-209",
+    "volume": 2,
+    "speciesIndex": 209,
+    "vnName": "Cá Thoi",
+    "scientificName": "Antigonia capros",
+    "authorship": "Lowe, 1843",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Dây",
+        "latin": "Zeiformes"
+      },
+      "family": {
+        "vn": "Cá Thoi",
+        "latin": "Caproidae"
+      },
+      "genus": {
+        "vn": "Cá Thoi Antigonia Lowe",
+        "latin": "Antigonia Lowe"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Thoi",
+        "size": "15 cm.",
+        "distribution": "Nam Phi, Srilanca, Australia, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Hiếm.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Deep-bodied boarfish",
+        "size": "15 cm.",
+        "distribution": "South Africa, Sri Lanka, Australia, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Rare.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Antigonia capros Lowe, Proc. Zool. Soc. London, Vol.2, p.85, 1843; Gunther, 1860; Zhang, 1963."
+    ]
+  },
+  {
+    "id": "tap2-species-210",
+    "volume": 2,
+    "speciesIndex": 210,
+    "vnName": "Cá Thoi đỏ",
+    "scientificName": "Antigonia rubescens",
+    "authorship": "(Gunther, 1860)",
+    "status": "rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Dây",
+        "latin": "Zeiformes"
+      },
+      "family": {
+        "vn": "Cá Thoi",
+        "latin": "Caproidae"
+      },
+      "genus": {
+        "vn": "Cá Thoi Antigonia Lowe",
+        "latin": "Antigonia Lowe"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Thoi đỏ",
+        "size": "34 - 72 cm.",
+        "distribution": "Nam Phi, Srilanca, Australia, Indonesia, Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Hiếm.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962."
+      },
+      "en": {
+        "commonName": "Indo-Pacific boarfish.",
+        "size": "34 - 72 cm.",
+        "distribution": "South Africa, Sri Lanka, Australia, Indonesia, Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Rare.",
+        "literature": "Herre, 1953. Zhang, 1962."
+      }
+    },
+    "synonyms": [
+      "Hypsinotus sp. Schlegel, Fauna Japonica, Pisces, p.84, pl.42, fig.2, 1844.",
+      "Hypsinotus rubescens Gunther, Cat. Fishes British Mus., Vol.2, p.63, 1860.",
+      "Antogonia rubescens Gunther, Report Voy. Challenger Zoology, Vol.1, Part 6, p.44, 1860; Jordan and Fowler, 1902; Weber and de Beaufort, 1929.",
+      "Antigonia capros Fowler and Bean, Bull.100, U. S. Nat. Mus., Vol.8, p.3, 1929; Alcock, 1899; Gunther, 1887."
+    ]
+  },
+  {
+    "id": "tap2-species-211",
+    "volume": 2,
+    "speciesIndex": 211,
+    "vnName": "Cá Cờ mặt trăng",
+    "scientificName": "Velifer hypselopterus",
+    "authorship": "Bleeker, 1879",
+    "status": "very_rare",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Mặt trăng",
+        "latin": "Lampridiformes"
+      },
+      "family": {
+        "vn": "Cá Cờ mặt trăng",
+        "latin": "Veliferidae"
+      },
+      "genus": {
+        "vn": "Cá Cờ mặt trăng Velifer Temminck and Schlegel",
+        "latin": "Velifer Temminck and Schlegel"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Cờ mặt trăng",
+        "size": "12 - 14 cm. Lớn nhất 16 cm.",
+        "distribution": "Đông Phi, Nhật Bản, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất hiếm.",
+        "literature": "Thành Khánh Thái, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Sailfin moonfish.",
+        "size": "12 - 14 cm. Maximum 16 cm.",
+        "distribution": "East Africa, Japan, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very rare.",
+        "literature": "Cheng, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Velifer hypselopterus Bleeker, Acad. Neerl. Sci. Amst., p.16, 1879; Regan, 1907; Smith, 1951."
+    ]
+  },
+  {
+    "id": "tap2-species-212",
+    "volume": 2,
+    "speciesIndex": 212,
+    "vnName": "Cá Lao có vẩy",
+    "scientificName": "Fistularia serrata",
+    "authorship": "Cuvier, 1871",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Gai",
+        "latin": "Gasterosteiformes"
+      },
+      "family": {
+        "vn": "Cá Mõm ống",
+        "latin": "Fistulariidae"
+      },
+      "genus": {
+        "vn": "Cá Mõm ống Fistularia Linnaeus",
+        "latin": "Fistularia Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lao có vẩy",
+        "size": "60 - 70 cm. Lớn nhất 150 cm.",
+        "distribution": "Đông Phi, Ấn Độ Dương, Thái Bình Dương, Hồng Hải, Ấn Độ, Australia, New Guinea, Samoa, Hawaii, Indonesia, Philippiness, Thái Lan, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Rough flutemouth.",
+        "size": "60 - 70 cm. Maximum 150 cm.",
+        "distribution": "East Africa, Indian Ocean, Pacific Ocean, Red Sea, India, Australia, New Guinea, Samoa, Hawaii, Indonesia, Philippiness, Thailand, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Fistularia serrata Cuvier, Regne Animal, Vol.2, p.349, 1871.",
+      "Fistularia serrata Gunther, Cat. Fishes British Mus., Vol.3, p.533, 1861 in part; Jenkins, 1903; Jordan and Seale, 1907; Evermann and Seale, 1907; Fowler, 1918.",
+      "Fistularia villosa Klunzinger, Abh. Zool.- Bot. Gesell. Wien, Vol.21, p.516, 1871; Weber and de Beaufort, 1922; Herre, 1934.",
+      "Fistularia petimba Jordan and Evermann, Fishes North and Middle America, Vol.1, p.758, 1896; not of Lacepede; Jordan and Snyder, 1900; Jordan and Starks, 1902."
+    ]
+  },
+  {
+    "id": "tap2-species-213",
+    "volume": 2,
+    "speciesIndex": 213,
+    "vnName": "Cá Lao không vẩy",
+    "scientificName": "Fistularia petimba",
+    "authorship": "Lacepede, 1803",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Gai",
+        "latin": "Gasterosteiformes"
+      },
+      "family": {
+        "vn": "Cá Mõm ống",
+        "latin": "Fistulariidae"
+      },
+      "genus": {
+        "vn": "Cá Mõm ống Fistularia Linnaeus",
+        "latin": "Fistularia Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Lao không vẩy",
+        "size": "40 - 60 cm. Lớn nhất 150 cm.",
+        "distribution": "Đông Phi, Ấn Độ Dương, Hồng Hải, Australia, Tahiti, Hawaii, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Smooth flutemooth, Trompette.",
+        "size": "40 - 60 cm. Maximum 150 cm.",
+        "distribution": "East Africa, Indian Ocean, Red Sea, Australia, Tahiti, Hawaii, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Fistularia petimba Lacepede, Hist. Nat. Poiss., Vol.5, p.349, 1803; Jenkins, 1903; Snyder, 1903; Jordan and Seale, 1907; Evermann and Seale, 1907; Weber and de Beaufort, 1922; Fowler, 1922; Herre, 1933.",
+      "Fistularia serrata Gunther, Cat. Fishes British Mus., Vol.3, p.533, 1861, in part; Evermann and Seale, 1907.",
+      "Fistularia depressa Gunther, Rept. Voy. Challenger, Zool., Vol.7, pt 6, Shore Fishes, p.69, pl.3, fig.D, 1880; Jordan and Evermann, 1896; Seale, 1901; Weber, 1913."
+    ]
+  }
+]

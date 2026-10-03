@@ -1,0 +1,484 @@
+[
+  {
+    "id": "tap2-species-214",
+    "volume": 2,
+    "speciesIndex": 214,
+    "vnName": "Cá Vỏ tôm",
+    "scientificName": "Aeoliscus strigatus",
+    "authorship": "(Gunther, 1861)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Gai",
+        "latin": "Gasterosteiformes"
+      },
+      "family": {
+        "vn": "Cá Múa đít",
+        "latin": "Centriscidae"
+      },
+      "genus": {
+        "vn": "Cá Vỏ tôm Aeoliscus Jordan and Starks",
+        "latin": "Aeoliscus Jordan and Starks"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Vỏ tôm",
+        "size": "14 cm.",
+        "distribution": "Vịnh Pếch-xíc, New Guinea, Hawaii, Melanesia, Indonesia, Malaysia, Philippines, Nhật Bản, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít",
+        "literature": "Herre, 1953. Orsi, 1974. Carcasson, 1977."
+      },
+      "en": {
+        "commonName": "Shrimpfish.",
+        "size": "14 cm.",
+        "distribution": "Persian Gulf, New Guinea, Hawaii, Melanesia, Indonesia, Malaysia, Philippines, Japan, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant",
+        "literature": "Herre, 1953. Orsi, 1974. Carcasson, 1977."
+      }
+    },
+    "synonyms": [
+      "Amphisile scutata Bleeker, Nat. Tijds. Ned.-Ind., Vol.2, p.245, 1851, not of Linnaeus; Steindachner, 1860.",
+      "Amphisile strigata Gunther, Cat. Fishes British Mus., Vol.3, p.528, 1861; Meyer, 1885.",
+      "Amphisile komis Macleay, Proc. Linn. Soc. New South Wales, Vol.3, p.166, pl.19B, 1879.",
+      "Aeoliscus strigatus Jordan and Starks, Proc. U. S. Nat. Mus., Vol.26, p.71, 1902; Evermann and Seale, 1907; Jordan and Richardson, 1908; Weber and de Beaufort, 1922; Herre, 1934.",
+      "Centriscus strigatus Duncka and Mohr, Mitt. Zool. Mus. Hamburg, Vol.41, p.6, figs.1-12, 1925; Fowler, 1928; Mohr, 1937."
+    ]
+  },
+  {
+    "id": "tap2-species-215",
+    "volume": 2,
+    "speciesIndex": 215,
+    "vnName": "Cá Múa đít đỏ",
+    "scientificName": "Centriscus scutatus",
+    "authorship": "Linnaeus, 1758",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Gai",
+        "latin": "Gasterosteiformes"
+      },
+      "family": {
+        "vn": "Cá Múa đít",
+        "latin": "Centriscidae"
+      },
+      "genus": {
+        "vn": "Cá Múa đít đỏ Centriscus Linnaeus",
+        "latin": "Centriscus Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Múa đít đỏ",
+        "size": "6 - 12 cm. Lớn nhất 15 cm.",
+        "distribution": "Đông Phi, Hồng Hải, Srilanca, Madagascar, Australia, Indonesia, Malaysia, Melanesia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Razorfish, Guttersnipe fish.",
+        "size": "6 - 12 cm. Maximum 15 cm.",
+        "distribution": "East Africa, Red Sea, Sri Lanka, Madagascar Australia, Indonesia, Malaysia, Melanesia, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, seldom abundant",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Centriscus scutatus Linnaeus, Syst. Nat., ed.10, p.336, 1758; Bloch, 1785; Bleeker, 1875; Jordan and Seale, 1907; Weber and de Beaufort, 1922; Herre, 1933.",
+      "Amphisile macrophthalma Steindachner, Verh. Zool. Bot. Gesellsch. Wien, Vol.10, p.766, 1860.",
+      "Amphisile (Acentrachme) scutata Lutken, Vidensk, Medd. Naturh. Foren. Kjobenhavn, p.215, 1865.",
+      "Acentrachme pachyacanthus Bleeker, Ned Tijds. Dierk., Vol.2, p.274, 1865.",
+      "Amphisile scutata Day, Fishes India, No.4, p.361, 1878-88; Jungersen, Danske Vidensk. Selsk. Kobenhavn(7) Afd.6, no.2, p.44, 1908."
+    ]
+  },
+  {
+    "id": "tap2-species-216",
+    "volume": 2,
+    "speciesIndex": 216,
+    "vnName": "Cá Chìa vôi thấp",
+    "scientificName": "Syngnathus djarong",
+    "authorship": "Bleeker, 1853",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi thường Syngnathus Linnaeus",
+        "latin": "Syngnathus Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chìa vôi thấp",
+        "size": "8 - 14 cm.",
+        "distribution": "Ở vùng nước lợ và nước ngọt, Srilanca, New Guinea, Australia, Indonesia, Malaysia, Philippines, Việt Nam.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Lowed pipefish.",
+        "size": "8 - 14 cm.",
+        "distribution": "In brackish water and fresh water, Sri Lanka, New Guinea, Australia, Indonesia, Malaysia, Philippines, Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Syngnathus djarong Bleeker, Verh. Bat. Gen., Vol.25, Bijdr. Trosk. Visschen, p.22, 1853; Dumeril, 1870; Duncker, 1915; Weber and de Beaufort, 1922.",
+      "Syngnathus helfrichii Bleeker, Nat. Tijds. Ned.-Ind., Vol.9, p.428, 1855; Dumeril, 1870.",
+      "Syngnathus spicifer var. rivalis Peters, Monatsber. Akad. Wiss. Berlin, p.276, 1869.",
+      "Syngnathus spicifer Gunther, Cat. Fishes British Mus., Vol.8, p.172, 1870, in part; Day, 1878, in part.",
+      "Corythroichthys pullus Smith and Seale, Proc. Biol. Soc. Washington, Vol.19, p.75, 1906.",
+      "Syngnathus spicifer var.djarong Duncker, Spoila Zeylanica, Vol.7, Part 25, pp.31 and 32, 1910.",
+      "Corythroichthys materni Fowler, Proc. Acad. Nat. Sci. Phila., Vol.70, p.11, fig.5, 1918.",
+      "Syngnathus materni Fowler, Proc. Acad. Sci. Phila., Vol.73, p.442, 1922.",
+      "Bombonia luzonica Herre, Philippines Jour. Sci., Vol.34, p.274, pl.2, figs.1 and 2, 1927.",
+      "Bombonia uxorius Herre, Fied Mus, Nat. Hist., Zool. Ser., Vol.28, p.395, 1935.",
+      "Syngnathus djarong luzonica Aurich, Zool. Anzeiger, Vol.112, p.98, 1935."
+    ]
+  },
+  {
+    "id": "tap2-species-217",
+    "volume": 2,
+    "speciesIndex": 217,
+    "vnName": "Cá Chìa vôi chấm trắng",
+    "scientificName": "Syngnathus spicifer",
+    "authorship": "(Ruppell, 1835)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi thường Syngnathus Linnaeus",
+        "latin": "Syngnathus Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chìa vôi chấm trắng",
+        "size": "15 cm.",
+        "distribution": "Ở biển và cửa sông, Hồng Hải, Madagascar, Ấn Độ, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "White-spotted pipefish.",
+        "size": "15 cm.",
+        "distribution": "In the sea and in the estuary Red Sea, Madagascar, India, Indonesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Syngnathus spicifer Ruppell, New Wirbelt., Fische Rothen Meers, p.143, pl.33, fig.4, 1835; Kaup, 1856; Dumeril, 1870; Gunther, 1870; Klunzinger, 1870; Day, 1878; Duncker, 1910; Weber and de Beaufort, 1922; Herre, 1940-41.",
+      "Syngnathus gastrotaenia Bleeker, Nat. Tijds. Ned.-Ind., Vol.6, p.713, 1852; Bleeker, 1853.",
+      "Syngnathus tapeinosoma Bleeker, Nat. Tijds. Ned.-Ind., Vol.6, p.376, 1854; Dumeril, 1870; Gunther, 1870.",
+      "Syngnathus hunnii Bleeker, Acta Soc. Sci. Indo-Neerl, Vol.8, Achtste Bijdr. Vischfauna Sumatra, p.70, 1860; Dumeril, 1870; Gunther, 1870.",
+      "Syngnathus argyrostictus Day, Fishes Malabar, p.264, 1865, not of Kaup.",
+      "Syngnathus gracilis Steindachner, Abh. Senckenb. Naturf. Gesell, Vol.25, p.458, 1901.",
+      "Corythroichthys spicifer Jordan and Seale, Bull. U. S. Bur., Fisheries, Vol.26, p.9, 1907; Jordan and Richardson, 1908."
+    ]
+  },
+  {
+    "id": "tap2-species-218",
+    "volume": 2,
+    "speciesIndex": 218,
+    "vnName": "Cá Chìa vôi mõm nhọn",
+    "scientificName": "Syngnathus acus",
+    "authorship": "Linnaeus, 1758",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi thường Syngnathus Linnaeus",
+        "latin": "Syngnathus Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chìa vôi mõm nhọn",
+        "size": "11 - 19 cm. Lớn nhất 40 cm.",
+        "distribution": "Đông Phi, Indonesia, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1922. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Greater pipefish.",
+        "size": "11 - 19 cm. Maximum 40 cm.",
+        "distribution": "East Africa, Indonesia, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1922. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Syngnathus acus Linnaeus, Syst. Nat., ed.10, p.337, 1758; Kaup, 1856; Dumeril, 1870; Gunther, 1870; Sauvage, 1891; Jatzow and Lenz, 1899; Chen, 1935.",
+      "Syngnathus brachyrhynchus Kaup, Cat. Lophobr. Fish, p.42, 1856; Dumeril, 1870.",
+      "Syngnathus schlegelii Gunther, Cat. Fish. British Mus., Vol.8, p.160; Jordan and Seale, 1905; Fowler, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-219",
+    "volume": 2,
+    "speciesIndex": 219,
+    "vnName": "Cá Chìa vôi xanh",
+    "scientificName": "Syngnathus cyanospilus",
+    "authorship": "Bleeker, 1854",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi thường Syngnathus Linnaeus",
+        "latin": "Syngnathus Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chìa vôi xanh",
+        "size": "9 - 11 cm. Lớn nhất 15 cm.",
+        "distribution": "Đông Phi, Ấn Độ, Indonesia, Melanesia, Malaysia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Blue-spotted pipefish.",
+        "size": "9 - 11 cm. Maximum 15 cm.",
+        "distribution": "East Africa, India, Indonesia, Melanesia, Malaysia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Syngnathus cyanospilos Bleeker, Nat. Tijds. Ned.-Ind., Vol.6, p.114, 1854; Dumeril, 1870.",
+      "Syngnathus mossambicus Petres, Monatsber. Akad. Wiss. Berlin, p.465, 1855; Gunther, 1866; Dumeril, 1870.",
+      "Syngnathus kuhlii Kaup, Cat. Lophobranchiate Fishes, p.34, 1856; Dumeril, 1870.",
+      "Dorichthys spaniaspis Jordan and Seale, Bull. U. S. Bur. Fisheries, Vol.26, p.10, fig.3, 1907.",
+      "Syngnathus cyanospilus Gunther, Cat. Fishes British Mus., Vol.8, p.170, 1870; Day, 1878; Meyer, 1885; Weber and de Beaufort, 1922; Herre, 1940-41."
+    ]
+  },
+  {
+    "id": "tap2-species-220",
+    "volume": 2,
+    "speciesIndex": 220,
+    "vnName": "Cá Chìa vôi ngắn",
+    "scientificName": "Ichthyocampus belcheri",
+    "authorship": "Kaup, 1856",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi ngắn Ichthyocampus Kaup",
+        "latin": "Ichthyocampus Kaup"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chìa vôi ngắn",
+        "size": "14 cm.",
+        "distribution": "Indonesia, Malaysia, Fiji, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Belcheri pipefish.",
+        "size": "14 cm.",
+        "distribution": "Indonesia, Malaysia, Fiji, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Ichthyocampus belcheri Kaup, Cat. Lophobranchiate Fishes, p.30, 1856; Gunther, 1870; Duncker, 1915.",
+      "Ichthyocampus nox Snyder, Proc. U. S. Nat. Mus., Vol.36, p.598, 1909.",
+      "Ichthyocampus kampeni Weber, Siboga-Exped., Vol.57, Fische, p.114, fig.40, 1913; part only; Herre, 1936."
+    ]
+  },
+  {
+    "id": "tap2-species-221",
+    "volume": 2,
+    "speciesIndex": 221,
+    "vnName": "Cá Chìa vôi mõm răng cưa",
+    "scientificName": "Trachyrhamphus serratus",
+    "authorship": "(Temminck and Schlegel, 1846)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi mõm răng cưa Trachyrhamphus Kaup",
+        "latin": "Trachyrhamphus Kaup"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chìa vôi mõm răng cưa",
+        "size": "30 cm.",
+        "distribution": "Ở biển và vùng nước lợ, Ấn Độ, Srilanca, Nhật Bản, Thái Lan, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1922. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Goggle-eued pipefish.",
+        "size": "30 cm.",
+        "distribution": "In the sea and brackish waters, India, Sri Lanka, Japan, Thailand, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1922. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Syngnathus serratus Schlegel, Fauna Japonica, Poissons, p.272, 1847; Bleeker, 1853; Duncker, 1904.",
+      "Trachyrhamphus serratus Kaup, Cat. Lophobr. Fish, p.23, 1856; Dumeril, 1870; Jordan and Snyder, 1901; Duncker, 1910.",
+      "Trachyrhamphus cultrirostris Peters, Monatsber. Akad. Berlin, p.710, 1870; Dumeril, 1870."
+    ]
+  },
+  {
+    "id": "tap2-species-222",
+    "volume": 2,
+    "speciesIndex": 222,
+    "vnName": "Cá Chìa vôi mõm dài",
+    "scientificName": "Yozia bicoarctata",
+    "authorship": "(Bleeker, 1857)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi mõm dài Yozia Jordan and Snyder",
+        "latin": "Yozia Jordan and Snyder"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Chìa vôi mõm dài",
+        "size": "30 cm.",
+        "distribution": "Đông Phi, Mauritius, Ấn Độ, Srilanca, Australia, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Double-ended pipefish.",
+        "size": "30 cm.",
+        "distribution": "East Africa, Mauritius, India, Sri Lanka, Australia, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Syngnathus bicoarctata Bleeker, Acta Soc. Sci. Indo-Neerl., Vol.2, Achtste Bijdr. Vischfauna Amboina, p.99, 1857; Dumeril, 1870; Gunther, 1870.",
+      "Syngnathus zanzibarensis Gunther, in Playfair and Gunther, Fishes Zanzibar, p.140, pl.20, fig.5, 1866.",
+      "Yozia wakanourae Jordan and Snyder, Proc. U. S. Nat. Mus., Vol.24, p.8, pl.6, 1910; Jordan, Tanaka and Snyder, 1913.",
+      "Yozia bicoarctata Duncker, Mitt. Naturh. Mus. Hamburg, Vol.32, p.107, 1915; Weber and de Beaufort, 1922; Herre, 1918."
+    ]
+  },
+  {
+    "id": "tap2-species-223",
+    "volume": 2,
+    "speciesIndex": 223,
+    "vnName": "Cá chìa vôi gai",
+    "scientificName": "Halicampus koilomatodon",
+    "authorship": "(Bleeker, 1858)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathoidei"
+      },
+      "family": {
+        "vn": "Cá Chìa vôi",
+        "latin": "Syngnathidae"
+      },
+      "genus": {
+        "vn": "Cá Chìa vôi gai Halicampus Kaup",
+        "latin": "Halicampus Kaup"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá chìa vôi gai",
+        "size": "15 cm.",
+        "distribution": "Australia, New Guinea, Indonesia, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải sản Hải Phòng.",
+        "status": "Ít gặp.",
+        "literature": "Herre, 1953. Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Spined pipefish.",
+        "size": "15 cm.",
+        "distribution": "Australia, New Guinea, Indonesia, Philippines, Japan, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Research Institute of Marine Products.",
+        "status": "Uncommon.",
+        "literature": "Herre, 1953. Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Halicampus grayi Kaup, Cat. Lophobrachiata Fish, p.22, 1856; Dumeril, 1870; McCulloch, 1929.",
+      "Syngnathus koilomatodon Bleeker, Acta Soc. Sci. Indo-Neerl., Vol.5, p.10, pl.1, fig.1, 1856-59.",
+      "Halicampus koilomatodon Bleeker, Acta Soc. Sci. Indo-Neerl., Vol.8, Achtste Bijdr. Vischfauna Sumatra, p.71, 1860; Dumeril, 1870; Jordan and Snyder, 1901; Duncker, 1915; Weber and de Beaufort, 1922; Fowler, 1928.",
+      "Syngnathus grayi Gunther, Cat. Fishes British Mus., Vol.2, p.536, 1870; Macleay, 1881.",
+      "Syngnathus trachypoma Gunther, Report Zool. Voy. Alert, p.30, 1884.",
+      "Trachyrhamphus caba Seale, Philippines, Jour. Sci., Vol.4A, p.503, 1910;"
+    ]
+  }
+]

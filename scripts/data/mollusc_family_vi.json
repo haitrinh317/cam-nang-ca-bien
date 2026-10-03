@@ -1,0 +1,146 @@
+{
+  "CYPRAEIDAE": {
+    "vn": "Họ Ốc sứ",
+    "common_examples": "Ốc sứ, Ốc bảo bối"
+  },
+  "CONIDAE": {
+    "vn": "Họ Ốc cối",
+    "common_examples": "Ốc cối, Ốc nón"
+  },
+  "STROMBIDAE": {
+    "vn": "Họ Ốc nhảy",
+    "common_examples": "Ốc nhảy, Ốc mào gà"
+  },
+  "MURICIDAE": {
+    "vn": "Họ Ốc gai",
+    "common_examples": "Ốc gai, Ốc mỏ vịt, Ốc tù và gai"
+  },
+  "TURBINIDAE": {
+    "vn": "Họ Ốc đụn",
+    "common_examples": "Ốc đụn, Ốc xà cừ, Ốc mắt ngọc"
+  },
+  "TROCHIDAE": {
+    "vn": "Họ Ốc tháp",
+    "common_examples": "Ốc tháp, Ốc cúc"
+  },
+  "NASSARIIDAE": {
+    "vn": "Họ Ốc bùn",
+    "common_examples": "Ốc bùn, Ốc mỡ"
+  },
+  "NATICIDAE": {
+    "vn": "Họ Ốc mặt trăng",
+    "common_examples": "Ốc mặt trăng, Ốc mắt ngọc trơn"
+  },
+  "BURSIDAE": {
+    "vn": "Họ Ốc ếch",
+    "common_examples": "Ốc ếch, Ốc tù và nhỏ"
+  },
+  "RANELLIDAE": {
+    "vn": "Họ Ốc tù và",
+    "common_examples": "Ốc tù và, Ốc kèn"
+  },
+  "CASSIDAE": {
+    "vn": "Họ Ốc kim khôi",
+    "common_examples": "Ốc kim khôi, Ốc nón chiến sĩ"
+  },
+  "TONNIDAE": {
+    "vn": "Họ Ốc bàng",
+    "common_examples": "Ốc bàng, Ốc gáo dừa"
+  },
+  "MITRIDAE": {
+    "vn": "Họ Ốc thêu",
+    "common_examples": "Ốc thêu, Ốc mũ giám mục"
+  },
+  "VOLUTIDAE": {
+    "vn": "Họ Ốc giác",
+    "common_examples": "Ốc giác, Ốc dừa, Ốc bóng vàng"
+  },
+  "OLIVIDAE": {
+    "vn": "Họ Ốc gạo",
+    "common_examples": "Ốc gạo, Ốc ô liu"
+  },
+  "TEREBRIDAE": {
+    "vn": "Họ Ốc đinh",
+    "common_examples": "Ốc đinh, Ốc khoan"
+  },
+  "ARCHITECTONICIDAE": {
+    "vn": "Họ Ốc bánh xe",
+    "common_examples": "Ốc bánh xe, Ốc đồng hồ Mặt Trời"
+  },
+  "CERITHIIDAE": {
+    "vn": "Họ Ốc vặn",
+    "common_examples": "Ốc vặn, Ốc gừng"
+  },
+  "HALIOTIDAE": {
+    "vn": "Họ Bào ngư",
+    "common_examples": "Bào ngư, Cửu khổng"
+  },
+  "PTERIIDAE": {
+    "vn": "Họ Trai ngọc",
+    "common_examples": "Trai ngọc, Trai ngọc môi vàng, Trai ngọc môi đen"
+  },
+  "PECTINIDAE": {
+    "vn": "Họ Điệp",
+    "common_examples": "Điệp quạt, Điệp seo, Điệp giấy"
+  },
+  "SPONDYLIDAE": {
+    "vn": "Họ Sò gai",
+    "common_examples": "Sò gai nhọn, Điệp gai"
+  },
+  "CARDIIDAE": {
+    "vn": "Họ Sò tim",
+    "common_examples": "Sò tim, Sò dâu"
+  },
+  "TRIDACNIDAE": {
+    "vn": "Họ Trai tai tượng",
+    "common_examples": "Trai tai tượng, Sò khổng lồ"
+  },
+  "VENERIDAE": {
+    "vn": "Họ Ngao",
+    "common_examples": "Ngao, Nghêu, Sò lụa"
+  },
+  "MACTRIDAE": {
+    "vn": "Họ Vọp",
+    "common_examples": "Vọp, Nghêu Bến Tre"
+  },
+  "DONACIDAE": {
+    "vn": "Họ Don",
+    "common_examples": "Don, Giắt"
+  },
+  "SOLENIDAE": {
+    "vn": "Họ Ốc móng tay",
+    "common_examples": "Ốc móng tay, Dao cạo"
+  },
+  "ARCIDAE": {
+    "vn": "Họ Sò",
+    "common_examples": "Sò huyết, Sò lông, Sò méo"
+  },
+  "MYTILIDAE": {
+    "vn": "Họ Vẹm",
+    "common_examples": "Vẹm xanh, Vẹm đen, Vẹm vỏ xanh"
+  },
+  "PINNIDAE": {
+    "vn": "Họ Bắp chuối",
+    "common_examples": "Bắp chuối, Bàn mai, Sò mai"
+  },
+  "OSTREIDAE": {
+    "vn": "Họ Hàu",
+    "common_examples": "Hàu cửa sông, Hàu đá, Hàu Thái Bình Dương"
+  },
+  "SEPIIDAE": {
+    "vn": "Họ Mực nang",
+    "common_examples": "Mực nang, Mực mai, Mực gai"
+  },
+  "LOLIGINIDAE": {
+    "vn": "Họ Mực ống",
+    "common_examples": "Mực ống, Mực lá, Mực cơm"
+  },
+  "OCTOPODIDAE": {
+    "vn": "Họ Bạch tuộc",
+    "common_examples": "Bạch tuộc, Ruốc, Trùm"
+  },
+  "NAUTILIDAE": {
+    "vn": "Họ Ốc anh vũ",
+    "common_examples": "Ốc anh vũ"
+  }
+}

@@ -1,0 +1,219 @@
+[
+  {
+    "id": "tap2-species-4",
+    "volume": 2,
+    "speciesIndex": 4,
+    "vnName": "Cá Mòi đường",
+    "scientificName": "Albula vulpes",
+    "authorship": "(Linnaeus), 1758",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Bộ phụ Cá Mòi Đường", "latin": "Albuloidei" },
+      "family": { "vn": "Họ Cá Mòi Đường", "latin": "Albulidae" },
+      "genus": { "vn": "Cá Mòi đường Albula Scopoli, 1777", "latin": "Albula Scopoli, 1777" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "28 - 35 cm. Lớn nhất 90 cm.",
+        "distribution": "Australia, Philippines, Hồng Hải, Bahamas, Newzealand, Brasil, Nhật Bản, Trung Quốc, Đông Ấn Độ Dương, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Rất ít gặp.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Banana fish, Bona fish.",
+        "size": "28 - 35 cm. Maximum 90 cm.",
+        "distribution": "Australia, Philippines, Red Sea, Bahamas, Newzealand, Brasil, Japan, China, East - Indian Ocean, Vietnam. Gulf of Tonkin.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Very uncommon.",
+        "literature": "Herre, 1953. Wang, 1962. Nguyen Khac Huong, 1991"
+      }
+    },
+    "synonyms": [
+      "Esox vulpes Linnaeus, Syst. Nat., ed. 10, Vol. 1, p.313, 1758.",
+      "Argentina glossodonta Forkal, Descript. Animal., p. 68, 1775",
+      "Esox argenteus Bloch & Schneider, Syst. Ichth., p.395, 1801 .",
+      "Synodus argenteus Bloch & Schneider, Ibid., p.398, 1801",
+      "Clupea brasiliensis Bloch & Schneider, Ibid., p.427 , 1801.",
+      "Albula conorhychus Bloch & Schneider, Ibid., p.432, 1801",
+      "Albula immaculata Bloch & Schneider, Syst. Ichth., p.451, 1801",
+      "Synodus vulpes Lacepede, Hist. Nat. Poissons, Vol. 5, p. 321 , pl. 8, fig.2, 1803.",
+      "Butyrinus bananus Lacepede , Hist. Nat. Poissons, Vol.5 , p.46, 1803.",
+      "Argentina bonuk Lacepede, Hist. Nat. Poissons, Vol.5, pp.365, 1803.",
+      "Clupea macrocephala Lacepede, Ibid., pp. 426, 460, pl.14, fig.1, 1803.",
+      "Glossodus forskali Agassiz, in Spix. Brasil, p.49, 1829",
+      "Butirinus glossodontus Ruppell, New Wirbelt, Fish Rothen Meeres, p.80, pl.20, fig.3, 1835; Schlegel , 1846.",
+      "Butirinus glossodonta Lay and Bennett. Zoology Capt. Beechey's Voyage Fishes, p.46, 1839.",
+      "Elpos glossodontus Swainson , Nat. Hist. Animals, Vol.2, Fishes p.292, 1829.",
+      "Albula conorhynchus Cuvier and Valenciennes, Hist. Nat. Poissons, Vol.19, p.356, 1846; Gunther, 1868 .",
+      "Albula banana Cuvier and Valenciennes, Hist. Nat. Poissons, Vol. 19, p.345, 1846.",
+      "Albula parree Cuvier and Valenciennes, Hist. Nat.Poisson s, Vol. 19, p.339, 1846.",
+      "Albula goreensis Cuvier and Valenciennes, Ibid., p. 342",
+      "Albula neogumaica Cuvier and Valenciennes, Ibid., p .350.",
+      "Albula seminuda Cuvier and Valenciennes , Ibid., p.351",
+      "Albula erythrocheilos Cuvier and Valenciennes, Ibid. , p. 352",
+      "Albula forsteri Cuvier and Valenciennes, Ibid., p. 354.",
+      "Conorhynchus glossodon Bleeker, Atlas Ichth., Vol. 6, p. 83; pl.270, fig. 1, 1866-72.",
+      "Albula glossodonta Klunzinger, Verh. Zoo. Bot.Gesll. Wiew, Vol.21, p.602, 1871.",
+      "Albula glossodon Gunther, Fische der, Siidsee, Vol. 3, p.385, 1910.",
+      "Albula vulpes Weber & de Beaufort , Fishes Indo-Australian Archigelago, Vol.2, p.7, fig.5, 1913. Fowler, 1928; Herre, 1934; Herre, 1936-37.",
+      "Albula virgata Jordan & Jordan, Mem. Carnegie Mus. , Vol.10, p.6, pl.1, fig. 1, 1922."
+    ]
+  },
+  {
+    "id": "tap2-species-5",
+    "volume": 2,
+    "speciesIndex": 5,
+    "vnName": "Cá Măng biển",
+    "scientificName": "Chanos chanos",
+    "authorship": "(Forskal, 1775)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Sữa", "latin": "Gonorhynchiformes" },
+      "family": { "vn": "Cá Măng Biển", "latin": "Chanidae" },
+      "genus": { "vn": "Cá Măng Chanos Lacepede, 1803", "latin": "Chanos Lacepede, 1803" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "50 - 70 cm. Lớn nhất 150 cm.",
+        "distribution": "Indo - Pacific, Đông Phi, Hawaii, Philippines, Việt Nam. Miền Trung (Phú Yên, Khánh Hoà)",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp ở Khánh Hoà, Phú Yên, nhưng số lượng ít.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Whitehead, 1972. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Milkfish Bony salmon.",
+        "size": "50 - 70 cm. Maximum 150 cm.",
+        "distribution": "Indo - Pacific, East Africa, Hawaii, Philippines, Vietnam. Central Vietnam (Phuyen, Khanhhoa)",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common at Khanhhoa, Phuyen. But seldom abundant.",
+        "literature": "Herre, 1953. Wang, 1962. Whitehead, 1972. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Mugil chanos Forskal, Descript. Animal. , p.74, 1775",
+      "Lutodeira chanos Ruppell, Atlas Reise Nordl. Africa, Fische Rothen Meere, p.18, pl.5, fig.1a and 1b, 1828",
+      "Chanos chanos Jordan & Evermann, Verh. Zool - Bot. Gesell. Wien, Vol.21, p.605, 1871; Jordan & Evermann, 1905 ; Jordan & Seale, 1907; Evermann & Seale, 1907; Seale & Bean, 1907; Weber & de Beaufort, 1913; Fowler, 1928; Umali, 1934; Ronax, 1934; Herre , 1940-41; Fowler, 1941"
+    ]
+  },
+  {
+    "id": "tap2-species-6",
+    "volume": 2,
+    "speciesIndex": 6,
+    "vnName": "Cá Lanh",
+    "scientificName": "Chirocentrus dorab",
+    "authorship": "(Forskal, 1835)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Lanh", "latin": "Chirocentridae" },
+      "genus": { "vn": "Cá Lanh Chirocentrus Cuvier, 1817", "latin": "Chirocentrus Cuvier, 1817" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "40 - 50 cm. Lớn nhất 360 cm",
+        "distribution": "Đông Phi, Ấn Độ Dương, Philippines, Nhật Bản, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Trung Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Whitehead, 1972. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Wolf herring Silverbarfish.",
+        "size": "40 - 50 cm. Maximum 360 cm.",
+        "distribution": "East Africa, Indian Ocean, Philippines, Japan, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively numerous.",
+        "literature": "Herre, 1953. Wang, 1962. Whitehead, 1972. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Clupea dorab Forskal, Descript. Animal., p.72, 1775.",
+      "Esox chrirocentrus Lacepede , Hist. Nat. Poiss., Vol.5, pp.296, 317, 1803.",
+      "Clupea dentex Schneider, Syst. Ichth. Bloch, p.428, 1801.",
+      "Neosudis vorax Castelnau, Proc. Zool. Acclim.Soc. Victoria, Vol.2, p.118, 1873.",
+      "Chirocentrus dorab Ruppell, New Wirbelt., Fische Rothen Meeres, p.81, 1835; Cuvier & Valenciennes, 1846; Bleeker, 1866 -72; Gunther, 1868; Day, 1878; Meyer, 1885; Smith & Seale , 1906; Jordan & Seale, 1907; Jordan & Richardson, 1908; Weber & de Beaufort, 1913; Fowler, 1927; Fowler, 1931; Chevey, 1932; Umali, 1936; Herre, 1940-1941."
+    ]
+  },
+  {
+    "id": "tap2-species-7",
+    "volume": 2,
+    "speciesIndex": 7,
+    "vnName": "Cá Lanh hàm dài",
+    "scientificName": "Chirocentrus nudus",
+    "authorship": "(Swainson, 1839)",
+    "status": "common",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Lanh", "latin": "Chirocentridae" },
+      "genus": { "vn": "Cá Lanh Chirocentrus Cuvier, 1817", "latin": "Chirocentrus Cuvier, 1817" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "40 - 50 cm.",
+        "distribution": "Trung Quốc, Indonesia, Malaysia, India, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng ít.",
+        "literature": "Vương Văn Tân, 1962. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "White finned wolf herring.",
+        "size": "40 - 50cm.",
+        "distribution": "China, Indonesia, Malaysia, India, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively little.",
+        "literature": "Wang, 1962. Nguyen Khac Huong, 1991."
+      }
+    },
+    "synonyms": [
+      "Chirocentrus nudus Swainson , Nat. Hist. Animal , Fishes, Vol.2, 1839, p.294.",
+      "Chirocentrus russellii Swainson, Nat. Hist. Animal, Vol.1, p.289, 1838.",
+      "Chirocentrus hypselosoma Bleeker, Nat. Tijd., Ned.-Indie, Vol. 3, 1853, P.71."
+    ]
+  },
+  {
+    "id": "tap2-species-8",
+    "volume": 2,
+    "speciesIndex": 8,
+    "vnName": "Cá Mòi không răng",
+    "scientificName": "Anodontostoma chacunda",
+    "authorship": "(Hamilton [nes Buchanan], 1822)",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": { "vn": "Cá Trích", "latin": "Clupeiformes" },
+      "family": { "vn": "Cá Trích", "latin": "Clupeidae" },
+      "genus": { "vn": "Cá Mòi Anodontostoma Bleeker, 1849", "latin": "Anodontostoma Bleeker, 1849" }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "",
+        "size": "15 cm. Lớn nhất 22 cm.",
+        "distribution": "Philippine, Đông Ấn Độ Dương, Hainan, New Guinea, Ấn Độ, Mauritius, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Số lượng ít.",
+        "literature": "Herre, 1953. Vương Văn Tân, 1962. Whitehead, 1972. Nguyễn Khắc Hường, 1991."
+      },
+      "en": {
+        "commonName": "Short-finned gizzard shad.",
+        "size": "15 cm. Maximum 22 cm.",
+        "distribution": "Philippine, Eastern of Indian Ocean, Hainan, New Guinea, India, Mauritius, Vietnam. Gulf of Tonkin.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Little.",
+        "literature": "Herre, 1953. Wang, 1962. Whitehead, 1972. Nguyen Khac Huong, 1991"
+      }
+    },
+    "synonyms": [
+      "Clupanodon chacunda Hamilton [né Buchanan], Fishes Ganges, pp.246, 283, 1822.",
+      "Anodontostoma hasseltii Bleeker, Verh. Batav. Genoot. Kunst . Wet., Vol.22, p.15, 1849.",
+      "Chatoessus chacunda Cuvier & Valenciennes, Hist. Nat. Poissons, Vol.21, p.111, 1848; Gunther, 1868 ; Day, 1878 .",
+      "Chatoessus selangkat Bleeker, Natuurk . Tijds. Ned.-Ind., Vol.3, p.458, 1852.",
+      "Dorosoma chacunda Bleeker, Atlas Ichth., Vol.6, p.143, pl.261, fig.5-6, 1866-72; Weber & de Beaufort, 1913.",
+      "Gonostoma javanicum Hyrtl, Denkschr.Akad. Wiss. Wien, Vol.10, No.1, p.49, 1855.",
+      "Anodontostoma chacunda Jordan & Seal e, Pro. U. S. Nat . Mus., Vol.28, p.771, 1905; Smith & Seale , 1906; Jordan & Seale, 1907; Jordan & Richardson, 1908; Umali, 1936; 1937; Blanco, 1938; Herre, 1940-41; Fowler, 1941.",
+      "Chatoesns breviceps Peters, Mber. K.preuss. Akad. Wiss. P. 848, 1876."
+    ]
+  }
+]

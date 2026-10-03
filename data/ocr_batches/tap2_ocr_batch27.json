@@ -1,0 +1,459 @@
+[
+  {
+    "id": "tap2-species-244",
+    "volume": 2,
+    "speciesIndex": 244,
+    "vnName": "Cá Đối vây trước",
+    "scientificName": "Mugil affinis",
+    "authorship": "Gunther, 1861",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối vây trước",
+        "size": "12 - 16 cm.",
+        "distribution": "Ở biển và cửa sông, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, số lượng tương đối nhiều.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Affinis mullet.",
+        "size": "12 - 16 cm.",
+        "distribution": "In the sea and in the estuary, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively numerous.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil affinis Gunther, Cat. Fish. British Mus., Vol.3, p.433, 1861; Martens, 1876."
+    ]
+  },
+  {
+    "id": "tap2-species-245",
+    "volume": 2,
+    "speciesIndex": 245,
+    "vnName": "Cá Đối hanh",
+    "scientificName": "Mugil planiceps",
+    "authorship": "Gunther, 1861",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối hanh",
+        "size": "15 - 20 cm. Lớn nhất 31 cm.",
+        "distribution": "Ở biển và cửa sông, Ấn Độ Dương, Thái Bình Dương, Ấn Độ, Srilanca, Trung Quốc, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Planiceps mullet.",
+        "size": "15 - 20 cm. Maximum 31 cm.",
+        "distribution": "In the sea and in the estuary, Indian Ocean, Pacific Ocean, India, Sri Lanka, China, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively numerous.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil planiceps Gunther, Cat. Fishes British Mus., Vol.3, p.428, 1861; Day, 1878.",
+      "Mugil tade Chevey, Serv. Oceanogr. Peche Indochine, No.7, p.182, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-246",
+    "volume": 2,
+    "speciesIndex": 246,
+    "vnName": "Cá Đối bạc",
+    "scientificName": "Mugil anpinensis",
+    "authorship": "Oshima, 1922",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối bạc",
+        "size": "15 - 20 cm. Lớn nhất 27,5 cm.",
+        "distribution": "Trung Quốc, Việt Nam.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Argentine mullet.",
+        "size": "15 - 20 cm. Maximum 27.5 cm.",
+        "distribution": "China, Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively numerous.",
+        "literature": "Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil anpinensis Oshima, Ann. Carnegie Mus., Vol.13 (3-4), pp.240-259, 1922."
+    ]
+  },
+  {
+    "id": "tap2-species-247",
+    "volume": 2,
+    "speciesIndex": 247,
+    "vnName": "Cá Đối vây dài",
+    "scientificName": "Mugil longimanus",
+    "authorship": "Gunther, 1861",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối vây dài",
+        "size": "22 cm.",
+        "distribution": "Ấn Độ, Australia, Indonesia, Malaysia, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1922, Herre, 1953. Orsi, 1974"
+      },
+      "en": {
+        "commonName": "Long-finned mullet.",
+        "size": "22 cm.",
+        "distribution": "India, Australia, Indonesia, Malaysia, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1922. Herre, 1953. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Mugil longimanus Gunther, Cat. Fishes British Mus., Vol.3, p.428, 1861; Steindachner, 1879; Macleay, 1884; Jordan and Seale, 1907; Weber and de Beaufort, 1922; Fowler, 1928; Herre, 1934; Rosax, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-248",
+    "volume": 2,
+    "speciesIndex": 248,
+    "vnName": "Cá Đối Booc-nê-ô",
+    "scientificName": "Mugil borneensis",
+    "authorship": "Bleeker, 1851",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối Booc-nê-ô",
+        "size": "28 cm.",
+        "distribution": "Ấn Độ, Indonesia, Malaysia, Việt Nam.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1922, Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Borneo mullet.",
+        "size": "28 cm.",
+        "distribution": "India, Indonesia, Malaysia, Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1922. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Mugil borneensis Bleeker, Nat. Tijds. Ned.-Ind., Vol.2, p.201, 1851; Gunther, 1859; Kner, 1865; Day, 1878.",
+      "Mugil adustus Bleeker, Nat. Tijds. Ned.-Ind., Vol.5, p.503, 1953.",
+      "Liza borneensis Kendall and Goldborough, Mem Mus. Comp. Zool. Harv. Coll., Vol.26, no.7, p.258, 1911."
+    ]
+  },
+  {
+    "id": "tap2-species-249",
+    "volume": 2,
+    "speciesIndex": 249,
+    "vnName": "Cá Đối xám",
+    "scientificName": "Mugil speigleri",
+    "authorship": "Bleeker, 1858",
+    "status": "uncommon",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối xám",
+        "size": "22 - 23 cm.",
+        "distribution": "Ấn Độ, Indonesia, Melanesia, Malaysia, Việt Nam.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Ít gặp.",
+        "literature": "Weber and de Beaufort, 1922. Orsi, 1974."
+      },
+      "en": {
+        "commonName": "Gray mullet.",
+        "size": "22 - 23 cm.",
+        "distribution": "India, Indonesia, Melanesia, Malaysia, Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Uncommon.",
+        "literature": "Weber and de Beaufort, 1922. Orsi, 1974."
+      }
+    },
+    "synonyms": [
+      "Mugil speigleri Bleeker, Nat. Tijds. Ned.-Ind., Vol.16, p.279, 1858-59; Gunther, 1858-61; Day, 1878."
+    ]
+  },
+  {
+    "id": "tap2-species-250",
+    "volume": 2,
+    "speciesIndex": 250,
+    "vnName": "Cá Đối lá",
+    "scientificName": "Mugil kelaarti",
+    "authorship": "Gunther, 1861",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối Mugil Linnaeus",
+        "latin": "Mugil Linnaeus"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối lá",
+        "size": "25 - 46 cm",
+        "distribution": "Ở biển và cửa sông, Ấn Độ Dương, Thái Bình Dương, Philippines, Việt Nam. Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang)",
+        "status": "Thường gặp",
+        "literature": "Orsi, 1974, Võ Văn Phú, 1993"
+      },
+      "en": {
+        "commonName": "Leaves mullet",
+        "size": "25 - 46 cm.",
+        "distribution": "In the sea and in the estuary, Indian Ocean, Pacific Ocean, Philippines, Vietnam. Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang)",
+        "status": "Common",
+        "literature": "Orsi, Vo Van Phu, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil keraarti Gunther, Cat. Fishes British Mus., Vol.3. p.429, 1961; Day, 1878; Hrere, 1934."
+    ]
+  },
+  {
+    "id": "tap2-species-251",
+    "volume": 2,
+    "speciesIndex": 251,
+    "vnName": "Cá Đối cồi",
+    "scientificName": "Liza seheli",
+    "authorship": "(Forskal, 1775)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+        "latin": "Liza Jordan and Swain"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối cồi",
+        "size": "Lớn nhất 48 cm.",
+        "distribution": "Ở biển, nước lợ và nước ngọt, Hồng Hải, Đông Phi, Madagascar, Mauritius, Ấn Độ, Samoa, Fiji, Australia, Indonesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Herre, 1953. Carcasson, 1977, Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Blue-tailed mullet, Long-finned mullet.",
+        "size": "Maximum 48 cm.",
+        "distribution": "In the sea, brackish and fresh waters, Red Sea, East Africa, Madagascar, Mauritius, India, Samoa, Fiji, Australia, Indonesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively numerous.",
+        "literature": "Herre, 1953. Carcasson, 1977. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil crenilabis seheli Forskal, Descript. Animal., p.73, 1775.",
+      "Mugil seheli Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.11, p.113, 1836; Klunzinger, 1870; Day, 1878; Weber and de Beaufort, 1922; Duncker, 1926; Fowler, 1927.",
+      "Mugil cylindricus Bleeker, Vreh. Bat. Gen., Vol.23, Bijdr. Ichth. Fauna Java, p.9, 1850.",
+      "Mugil borbonicus Bleeker, Nat. Tijds. Ned.-Ind., Vol.16, p.279, 1858-59, not of Cuvier and Valenciennes, and not of Cantor.",
+      "Mugil axillaris Bleeker, Nat. Tijds. Ned.-Ind., Vol.16, p.280, 1858-59; Gunther, 1861.",
+      "Mugil bleekeri Gunther, Cat. Fishes British Mus., Vol.3, p.445, 1861; De Beaufort, 1913.",
+      "Mugil decemradiatus Gunther, Cat. Fishes British Mus., Vol.3, p.452, 1861.",
+      "Liza seheli Herre, Jour. Pan Pacific Research Inst., Vol.8, p.3, 1933.",
+      "Valamugil seheli (Forskal) in Carcasson: A Field Guide to the Coral Reef Fishes of the Indian and West Pacific Ocean, p.84, 1977.",
+      "Valamugil buchanan (Bleeker) in Nội San Nghiên cứu Biển, No.4, p.115, 1971."
+    ]
+  },
+  {
+    "id": "tap2-species-252",
+    "volume": 2,
+    "speciesIndex": 252,
+    "vnName": "Cá Đối lưng gờ",
+    "scientificName": "Liza carinata",
+    "authorship": "(Cuvier and Valenciennes, 1836)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+        "latin": "Liza Jordan and Swain"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối lưng gờ",
+        "size": "11 - 18 cm.",
+        "distribution": "Hồng Hải, Ấn Độ Dương, Trung Quốc, Việt Nam. Vịnh Bắc Bộ.",
+        "specimen": "Phân viện Hải dương học Hải Phòng.",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Trương Xuân Lâm, 1962. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Keeled mullet.",
+        "size": "11 - 18 cm.",
+        "distribution": "Red Sea, Indian Ocean, China, Vietnam. Gulf of Tonkin.",
+        "specimen": "Haiphong Branch of Institute of Oceanography.",
+        "status": "Common, relatively numerous.",
+        "literature": "Zhang, 1962. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil carinatus Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.11, p.148, 1836.",
+      "Mugil carinatus Oshima, Ann. Carnegie Mus., Vol.3 (3-4), pp.240-259, pls.11-13.",
+      "Mugil carinatus Wu, Contrib. Biol. Lab. Sci. Soc. China, Vol.5, no.4, p.79, fig.63.",
+      "Mugil carinatus Fowler, Hong Kong Nat., Vol.5, p.140, 1935."
+    ]
+  },
+  {
+    "id": "tap2-species-253",
+    "volume": 2,
+    "speciesIndex": 253,
+    "vnName": "Cá Đối gành",
+    "scientificName": "Liza tade",
+    "authorship": "(Forskal, 1775)",
+    "status": "common",
+    "taxonomy": {
+      "order": {
+        "vn": "Cá Đối",
+        "latin": "Mugiliformes"
+      },
+      "family": {
+        "vn": "Cá Đối",
+        "latin": "Mugilidae"
+      },
+      "genus": {
+        "vn": "Cá Đối môi mỏng Liza Jordan and Swain",
+        "latin": "Liza Jordan and Swain"
+      }
+    },
+    "specs": {
+      "vn": {
+        "alternateNames": "Cá Đối gành",
+        "size": "36 cm. Lớn nhất 47 cm.",
+        "distribution": "Ở vùng nước lợ và nước ngọt, Hồng Hải, Ấn Độ, Srilanca, Australia, Polynesia, Malaysia, Philippines, Trung Quốc, Việt Nam. Vịnh Bắc Bộ, Miền Trung.",
+        "specimen": "Viện Hải dương học (Nha Trang).",
+        "status": "Thường gặp, tương đối nhiều.",
+        "literature": "Herre, 1953. Carcasson, 1977. Nguyễn Khắc Hường, 1993."
+      },
+      "en": {
+        "commonName": "Tade mullet.",
+        "size": "36 cm. Maximum 47 cm.",
+        "distribution": "In the brackish and fresh waters, Red Sea, India, Sri Lanka, Australia, Polynesia, Malaysia, Philippines, China, Vietnam. Gulf of Tonkin, Central Vietnam.",
+        "specimen": "Institute of Oceanography (Nhatrang).",
+        "status": "Common, relatively numerous.",
+        "literature": "Herre, 1953. Carcasson, 1977. Nguyen Khac Huong, 1993."
+      }
+    },
+    "synonyms": [
+      "Mugil crenilabis tade Forskal, Descript. Animal., p.74, 1775.",
+      "Mugil planiceps Cuvier and Valenciennes, Hist. Nat. Poiss., Vol.11, p.122, 1836; Bleeker, 1853; Gunther, 1861; Day, 1878; Evermann and Seale, 1907.",
+      "Mugil cephalotus Cantor, Cat. Malayan Fish. Jour. Asiat. Soc. Bengal, Vol 18, Part 2, p.1077 (not of Cuvier and Valenciennes), 1850."
+    ]
+  }
+]

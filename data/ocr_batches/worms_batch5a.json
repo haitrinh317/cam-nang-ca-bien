@@ -1,0 +1,212 @@
+{
+  "88": {
+    "idx": 88,
+    "name": "Gonodactylaceus gravieri",
+    "AphiaID": 409370,
+    "valid_AphiaID": 394941,
+    "status": "unaccepted",
+    "valid_name": "Gonodactylaceus falcatus",
+    "family": "Gonodactylidae",
+    "order": "Stomatopoda"
+  },
+  "90": {
+    "idx": 90,
+    "name": "Gonodactylaceus ternatensis",
+    "AphiaID": 408897,
+    "valid_AphiaID": 408897,
+    "status": "accepted",
+    "valid_name": "Gonodactylaceus ternatensis",
+    "family": "Gonodactylidae",
+    "order": "Stomatopoda"
+  },
+  "91": {
+    "idx": 91,
+    "name": "Gonodactylellus hendersoni",
+    "AphiaID": 1751533,
+    "valid_AphiaID": 408906,
+    "status": "junior subjective synonym",
+    "valid_name": "Gonodactylellus demanii",
+    "family": "Gonodactylidae",
+    "order": "Stomatopoda"
+  },
+  "92": {
+    "idx": 92,
+    "name": "Gonodactylellus incipiens",
+    "AphiaID": 408909,
+    "valid_AphiaID": 408909,
+    "status": "accepted",
+    "valid_name": "Gonodactylellus incipiens",
+    "family": "Gonodactylidae",
+    "order": "Stomatopoda"
+  },
+  "93": {
+    "idx": 93,
+    "name": "Gonodactylellus affinis",
+    "AphiaID": 408899,
+    "valid_AphiaID": 408899,
+    "status": "accepted",
+    "valid_name": "Gonodactylellus affinis",
+    "family": "Gonodactylidae",
+    "order": "Stomatopoda"
+  },
+  "94": {
+    "idx": 94,
+    "name": "Gonodactylinus viridis",
+    "AphiaID": 1578703,
+    "valid_AphiaID": 408916,
+    "status": "unaccepted",
+    "valid_name": "Gonodactylellus viridis",
+    "family": "Gonodactylidae",
+    "order": "Stomatopoda"
+  },
+  "95": {
+    "idx": 95,
+    "name": "Gonodactylus chiragra",
+    "AphiaID": 210242,
+    "valid_AphiaID": 210242,
+    "status": "accepted",
+    "valid_name": "Gonodactylus chiragra",
+    "family": "Gonodactylidae",
+    "order": "Stomatopoda"
+  },
+  "96": {
+    "idx": 96,
+    "name": "Gonodactylus platysoma",
+    "AphiaID": 408928,
+    "valid_AphiaID": 408928,
+    "status": "accepted",
+    "valid_name": "Gonodactylus platysoma",
+    "family": "Gonodactylidae",
+    "order": "Stomatopoda"
+  },
+  "97": {
+    "idx": 97,
+    "name": "Gonodactylus smithii",
+    "AphiaID": 210245,
+    "valid_AphiaID": 210245,
+    "status": "accepted",
+    "valid_name": "Gonodactylus smithii",
+    "family": "Gonodactylidae",
+    "order": "Stomatopoda"
+  },
+  "98": {
+    "idx": 98,
+    "name": "Odontodactylus scyllarus",
+    "AphiaID": 220297,
+    "valid_AphiaID": 220297,
+    "status": "accepted",
+    "valid_name": "Odontodactylus scyllarus",
+    "family": "Odontodactylidae",
+    "order": "Stomatopoda"
+  },
+  "99": {
+    "idx": 99,
+    "name": "Raoulius cultrifer",
+    "AphiaID": 1672785,
+    "valid_AphiaID": 408963,
+    "status": "superseded combination",
+    "valid_name": "Odontodactylus cultrifer",
+    "family": "Odontodactylidae",
+    "order": "Stomatopoda"
+  },
+  "100": {
+    "idx": 100,
+    "name": "Chorisquilla brooksii",
+    "AphiaID": 408970,
+    "valid_AphiaID": 408970,
+    "status": "accepted",
+    "valid_name": "Chorisquilla brooksii",
+    "family": "Protosquillidae",
+    "order": "Stomatopoda"
+  },
+  "101": {
+    "idx": 101,
+    "name": "Chorisquilla spinosissima",
+    "AphiaID": 408977,
+    "valid_AphiaID": 408977,
+    "status": "accepted",
+    "valid_name": "Chorisquilla spinosissima",
+    "family": "Protosquillidae",
+    "order": "Stomatopoda"
+  },
+  "102": {
+    "idx": 102,
+    "name": "Haptosquilla glabra",
+    "AphiaID": 408984,
+    "valid_AphiaID": 408984,
+    "status": "accepted",
+    "valid_name": "Haptosquilla glabra",
+    "family": "Protosquillidae",
+    "order": "Stomatopoda"
+  },
+  "103": {
+    "idx": 103,
+    "name": "Haptosquilla glyptocercus",
+    "AphiaID": 408985,
+    "valid_AphiaID": 408985,
+    "status": "accepted",
+    "valid_name": "Haptosquilla glyptocercus",
+    "family": "Protosquillidae",
+    "order": "Stomatopoda"
+  },
+  "104": {
+    "idx": 104,
+    "name": "Haptosquilla stoliura",
+    "AphiaID": 408993,
+    "valid_AphiaID": 408993,
+    "status": "accepted",
+    "valid_name": "Haptosquilla stoliura",
+    "family": "Protosquillidae",
+    "order": "Stomatopoda"
+  },
+  "105": {
+    "idx": 105,
+    "name": "Haptosquilla tuberosa",
+    "AphiaID": 408997,
+    "valid_AphiaID": 408997,
+    "status": "accepted",
+    "valid_name": "Haptosquilla tuberosa",
+    "family": "Protosquillidae",
+    "order": "Stomatopoda"
+  },
+  "106": {
+    "idx": 106,
+    "name": "Pseudosquilla ciliata",
+    "AphiaID": 210232,
+    "valid_AphiaID": 210232,
+    "status": "accepted",
+    "valid_name": "Pseudosquilla ciliata",
+    "family": "Pseudosquillidae",
+    "order": "Stomatopoda"
+  },
+  "107": {
+    "idx": 107,
+    "name": "Raoulserenea ornata",
+    "AphiaID": 409008,
+    "valid_AphiaID": 409008,
+    "status": "accepted",
+    "valid_name": "Raoulserenea ornata",
+    "family": "Pseudosquillidae",
+    "order": "Stomatopoda"
+  },
+  "108": {
+    "idx": 108,
+    "name": "Taku spinosocarinatus",
+    "AphiaID": 409021,
+    "valid_AphiaID": 409021,
+    "status": "accepted",
+    "valid_name": "Taku spinosocarinatus",
+    "family": "Takuidae",
+    "order": "Stomatopoda"
+  },
+  "109": {
+    "idx": 109,
+    "name": "Lysiosquilla sulcirostris",
+    "AphiaID": 409038,
+    "valid_AphiaID": 409038,
+    "status": "accepted",
+    "valid_name": "Lysiosquilla sulcirostris",
+    "family": "Lysiosquillidae",
+    "order": "Stomatopoda"
+  }
+}
