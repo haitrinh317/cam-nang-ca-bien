@@ -306,7 +306,7 @@
 
   .bottom-sheet__subtitle {
     font-family: var(--font-body);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: rgba(248, 250, 252, 0.55);
     margin: 2px 0 0 0;
   }
@@ -419,7 +419,7 @@
 
   .bottom-sheet__card-desc {
     font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: rgba(248, 250, 252, 0.5);
     margin: 0 0 6px 0;
     line-height: 1.35;
@@ -431,7 +431,7 @@
 
   .bottom-sheet__card-stats {
     font-family: var(--font-mono, monospace);
-    font-size: 0.68rem;
+    font-size: 0.8rem;
     font-weight: 600;
     margin-top: auto;
     letter-spacing: 0.02em;
@@ -454,7 +454,7 @@
     border: 1px solid rgba(0, 212, 184, 0.25);
     color: #00f0d0;
     font-family: var(--font-body);
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.2s;

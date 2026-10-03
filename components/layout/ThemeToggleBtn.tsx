@@ -28,7 +28,7 @@ export function ThemeToggleBtn() {
       onClick={handleToggle}
       className="footer-theme-toggle"
       title={theme === 'dark' ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối'}
-      aria-label={theme === 'dark' ? 'Chuyển sang giao diện Sáng' : 'Chuyển sang giao diện Tối'}
+      aria-label={theme === 'dark' ? 'Giao diện Tối, bấm để chuyển sang Sáng' : 'Giao diện Sáng, bấm để chuyển sang Tối'}
     >
       {theme === 'dark' ? (
         <>

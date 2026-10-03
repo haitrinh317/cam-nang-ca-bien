@@ -25,11 +25,11 @@
 }
 
 .lit-badge-text {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-cyan-raw);
+  color: var(--color-accent-text);
 }
 
 .lit-title {
@@ -127,13 +127,13 @@
 }
 
 .lit-card__pill {
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.04em;
   padding: 4px 10px;
   border-radius: var(--radius-pill);
   background: var(--card-pill-bg, rgba(14, 165, 233, 0.1));
-  color: var(--card-accent-color, var(--color-cyan-raw));
+  color: color-mix(in srgb, var(--card-accent-color, var(--color-cyan-raw)) 62%, #000);
   border: 1px solid var(--card-pill-border, rgba(14, 165, 233, 0.2));
 }
 
@@ -220,7 +220,7 @@
   gap: 6px;
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--card-accent-color, var(--color-cyan-raw));
+  color: color-mix(in srgb, var(--card-accent-color, var(--color-cyan-raw)) 62%, #000);
   white-space: nowrap;
   flex-shrink: 0;
   transition: gap 0.2s ease;
@@ -231,6 +231,11 @@
 }
 
 /* ── Dark Mode Harmony ── */
+[data-theme="dark"] .lit-card__pill,
+[data-theme="dark"] .lit-card__cta-btn {
+  color: var(--card-accent-color, var(--color-cyan-raw));
+}
+
 [data-theme="dark"] .lit-card {
   background: rgba(18, 28, 54, 0.7);
   backdrop-filter: blur(12px);

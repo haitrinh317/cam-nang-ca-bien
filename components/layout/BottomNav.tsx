@@ -281,7 +281,7 @@ export function BottomNav() {
           className={`bottom-nav__tab${isOtherActive || isSheetOpen ? ' active' : ''}`}
           aria-haspopup="dialog"
           aria-expanded={isSheetOpen}
-          aria-label="Xem tất cả nhóm sinh vật biển"
+          aria-label={`${fourthTabLabel}, xem tất cả nhóm sinh vật biển`}
         >
           <span className="bottom-nav__icon">
             {fourthTabIcon}

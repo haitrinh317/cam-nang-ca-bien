@@ -81,7 +81,7 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
                 <Network size={16} />
               </span>
               <div>
-                <h3 className="specimen-bento-card__title">Cây Phân loại học</h3>
+                <h2 className="specimen-bento-card__title">Cây Phân loại học</h2>
                 <span style={{ fontSize: '0.8rem', color: 'var(--color-muted)', display: 'block', marginTop: '2px' }}>
                   {taxMode === 'modern' ? 'Theo Chuẩn Phát sinh Chủng loài WoRMS 2026' : 'Theo Sách Chuyên khảo Viện Hải dương học'}
                 </span>
@@ -229,9 +229,9 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
                   <ShieldCheck size={16} />
                 </span>
                 <div>
-                  <h3 className="specimen-bento-card__title" style={{ fontSize: 'var(--text-lg, 1.15rem)' }}>
+                  <h2 className="specimen-bento-card__title" style={{ fontSize: 'var(--text-lg, 1.15rem)' }}>
                     Hồ sơ Thẩm định Danh pháp Quốc tế
-                  </h3>
+                  </h2>
                   <span style={{ fontSize: 'var(--text-xs, 0.85rem)', color: 'var(--color-ink-3, #64748b)', fontWeight: 500, display: 'block', marginTop: '2px' }}>
                     World Register of Marine Species (WoRMS)
                   </span>
@@ -347,9 +347,9 @@ export default function PhanloaiTab({ sp, syns, crumbs, cleanAuthor }: PhanloaiT
               <span className="specimen-bento-card__icon specimen-bento-card__icon--purple">
                 <BookOpen size={16} />
               </span>
-              <h3 className="specimen-bento-card__title" style={{ fontSize: 'var(--text-lg, 1.15rem)' }}>
+              <h2 className="specimen-bento-card__title" style={{ fontSize: 'var(--text-lg, 1.15rem)' }}>
                 Danh pháp đồng nghĩa &amp; Phân loại gốc
-              </h3>
+              </h2>
             </div>
             {syns.length > 0 && (
               <span className="specimen-bento-card__badge" style={{ fontSize: 'var(--text-xs, 0.85rem)' }}>

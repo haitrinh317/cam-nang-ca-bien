@@ -168,7 +168,7 @@ export default function FaqAccordion() {
                     <span className={`faq-badge faq-badge--${item.category}`}>
                       {item.categoryLabel}
                     </span>
-                    <h3 className="faq-card__question">{item.question}</h3>
+                    <h2 className="faq-card__question">{item.question}</h2>
                   </div>
                   <span className={`faq-card__chevron${isOpen ? ' rotated' : ''}`} aria-hidden="true">
                     <ChevronDown size={20} />

@@ -139,7 +139,7 @@
   border: 1px solid rgba(0, 212, 184, 0.25);
   border-radius: 6px;
   font-family: var(--font-outlier, monospace);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   color: var(--color-cyan-on-navy, #00f0d0);
@@ -187,7 +187,7 @@
 
 .auth-label {
   font-family: var(--font-body, sans-serif);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: rgba(240, 253, 249, 0.82);
   letter-spacing: 0.03em;
@@ -369,7 +369,7 @@
 }
 
 .auth-security-note {
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   color: rgba(240, 253, 249, 0.45);
   line-height: 1.45;
   font-family: var(--font-body, sans-serif);
@@ -377,7 +377,7 @@
 
 .auth-system-stamp {
   font-family: var(--font-outlier, monospace);
-  font-size: 0.68rem;
+  font-size: 0.8rem;
   color: rgba(0, 212, 184, 0.5);
   letter-spacing: 0.04em;
 }

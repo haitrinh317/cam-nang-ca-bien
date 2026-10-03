@@ -29,11 +29,11 @@
 }
 
 .sgs-badge-text {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--color-cyan-raw);
+  color: var(--color-accent-text);
 }
 
 .sgs-title {
@@ -190,7 +190,7 @@
 [data-theme="dark"] .sgs-card--emerald .sgs-card__icon-box { color: #34d399; }
 
 .sgs-card__badge {
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   padding: 4px 12px;
@@ -201,25 +201,25 @@
 
 .sgs-card--cyan .sgs-card__badge {
   background: rgba(0, 212, 184, 0.1);
-  color: #008f7a;
+  color: var(--color-accent-text);
   border: 1px solid rgba(0, 212, 184, 0.25);
 }
 
 .sgs-card--rose .sgs-card__badge {
   background: rgba(244, 63, 94, 0.1);
-  color: #e11d48;
+  color: #be123c;
   border: 1px solid rgba(244, 63, 94, 0.25);
 }
 
 .sgs-card--amber .sgs-card__badge {
   background: rgba(245, 158, 11, 0.1);
-  color: #d97706;
+  color: #b45309;
   border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
 .sgs-card--emerald .sgs-card__badge {
   background: rgba(16, 185, 129, 0.1);
-  color: #059669;
+  color: #047857;
   border: 1px solid rgba(16, 185, 129, 0.25);
 }
 
@@ -240,7 +240,7 @@
 }
 
 .sgs-card:hover .sgs-card__title {
-  color: var(--color-cyan-raw);
+  color: var(--color-accent-text);
 }
 
 .sgs-card__desc {
@@ -287,7 +287,7 @@
   gap: 6px;
   font-size: 0.92rem;
   font-weight: 700;
-  color: var(--color-cyan-raw);
+  color: var(--color-accent-text);
   transition: gap 0.2s ease;
 }
 

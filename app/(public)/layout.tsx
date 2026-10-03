@@ -11,8 +11,9 @@ export default function PublicLayout({
 }) {
   return (
     <>
+      <a href="#main-content" className="skip-link">Bỏ qua đến nội dung chính</a>
       <Nav />
-      <main className="main-container">
+      <main id="main-content" tabIndex={-1} className="main-container">
         {children}
       </main>
       <Footer />

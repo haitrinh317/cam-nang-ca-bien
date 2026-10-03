@@ -214,7 +214,7 @@
 @media (max-width: 360px) {
   .hero { padding: var(--space-lg) var(--space-xs) var(--space-sm); }
   .hero__stat-num { font-size: 1.45rem; }
-  .hero__stat-label { font-size: 0.72rem; }
+  .hero__stat-label { font-size: 0.8rem; }
   .hero__stat-divider { margin: 0 2px; }
 }
 

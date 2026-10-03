@@ -38,6 +38,7 @@
   --color-accent-dark:     #0b1329;
   --color-accent-hover:    #00bfa5;
   --color-accent-subtle:   #e6faf7;
+  --color-accent-text:     #007a6a;   /* Accent dùng làm CHỮ trên nền sáng (>= 4.5:1) */
 
   /* ─── Neutrals ─── */
   --color-rule:            rgba(11, 19, 41, 0.12);
@@ -179,7 +180,7 @@
   --redlist-badge-radius:      var(--radius-pill, 9999px);
   --redlist-badge-padding:     4px 12px;
   --redlist-badge-compact-padding: 2px 8px;
-  --redlist-badge-font-size:   0.75rem;
+  --redlist-badge-font-size: 0.8rem;
   --redlist-badge-font-weight: 700;
 
   /* ─── Typography: Self-hosted via next/font/google (fallback: Be Vietnam Pro, Segoe UI, system fonts) ─── */
@@ -306,6 +307,7 @@
   --color-paper-navy:      #070d1d;
   --color-paper-cyan:      #08272b;
   --color-accent-dark:     #00d4b8;
+  --color-accent-text:     #00d4b8;
 
   /* Neutrals */
   --color-rule:            rgba(255, 255, 255, 0.12);

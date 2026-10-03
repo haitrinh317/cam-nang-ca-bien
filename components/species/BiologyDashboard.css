@@ -40,7 +40,7 @@
   gap: 6px;
   padding: 3px 10px;
   border-radius: 9999px;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
   background: rgba(0, 212, 184, 0.1);
   color: #008f7a;
@@ -85,7 +85,7 @@
   align-items: center;
   justify-content: space-between;
   color: var(--color-ink-3, #64748b);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -107,7 +107,7 @@
 }
 
 .bio-stat-card__sub {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--color-ink-3, #64748b);
   line-height: 1.35;
 }
@@ -159,7 +159,7 @@
 }
 
 .bio-item-label {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -208,7 +208,7 @@
   gap: 4px;
   padding: 4px 10px;
   border-radius: 9999px;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 600;
   background: var(--color-paper-3, #f1f5f9);
   color: var(--color-ink-1, #0f172a);
@@ -374,7 +374,7 @@
   background: var(--color-paper-3, #f1f5f9);
   border: 1px solid var(--color-rule, rgba(11, 19, 41, 0.12));
   color: var(--color-ink-2, #334155);
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -511,7 +511,7 @@
 }
 
 .bio-note-card__en-label {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--color-ink-3, #64748b);
   font-weight: 500;
 }
@@ -528,7 +528,7 @@
   background: rgba(15, 23, 42, 0.04);
   border: 1px solid rgba(15, 23, 42, 0.08);
   color: var(--color-ink-3, #64748b);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   font-family: var(--font-mono, monospace);
@@ -608,7 +608,7 @@
   background: rgba(0, 212, 184, 0.05);
   border: 1px solid rgba(0, 212, 184, 0.15);
   color: #008f7a;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 700;
   cursor: pointer;
   list-style: none;

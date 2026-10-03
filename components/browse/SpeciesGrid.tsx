@@ -505,7 +505,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
                         </span>
                       )}
                     </div>
-                    <h3 className="bc-title">{book.title}</h3>
+                    <h2 className="bc-title">{book.title}</h2>
                     <p className="bc-author">{book.author}</p>
                     <p className="bc-desc">{book.description}</p>
                     <div className="bc-meta">
@@ -603,7 +603,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
                   <th className="th-stt">STT</th>
                   <th className="th-vn">Tên loài & Tên khoa học</th>
                   <th className="th-sci desktop-only">Tên khoa học & Tác giả</th>
-                  <th className="th-action"></th>
+                  <th className="th-action"><span className="sr-only">Mở</span></th>
                 </tr>
               </thead>
               <tbody>
@@ -643,7 +643,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
                   <th className="th-stt">STT</th>
                   <th className="th-vn">Tên loài & Tên khoa học</th>
                   <th className="th-sci desktop-only">Tên khoa học & Tác giả</th>
-                  <th className="th-action"></th>
+                  <th className="th-action"><span className="sr-only">Mở</span></th>
                 </tr>
               </thead>
               <tbody>

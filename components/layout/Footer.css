@@ -127,7 +127,7 @@
 
 .footer-version-badge {
   font-family: var(--font-jetbrains-mono, monospace);
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #94a3b8;
   background: rgba(255, 255, 255, 0.05);
@@ -142,7 +142,7 @@
   align-items: center;
   gap: 5px;
   font-family: var(--font-body);
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: #94a3b8;
   background: rgba(255, 255, 255, 0.05);
@@ -192,7 +192,7 @@
 
 .footer-nav-dot {
   color: #475569;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .footer-external-links {
@@ -204,7 +204,7 @@
 
 .footer-ext-label {
   color: #64748b;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   margin-right: 2px;
 }
 
@@ -227,7 +227,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 3px 8px;
   border-radius: 4px;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
 }
 
 .footer-link--ext:hover {
@@ -248,7 +248,7 @@
 
 .footer-copyright {
   color: #64748b;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   letter-spacing: 0.01em;
 }
 

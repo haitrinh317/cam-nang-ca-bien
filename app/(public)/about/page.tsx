@@ -180,7 +180,7 @@ export default function AboutPage() {
                     <span className="about-vol-badge">{vol.vol}</span>
                     <span className="about-vol-year">Năm {vol.year}</span>
                   </div>
-                  <h4 className="about-vol-name">{vol.name}</h4>
+                  <h3 className="about-vol-name">{vol.name}</h3>
                   <p className="about-vol-author">Tác giả / Ban biên soạn: {vol.author}</p>
                 </div>
               </div>

@@ -150,7 +150,7 @@
   display: flex;
   justify-content: space-between;
   font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   color: var(--color-ink-3, #64748b);
   margin-top: 2px;
   font-feature-settings: "tnum" 1;
@@ -214,7 +214,7 @@
 
 .dzi-label {
   font-family: var(--font-body, 'Be Vietnam Pro', sans-serif);
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   color: var(--color-ink-3, #64748b);
   margin-top: 2px;
   line-height: 1.3;
@@ -234,10 +234,10 @@
     padding: 6px 5px !important;
   }
   .dzi-depth {
-    font-size: 0.76rem !important;
+    font-size: 0.8rem !important;
   }
   .dzi-label {
-    font-size: 0.65rem !important;
+    font-size: 0.8rem !important;
     line-height: 1.22;
   }
 }

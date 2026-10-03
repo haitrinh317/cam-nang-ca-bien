@@ -94,7 +94,7 @@ export default function ThongsoTab({ sp, bio }: ThongsoTabProps) {
                       <span className="specimen-bento-card__icon">
                         <Fish size={16} />
                       </span>
-                      <h3 className="specimen-bento-card__title">Đặc điểm hình thái</h3>
+                      <h2 className="specimen-bento-card__title">Đặc điểm hình thái</h2>
                     </div>
                     <span className="specimen-bento-card__badge">Hình thái học</span>
                   </div>
@@ -124,7 +124,7 @@ export default function ThongsoTab({ sp, bio }: ThongsoTabProps) {
                       <span className="specimen-bento-card__icon specimen-bento-card__icon--blue">
                         <Compass size={16} />
                       </span>
-                      <h3 className="specimen-bento-card__title">Sinh thái &amp; Dinh dưỡng</h3>
+                      <h2 className="specimen-bento-card__title">Sinh thái &amp; Dinh dưỡng</h2>
                     </div>
                     <span className="specimen-bento-card__badge">Tập tính sinh thái</span>
                   </div>
@@ -166,7 +166,7 @@ export default function ThongsoTab({ sp, bio }: ThongsoTabProps) {
                   <span className="specimen-bento-card__icon specimen-bento-card__icon--amber">
                     <Sparkles size={16} />
                   </span>
-                  <h3 className="specimen-bento-card__title">Giá trị sử dụng &amp; Kinh tế</h3>
+                  <h2 className="specimen-bento-card__title">Giá trị sử dụng &amp; Kinh tế</h2>
                 </div>
                 <div className="specimen-value-tags">
                   {isAquarium && <span className="specimen-value-tag specimen-value-tag--aquarium">Cá cảnh</span>}
@@ -221,7 +221,7 @@ export default function ThongsoTab({ sp, bio }: ThongsoTabProps) {
                   <span className="specimen-bento-card__icon specimen-bento-card__icon--purple">
                     <Archive size={16} />
                   </span>
-                  <h3 className="specimen-bento-card__title">Hồ sơ Mẫu vật &amp; Tài liệu dẫn</h3>
+                  <h2 className="specimen-bento-card__title">Hồ sơ Mẫu vật &amp; Tài liệu dẫn</h2>
                 </div>
                 {litList.length > 0 && (
                   <span className="specimen-bento-card__badge">

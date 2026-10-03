@@ -44,7 +44,7 @@
 
 .catalog-breadcrumb-sep {
   opacity: 0.4;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
 }
 
 .catalog-breadcrumb-current {
@@ -73,7 +73,7 @@
 }
 
 .catalog-header__title-accent {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
 }
 
 .catalog-header__desc {
@@ -99,7 +99,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   font-weight: 600;
   padding: 0.22rem 0.65rem;
   border-radius: 9999px;
@@ -112,7 +112,7 @@
 
 .catalog-header__pill--highlight {
   background: rgba(0, 212, 184, 0.1);
-  color: #008f7a;
+  color: var(--color-accent-text);
   border-color: rgba(0, 212, 184, 0.25);
 }
 
@@ -134,7 +134,7 @@
 
 .catalog-header__pill--group-cyan {
   background: rgba(0, 212, 184, 0.1);
-  color: #008f7a;
+  color: var(--color-accent-text);
   border-color: rgba(0, 212, 184, 0.25);
 }
 
@@ -205,7 +205,7 @@
   }
 
   .catalog-header__pill {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     padding: 0.18rem 0.5rem;
   }
 

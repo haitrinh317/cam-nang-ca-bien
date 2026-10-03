@@ -436,7 +436,7 @@ a:focus-visible {
    ═══════════════════════════════════════════ */
 .rank-badge {
   font-family: var(--font-outlier);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 700;
   padding: 2px 7px;
@@ -497,14 +497,14 @@ a:focus-visible {
   white-space: nowrap;
   background: var(--redlist-badge-bg, rgba(217, 119, 6, 0.12));
   border: 1px solid var(--redlist-badge-border, rgba(217, 119, 6, 0.35));
-  color: var(--redlist-badge-color, var(--redlist-vu-accent));
+  color: color-mix(in srgb, var(--redlist-badge-color, var(--redlist-vu-accent)) 55%, var(--color-navy-raw));
   box-shadow: 0 1px 2px var(--redlist-badge-shadow, rgba(0, 0, 0, 0.05));
   transition: opacity var(--dur-fast, 150ms) ease;
 }
 
 .vn-redlist-badge--compact {
   padding: var(--redlist-badge-compact-padding, 2px 8px);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   border-radius: var(--radius-xs, 4px);
 }
 
@@ -573,5 +573,31 @@ a:focus-visible {
   flex-shrink: 0;
 }
 
+/* Skip-link: chỉ hiện khi focus bàn phím */
+.skip-link {
+  position: fixed;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: 10000;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-navy-raw);
+  color: #fff;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  transform: translateY(-200%);
+  transition: transform var(--dur-normal) var(--ease-out);
+}
+.skip-link:focus { transform: translateY(0); }
+#main-content:focus { outline: none; }
 
-
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

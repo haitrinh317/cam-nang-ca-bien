@@ -39,7 +39,7 @@
   gap: 6px;
   padding: 5px 12px;
   border-radius: var(--radius-pill);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -116,7 +116,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -167,12 +167,12 @@
 }
 
 .bc-badge {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 800;
   padding: 3px 10px;
   border-radius: var(--radius-pill);
   background: rgba(14, 165, 233, 0.15);
-  color: var(--color-cyan-raw);
+  color: var(--color-accent-text);
   letter-spacing: 0.02em;
 }
 
@@ -180,7 +180,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #10b981;
 }
@@ -295,7 +295,7 @@
 }
 
 .vft-roman {
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   font-weight: 800;
   padding: 3px 8px;
   border-radius: 6px;
@@ -312,7 +312,7 @@
 }
 
 .vft-count {
-  font-size: 0.74rem;
+  font-size: 0.8rem;
   font-weight: 700;
   padding: 2px 8px;
   border-radius: var(--radius-pill);
@@ -355,7 +355,7 @@
 }
 
 .vft-sub {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   line-height: 1.35;
   color: var(--color-ink-3);
   white-space: nowrap;
@@ -484,7 +484,7 @@
 .species-list-table th {
   background: var(--color-paper-3);
   padding: var(--space-md) var(--space-lg);
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -585,7 +585,7 @@
 }
 
 .stt-badge {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-ink-2);
   font-family: var(--font-mono, monospace);
@@ -628,7 +628,7 @@
 }
 
 .sci-author {
-  font-size: 0.76rem;
+  font-size: 0.8rem;
   color: var(--color-ink-3);
   font-weight: 400;
 }
@@ -703,7 +703,7 @@
   }
 
   .vft-sub {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .species-list-toolbar {
@@ -762,11 +762,11 @@
   }
 
   .species-mobile-sci .sci-author {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
   }
 
   .stt-badge {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
     padding: 2px 5px;
   }
 
@@ -775,7 +775,7 @@
   }
 
   .stt-badge {
-    font-size: 0.74rem;
+    font-size: 0.8rem;
     padding: 2px 5px;
   }
 }
@@ -873,7 +873,7 @@
 
 .pwa-prompt-badge {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -937,7 +937,7 @@
   background: rgba(0, 180, 216, 0.2);
   border: 1px solid rgba(0, 180, 216, 0.5);
   color: #6fffe8;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 700;
   display: flex;
   align-items: center;

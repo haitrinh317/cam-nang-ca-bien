@@ -194,7 +194,7 @@
   line-height: var(--lh-normal);
 }
 .specimen__photo-credit a {
-  color: var(--color-accent);
+  color: var(--color-accent-text);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -313,7 +313,7 @@
   padding: 0 10px !important;
   border-radius: 9999px !important;
   font-family: var(--font-body, 'Be Vietnam Pro', sans-serif) !important;
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   font-weight: 600 !important;
   line-height: 1 !important;
   text-decoration: none !important;
@@ -394,7 +394,7 @@
 /* Chú thích Tên hiện hành cho loài đồng nghĩa */
 .worms-pill__synonym-note {
   font-family: var(--font-body, 'Be Vietnam Pro', sans-serif) !important;
-  font-size: 0.76rem !important;
+  font-size: 0.8rem !important;
   color: var(--color-ink-3, #64748b) !important;
   margin-left: 2px !important;
 }

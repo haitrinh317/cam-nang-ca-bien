@@ -75,7 +75,7 @@
   background: #ecfdf5 !important;
   border: 1px solid #a7f3d0 !important;
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   color: #047857 !important;
   letter-spacing: 0.06em !important;
@@ -166,7 +166,7 @@
   background: #ffffff !important;
   border: 1px solid #e2e8f0 !important;
   border-radius: 8px !important;
-  font-size: 0.78rem !important;
+  font-size: 0.8rem !important;
   color: #334155 !important;
   text-decoration: none !important;
   font-family: var(--font-body) !important;
@@ -286,7 +286,7 @@
 }
 
 .admin-group-count {
-  font-size: 0.74rem !important;
+  font-size: 0.8rem !important;
   padding: 0.2rem 0.55rem !important;
   border-radius: 4px !important;
   background: #f1f5f9 !important;
@@ -304,7 +304,7 @@
   align-items: center !important;
   gap: 0.5rem !important;
   margin-bottom: 1.15rem !important;
-  font-size: 0.78rem !important;
+  font-size: 0.8rem !important;
   font-family: var(--font-outlier, monospace) !important;
 }
 
@@ -372,7 +372,7 @@
 
 .admin-col-hero__pill {
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.08em !important;
@@ -383,7 +383,7 @@
 
 .admin-col-hero__vol-badge {
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   color: #64748b !important;
 }
 
@@ -433,7 +433,7 @@
 
 .admin-col-telemetry__label {
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.7rem !important;
+  font-size: 0.8rem !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.06em !important;
@@ -460,7 +460,7 @@
 }
 
 .admin-col-telemetry__val .unit {
-  font-size: 0.78rem !important;
+  font-size: 0.8rem !important;
   color: #64748b !important;
 }
 
@@ -605,7 +605,7 @@
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.45rem !important;
-  font-size: 0.76rem !important;
+  font-size: 0.8rem !important;
   font-family: var(--font-outlier, monospace) !important;
   cursor: pointer !important;
   user-select: none !important;
@@ -634,7 +634,7 @@
   gap: 0.35rem !important;
   padding: 0.35rem 0.85rem !important;
   border-radius: 9999px !important;
-  font-size: 0.75rem !important;
+  font-size: 0.8rem !important;
   font-family: var(--font-outlier, monospace) !important;
   font-weight: 600 !important;
   background: #f1f5f9 !important;
@@ -691,7 +691,7 @@
 .admin-table th {
   background: #f8fafc !important;
   color: #475569 !important;
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
@@ -714,7 +714,7 @@
   display: inline-block !important;
   padding: 0.15rem 0.5rem !important;
   border-radius: 4px !important;
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   font-family: var(--font-outlier, monospace) !important;
   font-weight: 700 !important;
   border: 1px solid #e2e8f0 !important;
@@ -722,7 +722,7 @@
 }
 
 .admin-species-id {
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   color: #64748b !important;
   font-family: var(--font-outlier, monospace) !important;
 }
@@ -747,7 +747,7 @@
 
 .admin-species-seq {
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   color: #94a3b8 !important;
 }
 
@@ -772,7 +772,7 @@
   padding: 0.18rem 0.55rem !important;
   border-radius: 9999px !important;
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.04em !important;
@@ -810,7 +810,7 @@
   padding: 0.15rem 0.5rem !important;
   border-radius: 4px !important;
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   font-weight: 800 !important;
   letter-spacing: 0.03em !important;
 }
@@ -987,7 +987,7 @@
 
 .admin-modal__collection-tag {
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   color: #0369a1 !important;
   background: #e0f2fe !important;
@@ -1000,7 +1000,7 @@
 
 .admin-modal__id-tag {
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   color: #64748b !important;
   background: #f1f5f9 !important;
   border: 1px solid #e2e8f0 !important;
@@ -1010,7 +1010,7 @@
 
 .admin-modal__vol-tag {
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   font-weight: 600 !important;
   color: #0f766e !important;
   background: #ccfbf1 !important;
@@ -1044,7 +1044,7 @@
 
 .admin-modal__author {
   color: #94a3b8 !important;
-  font-size: 0.78rem !important;
+  font-size: 0.8rem !important;
 }
 
 .admin-modal__close {
@@ -1152,7 +1152,7 @@
 }
 
 .modal-nav-desc {
-  font-size: 0.7rem !important;
+  font-size: 0.8rem !important;
   color: #94a3b8 !important;
   line-height: 1.2 !important;
   white-space: nowrap !important;
@@ -1173,7 +1173,7 @@
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   color: #64748b !important;
   font-family: var(--font-outlier, monospace) !important;
 }
@@ -1237,7 +1237,7 @@
 }
 
 .form-label {
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   color: #64748b !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
@@ -1330,7 +1330,7 @@ select.form-input {
 }
 
 .sync-badge {
-  font-size: 0.7rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   padding: 0.2rem 0.65rem !important;
   border-radius: 999px !important;
@@ -1368,7 +1368,7 @@ select.form-input {
   display: inline-flex !important;
   align-items: center !important;
   gap: 0.35rem !important;
-  font-size: 0.75rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   color: #475569 !important;
   text-transform: uppercase !important;
@@ -1390,7 +1390,7 @@ select.form-input {
 }
 
 .sync-readonly-label {
-  font-size: 0.7rem !important;
+  font-size: 0.8rem !important;
   color: #94a3b8 !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
@@ -1542,7 +1542,7 @@ select.form-input {
   background: rgba(14, 165, 233, 0.1) !important;
   border: 1px solid rgba(14, 165, 233, 0.25) !important;
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.7rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   color: #0284c7 !important;
   text-transform: uppercase !important;
@@ -1611,7 +1611,7 @@ select.form-input {
 }
 
 .lit-kpi-card__label {
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.05em !important;
@@ -1683,7 +1683,7 @@ select.form-input {
 }
 
 .lit-counter-badge {
-  font-size: 0.78rem !important;
+  font-size: 0.8rem !important;
   color: #64748b !important;
   font-family: var(--font-outlier, monospace) !important;
 }
@@ -1701,7 +1701,7 @@ select.form-input {
   border: none !important;
   border-radius: 6px !important;
   padding: 0.4rem 0.65rem !important;
-  font-size: 0.78rem !important;
+  font-size: 0.8rem !important;
   font-weight: 600 !important;
   color: #64748b !important;
   cursor: pointer !important;
@@ -1785,7 +1785,7 @@ select.form-input {
 }
 
 .lit-status-pill {
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   padding: 0.18rem 0.55rem !important;
   border-radius: 999px !important;
@@ -1864,7 +1864,7 @@ select.form-input {
 }
 
 .lit-kpi-badge-text {
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   color: #64748b !important;
   text-transform: uppercase !important;
@@ -1886,7 +1886,7 @@ select.form-input {
 }
 
 .lit-chip-badge {
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   padding: 0.2rem 0.5rem !important;
   border-radius: 6px !important;
   background: #f1f5f9 !important;
@@ -1904,7 +1904,7 @@ select.form-input {
 }
 
 .lit-sort-pill {
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   font-family: var(--font-outlier, monospace) !important;
   color: #94a3b8 !important;
   font-weight: 600 !important;
@@ -1956,7 +1956,7 @@ select.form-input {
 }
 
 .lit-icon-option-label {
-  font-size: 0.75rem !important;
+  font-size: 0.8rem !important;
   font-family: var(--font-outlier, monospace) !important;
   text-transform: lowercase !important;
 }
@@ -1973,7 +1973,7 @@ select.form-input {
 }
 
 .lit-preview-watermark {
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   color: #94a3b8 !important;
   font-family: var(--font-outlier, monospace) !important;
   text-transform: uppercase !important;
@@ -2028,7 +2028,7 @@ select.form-input {
   background: rgba(16, 185, 129, 0.1) !important;
   border: 1px solid rgba(16, 185, 129, 0.25) !important;
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   color: #059669 !important;
   letter-spacing: 0.06em !important;
@@ -2096,7 +2096,7 @@ select.form-input {
   border: 1px solid #e2e8f0 !important;
   border-radius: 8px !important;
   padding: 0.35rem 0.75rem !important;
-  font-size: 0.78rem !important;
+  font-size: 0.8rem !important;
   font-weight: 600 !important;
   color: #64748b !important;
   cursor: pointer !important;
@@ -2119,7 +2119,7 @@ select.form-input {
 }
 
 .audit-stream-counter {
-  font-size: 0.76rem !important;
+  font-size: 0.8rem !important;
   color: #94a3b8 !important;
   font-family: var(--font-outlier, monospace) !important;
 }
@@ -2131,7 +2131,7 @@ select.form-input {
   gap: 0.35rem !important;
   padding: 0.25rem 0.65rem !important;
   border-radius: 999px !important;
-  font-size: 0.74rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.02em !important;
   font-family: var(--font-body, 'Be Vietnam Pro', sans-serif) !important;
@@ -2216,7 +2216,7 @@ select.form-input {
 }
 
 .audit-user-role {
-  font-size: 0.64rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   font-family: var(--font-outlier, monospace) !important;
   padding: 0.1rem 0.4rem !important;
@@ -2227,7 +2227,7 @@ select.form-input {
 }
 
 .audit-user-email {
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   color: #94a3b8 !important;
   font-family: var(--font-outlier, monospace) !important;
 }
@@ -2257,7 +2257,7 @@ select.form-input {
   color: #0284c7 !important;
   border: 1px solid #e2e8f0 !important;
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   margin-left: 0.4rem !important;
 }
 
@@ -2281,7 +2281,7 @@ select.form-input {
 }
 
 .audit-time-date {
-  font-size: 0.72rem !important;
+  font-size: 0.8rem !important;
   color: #94a3b8 !important;
   font-family: var(--font-outlier, monospace) !important;
   font-variant-numeric: tabular-nums !important;
@@ -2318,7 +2318,7 @@ select.form-input {
 }
 
 .audit-filter-label {
-  font-size: 0.76rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   color: #475569 !important;
   display: inline-flex !important;
@@ -2335,7 +2335,7 @@ select.form-input {
 
 .audit-filter-select {
   padding: 0.35rem 2rem 0.35rem 2rem !important;
-  font-size: 0.78rem !important;
+  font-size: 0.8rem !important;
   font-weight: 600 !important;
   color: #0b1329 !important;
   background-color: #ffffff !important;
@@ -2362,7 +2362,7 @@ select.form-input {
   border: 1px solid #cbd5e1 !important;
   border-radius: 6px !important;
   padding: 0.25rem 0.55rem !important;
-  font-size: 0.74rem !important;
+  font-size: 0.8rem !important;
   font-weight: 600 !important;
   color: #475569 !important;
   cursor: pointer !important;
@@ -2389,7 +2389,7 @@ select.form-input {
 .audit-date-input {
   height: 30px !important;
   padding: 0.2rem 0.5rem !important;
-  font-size: 0.75rem !important;
+  font-size: 0.8rem !important;
   font-family: var(--font-outlier, monospace) !important;
   font-variant-numeric: tabular-nums !important;
   color: #0b1329 !important;
@@ -2623,7 +2623,7 @@ body:has(.admin-wrapper) {
 
 .admin-sidebar__brand .brand-sub {
   font-family: var(--font-body, sans-serif) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.8rem !important;
   color: rgba(240, 253, 249, 0.5) !important;
   white-space: nowrap !important;
   overflow: hidden !important;
@@ -2667,7 +2667,7 @@ body:has(.admin-wrapper) {
   border: 1px solid rgba(0, 212, 184, 0.15) !important;
   border-radius: 8px !important;
   color: rgba(240, 253, 249, 0.75) !important;
-  font-size: 0.76rem !important;
+  font-size: 0.8rem !important;
   font-weight: 500 !important;
   text-decoration: none !important;
   transition: all 0.18s ease !important;
@@ -2713,7 +2713,7 @@ body:has(.admin-wrapper) {
 
 .admin-nav-section-label {
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.65rem !important;
+  font-size: 0.8rem !important;
   font-weight: 700 !important;
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
@@ -2783,7 +2783,7 @@ body:has(.admin-wrapper) {
 
 .eco-nav-badge {
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.7rem !important;
+  font-size: 0.8rem !important;
   font-variant-numeric: tabular-nums !important;
   padding: 0.1rem 0.4rem !important;
   border-radius: 4px !important;
@@ -2841,7 +2841,7 @@ body:has(.admin-wrapper) {
   justify-content: center !important;
   gap: 0.4rem !important;
   font-family: var(--font-outlier, monospace) !important;
-  font-size: 0.64rem !important;
+  font-size: 0.8rem !important;
   color: rgba(240, 253, 249, 0.45) !important;
   letter-spacing: 0.04em !important;
   padding-top: 0.25rem !important;

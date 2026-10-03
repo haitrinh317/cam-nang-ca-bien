@@ -176,7 +176,7 @@
 }
 
 .taxonomy-stats-pill strong {
-  color: var(--brand-primary);
+  color: var(--color-accent-text);
   font-weight: 700;
 }
 
