@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Home, BookOpen, Layers, Sparkles } from 'lucide-react'
+import { Home, BookOpen, Layers, Sparkles, SlidersHorizontal } from 'lucide-react'
 import type { SpecialGroupConfig } from '@/lib/collection-registry'
 import GlobalSearch from '@/components/search/GlobalSearch'
 import './CatalogHeader.css'
@@ -137,6 +137,10 @@ export default function CatalogHeader({
                 : `Tìm nhanh toàn bộ ${totalSpecies.toLocaleString() || '1.767'}+ loài Cá biển Việt Nam (Tên VN, Tên khoa học)...`
             }
           />
+          {/* Bộ lọc nâng cao dùng chung với /tim-kiem (IUCN, độ sâu, kích thước), mặc định lọc trong phân hệ này */}
+          <Link href={`/tim-kiem?c=${collection.id}`} className="catalog-header__filter-link">
+            <SlidersHorizontal size={16} aria-hidden="true" /> Bộ lọc nâng cao
+          </Link>
         </div>
       </div>
     </header>

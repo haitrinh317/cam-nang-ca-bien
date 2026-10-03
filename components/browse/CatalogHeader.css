@@ -215,3 +215,15 @@
 }
 
 
+
+.catalog-header__filter-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.catalog-header__filter-link:hover { color: var(--color-ink); }
