@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: {
     absolute: 'Tra cứu thông tin Sinh Vật Biển Việt Nam',
   },
-  description: 'Cơ sở dữ liệu số hóa 2.671+ loài sinh vật biển Việt Nam từ các công trình phân loại học nguyên bản — Một dự án được phát triển bởi haitrinh.',
+  description: 'Cơ sở dữ liệu số hóa 3.000+ loài sinh vật biển Việt Nam từ các công trình phân loại học nguyên bản — Một dự án được phát triển bởi haitrinh.',
   alternates: {
     canonical: 'https://www.tracuusinhvatbien.app',
   },
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     url: 'https://www.tracuusinhvatbien.app',
     siteName: 'Tra cứu thông tin Sinh Vật Biển Việt Nam',
     title: 'Tra cứu thông tin Sinh Vật Biển Việt Nam — haitrinh',
-    description: 'Cơ sở dữ liệu số hóa 2.671+ loài sinh vật biển Việt Nam từ các công trình phân loại học nguyên bản — Một dự án được phát triển bởi haitrinh.',
+    description: 'Cơ sở dữ liệu số hóa 3.000+ loài sinh vật biển Việt Nam từ các công trình phân loại học nguyên bản — Một dự án được phát triển bởi haitrinh.',
     images: [
       {
         url: '/og-default.png',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Tra cứu thông tin Sinh Vật Biển Việt Nam — haitrinh',
-    description: 'Cơ sở dữ liệu số hóa 2.671+ loài sinh vật biển Việt Nam — Một dự án được phát triển bởi haitrinh.',
+    description: 'Cơ sở dữ liệu số hóa 3.000+ loài sinh vật biển Việt Nam — Một dự án được phát triển bởi haitrinh.',
     images: ['/og-default.png'],
   },
 }
@@ -116,7 +116,7 @@ export default async function HomePage() {
           {/* Live stats */}
           <div className="hero__stats">
             <div className="hero__stat">
-              <span className="hero__stat-num">{totalSpecies?.toLocaleString() || '1,965'}</span>
+              <span className="hero__stat-num">{totalSpecies?.toLocaleString() || '3,072'}</span>
               <span className="hero__stat-label">Loài</span>
             </div>
             <div className="hero__stat-divider" />

@@ -1,7 +1,7 @@
 import '@/styles/catalogue.css'
 import { getCollectionBySlug } from '@/lib/collection-registry'
 import { createServerClient } from '@/lib/supabase-server'
-import { TAXONOMY_COLS, sortTaxonomyRows, type SpeciesRow } from '@/lib/taxonomy'
+import { TAXONOMY_COLS, toTaxonomyRow, sortTaxonomyRows } from '@/lib/taxonomy'
 import { notFound } from 'next/navigation'
 import TaxonomyTree from '@/components/browse/TaxonomyTree'
 import type { Metadata } from 'next'
@@ -63,7 +63,7 @@ export default async function TaxonomyPage({ params }: Props) {
     .is('deleted_at', null)
     .limit(3000)
 
-  const species = sortTaxonomyRows((rawSpecies || []) as SpeciesRow[], 'modern')
+  const species = sortTaxonomyRows((rawSpecies || []).map(toTaxonomyRow), 'modern')
 
   return (
     <>

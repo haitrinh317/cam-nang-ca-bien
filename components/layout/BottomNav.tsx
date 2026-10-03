@@ -321,7 +321,7 @@ export function BottomNav() {
               Nhóm Sinh Vật Biển
             </h2>
             <p className="bottom-sheet__subtitle">
-              Hệ sinh thái số hóa • 2,671 loài tại vùng biển Việt Nam
+              Hệ sinh thái số hóa • 3,000+ loài tại vùng biển Việt Nam
             </p>
           </div>
           <button

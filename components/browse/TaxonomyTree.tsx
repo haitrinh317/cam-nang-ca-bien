@@ -9,6 +9,7 @@ import {
   SpeciesRow,
   TaxonomyMode,
   sortTaxonomyRows,
+  toTaxonomyRow,
   buildTaxonomyTree,
   getTaxonomyStats,
   stripRankPrefix
@@ -19,7 +20,7 @@ interface Props {
   initialSpecies?: SpeciesRow[]
 }
 
-// Accordion node
+// Accordion node — children mount only when opened (keeps SSR HTML/DOM small)
 function TreeNode({ title, rankClass, rankName, children }: {
   title: string
   rankClass: string
@@ -28,13 +29,19 @@ function TreeNode({ title, rankClass, rankName, children }: {
 }) {
   const [open, setOpen] = useState(false)
   return (
-    <div className="tree-node" data-search={title.toLowerCase()}>
+    <div className="tree-node">
       <div
         className="node-header"
         onClick={() => setOpen(o => !o)}
         role="button"
         tabIndex={0}
-        onKeyDown={e => e.key === 'Enter' && setOpen(o => !o)}
+        aria-expanded={open}
+        onKeyDown={e => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            setOpen(o => !o)
+          }
+        }}
       >
         <div className={`node-toggle${open ? ' expanded' : ''}`}>
           <ChevronRight size={16} strokeWidth={2.5} />
@@ -42,7 +49,7 @@ function TreeNode({ title, rankClass, rankName, children }: {
         <span className={`rank-badge ${rankClass}`}>{rankName}</span>
         <span>{title}</span>
       </div>
-      <div className={`tree-level${open ? ' expanded' : ''}`}>{children}</div>
+      <div className={`tree-level${open ? ' expanded' : ''}`}>{open && children}</div>
     </div>
   )
 }
@@ -72,7 +79,7 @@ export default function TaxonomyTree({ collection, initialSpecies }: Props) {
         return
       }
 
-      setAllSpecies(sortTaxonomyRows([...(r1.data || []), ...(r2.data || []), ...(r3.data || [])] as SpeciesRow[], mode))
+      setAllSpecies(sortTaxonomyRows([...(r1.data || []), ...(r2.data || []), ...(r3.data || [])].map(toTaxonomyRow), mode))
       setStatus('ok')
     }
     load()
@@ -225,7 +232,6 @@ export default function TaxonomyTree({ collection, initialSpecies }: Props) {
                             key={sp.id}
                             href={`/${collection}/${sp.id}`}
                             className="species-item"
-                            data-search={`${sp.vn_name.toLowerCase()} ${sp.scientific_name.toLowerCase()}`}
                           >
                             <div>
                               <span className="sp-name">{sp.vn_name}</span>

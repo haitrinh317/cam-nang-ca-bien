@@ -50,3 +50,20 @@ export function applySpeciesFilters(query: any, collection: string, includeDelet
   if (!includeDeleted) q = q.is('deleted_at', null)
   return q
 }
+
+/**
+ * Cột cho danh sách duyệt (SpeciesGrid). ponytail: chỉ lấy 2 trường con của `biology` (alias iucn, vnred)
+ * thay vì cả JSON — payload trang /[collection] giảm mạnh. Luôn đưa row qua toGridItem().
+ * Cột phân bố chỉ cần cho nhóm Hoàng Sa - Trường Sa (lọc HS/TS ở client).
+ */
+export const GRID_COLS =
+  'id, volume, species_index, vn_name, scientific_name, authorship, collection_id, iucn:biology->>iucnStatus, vnred:biology->vnRedList->>status'
+export const GRID_COLS_LOCATION = GRID_COLS + ', vn_distribution, en_distribution, vn_specimen'
+
+export function toGridItem<T extends { iucn?: string | null; vnred?: string | null }>(r: T) {
+  const { iucn, vnred, ...rest } = r
+  return {
+    ...rest,
+    biology: iucn || vnred ? { iucnStatus: iucn || undefined, vnRedList: vnred ? { status: vnred } : undefined } : null,
+  }
+}

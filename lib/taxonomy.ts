@@ -4,8 +4,15 @@
  * - 'classic': Original Monograph Structure (Oceanographic Institute)
  */
 
+// ponytail: select only biology->wormsTaxonomy (alias `wt`) — full `biology` JSON was ~2.7 MB of the RSC payload.
+// Always pass rows through toTaxonomyRow() to restore the SpeciesRow shape.
 export const TAXONOMY_COLS =
-  'id, vn_name, scientific_name, tax_class_vn, tax_class_latin, tax_order_vn, tax_order_latin, tax_family_vn, tax_family_latin, tax_genus_vn, tax_genus_latin, species_index, biology'
+  'id, vn_name, scientific_name, tax_class_vn, tax_class_latin, tax_order_vn, tax_order_latin, tax_family_vn, tax_family_latin, tax_genus_vn, tax_genus_latin, species_index, wt:biology->wormsTaxonomy'
+
+export function toTaxonomyRow(r: Record<string, unknown>): SpeciesRow {
+  const { wt, ...rest } = r
+  return { ...rest, biology: wt ? { wormsTaxonomy: wt } : null } as SpeciesRow
+}
 
 export interface WormsTaxonomyNode {
   class?: string | null

@@ -10,7 +10,7 @@ import {
   BookMetadata,
   getSpecialGroup,
 } from '@/lib/collection-registry'
-import { applySpeciesFilters } from '@/lib/species-query'
+import { applySpeciesFilters, GRID_COLS, GRID_COLS_LOCATION, toGridItem } from '@/lib/species-query'
 import { BookOpen, Layers, Search, ArrowRight, ArrowLeft, CheckCircle2, Sparkles, Compass, Waves } from 'lucide-react'
 import './SpecialGroupBanner.css'
 
@@ -117,7 +117,8 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
 
     let query = db
       .from('species')
-      .select('id, volume, species_index, vn_name, scientific_name, authorship, biology, vn_distribution, en_distribution, vn_specimen, collection_id')
+      // phân bố chỉ cần cho nhóm Hoàng Sa - Trường Sa (lọc HS/TS ở client)
+      .select(activeGroup?.id === 'hoang-sa-truong-sa' ? GRID_COLS_LOCATION : GRID_COLS)
       .is('deleted_at', null)
 
     if (activeGroup?.id === 'hoang-sa-truong-sa') {
@@ -157,7 +158,8 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
       return
     }
 
-    setSpeciesList(data as SpeciesItem[])
+    // supabase-js can't type-parse the aliased JSON-path select → cast rows before mapping
+    setSpeciesList((data as unknown as Parameters<typeof toGridItem>[0][]).map(toGridItem) as SpeciesItem[])
     setStatus('ok')
 
     // Restore scroll position after data loads (only once, on initial mount)

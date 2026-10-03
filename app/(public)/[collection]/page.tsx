@@ -5,7 +5,7 @@ import {
   getSpecialGroup,
   getBooksForCollection,
 } from '@/lib/collection-registry'
-import { applySpeciesFilters } from '@/lib/species-query'
+import { applySpeciesFilters, GRID_COLS, toGridItem } from '@/lib/species-query'
 import { notFound } from 'next/navigation'
 import SpeciesGrid from '@/components/browse/SpeciesGrid'
 import CatalogHeader from '@/components/browse/CatalogHeader'
@@ -70,8 +70,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
 
   const db = createServerClient()
   // ponytail: parallel fetch count + initial species list for first render
-  // Columns must match SpeciesGrid.loadData() select to avoid shape mismatch
-  const GRID_COLS = 'id, volume, species_index, vn_name, scientific_name, authorship, biology, vn_distribution, en_distribution, vn_specimen, collection_id'
+  // Columns must match SpeciesGrid.loadData() select (shared GRID_COLS + toGridItem)
   const [{ count: totalSpecies }, { data: initialSpecies }] = await Promise.all([
     db.from('species')
       .select('*', { count: 'exact', head: true })
@@ -102,8 +101,8 @@ export default async function CollectionPage({ params, searchParams }: Props) {
         activeGroup={activeGroup}
       />
 
-      <Suspense fallback={<div className="list-status-message"><div className="spinner" /><span>Đang tải danh sách...</span></div>}>
-        <SpeciesGrid collection={collection} initialVol={initialVol} initialGroup={group} initialSpecies={initialSpecies || undefined} />
+      <Suspense fallback={<div className="list-status-message" style={{ minHeight: '100vh' }}><div className="spinner" /><span>Đang tải danh sách...</span></div>}>
+        <SpeciesGrid collection={collection} initialVol={initialVol} initialGroup={group} initialSpecies={initialSpecies ? initialSpecies.map(toGridItem) : undefined} />
       </Suspense>
     </>
   )
