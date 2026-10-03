@@ -29,7 +29,7 @@
 - [ ] Mở rộng collection `than-mem` Phase 3 cho các họ tiếp theo từ Hylleberg 2003
 - [ ] Chuẩn bị Hợp nhất Phase 4 cho Thân mềm độc (11 loài ốc cối, bạch tuộc)
 
-- [ ] **Audit UX/hiệu năng/a11y** — kế hoạch lưu ở `.agents/plans/backlog--ux--audit-hieu-nang-a11y-2026-10-03.md` (Gói A: nhẹ trang `/ca-bien`, `/ca-bien/taxonomy`, CLS, số liệu cứng; Gói B: tương phản/skip-link/chữ nhỏ)
+- [ ] **Hướng phát triển #3–#10** (Gói A/B/C đã xong) — chi tiết ở `.agents/plans/backlog--ux--audit-hieu-nang-a11y-2026-10-03.md`: bản đồ phân bố, trích dẫn APA/xuất CSV/in, nút báo lỗi dữ liệu, yêu thích/so sánh, PWA offline loài đã xem, giao diện Anh–Việt, analytics ẩn danh, trang dữ liệu mở/API
 
 ### Ưu tiên thấp
 - [ ] Tìm kiếm — phần C: bổ sung tên gọi thường dùng (nguồn dữ liệu chưa chọn; tên gọi khác phủ 70%, giáp xác/phù du 0%, san hô 5%)
