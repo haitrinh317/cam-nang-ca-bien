@@ -6,10 +6,7 @@ import { notFound } from 'next/navigation'
 import TaxonomyTree from '@/components/browse/TaxonomyTree'
 import type { Metadata } from 'next'
 
-// ponytail: ISR cache 24h (86400s) — Cây phân loại chỉ cập nhật khi có xuất bản hoặc OCR batch mới
-export const revalidate = 86400
-// Required for ISR at runtime (no generateStaticParams here)
-export const dynamic = 'force-static'
+// No ISR on purpose: render per request so data changes appear immediately (owner decision 2026-10-03).
 
 interface Props {
   params: Promise<{ collection: string }>
