@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-09-19 (Commit: `6ad781f` — Triển khai hoàn tất Phân hệ thứ 9 `dong-vat-phu-du`: 101 loài Giáp xác chân chèo Copepoda, 103 ảnh vi thể VNMN, tích hợp CSDL Banyuls) | **Production Live:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-10-03 (Commit: `7dbebee` — Audit toàn diện, Next.js 16.3.8 + ESLint 9, bảo mật Vercel env, deploy production) | **Production Live:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 
@@ -52,7 +52,7 @@ Deploy: git push origin master + vercel --prod --yes
 | `/` | Landing + GlobalSearch + Literature cards |
 | `/:collection` | Duyệt theo đầu sách, Compact List View |
 | `/:collection/taxonomy` | Cây phân loại |
-| `/:collection/:speciesId` | Chi tiết loài (ISR 24h) |
+| `/:collection/:speciesId` | Chi tiết loài (render per request, cập nhật tức thì) |
 | `/admin` | Dashboard stats |
 | `/admin/:collection` | CRUD loài |
 | `/admin/literature` | CRUD tài liệu gốc |
