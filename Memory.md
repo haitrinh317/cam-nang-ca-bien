@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-10-03 (Commit: `3d92240` — Tìm kiếm không dấu + trang `/tim-kiem` + bộ lọc nâng cao IUCN/độ sâu/kích thước/môi trường sống/vùng biển, migration 012-015, deploy production) | **Production Live:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-10-03 (Commit: `ae09914` — Tìm kiếm không dấu + `/tim-kiem` + bộ lọc nâng cao (migration 012-015); hiện Vùng/Môi trường trên mọi kết quả; loài "khắp ven biển" gán 3 miền; fix UI thanh tìm kiếm/footer/badge mobile; deploy production) | **Production Live:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 
