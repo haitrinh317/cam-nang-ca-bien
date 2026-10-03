@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-10-03 (Commit: `7dbebee` — Audit toàn diện, Next.js 16.3.8 + ESLint 9, bảo mật Vercel env, deploy production) | **Production Live:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-10-03 (Commit: `0d33dc7` — Hoàn thiện toàn bộ 11 hạng mục Audit UI/UX: Hỏng, Lệch hệ, Gu, deploy production) | **Production Live:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 
