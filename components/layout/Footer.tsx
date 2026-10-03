@@ -22,9 +22,6 @@ export default function Footer() {
               <span className="footer-org__title">
                 <strong>{t('footer.title')}</strong>
               </span>
-              <div className="footer-org__parent">
-                {t('footer.orgParent')}
-              </div>
               <div className="footer-org__sub">
                 <span>{t('footer.mission')}</span>
               </div>

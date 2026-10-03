@@ -85,9 +85,6 @@ export default function CatalogHeader({
               <span className="catalog-header__pill catalog-header__pill--highlight">
                 <span>{activeGroup?.approxCount || totalSpecies} loài ghi nhận</span>
               </span>
-              <span className="catalog-header__pill">
-                <span>Một dự án bởi haitrinh</span>
-              </span>
             </>
           ) : (
             <>
