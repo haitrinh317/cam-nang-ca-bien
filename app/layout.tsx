@@ -6,6 +6,7 @@ import '@/styles/responsive.css'
 import '@/styles/buttons.css'
 import '@/styles/mobile.css'
 import '@/styles/dark-mode.css'
+import { ServiceWorkerRegister } from '@/components/layout/ServiceWorkerRegister'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -150,6 +151,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <ServiceWorkerRegister />
         {children}
       </body>
     </html>

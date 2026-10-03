@@ -40,6 +40,14 @@ const nextConfig: NextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()' },
         ],
       },
+      // Service worker: không để trình duyệt cache file sw.js để cập nhật phiên bản ngay
+      {
+        source: '/sw.js',
+        headers: [
+          { key: 'Content-Type', value: 'application/javascript; charset=utf-8' },
+          { key: 'Cache-Control', value: 'no-cache, no-store, must-revalidate' },
+        ],
+      },
       // Edge cache for species/taxonomy pages comes from ISR (dynamic='force-static' + revalidate in each page),
       // not from a custom Cache-Control header (Next overrides it to no-store on dynamic routes).
       // /_next/static: Next.js already serves immutable cache headers — no custom rule needed
