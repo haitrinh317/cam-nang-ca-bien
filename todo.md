@@ -29,6 +29,8 @@
 - [ ] Mở rộng collection `than-mem` Phase 3 cho các họ tiếp theo từ Hylleberg 2003
 - [ ] Chuẩn bị Hợp nhất Phase 4 cho Thân mềm độc (11 loài ốc cối, bạch tuộc)
 
+- [ ] **Audit UX/hiệu năng/a11y** — kế hoạch lưu ở `.agents/plans/backlog--ux--audit-hieu-nang-a11y-2026-10-03.md` (Gói A: nhẹ trang `/ca-bien`, `/ca-bien/taxonomy`, CLS, số liệu cứng; Gói B: tương phản/skip-link/chữ nhỏ)
+
 ### Ưu tiên thấp
 - [ ] Tìm kiếm — phần C: bổ sung tên gọi thường dùng (nguồn dữ liệu chưa chọn; tên gọi khác phủ 70%, giáp xác/phù du 0%, san hô 5%)
 - [ ] **Lỗi nháy:** `/tim-kiem?c=san-ho` cả trang nháy như tải lại nhiều lần (chưa tái hiện; cần mở browser xem Network/console, nghi layout/theme dùng chung)
