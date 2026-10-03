@@ -126,8 +126,8 @@ export default async function SearchResultsPage({ searchParams }: Props) {
                 const facts = x ? [
                   filters.dmin !== undefined || filters.dmax !== undefined ? `Sâu ${fmtDepth(x.depth_min, x.depth_max)}` : '',
                   filters.lmin !== undefined || filters.lmax !== undefined ? `Dài tối đa ${x.max_length_cm ?? '—'} cm` : '',
-                  filters.region.length ? `Vùng: ${(x.region_tags ?? []).map(t => REGION_LABEL[t] ?? t).join(', ') || '—'}` : '',
-                  filters.habitat.length ? `Môi trường: ${(x.habitat_tags ?? []).map(t => HABITAT_LABEL[t] ?? t).join(', ') || '—'}` : '',
+                  x.region_tags?.length || filters.region.length ? `Vùng: ${(x.region_tags ?? []).map(t => REGION_LABEL[t] ?? t).join(', ') || '—'}` : '',
+                  x.habitat_tags?.length || filters.habitat.length ? `Môi trường: ${(x.habitat_tags ?? []).map(t => HABITAT_LABEL[t] ?? t).join(', ') || '—'}` : '',
                 ].filter(Boolean).join(' · ') : ''
                 return (
                   <li key={h.id}>

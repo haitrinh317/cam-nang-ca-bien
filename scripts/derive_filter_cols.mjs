@@ -76,9 +76,13 @@ export const REGION_KEYWORDS = {
 export const fold = (s) => String(s ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/gi, 'd').toLowerCase()
 const wordRe = (k) => new RegExp(`(?<![a-z0-9])${k}(?![a-z0-9])`)
 const REGION_RES = Object.fromEntries(Object.entries(REGION_KEYWORDS).map(([r, ks]) => [r, ks.map(wordRe)]))
+const WHOLE_COAST_RE = /khap (o )?(cac )?(bo bien|ven bien|vung bien)/
 export function parseRegions(row) {
   const t = fold(row.vn_distribution)
-  return Object.entries(REGION_RES).filter(([, res]) => res.some(re => re.test(t))).map(([r]) => r)
+  const out = Object.entries(REGION_RES).filter(([, res]) => res.some(re => re.test(t))).map(([r]) => r)
+  // 'Khắp bờ biển/ven biển Việt Nam' → 3 miền ven biển (không gán Hoàng Sa/Trường Sa)
+  if (WHOLE_COAST_RE.test(t)) for (const r of ['bac-bo', 'trung-bo', 'nam-bo']) if (!out.includes(r)) out.push(r)
+  return out
 }
 
 const num = x => Number(String(x).replace(',', '.'))
@@ -108,6 +112,7 @@ assert.deepEqual(parseRegions({ vn_specimen: 'Mẫu lưu trữ: Viện Hải dư
 assert.deepEqual(parseRegions({ vn_distribution: 'Biển Đông. Nam Trung Bộ' }), ['trung-bo'])
 assert.deepEqual(parseRegions({ vn_distribution: 'Đông Nam Bộ' }), ['nam-bo'])
 assert.deepEqual(parseRegions({ vn_distribution: 'Biển Đông, Ấn Độ Dương' }), [])
+assert.deepEqual(parseRegions({ vn_distribution: 'Việt Nam: Khắp ven biển' }).sort(), ['bac-bo', 'nam-bo', 'trung-bo'])
 assert.equal(parseLengthCm('30.0 cm TL'), 30)
 assert.equal(parseLengthCm('F: 12-18 mm, M: 10 mm'), 1.8)
 assert.equal(parseLengthCm('41'), null)
