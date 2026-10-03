@@ -1,6 +1,6 @@
 # Memory — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> **Cập nhật:** 2026-10-03 (Commit: `0d33dc7` — Hoàn thiện toàn bộ 11 hạng mục Audit UI/UX: Hỏng, Lệch hệ, Gu, deploy production) | **Production Live:** https://www.tracuusinhvatbien.app
+> **Cập nhật:** 2026-10-03 (Commit: `3d92240` — Tìm kiếm không dấu + trang `/tim-kiem` + bộ lọc nâng cao IUCN/độ sâu/kích thước/môi trường sống/vùng biển, migration 012-015, deploy production) | **Production Live:** https://www.tracuusinhvatbien.app
 > **SSOT:** Supabase PostgreSQL — file local chỉ là cache/backup cũ.
 
 
@@ -50,6 +50,7 @@ Deploy: git push origin master + vercel --prod --yes
 | Route | Chức năng |
 |---|---|
 | `/` | Landing + GlobalSearch + Literature cards |
+| `/tim-kiem` | Kết quả tìm kiếm + bộ lọc nâng cao (form GET, trạng thái trên URL; `?q=&c=&iucn=&habitat=&region=&dmin=&dmax=&lmin=&lmax=&page=`); chạy được không cần từ khóa (chế độ duyệt). Link "Bộ lọc nâng cao" ở `CatalogHeader` mở `/tim-kiem?c=<phân hệ>` |
 | `/:collection` | Duyệt theo đầu sách, Compact List View |
 | `/:collection/taxonomy` | Cây phân loại |
 | `/:collection/:speciesId` | Chi tiết loài (render per request, cập nhật tức thì) |
@@ -72,7 +73,12 @@ Deploy: git push origin master + vercel --prod --yes
 | `user_roles` | admin/editor/viewer — `haitrinh082@gmail.com` = admin |
 | `audit_log` | Nhật ký thay đổi (jsonb old/new) |
 
-**Migrations:** 001→010 (010: Nâng cấp Bò sát biển, archive `ran-bien`)
+**Migrations:** 001→015 (010: Bò sát biển; 012: RPC tìm kiếm không dấu `search_species`/`search_species_counts` + `unaccent`; 013: cột `iucn_code`, `depth_min`, `depth_max`, `max_length_cm`; 014: RPC có tham số lọc; 015: cột `habitat_tags[]`, `region_tags[]` + `search_species_facets`)
+
+**Cột lọc chuẩn hóa (013/015)** là cột thường điền bằng `node --env-file=.env.local scripts/derive_filter_cols.mjs --apply --tags` (quy tắc cố định, có assert tự kiểm tra, mặc định dry-run). **Chạy lại sau mỗi đợt OCR/enrich.** Kiểm tra RPC: `node scripts/check_search_rpc.mjs`.
+- `iucn_code` chỉ lấy từ `biology.iucnStatus` — KHÔNG phải `conservation_status` (cột đó là độ phổ biến common/uncommon/rare/unknown).
+- `region_tags` (5 vùng: bac-bo, trung-bo, nam-bo, hoang-sa, truong-sa) chỉ lấy từ `vn_distribution`; KHÔNG dùng `vn_specimen` (đó là nơi LƯU TRỮ mẫu). Gộp Bắc/Nam Trung Bộ và Đông/Tây Nam Bộ vì sách chỉ ghi chung "miền Trung"/"Nam Bộ". Đây là giải pháp tạm; kế hoạch bảng `marine_regions` + `species_regions` (xem Nguyên tắc 3) vẫn là đích dài hạn.
+- `habitat_tags` (7 nhãn) từ `biology.habitat`/`habitatVn`; benthic/demersal/neritic/marine không ánh xạ. Nhãn thảm cỏ biển/rong chỉ có 5 loài (rong biển gần như không có dữ liệu môi trường).
 
 ---
 
@@ -121,7 +127,7 @@ OCR Document/                    ← Next.js project root
 ├── public/                      ← Static assets
 ├── scripts/                     ← Active scripts (12 file, được skill tham chiếu)
 │   └── archive/                 ← Scripts one-shot đã dùng xong
-├── migrations/                  ← SQL 001-009
+├── migrations/                  ← SQL 001-015
 ├── _offline/                    ← Data offline (gitignored)
 │   ├── data/                    ← Cache FishBase/SeaLifeBase
 │   └── logs/                    ← Nhật ký phiên làm việc
