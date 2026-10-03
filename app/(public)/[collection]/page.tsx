@@ -11,7 +11,6 @@ import SpeciesGrid from '@/components/browse/SpeciesGrid'
 import CatalogHeader from '@/components/browse/CatalogHeader'
 import { createServerClient } from '@/lib/supabase-server'
 import type { Metadata } from 'next'
-import { Suspense } from 'react'
 
 // ponytail: ISR 1h — species data rarely changes, consistent with landing page
 export const revalidate = 3600
@@ -101,9 +100,7 @@ export default async function CollectionPage({ params, searchParams }: Props) {
         activeGroup={activeGroup}
       />
 
-      <Suspense fallback={<div className="list-status-message" style={{ minHeight: '100vh' }}><div className="spinner" /><span>Đang tải danh sách...</span></div>}>
-        <SpeciesGrid collection={collection} initialVol={initialVol} initialGroup={group} initialSpecies={initialSpecies ? initialSpecies.map(toGridItem) : undefined} />
-      </Suspense>
+      <SpeciesGrid collection={collection} initialVol={initialVol} initialGroup={group} initialSpecies={initialSpecies ? initialSpecies.map(toGridItem) : undefined} />
     </>
   )
 }

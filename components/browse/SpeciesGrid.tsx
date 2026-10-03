@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef, useState, useCallback, useMemo } from 'react'
-import { useScrollReveal } from '@/hooks/useScrollReveal'
 import Link from 'next/link'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { db } from '@/lib/supabase-browser'
@@ -95,10 +94,6 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
   const [status, setStatus] = useState<'loading' | 'error' | 'ok'>(initialSpecies ? 'ok' : 'loading')
   const [localFilter, setLocalFilter] = useState<string>('')
   const hasRestoredScroll = useRef(false)
-  const bookCardsRef = useRef<HTMLDivElement | null>(null)
-
-  // Scroll reveal: book-cards stagger on mount
-  useScrollReveal(bookCardsRef, '.book-card')
 
   // Active book object
   const activeBook = useMemo(() => {
@@ -490,7 +485,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
               <span>CHỌN ĐẦU SÁCH KHOA HỌC GỐC</span>
             </div>
 
-            <div className="book-cards-grid" ref={bookCardsRef}>
+            <div className="book-cards-grid">
               {books.map(book => {
                 const isSelected = book.id === selectedBookId
                 return (
