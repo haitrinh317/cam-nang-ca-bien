@@ -1,28 +1,22 @@
 'use client'
 
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useId } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { Search, X } from 'lucide-react'
 import { db } from '@/lib/supabase-browser'
+import { searchSpecies, speciesHref, resultsHref, MATCH_HINT, type SearchHit } from '@/lib/search'
 import './GlobalSearch.css'
 
-interface SearchResult {
-  id: string
-  volume: number
-  vn_name: string
-  scientific_name: string
-  authorship: string | null
-  collection_id: string
-}
-
 interface GlobalSearchProps {
+  initialQuery?: string
   collectionId?: string
   collectionName?: string
   placeholder?: string
   className?: string
 }
 
-function getBadgeInfo(item: SearchResult) {
+function getBadgeInfo(item: SearchHit) {
   switch (item.collection_id) {
     case 'thuc-vat-bien':
       return { className: 'vol-badge v-plant', label: 'Thực vật' }
@@ -47,43 +41,43 @@ function getBadgeInfo(item: SearchResult) {
 }
 
 export default function GlobalSearch({
+  initialQuery = '',
   collectionId,
   collectionName,
   placeholder,
   className = '',
 }: GlobalSearchProps) {
-  const [query, setQuery] = useState('')
-  const [results, setResults] = useState<SearchResult[]>([])
+  const router = useRouter()
+  const listId = useId()
+  const [query, setQuery] = useState(initialQuery)
+  const [results, setResults] = useState<SearchHit[]>([])
   const [status, setStatus] = useState<'idle' | 'loading' | 'empty' | 'error'>('idle')
   const [open, setOpen] = useState(false)
+  const [active, setActive] = useState(-1)
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  // ponytail: stale-response guard — only the latest request may write state
+  const seq = useRef(0)
   // ponytail: flag prevents onBlur closing dropdown before touch navigation fires
   const clickingResult = useRef(false)
 
+  const total = results[0] ? Number(results[0].total) : 0
+  // option indexes: 0..results.length-1 = species, results.length = "xem tất cả" footer
+  const showFooter = status === 'idle' && results.length > 0
+  const optionId = (i: number) => `${listId}-opt-${i}`
+
   const doSearch = useCallback(async (q: string) => {
+    const mine = ++seq.current
     setStatus('loading')
-    // ponytail: sanitize to prevent PostgREST filter injection (same as API route)
-    const safe = q.replace(/[%_(),.]/g, '').trim().slice(0, 100)
-    if (!safe) { setStatus('idle'); return }
-
-    let queryBuilder = db
-      .from('species')
-      .select('id, volume, vn_name, scientific_name, authorship, collection_id')
-      .is('deleted_at', null)
-      .or(`vn_name.ilike.%${safe}%,scientific_name.ilike.%${safe}%,en_common_name.ilike.%${safe}%,vn_alternate_names.ilike.%${safe}%`)
-
-    // ponytail: enforce collection scoping when provided (e.g. only ca-bien or only thuc-vat-bien)
-    if (collectionId) {
-      queryBuilder = queryBuilder.eq('collection_id', collectionId)
+    try {
+      // RPC: accent-insensitive, ranked, matches vn_name / alt names / en name / scientific name
+      const data = await searchSpecies(db, q, { collection: collectionId, limit: 8 })
+      if (mine !== seq.current) return
+      setResults(data)
+      setActive(-1)
+      setStatus(data.length === 0 ? 'empty' : 'idle')
+    } catch {
+      if (mine === seq.current) setStatus('error')
     }
-
-    const { data, error } = await queryBuilder
-      .order('volume')
-      .limit(12)
-
-    if (error) { setStatus('error'); return }
-    setResults(data || [])
-    setStatus(data?.length === 0 ? 'empty' : 'idle')
   }, [collectionId])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -91,6 +85,7 @@ export default function GlobalSearch({
     setQuery(val)
     if (timer.current) clearTimeout(timer.current)
     if (val.trim().length < 2) {
+      seq.current++
       setOpen(false)
       setStatus('idle')
       return
@@ -100,16 +95,44 @@ export default function GlobalSearch({
   }
 
   const handleClear = () => {
+    seq.current++
     setQuery('')
     setResults([])
     setOpen(false)
     setStatus('idle')
   }
 
+  const goAll = () => {
+    const q = query.trim()
+    if (q.length < 2) return
+    if (timer.current) clearTimeout(timer.current)
+    setOpen(false)
+    router.push(resultsHref(q, collectionId))
+  }
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const count = results.length + (showFooter ? 1 : 0)
+    if (e.key === 'Escape') {
+      setOpen(false)
+    } else if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && open && count > 0) {
+      e.preventDefault()
+      setActive(a => (e.key === 'ArrowDown' ? (a + 1) % count : (a - 1 + count) % count))
+    } else if (e.key === 'Enter') {
+      e.preventDefault()
+      const hit = results[active]
+      if (open && hit) {
+        setOpen(false)
+        router.push(speciesHref(hit))
+      } else {
+        goAll()
+      }
+    }
+  }
+
   const inputId = collectionId ? `search-${collectionId}` : 'globalSearch'
   const defaultPlaceholder = collectionName
-    ? `Tìm kiếm trong ${collectionName} (Tên VN, Tên khoa học)...`
-    : 'Tìm kiếm theo Tên Việt Nam, Tên khoa học...'
+    ? `Tìm kiếm trong ${collectionName} (tên Việt, tên gọi khác, tên khoa học)...`
+    : 'Tìm theo tên Việt, tên gọi khác, tên khoa học...'
 
   return (
     <div
@@ -130,12 +153,15 @@ export default function GlobalSearch({
           className="search-input"
           placeholder={placeholder || defaultPlaceholder}
           autoComplete="off"
+          role="combobox"
+          aria-expanded={open}
+          aria-controls={listId}
+          aria-autocomplete="list"
+          aria-activedescendant={open && active >= 0 ? optionId(active) : undefined}
           value={query}
           onChange={handleChange}
-          onFocus={() => query.length >= 2 && setOpen(true)}
-          onKeyDown={(e) => {
-            if (e.key === 'Escape') setOpen(false)
-          }}
+          onFocus={() => query.trim().length >= 2 && results.length > 0 && setOpen(true)}
+          onKeyDown={handleKeyDown}
         />
         {query && (
           <button
@@ -151,7 +177,8 @@ export default function GlobalSearch({
 
       {open && (
         <div
-          id="searchResults"
+          id={listId}
+          role="listbox"
           className="search-results active"
           style={{ zIndex: 99999, position: 'absolute', top: 'calc(100% + 6px)', left: 0, right: 0 }}
         >
@@ -166,13 +193,17 @@ export default function GlobalSearch({
               Không tìm thấy loài nào phù hợp trong {collectionName ? `danh mục ${collectionName}` : 'hệ thống'}.
             </div>
           )}
-          {status === 'idle' && results.map(item => {
+          {status === 'idle' && results.map((item, i) => {
             const badge = getBadgeInfo(item)
+            const hint = MATCH_HINT[item.matched]
             return (
               <Link
                 key={item.id}
-                href={`/${collectionId || item.collection_id || 'ca-bien'}/${item.id}`}
-                className="result-item"
+                id={optionId(i)}
+                role="option"
+                aria-selected={active === i}
+                href={speciesHref(item)}
+                className={`result-item${active === i ? ' is-active' : ''}`}
                 onPointerDown={() => { clickingResult.current = true }}
                 onClick={() => {
                   clickingResult.current = false
@@ -181,7 +212,10 @@ export default function GlobalSearch({
               >
                 <div className="ri-info">
                   <div className="ri-name">{item.vn_name || item.scientific_name}</div>
-                  <div className="ri-sci">{item.scientific_name} {item.authorship || ''}</div>
+                  <div className="ri-sci">
+                    {item.scientific_name} {item.authorship || ''}
+                    {hint && <span className="ri-hint"> · {hint}</span>}
+                  </div>
                 </div>
                 <span className={badge.className}>
                   {badge.label}
@@ -189,6 +223,22 @@ export default function GlobalSearch({
               </Link>
             )
           })}
+          {showFooter && (
+            <Link
+              id={optionId(results.length)}
+              role="option"
+              aria-selected={active === results.length}
+              href={resultsHref(query.trim(), collectionId)}
+              className={`result-item result-item--all${active === results.length ? ' is-active' : ''}`}
+              onPointerDown={() => { clickingResult.current = true }}
+              onClick={() => {
+                clickingResult.current = false
+                setOpen(false)
+              }}
+            >
+              Xem tất cả {total} kết quả
+            </Link>
+          )}
         </div>
       )}
     </div>

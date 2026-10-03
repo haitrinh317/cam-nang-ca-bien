@@ -1,0 +1,45 @@
+/* Trang kết quả tìm kiếm /tim-kiem — chỉ dùng token, tự động theo dark mode */
+.sr-page { padding: var(--space-3xl) var(--space-md) var(--space-4xl); background: var(--color-paper); min-height: 70vh; }
+.sr-container { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-lg); }
+.sr-title { font-size: var(--text-2xl); color: var(--color-ink); margin: 0; }
+
+.sr-chips { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.sr-chip {
+  display: inline-flex; align-items: center; gap: var(--space-xs);
+  padding: var(--space-2xs) var(--space-sm); min-height: 36px;
+  border: 1px solid var(--color-rule); border-radius: var(--radius-pill);
+  background: var(--color-paper-2); color: var(--color-ink-2);
+  font-size: var(--text-sm); text-decoration: none;
+  transition: background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+.sr-chip span { font-size: var(--text-xs); color: var(--color-ink-3); }
+.sr-chip:hover { border-color: var(--color-cyan-raw); }
+.sr-chip.is-active { background: var(--color-paper-cyan); border-color: var(--color-cyan-raw); color: var(--color-ink); font-weight: 600; }
+
+.sr-summary { margin: 0; color: var(--color-ink-2); font-size: var(--text-base); }
+.sr-note { margin: 0; display: flex; align-items: center; gap: var(--space-xs); color: var(--color-ink-3); font-size: var(--text-sm); }
+.sr-note--error { color: var(--color-ink); }
+.sr-note a { color: var(--color-ink); text-decoration: underline; }
+
+.sr-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-xs); }
+.sr-item {
+  display: grid; grid-template-columns: 1fr auto; gap: var(--space-2xs) var(--space-md);
+  padding: var(--space-sm) var(--space-md); border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md); background: var(--color-paper-2); text-decoration: none;
+  transition: border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.sr-item:hover, .sr-item:focus-visible { border-color: var(--color-cyan-raw); transform: translateY(-1px); }
+.sr-item-name { grid-column: 1; font-size: var(--text-lg); font-weight: 600; color: var(--color-ink); }
+.sr-item-sci { grid-column: 1; font-size: var(--text-sm); font-style: italic; color: var(--color-ink-3); }
+.sr-item-meta { grid-column: 2; grid-row: 1 / span 2; align-self: center; display: flex; flex-direction: column; align-items: flex-end; gap: var(--space-2xs); }
+.sr-tag { font-size: var(--text-xs); color: var(--color-ink-2); background: var(--color-paper-3); padding: var(--space-3xs) var(--space-xs); border-radius: var(--radius-pill); }
+.sr-hint { font-size: var(--text-2xs); color: var(--color-ink-3); }
+
+.sr-pager { display: flex; justify-content: space-between; align-items: center; color: var(--color-ink-3); font-size: var(--text-sm); }
+.sr-pager a { color: var(--color-ink); font-weight: 600; text-decoration: none; padding: var(--space-xs) var(--space-sm); border: 1px solid var(--color-rule); border-radius: var(--radius-md); }
+.sr-pager a:hover { border-color: var(--color-cyan-raw); }
+
+@media (max-width: 560px) {
+  .sr-item { grid-template-columns: 1fr; }
+  .sr-item-meta { grid-column: 1; grid-row: auto; flex-direction: row; align-items: center; }
+}

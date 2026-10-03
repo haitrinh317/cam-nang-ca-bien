@@ -404,3 +404,14 @@
     padding: 0.2rem var(--space-xs, 0.5rem) !important;
   }
 }
+
+/* ─── Keyboard-active option, match hint, "Xem tất cả" footer ─── */
+.result-item.is-active { background: var(--color-paper-cyan); }
+.result-item .ri-hint { color: var(--color-ink-3); font-style: normal; font-size: var(--text-2xs); }
+.result-item--all {
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  border-top: 1px solid var(--color-rule);
+}
