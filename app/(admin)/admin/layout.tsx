@@ -17,7 +17,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <div className="admin-wrapper">
       <AdminSidebar />
-      <main className="admin-content" data-theme="light">
+      <main className="admin-content">
         {children}
       </main>
     </div>

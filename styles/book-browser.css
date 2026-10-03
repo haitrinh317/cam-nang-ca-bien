@@ -773,10 +773,44 @@
   .td-stt {
     width: 48px;
   }
+}
+
+/* ─── NARROW MOBILE SCREENS (<= 480px / 375px) ─── */
+@media (max-width: 480px) {
+  .species-row td {
+    padding: 6px 6px;
+  }
+
+  .td-stt,
+  .species-list-table th.th-stt {
+    width: 36px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
 
   .stt-badge {
+    font-size: 0.75rem;
+    padding: 1px 4px;
+    letter-spacing: -0.02em;
+  }
+
+  .species-vn-link {
+    font-size: 0.84rem;
+  }
+
+  /* Ẩn bớt tên tác giả phân loại dài ngoằng trên màn hình hẹp, chỉ giữ tên khoa học in nghiêng */
+  .species-mobile-sci .sci-author {
+    display: none !important;
+  }
+
+  .species-mobile-sci .sci-name {
     font-size: 0.8rem;
-    padding: 2px 5px;
+  }
+
+  .species-list-table th.th-action,
+  .species-row td.td-action {
+    width: 28px;
+    padding-right: 4px;
   }
 }
 

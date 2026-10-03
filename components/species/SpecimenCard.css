@@ -436,7 +436,70 @@
   flex-shrink: 0;
 }
 
+.specimen__family-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--color-ink-3);
+  padding: 2px 8px;
+  border-radius: var(--radius-xs, 4px);
+  background: var(--color-paper-3, #f1f5f9);
+  border: 1px solid var(--color-rule);
+}
+
+.specimen__family-name {
+  font-weight: 600;
+}
+
+.specimen__family-lat {
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.specimen__tox-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 24px;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill, 9999px);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.specimen__tox-pill--lethal {
+  background-color: var(--redlist-cr-bg-light, rgba(254, 242, 242, 0.75));
+  color: var(--color-error, #dc2626);
+  border: 1px solid var(--redlist-cr-border, rgba(239, 68, 68, 0.35));
+}
+
+.specimen__tox-pill--toxic {
+  background-color: var(--color-warning-bg, rgba(254, 243, 199, 0.75));
+  color: var(--color-warning, #b45309);
+  border: 1px solid var(--color-warning-border, rgba(245, 158, 11, 0.35));
+}
+
 /* ─── DARK MODE SUPPORT ─── */
+[data-theme="dark"] .specimen__family-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-ink-2);
+}
+
+[data-theme="dark"] .specimen__tox-pill--lethal {
+  background-color: var(--redlist-cr-bg-dark, rgba(69, 10, 10, 0.4));
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.4);
+}
+
+[data-theme="dark"] .specimen__tox-pill--toxic {
+  background-color: var(--redlist-vu-bg-dark, rgba(69, 26, 3, 0.35));
+  color: #fbbf24;
+  border-color: rgba(251, 191, 36, 0.4);
+}
+
 [data-theme="dark"] .specimen-identity-card,
 [data-theme="dark"] .specimen-bento-card,
 [data-theme="dark"] .specimen-vault-card {

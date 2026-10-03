@@ -127,14 +127,14 @@ export default function CatalogHeader({
             collectionName={collection.nameVn}
             placeholder={
               collection.id === 'thuc-vat-bien'
-                ? `Tìm trong ${totalSpecies.toLocaleString()}+ loài Thực vật biển (Tên VN, Tên khoa học, Rong biển, Cỏ biển)...`
+                ? `Tìm nhanh toàn bộ ${totalSpecies.toLocaleString()}+ loài Thực vật biển (Tên VN, Tên khoa học)...`
                 : collection.id === 'giap-xac'
-                ? `Tìm trong ${totalSpecies.toLocaleString()}+ loài Giáp xác biển (Tên VN, Tên khoa học, Tôm, Cua, Ghẹ)...`
+                ? `Tìm nhanh toàn bộ ${totalSpecies.toLocaleString()}+ loài Giáp xác biển (Tên VN, Tên khoa học)...`
                 : collection.id === 'bo-sat-bien' || collection.id === 'ran-bien'
-                ? `Tìm trong ${totalSpecies.toLocaleString()}+ loài Bò sát biển (Rùa biển, Rắn biển, Cá sấu)...`
+                ? `Tìm nhanh toàn bộ ${totalSpecies.toLocaleString()}+ loài Bò sát biển (Tên VN, Tên khoa học)...`
                 : collection.id === 'sinh-vat-doc'
-                ? `Tìm trong ${totalSpecies.toLocaleString()}+ loài Động vật độc biển (Tên VN, Tên khoa học, Độc tố)...`
-                : `Tìm trong ${totalSpecies.toLocaleString() || '1.764'}+ loài Cá biển Việt Nam (Tên VN, Tên khoa học)...`
+                ? `Tìm nhanh toàn bộ ${totalSpecies.toLocaleString()}+ loài Động vật độc biển (Tên VN, Tên khoa học)...`
+                : `Tìm nhanh toàn bộ ${totalSpecies.toLocaleString() || '1.767'}+ loài Cá biển Việt Nam (Tên VN, Tên khoa học)...`
             }
           />
         </div>

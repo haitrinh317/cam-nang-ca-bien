@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { ArrowLeft, ShieldCheck } from 'lucide-react'
 import LoginForm from './LoginForm'
 import '@/styles/auth.css'
 
@@ -25,19 +26,7 @@ export default async function LoginPage({ searchParams }: Props) {
       {/* Top back navigation */}
       <nav className="auth-top-nav" aria-label="Điều hướng">
         <Link href="/" className="auth-back-link">
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <path d="m15 18-6-6 6-6" />
-          </svg>
+          <ArrowLeft size={16} aria-hidden="true" />
           <span>Về trang tra cứu</span>
         </Link>
       </nav>
@@ -56,18 +45,7 @@ export default async function LoginPage({ searchParams }: Props) {
           </div>
 
           <div className="auth-system-badge">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
-              <path d="m9 12 2 2 4-4" />
-            </svg>
+            <ShieldCheck size={18} aria-hidden="true" />
             <span>HỆ THỐNG QUẢN TRỊ NỘI BỘ</span>
           </div>
 
@@ -86,7 +64,7 @@ export default async function LoginPage({ searchParams }: Props) {
             Khu vực giới hạn. Mọi phiên đăng nhập và thao tác dữ liệu đều được ghi nhận tự động vào Nhật ký kiểm toán (Audit Log).
           </p>
           <div className="auth-system-stamp">
-            DỰ ÁN CÁ NHÂN HAITRINH · CSDL 2.595 LOÀI SINH VẬT BIỂN
+            DỰ ÁN CÁ NHÂN HAITRINH · CSDL 3.072 LOÀI SINH VẬT BIỂN
           </div>
         </footer>
       </section>

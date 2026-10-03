@@ -166,7 +166,7 @@
 .conservation-widget__subtitle {
   margin: 0;
   font-size: 0.8rem;
-  color: #78716c;
+  color: var(--color-neutral, #64748b);
   font-weight: 500;
 }
 
@@ -211,7 +211,7 @@
 
 .conservation-badge--iucn {
   background: rgba(15, 23, 42, 0.06);
-  color: #334155;
+  color: var(--color-ink-3, #334155);
   border: 1px solid rgba(15, 23, 42, 0.12);
 }
 
@@ -223,7 +223,7 @@
 
 .conservation-badge--code {
   background: rgba(15, 23, 42, 0.04);
-  color: #64748b;
+  color: var(--color-neutral, #64748b);
   border: 1px solid rgba(15, 23, 42, 0.08);
   font-family: var(--font-mono, monospace);
 }
@@ -269,7 +269,7 @@
   gap: 8px;
   font-size: 0.86rem;
   font-weight: 700;
-  color: var(--color-navy-raw, #0f172a);
+  color: var(--color-ink, #0b1329);
 }
 
 [data-theme='dark'] .conservation-card__header {
@@ -283,8 +283,8 @@
   width: 26px;
   height: 26px;
   border-radius: 6px;
-  background: #f1f5f9;
-  color: #475569;
+  background: var(--color-paper-3, #f1f5f9);
+  color: var(--color-muted, #475569);
 }
 
 [data-theme='dark'] .conservation-card__icon {
@@ -313,7 +313,7 @@
   margin: 0;
   font-size: 0.88rem;
   line-height: 1.72;
-  color: #334155;
+  color: var(--color-ink-3, #334155);
   text-wrap: pretty;
 }
 
@@ -328,7 +328,7 @@
 
 .conservation-card__text strong {
   font-weight: 700;
-  color: #0f172a;
+  color: var(--color-ink, #0b1329);
 }
 
 [data-theme='dark'] .conservation-card__text strong {
@@ -360,7 +360,7 @@
 }
 
 .conservation-trend-pill__label {
-  color: #64748b;
+  color: var(--color-neutral, #64748b);
   font-weight: 500;
 }
 
@@ -487,7 +487,7 @@
   padding-top: 14px;
   border-top: 1px solid var(--status-border);
   font-size: 0.8rem;
-  color: #64748b;
+  color: var(--color-neutral, #64748b);
 }
 
 [data-theme='dark'] .conservation-widget__footer {

@@ -7,7 +7,7 @@
   position: relative;
   background: #060c1b;
   background-image: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(0, 212, 184, 0.05), transparent);
-  color: #94a3b8;
+  color: var(--color-placeholder, #94a3b8);
   border-top: 1px solid rgba(0, 212, 184, 0.22);
   margin-top: var(--space-2xl);
   padding: var(--space-2xl) var(--space-xl) var(--space-xl);
@@ -68,7 +68,7 @@
 }
 
 .footer-org__title {
-  color: #f1f5f9;
+  color: var(--color-paper-3, #f1f5f9);
   font-size: 0.95rem;
   line-height: 1.35;
 }
@@ -76,11 +76,11 @@
 .footer-org__title strong {
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: #f8fafc;
+  color: var(--color-paper, #f8fafc);
 }
 
 .footer-org__parent {
-  color: #cbd5e1;
+  color: var(--color-paper-4, #cbd5e1);
   font-size: 0.88rem;
   line-height: 1.35;
 }
@@ -91,7 +91,7 @@
   flex-wrap: wrap;
   gap: 6px;
   font-size: 0.8rem;
-  color: #64748b;
+  color: var(--color-neutral, #64748b);
   line-height: 1.4;
 }
 
@@ -107,7 +107,7 @@
   align-items: center;
   gap: 6px;
   font-size: 0.82rem;
-  color: #00d4b8;
+  color: var(--color-cyan-raw, #00d4b8);
   font-weight: 500;
   background: rgba(0, 212, 184, 0.08);
   border: 1px solid rgba(0, 212, 184, 0.22);
@@ -120,8 +120,8 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #00d4b8;
-  box-shadow: 0 0 8px #00d4b8;
+  background: var(--color-cyan-raw, #00d4b8);
+  box-shadow: 0 0 8px var(--color-cyan-raw, #00d4b8);
   flex-shrink: 0;
 }
 
@@ -129,7 +129,7 @@
   font-family: var(--font-jetbrains-mono, monospace);
   font-size: 0.8rem;
   font-weight: 600;
-  color: #94a3b8;
+  color: var(--color-placeholder, #94a3b8);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 4px 9px;
@@ -144,7 +144,7 @@
   font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 500;
-  color: #94a3b8;
+  color: var(--color-placeholder, #94a3b8);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 4px 9px;
@@ -157,7 +157,7 @@
 .footer-theme-toggle:hover {
   background: rgba(0, 212, 184, 0.12);
   border-color: rgba(0, 212, 184, 0.3);
-  color: #00f0d0;
+  color: var(--color-cyan-on-navy, #00f0d0);
 }
 
 /* ─── Đường chia Hairline ─── */
@@ -191,7 +191,7 @@
 }
 
 .footer-nav-dot {
-  color: #475569;
+  color: var(--color-muted, #475569);
   font-size: 0.8rem;
 }
 
@@ -203,13 +203,13 @@
 }
 
 .footer-ext-label {
-  color: #64748b;
+  color: var(--color-neutral, #64748b);
   font-size: 0.8rem;
   margin-right: 2px;
 }
 
 .footer-link {
-  color: #94a3b8;
+  color: var(--color-placeholder, #94a3b8);
   text-decoration: none;
   transition: color var(--dur-fast) var(--ease-out);
   display: inline-flex;
@@ -233,7 +233,7 @@
 .footer-link--ext:hover {
   background: rgba(0, 212, 184, 0.08);
   border-color: rgba(0, 212, 184, 0.25);
-  color: #00d4b8;
+  color: var(--color-cyan-raw, #00d4b8);
 }
 
 .footer-link--ext svg {
@@ -247,7 +247,7 @@
 }
 
 .footer-copyright {
-  color: #64748b;
+  color: var(--color-neutral, #64748b);
   font-size: 0.8rem;
   letter-spacing: 0.01em;
 }

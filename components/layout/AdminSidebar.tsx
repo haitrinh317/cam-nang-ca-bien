@@ -22,12 +22,12 @@ interface EcoNavItem {
 }
 
 const ECO_NAV: EcoNavItem[] = [
-  { href: '/admin/ca-bien',       label: 'Cá biển Việt Nam',    shortLabel: 'Cá biển',       icon: Fish,      color: '#00f0d0', slug: 'ca-bien',       defaultCount: 1764 },
+  { href: '/admin/ca-bien',       label: 'Cá biển Việt Nam',    shortLabel: 'Cá biển',       icon: Fish,      color: '#00f0d0', slug: 'ca-bien',       defaultCount: 1767 },
   { href: '/admin/thuc-vat-bien', label: 'Thực vật biển (Rong)', shortLabel: 'Thực vật',     icon: Leaf,      color: '#10b981', slug: 'thuc-vat-bien', defaultCount: 672 },
   { href: '/admin/giap-xac',      label: 'Giáp xác biển',       shortLabel: 'Giáp xác',      icon: Shrimp,    color: '#f87171', slug: 'giap-xac',      defaultCount: 132 },
   { href: '/admin/bo-sat-bien',   label: 'Bò sát biển (Rùa, Rắn)', shortLabel: 'Bò sát',     icon: Turtle,    color: '#f59e0b', slug: 'bo-sat-bien',   defaultCount: 33 },
   { href: '/admin/sinh-vat-doc',  label: 'Động vật độc biển',   shortLabel: 'Sinh vật độc',  icon: Biohazard, color: '#fb7185', slug: 'sinh-vat-doc',  defaultCount: 76 },
-  { href: '/admin/than-mem',      label: 'Động vật thân mềm',   shortLabel: 'Thân mềm',      icon: Shell,     color: '#c084fc', slug: 'than-mem',      defaultCount: 74 },
+  { href: '/admin/than-mem',      label: 'Động vật thân mềm',   shortLabel: 'Thân mềm',      icon: Shell,     color: '#c084fc', slug: 'than-mem',      defaultCount: 217 },
   { href: '/admin/san-ho',        label: 'San hô Việt Nam',     shortLabel: 'San hô',        icon: Sparkles,  color: '#f472b6', slug: 'san-ho',        defaultCount: 42 },
   { href: '/admin/thu-bien',      label: 'Thú biển Việt Nam',   shortLabel: 'Thú biển',      icon: Waves,     color: '#38bdf8', slug: 'thu-bien',      defaultCount: 34 },
   { href: '/admin/dong-vat-phu-du', label: 'Động vật phù du',   shortLabel: 'Phù du',        icon: Microscope, color: '#38bdf8', slug: 'dong-vat-phu-du', defaultCount: 101 },
@@ -37,12 +37,12 @@ export default function AdminSidebar() {
   const pathname = usePathname()
   const [collapsed, setCollapsed] = useState<boolean>(false)
   const [counts, setCounts] = useState<Record<string, number>>({
-    'ca-bien': 1764,
+    'ca-bien': 1767,
     'thuc-vat-bien': 672,
     'giap-xac': 132,
     'bo-sat-bien': 33,
     'sinh-vat-doc': 76,
-    'than-mem': 74,
+    'than-mem': 217,
     'san-ho': 42,
     'thu-bien': 34,
     'dong-vat-phu-du': 101,
@@ -95,6 +95,15 @@ export default function AdminSidebar() {
     syncExactCounts()
   }, [])
 
+  const [isMobileOpen, setIsMobileOpen] = useState<boolean>(false)
+
+  // Close mobile drawer on route change (React 19 pattern: adjust state during render)
+  const [prevPathname, setPrevPathname] = useState(pathname)
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname)
+    setIsMobileOpen(false)
+  }
+
   const toggleCollapsed = () => {
     setCollapsed(prev => {
       const next = !prev
@@ -111,10 +120,32 @@ export default function AdminSidebar() {
     exact ? pathname === href : pathname.startsWith(href)
 
   return (
-    <aside 
-      className={`admin-sidebar${collapsed ? ' collapsed' : ''}`} 
-      aria-label="Thanh điều hướng quản trị"
-    >
+    <>
+      {/* Mobile Drawer Trigger (visible <= 860px) */}
+      <button
+        type="button"
+        className="admin-mobile-toggle-btn"
+        onClick={() => setIsMobileOpen(prev => !prev)}
+        aria-label={isMobileOpen ? 'Đóng menu quản trị' : 'Mở menu quản trị'}
+        aria-expanded={isMobileOpen}
+      >
+        {isMobileOpen ? <PanelLeftClose size={18} /> : <PanelLeftOpen size={18} />}
+        <span>Menu Quản trị</span>
+      </button>
+
+      {/* Backdrop for mobile drawer */}
+      {isMobileOpen && (
+        <div
+          className="admin-mobile-backdrop"
+          onClick={() => setIsMobileOpen(false)}
+          aria-hidden="true"
+        />
+      )}
+
+      <aside 
+        className={`admin-sidebar${collapsed ? ' collapsed' : ''}${isMobileOpen ? ' mobile-open' : ''}`} 
+        aria-label="Thanh điều hướng quản trị"
+      >
       {/* ── Brand Header ── */}
       <div className="admin-sidebar__brand">
         <div className="admin-sidebar__brand-content">
@@ -255,5 +286,6 @@ export default function AdminSidebar() {
         )}
       </div>
     </aside>
+  </>
   )
 }

@@ -81,7 +81,7 @@ const COLLECTIONS_LIST: CollectionItem[] = [
     name: 'Động vật thân mềm',
     nameEn: 'Marine Mollusca',
     desc: 'Ốc, sò, mực, bạch tuộc biển',
-    stats: '74 loài Pilot • Họ Ốc sứ',
+    stats: '217 loài • 2 tập',
     icon: <Shell size={24} color="#e8c4ff" strokeWidth={1.75} />,
     accent: '#e8c4ff',
     available: true,
@@ -200,7 +200,8 @@ export function BottomNav() {
   const isMolluskaActive = pathname === '/than-mem' || pathname.startsWith('/than-mem/')
   const isCoralActive = pathname === '/san-ho' || pathname.startsWith('/san-ho/')
   const isMammalActive = pathname === '/thu-bien' || pathname.startsWith('/thu-bien/')
-  const isOtherActive = isCrustaceanActive || isReptileActive || isPoisonActive || isMolluskaActive || isCoralActive || isMammalActive
+  const isPlanktonActive = pathname === '/dong-vat-phu-du' || pathname.startsWith('/dong-vat-phu-du/')
+  const isOtherActive = isCrustaceanActive || isReptileActive || isPoisonActive || isMolluskaActive || isCoralActive || isMammalActive || isPlanktonActive
 
   // Dynamic 4th tab presentation based on current page
   let fourthTabIcon = <Layers size={20} strokeWidth={2} aria-hidden="true" />
@@ -223,6 +224,9 @@ export function BottomNav() {
   } else if (isMammalActive) {
     fourthTabIcon = <Waves size={20} strokeWidth={1.75} aria-hidden="true" />
     fourthTabLabel = 'Thú biển'
+  } else if (isPlanktonActive) {
+    fourthTabIcon = <Microscope size={20} strokeWidth={1.75} aria-hidden="true" />
+    fourthTabLabel = 'Phù du'
   }
 
   return (

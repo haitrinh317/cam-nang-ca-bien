@@ -44,14 +44,22 @@
 }
 
 .node-toggle {
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--dur-normal) var(--ease-out);
+  border-radius: var(--radius-xs, 4px);
+  transition: transform var(--dur-normal) var(--ease-out), background var(--dur-fast) var(--ease-out);
   color: var(--color-muted);
   flex-shrink: 0;
+}
+
+.node-toggle:hover {
+  background: var(--color-paper-3, rgba(0, 0, 0, 0.05));
+  color: var(--color-ink);
 }
 
 .node-toggle.expanded { transform: rotate(90deg); }

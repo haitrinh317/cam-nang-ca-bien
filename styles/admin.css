@@ -852,13 +852,71 @@
    RESPONSIVE LAYOUT (<= 768px)
    ═══════════════════════════════════════════ */
 
+/* ── Mobile Sidebar Drawer & Floating Trigger ── */
+.admin-mobile-toggle-btn {
+  display: none;
+}
+
+.admin-mobile-backdrop {
+  display: none;
+}
+
 @media (max-width: 860px) {
   .admin-wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-mobile-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9998;
+    background: var(--color-paper-navy, #0b1329);
+    color: var(--color-cyan-on-navy, #00f0d0);
+    border: 1.5px solid rgba(0, 212, 184, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    padding: 10px 18px;
+    border-radius: var(--radius-pill, 9999px);
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: transform var(--dur-fast, 150ms) ease, box-shadow var(--dur-fast, 150ms) ease;
+  }
+
+  .admin-mobile-toggle-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0, 212, 184, 0.3);
+  }
+
+  .admin-mobile-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 13, 29, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 9990;
   }
 
   .admin-sidebar {
-    display: none; /* Can be toggled via mobile menu if needed */
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 280px !important;
+    max-width: 85vw !important;
+    z-index: 9999 !important;
+    transform: translateX(-100%) !important;
+    transition: transform var(--dur-normal, 250ms) var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) !important;
+    box-shadow: 8px 0 32px rgba(0, 0, 0, 0.6) !important;
+    display: flex !important;
+  }
+
+  .admin-sidebar.mobile-open {
+    transform: translateX(0) !important;
   }
 
   .admin-page {

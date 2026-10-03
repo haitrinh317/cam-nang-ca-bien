@@ -576,7 +576,7 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
             <Search size={16} className="slt-filter-icon" />
             <input
               type="text"
-              placeholder={activeGroup ? 'Lọc trong chuyên đề này (STT, tên loài)...' : 'Lọc trong tập đang chọn (STT, tên loài)...'}
+              placeholder={activeGroup ? 'Lọc nhanh danh sách bên dưới (STT, tên loài)...' : 'Lọc nhanh danh sách tập này (STT, tên loài)...'}
               value={localFilter}
               onChange={e => setLocalFilter(e.target.value)}
               className="slt-filter-input"
@@ -681,20 +681,20 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
                           {activeGroup?.id === 'hoang-sa-truong-sa' && (
                             <>
                               {isHSLocation(sp) && isTSLocation(sp) ? (
-                                <span style={{ fontSize: '0.72rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(5, 150, 105, 0.1)', color: '#047857', border: '1px solid rgba(5, 150, 105, 0.25)', fontWeight: 600 }}>
+                                <span style={{ fontSize: '0.8rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(5, 150, 105, 0.1)', color: '#047857', border: '1px solid rgba(5, 150, 105, 0.25)', fontWeight: 600 }}>
                                   Hoàng Sa & Trường Sa
                                 </span>
                               ) : isHSLocation(sp) ? (
-                                <span style={{ fontSize: '0.72rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(217, 119, 6, 0.1)', color: '#b45309', border: '1px solid rgba(217, 119, 6, 0.25)', fontWeight: 600 }}>
+                                <span style={{ fontSize: '0.8rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(217, 119, 6, 0.1)', color: '#b45309', border: '1px solid rgba(217, 119, 6, 0.25)', fontWeight: 600 }}>
                                   Hoàng Sa
                                 </span>
                               ) : (
-                                <span style={{ fontSize: '0.72rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(2, 132, 199, 0.1)', color: '#0284c7', border: '1px solid rgba(2, 132, 199, 0.25)', fontWeight: 600 }}>
+                                <span style={{ fontSize: '0.8rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(2, 132, 199, 0.1)', color: '#0284c7', border: '1px solid rgba(2, 132, 199, 0.25)', fontWeight: 600 }}>
                                   Trường Sa
                                 </span>
                               )}
                               {sp.collection_id === 'thuc-vat-bien' && (
-                                <span style={{ fontSize: '0.72rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(16, 185, 129, 0.1)', color: '#059669', border: '1px solid rgba(16, 185, 129, 0.25)', fontWeight: 600 }}>
+                                <span style={{ fontSize: '0.8rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(16, 185, 129, 0.1)', color: '#059669', border: '1px solid rgba(16, 185, 129, 0.25)', fontWeight: 600 }}>
                                   Rong biển (PHH 1969)
                                 </span>
                               )}

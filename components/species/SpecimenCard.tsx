@@ -123,21 +123,7 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
           />
           {bio?.toxicology && (
             <span 
-              className="specimen__tox-pill"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '5px',
-                height: '24px',
-                padding: '0 10px',
-                borderRadius: '9999px',
-                fontSize: '0.72rem',
-                fontWeight: 700,
-                lineHeight: 1,
-                backgroundColor: bio.toxicology.danger_level === 'lethal' ? 'rgba(239, 68, 68, 0.12)' : 'rgba(245, 158, 11, 0.12)',
-                color: bio.toxicology.danger_level === 'lethal' ? '#dc2626' : '#d97706',
-                border: bio.toxicology.danger_level === 'lethal' ? '1px solid rgba(239, 68, 68, 0.35)' : '1px solid rgba(245, 158, 11, 0.35)',
-              }}
+              className={`specimen__tox-pill specimen__tox-pill--${bio.toxicology.danger_level === 'lethal' ? 'lethal' : 'toxic'}`}
               title={bio.toxicology.danger_level_vn || 'Sinh vật biển có độc tính'}
             >
               <Biohazard size={13} strokeWidth={2} />
@@ -145,9 +131,9 @@ export default function SpecimenCard({ sp, initialPhotos }: { sp: Species; initi
             </span>
           )}
           {familyCrumb && (
-            <span className="specimen__family-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', fontSize: '0.74rem', color: 'var(--color-ink-3, #64748b)', padding: '2px 8px', borderRadius: '4px', background: 'var(--color-paper-2, #f8fafc)', border: '1px solid var(--color-rule-2, rgba(0,0,0,0.06))' }}>
-              <span style={{ fontWeight: 600 }}>Họ {familyCrumb.vn}</span>
-              {familyCrumb.lat && <em style={{ fontStyle: 'italic', opacity: 0.85 }}>({familyCrumb.lat})</em>}
+            <span className="specimen__family-pill">
+              <span className="specimen__family-name">Họ {familyCrumb.vn}</span>
+              {familyCrumb.lat && <em className="specimen__family-lat">({familyCrumb.lat})</em>}
             </span>
           )}
         </div>
