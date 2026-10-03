@@ -20,3 +20,7 @@ data/tap2_ocr_batch*.json
 # Docs
 *.md
 
+
+# Secrets — use Vercel project env vars instead (never upload local .env files)
+.env
+.env.*
