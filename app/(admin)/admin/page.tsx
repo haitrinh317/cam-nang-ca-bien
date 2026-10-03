@@ -18,7 +18,7 @@ import {
   BookCheck,
   Activity,
   CheckCircle2,
-  Image,
+  ImageIcon,
   ShieldCheck,
   ExternalLink,
   Microscope,
@@ -180,7 +180,7 @@ export default async function AdminDashboard() {
             </div>
 
             {/* Proportional Grand Diversity Spectrum Bar */}
-            <div className="admin-grand-spectrum" role="meter" aria-label="Tỷ lệ phân bố 8 phân hệ">
+            <div className="admin-grand-spectrum" role="img" aria-label="Tỷ lệ phân bố 8 phân hệ">
               {GRAND_SPECTRUM.map((col) => {
                 const pct = ((col.count / total) * 100).toFixed(1)
                 return (
@@ -257,7 +257,7 @@ export default async function AdminDashboard() {
               <div className="admin-health-meter">
                 <div className="admin-health-meter__meta">
                   <span className="admin-health-meter__label">
-                    <Image size={13} style={{ color: '#38bdf8' }} aria-hidden="true" />
+                    <ImageIcon size={13} style={{ color: '#38bdf8' }} aria-hidden="true" />
                     <span>Thư viện ảnh mẫu vật</span>
                   </span>
                   <span className="admin-health-meter__val">
@@ -399,7 +399,7 @@ export default async function AdminDashboard() {
         </div>
 
         {/* Proportional Spectrum Ribbon */}
-        <div className="admin-spectrum-bar" role="meter" aria-label="Tỷ lệ phân bố 5 tập">
+        <div className="admin-spectrum-bar" role="img" aria-label="Tỷ lệ phân bố 5 tập">
           {volCounts.map((count, index) => {
             const volNum = index + 1
             const pct = ((count / totalVolSpecies) * 100).toFixed(1)

@@ -10,6 +10,7 @@ export function ThemeToggleBtn() {
 
   useEffect(() => {
     initTheme()
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- browser-only state (storage/theme/UA) read after hydration
     setThemeState(getTheme())
     setMounted(true)
   }, [])

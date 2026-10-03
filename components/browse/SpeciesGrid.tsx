@@ -174,13 +174,16 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
   useEffect(() => {
     // ponytail: skip first fetch if server already provided initialSpecies for this vol+no-group
     if (initialSpecies?.length && !activeGroup && currentVol === initialVol) return
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- data fetch on mount/deps change sets loading state
     loadData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- intentional: only refetch when loadData identity changes
   }, [loadData])
 
   // Sync when URL parameter changes
   useEffect(() => {
     const urlVol = parseInt(searchParams.get('vol') || '')
     if (urlVol && urlVol !== currentVol) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- sync local state from URL ?vol= on navigation
       setCurrentVol(urlVol)
       const parentBook = books.find(b => b.volumes.some(v => v.volume === urlVol))
       if (parentBook && parentBook.id !== selectedBookId) {
@@ -262,10 +265,12 @@ export default function SpeciesGrid({ collection, initialVol = 1, initialGroup, 
   const [visibleCount, setVisibleCount] = useState(BATCH_SIZE)
   const sentinelRef = useRef<HTMLTableRowElement | null>(null)
 
-  // Reset visible count when filtered list changes
-  useEffect(() => {
+  // Reset visible count when filtered list changes (adjust state during render, no extra effect pass)
+  const [prevFiltered, setPrevFiltered] = useState(filteredSpecies)
+  if (prevFiltered !== filteredSpecies) {
+    setPrevFiltered(filteredSpecies)
     setVisibleCount(BATCH_SIZE)
-  }, [filteredSpecies])
+  }
 
   useEffect(() => {
     const node = sentinelRef.current

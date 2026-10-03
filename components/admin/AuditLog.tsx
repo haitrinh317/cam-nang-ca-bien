@@ -41,6 +41,7 @@ export default function AuditLog({ collection }: Props) {
     setLoading(false)
   }, [collection])
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- data fetch on mount/deps change sets loading state
   useEffect(() => { load() }, [load])
 
   const formatTime = (iso: string) => {

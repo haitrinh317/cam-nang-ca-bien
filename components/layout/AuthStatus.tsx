@@ -21,6 +21,7 @@ export default function AuthStatus({ collapsed }: Props) {
 
   const handleLogout = async () => {
     await fetch('/api/auth/logout', { method: 'POST' })
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- full reload after logout clears client auth state
     window.location.href = '/login'
   }
 

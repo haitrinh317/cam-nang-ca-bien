@@ -39,6 +39,7 @@ export default function PhotoManager({ speciesId, currentUrl, onUpdated }: Props
     if (data) setPhotos(data)
   }, [speciesId])
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- data fetch on mount/deps change sets loading state
   useEffect(() => { loadPhotos() }, [loadPhotos])
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {

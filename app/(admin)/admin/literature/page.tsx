@@ -163,6 +163,7 @@ export default function AdminLiteraturePage() {
   }, [])
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- data fetch on mount/deps change sets loading state
     loadData()
     loadLinkOptions()
   }, [loadData, loadLinkOptions])
@@ -278,10 +279,6 @@ export default function AdminLiteraturePage() {
     )
   }, [sources, searchQuery])
 
-  // Reset to page 1 on search or page size change
-  useEffect(() => {
-    setPage(1)
-  }, [searchQuery, pageSize])
 
   // Pagination calculation
   const totalItems = filteredSources.length
@@ -367,7 +364,7 @@ export default function AdminLiteraturePage() {
             type="text"
             placeholder="Tìm kiếm tài liệu theo tên, tác giả, năm..."
             value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
+            onChange={e => { setSearchQuery(e.target.value); setPage(1) }}
           />
         </div>
 
@@ -617,7 +614,7 @@ export default function AdminLiteraturePage() {
               <span>Số lượng:</span>
               <select
                 value={pageSize}
-                onChange={e => setPageSize(Number(e.target.value))}
+                onChange={e => { setPageSize(Number(e.target.value)); setPage(1) }}
                 className="form-input admin-select"
                 style={{ padding: '0.25rem 1.75rem 0.25rem 0.6rem', fontSize: '0.78rem', width: 'auto', backgroundPosition: 'right 0.5rem center' }}
               >

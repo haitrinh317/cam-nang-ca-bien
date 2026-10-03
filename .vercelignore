@@ -12,7 +12,6 @@ backups/
 # Data dirs not needed for web (app never imports data/ or _offline/)
 data/
 _offline/
-public/site (1).webmanifest
 
 # OCR batch files (intermediate)
 data/tap2_ocr_batch*.json

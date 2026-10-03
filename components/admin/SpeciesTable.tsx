@@ -112,6 +112,7 @@ export default function SpeciesTable({ collection, themeColor = '#00f0d0' }: Pro
   )
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- data fetch on mount/deps change sets loading state
     load(page, vol, search, showDeleted, filterType)
   }, [page, vol, showDeleted, filterType]) // eslint-disable-line
 

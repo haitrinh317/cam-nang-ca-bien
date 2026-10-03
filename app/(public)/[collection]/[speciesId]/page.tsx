@@ -9,6 +9,8 @@ import type { Metadata } from 'next'
 
 // ponytail: ISR cache 24h (86400s). Dữ liệu loài cố định theo xuất bản khoa học, chỉ cập nhật khi admin sửa hoặc nạp batch mới.
 export const revalidate = 86400
+// Required for ISR at runtime: no generateStaticParams here → Next treats route as dynamic (no-store) otherwise.
+export const dynamic = 'force-static'
 
 interface Props {
   params: Promise<{ collection: string; speciesId: string }>

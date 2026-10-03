@@ -114,11 +114,13 @@ export function BottomNav() {
   const [isSheetOpen, setIsSheetOpen] = useState(false)
   const lastScrollY = useRef(0)
 
-  // Close sheet on route change
-  useEffect(() => {
+  // Close sheet on route change (adjust state during render)
+  const [prevPathname, setPrevPathname] = useState(pathname)
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname)
     setIsHidden(false)
     setIsSheetOpen(false)
-  }, [pathname])
+  }
 
   // Lock body scroll when sheet is open
   useEffect(() => {

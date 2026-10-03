@@ -172,6 +172,7 @@ export default function BilingualNoteBlock({ labelEn, labelVn, text, cacheKey, t
   useEffect(() => {
     if (hasPrecomputedVn) return
     const cached = sessionStorage.getItem(cacheKey)
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- sessionStorage cache read is browser-only
     if (cached) { setRuntimeVnText(cached); return }
     setLoading(true)
     translateToVi(text)

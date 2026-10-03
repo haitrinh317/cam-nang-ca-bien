@@ -7,8 +7,12 @@ const eslintConfig = defineConfig([
   ...nextTs,
   {
     rules: {
-      // ponytail: 14 existing mount-time setState (localStorage/theme reads) — warn, refactor gradually
+      // Remaining mount-time setState are disabled inline with a reason; new ones should be fixed, not disabled
       'react-hooks/set-state-in-effect': 'warn',
+      // ponytail: plain <img> on purpose — species photos are already WebP in Supabase Storage;
+      // next/image would route thousands of source images through Vercel Image Optimization (billed quota).
+      // Upgrade path: custom loader (Supabase image transform) if LCP becomes an issue.
+      '@next/next/no-img-element': 'off',
       // Vietnamese UI copy uses literal quotes in JSX text; React renders them safely
       'react/no-unescaped-entities': 'off',
       // `({ books, ...col }) => col` is an intentional omit pattern

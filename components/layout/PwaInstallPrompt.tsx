@@ -34,6 +34,7 @@ export function PwaInstallPrompt() {
     // 3. Nhận diện thiết bị iOS
     const ua = window.navigator.userAgent
     const isAppleDevice = /iPad|iPhone|iPod/.test(ua) && !window.MSStream
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- browser-only state (storage/theme/UA) read after hydration
     setIsIos(isAppleDevice)
 
     // 4. Bắt sự kiện beforeinstallprompt trên Android Chrome / Chromium

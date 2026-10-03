@@ -40,13 +40,8 @@ const nextConfig: NextConfig = {
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()' },
         ],
       },
-      {
-        // Edge Cache cho trang chi tiết loài và cây phân loại (24h) — tất cả 9 collections
-        source: '/:collection(ca-bien|thuc-vat-bien|giap-xac|bo-sat-bien|sinh-vat-doc|than-mem|san-ho|thu-bien|dong-vat-phu-du)/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, s-maxage=86400, stale-while-revalidate=86400' },
-        ],
-      },
+      // Edge cache for species/taxonomy pages comes from ISR (dynamic='force-static' + revalidate in each page),
+      // not from a custom Cache-Control header (Next overrides it to no-store on dynamic routes).
       // /_next/static: Next.js already serves immutable cache headers — no custom rule needed
     ]
   },
