@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { t } from '@/lib/i18n'
 import { Fish, Leaf, Shrimp, ChevronDown, Layers, Turtle, Biohazard, Shell, Sparkles, Waves, Microscope } from 'lucide-react'
 import HeaderControls from '@/components/layout/HeaderControls'
+import { PwaInstallPrompt } from '@/components/layout/PwaInstallPrompt'
 
 interface DropdownCollection {
   slug: string
@@ -228,6 +229,7 @@ export default function Nav() {
           </div>
         </nav>
 
+        <PwaInstallPrompt />
         <HeaderControls />
 
         <button
