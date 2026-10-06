@@ -112,7 +112,6 @@ export default function SpeciesTable({ collection, themeColor = '#00f0d0' }: Pro
   )
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- data fetch on mount/deps change sets loading state
     load(page, vol, search, showDeleted, filterType)
   }, [page, vol, showDeleted, filterType]) // eslint-disable-line
 
@@ -175,7 +174,7 @@ export default function SpeciesTable({ collection, themeColor = '#00f0d0' }: Pro
     }
   }
 
-  const handleSave = async (data: Record<string, unknown>, id?: string) => {
+  const handleSave = async (data: Record<string, unknown>, id?: string, stayOpen = false) => {
     const isNew = !id
     const res = await fetch(isNew ? '/api/species' : `/api/species?id=${id}`, {
       method: isNew ? 'POST' : 'PATCH',
@@ -190,9 +189,17 @@ export default function SpeciesTable({ collection, themeColor = '#00f0d0' }: Pro
       return false
     }
     showToast(isNew ? 'Đã thêm loài mới thành công ✓' : 'Đã cập nhật dữ liệu ✓')
-    setShowForm(false)
-    setEditTarget(null)
     load(page, vol, search, showDeleted, filterType)
+    if (!stayOpen) {
+      setShowForm(false)
+      setEditTarget(null)
+    } else if (id) {
+      const fullRes = await fetch(`/api/species/detail?id=${id}`)
+      if (fullRes.ok) {
+        const { data: refreshed } = await fullRes.json()
+        setEditTarget(refreshed)
+      }
+    }
     return true
   }
 

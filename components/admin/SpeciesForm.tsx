@@ -109,7 +109,7 @@ interface SpeciesRow {
 interface Props {
   initial: SpeciesRow | null
   collection: string
-  onSave: (data: Record<string, unknown>, id?: string) => Promise<boolean>
+  onSave: (data: Record<string, unknown>, id?: string, stayOpen?: boolean) => Promise<boolean>
   onClose: () => void
 }
 
@@ -148,7 +148,8 @@ function parseSynonyms(val: unknown): string[] {
 
 export default function SpeciesForm({ initial, collection, onSave, onClose }: Props) {
   const [tab, setTab] = useState<Tab>('basic')
-  const [saving, setSaving] = useState(false)
+  const [savingStay, setSavingStay] = useState(false)
+  const [savingClose, setSavingClose] = useState(false)
   const [errorMsg, setErrorMsg] = useState<string | null>(null)
   const genusLabel = collection === 'thuc-vat-bien' ? 'Chi' : 'Giống'
 
@@ -224,10 +225,10 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
     setSynonymsList(list => list.filter(s => s !== synToRemove))
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const doSubmit = async (stayOpen = false) => {
     setErrorMsg(null)
-    setSaving(true)
+    if (stayOpen) setSavingStay(true)
+    else setSavingClose(true)
 
     const payload: Record<string, unknown> = {
       ...form,
@@ -269,8 +270,17 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
 
     // ponytail: zod validation runs server-side only (/api/species) — keeps ~400KB zod out of the client bundle.
     // Field errors come back in the API response and are shown via toast in SpeciesTable.handleSave.
-    const ok = await onSave(payload, id)
-    if (!ok) setSaving(false)
+    try {
+      await onSave(payload, id, stayOpen)
+    } finally {
+      setSavingStay(false)
+      setSavingClose(false)
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    await doSubmit(false)
   }
 
   const TABS: { key: Tab; label: string; desc: string; icon: React.ReactNode }[] = [
@@ -821,11 +831,30 @@ export default function SpeciesForm({ initial, collection, onSave, onClose }: Pr
             )}
             </div>
 
-            <div className="admin-modal__footer">
-              <button className="btn btn-outline" data-class="btn" onClick={onClose} type="button">Hủy bỏ</button>
-              <button className="btn btn-primary" data-class="btn" type="submit" disabled={saving}>
-                {saving ? 'Đang lưu...' : (initial ? 'Cập nhật thay đổi' : 'Thêm loài mới')}
-              </button>
+            <div className="admin-modal__footer" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <button className="btn btn-outline" data-class="btn" onClick={onClose} type="button">Hủy / Đóng</button>
+              <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                {initial?.id && (
+                  <button
+                    className="btn btn-outline"
+                    data-class="btn"
+                    type="button"
+                    disabled={savingStay || savingClose}
+                    onClick={() => doSubmit(true)}
+                    title="Lưu dữ liệu và tiếp tục ở lại trang chỉnh sửa"
+                  >
+                    {savingStay ? 'Đang lưu...' : 'Lưu thay đổi'}
+                  </button>
+                )}
+                <button
+                  className="btn btn-primary"
+                  data-class="btn"
+                  type="submit"
+                  disabled={savingStay || savingClose}
+                >
+                  {savingClose ? 'Đang lưu...' : (initial ? 'Lưu & Đóng' : 'Thêm loài mới')}
+                </button>
+              </div>
             </div>
           </section>
         </form>

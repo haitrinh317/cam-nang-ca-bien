@@ -128,19 +128,61 @@ export async function PATCH(req: NextRequest) {
 
   const adminDb = createServerClient()
   const raw = await req.json()
-  const parsed = z.object({ species_id: z.string().min(1), photo_id: z.string().uuid() }).safeParse(raw)
+  const parsed = z.object({
+    species_id: z.string().min(1),
+    photo_id: z.string().uuid(),
+    action: z.enum(['set_primary', 'update_metadata']).optional(),
+    photographer: z.string().nullable().optional(),
+    license: z.string().nullable().optional(),
+    source: z.string().nullable().optional(),
+    source_url: z.string().nullable().optional(),
+    is_primary: z.boolean().optional(),
+  }).safeParse(raw)
+
   if (!parsed.success) return NextResponse.json({ error: parsed.error.issues[0]?.message || 'Invalid params' }, { status: 400 })
-  const { species_id, photo_id } = parsed.data
+  const { species_id, photo_id, action, photographer, license, source, source_url, is_primary } = parsed.data
 
-  // Unset all primary
-  await adminDb.from('species_photos')
-    .update({ is_primary: false })
-    .eq('species_id', species_id)
-  
-  // Set this one
-  await adminDb.from('species_photos')
-    .update({ is_primary: true })
+  // Handle setting primary photo
+  if (action === 'set_primary' || (is_primary === true) || (!action && photographer === undefined && license === undefined && source === undefined && source_url === undefined)) {
+    // Unset all primary
+    await adminDb.from('species_photos')
+      .update({ is_primary: false })
+      .eq('species_id', species_id)
+    
+    // Set this one as primary
+    const { data: updatedPhoto } = await adminDb.from('species_photos')
+      .update({ is_primary: true })
+      .eq('id', photo_id)
+      .select()
+      .single()
+
+    return NextResponse.json({ success: true, photo: updatedPhoto })
+  }
+
+  // Handle updating metadata (photographer, source, license, source_url)
+  const updates: Record<string, unknown> = {}
+  if (photographer !== undefined) updates.photographer = photographer && photographer.trim() !== '' ? photographer.trim() : null
+  if (license !== undefined) updates.license = license && license.trim() !== '' ? license.trim() : null
+  if (source !== undefined) updates.source = source && source.trim() !== '' ? source.trim() : null
+  if (source_url !== undefined) updates.source_url = source_url && source_url.trim() !== '' ? source_url.trim() : null
+  if (is_primary !== undefined) updates.is_primary = is_primary
+
+  const { data: updatedPhoto, error: updateErr } = await adminDb.from('species_photos')
+    .update(updates)
     .eq('id', photo_id)
+    .select()
+    .single()
 
-  return NextResponse.json({ success: true })
+  if (updateErr) {
+    return NextResponse.json({ error: updateErr.message }, { status: 500 })
+  }
+
+  await adminDb.from('audit_log').insert({
+    user_email: admin.email,
+    action: 'update',
+    species_id,
+    details: `Cập nhật thông tin ảnh: ${photographer ? `Tác giả "${photographer}"` : 'Xóa thông tin tác giả'}`,
+  })
+
+  return NextResponse.json({ success: true, photo: updatedPhoto })
 }
