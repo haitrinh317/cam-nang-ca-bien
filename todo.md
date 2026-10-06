@@ -1,12 +1,17 @@
 # TODO — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-10-06 (Commit: `f9d6393`)
+> Cập nhật: 2026-10-06 (Commit: `8eb612b`)
 > **Supabase (SSOT):** 3,072 loài (9 collection) | **Production Live:** https://www.tracuusinhvatbien.app
 > **Lịch sử hoàn thành đầy đủ:** xem `todo-archive.md`
 
 ---
 
 ## ✅ Hoàn thành gần nhất (2026-10-06)
+
+- [x] **Nén ảnh tự động client & Thư viện ảnh đã tải lên (Commit `8eb612b` / Deploy Vercel `dpl_6iHGzFSWJ4A4aSg6vKQgAi6PxCcs`)**:
+  - **Tối ưu WebP Client-side:** Nén và chuyển đổi ảnh độ phân giải cao sang WebP 1920px (85%) trực tiếp trên trình duyệt bằng Canvas trong `PhotoManager.tsx`, giảm dung lượng từ 5-15MB xuống ~300KB-500KB, triệt tiêu hoàn toàn lỗi HTTP 413 "Request Entity Too Large" của Vercel.
+  - **Bắt lỗi an toàn:** Xử lý phản hồi text/HTML từ gateway an toàn, loại bỏ triệt để lỗi JSON syntax `Unexpected token 'R'`.
+  - **Thư viện ảnh đã upload (`PhotoLibraryModal.tsx` & `/api/species/photo/library`):** Bổ sung nút *"Chọn từ thư viện đã upload"* cho phép tìm kiếm theo tên loài, tên khoa học, tác giả; lọc ảnh thủ công / iNaturalist; gán tức thì ảnh có sẵn vào loài hiện tại mà không cần upload lại.
 
 - [x] **Nâng cấp quản lý ảnh & Form biên tập loài ở Admin (Commit `f9d6393` / Deploy Vercel `dpl_2k6MqqS8KdxNmhUWqZQJgHW8ZPaZ`)**:
   - **Khắc phục lỗi back trang khi sửa ảnh:** Thêm `type="button"` cho tất cả các nút trong `PhotoManager.tsx`, chặn phím `Enter` submit form loài nhầm, thêm nút "Lưu thay đổi" (giữ nguyên form và tab hiện tại để tiếp tục biên tập) bên cạnh "Lưu & Đóng" trong `SpeciesForm.tsx` & `SpeciesTable.tsx`.
