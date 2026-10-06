@@ -103,9 +103,8 @@ export default function PhotoLibraryModal({ currentSpeciesId, onSelect, onClose 
   return (
     <div className="admin-modal-overlay" onClick={onClose} style={{ zIndex: 1100 }}>
       <div
-        className="admin-modal admin-modal--large"
+        className="admin-modal admin-modal--photo-library"
         onClick={e => e.stopPropagation()}
-        style={{ maxWidth: '850px', maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}
       >
         {/* Header */}
         <div className="admin-modal__header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -204,11 +203,7 @@ export default function PhotoLibraryModal({ currentSpeciesId, onSelect, onClose 
               <div>Không tìm thấy ảnh nào phù hợp với bộ lọc.</div>
             </div>
           ) : (
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(170px, 1fr))',
-              gap: '0.85rem',
-            }}>
+            <div className="photo-library-grid">
               {photos.map(p => {
                 const isCurrent = p.species_id === currentSpeciesId
                 const isSelecting = selectingId === p.id
@@ -226,7 +221,7 @@ export default function PhotoLibraryModal({ currentSpeciesId, onSelect, onClose 
                       transition: 'border-color 0.15s ease, transform 0.15s ease',
                     }}
                   >
-                    <div style={{ position: 'relative', height: '110px', background: '#0f172a', overflow: 'hidden' }}>
+                    <div style={{ position: 'relative', height: '140px', background: '#0f172a', overflow: 'hidden' }}>
                       <img
                         src={publicUrl(p.storage_path)}
                         alt=""
@@ -235,27 +230,27 @@ export default function PhotoLibraryModal({ currentSpeciesId, onSelect, onClose 
                       />
                       {isCurrent && (
                         <div style={{
-                          position: 'absolute', top: '4px', right: '4px',
-                          background: 'rgba(15, 118, 110, 0.9)', color: '#fff',
-                          fontSize: '0.65rem', padding: '2px 5px', borderRadius: '4px',
+                          position: 'absolute', top: '6px', right: '6px',
+                          background: 'rgba(15, 118, 110, 0.92)', color: '#fff',
+                          fontSize: '0.7rem', fontWeight: 600, padding: '2px 7px', borderRadius: '4px',
                         }}>
                           Đang dùng
                         </div>
                       )}
                     </div>
 
-                    <div style={{ padding: '0.5rem', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '0.4rem' }}>
+                    <div style={{ padding: '0.65rem 0.75rem', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: '0.5rem' }}>
                       <div>
-                        <div style={{ fontSize: '0.72rem', fontWeight: 600, color: 'var(--color-ink)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                        <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--color-ink)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                           {p.species?.vn_name || p.species_id}
                         </div>
                         {p.species?.scientific_name && (
-                          <div style={{ fontSize: '0.68rem', fontStyle: 'italic', color: 'var(--color-ink-3)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                          <div style={{ fontSize: '0.75rem', fontStyle: 'italic', color: 'var(--color-ink-3)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                             {p.species.scientific_name}
                           </div>
                         )}
-                        <div style={{ fontSize: '0.7rem', color: 'var(--color-ink-2)', marginTop: '2px', display: 'flex', alignItems: 'center', gap: '3px' }}>
-                          <User size={10} />
+                        <div style={{ fontSize: '0.72rem', color: 'var(--color-ink-2)', marginTop: '3px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                          <User size={12} />
                           <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                             {p.photographer || (p.source === 'manual' ? 'Tự upload' : 'iNaturalist')}
                           </span>
@@ -267,18 +262,18 @@ export default function PhotoLibraryModal({ currentSpeciesId, onSelect, onClose 
                         className="btn btn-outline"
                         style={{
                           width: '100%',
-                          padding: '0.25rem 0.4rem',
-                          fontSize: '0.72rem',
+                          padding: '0.35rem 0.5rem',
+                          fontSize: '0.78rem',
                           display: 'inline-flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          gap: '4px',
+                          gap: '6px',
                           background: 'var(--color-tint)',
                         }}
                         disabled={isSelecting}
                         onClick={() => handleSelectPhoto(p)}
                       >
-                        {isSelecting ? <Loader2 size={12} className="animate-spin" /> : <Check size={12} />}
+                        {isSelecting ? <Loader2 size={13} className="animate-spin" /> : <Check size={13} />}
                         Chọn ảnh này
                       </button>
                     </div>

@@ -945,6 +945,34 @@
   max-width: 860px !important;
 }
 
+/* Photo Library Modal (3 columns grid layout) */
+.admin-modal--photo-library {
+  max-width: 980px !important;
+  width: 94vw !important;
+  max-height: 88vh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.photo-library-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .photo-library-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .photo-library-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* Studio 2-Column Fixed Frame (Option 2 — Zero Layout Shift) */
 .admin-modal--studio {
   max-width: 1080px !important;
