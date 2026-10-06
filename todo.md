@@ -1,12 +1,17 @@
 # TODO — Tra Cứu Thông Tin Sinh Vật Biển Việt Nam
 
-> Cập nhật: 2026-10-03 (Commit: `ae09914`)
+> Cập nhật: 2026-10-06 (Commit: `f9d6393`)
 > **Supabase (SSOT):** 3,072 loài (9 collection) | **Production Live:** https://www.tracuusinhvatbien.app
 > **Lịch sử hoàn thành đầy đủ:** xem `todo-archive.md`
 
 ---
 
-## ✅ Hoàn thành gần nhất (2026-10-03)
+## ✅ Hoàn thành gần nhất (2026-10-06)
+
+- [x] **Nâng cấp quản lý ảnh & Form biên tập loài ở Admin (Commit `f9d6393` / Deploy Vercel `dpl_2k6MqqS8KdxNmhUWqZQJgHW8ZPaZ`)**:
+  - **Khắc phục lỗi back trang khi sửa ảnh:** Thêm `type="button"` cho tất cả các nút trong `PhotoManager.tsx`, chặn phím `Enter` submit form loài nhầm, thêm nút "Lưu thay đổi" (giữ nguyên form và tab hiện tại để tiếp tục biên tập) bên cạnh "Lưu & Đóng" trong `SpeciesForm.tsx` & `SpeciesTable.tsx`.
+  - **Chỉnh sửa nguồn/tác giả ảnh trực tiếp:** Bổ sung ô nhập và nút lưu `photographer` ngay trên từng thẻ ảnh của `PhotoManager.tsx`, mở rộng API `PATCH /api/species/photo` hỗ trợ cập nhật metadata ảnh (`photographer`, `source`, `license`).
+  - **Sửa dữ liệu loài Cá Nóc Sừng Đuôi Dài (#213):** Ghi nhận nguồn "Bảo tàng Hải dương học" và đặt làm ảnh chính.
 
 - [x] **Tìm kiếm nâng cấp:** RPC không dấu + xếp hạng (migration 012), Enter mở `/tim-kiem`, điều hướng bàn phím/ARIA combobox, gợi ý khớp tên gọi khác/tên Anh/tên khoa học.
 - [x] **Bộ lọc nâng cao (migration 013-015):** IUCN, độ sâu, kích thước, môi trường sống (7 nhãn), vùng biển (5 vùng); badge IUCN + dòng thông tin theo bộ lọc trên mỗi kết quả; link từ trang phân hệ.
