@@ -88,3 +88,6 @@ Documents/
 .ua/
 
 .vercel
+
+.vercel
+.env*

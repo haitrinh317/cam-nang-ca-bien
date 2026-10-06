@@ -28,6 +28,46 @@ export async function POST(req: NextRequest) {
   if (!admin) return NextResponse.json({ error: 'Forbidden: admin role required' }, { status: 403 })
 
   const adminDb = createServerClient()
+  const contentType = req.headers.get('content-type') || ''
+
+  // Case 1: Attach existing photo from Library (JSON)
+  if (contentType.includes('application/json')) {
+    const body = await req.json()
+    const { species_id, storage_path, photographer, source = 'manual', is_primary } = body
+    if (!species_id || !storage_path) {
+      return NextResponse.json({ error: 'species_id and storage_path required' }, { status: 400 })
+    }
+
+    const { count } = await adminDb
+      .from('species_photos')
+      .select('*', { count: 'exact', head: true })
+      .eq('species_id', species_id)
+    const idx = (count || 0) + 1
+
+    const { error: dbErr, data } = await adminDb.from('species_photos').insert({
+      species_id,
+      storage_path,
+      source: source || 'manual',
+      photographer: photographer || null,
+      license: null,
+      is_primary: is_primary ?? (count === 0),
+      sort_order: idx - 1,
+    }).select().single()
+
+    if (dbErr) return NextResponse.json({ error: dbErr.message }, { status: 500 })
+
+    await adminDb.from('audit_log').insert({
+      user_email: admin.email,
+      action: 'update',
+      species_id,
+      details: `Gán ảnh từ thư viện: ${storage_path}`,
+    })
+
+    const { data: { publicUrl } } = adminDb.storage.from(BUCKET).getPublicUrl(storage_path)
+    return NextResponse.json({ photo: data, publicUrl })
+  }
+
+  // Case 2: File upload via multipart/form-data
   const formData = await req.formData()
   const file = formData.get('file') as File | null
   const speciesId = formData.get('species_id') as string | null

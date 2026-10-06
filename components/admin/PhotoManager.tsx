@@ -3,7 +3,8 @@
 import { useEffect, useState, useCallback } from 'react'
 import { db } from '@/lib/supabase-browser'
 import { getSpeciesPhotoUrl } from '@/lib/species-photos'
-import { Camera, Upload, Star, Trash2, Loader2, User, Check } from 'lucide-react'
+import { Camera, Upload, Star, Trash2, Loader2, User, Check, Images } from 'lucide-react'
+import PhotoLibraryModal, { type LibraryPhoto } from './PhotoLibraryModal'
 
 interface Photo {
   id: string
@@ -22,6 +23,78 @@ interface Props {
   onUpdated: (url: string) => void
 }
 
+/**
+ * Nén và chuyển đổi ảnh sang WebP độ phân giải cao tại client trước khi upload.
+ * Giúp triệt tiêu lỗi HTTP 413 "Request Entity Too Large" (>4.5MB) của Vercel Serverless.
+ */
+async function compressImageForUpload(file: File, maxDim = 1920, quality = 0.85): Promise<File> {
+  // Nếu đã là WebP và <= 1.5MB thì giữ nguyên
+  if (file.size <= 1.5 * 1024 * 1024 && file.type === 'image/webp') {
+    return file
+  }
+
+  // Bỏ qua định dạng không phải ảnh bitmap (ví dụ svg)
+  if (!file.type.startsWith('image/') || file.type.includes('svg')) {
+    return file
+  }
+
+  return new Promise((resolve) => {
+    const img = new Image()
+    const url = URL.createObjectURL(file)
+
+    img.onload = () => {
+      URL.revokeObjectURL(url)
+      let { width, height } = img
+
+      // Scale tỷ lệ nếu lớn hơn kích thước maxDim
+      if (width > maxDim || height > maxDim) {
+        if (width > height) {
+          height = Math.round((height * maxDim) / width)
+          width = maxDim
+        } else {
+          width = Math.round((width * maxDim) / height)
+          height = maxDim
+        }
+      }
+
+      const canvas = document.createElement('canvas')
+      canvas.width = width
+      canvas.height = height
+      const ctx = canvas.getContext('2d')
+      if (!ctx) {
+        resolve(file)
+        return
+      }
+
+      ctx.drawImage(img, 0, 0, width, height)
+
+      canvas.toBlob(
+        (blob) => {
+          if (!blob) {
+            resolve(file)
+            return
+          }
+          const baseName = file.name.replace(/\.[^/.]+$/, '')
+          const newFile = new File([blob], `${baseName}.webp`, {
+            type: 'image/webp',
+            lastModified: Date.now(),
+          })
+          resolve(newFile)
+        },
+        'image/webp',
+        quality
+      )
+    }
+
+    img.onerror = () => {
+      URL.revokeObjectURL(url)
+      resolve(file)
+    }
+
+    img.src = url
+  })
+}
+
 export default function PhotoManager({ speciesId, currentUrl, onUpdated }: Props) {
   const [photos, setPhotos] = useState<Photo[]>([])
   const [uploading, setUploading] = useState(false)
@@ -29,6 +102,7 @@ export default function PhotoManager({ speciesId, currentUrl, onUpdated }: Props
   const [editingPhotographer, setEditingPhotographer] = useState<Record<string, string>>({})
   const [savingPhotoId, setSavingPhotoId] = useState<string | null>(null)
   const [savedPhotoId, setSavedPhotoId] = useState<string | null>(null)
+  const [showLibrary, setShowLibrary] = useState(false)
 
   const publicUrl = (path: string) => getSpeciesPhotoUrl(path)
 
@@ -52,11 +126,18 @@ export default function PhotoManager({ speciesId, currentUrl, onUpdated }: Props
   useEffect(() => { loadPhotos() }, [loadPhotos])
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0]
-    if (!file) return
+    const originalFile = e.target.files?.[0]
+    if (!originalFile) return
     setUploading(true)
 
     try {
+      // Tối ưu ảnh tại client: resize và nén sang WebP để không chạm trần 4.5MB Vercel
+      const file = await compressImageForUpload(originalFile)
+
+      if (file.size > 4.5 * 1024 * 1024) {
+        throw new Error(`Ảnh quá lớn (${(file.size / 1024 / 1024).toFixed(1)}MB). Vui lòng chọn ảnh dưới 4.5MB.`)
+      }
+
       const idx = photos.length + 1
       
       const formData = new FormData()
@@ -71,11 +152,27 @@ export default function PhotoManager({ speciesId, currentUrl, onUpdated }: Props
         credentials: 'include',
         body: formData,
       })
+
+      if (!res.ok) {
+        let errMsg = `Lỗi máy chủ (${res.status})`
+        try {
+          const errJson = await res.json()
+          errMsg = errJson.error || errMsg
+        } catch {
+          const text = await res.text()
+          if (res.status === 413 || text.includes('Request Entity Too Large')) {
+            errMsg = 'File ảnh quá lớn (> 4.5MB). Vui lòng chọn ảnh nhỏ hơn.'
+          } else {
+            errMsg = text.slice(0, 100) || errMsg
+          }
+        }
+        throw new Error(errMsg)
+      }
+
       const json = await res.json()
-      if (!res.ok) throw new Error(json.error || 'Upload failed')
 
       // Update legacy photo_url to first photo
-      if (photos.length === 0) {
+      if (photos.length === 0 && json.publicUrl) {
         onUpdated(json.publicUrl)
       }
 
@@ -88,6 +185,40 @@ export default function PhotoManager({ speciesId, currentUrl, onUpdated }: Props
       // Reset file input
       e.target.value = ''
     }
+  }
+
+  const handleAttachFromLibrary = async (libraryPhoto: LibraryPhoto) => {
+    const res = await fetch('/api/species/photo', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify({
+        species_id: speciesId,
+        storage_path: libraryPhoto.storage_path,
+        photographer: libraryPhoto.photographer,
+        source: libraryPhoto.source || 'manual',
+        is_primary: photos.length === 0,
+      }),
+    })
+
+    if (!res.ok) {
+      let errMsg = `Lỗi (${res.status})`
+      try {
+        const j = await res.json()
+        errMsg = j.error || errMsg
+      } catch {
+        const text = await res.text()
+        errMsg = text.slice(0, 100) || errMsg
+      }
+      throw new Error(errMsg)
+    }
+
+    const json = await res.json()
+    if (photos.length === 0 && json.publicUrl) {
+      onUpdated(json.publicUrl)
+    }
+
+    await loadPhotos()
   }
 
   const handleDelete = async (photo: Photo) => {
@@ -276,10 +407,10 @@ export default function PhotoManager({ speciesId, currentUrl, onUpdated }: Props
         </div>
       )}
 
-      {/* Upload new photo */}
+      {/* Upload new photo & Pick from Library toolbar */}
       <div style={{
         display: 'flex', gap: '0.75rem', alignItems: 'flex-end', flexWrap: 'wrap',
-        padding: '0.75rem', background: 'var(--color-tint)', borderRadius: '8px', border: '1px dashed var(--color-border)',
+        padding: '0.85rem', background: 'var(--color-tint)', borderRadius: '8px', border: '1px dashed var(--color-border)',
       }}>
         <div>
           <label style={{ fontSize: '0.75rem', display: 'block', marginBottom: '0.25rem', color: 'var(--color-ink-2)', fontWeight: 500 }}>
@@ -295,13 +426,14 @@ export default function PhotoManager({ speciesId, currentUrl, onUpdated }: Props
             style={{ width: '220px', fontSize: '0.8rem' }}
           />
         </div>
+
         <label className="btn btn-primary" style={{
           display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
           cursor: uploading ? 'wait' : 'pointer',
           padding: '0.45rem 0.9rem',
           fontSize: '0.8rem', opacity: uploading ? 0.6 : 1,
         }}>
-          {uploading ? <><Loader2 size={14} className="animate-spin" /> Đang tải ảnh lên...</> : <><Upload size={14} /> Tải ảnh mới</>}
+          {uploading ? <><Loader2 size={14} className="animate-spin" /> Đang tối ưu & tải ảnh...</> : <><Upload size={14} /> Tải ảnh mới</>}
           <input
             type="file"
             accept="image/*"
@@ -310,8 +442,30 @@ export default function PhotoManager({ speciesId, currentUrl, onUpdated }: Props
             style={{ display: 'none' }}
           />
         </label>
+
+        <button
+          type="button"
+          className="btn btn-outline"
+          style={{
+            display: 'inline-flex', alignItems: 'center', gap: '0.4rem',
+            padding: '0.45rem 0.9rem', fontSize: '0.8rem',
+            background: 'var(--color-paper)',
+          }}
+          onClick={() => setShowLibrary(true)}
+          title="Chọn một ảnh đã có sẵn trong thư viện hệ thống"
+        >
+          <Images size={14} /> Chọn từ thư viện đã upload
+        </button>
       </div>
+
+      {/* Modal Thư Viện Ảnh */}
+      {showLibrary && (
+        <PhotoLibraryModal
+          currentSpeciesId={speciesId}
+          onSelect={handleAttachFromLibrary}
+          onClose={() => setShowLibrary(false)}
+        />
+      )}
     </div>
   )
 }
-
